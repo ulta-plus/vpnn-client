@@ -21,8 +21,8 @@ Item {
     property Component collapsedContent
     property Component expandedContent
 
-    property string defaultColor: AmneziaStyle.color.onyxBlack
-    property string borderColor: AmneziaStyle.color.slateGray
+    property string defaultColor: UltaStyle.color.bottomBarBackGround
+    property string borderColor: UltaStyle.color.bottomBarBorder
 
     property real expandedHeight
     property real collapsedHeight: 0

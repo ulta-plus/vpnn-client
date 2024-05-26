@@ -1,12 +1,12 @@
 set AmneziaPath=%~dp0
 echo %AmneziaPath%
 
-"%AmneziaPath%\AmneziaVPN.exe" -c
+"%AmneziaPath%\Ulta.exe" -c
 timeout /t 1
-sc stop AmneziaVPN-service
-sc delete AmneziaVPN-service
-sc stop AmneziaWGTunnel$AmneziaVPN
-sc delete AmneziaWGTunnel$AmneziaVPN
-taskkill /IM "AmneziaVPN-service.exe" /F
-taskkill /IM "AmneziaVPN.exe" /F
+sc stop Ulta-service
+sc delete Ulta-service
+sc stop AmneziaWGTunnel$Ulta
+sc delete AmneziaWGTunnel$Ulta
+taskkill /IM "Ulta-service.exe" /F
+taskkill /IM "Ulta.exe" /F
 exit /b 0

@@ -198,7 +198,7 @@ PageType {
 
                                             font.pixelSize: 16
                                             font.weight: Font.Medium
-                                            font.family: "PT Root UI VF"
+                                            font.family: "Montserrat Medium"
 
                                             text: rawConfig
 

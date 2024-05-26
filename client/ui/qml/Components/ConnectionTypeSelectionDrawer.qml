@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import PageEnum 1.0
+import Style 1.0
 
 import "../Controls2"
 import "../Controls2/TextTypes"
@@ -46,33 +47,24 @@ DrawerType2 {
 
         Item {
             id: focusItem
-            KeyNavigation.tab: ip.rightButton
-        }
-
-        LabelWithButtonType {
-            id: ip
-            Layout.fillWidth: true
-            Layout.topMargin: 16
-
-            text: qsTr("Configure your server")
-            rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-            clickedFunction: function() {
-                PageController.goToPage(PageEnum.PageSetupWizardCredentials)
-                root.close()
-            }
-
-            KeyNavigation.tab: qrCode.rightButton
+            KeyNavigation.tab: newKey.rightButton
         }
 
         DividerType {}
 
         LabelWithButtonType {
-            id: qrCode
+            id: newKey
             Layout.fillWidth: true
 
             text: qsTr("Open config file, key or QR code")
+            textColor: UltaStyle.color.bottomBarText
             rightImageSource: "qrc:/images/controls/chevron-right.svg"
+            rightImageColor: UltaStyle.color.bottomBarButtonIcon
+            rightImageColorSelected: UltaStyle.color.bottomBarButtonIconSelected
+            rightImageBackGroundColor: UltaStyle.color.bottomBarBackGround
+            rightImageBackGroundColorrSelected: UltaStyle.color.bottomBarBackGroundSelected
+            borderFocusedColor: "transparent"
+            borderFocusedWidth: 0
 
             clickedFunction: function() {
                 PageController.goToPage(PageEnum.PageSetupWizardConfigSource)

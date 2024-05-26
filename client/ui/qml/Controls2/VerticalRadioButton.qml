@@ -20,6 +20,7 @@ RadioButton {
     property string selectedColor: AmneziaStyle.color.transparent
 
     property string textColor: AmneziaStyle.color.paleGray
+    property string captionColor: AmneziaStyle.color.mutedGray
     property string selectedTextColor: AmneziaStyle.color.goldenApricot
 
     property string borderFocusedColor: AmneziaStyle.color.paleGray
@@ -139,7 +140,7 @@ RadioButton {
             CaptionTextType {
                 id: description
 
-                color: AmneziaStyle.color.mutedGray
+                color: captionColor
                 text: root.descriptionText
 
                 visible: root.descriptionText !== ""

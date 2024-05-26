@@ -190,29 +190,11 @@ PageType {
                 descriptionText: LanguageModel.currentLanguageName
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
 
-                KeyNavigation.tab: labelWithButtonLogging.rightButton
-                parentFlickable: fl
-
-                clickedFunction: function() {
-                    selectLanguageDrawer.open()
-                }
-            }
-
-            DividerType {}
-
-            LabelWithButtonType {
-                id: labelWithButtonLogging
-                Layout.fillWidth: true
-
-                text: qsTr("Logging")
-                descriptionText: SettingsController.isLoggingEnabled ? qsTr("Enabled") : qsTr("Disabled")
-                rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
                 KeyNavigation.tab: labelWithButtonReset.rightButton
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsLogging)
+                    selectLanguageDrawer.open()
                 }
             }
 
@@ -224,14 +206,14 @@ PageType {
 
                 text: qsTr("Reset settings and remove all data from the application")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-                textColor: AmneziaStyle.color.vibrantRed
+                textColor: UltaStyle.color.attentionText
 
                 Keys.onTabPressed: lastItemTabClicked()
                 parentFlickable: fl
 
                 clickedFunction: function() {
                     var headerText = qsTr("Reset settings and remove all data from the application?")
-                    var descriptionText = qsTr("All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.")
+                    var descriptionText = qsTr("All settings will be reset to default. All installed Ulta services will still remain on the server.")
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
 

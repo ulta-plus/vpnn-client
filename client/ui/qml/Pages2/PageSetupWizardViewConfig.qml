@@ -100,13 +100,17 @@ PageType {
                 Layout.leftMargin: -8
                 implicitHeight: 32
 
-                defaultColor: AmneziaStyle.color.transparent
-                hoveredColor: AmneziaStyle.color.translucentWhite
-                pressedColor: AmneziaStyle.color.sheerWhite
-                disabledColor: AmneziaStyle.color.mutedGray
-                textColor: AmneziaStyle.color.goldenApricot
+                borderColor: 'transparent'
 
                 text: showContent ? qsTr("Collapse content") : qsTr("Show content")
+                contentItem: Text {
+                    text: parent.text
+                    color: parent.hovered ? UltaStyle.color.buttonTextSelected : UltaStyle.color.buttonText
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    font.family: "Montserrat Medium"
+                }
+
                 KeyNavigation.tab: connectButton
 
                 clickedFunc: function() {
@@ -137,15 +141,6 @@ PageType {
                 imageColor: AmneziaStyle.color.vibrantRed
             }
 
-            WarningType {
-                Layout.topMargin: 16
-                Layout.fillWidth: true
-
-                textString: qsTr("Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.")
-
-                iconPath: "qrc:/images/controls/alert-circle.svg"
-            }
-
             Rectangle {
                 Layout.fillWidth: true
                 Layout.bottomMargin: 48
@@ -153,9 +148,10 @@ PageType {
                 implicitHeight: configContent.implicitHeight
 
                 radius: 10
-                color: AmneziaStyle.color.onyxBlack
 
                 visible: showContent
+                color: UltaStyle.color.backGround
+                border.color: UltaStyle.color.border
 
                 ParagraphTextType {
                     id: configContent
@@ -169,13 +165,6 @@ PageType {
                 }
             }
         }
-    }
-
-    Rectangle {
-        anchors.fill: columnContent
-        anchors.bottomMargin: -24
-        color: AmneziaStyle.color.midnightBlack
-        opacity: 0.8
     }
 
     ColumnLayout {
@@ -194,6 +183,16 @@ PageType {
             Layout.bottomMargin: 32
 
             text: qsTr("Connect")
+
+            contentItem: Text {
+                text: parent.text
+                color: parent.hovered ? UltaStyle.color.buttonTextSelected : UltaStyle.color.buttonText
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.family: "Montserrat Medium"
+                font.pixelSize: 18
+            }
+
             clickedFunc: function() {
                 if (cloakingCheckBox.checked) {
                     ImportController.processNativeWireGuardConfig()

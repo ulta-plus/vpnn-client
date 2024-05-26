@@ -1,3 +1,4 @@
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -48,6 +49,7 @@ DrawerType2 {
             Layout.leftMargin: 16
 
             text: headerText
+            color: UltaStyle.color.bottomBarText
         }
 
         ParagraphTextType {
@@ -57,6 +59,7 @@ DrawerType2 {
             Layout.leftMargin: 16
 
             text: descriptionText
+            color: UltaStyle.color.bottomBarText
         }
 
         Item {
@@ -70,6 +73,13 @@ DrawerType2 {
             Layout.topMargin: 16
             Layout.rightMargin: 16
             Layout.leftMargin: 16
+
+            defaultColor: UltaStyle.color.bottomBarButton
+            hoveredColor: UltaStyle.color.bottomBarButtonSelected
+            borderColor: UltaStyle.color.bottomBarBorder
+            borderFocusedColor: UltaStyle.color.bottomBarBorder
+            textColor: UltaStyle.color.bottomBarText
+            textColorSelected: UltaStyle.color.bottomBarTextSelected
 
             text: yesButtonText
 
@@ -88,12 +98,12 @@ DrawerType2 {
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            defaultColor: AmneziaStyle.color.transparent
-            hoveredColor: AmneziaStyle.color.translucentWhite
-            pressedColor: AmneziaStyle.color.sheerWhite
-            disabledColor: AmneziaStyle.color.mutedGray
-            textColor: AmneziaStyle.color.paleGray
-            borderWidth: 1
+            defaultColor: UltaStyle.color.bottomBarButton
+            hoveredColor: UltaStyle.color.bottomBarButtonSelected
+            borderColor: UltaStyle.color.bottomBarBorder
+            borderFocusedColor: UltaStyle.color.bottomBarBorder
+            textColor: UltaStyle.color.bottomBarText
+            textColorSelected: UltaStyle.color.bottomBarTextSelected
 
             text: noButtonText
 

@@ -6,10 +6,10 @@ Text {
     lineHeight: 21.6 + LanguageModel.getLineHeightAppend()
     lineHeightMode: Text.FixedHeight
 
-    color: AmneziaStyle.color.paleGray
+    color: UltaStyle.color.mainText
     font.pixelSize: 18
     font.weight: 400
-    font.family: "PT Root UI VF"
+    font.family: "Montserrat Medium"
 
     wrapMode: Text.Wrap
 }

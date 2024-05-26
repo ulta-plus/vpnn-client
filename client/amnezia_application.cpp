@@ -228,7 +228,7 @@ void AmneziaApplication::loadFonts()
 {
     QQuickStyle::setStyle("Basic");
 
-    QFontDatabase::addApplicationFont(":/fonts/pt-root-ui_vf.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 void AmneziaApplication::loadTranslator()
@@ -244,17 +244,21 @@ void AmneziaApplication::updateTranslator(const QLocale &locale)
         QCoreApplication::removeTranslator(m_translator.get());
     }
 
-    QString strFileName = QString(":/translations/amneziavpn") + QLatin1String("_") + locale.name() + ".qm";
-    if (m_translator->load(strFileName)) {
-        if (QCoreApplication::installTranslator(m_translator.get())) {
-            m_settings->setAppLanguage(locale);
-        }
-    } else {
+    if (locale == QLocale::English) {
+        // English as a default language doesn't have a translation file
         m_settings->setAppLanguage(QLocale::English);
+    } else {
+        QString strFileName = QString(":/translations/ulta") + QLatin1String("_") + locale.name() + ".qm";
+        if (m_translator->load(strFileName)) {
+            if (QCoreApplication::installTranslator(m_translator.get())) {
+                m_settings->setAppLanguage(locale);
+            }
+        } else {
+            m_settings->setAppLanguage(QLocale::Russian);
+        }
     }
 
     m_engine->retranslate();
-
     emit translationsUpdated();
 }
 
@@ -450,7 +454,9 @@ void AmneziaApplication::initControllers()
     if (m_settingsController->isAutoConnectEnabled() && m_serversModel->getDefaultServerIndex() >= 0) {
         QTimer::singleShot(1000, this, [this]() { m_connectionController->openConnection(); });
     }
+    /* issue_13: don't allow to use Amnezia DNS
     connect(m_settingsController.get(), &SettingsController::amneziaDnsToggled, m_serversModel.get(), &ServersModel::toggleAmneziaDns);
+    */
 
     m_sitesController.reset(new SitesController(m_settings, m_vpnConnection, m_sitesModel));
     m_engine->rootContext()->setContextProperty("SitesController", m_sitesController.get());
@@ -460,4 +466,17 @@ void AmneziaApplication::initControllers()
 
     m_systemController.reset(new SystemController(m_settings));
     m_engine->rootContext()->setContextProperty("SystemController", m_systemController.get());
+
+    connect(m_importController.get(), &ImportController::siteNeedsAddition, m_sitesController.get(), &SitesController::addSite);
+    connect(m_vpnConnection.get(), &VpnConnection::newRoute, m_sitesController.get(), &SitesController::addSite);
+    connect(m_vpnConnection.get(), &VpnConnection::restartConnection, this, &AmneziaApplication::restartConnection);
+    connect(this, &AmneziaApplication::toggleConnection, m_connectionController.get(),
+        &ConnectionController::toggleConnection, Qt::QueuedConnection);
+}
+
+void AmneziaApplication::restartConnection()
+{
+    emit toggleConnection();
+    m_connectionController->waitForConnectionFinished(10000);
+    emit toggleConnection();
 }

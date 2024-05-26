@@ -86,6 +86,15 @@ PageType {
         text: qsTr("Continue")
         Keys.onTabPressed: lastItemTabClicked(focusItem)
 
+        contentItem: Text {
+            text: parent.text
+            color: parent.hovered ? UltaStyle.color.buttonTextSelected : UltaStyle.color.buttonText
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.family: "Montserrat Medium"
+            font.pixelSize: 18
+        }
+
         clickedFunc: function() {
             if (ImportController.extractConfigFromData(textKey.textFieldText)) {
                 PageController.goToPage(PageEnum.PageSetupWizardViewConfig)

@@ -34,10 +34,6 @@ SystemTrayNotificationHandler::SystemTrayNotificationHandler(QObject* parent) :
 
     m_menu.addSeparator();
 
-    m_trayActionVisitWebSite = m_menu.addAction(QIcon(":/images/tray/link.png"), tr("Visit Website"), [&](){
-        QDesktopServices::openUrl(QUrl("https://amnezia.org"));
-    });
-
     m_trayActionQuit = m_menu.addAction(QIcon(":/images/tray/cancel.png"), tr("Quit") + " " + APPLICATION_NAME, this, [&](){
         qApp->quit();
     });
@@ -60,7 +56,6 @@ void SystemTrayNotificationHandler::onTranslationsUpdated()
     m_trayActionShow->setText(tr("Show") + " " + APPLICATION_NAME);
     m_trayActionConnect->setText(tr("Connect"));
     m_trayActionDisconnect->setText(tr("Disconnect"));
-    m_trayActionVisitWebSite->setText(tr("Visit Website"));
     m_trayActionQuit->setText(tr("Quit")+ " " + APPLICATION_NAME);
 }
 

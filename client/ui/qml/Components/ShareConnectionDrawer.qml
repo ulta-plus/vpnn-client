@@ -25,14 +25,14 @@ DrawerType2 {
     property string contentVisible
 
     property string configExtension: ".vpn"
-    property string configCaption: qsTr("Save AmneziaVPN config")
+    property string configCaption: qsTr("Save Ulta config")
     property string configFileName: "amnezia_config"
 
     expandedHeight: parent.height * 0.9
 
     onClosed: {
         configExtension = ".vpn"
-        configCaption = qsTr("Save AmneziaVPN config")
+        configCaption = qsTr("Save Ulta config")
         configFileName = "amnezia_config"
     }
 
@@ -288,7 +288,7 @@ DrawerType2 {
 
                                     font.pixelSize: 16
                                     font.weight: Font.Medium
-                                    font.family: "PT Root UI VF"
+                                    font.family: "Montserrat Medium"
 
                                     text: ExportController.config
 

@@ -9,26 +9,26 @@ Button {
 
     property string image
 
-    property string hoveredColor: AmneziaStyle.color.translucentWhite
-    property string defaultColor: AmneziaStyle.color.transparent
+    property string hoveredColor: UltaStyle.color.buttonBackGroundSelected
+    property string defaultColor: UltaStyle.color.buttonBackGround
     property string pressedColor: AmneziaStyle.color.sheerWhite
     property string disableColor: AmneziaStyle.color.slateGray
 
-    property string imageColor: AmneziaStyle.color.mutedGray
+    property string imageColor: UltaStyle.color.icon
+
     property string disableImageColor: AmneziaStyle.color.slateGray
 
-    property alias backgroundColor: background.color
-    property alias backgroundRadius: background.radius
+    property string backgroundColor: UltaStyle.color.buttonBackGround
+    property string borderColor: UltaStyle.color.border
 
-    property string borderFocusedColor: AmneziaStyle.color.paleGray
-    property int borderFocusedWidth: 1
+    property alias backgroundRadius: background.radius
 
     hoverEnabled: true
     focus: true
     focusPolicy: Qt.TabFocus
 
     icon.source: image
-    icon.color: root.enabled ? imageColor : disableImageColor
+    icon.color: imageColor
 
     property Flickable parentFlickable
 
@@ -40,33 +40,14 @@ Button {
         }
     }
 
-    Behavior on icon.color {
-        PropertyAnimation { duration: 200 }
-    }
-
     background: Rectangle {
         id: background
 
         anchors.fill: parent
-        border.color: root.activeFocus ? root.borderFocusedColor : AmneziaStyle.color.transparent
-        border.width: root.activeFocus ? root.borderFocusedWidth : 0
+        border.color: borderColor
 
-        color: {
-            if (root.enabled) {
-                if (root.pressed) {
-                    return pressedColor
-                }
-                return hovered ? hoveredColor : defaultColor
-            }
-            return defaultColor
-        }
+        color: backgroundColor
         radius: 12
-        Behavior on color {
-            PropertyAnimation { duration: 200 }
-        }
-        Behavior on border.color {
-            PropertyAnimation { duration: 200 }
-        }
     }
 
     MouseArea {

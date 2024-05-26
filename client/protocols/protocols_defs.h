@@ -108,7 +108,9 @@ namespace amnezia
 
         namespace dns
         {
+            /* issue_13: don't allow to use Amnezia DNS
             constexpr char amneziaDnsIp[] = "172.29.172.254";
+            */
         }
 
         namespace openvpn

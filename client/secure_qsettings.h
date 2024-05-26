@@ -10,7 +10,7 @@
 
 constexpr const char *settingsKeyTag = "settingsKeyTag";
 constexpr const char *settingsIvTag = "settingsIvTag";
-constexpr const char *keyChainName = "AmneziaVPN-Keychain";
+constexpr const char *keyChainName = "Ulta-Keychain";
 
 class SecureQSettings : public QObject
 {

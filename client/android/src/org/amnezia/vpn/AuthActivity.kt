@@ -88,7 +88,7 @@ class AuthActivity : FragmentActivity() {
 
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
             .setAllowedAuthenticators(AUTHENTICATORS)
-            .setTitle("AmneziaVPN")
+            .setTitle("Ulta")
             .setSubtitle(biometricManager.getStrings(AUTHENTICATORS)?.promptMessage)
             .build()
 

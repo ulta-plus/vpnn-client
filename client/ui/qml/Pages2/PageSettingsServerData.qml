@@ -160,7 +160,7 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("Remove server from application")
-                textColor: AmneziaStyle.color.vibrantRed
+                textColor: UltaStyle.color.attentionText
 
                 Keys.onTabPressed: {
                     if (content.isServerWithWriteAccess) {
@@ -174,7 +174,7 @@ PageType {
 
                 clickedFunction: function() {
                     var headerText = qsTr("Do you want to remove the server from application?")
-                    var descriptionText = qsTr("All installed AmneziaVPN services will still remain on the server.")
+                    var descriptionText = qsTr("All installed Ulta services will still remain on the server.")
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
 
@@ -279,7 +279,7 @@ PageType {
                             labelWithButton5.forceActiveFocus()
                         }
                     }
-                    
+
                     showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
                 }
             }

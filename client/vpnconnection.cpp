@@ -70,7 +70,9 @@ void VpnConnection::onConnectionStateChanged(Vpn::ConnectionState state)
 
                 IpcClient::Interface()->routeAddList(m_vpnProtocol->vpnGateway(), QStringList() << dns1 << dns2);
 
+                /* issue_5
                 if (m_settings->isSitesSplitTunnelingEnabled()) {
+                */
                     IpcClient::Interface()->routeDeleteList(m_vpnProtocol->vpnGateway(), QStringList() << "0.0.0.0");
                     // qDebug() << "VpnConnection::onConnectionStateChanged :: adding custom routes, count:" << forwardIps.size();
                     if (m_settings->routeMode() == Settings::VpnOnlyForwardSites) {
@@ -83,17 +85,23 @@ void VpnConnection::onConnectionStateChanged(Vpn::ConnectionState state)
                         IpcClient::Interface()->routeAddList(m_vpnProtocol->routeGateway(), QStringList() << remoteAddress());
                         addSitesRoutes(m_vpnProtocol->routeGateway(), m_settings->routeMode());
                     }
+                /* issue_5
                 }
+                */
             }
 
         } else if (state == Vpn::ConnectionState::Error) {
             IpcClient::Interface()->flushDns();
 
+            /* issue_5
             if (m_settings->isSitesSplitTunnelingEnabled()) {
+            */
                 if (m_settings->routeMode() == Settings::VpnOnlyForwardSites) {
                     IpcClient::Interface()->clearSavedRoutes();
                 }
+            /* issue_5
             }
+            */
         } else if (state == Vpn::ConnectionState::Connecting) {
 
         } else if (state == Vpn::ConnectionState::Disconnected) {
@@ -178,6 +186,36 @@ void VpnConnection::addRoutes(const QStringList &ips)
 #endif
 }
 
+void VpnConnection::addRoute(const QString& ip)
+{
+    if (m_settings->isVpnSiteInSettings(ip))
+        return;
+
+    needToRestartConnection = true;
+    emit newRoute(ip);
+}
+
+void VpnConnection::waitForVpnConnectionFinished(int msecs)
+{
+    m_vpnProtocol->waitForDisconected(msecs);
+}
+
+void VpnConnection::addNewDns(const QString& dnsAddr)
+{
+    if (  m_vpnConfiguration.value(config_key::dns1).toString() != dnsAddr
+       && m_vpnConfiguration.value(config_key::dns2).toString() != dnsAddr)
+    {
+        m_settings->setPrimaryDns(dnsAddr);
+        needToRestartConnection = true;
+    }
+}
+
+void VpnConnection::finishReceivingSettings()
+{
+    if (needToRestartConnection)
+        emit restartConnection();
+}
+
 void VpnConnection::deleteRoutes(const QStringList &ips)
 {
 #ifdef AMNEZIA_DESKTOP
@@ -215,6 +253,7 @@ ErrorCode VpnConnection::lastError() const
 void VpnConnection::connectToVpn(int serverIndex, const ServerCredentials &credentials, DockerContainer container,
                                  const QJsonObject &vpnConfiguration)
 {
+    needToRestartConnection = false;
     qDebug() << QString("ConnectToVpn, Server index is %1, container is %2, route mode is")
                         .arg(serverIndex)
                         .arg(ContainerProps::containerToString(container))
@@ -256,6 +295,7 @@ void VpnConnection::connectToVpn(int serverIndex, const ServerCredentials &crede
         emit connectionStateChanged(Vpn::ConnectionState::Error);
         return;
     }
+
     m_vpnProtocol->prepare();
 #elif defined Q_OS_ANDROID
     androidVpnProtocol = createDefaultAndroidVpnProtocol();
@@ -282,6 +322,9 @@ void VpnConnection::createProtocolConnections()
     connect(m_vpnProtocol.data(), SIGNAL(connectionStateChanged(Vpn::ConnectionState)), this,
             SLOT(onConnectionStateChanged(Vpn::ConnectionState)));
     connect(m_vpnProtocol.data(), SIGNAL(bytesChanged(quint64, quint64)), this, SLOT(onBytesChanged(quint64, quint64)));
+    connect(m_vpnProtocol.get(), &VpnProtocol::newRoute, this, &VpnConnection::addRoute);
+    connect(m_vpnProtocol.get(), &VpnProtocol::newDns, this, &VpnConnection::addNewDns);
+    connect(m_vpnProtocol.get(), &VpnProtocol::finishReceivingSettings, this, &VpnConnection::finishReceivingSettings);
 }
 
 void VpnConnection::appendKillSwitchConfig()
@@ -343,7 +386,9 @@ void VpnConnection::appendSplitTunnelingConfig()
 
     Settings::RouteMode routeMode = Settings::RouteMode::VpnAllSites;
     QJsonArray sitesJsonArray;
+    /* issue_5
     if (m_settings->isSitesSplitTunnelingEnabled()) {
+    */
         routeMode = m_settings->routeMode();
 
         if (allowSiteBasedSplitTunneling) {
@@ -358,7 +403,9 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(m_vpnConfiguration.value(config_key::dns2).toString());
             }
         }
+    /* issue_5
     }
+    */
 
     m_vpnConfiguration.insert(config_key::splitTunnelType, routeMode);
     m_vpnConfiguration.insert(config_key::splitTunnelSites, sitesJsonArray);

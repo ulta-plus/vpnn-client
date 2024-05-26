@@ -13,15 +13,17 @@ Button {
     property string bodyText
     property string footerText
 
-    property string hoveredColor: AmneziaStyle.color.slateGray
-    property string defaultColor: AmneziaStyle.color.onyxBlack
-
-    property string textColor: AmneziaStyle.color.midnightBlack
+    property string hoveredColor: UltaStyle.color.buttonBackGroundSelected
+    property string defaultColor: UltaStyle.color.buttonBackGround
 
     property string rightImageSource
-    property string rightImageColor: AmneziaStyle.color.paleGray
+    property string rightImageColor: UltaStyle.color.icon
+    property string rightImageBackgroundColor: UltaStyle.color.buttonBackGround
 
     property string leftImageSource
+    property string leftImageColor: UltaStyle.color.icon
+
+    property string textColor: UltaStyle.color.mainText
 
     property real textOpacity: 1.0
 
@@ -32,11 +34,8 @@ Button {
         anchors.fill: parent
         radius: 16
 
-        color: defaultColor
-
-        Behavior on color {
-            PropertyAnimation { duration: 200 }
-        }
+        color: UltaStyle.color.buttonBackGround
+        border.color: UltaStyle.color.border
     }
 
     contentItem: Item {
@@ -48,9 +47,10 @@ Button {
             id: content
             anchors.fill: parent
 
-            Image {
+            IconImage {
                 id: leftImage
                 source: leftImageSource
+                color: leftImageColor
 
                 visible: leftImageSource !== ""
 
@@ -64,6 +64,8 @@ Button {
                 ListItemTitleType {
                     text: root.headerText
                     visible: text !== ""
+
+                    color: textColor
 
                     Layout.fillWidth: true
                     Layout.rightMargin: 16
@@ -114,7 +116,7 @@ Button {
                 hoverEnabled: false
                 image: rightImageSource
                 imageColor: rightImageColor
-                visible: rightImageSource ? true : false
+                visible: rightImageSource != "" ? true : false
 
                 Layout.alignment: Qt.AlignRight | Qt.AlignTop
                 Layout.topMargin: 16
@@ -125,12 +127,10 @@ Button {
                     id: rightImageBackground
                     anchors.fill: parent
                     radius: 12
-                    color: "transparent"
-
-                    Behavior on color {
-                        PropertyAnimation { duration: 200 }
-                    }
+                    color: UltaStyle.color.buttonBackGround
+                    border.color: UltaStyle.color.border
                 }
+
                 onClicked: {
                     if (clickedFunction && typeof clickedFunction === "function") {
                         clickedFunction()
@@ -148,27 +148,28 @@ Button {
 
         onEntered: {
             backgroundRect.color = root.hoveredColor
+            backgroundRect.border.color = UltaStyle.color.borderSelected
 
-            if (rightImageSource) {
-                rightImageBackground.color = rightImage.hoveredColor
-            }
+            root.rightImageColor = UltaStyle.color.iconSelected
+            rightImageBackground.color = UltaStyle.color.buttonBackGroundSelected
+            rightImageBackground.border.color = UltaStyle.color.borderSelected
+
+            root.leftImageColor = UltaStyle.color.iconSelected
+            root.textColor = UltaStyle.color.mainTextSelected
             root.textOpacity = 0.8
         }
 
         onExited: {
             backgroundRect.color = root.defaultColor
+            backgroundRect.border.color = UltaStyle.color.border
 
-            if (rightImageSource) {
-                rightImageBackground.color = rightImage.defaultColor
-            }
+            root.rightImageColor = UltaStyle.color.icon
+            rightImageBackground.color = rightImage.defaultColor
+            rightImageBackground.border.color = UltaStyle.color.border
+
+            root.leftImageColor = UltaStyle.color.icon
+            root.textColor = UltaStyle.color.mainText
             root.textOpacity = 1
-        }
-
-        onPressedChanged: {
-            if (rightImageSource) {
-                rightImageBackground.color = pressed ? rightImage.pressedColor : entered ? rightImage.hoveredColor : rightImage.defaultColor
-            }
-            root.textOpacity = 0.7
         }
 
         onClicked: {

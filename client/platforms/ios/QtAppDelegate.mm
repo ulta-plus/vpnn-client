@@ -4,7 +4,7 @@
 #include <QFile>
 
 
-@implementation QIOSApplicationDelegate (AmneziaVPNDelegate)
+@implementation QIOSApplicationDelegate (UltaDelegate)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -88,7 +88,7 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="80"/>
+        <location filename="../ui/controllers/connectionController.h" line="81"/>
         <location filename="../ui/controllers/connectionController.cpp" line="100"/>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
         <location filename="../ui/controllers/connectionController.cpp" line="121"/>
@@ -96,7 +96,7 @@
         <translation>连接</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="219"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
         <translation>请先安装VPN协议</translation>
@@ -137,12 +137,12 @@
         <translation>配置更新成功</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="209"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
         <source>The selected protocol is not supported on the current platform</source>
         <translation type="unfinished">当前平台不支持所选协议</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="233"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="238"/>
         <source>unable to create configuration</source>
         <translation type="unfinished"></translation>
     </message>
@@ -155,12 +155,7 @@
         <translation>添加新连接</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="57"/>
-        <source>Configure your server</source>
-        <translation>配置您的服务器</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="74"/>
+        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="58"/>
         <source>Open config file, key or QR code</source>
         <translation>配置文件，授权码或二维码</translation>
     </message>
@@ -225,10 +220,9 @@
         <translation>服务器上的分割隧道</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
-        <translation>已启用 
+        <translation type="vanished">已启用
 无法禁用当前服务器</translation>
     </message>
     <message>
@@ -429,7 +423,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>AmneziaVPN</source>
+        <source>Ulta</source>
         <translation></translation>
     </message>
     <message>
@@ -444,8 +438,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>AmneziaVPN notification</source>
-        <translation>AmneziaVPN 提示</translation>
+        <source>Ulta notification</source>
+        <translation>Ulta 提示</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -482,32 +476,37 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="67"/>
-        <source>Logging enabled</source>
+        <source>Split tunneling enabled</source>
+        <translation type="vanished">用户分隔隧道已启用</translation>
+    </message>
+    <message>
+        <source>Split tunneling disabled</source>
+        <translation type="vanished">分隔隧道已禁用</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="62"/>
+        <source>Discord without any blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
-        <source>Split tunneling enabled</source>
-        <translation>用户分隔隧道已启用</translation>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="100"/>
+        <source>Live communication,
+competitions and the latest news
+in our Telegram channel!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
-        <source>Split tunneling disabled</source>
-        <translation>分隔隧道已禁用</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="328"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="330"/>
         <source>VPN protocol</source>
         <translation>VPN协议</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="383"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="385"/>
         <source>Servers</source>
         <translation>服务器</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="495"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="501"/>
         <source>Unable change server while there is an active connection</source>
         <translation>已建立连接时无法更改服务器配置</translation>
     </message>
@@ -1387,24 +1386,26 @@ Already installed containers were found on the server. All installed containers 
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="102"/>
         <source>Backup</source>
-        <translation>备份</translation>
+        <translation type="vanished">备份</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
-        <source>About AmneziaVPN</source>
-        <translation>关于</translation>
+        <source>About Ulta</source>
+        <translation type="vanished">关于</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
-        <source>Dev console</source>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="102"/>
+        <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="118"/>
+        <source>Telegram Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Close application</source>
-        <translation>关闭应用</translation>
+        <translation type="vanished">关闭应用</translation>
     </message>
 </context>
 <context>
@@ -1431,22 +1432,22 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation>联系方式</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="105"/>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="125"/>
+        <source>support@amnezia.org</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="144"/>
+        <source>GitHub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Telegram group</source>
-        <translation>电报群</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="106"/>
-        <source>To discuss features</source>
-        <translation>用于功能讨论</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="113"/>
-        <source>https://t.me/amnezia_vpn_en</source>
-        <translation></translation>
+        <translation type="vanished">电报群</translation>
     </message>
     <message>
         <source>Mail</source>
+        <translation type="vanished">邮件</translation>
         <translation type="vanished">邮件</translation>
     </message>
     <message>
@@ -1694,47 +1695,44 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="207"/>
         <source>Logging</source>
-        <translation>日志</translation>
+        <translation type="vanished">日志</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="208"/>
         <source>Enabled</source>
-        <translation>开启</translation>
+        <translation type="vanished">开启</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="208"/>
         <source>Disabled</source>
-        <translation>禁用</translation>
+        <translation type="vanished">禁用</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="225"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="207"/>
         <source>Reset settings and remove all data from the application</source>
         <translation>重置并清理应用的所有数据</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="233"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="215"/>
         <source>Reset settings and remove all data from the application?</source>
         <translation>重置并清理应用的所有数据？</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
-        <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>所有配置恢复为默认值。服务器已安装的AmneziaVPN服务将被保留。</translation>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="216"/>
+        <source>All settings will be reset to default. All installed Ulta services will still remain on the server.</source>
+        <translation>所有配置恢复为默认值。服务器已安装的Ulta服务将被保留。</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="217"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="236"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="218"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="240"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="222"/>
         <source>Cannot reset settings during active connection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1762,8 +1760,8 @@ And if you don&apos;t like the app, all the more support it - the donation will 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
-        <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>备份将包含您添加到 AmneziaVPN 的所有服务器的密码和私钥。请将这些信息保存在安全的地方。</translation>
+        <source>The backup will contain your passwords and private keys for all servers added to Ulta. Keep this information in a secure place.</source>
+        <translation>备份将包含您添加到 Ulta 的所有服务器的密码和私钥。请将这些信息保存在安全的地方。</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1830,27 +1828,25 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation>连接</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="81"/>
         <source>When AmneziaDNS is not used or installed</source>
-        <translation>当未使用或未安装AmneziaDNS时</translation>
+        <translation type="vanished">当未使用或未安装AmneziaDNS时</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="127"/>
         <source>Allows you to use the VPN only for certain Apps</source>
-        <translation>只允许在某些应用程序中使用 VPN</translation>
+        <translation type="vanished">只允许在某些应用程序中使用 VPN</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="154"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
         <source>KillSwitch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="155"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="167"/>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="178"/>
         <source>Cannot change killSwitch settings during active connection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1859,17 +1855,15 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation type="obsolete">使用AmneziaDNS，如其已安装在服务器上</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="61"/>
         <source>Use AmneziaDNS</source>
-        <translation>使用AmneziaDNS</translation>
+        <translation type="vanished">使用AmneziaDNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>If AmneziaDNS is installed on the server</source>
-        <translation>如果已在服务器安装AmneziaDNS</translation>
+        <translation type="vanished">如果已在服务器安装AmneziaDNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="80"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="82"/>
         <source>DNS servers</source>
         <translation>DNS服务器</translation>
     </message>
@@ -1878,19 +1872,16 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation type="vanished">如果未使用或未安装AmneziaDNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="97"/>
         <source>Site-based split tunneling</source>
-        <translation>基于网站的隧道分离</translation>
+        <translation type="vanished">基于网站的隧道分离</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="98"/>
         <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation>配置想要通过VPN访问网站</translation>
+        <translation type="vanished">配置想要通过VPN访问网站</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="126"/>
         <source>App-based split tunneling</source>
-        <translation>基于应用的隧道分离</translation>
+        <translation type="vanished">基于应用的隧道分离</translation>
     </message>
     <message>
         <source>Split site tunneling</source>
@@ -1922,52 +1913,51 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation>DNS服务器</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="70"/>
         <source>If AmneziaDNS is not used or installed</source>
-        <translation>如果未使用或未安装AmneziaDNS</translation>
+        <translation type="vanished">如果未使用或未安装AmneziaDNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
         <source>Primary DNS</source>
         <translation>首选 DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="93"/>
         <source>Secondary DNS</source>
         <translation>备用 DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="114"/>
         <source>Restore default</source>
         <translation>恢复默认配置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="115"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
         <source>Restore default DNS settings?</source>
         <translation>是否恢复默认DNS配置？</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="118"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="119"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="126"/>
         <source>Settings have been reset</source>
         <translation>已重置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="149"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="156"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="158"/>
         <source>Settings saved</source>
         <translation>配置已保存</translation>
     </message>
@@ -2203,8 +2193,8 @@ And if you don&apos;t like the app, all the more support it - the donation will 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
-        <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>所有已安装的 AmneziaVPN 服务仍将保留在服务器上。</translation>
+        <source>All installed Ulta services will still remain on the server.</source>
+        <translation>所有已安装的 Ulta 服务仍将保留在服务器上。</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
@@ -2526,8 +2516,19 @@ And if you don&apos;t like the app, all the more support it - the donation will 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="61"/>
         <source>Server connection</source>
-        <translation type="vanished">服务器连接</translation>
+        <translation>服务器连接</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="82"/>
+        <source>Key as a text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="100"/>
+        <source>Key as a file</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Do not use connection code from public sources. It may have been created to intercept your data.
@@ -2541,17 +2542,17 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation type="vanished">请勿使用来自不受信任来源的连接代码，因为它们可能是为了拦截您的数据而创建的。</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="70"/>
         <source>What do you have?</source>
-        <translation type="vanished">你用什么方式创建连接？</translation>
+        <translation>你用什么方式创建连接？</translation>
     </message>
     <message>
         <source>File with connection settings or backup</source>
         <translation type="vanished">包含连接配置或备份的文件</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="57"/>
         <source>Connection</source>
-        <translation type="unfinished">连接</translation>
+        <translation type="obsolete">连接</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="83"/>
@@ -2576,12 +2577,12 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="123"/>
         <source>Insert</source>
-        <translation type="unfinished">插入</translation>
+        <translation type="obsolete">插入</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="143"/>
         <source>Continue</source>
-        <translation type="unfinished">继续</translation>
+        <translation type="obsolete">继续</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="161"/>
@@ -2611,12 +2612,12 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="217"/>
         <source>Restore from backup</source>
-        <translation type="unfinished">从备份还原</translation>
+        <translation type="obsolete">从备份还原</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="223"/>
         <source>Open backup file</source>
-        <translation type="unfinished">打开备份文件</translation>
+        <translation type="obsolete">打开备份文件</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="224"/>
@@ -2626,22 +2627,31 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="241"/>
         <source>File with connection settings</source>
-        <translation>包含连接配置的文件</translation>
+        <translation type="vanished">包含连接配置的文件</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="249"/>
         <source>Open config file</source>
-        <translation>打开配置文件</translation>
+        <translation type="vanished">打开配置文件</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="268"/>
         <source>QR code</source>
-        <translation>二维码</translation>
+        <translation type="vanished">二维码</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="291"/>
         <source>I have nothing</source>
-        <translation type="unfinished">我没有</translation>
+        <translation type="obsolete">我没有</translation>
+    </message>
+    <message>
+        <source>Key as file</source>
+        <translation type="vanished">包含连接配置的文件</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="107"/>
+        <source>Open key file</source>
+        <translation>打开配置文件</translation>
     </message>
     <message>
         <source>Key as text</source>
@@ -2655,14 +2665,8 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation type="vanished">连接服务器</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="54"/>
-        <source>Configure your server</source>
-        <translation>配置服务器</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="61"/>
         <source>Server IP address [:port]</source>
-        <translation>服务器IP [:端口]</translation>
+        <translation type="vanished">服务器IP [:端口]</translation>
     </message>
     <message>
         <source>Login to connect via SSH</source>
@@ -2673,14 +2677,12 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation type="vanished">密码 或 私钥</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="116"/>
         <source>Continue</source>
-        <translation>继续</translation>
+        <translation type="vanished">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="144"/>
         <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation>您输入的所有数据将严格保密，不会与 Amnezia 或任何第三方共享或披露</translation>
+        <translation type="vanished">您输入的所有数据将严格保密，不会与 Amnezia 或任何第三方共享或披露</translation>
     </message>
     <message>
         <source>All data you enter will remain strictly confidential
@@ -2689,49 +2691,28 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
 不会向 Amnezia 或任何第三方分享或披露</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="62"/>
-        <source>255.255.255.255:22</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="78"/>
         <source>SSH Username</source>
-        <translation>SSH 用户名</translation>
+        <translation type="vanished">SSH 用户名</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="94"/>
         <source>Password or SSH private key</source>
-        <translation>密码或 SSH 私钥</translation>
+        <translation type="vanished">密码或 SSH 私钥</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="153"/>
-        <source>How to run your VPN server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="154"/>
-        <source>Where to get connection data, step-by-step instructions for buying a VPS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="170"/>
         <source>Ip address cannot be empty</source>
-        <translation>IP不能为空</translation>
+        <translation type="vanished">IP不能为空</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="173"/>
         <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation>按照这种格式输入 255.255.255.255:88</translation>
+        <translation type="vanished">按照这种格式输入 255.255.255.255:88</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="177"/>
         <source>Login cannot be empty</source>
-        <translation>账号不能为空</translation>
+        <translation type="vanished">账号不能为空</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="181"/>
         <source>Password/private key cannot be empty</source>
-        <translation>密码或私钥不能为空</translation>
+        <translation type="vanished">密码或私钥不能为空</translation>
     </message>
 </context>
 <context>
@@ -2898,8 +2879,28 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="vanished">我没有</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="48"/>
-        <source>Let&apos;s get started</source>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="45"/>
+        <source>Discord without any blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="56"/>
+        <source>Do you already have a key from the Telegram bot?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="71"/>
+        <source>Yes, I&apos;ve a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
+        <source>No, receive a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="125"/>
+        <source>https://t.me/ultadiscord_bot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2943,27 +2944,26 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="vanished">请勿使用公共来源的连接码。它可以被创建来拦截您的数据。</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="105"/>
         <source>Collapse content</source>
         <translation>折叠内容</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="105"/>
         <source>Show content</source>
         <translation>显示内容</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="127"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="144"/>
         <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation>只使用您信任的来源提供的连接代码。公共来源的代码可能是为了拦截您的数据而创建的。</translation>
+        <translation type="vanished">只使用您信任的来源提供的连接代码。公共来源的代码可能是为了拦截您的数据而创建的。</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="196"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="185"/>
         <source>Connect</source>
         <translation>连接</translation>
     </message>
@@ -3002,8 +3002,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
-        <source>For the AmneziaVPN app</source>
-        <translation>AmneziaVPN 应用</translation>
+        <source>For the Ulta app</source>
+        <translation>Ulta 应用</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="127"/>
@@ -3551,7 +3551,7 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
         <location filename="../containers/containers_defs.cpp" line="104"/>
-        <location filename="../containers/containers_defs.cpp" line="248"/>
+        <location filename="../containers/containers_defs.cpp" line="249"/>
         <source>SOCKS5 proxy server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3843,7 +3843,7 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <location filename="../containers/containers_defs.cpp" line="241"/>
+        <location filename="../containers/containers_defs.cpp" line="242"/>
         <source>Website in Tor network</source>
         <translation>在 Tor 网络中架设网站</translation>
     </message>
@@ -3878,10 +3878,10 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="219"/>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3914,12 +3914,12 @@ For more detailed information, you can
         <translation>在您的服务器上创建一个文件保险库，用于安全存储和传输文件。</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="171"/>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
         <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3927,7 +3927,7 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
@@ -3936,12 +3936,12 @@ If there is a extreme level of Internet censorship in your region, we advise you
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="190"/>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3950,7 +3950,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 WireGuard提供稳定的VPN连接，并在所有设备上具有高性能。它使用硬编码的加密设置。与OpenVPN相比，WireGuard具有较低的延迟和更好的数据传输吞吐量。
 WireGuard非常容易被阻挡，因为其独特的数据包签名。与一些其他VPN协议不同，这些协议使用混淆技术，WireGuard数据包的一致签名模式更容易被高级深度数据包检测（DPI）系统和其他网络监控工具识别和阻挡。
 
-    在AmneziaVPN上适用于所有平台
+    在Ulta上适用于所有平台
     低功耗
     最少的设置
     易于被DPI分析系统识别，容易被阻挡
@@ -3998,7 +3998,7 @@ WireGuard非常容易被阻挡，因为其独特的数据包签名。与一些�
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
@@ -4006,7 +4006,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN 是最流行且经过时间考验的 VPN 协议之一。
 它采用其独特的安全协议，利用 SSL/TLS 的优势进行加密和密钥交换。此外，OpenVPN 支持多种身份验证方法，使其具有多功能性和适应性，可适应各种设备和操作系统。由于其开源性质，OpenVPN 受益于全球社区的广泛审查，这不断增强了其安全性。凭借性能、安全性和兼容性的强大平衡，OpenVPN 仍然是注重隐私的个人和企业的首选。
 
-* 可在所有平台的 AmneziaVPN 中使用
+* 可在所有平台的 Ulta 中使用
 * 移动设备的正常功耗
 * 灵活定制，满足用户使用不同操作系统和设备的需求
 * 被DPI分析系统识别，因此容易被阻塞
@@ -4016,13 +4016,17 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <location filename="../containers/containers_defs.cpp" line="162"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the Ulta only on desktop platforms
+* Normal power consumption on mobile devices
+
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>Shadowsocks 受到 SOCKS5 协议的启发，使用 AEAD 密码保护连接。尽管 Shadowsocks 设计得谨慎且难以识别，但它与标准 HTTPS 连接并不相同。但是，某些流量分析系统可能仍会检测到 Shadowsocks 连接。由于Amnezia支持有限，建议使用AmneziaWG协议。
 
-* 仅在桌面平台上的 AmneziaVPN 中可用
+* 仅在桌面平台上的 Ulta 中可用
+* 移动设备的正常功耗
+
 * 可配置的加密协议
 * 可以被某些 DPI 系统检测到
 * 通过 TCP 网络协议工作。</translation>
@@ -4032,7 +4036,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 
 OpenVPN provides a secure VPN connection by encrypting all Internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -4040,7 +4044,7 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
@@ -4058,7 +4062,7 @@ Cloak 可以修改数据包元数据，以便将 VPN 流量完全屏蔽为正常
 
 如果您所在地区的互联网审查非常严格，我们建议您在第一次连接时仅使用 OpenVPN over Cloak
 
-* 可在所有平台的 AmneziaVPN 中使用
+* 可在所有平台的 Ulta 中使用
 * 移动设备功耗高
 * 配置灵活
 * 不被 DPI 分析系统识别
@@ -4069,7 +4073,7 @@ Cloak 可以修改数据包元数据，以便将 VPN 流量完全屏蔽为正常
 Provides stable VPN connection, high performance on all devices. Uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -4078,19 +4082,19 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 在所有设备上提供稳定的 VPN 连接和高性能。使用硬编码的加密设置。 WireGuard 与 OpenVPN 相比具有更低的延迟和更好的数据传输吞吐量。
 由于其独特的数据包签名，WireGuard 非常容易受到阻塞。与其他一些采用混淆技术的 VPN 协议不同，WireGuard 数据包的一致签名模式可以更容易地被高级深度数据包检测 (DPI) 系统和其他网络监控工具识别并阻止。
 
-* 可在所有平台的 AmneziaVPN 中使用
+* 可在所有平台的 Ulta 中使用
 * 低功耗
 * 配置简单
 * 容易被DPI分析系统识别，容易被阻塞
 * 通过 UDP 网络协议工作。</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="203"/>
+        <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -4099,32 +4103,11 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 虽然 WireGuard 以其高效而闻名，但由于其独特的数据包签名，它存在容易被检测到的问题。 AmneziaWG 通过使用更好的混淆方法解决了这个问题，使其流量与常规互联网流量融合在一起。
 这意味着 AmneziaWG 保留了原始版本的快速性能，同时添加了额外的隐秘层，使其成为那些想要快速且谨慎的 VPN 连接的人的绝佳选择。
 
-* 可在所有平台的 AmneziaVPN 中使用
+* 可在所有平台的 Ulta 中使用
 * 低功耗
 * 配置简单
 * 不被DPI分析系统识别，抗阻塞
 * 通过 UDP 网络协议工作。</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="230"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the AmneziaVPN only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation>IKEv2 与 IPSec 加密层配合使用，是一种现代且稳定的 VPN 协议。
-其显着特征之一是能够在网络和设备之间快速切换，使其特别适应动态网络环境。
-虽然 IKEv2 兼具安全性、稳定性和速度，但必须注意的是，IKEv2 很容易被检测到，并且容易受到阻止。
-
-* 仅在 Windows 上的 AmneziaVPN 中可用
-* 低功耗，在移动设备上
-* 最低配置
-* 获得DPI分析系统认可
-* 通过 UDP 网络协议、端口 500 和 4500 工作。</translation>
     </message>
     <message>
         <source>OpenVPN container</source>
@@ -4147,7 +4130,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="vanished">IPsec 容器</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="242"/>
+        <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>DNS 服务</translation>
     </message>
@@ -4345,7 +4328,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>SelectLanguageDrawer</name>
     <message>
-        <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="71"/>
+        <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="73"/>
         <source>Choose language</source>
         <translation>选择语言</translation>
     </message>
@@ -4386,7 +4369,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
-        <source>Save AmneziaVPN config</source>
+        <source>Save Ulta config</source>
         <translation>保存配置</translation>
     </message>
     <message>
@@ -4472,31 +4455,29 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="56"/>
         <source>Show</source>
         <translation>显示</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="57"/>
         <source>Connect</source>
         <translation>连接</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="58"/>
         <source>Disconnect</source>
         <translation>断开</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
-        <translation>官网</translation>
+        <translation type="vanished">官网</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="59"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
@@ -4563,12 +4544,12 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="345"/>
+        <location filename="../containers/containers_defs.cpp" line="346"/>
         <source>Low</source>
         <translation>低</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="346"/>
+        <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation>中或高</translation>
     </message>
@@ -4577,12 +4558,12 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="vanished">极度</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="355"/>
+        <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>只是想提高隐私保护级别。</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="356"/>
+        <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>想要绕过审查制度。大多数情况下推荐使用此选项。</translation>
     </message>
@@ -4609,6 +4590,11 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 </context>
 <context>
     <name>main2</name>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="33"/>
+        <source>Ulta</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <location filename="../ui/qml/main2.qml" line="162"/>
         <source>Private key passphrase</source>

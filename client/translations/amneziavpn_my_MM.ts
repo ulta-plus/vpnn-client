@@ -88,10 +88,10 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="219"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
-        <translation>VPN ပရိုတိုကောများကို မထည့်သွင်းရသေးပါ။ 
+        <translation>VPN ပရိုတိုကောများကို မထည့်သွင်းရသေးပါ။
 ကျေးဇူးပြု၍ VPN ကွန်တိန်နာကို အရင်ထည့်သွင်းပါ။</translation>
     </message>
     <message>
@@ -120,12 +120,12 @@
         <translation>ဆက်တင်များကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ပြီးပါပြီ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="209"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
         <source>The selected protocol is not supported on the current platform</source>
         <translation>ရွေးချယ်ထားသော ပရိုတိုကောကို လက်ရှိပလက်ဖောင်းပေါ်တွင် အ‌ထောက်အပံ့မပေးထားပါ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="233"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="238"/>
         <source>unable to create configuration</source>
         <translation>configuration ဖန်တီး၍မရပါ</translation>
     </message>
@@ -135,7 +135,7 @@
         <translation>ပြန်လည်ချိတ်ဆက်နေပါသည်...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="80"/>
+        <location filename="../ui/controllers/connectionController.h" line="81"/>
         <location filename="../ui/controllers/connectionController.cpp" line="100"/>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
         <location filename="../ui/controllers/connectionController.cpp" line="121"/>
@@ -156,12 +156,11 @@
         <translation>ချိတ်ဆက်မှုအသစ်ထည့်သွင်းမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="57"/>
         <source>Configure your server</source>
-        <translation>သင်၏ဆာဗာကို စီစဉ်ချိန်ညှိမည်</translation>
+        <translation type="vanished">သင်၏ဆာဗာကို စီစဉ်ချိန်ညှိမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="74"/>
+        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="58"/>
         <source>Open config file, key or QR code</source>
         <translation>config ဖိုင်၊ key သို့မဟုတ် QR ကုဒ်ကို ဖွင့်မည်</translation>
     </message>
@@ -222,11 +221,16 @@
         <translation>ဆာဗာပေါ်တွင် split tunneling အသုံးပြုထားပါသည်။</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
-        <translation>ဖွင့်ထားပါသည်။
+        <translation type="vanished">ဖွင့်ထားပါသည်။
 လက်ရှိဆာဗာအတွက် ပိတ်၍မရပါ။</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
+        <source>Enabled
+Can&apos;t be disabled for current server</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="79"/>
@@ -403,8 +407,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>Ulta</source>
+        <translation>Ulta</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -418,8 +422,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>AmneziaVPN notification</source>
-        <translation>AmneziaVPN နိုတီ</translation>
+        <source>Ulta notification</source>
+        <translation>Ulta နိုတီ</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -456,32 +460,41 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="67"/>
         <source>Logging enabled</source>
-        <translation>Logging ဖွင့်ထားပါသည်</translation>
+        <translation type="vanished">Logging ဖွင့်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
         <source>Split tunneling enabled</source>
-        <translation>split tunnelling ဖွင့်ထားပါသည်</translation>
+        <translation type="vanished">split tunnelling ဖွင့်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
         <source>Split tunneling disabled</source>
-        <translation>split tunnelling ပိတ်ထားပါသည်</translation>
+        <translation type="vanished">split tunnelling ပိတ်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="328"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="62"/>
+        <source>Discord without any blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="100"/>
+        <source>Live communication,
+competitions and the latest news
+in our Telegram channel!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="330"/>
         <source>VPN protocol</source>
         <translation>VPN ပရိုတိုကော</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="383"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="385"/>
         <source>Servers</source>
         <translation>ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="495"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="501"/>
         <source>Unable change server while there is an active connection</source>
         <translation>လက်ရှိချိတ်ဆက်မှုတစ်ခုရှိနေချိန်တွင် ဆာဗာကို ပြောင်းလဲ၍မရပါ</translation>
     </message>
@@ -1285,24 +1298,30 @@ Already installed containers were found on the server. All installed containers 
         <translation>အပလီကေးရှင်း</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="102"/>
         <source>Backup</source>
-        <translation>backup ယူမည်</translation>
+        <translation type="vanished">backup ယူမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
-        <source>About AmneziaVPN</source>
-        <translation>AmneziaVPN အကြောင်း</translation>
+        <source>About Ulta</source>
+        <translation type="vanished">Ulta အကြောင်း</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
         <source>Dev console</source>
-        <translation>ဒက်ဗယ်လော်ပါ console</translation>
+        <translation type="vanished">ဒက်ဗယ်လော်ပါ console</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="102"/>
+        <source>Support via Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="118"/>
+        <source>Telegram Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Close application</source>
-        <translation>အပလီကေးရှင်းကို ပိတ်မည်</translation>
+        <translation type="vanished">အပလီကေးရှင်းကို ပိတ်မည်</translation>
     </message>
 </context>
 <context>
@@ -1323,19 +1342,16 @@ Already installed containers were found on the server. All installed containers 
         <translation>ဆက်သွယ်ရန်လိပ်စာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="105"/>
         <source>Telegram group</source>
-        <translation>Telegram ဂရု</translation>
+        <translation type="vanished">Telegram ဂရု</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="106"/>
         <source>To discuss features</source>
-        <translation>feature များကိုဆွေးနွေးရန်</translation>
+        <translation type="vanished">feature များကိုဆွေးနွေးရန်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="113"/>
         <source>https://t.me/amnezia_vpn_en</source>
-        <translation>https://t.me/amnezia_vpn</translation>
+        <translation type="vanished">https://t.me/amnezia_vpn</translation>
     </message>
     <message>
         <source>Mail</source>
@@ -1347,7 +1363,7 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="126"/>
         <source>For reviews and bug reports</source>
         <translation>သုံးသပ်ချက်များနှင့် ချွတ်ယွင်းချက်အစီရင်ခံစာများအတွက်</translation>
     </message>
@@ -1364,7 +1380,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="150"/>
         <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation>https://github.com/amnezia-vpn/amnezia-client</translation>
+        <translation type="vanished">https://github.com/amnezia-vpn/amnezia-client</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="161"/>
@@ -1578,47 +1594,44 @@ Already installed containers were found on the server. All installed containers 
         <translation>ဘာသာစကား</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="207"/>
         <source>Logging</source>
-        <translation>Logging</translation>
+        <translation type="vanished">Logging</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="208"/>
         <source>Enabled</source>
-        <translation>ဖွင့်ထားပါသည်</translation>
+        <translation type="vanished">ဖွင့်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="208"/>
         <source>Disabled</source>
-        <translation>ပိတ်ထားပါသည်</translation>
+        <translation type="vanished">ပိတ်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="225"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="207"/>
         <source>Reset settings and remove all data from the application</source>
         <translation>ဆက်တင်များနဂိုတိုင်းထားပြီး အပလီကေးရှင်းမှဒေတာအားလုံးဖယ်ရှားမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="233"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="215"/>
         <source>Reset settings and remove all data from the application?</source>
         <translation>ဆက်တင်များကို ပြန်လည်သတ်မှတ်ပြီး အပလီကေးရှင်းမှ ဒေတာအားလုံးကို ဖယ်ရှားမည်လား?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
-        <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>ဆက်တင်အားလုံးကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ပါမည်။ ထည့်သွင်းထားသော AmneziaVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်။.</translation>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="216"/>
+        <source>All settings will be reset to default. All installed Ulta services will still remain on the server.</source>
+        <translation>ဆက်တင်အားလုံးကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ပါမည်။ ထည့်သွင်းထားသော Ulta ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်။.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="217"/>
         <source>Continue</source>
         <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="236"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="218"/>
         <source>Cancel</source>
         <translation>ပယ်ဖျက်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="240"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="222"/>
         <source>Cannot reset settings during active connection</source>
         <translation>ချိတ်ဆက်မှုရှိနေချိန်အတွင်း ဆက်တင်များကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်၍မရပါ</translation>
     </message>
@@ -1642,8 +1655,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
-        <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>အရံဖိုင်တွင် AmneziaVPN သို့ ထည့်ထားသော ဆာဗာအားလုံးအတွက် သင့်စကားဝှက်များနှင့် လျှို့ဝှက်သော့များ ပါဝင်ပါမည်။ ဤအချက်အလက်ကို လုံခြုံသောနေရာတွင် ထားပါ။.</translation>
+        <source>The backup will contain your passwords and private keys for all servers added to Ulta. Keep this information in a secure place.</source>
+        <translation>မိတ္တူတွင် Ulta သို့ ထည့်ထားသော ဆာဗာအားလုံးအတွက် သင့်စကားဝှက်များနှင့် လျှို့ဝှက်သော့များ ပါဝင်ပါမည်။ ဤအချက်အလက်ကို လုံခြုံသောနေရာတွင် ထားပါ။</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1710,59 +1723,52 @@ Already installed containers were found on the server. All installed containers 
         <translation>ချိတ်ဆက်မှု</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="61"/>
         <source>Use AmneziaDNS</source>
-        <translation>AmneziaDNS ကို အသုံးပြုမည်</translation>
+        <translation type="vanished">AmneziaDNS ကို အသုံးပြုမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>If AmneziaDNS is installed on the server</source>
-        <translation>အကယ်၍ AmneziaDNS ကို ဆာဗာတွင် ထည့်သွင်းထားလျှင်</translation>
+        <translation type="vanished">အကယ်၍ AmneziaDNS ကို ဆာဗာတွင် ထည့်သွင်းထားလျှင်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="80"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="82"/>
         <source>DNS servers</source>
         <translation>DNS ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="81"/>
         <source>When AmneziaDNS is not used or installed</source>
-        <translation>AmneziaDNS ကို အသုံးမပြု သို့မဟုတ် ထည့်သွင်းခြင်းမပြုသည့်အခါ</translation>
+        <translation type="vanished">AmneziaDNS ကို အသုံးမပြု သို့မဟုတ် ထည့်သွင်းခြင်းမပြုသည့်အခါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="127"/>
         <source>Allows you to use the VPN only for certain Apps</source>
-        <translation>အချို့သောအက်ပ်များအတွက်သာ VPN ကို အသုံးပြုခွင့်ပေးသည်</translation>
+        <translation type="vanished">အချို့သောအက်ပ်များအတွက်သာ VPN ကို အသုံးပြုခွင့်ပေးသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="154"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
         <source>KillSwitch</source>
         <translation>KillSwitch</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="155"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="167"/>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
         <translation>အကြောင်းတစ်ခုခုကြောင့် VPN ချိတ်ဆက်မှု ပျက်သွားပါက သင့်အင်တာနက်ကို ချက်ချင်းရပ်ဆိုင်းပေးသည်.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="178"/>
         <source>Cannot change killSwitch settings during active connection</source>
         <translation>လက်ရှိချိတ်ဆက်မှုတစ်ခုရှိနေချိန်တွင် killSwitch ဆက်တင်များကို ပြောင်းလဲ၍မရပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="97"/>
         <source>Site-based split tunneling</source>
-        <translation>ဝက်ဆိုဒ်အခြေပြု split tunneling</translation>
+        <translation type="vanished">ဝက်ဆိုဒ်အခြေပြု split tunneling</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="98"/>
         <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation>VPN မှတဆင့် သင်ဝင်ရောက်လိုသည့်ဆိုဒ်များကို ရွေးချယ်စေနိုင်သည်</translation>
+        <translation type="vanished">VPN မှတဆင့် သင်ဝင်ရောက်လိုသည့်ဆိုဒ်များကို ရွေးချယ်စေနိုင်သည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="126"/>
         <source>App-based split tunneling</source>
-        <translation>App အခြေပြု split tunneling</translation>
+        <translation type="vanished">App အခြေပြု split tunneling</translation>
     </message>
 </context>
 <context>
@@ -1778,52 +1784,51 @@ Already installed containers were found on the server. All installed containers 
         <translation>DNS ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="70"/>
         <source>If AmneziaDNS is not used or installed</source>
-        <translation>AmneziaDNS ကို အသုံးမပြု သို့မဟုတ် ထည့်သွင်းခြင်းမပြုသည့်အခါ</translation>
+        <translation type="vanished">AmneziaDNS ကို အသုံးမပြု သို့မဟုတ် ထည့်သွင်းခြင်းမပြုသည့်အခါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
         <source>Primary DNS</source>
         <translation>Primary DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="93"/>
         <source>Secondary DNS</source>
         <translation>Secondary DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="114"/>
         <source>Restore default</source>
         <translation>မူရင်းအတိုင်းပြန်လည်ထားရှိမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="115"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
         <source>Restore default DNS settings?</source>
         <translation>မူရင်း DNS ဆက်တင်များကို ပြန်လည်ရယူလိုပါသလား?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="118"/>
         <source>Continue</source>
         <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="119"/>
         <source>Cancel</source>
         <translation>ပယ်ဖျက်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="126"/>
         <source>Settings have been reset</source>
         <translation>ဆက်တင်များကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="149"/>
         <source>Save</source>
         <translation>သိမ်းဆည်းမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="156"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="158"/>
         <source>Settings saved</source>
         <translation>ဆက်တင်များကို သိမ်းဆည်းပြီးပြီ</translation>
     </message>
@@ -2048,8 +2053,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
-        <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>ထည့်သွင်းထားသော AmneziaVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
+        <source>All installed Ulta services will still remain on the server.</source>
+        <translation>ထည့်သွင်းထားသော Ulta ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
@@ -2329,12 +2334,11 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="241"/>
         <source>File with connection settings</source>
-        <translation>ချိတ်ဆက်မှုဆက်တင်များပါဝင်သောဖိုင်</translation>
+        <translation type="vanished">ချိတ်ဆက်မှုဆက်တင်များပါဝင်သောဖိုင်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="57"/>
         <source>Connection</source>
-        <translation>ချိတ်ဆက်မှု</translation>
+        <translation type="vanished">ချိတ်ဆက်မှု</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="83"/>
@@ -2349,66 +2353,99 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="112"/>
         <source>Insert the key, add a configuration file or scan the QR-code</source>
-        <translation>Key ကိုထည့်မည်၊ ဖွဲ့စည်းမှုဖိုင်တစ်ခုကိုထည့်မည် သို့မဟုတ် QR-ကုဒ်ကို စကင်န်ဖတ်မည်</translation>
+        <translation type="vanished">Key ကိုထည့်မည်၊ ဖွဲ့စည်းမှုဖိုင်တစ်ခုကိုထည့်မည် သို့မဟုတ် QR-ကုဒ်ကို စကင်န်ဖတ်မည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="122"/>
         <source>Insert key</source>
-        <translation>Key ကိုထည့်သွင်းမည်</translation>
+        <translation type="vanished">Key ကိုထည့်သွင်းမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="123"/>
         <source>Insert</source>
-        <translation>ထည့်သွင်းမည်</translation>
+        <translation type="vanished">ထည့်သွင်းမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="143"/>
         <source>Continue</source>
-        <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
+        <translation type="vanished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="161"/>
         <source>Other connection options</source>
-        <translation>အခြားချိတ်ဆက်မှုရွေးချယ်စရာများ</translation>
+        <translation type="vanished">အခြားချိတ်ဆက်မှုရွေးချယ်စရာများ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="172"/>
         <source>VPN by Amnezia</source>
-        <translation>Amnezia မှ VPN</translation>
+        <translation type="vanished">Amnezia မှ VPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="173"/>
         <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation>Amnezia မှ အခပေးနှင့် အခမဲ့ မူလ VPN ဝန်ဆောင်မှုများသို့ ချိတ်ဆက်မည်</translation>
+        <translation type="vanished">Amnezia မှ အခပေးနှင့် အခမဲ့ မူလ VPN ဝန်ဆောင်မှုများသို့ ချိတ်ဆက်မည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="196"/>
         <source>Self-hosted VPN</source>
-        <translation>ကိုယ်တိုင် host လုပ်ထားသော VPN</translation>
+        <translation type="vanished">ကိုယ်တိုင် host လုပ်ထားသော VPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="197"/>
         <source>Configure Amnezia VPN on your own server</source>
-        <translation>Amnezia VPN ကို သင်၏ကိုယ်ပိုင်ဆာဗာပေါ်တွင် စီစဥ်ချိန်ညှိမည်</translation>
+        <translation type="vanished">Amnezia VPN ကို သင်၏ကိုယ်ပိုင်ဆာဗာပေါ်တွင် စီစဥ်ချိန်ညှိမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="217"/>
         <source>Restore from backup</source>
-        <translation>အရံဖိုင်မှ ပြန်လည်ရယူမည်</translation>
+        <translation type="vanished">အရံဖိုင်မှ ပြန်လည်ရယူမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="223"/>
         <source>Open backup file</source>
-        <translation>အရံဖိုင်ကို ဖွင့်မည်</translation>
+        <translation type="vanished">အရံဖိုင်ကို ဖွင့်မည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="224"/>
         <source>Backup files (*.backup)</source>
-        <translation>အရံဖိုင်များ (*.backup)</translation>
+        <translation type="vanished">အရံဖိုင်များ (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="249"/>
         <source>Open config file</source>
+        <translation type="vanished">config ဖိုင်ကိုဖွင့်မည်</translation>
+    </message>
+    <message>
+        <source>I have nothing</source>
+        <translation type="vanished">ကျွန်ုပ်တွင်ဘာမှမရှိပါ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="61"/>
+        <source>Server connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="70"/>
+        <source>What do you have?</source>
+        <translation>သင့်တွင်ဘာရှိပါသလဲ?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="82"/>
+        <source>Key as a text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="100"/>
+        <source>Key as a file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key as file</source>
+        <translation type="vanished">ချိတ်ဆက်မှုဆက်တင်များပါဝင်သောဖိုင်</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="107"/>
+        <source>Open key file</source>
         <translation>config ဖိုင်ကိုဖွင့်မည်</translation>
     </message>
     <message>
@@ -2425,69 +2462,44 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardCredentials</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="61"/>
         <source>Server IP address [:port]</source>
-        <translation>ဆာဗာ IP လိပ်စာ [:port]</translation>
+        <translation type="vanished">ဆာဗာ IP လိပ်စာ [:port]</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="116"/>
         <source>Continue</source>
-        <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
+        <translation type="vanished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="173"/>
         <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation>လိပ်စာကို  255.255.255.255:88 ဖော်မတ်ဖြင့် ထည့်ပါ</translation>
+        <translation type="vanished">လိပ်စာကို  255.255.255.255:88 ဖော်မတ်ဖြင့် ထည့်ပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="54"/>
-        <source>Configure your server</source>
-        <translation>သင်၏ဆာဗာကို စီစဉ်ချိန်ညှိမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="62"/>
         <source>255.255.255.255:22</source>
-        <translation>255.255.255.255:22</translation>
+        <translation type="vanished">255.255.255.255:22</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="78"/>
         <source>SSH Username</source>
-        <translation>SSH အသုံးပြုသူအမည်</translation>
+        <translation type="vanished">SSH အသုံးပြုသူအမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="94"/>
         <source>Password or SSH private key</source>
-        <translation>စကားဝှက် သိုမဟုတ် SSH private key</translation>
+        <translation type="vanished">စကားဝှက် သိုမဟုတ် SSH private key</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="144"/>
         <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation>သင်ထည့်သွင်းသည့်ဒေတာအားလုံးကို တင်းကြပ်လုံခြုံစွာလျှို့ဝှက်ထားမည်ဖြစ်ပြီး Amnezia သို့မဟုတ် မည်သည့်ပြင်ပအဖွဲ့အစည်းကိုမျှ မျှဝေမည် သို့မဟုတ် ထုတ်ဖော်မည်မဟုတ်ပါ</translation>
+        <translation type="vanished">သင်ထည့်သွင်းသည့်ဒေတာအားလုံးကို တင်းကြပ်လုံခြုံစွာလျှို့ဝှက်ထားမည်ဖြစ်ပြီး Amnezia သို့မဟုတ် မည်သည့်ပြင်ပအဖွဲ့အစည်းကိုမျှ မျှဝေမည် သို့မဟုတ် ထုတ်ဖော်မည်မဟုတ်ပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="153"/>
-        <source>How to run your VPN server</source>
-        <translation>သင်၏ဆာဗာကို လည်ပတ်ပုံလည်ပတ်နည်း</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="154"/>
-        <source>Where to get connection data, step-by-step instructions for buying a VPS</source>
-        <translation>ချိတ်ဆက်မှုဒေတာကို ဘယ်မှာရနိုင်မလဲ၊ VPS ဝယ်ယူပုံဝယ်ယူနည်းအတွက် အဆင့်ဆင့် ညွှန်ကြားချက်များ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="170"/>
         <source>Ip address cannot be empty</source>
-        <translation>IP လိပ်စာသည် ဗလာမဖြစ်ရပါ</translation>
+        <translation type="vanished">IP လိပ်စာသည် ဗလာမဖြစ်ရပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="177"/>
         <source>Login cannot be empty</source>
-        <translation>လော့ဂ်အင်အချက်အလက်သည် ဗလာမဖြစ်ရပါ</translation>
+        <translation type="vanished">လော့ဂ်အင်အချက်အလက်သည် ဗလာမဖြစ်ရပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="181"/>
         <source>Password/private key cannot be empty</source>
-        <translation>စကားဝှက်/private key သည် ဗလာမဖြစ်ရပါ</translation>
+        <translation type="vanished">စကားဝှက်/private key သည် ဗလာမဖြစ်ရပါ</translation>
     </message>
 </context>
 <context>
@@ -2614,9 +2626,41 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="48"/>
         <source>Let&apos;s get started</source>
-        <translation>စတင်လိုက်ကြရအောင်</translation>
+        <translation type="vanished">စတင်လိုက်ကြရအောင်</translation>
+    </message>
+    <message>
+        <source>I have the data to connect</source>
+        <translation type="vanished">ကျွန်ုပ်တွင်ချိတ်ဆက်ဖို့အတွက်ဒေတာရှိသည်</translation>
+    </message>
+    <message>
+        <source>I have nothing</source>
+        <translation type="vanished">ကျွန်ုပ်တွင်ဘာမှမရှိပါ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="45"/>
+        <source>Discord without any blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="56"/>
+        <source>Do you already have a key from the Telegram bot?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="71"/>
+        <source>Yes, I&apos;ve a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
+        <source>No, receive a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="125"/>
+        <source>https://t.me/ultadiscord_bot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2655,27 +2699,26 @@ Already installed containers were found on the server. All installed containers 
         <translation>ချိတ်ဆက်မှုအသစ်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="105"/>
         <source>Collapse content</source>
         <translation>အကြောင်းအရာများကိုဖြန့်ချမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="105"/>
         <source>Show content</source>
         <translation>အကြောင်းအရာများကိုပြမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="127"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation>WireGuard obfuscation ကိုဖွင့်ထားပါ။ အကယ်၍ သင်၏အင်တာနက်ဝန်ဆောင်မှုပေးသောကုမ္ပဏီက WireGuard ပိတ်ဆို့ထားသော် ၎င်းကိုဖွင့်ထားခြင်းအားဖြင့်အသုံးဝင်နိုင်သည်။.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="144"/>
         <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation>သင်ယုံကြည်ရသော ရင်းမြစ်များမှရရှိသော ချိတ်ဆက်ကုဒ်များကိုသာ အသုံးပြုပါ။ လူတိုင်းဝင်ရောက်ရယူနေနိုင်သော ရင်းမြစ်များမှကုဒ်များသည် သင့်ဒေတာကို ကြားဖြတ်ရယူရန် ဖန်တီးထားသောကုဒ်များဖြစ်နေနိုင်သည်။.</translation>
+        <translation type="vanished">သင်ယုံကြည်ရသော ရင်းမြစ်များမှရရှိသော ချိတ်ဆက်ကုဒ်များကိုသာ အသုံးပြုပါ။ လူတိုင်းဝင်ရောက်ရယူနေနိုင်သော ရင်းမြစ်များမှကုဒ်များသည် သင့်ဒေတာကို ကြားဖြတ်ရယူရန် ဖန်တီးထားသောကုဒ်များဖြစ်နေနိုင်သည်။.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="196"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="185"/>
         <source>Connect</source>
         <translation>ချိတ်ဆက်မည်</translation>
     </message>
@@ -2750,8 +2793,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
-        <source>For the AmneziaVPN app</source>
-        <translation>AmneziaVPN အက်ပ်အတွက်</translation>
+        <source>For the Ulta app</source>
+        <translation>Ulta အက်ပ်အတွက်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="137"/>
@@ -3459,12 +3502,11 @@ Already installed containers were found on the server. All installed containers 
         <translation>ဖိုင်များကို လုံခြုံစွာသိမ်းဆည်းရန်နှင့် လွှဲပြောင်းရန်အတွက် သင့်ဆာဗာပေါ်တွင် fire vault တစ်ခု ဖန်တီးပါ.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="171"/>
         <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3472,13 +3514,13 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
 * Works over TCP network protocol, 443 port.
 </source>
-        <translation>ဤပစ္စည်းသည်ပိတ်ဆို့ခြင်းမှကာကွယ်ရန်အတွက် အထူးထုတ်လုပ်ထားသည့် OpenVPN ပရိုတိုကောနှင့် Cloak plugin ၏ပေါင်းစပ်မှုဖြစ်သည်.
+        <translation type="vanished">ဤပစ္စည်းသည်ပိတ်ဆို့ခြင်းမှကာကွယ်ရန်အတွက် အထူးထုတ်လုပ်ထားသည့် OpenVPN ပရိုတိုကောနှင့် Cloak plugin ၏ပေါင်းစပ်မှုဖြစ်သည်.
 
 OpenVPN သည် ကလိုင်းယင့်နှင့် ဆာဗာကြားရှိ အင်တာနက်အသွားအလာအားလုံးကို ကုဒ်ဝှက်ခြင်းဖြင့် လုံခြုံသော VPN ချိတ်ဆက်မှုကို ပံ့ပိုးပေးပါသည်
 
@@ -3490,7 +3532,7 @@ Cloak သည် ပက်ကတ်မက်တာဒေတာကို မွမ
 
 သင့်ဒေသတွင်အင်တာနက်ဆင်ဆာဖြတ်တောက်မှုအလွန်ခံစားနေရပါက၊ ပထမဆုံးချိတ်ဆက်မှုမှ Cloak တွင် OpenVPN ကိုသာအသုံးပြုရန်အကြံပြုအပ်ပါသည်.
 
-* ပလက်ဖောင်းအားလုံးတွင်ရှိသော AmneziaVPN တွင်ရရှိနိုင်ပါသည်
+* ပလက်ဖောင်းအားလုံးတွင်ရှိသော Ulta တွင်ရရှိနိုင်ပါသည်
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပါဝါသုံးစွဲမှုမြင့်မားခြင်း
 * ပြောင်းလွယ်ပြင်ဆင်ရန်လွယ်သောဆက်တင်များ
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ‌ထောက်လှန်းမသိရှိနိုင်ပါ
@@ -3498,12 +3540,12 @@ Cloak သည် ပက်ကတ်မက်တာဒေတာကို မွမ
 </translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="190"/>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3512,46 +3554,44 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 WireGuard သည် ၎င်းအားအသုံးပြုထားသောစက်အားလုံးကို တည်ငြိမ်သော VPN ချိတ်ဆက်မှုနှင့် စွမ်းဆောင်ရည်မြင့်မားမှုကို ရရှိစေပါသည်။ Hard-coded encryption ဆက်တင်များကို အသုံးပြုထားပါသည်။ OpenVPN နှင့် နှိုင်းယှဉ်ပါက WireGuard သည် latency နည်းပါးပြီး ဒေတာလွှဲပြောင်းမှု ပိုမိုကောင်းမွန်ပါသည်။
 WireGuard သည် ၎င်း၏ ကွဲပြားသော packet လက်မှတ်များ ကြောင့် ပိတ်ဆို့ခြင်းကို အလွန်ခံရနိုင်ချေရှိသည်။ ရှုပ်ထွေးသောနည်းပညာများကို အသုံးပြုသည့် အခြားသော VPN ပရိုတိုကောများနှင့် မတူဘဲ၊ WireGuard ပက်ကတ်များ၏ တသမတ်တည်း လက်မှတ်ပုံစံများကြောင့် ၎င်းတို့ကိုပိုမိုလွယ်ကူစွာ ရှာဖွေဖော်ထုတ်နိုင်ကာ အဆင့်မြင့် Deep Packet Inspection (DPI) စနစ်များနှင့် အခြားသော ကွန်ရက်စောင့်ကြည့်ရေးကိရိယာများဖြင့် ပိတ်ဆို့ထားနိုင်သည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်ရနိုင်ပါသည်။
+* ပလက်ဖောင်းအားလုံးရှိ Ulta တွင်ရနိုင်ပါသည်။
 * ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * ဆက်တင်အရေအတွက်နည်းပါခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက အလွယ်တကူ ထောက်လှန်းသိရှိခံရနိုင်ပြီး ပိတ်ဆို့ခြင်းခံရနိုင်သည်။
 * UDP ကွန်ရက်ပရိုတိုကောပေါ်တွင် အလုပ်လုပ်သည်။.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="219"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+        <translation type="vanished">The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="230"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the AmneziaVPN only on Windows
+* Available in the Ulta only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation>IPSec ကုဒ်ဝှက်ခြင်းအလွှာနှင့်တွဲဆက်ထားသည့် IKEv2 သည် ခေတ်မီပြီး တည်ငြိမ်သော VPN ပရိုတိုကောဖြစ်သည်။
+        <translation type="vanished">IPSec ကုဒ်ဝှက်ခြင်းအလွှာနှင့်တွဲဆက်ထားသည့် IKEv2 သည် ခေတ်မီပြီး တည်ငြိမ်သော VPN ပရိုတိုကောဖြစ်သည်။
 ၎င်း၏ထူးခြားသောအင်္ဂါရပ်များထဲမှတစ်ခုမှာ ကွန်ရက်များနှင့် စက်ပစ္စည်းများကြား လျင်မြန်စွာပြောင်းလဲနိုင်သည့်စွမ်းရည်ဖြစ်ပြီး ဤစွမ်းရည်ကပင် dynamic ဖြစ်သောကွန်ရက်ပတ်ဝန်းကျင်များတွင် လိုက်လျောညီထွေဖြစ်စေရန်အကူအညီပေးပါသည်။
 IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှု၊ နှင့် အမြန်နှုန်းတို့ ပေးစွမ်းနိုင်သော်လည်း၊ အလွယ်တကူ ထောက်လှန်းသိရှိခံရနိုင်ပြီး ပိတ်ဆို့ခြင်း ခံရနိုင်သည်ကို သတိပြုရန် အရေးကြီးပါသည်။
 
-* Windows တွင်ရှိသော AmneziaVPN တွင်သာရနိုင်သည်။
+* Windows တွင်ရှိသော Ulta တွင်သာရနိုင်သည်။
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * တပ်ဆင်ချိန်ညှိရန်သိပ်မလိုအပ်ခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များမှထောက်လှန်းနိုင်ခြင်း။
 * UDP ကွန်ရက်ပရိုတိုကော၊ port 500 နှင့် 4500 ကျော်တွင် အလုပ်လုပ်သည်။.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="242"/>
+        <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>DNS ဝန်ဆောင်မှု</translation>
     </message>
@@ -3562,7 +3602,7 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <location filename="../containers/containers_defs.cpp" line="241"/>
+        <location filename="../containers/containers_defs.cpp" line="242"/>
         <source>Website in Tor network</source>
         <translation>Tor ကွန်ရက်ထဲရှိ ဝဘ်ဆိုဒ်</translation>
     </message>
@@ -3601,7 +3641,7 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
@@ -3609,7 +3649,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN သည်ပေါ်ပြူလာအဖြစ်ဆုံးနှင့် ကာလရှည်ကြာအသုံးဝင်ခဲ့ အသုံးဝင်နေစဲဖြစ်သော VPN ပရိုတိုကောများထဲမှတစ်ခုဖြစ်သည်။
 ကုဒ်ဝှက်ခြင်းနှင့် key လဲလှယ်ခြင်းအတွက် SSL/TLS ၏ ခွန်အားကို အသုံးချခြင်းဖြင့် OpenVPN သည် ၎င်း၏ထူးခြားသော လုံခြုံရေးပရိုတိုကောကို အသုံးပြုထားသည်။ ထို့အပြင် OpenVPN ၏ အထောက်အထားစိစစ်ခြင်းနည်းလမ်းများစွာအတွက်အထောက်အပံ့ပေးထားမှုသည် ၎င်းကို စွယ်စုံရလိုက်လျောညီထွေဖြစ်စေပြီး စက်ပစ္စည်းများနှင့် လည်ပတ်မှုစနစ်များစွာကို အထောက်အပံ့ပေးစေပါသည်။ ၎င်း၏ open-source သဘောသဘာဝကြောင့် OpenVPN သည် ၎င်းကို ကျယ်ကျယ်ပြန့်ပြန့် စိစစ်စောင့်ကြည့်ပေးသည့် global community ကြောင့် လုံခြုံရေးပိုမိုကောင်းမွန်လာသည့်အကျိုးကျေးဇူးများ ရရှိခဲ့သည်။ စွမ်းဆောင်ရည်၊ လုံခြုံရေးနှင့် မည်သည့်စက်ပစ္စည်းနှင့်မဆိုလိုက်လျှောညီထွေရှိမှုဂုဏ်သတ္တိတို့ကို မျှတစွာပိုင်ဆိုင်ထားသော OpenVPN သည် ကိုယ်ရေးကိုယ်တာလုံခြုံမှုကိုအထူးဂရုစိုက်သော ပုဂ္ဂိုလ်များနှင့် စီးပွားရေးလုပ်ငန်းများအတွက် ထိပ်တန်းရွေးချယ်မှုတစ်ခုအဖြစ် ရပ်တည်နေစဲဖြစ်ပါသည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်အသုံးပြုနိုင်သည်။
+* ပလက်ဖောင်းအားလုံးရှိ Ulta တွင်အသုံးပြုနိုင်သည်။
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပုံမှန်ပါဝါသုံးစွဲမှုရှိခြင်း။
 * မတူညီသော operating system များ၊ စက်ပစ္စည်းများနှင့်အလုပ်လုပ်သော အသုံးပြုသူများအတွက် လိုအပ်ချက်များနှင့်ကိုက်ညီရန်  လိုသလိုချိန်ညှိနိုင်ခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များကထောက်လှန်းနိုင်သောကြောင့် ပိတ်ဆို့ခြင်းခံရနိုင်သည်။
@@ -3619,24 +3659,50 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <location filename="../containers/containers_defs.cpp" line="162"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the Ulta only on desktop platforms
+* Normal power consumption on mobile devices
+
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>SOCKS5 ပရိုတိုကောကို အတုယူအခြေခံတည်ဆောက်ထားသော Shadowsocks သည် AEAD cipher ကိုအသုံးပြု၍ ချိတ်ဆက်မှုကိုကာကွယ်ပေးသည်။ Shadowsocks သည် ထောက်လှန်းသိရှိခံရခြင်းမှရှောင်ရှားနိုင်ရန်နှင့် ထောက်လှန်းသည့်သူများခက်ခဲစေရန် ဒီဇိုင်းထုတ်ထားသော်လည်း စံသတ်မှတ်ထားသည့် HTTPS ချိတ်ဆက်မှုနှင့် ထပ်တူမကျပါ။ သို့သော်၊ အချို့သောလမ်းကြောင်းဆိုင်ရာ ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များသည် Shadowsocks ချိတ်ဆက်မှုကို ရှာဖွေတွေ့ရှိနိုင်သေးသည်။ Amnezia တွင် ထောက်ပံ့မှုအကန့်အသတ်ရှိသောကြောင့် AmneziaWG ပရိုတိုကောကို အသုံးပြုရန် အကြံပြုထားသည်။
 
-* Desktop ပလပ်ဖောင်းများတွင်ရှိ‌သော AmneziaVPN တွင်သာအသုံးပြုနိုင်ပါသည်။
+* Desktop ပလပ်ဖောင်းများတွင်ရှိ‌သော Ulta တွင်သာအသုံးပြုနိုင်ပါသည်။
+* မိုဘိုင်းစက်ပစ္စည်းများတွင် ပုံမှန်ပါဝါသုံးစွဲမှုရှိခြင်း။
+
 * ပြင်ဆင်သတ်မှတ်နိုင်သော စာဝှက်စနစ် ပရိုတိုကော
 * အချို့သော DPI စနစ်များဖြင့် ထောက်လှန်းသိရှိနိုင်သည်။
 * TCP ကွန်ရက် ပရိုတိုကောပေါ်တွင် အလုပ်လုပ်သည်။.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="203"/>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection and blocking.
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
+
+* Available in the Ulta across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by DPI analysis systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -3645,14 +3711,35 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 WireGuard သည် ၎င်း၏ စွမ်းဆောင်ရည်အတွက် လူသိများသော်လည်း ၎င်း၏ ထူးခြားသော packet လက်မှတ်များ ကြောင့် အလွယ်တကူ ထောက်လှန်းရှာဖွေတွေ့ရှိနိုင်သည့် ပြဿနာများ ရှိခဲ့ပါသည်။ AmneziaWG သည် ၎င်း၏ အသွားအလာကို ပုံမှန်အင်တာနက်အသွားအလာနှင့် ရောနှောကာ ပိုမိုကောင်းမွန်သော ရှုပ်ထွေးသော နည်းလမ်းများကို အသုံးပြုခြင်းဖြင့် ဤပြဿနာကို ဖြေရှင်းပေးထားပါသည်။
 ဆိုလိုသည်မှာ AmneziaWG သည် နောက်ထပ်ထောက်လှန်းရခက်စေသည့်အလွှာတစ်ခုထပ်ထည့်စဉ်တွင် မူရင်းမြန်ဆန်သောစွမ်းဆောင်ရည်ကို ထိန်းသိမ်းထားနိုင်သောကြောင့် မြန်ဆန်ပြီးပါးနပ်သော VPN ချိတ်ဆက်မှုကိုလိုချင်သူများအတွက် အကောင်းဆုံးရွေးချယ်မှုတစ်ခုဖြစ်ပါသည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်ရနိုင်သည်။
+* ပလက်ဖောင်းအားလုံးရှိ Ulta တွင်ရနိုင်သည်။
 * ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * ဆက်တင်အရေအတွက်နည်းပါခြင်း။ (အလုပ်ရှုပ်သက်သာ)
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ထောက်လှန်းမှုမပြုနိုင်ဘဲ ပိတ်ဆို့ခြင်းကိုခံနိုင်ရည်ရှိသည်။
 * UDP ကွန်ရက်ပရိုတိုကောပေါ်တွင် အလုပ်လုပ်သည်။.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="244"/>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+
+* Available in the Ulta only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="245"/>
         <source>After installation, Amnezia will create a
 
  file storage on your server. You will be able to access it using
@@ -3678,7 +3765,7 @@ For more detailed information, you can
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
         <location filename="../containers/containers_defs.cpp" line="104"/>
-        <location filename="../containers/containers_defs.cpp" line="248"/>
+        <location filename="../containers/containers_defs.cpp" line="249"/>
         <source>SOCKS5 proxy server</source>
         <translation>SOCKS5 proxy ဆာဗာ</translation>
     </message>
@@ -3872,7 +3959,7 @@ For more detailed information, you can
 <context>
     <name>SelectLanguageDrawer</name>
     <message>
-        <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="71"/>
+        <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="73"/>
         <source>Choose language</source>
         <translation>ဘာသာစကားကို ရွေးချယ်ပါ</translation>
     </message>
@@ -3909,7 +3996,7 @@ For more detailed information, you can
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
-        <source>Save AmneziaVPN config</source>
+        <source>Save Ulta config</source>
         <translation>AmneziaWG config ကိုသိမ်းဆည်းမည်</translation>
     </message>
     <message>
@@ -3991,31 +4078,29 @@ For more detailed information, you can
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="56"/>
         <source>Show</source>
         <translation>ပြမည်</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="57"/>
         <source>Connect</source>
         <translation>ချိတ်ဆက်မည်</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="58"/>
         <source>Disconnect</source>
         <translation>ဖြုတ်ချမည်</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
-        <translation>ဝဘ်ဆိုက်ကိုဝင်ကြည့်မည်</translation>
+        <translation type="vanished">ဝဘ်ဆိုက်ကိုဝင်ကြည့်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="59"/>
         <source>Quit</source>
         <translation>ထွက်မည်</translation>
     </message>
@@ -4082,28 +4167,33 @@ For more detailed information, you can
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="345"/>
+        <location filename="../containers/containers_defs.cpp" line="346"/>
         <source>Low</source>
         <translation>Low</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="346"/>
+        <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation>High</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="355"/>
+        <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>ကျွန်ုပ်၏ကိုယ်ရေးကိုယ်တာလုံခြုံမှုအဆင့်ကို မြှင့်တင်လိုပါသည်.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="356"/>
+        <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>ဆင်ဆာဖြတ်တောက်ခြင်းကို ကျော်ဖြတ်ချင်ပါသည်. ဤရွေးချယ်မှုကို ကိစ္စအများစုအတွက် အကြံပြုထားသည်.</translation>
     </message>
 </context>
 <context>
     <name>main2</name>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="33"/>
+        <source>Ulta</source>
+        <translation type="unfinished">Ulta</translation>
+    </message>
     <message>
         <location filename="../ui/qml/main2.qml" line="162"/>
         <source>Private key passphrase</source>

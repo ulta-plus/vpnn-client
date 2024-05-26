@@ -14,9 +14,9 @@ set PROJECT_DIR=%cd%
 set SCRIPT_DIR=%PROJECT_DIR:"=%\deploy
 
 set WORK_DIR=%SCRIPT_DIR:"=%\build_%BUILD_ARCH:"=%
-set APP_NAME=AmneziaVPN
+set APP_NAME=Ulta
 set APP_FILENAME=%APP_NAME:"=%.exe
-set APP_DOMAIN=org.amneziavpn.package
+set APP_DOMAIN=org.ulta.package
 set OUT_APP_DIR=%WORK_DIR:"=%\client\release
 set PREBILT_DEPLOY_DATA_DIR=%PROJECT_DIR:"=%\client\3rd-prebuilt\deploy-prebuilt\windows\x%BUILD_ARCH:"=%
 set DEPLOY_DATA_DIR=%SCRIPT_DIR:"=%\data\windows\x%BUILD_ARCH:"=%
@@ -44,7 +44,7 @@ call "%QT_BIN_DIR:"=%\qt-cmake" --version
 cmake --version
 
 cd %PROJECT_DIR%
-call cmake . -B %WORK_DIR%  "-DCMAKE_BUILD_TYPE:STRING=Release" "-DCMAKE_PREFIX_PATH:PATH=%QT_BIN_DIR%"
+call cmake . -B %WORK_DIR%  "-DCMAKE_BUILD_TYPE:STRING=Release" "-DCMAKE_PREFIX_PATH:PATH=%QT_BIN_DIR%" "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 
 cd %WORK_DIR%
 cmake --build . --config release -- /p:UseMultiToolTask=true /m
@@ -61,7 +61,7 @@ echo "Signing exe"
 cd %OUT_APP_DIR%
 signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 *.exe
 
-"%QT_BIN_DIR:"=%\windeployqt" --release --qmldir "%PROJECT_DIR:"=%\client"  --force --no-translations "%OUT_APP_DIR:"=%\%APP_FILENAME:"=%"
+"%QT_BIN_DIR:"=%\windeployqt" --compiler-runtime --release --qmldir "%PROJECT_DIR:"=%\client" --force --no-translations "%OUT_APP_DIR:"=%\%APP_FILENAME:"=%"
 
 signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 *.dll
 

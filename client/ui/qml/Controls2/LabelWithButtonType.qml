@@ -27,16 +27,19 @@ Item {
     property alias eyeButton: eyeImage
     property FlickableType parentFlickable
 
-    property string textColor: AmneziaStyle.color.paleGray
+    property string textColor: UltaStyle.color.mainText
     property string textDisabledColor: AmneziaStyle.color.mutedGray
-    property string descriptionColor: AmneziaStyle.color.mutedGray
+    property string descriptionColor: UltaStyle.color.caption
     property string descriptionDisabledColor: AmneziaStyle.color.charcoalGray
     property real textOpacity: 1.0
 
     property string borderFocusedColor: AmneziaStyle.color.paleGray
     property int borderFocusedWidth: 1
 
-    property string rightImageColor: AmneziaStyle.color.paleGray
+    property string rightImageColor: UltaStyle.color.icon
+    property string rightImageColorSelected: UltaStyle.color.iconSelected
+    property string rightImageBackGroundColor: rightImage.defaultColor
+    property string rightImageBackGroundColorrSelected: UltaStyle.color.buttonBackGroundSelected
 
     property bool descriptionOnTop: false
     property bool hideDescription: true
@@ -70,7 +73,8 @@ Item {
 
         onEntered: {
             if (rightImageSource) {
-                rightImageBackground.color = rightImage.hoveredColor
+                rightImage.imageColor = rightImageColorSelected
+                rightImageBackground.color = rightImageBackGroundColorrSelected
             } else if (leftImageSource) {
                 leftImageBackground.color = rightImage.hoveredColor
             }
@@ -79,7 +83,8 @@ Item {
 
         onExited: {
             if (rightImageSource) {
-                rightImageBackground.color = rightImage.defaultColor
+                rightImage.imageColor = rightImageColor
+                rightImageBackground.color = rightImageBackGroundColor
             } else if (leftImageSource) {
                 leftImageBackground.color = rightImage.defaultColor
             }
@@ -252,6 +257,7 @@ Item {
             hoverEnabled: false
             image: rightImageSource
             imageColor: rightImageColor
+            borderColor: "transparent"
             visible: rightImageSource ? true : false
 
             Layout.alignment: Qt.AlignRight
@@ -281,7 +287,6 @@ Item {
 
         border.color: root.activeFocus ? root.borderFocusedColor : AmneziaStyle.color.transparent
         border.width: root.activeFocus ? root.borderFocusedWidth : 0
-
 
         Behavior on color {
             PropertyAnimation { duration: 200 }

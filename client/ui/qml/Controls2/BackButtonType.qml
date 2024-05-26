@@ -30,7 +30,8 @@ Item {
         ImageButtonType {
             id: backButton
             image: backButtonImage
-            imageColor: AmneziaStyle.color.paleGray
+            imageColor: UltaStyle.color.icon
+            backgroundColor: UltaStyle.color.buttonBackGround
 
             implicitWidth: 40
             implicitHeight: 40
@@ -43,12 +44,28 @@ Item {
                 }
             }
         }
+    }
 
-        Rectangle {
-            id: background
-            Layout.fillWidth: true
+    MouseArea {
+        anchors.fill: parent
 
-            color: AmneziaStyle.color.transparent
+        cursorShape: Qt.PointingHandCursor
+        hoverEnabled: true
+
+        onEntered: {
+            backButton.imageColor = UltaStyle.color.iconSelected
+            backButton.backgroundColor = UltaStyle.color.buttonBackGroundSelected
+            backButton.borderColor = UltaStyle.color.borderSelected
+        }
+
+        onExited: {
+            backButton.imageColor = UltaStyle.color.icon
+            backButton.backgroundColor = UltaStyle.color.buttonBackGround
+            backButton.borderColor = UltaStyle.color.border
+        }
+
+        onClicked: {
+            backButton.clicked()
         }
     }
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
-set(PROJECT AmneziaVPN)
+set(PROJECT Ulta)
 project(${PROJECT})
 
 
@@ -70,23 +70,23 @@ qt6_add_resources(QRC ${QRC} ${CMAKE_CURRENT_LIST_DIR}/resources.qrc)
 # -- i18n begin
 set(CMAKE_AUTORCC ON)
 
-set(AMNEZIAVPN_TS_FILES
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ru_RU.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_zh_CN.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_fa_IR.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ar_EG.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_my_MM.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_uk_UA.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ur_PK.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_hi_IN.ts
+set(ULTA_TS_FILES
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_ru_RU.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_zh_CN.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_fa_IR.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_ar_EG.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_my_MM.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_uk_UA.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_ur_PK.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/ulta_hi_IN.ts
 )
 
-file(GLOB_RECURSE AMNEZIAVPN_TS_SOURCES *.qrc *.cpp *.h *.ui)
+file(GLOB_RECURSE ULTA_TS_SOURCES *.qrc *.cpp *.h *.ui)
 
-qt_create_translation(AMNEZIAVPN_QM_FILES ${AMNEZIAVPN_TS_SOURCES} ${AMNEZIAVPN_TS_FILES})
+qt_create_translation(ULTA_QM_FILES ${ULTA_TS_SOURCES} ${ULTA_TS_FILES})
 
 set(QM_FILE_LIST "")
-foreach(FILE ${AMNEZIAVPN_QM_FILES})
+foreach(FILE ${ULTA_QM_FILES})
     get_filename_component(QM_FILE_NAME ${FILE} NAME)
     list(APPEND QM_FILE_LIST "<file>${QM_FILE_NAME}</file>")
 endforeach()
@@ -296,16 +296,16 @@ if(APPLE)
     cmake_policy(SET CMP0114 NEW)
 
     if(NOT BUILD_OSX_APP_IDENTIFIER)
-        set(BUILD_OSX_APP_IDENTIFIER org.amnezia.AmneziaVPN CACHE STRING "OSX Application identifier")
+        set(BUILD_OSX_APP_IDENTIFIER org.amnezia.Ulta CACHE STRING "OSX Application identifier")
     endif()
     if(NOT BUILD_IOS_APP_IDENTIFIER)
-        set(BUILD_IOS_APP_IDENTIFIER org.amnezia.AmneziaVPN CACHE STRING "iOS Application identifier")
+        set(BUILD_IOS_APP_IDENTIFIER org.amnezia.Ulta CACHE STRING "iOS Application identifier")
     endif()
     if(NOT BUILD_IOS_GROUP_IDENTIFIER)
-        set(BUILD_IOS_GROUP_IDENTIFIER group.org.amnezia.AmneziaVPN CACHE STRING "iOS Group identifier")
+        set(BUILD_IOS_GROUP_IDENTIFIER group.org.amnezia.Ulta CACHE STRING "iOS Group identifier")
     endif()
     if(NOT BUILD_VPN_DEVELOPMENT_TEAM)
-        set(BUILD_VPN_DEVELOPMENT_TEAM X7UJ388FXK CACHE STRING "Amnezia VPN Development Team")
+        set(BUILD_VPN_DEVELOPMENT_TEAM X7UJ388FXK CACHE STRING "VPN Naruzhu Development Team")
     endif()
 
     set(CMAKE_XCODE_GENERATE_SCHEME FALSE)

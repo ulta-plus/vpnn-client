@@ -10,16 +10,17 @@ import "TextTypes"
 Button {
     id: root
 
-    property string hoveredColor: AmneziaStyle.color.lightGray
-    property string defaultColor: AmneziaStyle.color.paleGray
+    property string hoveredColor: UltaStyle.color.buttonBackGroundSelected
+    property string defaultColor: UltaStyle.color.buttonBackGround
     property string disabledColor: AmneziaStyle.color.charcoalGray
     property string pressedColor: AmneziaStyle.color.mutedGray
 
-    property string textColor: AmneziaStyle.color.midnightBlack
+    property string textColor: UltaStyle.color.buttonText
+    property string textColorSelected: textColor
 
-    property string borderColor: AmneziaStyle.color.paleGray
-    property string borderFocusedColor: AmneziaStyle.color.paleGray
-    property int borderWidth: 0
+    property string borderColor: UltaStyle.color.border
+    property string borderFocusedColor: UltaStyle.color.border
+    property int borderWidth: 1
     property int borderFocusedWidth: 1
 
     property string leftImageSource
@@ -51,13 +52,12 @@ Button {
     background: Rectangle {
         id: focusBorder
 
-        color: AmneziaStyle.color.transparent
-        border.color: root.activeFocus ? root.borderFocusedColor : AmneziaStyle.color.transparent
-        border.width: root.activeFocus ? root.borderFocusedWidth : 0
+        color: defaultColor
+        border.color: root.activeFocus ? root.borderFocusedColor : root.borderColor
 
         anchors.fill: parent
 
-        radius: 16
+        radius: 10
 
         Rectangle {
             id: background
@@ -65,7 +65,7 @@ Button {
             anchors.fill: focusBorder
             anchors.margins: root.activeFocus ? 2 : 0
 
-            radius: root.activeFocus ? 14 : 16
+            radius: root.activeFocus ? 10 : 10
             color: {
                 if (root.enabled) {
                     if (root.pressed) {
@@ -98,7 +98,7 @@ Button {
                         if (root.pressed) {
                             return pressedColor
                         }
-                        return root.hovered ? hoveredColor : defaultColor
+                        return root.hovered ? hoveredColor : UltaStyle.color.border
                     } else {
                         return disabledColor
                     }
@@ -150,7 +150,7 @@ Button {
             ButtonTextType {
                 id: buttonText
 
-                color: textColor
+                color: root.hovered ? textColorSelected : textColor
                 text: root.text
                 visible: root.text === "" ? false : true
 

@@ -11,7 +11,7 @@ Item {
 
     property string headerText
     property string headerTextDisabledColor: AmneziaStyle.color.charcoalGray
-    property string headerTextColor: AmneziaStyle.color.mutedGray
+    property string headerTextColor: UltaStyle.color.mainText
 
     property alias errorText: errorField.text
     property bool checkEmptyText: false
@@ -23,18 +23,18 @@ Item {
 
     property alias textField: textField
     property alias textFieldText: textField.text
-    property string textFieldTextColor: AmneziaStyle.color.paleGray
+    property string textFieldTextColor: UltaStyle.color.mainText
     property string textFieldTextDisabledColor: AmneziaStyle.color.mutedGray
 
     property string textFieldPlaceholderText
     property bool textFieldEditable: true
 
-    property string borderColor: AmneziaStyle.color.slateGray
-    property string borderFocusedColor: AmneziaStyle.color.paleGray
+    property string borderColor: UltaStyle.color.border
+    property string borderFocusedColor: UltaStyle.color.border
 
-    property string backgroundColor: AmneziaStyle.color.onyxBlack
+    property string backgroundColor: UltaStyle.color.backGround
     property string backgroundDisabledColor: AmneziaStyle.color.transparent
-    property string bgBorderHoveredColor: AmneziaStyle.color.charcoalGray
+    property string bgBorderHoveredColor: UltaStyle.color.border
 
     implicitWidth: content.implicitWidth
     implicitHeight: content.implicitHeight
@@ -92,14 +92,14 @@ Item {
                         inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhSensitiveData | Qt.ImhNoPredictiveText
 
                         placeholderText: root.textFieldPlaceholderText
-                        placeholderTextColor: AmneziaStyle.color.charcoalGray
+                        placeholderTextColor: UltaStyle.color.mainText
 
-                        selectionColor:  AmneziaStyle.color.richBrown
-                        selectedTextColor: AmneziaStyle.color.paleGray
+                        selectionColor:  UltaStyle.color.mainText
+                        selectedTextColor: UltaStyle.color.mainTextSelected
 
                         font.pixelSize: 16
                         font.weight: 400
-                        font.family: "PT Root UI VF"
+                        font.family: "Montserrat Medium"
 
                         height: 24
                         Layout.fillWidth: true
@@ -172,7 +172,6 @@ Item {
             backgroud.border.color = getBackgroundBorderColor(bgBorderHoveredColor)
         }
 
-
         onExited: {
             backgroud.border.color = getBackgroundBorderColor(root.borderColor)
         }
@@ -190,8 +189,17 @@ Item {
         anchors.right: content.right
 
         height: content.implicitHeight
-        width: content.implicitHeight
+        width: content.implicitHeight + 15
         squareLeftSide: true
+
+        contentItem: Text {
+            text: parent.text
+            color: parent.hovered ? UltaStyle.color.buttonTextSelected : UltaStyle.color.buttonText
+            horizontalAlignment: Text.AlignRight
+            verticalAlignment: Text.AlignVCenter
+            font.family: "Montserrat Medium"
+            font.pixelSize: 14
+        }
 
         clickedFunc: function() {
             if (root.clickedFunc && typeof root.clickedFunc === "function") {

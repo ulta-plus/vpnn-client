@@ -90,85 +90,42 @@ PageType {
                     PageController.goToPage(PageEnum.PageSettingsApplication)
                 }
 
-                KeyNavigation.tab: backup.rightButton
+                KeyNavigation.tab: supportTelegramm.rightButton
             }
 
             DividerType {}
 
             LabelWithButtonType {
-                id: backup
+                id: supportTelegramm
                 Layout.fillWidth: true
 
-                text: qsTr("Backup")
+                text: qsTr("Support via Telegram")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-                leftImageSource: "qrc:/images/controls/save.svg"
+                leftImageSource: "qrc:/images/controls/telegramNaruzhu.svg"
 
                 clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsBackup)
+                     Qt.openUrlExternally("https://t.me/ultadiscord_bot")
                 }
-
-                KeyNavigation.tab: about.rightButton
+                KeyNavigation.tab: supportTelegramm.rightButton
             }
 
             DividerType {}
 
             LabelWithButtonType {
-                id: about
+                id: telegrammGroup
                 Layout.fillWidth: true
 
-                text: qsTr("About AmneziaVPN")
+                text: qsTr("Telegram Group")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-                leftImageSource: "qrc:/images/controls/amnezia.svg"
+                leftImageSource: "qrc:/images/controls/chat.svg"
 
                 clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsAbout)
+                     Qt.openUrlExternally("https://t.me/ultarussia")
                 }
-                KeyNavigation.tab: close
-
+                KeyNavigation.tab: account.rightButton
             }
 
             DividerType {}
-
-            LabelWithButtonType {
-                id: devConsole
-                visible: SettingsController.isDevModeEnabled
-                Layout.fillWidth: true
-
-                text: qsTr("Dev console")
-                rightImageSource: "qrc:/images/controls/chevron-right.svg"
-                leftImageSource: "qrc:/images/controls/bug.svg"
-
-                // Keys.onTabPressed: lastItemTabClicked(header)
-
-                clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageDevMenu)
-                }
-            }
-
-            DividerType {
-                visible: SettingsController.isDevModeEnabled
-            }
-
-            LabelWithButtonType {
-                id: close
-                visible: GC.isDesktop()
-                Layout.fillWidth: true
-                Layout.preferredHeight: about.height
-
-                text: qsTr("Close application")
-                leftImageSource: "qrc:/images/controls/x-circle.svg"
-                isLeftImageHoverEnabled: false                
-
-                Keys.onTabPressed: lastItemTabClicked(header)
-
-                clickedFunction: function() {
-                    PageController.closeApplication()
-                }
-            }
-
-            DividerType {
-                visible: GC.isDesktop()
-            }
         }
     }
 }

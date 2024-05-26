@@ -41,102 +41,96 @@ PageType {
             anchors.topMargin: 34
             anchors.bottomMargin: 34
 
-            Item {
-                id: focusItem
-                KeyNavigation.tab: loggingButton.visible ?
-                                       loggingButton :
-                                       connectButton
+            Image {
+                id: image
+                source: "qrc:/images/ulta_logo.png"
+
+                Layout.alignment: Qt.AlignCenter
+                Layout.leftMargin: 70
+                Layout.rightMargin: 70
+                Layout.preferredWidth: 220
+                Layout.preferredHeight: 56
             }
 
-            BasicButtonType {
-                id: loggingButton
-                property bool isLoggingEnabled: SettingsController.isLoggingEnabled
+            ParagraphTextType {
+                Layout.fillWidth: true
+                Layout.topMargin: 12
+                Layout.leftMargin: 16
+                Layout.rightMargin: 16
+                horizontalAlignment: Text.AlignHCenter
+                color: UltaStyle.color.mainText
+                text: qsTr("Discord without any blocks")
+            }
 
-                Layout.alignment: Qt.AlignHCenter
-
-                implicitHeight: 36
-
-                defaultColor: AmneziaStyle.color.transparent
-                hoveredColor: AmneziaStyle.color.translucentWhite
-                pressedColor: AmneziaStyle.color.sheerWhite
-                disabledColor: AmneziaStyle.color.mutedGray
-                textColor: AmneziaStyle.color.mutedGray
-                borderWidth: 0
-
-                visible: isLoggingEnabled ? true : false
-                text: qsTr("Logging enabled")
-
-                Keys.onEnterPressed: loggingButton.clicked()
-                Keys.onReturnPressed: loggingButton.clicked()
-
+            Item {
+                id: focusItem
                 KeyNavigation.tab: connectButton
-
-                onClicked: {
-                    PageController.goToPage(PageEnum.PageSettingsLogging)
-                }
             }
 
             ConnectButton {
                 id: connectButton
-                Layout.fillHeight: true
                 Layout.alignment: Qt.AlignCenter
-                KeyNavigation.tab: splitTunnelingButton
+                Layout.topMargin: 20
+                KeyNavigation.tab: drawer
             }
 
-            BasicButtonType {
-                id: splitTunnelingButton
+            Rectangle {
+                id: telegramButton
+                Layout.alignment: Qt.AlignHCenter
+                Layout.topMargin: 20
 
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-                Layout.bottomMargin: 34
-                leftPadding: 16
-                rightPadding: 16
+                implicitHeight: 90
+                implicitWidth: 280
+                radius: 10
 
-                implicitHeight: 36
+                visible: true
 
-                defaultColor: AmneziaStyle.color.transparent
-                hoveredColor: AmneziaStyle.color.translucentWhite
-                pressedColor: AmneziaStyle.color.sheerWhite
-                disabledColor: AmneziaStyle.color.mutedGray
-                textColor: AmneziaStyle.color.mutedGray
-                borderWidth: 0
+                RowLayout {
+                    anchors.centerIn: telegramButton
+                    spacing: 10
 
-                buttonTextLabel.lineHeight: 20
-                buttonTextLabel.font.pixelSize: 14
-                buttonTextLabel.font.weight: 500
+                    Image {
+                        source: "qrc:/images/controls/telegram_logo_60x60.png"
+                        height: 70
+                        width: 70
+                    }
 
-                property bool isSplitTunnelingEnabled: SitesModel.isTunnelingEnabled || AppSplitTunnelingModel.isTunnelingEnabled ||
-                                                       ServersModel.isDefaultServerDefaultContainerHasSplitTunneling
+                    Column {
+                        Text {
+                            text: qsTr("Live communication,\ncompetitions and the latest news\nin our Telegram channel!")
+                            font.pixelSize: 12
+                            font.weight: 400
+                            font.family: "Montserrat Medium"
+                            color: UltaStyle.color.bottomBarText
+                            horizontalAlignment: Text.AlignLeft
+                            wrapMode: Text.WordWrap
+                        }
 
-                text: isSplitTunnelingEnabled ? qsTr("Split tunneling enabled") : qsTr("Split tunneling disabled")
-
-                leftImageSource: isSplitTunnelingEnabled ? "qrc:/images/controls/split-tunneling.svg" : ""
-                rightImageSource: "qrc:/images/controls/chevron-down.svg"
-
-                Keys.onEnterPressed: splitTunnelingButton.clicked()
-                Keys.onReturnPressed: splitTunnelingButton.clicked()
-
-                KeyNavigation.tab: drawer
-
-                onClicked: {
-                    homeSplitTunnelingDrawer.open()
+                        Text {
+                            text: "@ultarussia"
+                            font.pixelSize: 16
+                            font.weight: Font.Bold
+                            font.underline: true
+                            font.family: "Montserrat Bold"
+                            color: UltaStyle.color.mainTextSelected
+                            horizontalAlignment: Text.AlignLeft
+                            wrapMode: Text.WordWrap
+                        }
+                    }
                 }
 
-                HomeSplitTunnelingDrawer {
-                    id: homeSplitTunnelingDrawer
-                    parent: root
-
-                    onClosed: {
-                        if (!GC.isMobile()) {
-                            focusItem.forceActiveFocus()
-                        }
+                MouseArea {
+                    anchors.fill: telegramButton
+                    onClicked: {
+                        Qt.openUrlExternally("https://t.me/ultarussia")
                     }
                 }
             }
         }
     }
 
-
     DrawerType2 {
+        defaultColor: UltaStyle.color.bottomBarBackGround
         id: drawer
         anchors.fill: parent
 
@@ -191,7 +185,8 @@ PageType {
                         target: drawer
                         function onEntered() {
                             if (drawer.isCollapsed) {
-                                collapsedButtonChevron.backgroundColor = collapsedButtonChevron.hoveredColor
+                                collapsedButtonChevron.imageColor = UltaStyle.color.bottomBarBackGround
+                                collapsedButtonChevron.backgroundColor = UltaStyle.color.bottomBarBackGroundSelected
                                 collapsedButtonHeader.opacity = 0.8
                             } else {
                                 collapsedButtonHeader.opacity = 1
@@ -200,7 +195,8 @@ PageType {
 
                         function onExited() {
                             if (drawer.isCollapsed) {
-                                collapsedButtonChevron.backgroundColor = collapsedButtonChevron.defaultColor
+                                collapsedButtonChevron.imageColor = UltaStyle.color.bottomBarIcon
+                                collapsedButtonChevron.backgroundColor = UltaStyle.color.bottomBarBackGround
                                 collapsedButtonHeader.opacity = 1
                             } else {
                                 collapsedButtonHeader.opacity = 1
@@ -209,7 +205,8 @@ PageType {
 
                         function onPressed(pressed, entered) {
                             if (drawer.isCollapsed) {
-                                collapsedButtonChevron.backgroundColor = pressed ? collapsedButtonChevron.pressedColor : entered ? collapsedButtonChevron.hoveredColor : collapsedButtonChevron.defaultColor
+                                collapsedButtonChevron.imageColor = UltaStyle.color.bottomBarIcon
+                                collapsedButtonChevron.backgroundColor = UltaStyle.color.bottomBarBackGround
                                 collapsedButtonHeader.opacity = 0.7
                             } else {
                                 collapsedButtonHeader.opacity = 1
@@ -225,6 +222,7 @@ PageType {
                         elide: Qt.ElideRight
 
                         text: ServersModel.defaultServerName
+                        color: UltaStyle.color.bottomBarText
                         horizontalAlignment: Qt.AlignHCenter
 
                         KeyNavigation.tab: tabBar
@@ -243,23 +241,27 @@ PageType {
 
                         hoverEnabled: false
                         image: "qrc:/images/controls/chevron-down.svg"
-                        imageColor: AmneziaStyle.color.paleGray
+                        imageColor: UltaStyle.color.bottomBarIcon
 
                         icon.width: 18
                         icon.height: 18
                         backgroundRadius: 16
+                        backgroundColor: UltaStyle.color.bottomBarBackGround
                         horizontalPadding: 4
                         topPadding: 4
                         bottomPadding: 3
+
+                        borderColor: UltaStyle.color.bottomBarBorder
 
                         Keys.onEnterPressed: collapsedButtonChevron.clicked()
                         Keys.onReturnPressed: collapsedButtonChevron.clicked()
                         Keys.onTabPressed: lastItemTabClicked()
 
-
                         onClicked: {
                             if (drawer.isCollapsed) {
                                 drawer.open()
+                                collapsedButtonChevron.imageColor = UltaStyle.color.bottomBarIcon
+                                collapsedButtonChevron.backgroundColor = UltaStyle.color.bottomBarBackGround
                             }
                         }
                     }
@@ -267,39 +269,19 @@ PageType {
 
                 RowLayout {
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                    Layout.topMargin: 8
-                    Layout.bottomMargin: drawer.isCollapsed ? 44 : ServersModel.isDefaultServerFromApi ? 61 : 16
+                    Layout.bottomMargin: drawer.isCollapsed ? 44 : ServersModel.isDefaultServerFromApi ? 89 : 44
                     spacing: 0
 
-                    BasicButtonType {
-                        enabled: (ServersModel.defaultServerImagePathCollapsed !== "") && drawer.isCollapsed
-                        hoverEnabled: enabled
+                    Image {
+                        Layout.rightMargin: 8
+                        visible: source !== ""
+                        source: ServersModel.defaultServerImagePathCollapsed
+                    }
 
-                        implicitHeight: 36
-
-                        leftPadding: 16
-                        rightPadding: 16
-
-                        defaultColor: AmneziaStyle.color.transparent
-                        hoveredColor: AmneziaStyle.color.translucentWhite
-                        pressedColor: AmneziaStyle.color.sheerWhite
-                        disabledColor: AmneziaStyle.color.transparent
-                        textColor: AmneziaStyle.color.mutedGray
-
-                        buttonTextLabel.lineHeight: 16
-                        buttonTextLabel.font.pixelSize: 13
-                        buttonTextLabel.font.weight: 400
-
+                    LabelTextType {
+                        id: collapsedServerMenuDescription
+                        color: UltaStyle.color.bottomBarText
                         text: drawer.isCollapsed ? ServersModel.defaultServerDescriptionCollapsed : ServersModel.defaultServerDescriptionExpanded
-                        leftImageSource: ServersModel.defaultServerImagePathCollapsed
-                        changeLeftImageSize: false
-
-                        rightImageSource: hoverEnabled ? "qrc:/images/controls/chevron-down.svg" : ""
-
-                        onClicked: {
-                            ServersModel.processedIndex = ServersModel.defaultIndex
-                            PageController.goToPage(PageEnum.PageSettingsServerInfo)
-                        }
                     }
                 }
             }
@@ -325,7 +307,7 @@ PageType {
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                     spacing: 8
 
-                    visible: !ServersModel.isDefaultServerFromApi
+                    visible: false
 
                     Item {
                         id: focusItem1
@@ -402,6 +384,7 @@ PageType {
                     Layout.rightMargin: 16
 
                     headerText: qsTr("Servers")
+                    headerTextColor: UltaStyle.color.bottomBarText
                 }
             }
 
@@ -425,7 +408,6 @@ PageType {
                     id: scrollBar
                     policy: serversMenuContent.height >= serversMenuContent.contentHeight ? ScrollBar.AlwaysOff : ScrollBar.AlwaysOn
                 }
-
 
                 activeFocusOnTab: true
                 focus: true
@@ -508,6 +490,10 @@ PageType {
 
                                 checked: index === serversMenuContent.currentIndex
                                 checkable: !ConnectionController.isConnected
+                                textColor: UltaStyle.color.bottomBarText
+                                selectedTextColor: UltaStyle.color.bottomBarIconSelected
+                                captionColor: UltaStyle.color.bottomBarText
+                                borderFocusedColor: UltaStyle.color.bottomBarBorder
 
                                 ButtonGroup.group: serversRadioButtonGroup
 
@@ -536,7 +522,9 @@ PageType {
                             ImageButtonType {
                                 id: serverInfoButton
                                 image: "qrc:/images/controls/settings.svg"
-                                imageColor: AmneziaStyle.color.paleGray
+                                imageColor: UltaStyle.color.bottomBarIcon
+                                borderColor: "transparent"
+                                backgroundColor: UltaStyle.color.bottomBarBackGround
 
                                 implicitWidth: 56
                                 implicitHeight: 56

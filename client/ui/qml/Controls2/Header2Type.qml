@@ -14,6 +14,7 @@ Item {
     property alias actionButton: headerActionButton
 
     property string headerText
+    property string headerTextColor
     property string descriptionText
 
     implicitWidth: content.implicitWidth
@@ -30,6 +31,7 @@ Item {
                 Layout.fillWidth: true
 
                 text: root.headerText
+                color: headerTextColor
             }
 
             ImageButtonType {
@@ -59,7 +61,7 @@ Item {
 
             text: root.descriptionText
 
-            color: AmneziaStyle.color.mutedGray
+            color: "#F1F0EF"
 
             visible: root.descriptionText !== ""
         }

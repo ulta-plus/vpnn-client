@@ -10,6 +10,7 @@ import "../Config"
 
 DrawerType2 {
     id: root
+    defaultColor: UltaStyle.color.backGround
 
     expandedContent: Item {
         id: container
@@ -67,6 +68,7 @@ DrawerType2 {
                     Layout.topMargin: 16
                     Layout.rightMargin: 16
                     Layout.leftMargin: 16
+                    headerTextColor: UltaStyle.color.mainText
 
                     headerText: qsTr("Choose language")
                 }
@@ -147,16 +149,10 @@ DrawerType2 {
                                 indicator: Rectangle {
                                     width: parent.width - 1
                                     height: parent.height
-                                    color: radioButton.hovered ? AmneziaStyle.color.slateGray : AmneziaStyle.color.onyxBlack
-                                    border.color: radioButton.focus ? AmneziaStyle.color.paleGray : AmneziaStyle.color.transparent
-                                    border.width: radioButton.focus ? 1 : 0
 
-                                    Behavior on color {
-                                        PropertyAnimation { duration: 200 }
-                                    }
-                                    Behavior on border.color {
-                                        PropertyAnimation { duration: 200 }
-                                    }
+                                    color: UltaStyle.color.backGround
+                                    border.color: radioButton.hovered ? UltaStyle.color.border : AmneziaStyle.color.transparent
+                                    border.width: radioButton.hovered ? 1 : 0
                                 }
 
                                 RowLayout {

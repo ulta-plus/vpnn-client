@@ -6,9 +6,9 @@ import Style 1.0
 TabButton {
     id: root
 
-    property string hoveredColor: AmneziaStyle.color.richBrown
-    property string defaultColor: AmneziaStyle.color.slateGray
-    property string selectedColor: AmneziaStyle.color.goldenApricot
+    property string hoveredColor: "#633303"
+    property string defaultColor: "#2C2D30"
+    property string selectedColor: "#FFDD51"
 
     property string textColor: AmneziaStyle.color.paleGray
 
@@ -58,7 +58,7 @@ TabButton {
         anchors.fill: background
         height: 24
 
-        font.family: "PT Root UI VF"
+        font.family: "Montserrat Medium"
         font.styleName: "normal"
         font.weight: 500
         font.pixelSize: 16

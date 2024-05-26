@@ -278,6 +278,7 @@ void ImportController::importConfig()
 
     if (credentials.isValid() || m_config.contains(config_key::containers)) {
         m_serversModel->addServer(m_config);
+        emit siteNeedsAddition(credentials.hostName);
         emit importFinished();
     } else if (m_config.contains(config_key::configVersion)) {
         quint16 crc = qChecksum(QJsonDocument(m_config).toJson());
@@ -287,6 +288,7 @@ void ImportController::importConfig()
             m_config.insert(config_key::crc, crc);
 
             m_serversModel->addServer(m_config);
+            emit siteNeedsAddition(credentials.hostName);
             emit importFinished();
         }
     } else {
@@ -298,6 +300,25 @@ void ImportController::importConfig()
     m_config = {};
     m_configFileName.clear();
     m_maliciousWarningText.clear();
+}
+
+QString ImportController::getNewServerName()
+{
+    QFileInfo s(m_configFileName);
+    QString name = s.baseName();
+    bool isServerNameExist = false;
+    for (const QJsonValue &server : m_settings->serversArray()) {
+        if (server.toObject().value(config_key::description).toString() == name) {
+            isServerNameExist = true;
+            break;
+        }
+    }
+
+    if (isServerNameExist) {
+        return m_settings->nextAvailableServerName();
+    } else {
+        return name;
+    }
 }
 
 QJsonObject ImportController::extractOpenVpnConfig(const QString &data)
@@ -326,7 +347,7 @@ QJsonObject ImportController::extractOpenVpnConfig(const QString &data)
     QJsonObject config;
     config[config_key::containers] = arr;
     config[config_key::defaultContainer] = "amnezia-openvpn";
-    config[config_key::description] = m_settings->nextAvailableServerName();
+    config[config_key::description] = getNewServerName();
 
     const static QRegularExpression dnsRegExp("dhcp-option DNS (\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b)");
     QRegularExpressionMatchIterator dnsMatch = dnsRegExp.globalMatch(data);
@@ -452,7 +473,7 @@ QJsonObject ImportController::extractWireGuardConfig(const QString &data)
     QJsonObject config;
     config[config_key::containers] = arr;
     config[config_key::defaultContainer] = "amnezia-" + protocolName;
-    config[config_key::description] = m_settings->nextAvailableServerName();
+    config[config_key::description] = getNewServerName();
 
     const static QRegularExpression dnsRegExp(
             "DNS = "
@@ -508,7 +529,7 @@ QJsonObject ImportController::extractXrayConfig(const QString &data, const QStri
         config[config_key::defaultContainer] = "amnezia-xray";
     }
     if (description.isEmpty()) {
-        config[config_key::description] = m_settings->nextAvailableServerName();
+        config[config_key::description] = getNewServerName();
     } else {
         config[config_key::description] = description;
     }

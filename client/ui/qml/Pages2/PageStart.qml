@@ -224,6 +224,9 @@ PageType {
         anchors.left: parent.left
         anchors.bottom: tabBar.top
 
+        width: parent.width
+        height: root.height - tabBar.height
+
         enabled: !root.isControlsDisabled
 
         function goToTabBarPage(page) {
@@ -259,6 +262,7 @@ PageType {
         anchors.left: parent.left
         anchors.bottom: parent.bottom
 
+        implicitHeight: contentHeight + topPadding + bottomPadding
         topPadding: 8
         bottomPadding: 8
         leftPadding: 96
@@ -276,14 +280,14 @@ PageType {
                 startX: 0
                 startY: 0
 
-                PathLine { x: width; y: 0 }
-                PathLine { x: width; y: tabBar.height - 1 }
-                PathLine { x: 0; y: tabBar.height - 1 }
-                PathLine { x: 0; y: 0 }
+                PathLine { x: width - 1; y: 0 }
+                PathLine { x: width - 1; y: tabBar.height - 1 }
+                PathLine { x: 1; y: tabBar.height - 1 }
+                PathLine { x: 1; y: 0 }
 
                 strokeWidth: 1
-                strokeColor: AmneziaStyle.color.slateGray
-                fillColor: AmneziaStyle.color.onyxBlack
+                strokeColor: UltaStyle.color.bottomBarBorder
+                fillColor: UltaStyle.color.bottomBarBackGround
             }
         }
 
@@ -345,11 +349,27 @@ PageType {
             isSelected: tabBar.currentIndex === 3
             image: "qrc:/images/controls/plus.svg"
             clickedFunc: function () {
-                tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardConfigSource)
-                tabBar.currentIndex = 3
+                connectionTypeSelection.open()
             }
 
             Keys.onTabPressed: PageController.forceStackActiveFocus()
+        }
+
+        TabImageButtonType {
+            isSelected: tabBar.currentIndex === 4
+            image: "qrc:/images/controls/telegram.svg"
+            onClicked: {
+                Qt.openUrlExternally("https://t.me/ultadiscord_bot")
+            }
+        }
+    }
+
+    ConnectionTypeSelectionDrawer {
+        id: connectionTypeSelection
+
+        onAboutToHide: {
+            PageController.forceTabBarActiveFocus()
+            tabBar.setCurrentIndex(tabBar.previousIndex)
         }
     }
 }

@@ -87,7 +87,7 @@ RadioButton {
             color: AmneziaStyle.color.paleGray
             font.pixelSize: 25
             font.weight: 700
-            font.family: "PT Root UI VF"
+            font.family: "Montserrat Medium"
 
             height: 30
             Layout.fillWidth: true
@@ -102,7 +102,7 @@ RadioButton {
             color: AmneziaStyle.color.paleGray
             font.pixelSize: 16
             font.weight: 400
-            font.family: "PT Root UI VF"
+            font.family: "Montserrat Medium"
 
             height: 24
             Layout.fillWidth: true
@@ -118,7 +118,7 @@ RadioButton {
             color: AmneziaStyle.color.mutedGray
             font.pixelSize: 13
             font.weight: 400
-            font.family: "PT Root UI VF"
+            font.family: "Montserrat Medium"
 
             height: 16
             Layout.fillWidth: true

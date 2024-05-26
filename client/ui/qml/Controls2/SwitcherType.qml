@@ -10,10 +10,10 @@ Switch {
     id: root
 
     property alias descriptionText: description.text
-    property string descriptionTextColor: AmneziaStyle.color.mutedGray
+    property string descriptionTextColor: UltaStyle.color.caption
     property string descriptionTextDisabledColor: AmneziaStyle.color.charcoalGray
 
-    property string textColor: AmneziaStyle.color.paleGray
+    property string textColor: UltaStyle.color.mainText
     property string textDisabledColor: AmneziaStyle.color.mutedGray
 
     property string checkedIndicatorColor: AmneziaStyle.color.richBrown

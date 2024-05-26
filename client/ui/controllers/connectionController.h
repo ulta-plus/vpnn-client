@@ -27,6 +27,8 @@ public:
     bool isConnectionInProgress() const;
     QString connectionStateText() const;
 
+    void waitForConnectionFinished(int msecs);
+
 public slots:
     void toggleConnection();
 
@@ -42,7 +44,6 @@ public slots:
 
     ErrorCode updateProtocolConfig(const DockerContainer container, const ServerCredentials &credentials, QJsonObject &containerConfig,
                                    QSharedPointer<ServerController> serverController = nullptr);
-
 signals:
     void connectToVpn(int serverIndex, const ServerCredentials &credentials, DockerContainer container, const QJsonObject &vpnConfiguration);
     void disconnectFromVpn();

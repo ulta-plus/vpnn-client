@@ -119,7 +119,7 @@ PageType {
 
     QtObject {
         id: amneziaConnectionFormat
-        property string name: qsTr("For the AmneziaVPN app")
+        property string name: qsTr("For the Ulta app")
         property var type: PageShare.ConfigType.AmneziaConnection
     }
     QtObject {

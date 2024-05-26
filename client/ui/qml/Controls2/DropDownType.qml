@@ -11,7 +11,7 @@ Item {
     id: root
 
     property string text
-    property string textColor: AmneziaStyle.color.paleGray
+    property string textColor: UltaStyle.color.bottomBarText
     property string textDisabledColor: AmneziaStyle.color.mutedGray
     property int textMaximumLineCount: 2
     property int textElide: Qt.ElideRight
@@ -34,7 +34,7 @@ Item {
     property int borderFocusedWidth: 1
 
     property string rootButtonHoveredBorderColor: AmneziaStyle.color.charcoalGray
-    property string rootButtonDefaultBorderColor: AmneziaStyle.color.slateGray
+    property string rootButtonDefaultBorderColor: UltaStyle.color.bottomBarBackGround
     property string rootButtonPressedBorderColor: AmneziaStyle.color.paleGray
 
     property int rootButtonTextLeftMargins: 16

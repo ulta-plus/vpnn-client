@@ -88,7 +88,7 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="80"/>
+        <location filename="../ui/controllers/connectionController.h" line="81"/>
         <location filename="../ui/controllers/connectionController.cpp" line="100"/>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
         <location filename="../ui/controllers/connectionController.cpp" line="121"/>
@@ -96,7 +96,7 @@
         <translation>اتصل</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="219"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
         <translation>لم يتم تثبيت بروتوكولات VPN, من فضلك قم بتنزيل حاوية VPN اولاً</translation>
@@ -137,12 +137,12 @@
         <translation>تم تحديث الاعدادات بنجاح</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="209"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
         <source>The selected protocol is not supported on the current platform</source>
         <translation>البروتوكول المحدد غير مدعوم علي المنصة الحالية</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="233"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="238"/>
         <source>unable to create configuration</source>
         <translation>غير قادر علي إنشاء تكوين</translation>
     </message>
@@ -155,12 +155,7 @@
         <translation>إضافة اتصال جديد</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="57"/>
-        <source>Configure your server</source>
-        <translation>قم بتهيئة الخادم الخاص بك</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="74"/>
+        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="58"/>
         <source>Open config file, key or QR code</source>
         <translation>افتح ملف تعريف, مفتاح تعريف او رمز QR</translation>
     </message>
@@ -221,11 +216,16 @@
         <translation>تقسيم الانفاق علي الخادم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
-        <translation>مٌفعل 
+        <translation type="vanished">مٌفعل
 لا يمكن إقافة للخادم الحالي</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
+        <source>Enabled
+Can&apos;t be disabled for current server</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="79"/>
@@ -403,8 +403,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>Ulta</source>
+        <translation>Ulta</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -418,8 +418,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>AmneziaVPN notification</source>
-        <translation>إشعار من AmneziaVPN</translation>
+        <source>Ulta notification</source>
+        <translation>إشعار من Ulta</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -456,32 +456,41 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="67"/>
         <source>Logging enabled</source>
-        <translation>تم تمكين التسجيل</translation>
+        <translation type="vanished">تم تمكين التسجيل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
         <source>Split tunneling enabled</source>
-        <translation>تقسيم الانفاق مٌفعل</translation>
+        <translation type="vanished">تقسيم الانفاق مٌفعل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
         <source>Split tunneling disabled</source>
-        <translation>تقسيم الانفاق مٌعطل</translation>
+        <translation type="vanished">تقسيم الانفاق مٌعطل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="328"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="62"/>
+        <source>Discord without any blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="100"/>
+        <source>Live communication,
+competitions and the latest news
+in our Telegram channel!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="330"/>
         <source>VPN protocol</source>
         <translation>بروتوكول VPN</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="383"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="385"/>
         <source>Servers</source>
         <translation>الخوادم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="495"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="501"/>
         <source>Unable change server while there is an active connection</source>
         <translation>لا يمكن تغير الخادم بينما هناك اتصال مفعل</translation>
     </message>
@@ -1277,24 +1286,30 @@ Already installed containers were found on the server. All installed containers 
         <translation>تطبيق</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="102"/>
         <source>Backup</source>
-        <translation>نسخة احتياطية</translation>
+        <translation type="vanished">نسخة احتياطية</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
-        <source>About AmneziaVPN</source>
-        <translation>عن AmneziaVPN</translation>
+        <source>About Ulta</source>
+        <translation type="vanished">عن Ulta</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
         <source>Dev console</source>
-        <translation>وحدة تحكم التطوير</translation>
+        <translation type="vanished">وحدة تحكم التطوير</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="102"/>
+        <source>Support via Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="118"/>
+        <source>Telegram Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Close application</source>
-        <translation>إغلاق التطبيق</translation>
+        <translation type="vanished">إغلاق التطبيق</translation>
     </message>
 </context>
 <context>
@@ -1315,14 +1330,12 @@ Already installed containers were found on the server. All installed containers 
         <translation>التواصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="105"/>
         <source>Telegram group</source>
-        <translation>مجموعة ال Telegram</translation>
+        <translation type="vanished">مجموعة ال Telegram</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="106"/>
         <source>To discuss features</source>
-        <translation>لمناقشة الميزات</translation>
+        <translation type="vanished">لمناقشة الميزات</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="113"/>
@@ -1339,7 +1352,7 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="126"/>
         <source>For reviews and bug reports</source>
         <translation>لل مراجعات والابلاغات عن المشاكل</translation>
     </message>
@@ -1351,7 +1364,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="143"/>
         <source>GitHub</source>
-        <translation>GitHub</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="150"/>
@@ -1570,47 +1583,44 @@ Already installed containers were found on the server. All installed containers 
         <translation>اللغة</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="207"/>
         <source>Logging</source>
-        <translation>تسجيل</translation>
+        <translation type="vanished">تسجيل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="208"/>
         <source>Enabled</source>
-        <translation>مٌفعل</translation>
+        <translation type="vanished">مٌفعل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="208"/>
         <source>Disabled</source>
-        <translation>مٌعطل</translation>
+        <translation type="vanished">مٌعطل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="225"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="207"/>
         <source>Reset settings and remove all data from the application</source>
         <translation>إعادة ضبط الاعدادات ومسح جميع البيانات من التطبيق</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="233"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="215"/>
         <source>Reset settings and remove all data from the application?</source>
         <translation>إعادة ضبط الاعدادات ومسح جميع البيانات من التطبيق؟</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
-        <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>سيتم ضبط الاعدادات الافتراضية. جميع خدمات AmneziaVPN المٌثبتة ستبقي علي الخادم.</translation>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="216"/>
+        <source>All settings will be reset to default. All installed Ulta services will still remain on the server.</source>
+        <translation>سيتم ضبط الاعدادات الافتراضية. جميع خدمات Ulta المٌثبتة ستبقي علي الخادم.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="217"/>
         <source>Continue</source>
         <translation>واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="236"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="218"/>
         <source>Cancel</source>
         <translation>إلغاء</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="240"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="222"/>
         <source>Cannot reset settings during active connection</source>
         <translation>لا يمكن إعادة ضبط الإعدادات اثناء تواجد اتصال فعال</translation>
     </message>
@@ -1634,8 +1644,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
-        <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>ستحتوي النسخة الاحتياطية علي كلمات مرورك و المفاتيح الخاصة للخوادم المٌضافة إلي AmneziaVPN. احفظ هذه المعلومات في مكان امن.</translation>
+        <source>The backup will contain your passwords and private keys for all servers added to Ulta. Keep this information in a secure place.</source>
+        <translation>ستحتوي النسخة الاحتياطية علي كلمات مرورك و المفاتيح الخاصة للخوادم المٌضافة إلي Ulta. احفظ هذه المعلومات في مكان امن.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1702,57 +1712,50 @@ Already installed containers were found on the server. All installed containers 
         <translation>الاتصال</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="81"/>
         <source>When AmneziaDNS is not used or installed</source>
-        <translation>عندما يكون AmneziaDNS غير مٌثبت او غير مستخدم</translation>
+        <translation type="vanished">عندما يكون AmneziaDNS غير مٌثبت او غير مستخدم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="127"/>
         <source>Allows you to use the VPN only for certain Apps</source>
-        <translation>يسمح لك بأستخدام ال VPN علي تطبيقات معينة</translation>
+        <translation type="vanished">يسمح لك بأستخدام ال VPN علي تطبيقات معينة</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="61"/>
         <source>Use AmneziaDNS</source>
-        <translation>استخدم AmneziaDNS</translation>
+        <translation type="vanished">استخدم AmneziaDNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>If AmneziaDNS is installed on the server</source>
-        <translation>في حالة كان AmneziaDNS مٌثبت علي الخادم</translation>
+        <translation type="vanished">في حالة كان AmneziaDNS مٌثبت علي الخادم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="80"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="82"/>
         <source>DNS servers</source>
         <translation>خوادم DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="97"/>
         <source>Site-based split tunneling</source>
-        <translation>انقسام الانفاق القائم علي الموقع</translation>
+        <translation type="vanished">انقسام الانفاق القائم علي الموقع</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="98"/>
         <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation>يسمح لك بتحديد اي موقع تريد الوصول له عن طريق ال VPN</translation>
+        <translation type="vanished">يسمح لك بتحديد اي موقع تريد الوصول له عن طريق ال VPN</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="126"/>
         <source>App-based split tunneling</source>
-        <translation>انقسام الانفاق القائم علي التطبيق</translation>
+        <translation type="vanished">انقسام الانفاق القائم علي التطبيق</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="154"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
         <source>KillSwitch</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="155"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="167"/>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
         <translation>يعطل اتصال الإنترنت الخاص بك إذا انقطع اتصال VPN المشفر لأي سبب من الأسباب.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="178"/>
         <source>Cannot change killSwitch settings during active connection</source>
         <translation>لا يمكن تغيير إعدادات KillSwitch اثناء تواجد اتصال فعال</translation>
     </message>
@@ -1770,52 +1773,51 @@ Already installed containers were found on the server. All installed containers 
         <translation>خوادم ال DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="70"/>
         <source>If AmneziaDNS is not used or installed</source>
-        <translation>AmneziaVPN ليس مٌستخدم او مٌثبت</translation>
+        <translation type="vanished">Ulta ليس مٌستخدم او مٌثبت</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
         <source>Primary DNS</source>
         <translation>الرئيسي DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="93"/>
         <source>Secondary DNS</source>
         <translation>الثانوي DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="114"/>
         <source>Restore default</source>
         <translation>استعادة الافتراضي</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="115"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
         <source>Restore default DNS settings?</source>
         <translation>قم بأعادة ضبط إعدادات ال DNS الافتراضية؟</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="118"/>
         <source>Continue</source>
         <translation>واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="119"/>
         <source>Cancel</source>
         <translation>إلغاء</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="126"/>
         <source>Settings have been reset</source>
         <translation>لم يتم إعادة ضبط الإعدادات</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="149"/>
         <source>Save</source>
         <translation>احفظ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="156"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="158"/>
         <source>Settings saved</source>
         <translation>تم حفظ الإعدادات</translation>
     </message>
@@ -2039,8 +2041,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
-        <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>جميع خدمات AmneziaVPN المٌثبتة ستظل علي الخادم.</translation>
+        <source>All installed Ulta services will still remain on the server.</source>
+        <translation>جميع خدمات Ulta المٌثبتة ستظل علي الخادم.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
@@ -2318,9 +2320,8 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="57"/>
         <source>Connection</source>
-        <translation>الاتصال</translation>
+        <translation type="vanished">الاتصال</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="83"/>
@@ -2335,72 +2336,72 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="112"/>
         <source>Insert the key, add a configuration file or scan the QR-code</source>
-        <translation>أدخل المفتاح، أضف ملف تكوين أو امسح رمز الاستجابة السريعة</translation>
+        <translation type="vanished">أدخل المفتاح، أضف ملف تكوين أو امسح رمز الاستجابة السريعة</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="122"/>
         <source>Insert key</source>
-        <translation>أدخل مفتاح</translation>
+        <translation type="vanished">أدخل مفتاح</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="123"/>
         <source>Insert</source>
-        <translation>أدخل</translation>
+        <translation type="vanished">أدخل</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="143"/>
         <source>Continue</source>
-        <translation>واصل</translation>
+        <translation type="vanished">واصل</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="161"/>
         <source>Other connection options</source>
-        <translation>اختيارات اتصال اخري</translation>
+        <translation type="vanished">اختيارات اتصال اخري</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="172"/>
         <source>VPN by Amnezia</source>
-        <translation>VPN بواسطة Amnezia</translation>
+        <translation type="vanished">VPN بواسطة Amnezia</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="173"/>
         <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation>اتصل بخدمات VPN الكلاسيكية المدفوعة والمجانية من Amnezia</translation>
+        <translation type="vanished">اتصل بخدمات VPN الكلاسيكية المدفوعة والمجانية من Amnezia</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="196"/>
         <source>Self-hosted VPN</source>
-        <translation>VPN ذاتية الاستضافة</translation>
+        <translation type="vanished">VPN ذاتية الاستضافة</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="197"/>
         <source>Configure Amnezia VPN on your own server</source>
-        <translation>قم بتكوين Amnezia VPN على الخادم الخاص بك</translation>
+        <translation type="vanished">قم بتكوين Amnezia VPN على الخادم الخاص بك</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="217"/>
         <source>Restore from backup</source>
-        <translation>استرجاع من ملف يحتوي علي نسخة احتياطية</translation>
+        <translation type="vanished">استرجاع من ملف يحتوي علي نسخة احتياطية</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="223"/>
         <source>Open backup file</source>
-        <translation>افتح ملف نسخ احتياطي</translation>
+        <translation type="vanished">افتح ملف نسخ احتياطي</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="224"/>
         <source>Backup files (*.backup)</source>
-        <translation>ملفات نٌسخ احتياطية (*.backup)</translation>
+        <translation type="vanished">ملفات نٌسخ احتياطية (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="241"/>
         <source>File with connection settings</source>
-        <translation>ملف إعدادات اتصال</translation>
+        <translation type="vanished">ملف إعدادات اتصال</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="249"/>
         <source>Open config file</source>
-        <translation>افتح ملف تكوين</translation>
+        <translation type="vanished">افتح ملف تكوين</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="268"/>
@@ -2412,73 +2413,72 @@ Already installed containers were found on the server. All installed containers 
         <source>I have nothing</source>
         <translation>ليس لدي اي شئ</translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="70"/>
+        <source>What do you have?</source>
+        <translation>ماذا لديك؟</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="82"/>
+        <source>Key as a text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="100"/>
+        <source>Key as a file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key as file</source>
+        <translation type="vanished">ملف إعدادات اتصال</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="107"/>
+        <source>Open key file</source>
+        <translation>افتح ملف تكوين</translation>
+    </message>
+    <message>
+        <source>QR-code</source>
+        <translation type="vanished">رمز QR</translation>
+    </message>
+    <message>
+        <source>Key as text</source>
+        <translation type="vanished">مفتاح كنص</translation>
+    </message>
 </context>
 <context>
     <name>PageSetupWizardCredentials</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="54"/>
-        <source>Configure your server</source>
-        <translation>تكوين الخادم الخاص بك</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="61"/>
         <source>Server IP address [:port]</source>
-        <translation>عنوان خادم IP [:منفذ]</translation>
+        <translation type="vanished">عنوان خادم IP [:منفذ]</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="116"/>
         <source>Continue</source>
-        <translation>واصل</translation>
+        <translation type="vanished">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="144"/>
         <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation>ستظل جميع البيانات التي تدخلها سرية للغاية ولن تتم مشاركتها أو الكشف عنها ل Amnezia أو أي طرف ثالث</translation>
+        <translation type="vanished">ستظل جميع البيانات التي تدخلها سرية للغاية ولن تتم مشاركتها أو الكشف عنها ل Amnezia أو أي طرف ثالث</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="62"/>
-        <source>255.255.255.255:22</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="78"/>
-        <source>SSH Username</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="94"/>
         <source>Password or SSH private key</source>
-        <translation>كلمة مرور او مفتاح SSH خاص</translation>
+        <translation type="vanished">كلمة مرور او مفتاح SSH خاص</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="153"/>
-        <source>How to run your VPN server</source>
-        <translation>كيف تقوم بتشغيل خادم ال VPN الخاص بك</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="154"/>
-        <source>Where to get connection data, step-by-step instructions for buying a VPS</source>
-        <translation>اين تحصل علي بيانات الاتصال, تعليمات خطوة ب خطوة لشراء VPS</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="170"/>
         <source>Ip address cannot be empty</source>
-        <translation>لا يمكن لعنوان IP ان يكون فارغ</translation>
+        <translation type="vanished">لا يمكن لعنوان IP ان يكون فارغ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="173"/>
         <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation>ادخل العنوان في شكل  255.255.255.255:88</translation>
+        <translation type="vanished">ادخل العنوان في شكل  255.255.255.255:88</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="177"/>
         <source>Login cannot be empty</source>
-        <translation>تسجيل دخول لا يمكن ان يكون فارغ</translation>
+        <translation type="vanished">تسجيل دخول لا يمكن ان يكون فارغ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="181"/>
         <source>Password/private key cannot be empty</source>
-        <translation>كلمة مرور/مفتاح خاص لأ يمكن ان يكونو فارغين</translation>
+        <translation type="vanished">كلمة مرور/مفتاح خاص لأ يمكن ان يكونو فارغين</translation>
     </message>
 </context>
 <context>
@@ -2605,9 +2605,41 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="48"/>
         <source>Let&apos;s get started</source>
-        <translation>هيا نبدأ</translation>
+        <translation type="vanished">هيا نبدأ</translation>
+    </message>
+    <message>
+        <source>I have the data to connect</source>
+        <translation type="vanished">لدي البيانات المطلوبة للأتصال</translation>
+    </message>
+    <message>
+        <source>I have nothing</source>
+        <translation type="vanished">ليس لدي اي شئ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="45"/>
+        <source>Discord without any blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="56"/>
+        <source>Do you already have a key from the Telegram bot?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="71"/>
+        <source>Yes, I&apos;ve a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
+        <source>No, receive a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="125"/>
+        <source>https://t.me/ultadiscord_bot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2647,27 +2679,26 @@ Already installed containers were found on the server. All installed containers 
         <translation>اتصال جديد</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="105"/>
         <source>Collapse content</source>
         <translation>طي المحتوي</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="105"/>
         <source>Show content</source>
         <translation>اظهر المحتوي</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="127"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation>تمكين تشويش WireGuard. قد يكون من المفيد إذا تم حظر WireGuard على مزود الخدمة الخاص بك.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="144"/>
         <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation>استخدم رموز اتصال فقط من المصادر التي تثق بها, ربما تم إنشاء رموز من مصادر عامة لاعتراض بياناتك.</translation>
+        <translation type="vanished">استخدم رموز اتصال فقط من المصادر التي تثق بها, ربما تم إنشاء رموز من مصادر عامة لاعتراض بياناتك.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="196"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="185"/>
         <source>Connect</source>
         <translation>اتصل</translation>
     </message>
@@ -2706,8 +2737,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
-        <source>For the AmneziaVPN app</source>
-        <translation>AmneziaVPN من اجل تطبيق</translation>
+        <source>For the Ulta app</source>
+        <translation>Ulta من اجل تطبيق</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="127"/>
@@ -3207,7 +3238,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
         <location filename="../containers/containers_defs.cpp" line="104"/>
-        <location filename="../containers/containers_defs.cpp" line="248"/>
+        <location filename="../containers/containers_defs.cpp" line="249"/>
         <source>SOCKS5 proxy server</source>
         <translation></translation>
     </message>
@@ -3439,7 +3470,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <location filename="../containers/containers_defs.cpp" line="241"/>
+        <location filename="../containers/containers_defs.cpp" line="242"/>
         <source>Website in Tor network</source>
         <translation>موقع في شبكة Tor</translation>
     </message>
@@ -3486,12 +3517,36 @@ Already installed containers were found on the server. All installed containers 
         <translation>انشأ مخزن ملفات علي الخادم الخاص بك حتي تخزن الملفات و تنقلها بسرية.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="171"/>
+        <location filename="../containers/containers_defs.cpp" line="146"/>
+        <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
+It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
+
+* Available in the Ulta across all platforms
+* Normal power consumption on mobile devices
+* Flexible customisation to suit user needs to work with different operating systems and devices
+* Recognised by DPI analysis systems and therefore susceptible to blocking
+* Can operate over both TCP and UDP network protocols.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="162"/>
+        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
+
+* Available in the Ulta only on desktop platforms
+* Normal power consumption on mobile devices
+
+* Configurable encryption protocol
+* Detectable by some DPI systems
+* Works over TCP network protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
         <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3499,13 +3554,34 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
 * Works over TCP network protocol, 443 port.
 </source>
-        <translation>هذه مجموعة من بروتوكول OpenVPN و برنامج Cloak المساعد مٌصمم خصيصاً للحماية ضد الحجب 
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection and blocking.
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
+
+* Available in the Ulta across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by DPI analysis systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="obsolete">هذه مجموعة من بروتوكول OpenVPN و برنامج Cloak المساعد مٌصمم خصيصاً للحماية ضد الحجب
 
 يوفر OpenVPN اتصال VPN امن عن طريق تشفير جميع حركات المرور بين العميل والخادم
 
@@ -3519,7 +3595,7 @@ Cloak يحمي OpenVPN من ان يٌكتشف والحجب
 
 إذا كان هناك رقابة شديدة علي الانترنت في منطقتك, نحن ننصحك بأن تستخدم OpenVPN over Cloak من اول اتصال
 
-* مٌتاح في AmneziaVPN عبر جميع المنصات
+* مٌتاح في Ulta عبر جميع المنصات
 * استهلاك طاقة عالية علي اجهزة المحمول
 * مرونة في الإعدادات
 * لا يٌكتشف بواسطة انظمة تحليل DPI
@@ -3527,12 +3603,41 @@ Cloak يحمي OpenVPN من ان يٌكتشف والحجب
 </translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="190"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
+        <translation type="obsolete">تم تصميم بروتوكول REALITY، وهو تطور رائد قام به مبدعو XRay، خصيصًا لمواجهة أعلى مستويات الرقابة على الإنترنت من خلال نهجه الجديد في التهرب.
+فهو يحدد بشكل فريد الرقباء أثناء مرحلة مصافحة TLS، ويعمل بسلاسة كوكيل للعملاء الشرعيين بينما يحول الرقباء إلى مواقع الويب الأصلية مثل google.com، وبالتالي يقدم شهادة وبيانات TLS أصلية.
+هذه الإمكانية المتقدمة تميز REALITY عن التقنيات المشابهة من خلال قدرتها على إخفاء حركة مرور الويب على أنها قادمة من مواقع عشوائية وشرعية دون الحاجة إلى تكوينات محددة.
+على عكس البروتوكولات القديمة مثل VMess وVLESS ونقل XTLS-Vision، فإن التعرف المبتكر على &quot;الصديق أو العدو&quot; من REALITY عند مصافحة TLS يعزز الأمان ويتحايل على الكشف بواسطة أنظمة DPI المتطورة التي تستخدم تقنيات التحقيق النشطة. وهذا يجعل من REALITY حلاً قويًا للحفاظ على حرية الإنترنت في البيئات التي تخضع لرقابة صارمة.</translation>
+    </message>
+    <message>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+
+* Available in the Ulta only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="obsolete">IKEv2, مقترن مع طبقة التشفير IPSec, يبقا بروتوكول VPN مستقر و حديث.
+من مميزاتةقدرته على التبديل بسرعة بين الشبكات والأجهزة، مما يجعله قابلاً للتكيف بشكل خاص في بيئات الشبكات الديناميكية.
+
+*. مٌتاح في Ulta فقط علي منصة وندوز
+* استهلاك طاقة قليل, علي اجهزة المحمول
+* اقل تكوين
+* يٌلاحظ بواسطة انظمة تحليل DPI
+* يعمل عبر بروتوكول شبكة UDP, منفذ 500 و منفذ 4500.</translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3541,25 +3646,35 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 يوفر WireGuard اتصال VPN مستقر و اداء عالي علي جميع الاجهزة. يستعمل إعدادات تشفير معقدة. WireGuard مٌقارنة مع OpenVPN يتمتع بزمن وصول أقل وتحسين إنتاجية نقل البيانات.
 بسبب توقيعات الحزمة المميزة WireGuard عرضة جداُ للحجب. علي عكس باقي برتوكولات VPN التي تستعمل تقنيات تشويش. حزمة أنماط التوقيع المتسقة الخاصة ب WireGuard يمكن التعرف عليها بسهولة ولذلك تٌحجب بواسطة أنظمة الفحص العميق للحزم (DPI) المتقدمة وأدوات مراقبة الشبكة الأخرى.
 
-* مٌتاح في AmneziaVPN عبر جميع المنصات
+* مٌتاح في Ulta عبر جميع المنصات
 * استهلاك قليل للطاقة
 * عدد قليل من الإعدادات
 سهل التعرف علية بواسطة انظمة تحليل DPI, عرضة للحجب
 * يعمل عبر بروتوكول شبكة UDP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="219"/>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation>تم تصميم بروتوكول REALITY، وهو تطور رائد قام به مبدعو XRay، خصيصًا لمواجهة أعلى مستويات الرقابة على الإنترنت من خلال نهجه الجديد في التهرب.
-فهو يحدد بشكل فريد الرقباء أثناء مرحلة مصافحة TLS، ويعمل بسلاسة كوكيل للعملاء الشرعيين بينما يحول الرقباء إلى مواقع الويب الأصلية مثل google.com، وبالتالي يقدم شهادة وبيانات TLS أصلية.
-هذه الإمكانية المتقدمة تميز REALITY عن التقنيات المشابهة من خلال قدرتها على إخفاء حركة مرور الويب على أنها قادمة من مواقع عشوائية وشرعية دون الحاجة إلى تكوينات محددة.
-على عكس البروتوكولات القديمة مثل VMess وVLESS ونقل XTLS-Vision، فإن التعرف المبتكر على &quot;الصديق أو العدو&quot; من REALITY عند مصافحة TLS يعزز الأمان ويتحايل على الكشف بواسطة أنظمة DPI المتطورة التي تستخدم تقنيات التحقيق النشطة. وهذا يجعل من REALITY حلاً قويًا للحفاظ على حرية الإنترنت في البيئات التي تخضع لرقابة صارمة.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="244"/>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+
+* Available in the Ulta only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="245"/>
         <source>After installation, Amnezia will create a
 
  file storage on your server. You will be able to access it using
@@ -3598,46 +3713,47 @@ For more detailed information, you can
         <translation>استبدل خادم ال DNS الحالي مع الخادم الخاص بك, هذا سيزيد من خصوصيتك.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="146"/>
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Normal power consumption on mobile devices
+
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
 * Can operate over both TCP and UDP network protocols.</source>
-        <translation>يبقا OpenVPN كأحد اشهر بروتوكولات VPN و التي تم اختبارها عبر الزمن.
+        <translation type="vanished">يبقا OpenVPN كأحد اشهر بروتوكولات VPN و التي تم اختبارها عبر الزمن.
 ينشأ بروتوكول امان مميز, يستفيد من SSL/TLS للتشفير و تغير المفاتيح. واكثر من ذلك, OpenVPN يدعم تعدد طرق المصادقة يجعلة متعدد الاستخدامات وقابلة للتكيف, تلبية مجموعة واسعة من الأجهزة وأنظمة التشغيل. بسبب طبيعتة مفتوحة المصدر, يستفيد OpenVPN  من التدقيق الشامل من قبل المجتمع العالمي, مما يعزز أمنها باستمرار. مع توازن قوي بين الأداء والأمان والتوافق, يظل OpenVPN الخيار الأفضل للأفراد والشركات المهتمين بالخصوصية على حدٍ سواء.
 
-* مٌتاح في AmneziaVPN عبر جميع المنصات
+* مٌتاح في Ulta عبر جميع المنصات
 * استهلاك طاقة عادي علي اجهزة المحمول
 * مرونة في التخصيص كي يلائم احتياجات المستخدم حتي يعمل مع انظمة تشغيل واجهزة مختلفة
 * يٌلاحظ بواسطة انظمة تحليل DPI و لذلك عرضة للحجب
 * يمكن ان يعمل علي بروتوكولات شبكة TCP و UDP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="162"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the Ulta only on desktop platforms
+* Normal power consumption on mobile devices
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
-        <translation>Shadowsocks, مستوحي من بروتوكول SOCKS5, يحمي الاتصال بأستعمال شفرة AEAD. كذلك Shadowsocks صٌمم كي يكون متحفظاً ويصعب تحديدة, إنه ليس مطابقًا لاتصال HTTPS القياسي. عمتاُ. بعض انظمة تحليل حركات المرور قد تتعرف علي اتصال Shadowsocks. بسبب الدعم المحدود في Amnezia, يٌنصح بأستخدام بروتوكول AmneziaWG.
+        <translation type="vanished">Shadowsocks, مستوحي من بروتوكول SOCKS5, يحمي الاتصال بأستعمال شفرة AEAD. كذلك Shadowsocks صٌمم كي يكون متحفظاً ويصعب تحديدة, إنه ليس مطابقًا لاتصال HTTPS القياسي. عمتاُ. بعض انظمة تحليل حركات المرور قد تتعرف علي اتصال Shadowsocks. بسبب الدعم المحدود في Amnezia, يٌنصح بأستخدام بروتوكول AmneziaWG.
 
-* مٌتاح في AmneziaVPN عبر جميع المنصات
+* مٌتاح في Ulta عبر جميع المنصات
+* استهلاك طاقة عادي علي اجهزة المحمول
 * بروتوكول تشفير قابل للتكوين
 * قابل للكشف بواسطة بعض انظمة DPI
 * يعمل عبر بروتوكول شبكة TCP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="203"/>
+        <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the Ulta across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -3646,34 +3762,14 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 بينما WireGuard معروف بأدائة العالي. لدية مشاكل مع سهولة التعرف علية بسبب توقيعات الحزمة المميزة الخاصة بة. يٌصلح AmneziaWG هذه المشكلة عن طريق استخدام طرق تشويش افضل, يجعل حركة المرور تبقا مع حركة مرور انترنت عادية.
 هذا يعني ان AmneziaWG يبقا الاداء العالي الاساسي بينما يضيف طبقة من العزل, هذا يجعلة اختيار ممتاز لهولاء الذين يريدون اتصال VPN سريع و متخفي.
 
-* مٌتاح في AmneziaVPN علي جميع المنصات
+* مٌتاح في Ulta علي جميع المنصات
 * استهلاك طاقة قليل
 * اقل عدد من الإعدادات
 * لا يٌكتشف من قبل انظمة تحليل DPI, مقاوم للحجب
 * يعمل عبر بروتوكول شبكة UDP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="230"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the AmneziaVPN only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation>IKEv2, مقترن مع طبقة التشفير IPSec, يبقا بروتوكول VPN مستقر و حديث.
-من مميزاتةقدرته على التبديل بسرعة بين الشبكات والأجهزة، مما يجعله قابلاً للتكيف بشكل خاص في بيئات الشبكات الديناميكية. 
-
-*. مٌتاح في AmneziaVPN فقط علي منصة وندوز
-* استهلاك طاقة قليل, علي اجهزة المحمول
-* اقل تكوين
-* يٌلاحظ بواسطة انظمة تحليل DPI
-* يعمل عبر بروتوكول شبكة UDP, منفذ 500 و منفذ 4500.</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="242"/>
+        <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>خدمة ال DNS</translation>
     </message>
@@ -3867,7 +3963,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>SelectLanguageDrawer</name>
     <message>
-        <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="71"/>
+        <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="73"/>
         <source>Choose language</source>
         <translation>اختر لغة</translation>
     </message>
@@ -3904,8 +4000,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
-        <source>Save AmneziaVPN config</source>
-        <translation>احفظ تكوين AmneziaVPN</translation>
+        <source>Save Ulta config</source>
+        <translation>احفظ تكوين Ulta</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="86"/>
@@ -3986,31 +4082,29 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="56"/>
         <source>Show</source>
         <translation>اظهر</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="57"/>
         <source>Connect</source>
         <translation>اتصل</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="58"/>
         <source>Disconnect</source>
         <translation>اقطع الاتصال</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
-        <translation>زور الموقع</translation>
+        <translation type="vanished">زور الموقع</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="59"/>
         <source>Quit</source>
         <translation>اغلاق</translation>
     </message>
@@ -4077,28 +4171,33 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="345"/>
+        <location filename="../containers/containers_defs.cpp" line="346"/>
         <source>Low</source>
         <translation>منخفض</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="346"/>
+        <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation>متوسط او عالي</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="355"/>
+        <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>انا فقط اريد زيادة مستوي الخصوصية.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="356"/>
+        <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>أريد تجاوز الرقابة. يوصى بهذا الخيار في معظم الحالات.</translation>
     </message>
 </context>
 <context>
     <name>main2</name>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="33"/>
+        <source>Ulta</source>
+        <translation type="unfinished">Ulta</translation>
+    </message>
     <message>
         <location filename="../ui/qml/main2.qml" line="162"/>
         <source>Private key passphrase</source>

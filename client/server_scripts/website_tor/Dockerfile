@@ -1,3 +1,3 @@
-FROM amneziavpn/torpress:latest
+FROM ulta/torpress:latest
 
-LABEL maintainer="AmneziaVPN"
+LABEL maintainer="Ulta"

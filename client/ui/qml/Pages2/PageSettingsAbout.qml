@@ -97,6 +97,7 @@ PageType {
                 text: qsTr("Contacts")
             }
 
+        /*
             LabelWithButtonType {
                 id: telegramButton
                 Layout.fillWidth: true
@@ -113,6 +114,7 @@ PageType {
                     Qt.openUrlExternally(qsTr("https://t.me/amnezia_vpn_en"))
                 }
             }
+        */
 
             DividerType {}
 
@@ -128,8 +130,7 @@ PageType {
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    GC.copyToClipBoard(text)
-                    PageController.showNotificationMessage(qsTr("Copied"))
+                    Qt.openUrlExternally(qsTr("https://github.com/vpn-naruzhu/vpnn-client/issues"))
                 }
 
             }
@@ -147,7 +148,7 @@ PageType {
                 parentFlickable: fl
 
                 clickedFunction: function() {
-                    Qt.openUrlExternally(qsTr("https://github.com/amnezia-vpn/amnezia-client"))
+                    Qt.openUrlExternally(qsTr("https://github.com/vpn-naruzhu/vpnn-client"))
                 }
 
             }

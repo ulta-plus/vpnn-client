@@ -46,16 +46,21 @@ public:
     void restoreConnection();
 #endif
 
+    void waitForVpnConnectionFinished(int msecs);
+
 public slots:
     void connectToVpn(int serverIndex,
         const ServerCredentials &credentials, DockerContainer container, const QJsonObject &vpnConfiguration);
 
     void disconnectFromVpn();
 
-
     void addRoutes(const QStringList &ips);
     void deleteRoutes(const QStringList &ips);
     void flushDns();
+
+    void addRoute(const QString& ip);
+    void addNewDns(const QString& dnsAddr);
+    void finishReceivingSettings();
 
 signals:
     void bytesChanged(quint64 receivedBytes, quint64 sentBytes);
@@ -63,6 +68,10 @@ signals:
     void vpnProtocolError(amnezia::ErrorCode error);
 
     void serviceIsNotReady();
+
+    void newRoute(const QString& ip);
+    void restartConnection();
+    void toggleConnection();
 
 protected slots:
     void onBytesChanged(quint64 receivedBytes, quint64 sentBytes);
@@ -72,6 +81,7 @@ protected:
     QSharedPointer<VpnProtocol> m_vpnProtocol;
 
 private:
+    bool needToRestartConnection = false;
     std::shared_ptr<Settings> m_settings;
     QJsonObject m_vpnConfiguration;
     QJsonObject m_routeMode;

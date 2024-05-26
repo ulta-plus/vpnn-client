@@ -1,5 +1,5 @@
-sc stop AmneziaWGTunnel$AmneziaVPN
-sc delete AmneziaWGTunnel$AmneziaVPN
-taskkill /IM "AmneziaVPN-service.exe" /F
-taskkill /IM "AmneziaVPN.exe" /F
+sc stop AmneziaWGTunnel$Ulta
+sc delete AmneziaWGTunnel$Ulta
+taskkill /IM "Ulta-service.exe" /F
+taskkill /IM "Ulta.exe" /F
 exit /b 0

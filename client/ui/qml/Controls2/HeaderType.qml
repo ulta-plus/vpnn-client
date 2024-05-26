@@ -67,8 +67,9 @@ Item {
             Layout.fillWidth: true
 
             text: root.descriptionText
+            font.family: "Montserrat Medium"
 
-            color: AmneziaStyle.color.mutedGray
+            color: UltaStyle.color.mainText
 
             visible: root.descriptionText !== ""
         }

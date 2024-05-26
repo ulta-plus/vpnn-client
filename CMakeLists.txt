@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
-set(PROJECT AmneziaVPN)
+set(PROJECT Ulta)
 
-project(${PROJECT} VERSION 4.8.2.4
-        DESCRIPTION "AmneziaVPN"
-        HOMEPAGE_URL "https://amnezia.org/"
+project(${PROJECT} VERSION 1.0.1.0
+        DESCRIPTION "Ulta"
+        HOMEPAGE_URL "https://t.me/ultarussia"
 )
 
 string(TIMESTAMP CURRENT_DATE "%Y-%m-%d")

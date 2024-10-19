@@ -9,4 +9,6 @@ sc stop AmneziaWGTunnel$VPNNaruzhu
 sc delete AmneziaWGTunnel$VPNNaruzhu
 taskkill /IM "VPNNaruzhu-service.exe" /F
 taskkill /IM "VPNNaruzhu.exe" /F
+reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" /v VPNNaruzhu /f
+
 exit /b 0

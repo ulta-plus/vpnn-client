@@ -84,6 +84,7 @@ public:
 signals:
     void translationsUpdated();
     void toggleConnection();
+    void excludeRoute(QString addr);
 
 private:
     void initModels();
@@ -144,6 +145,7 @@ private:
 
 public slots:
     void restartConnection();
+    void updateSmartRouting();
 };
 
 #endif // AMNEZIA_APPLICATION_H

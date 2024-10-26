@@ -169,6 +169,7 @@ void ConnectionController::toggleConnection()
     } else if (isConnected()) {
         closeConnection();
     } else {
+        emit updateSmartRouting();
         openConnection();
     }
 }

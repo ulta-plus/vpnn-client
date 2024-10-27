@@ -2201,12 +2201,12 @@ Already installed containers were found on the server. All installed containers 
         <translation>ကျွန်ုပ်တွင်ချိတ်ဆက်ဖို့အတွက်ဒေတာရှိသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="105"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
         <source>I have nothing</source>
         <translation>ကျွန်ုပ်တွင်ဘာမှမရှိပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="123"/>
         <source>https://naruzhu.click/appam</source>
         <translation type="unfinished"></translation>
     </message>

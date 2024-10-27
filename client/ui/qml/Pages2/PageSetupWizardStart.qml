@@ -82,7 +82,6 @@ PageType {
             }
             clickedFunc: function() {
                 PageController.goToPage(PageEnum.PageSetupWizardConfigSource)
-                root.close()
             }
 
             KeyNavigation.tab: startButton2

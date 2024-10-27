@@ -2228,12 +2228,12 @@ Already installed containers were found on the server. All installed containers 
         <translation>मेरे पास कनेक्ट करने के लिए डेटा है</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="105"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
         <source>I have nothing</source>
         <translation>मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="123"/>
         <source>https://naruzhu.click/appam</source>
         <translation type="unfinished"></translation>
     </message>

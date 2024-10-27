@@ -222,7 +222,7 @@ Can&apos;t be disabled for current server</source>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1236,85 +1236,6 @@ Already installed containers were found on the server. All installed containers 
     </message>
 </context>
 <context>
-    <name>PageSettingsAbout</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="72"/>
-        <source>Support Amnezia</source>
-        <translation>Amnezia کی حمایت کریں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="87"/>
-        <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>ایمنیزیا ایک مفت اور آزاد سورس ایپلیکیشن ہے۔ آپ اگر اسے پسند کریں تو ڈویلپرز کی حمایت کرسکتے ہیں.</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="97"/>
-        <source>Contacts</source>
-        <translation>رابطے</translation>
-    </message>
-    <message>
-        <source>Telegram group</source>
-        <translation type="vanished">ٹیلیگرام گروپ</translation>
-    </message>
-    <message>
-        <source>To discuss features</source>
-        <translation type="vanished">&quot;فیچرز&quot; پر گفتگو کرنے کے لئے</translation>
-    </message>
-    <message>
-        <source>Mail</source>
-        <translation type="vanished">میل</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="126"/>
-        <source>For reviews and bug reports</source>
-        <translation>جائزہ اور بگ رپورٹس کے لئے</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="133"/>
-        <source>https://github.com/vpn-naruzhu/vpnn-client/issues</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Github</source>
-        <translation type="vanished">گِٹ ہَب</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="125"/>
-        <source>support@amnezia.org</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="144"/>
-        <source>GitHub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="151"/>
-        <source>https://github.com/vpn-naruzhu/vpnn-client</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="162"/>
-        <source>Website</source>
-        <translation>ویب سائٹ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="182"/>
-        <source>Software version: %1</source>
-        <translation>سافٹ ویئر ورژن: %1</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="211"/>
-        <source>Check for updates</source>
-        <translation>اپ ڈیٹس چیک کریں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="234"/>
-        <source>Privacy Policy</source>
-        <translation>رازداری کی پالیسی</translation>
-    </message>
-</context>
-<context>
     <name>PageSettingsApiServerInfo</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="45"/>
@@ -1661,7 +1582,7 @@ Already installed containers were found on the server. All installed containers 
         <translation type="vanished">اگر سرور پر AmneziaDNS انسٹال کیا گیا ہو تو</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="82"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>DNS servers</source>
         <translation>ڈی این ایس سرور</translation>
     </message>
@@ -1678,17 +1599,17 @@ Already installed containers were found on the server. All installed containers 
         <translation type="vanished">ایپ کے بنیاد پر سپلٹ ٹنلنگ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="87"/>
         <source>KillSwitch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="167"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="88"/>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="99"/>
         <source>Cannot change killSwitch settings during active connection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3387,15 +3308,15 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
 * Available in the VPNNaruzhu only on Windows
@@ -3517,7 +3438,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3859,31 +3780,31 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>SystemTrayNotificationHandler</name>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
         <source>Show</source>
         <translation>دکھائیں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
         <translation>منسلک کریں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
         <translation>منقطع کریں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
         <translation>ویب سائٹ دیکھیں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
         <source>Quit</source>
         <translation>بند کریں</translation>

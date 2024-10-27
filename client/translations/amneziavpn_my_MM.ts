@@ -88,7 +88,7 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="219"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="220"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
         <translation>VPN ပရိုတိုကောများကို မထည့်သွင်းရသေးပါ။
@@ -120,12 +120,12 @@
         <translation>ဆက်တင်များကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ပြီးပါပြီ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="215"/>
         <source>The selected protocol is not supported on the current platform</source>
         <translation>ရွေးချယ်ထားသော ပရိုတိုကောကို လက်ရှိပလက်ဖောင်းပေါ်တွင် အ‌ထောက်အပံ့မပေးထားပါ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="238"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="239"/>
         <source>unable to create configuration</source>
         <translation>configuration ဖန်တီး၍မရပါ</translation>
     </message>
@@ -135,7 +135,7 @@
         <translation>ပြန်လည်ချိတ်ဆက်နေပါသည်...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="81"/>
+        <location filename="../ui/controllers/connectionController.h" line="83"/>
         <location filename="../ui/controllers/connectionController.cpp" line="100"/>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
         <location filename="../ui/controllers/connectionController.cpp" line="121"/>

@@ -88,7 +88,7 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="219"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="220"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
         <translation>پروتکل وی‎پی‎ان نصب نشده است
@@ -121,12 +121,12 @@
         <translation>تنظیمات با موفقیت به‎روز‎رسانی شدند</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="215"/>
         <source>The selected protocol is not supported on the current platform</source>
         <translation>پروتکل انتخاب‌شده در پلتفرم فعلی پشتیبانی نمی‌شود.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="238"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="239"/>
         <source>unable to create configuration</source>
         <translation>نمی‌توان پیکربندی را ایجاد کرد.</translation>
     </message>
@@ -136,7 +136,7 @@
         <translation>اتصال دوباره...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="81"/>
+        <location filename="../ui/controllers/connectionController.h" line="83"/>
         <location filename="../ui/controllers/connectionController.cpp" line="100"/>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
         <location filename="../ui/controllers/connectionController.cpp" line="121"/>

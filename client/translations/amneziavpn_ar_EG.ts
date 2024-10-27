@@ -184,13 +184,6 @@
     </message>
 </context>
 <context>
-    <name>ExportController</name>
-    <message>
-        <source>Access error!</source>
-        <translation type="vanished">خطأ في الوصول!</translation>
-    </message>
-</context>
-<context>
     <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="109"/>
@@ -216,14 +209,8 @@
         <translation>تقسيم الانفاق علي الخادم</translation>
     </message>
     <message>
-        <source>Enabled
-Can&apos;t be disabled for current server</source>
-        <translation type="vanished">مٌفعل
-لا يمكن إقافة للخادم الحالي</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled
+        <source>Enabled 
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -461,25 +448,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>تم تمكين التسجيل</translation>
     </message>
     <message>
-        <source>Split tunneling enabled</source>
-        <translation type="vanished">تقسيم الانفاق مٌفعل</translation>
-    </message>
-    <message>
-        <source>Split tunneling disabled</source>
-        <translation type="vanished">تقسيم الانفاق مٌعطل</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="335"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
         <source>VPN protocol</source>
         <translation>بروتوكول VPN</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="390"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
         <source>Servers</source>
         <translation>الخوادم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="502"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
         <source>Unable change server while there is an active connection</source>
         <translation>لا يمكن تغير الخادم بينما هناك اتصال مفعل</translation>
     </message>
@@ -1522,37 +1501,9 @@ Already installed containers were found on the server. All installed containers 
         <translation>الاتصال</translation>
     </message>
     <message>
-        <source>When AmneziaDNS is not used or installed</source>
-        <translation type="vanished">عندما يكون AmneziaDNS غير مٌثبت او غير مستخدم</translation>
-    </message>
-    <message>
-        <source>Allows you to use the VPN only for certain Apps</source>
-        <translation type="vanished">يسمح لك بأستخدام ال VPN علي تطبيقات معينة</translation>
-    </message>
-    <message>
-        <source>Use AmneziaDNS</source>
-        <translation type="vanished">استخدم AmneziaDNS</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is installed on the server</source>
-        <translation type="vanished">في حالة كان AmneziaDNS مٌثبت علي الخادم</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>DNS servers</source>
         <translation>خوادم DNS</translation>
-    </message>
-    <message>
-        <source>Site-based split tunneling</source>
-        <translation type="vanished">انقسام الانفاق القائم علي الموقع</translation>
-    </message>
-    <message>
-        <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation type="vanished">يسمح لك بتحديد اي موقع تريد الوصول له عن طريق ال VPN</translation>
-    </message>
-    <message>
-        <source>App-based split tunneling</source>
-        <translation type="vanished">انقسام الانفاق القائم علي التطبيق</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="87"/>
@@ -1581,10 +1532,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="65"/>
         <source>DNS servers</source>
         <translation>خوادم ال DNS</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is not used or installed</source>
-        <translation type="vanished">VPNNaruzhu ليس مٌستخدم او مٌثبت</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
@@ -1635,10 +1582,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsLogging</name>
     <message>
-        <source>Logging is enabled. Note that logs will be automatically disabled after 14 days, and all log files will be deleted.</source>
-        <translation type="vanished">تم تمكين التسجيل. لاحظ أنه سيتم تعطيل السجلات تلقائيًا بعد 14 يومًا، وسيتم حذف جميع ملفات السجل.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="56"/>
         <source>Logging</source>
         <translation>التسجيل</translation>
@@ -1647,14 +1590,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="57"/>
         <source>Enabling this function will save application&apos;s logs automatically. By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
         <translation>سيتم حفظ سجلات البرنامج بشكل تلقائي عند تفعيل هذه الميزة, بشكل افتراضي, هذه الميزة مٌعطلة. قم بتفعيل هذه الميزة في حالة هناك خلل في التطبيق.</translation>
-    </message>
-    <message>
-        <source>Save logs</source>
-        <translation type="vanished">احفظ السجلات</translation>
-    </message>
-    <message>
-        <source>Open folder with logs</source>
-        <translation type="vanished">افتح مجلد يحتوي علي سجلات</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="171"/>
@@ -1673,10 +1608,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="265"/>
         <source>Logs file saved</source>
         <translation>تم حفظ ملف السجل</translation>
-    </message>
-    <message>
-        <source>Save logs to file</source>
-        <translation type="vanished">احفظ السجلات في ملف</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="68"/>
@@ -2106,72 +2037,8 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
-        <source>Connection</source>
-        <translation type="vanished">الاتصال</translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation type="obsolete">إعدادات</translation>
-    </message>
-    <message>
-        <source>Insert the key, add a configuration file or scan the QR-code</source>
-        <translation type="vanished">أدخل المفتاح، أضف ملف تكوين أو امسح رمز الاستجابة السريعة</translation>
-    </message>
-    <message>
-        <source>Insert key</source>
-        <translation type="vanished">أدخل مفتاح</translation>
-    </message>
-    <message>
-        <source>Insert</source>
-        <translation type="vanished">أدخل</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">واصل</translation>
-    </message>
-    <message>
-        <source>Other connection options</source>
-        <translation type="vanished">اختيارات اتصال اخري</translation>
-    </message>
-    <message>
-        <source>VPN by Amnezia</source>
-        <translation type="vanished">VPN بواسطة Amnezia</translation>
-    </message>
-    <message>
-        <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation type="vanished">اتصل بخدمات VPN الكلاسيكية المدفوعة والمجانية من Amnezia</translation>
-    </message>
-    <message>
-        <source>Self-hosted VPN</source>
-        <translation type="vanished">VPN ذاتية الاستضافة</translation>
-    </message>
-    <message>
-        <source>Configure Amnezia VPN on your own server</source>
-        <translation type="vanished">قم بتكوين Amnezia VPN على الخادم الخاص بك</translation>
-    </message>
-    <message>
-        <source>Restore from backup</source>
-        <translation type="vanished">استرجاع من ملف يحتوي علي نسخة احتياطية</translation>
-    </message>
-    <message>
-        <source>Open backup file</source>
-        <translation type="vanished">افتح ملف نسخ احتياطي</translation>
-    </message>
-    <message>
-        <source>Backup files (*.backup)</source>
-        <translation type="vanished">ملفات نٌسخ احتياطية (*.backup)</translation>
-    </message>
-    <message>
-        <source>File with connection settings</source>
-        <translation type="vanished">ملف إعدادات اتصال</translation>
-    </message>
-    <message>
-        <source>Open config file</source>
-        <translation type="vanished">افتح ملف تكوين</translation>
-    </message>
-    <message>
-        <source>I have nothing</source>
-        <translation type="vanished">ليس لدي اي شئ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="61"/>
@@ -2197,49 +2064,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="281"/>
         <source>Key as Text</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QR-code</source>
-        <translation type="vanished">رمز QR</translation>
-    </message>
-    <message>
-        <source>Key as text</source>
-        <translation type="vanished">مفتاح كنص</translation>
-    </message>
-</context>
-<context>
-    <name>PageSetupWizardCredentials</name>
-    <message>
-        <source>Server IP address [:port]</source>
-        <translation type="vanished">عنوان خادم IP [:منفذ]</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">واصل</translation>
-    </message>
-    <message>
-        <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation type="vanished">ستظل جميع البيانات التي تدخلها سرية للغاية ولن تتم مشاركتها أو الكشف عنها ل Amnezia أو أي طرف ثالث</translation>
-    </message>
-    <message>
-        <source>Password or SSH private key</source>
-        <translation type="vanished">كلمة مرور او مفتاح SSH خاص</translation>
-    </message>
-    <message>
-        <source>Ip address cannot be empty</source>
-        <translation type="vanished">لا يمكن لعنوان IP ان يكون فارغ</translation>
-    </message>
-    <message>
-        <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation type="vanished">ادخل العنوان في شكل  255.255.255.255:88</translation>
-    </message>
-    <message>
-        <source>Login cannot be empty</source>
-        <translation type="vanished">تسجيل دخول لا يمكن ان يكون فارغ</translation>
-    </message>
-    <message>
-        <source>Password/private key cannot be empty</source>
-        <translation type="vanished">كلمة مرور/مفتاح خاص لأ يمكن ان يكونو فارغين</translation>
     </message>
 </context>
 <context>
@@ -2366,10 +2190,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <source>Let&apos;s get started</source>
-        <translation type="vanished">هيا نبدأ</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="46"/>
         <source>Open foreign and Russian websites.</source>
         <translation type="unfinished"></translation>
@@ -2437,17 +2257,9 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show content</source>
-        <translation type="vanished">اظهر المحتوي</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation>تمكين تشويش WireGuard. قد يكون من المفيد إذا تم حظر WireGuard على مزود الخدمة الخاص بك.</translation>
-    </message>
-    <message>
-        <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation type="vanished">استخدم رموز اتصال فقط من المصادر التي تثق بها, ربما تم إنشاء رموز من مصادر عامة لاعتراض بياناتك.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="187"/>
@@ -3293,89 +3105,6 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="172"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking.
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="220"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="231"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the VPNNaruzhu only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking.
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="vanished">هذه مجموعة من بروتوكول OpenVPN و برنامج Cloak المساعد مٌصمم خصيصاً للحماية ضد الحجب
-
-يوفر OpenVPN اتصال VPN امن عن طريق تشفير جميع حركات المرور بين العميل والخادم
-
-Cloak يحمي OpenVPN من ان يٌكتشف والحجب
-
-يمكن ان يعدل Cloak حزمة البيانات حتي يجعل حركة مرور VPN تبدو بالكامل كحركة ويب طبيعية,
-وايضاُ يحمي ال VPN من ان يٌكتشف عن طريق انظمة الكشف الفعالة. هذا يجعلة مقاوم جداُ لأن يٌكتشف
-
-فوراُ بعد استلام اول حزمة بيانات, يصادق Cloak الاتصال القادم.
-إذا فشل التصادق, البرنامج المساعد يجعل الخادم يبدو ك موقع مزيف ويصبح ال VPN مخفي لأنظمة التحليل.
-
-إذا كان هناك رقابة شديدة علي الانترنت في منطقتك, نحن ننصحك بأن تستخدم OpenVPN over Cloak من اول اتصال
-
-* مٌتاح في VPNNaruzhu عبر جميع المنصات
-* استهلاك طاقة عالية علي اجهزة المحمول
-* مرونة في الإعدادات
-* لا يٌكتشف بواسطة انظمة تحليل DPI
-* يعمل عبر بروتوكول شبكة TCK, منفذ 443.
-</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
@@ -3395,16 +3124,6 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 * عدد قليل من الإعدادات
 سهل التعرف علية بواسطة انظمة تحليل DPI, عرضة للحجب
 * يعمل عبر بروتوكول شبكة UDP.</translation>
-    </message>
-    <message>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="vanished">تم تصميم بروتوكول REALITY، وهو تطور رائد قام به مبدعو XRay، خصيصًا لمواجهة أعلى مستويات الرقابة على الإنترنت من خلال نهجه الجديد في التهرب.
-فهو يحدد بشكل فريد الرقباء أثناء مرحلة مصافحة TLS، ويعمل بسلاسة كوكيل للعملاء الشرعيين بينما يحول الرقباء إلى مواقع الويب الأصلية مثل google.com، وبالتالي يقدم شهادة وبيانات TLS أصلية.
-هذه الإمكانية المتقدمة تميز REALITY عن التقنيات المشابهة من خلال قدرتها على إخفاء حركة مرور الويب على أنها قادمة من مواقع عشوائية وشرعية دون الحاجة إلى تكوينات محددة.
-على عكس البروتوكولات القديمة مثل VMess وVLESS ونقل XTLS-Vision، فإن التعرف المبتكر على &quot;الصديق أو العدو&quot; من REALITY عند مصافحة TLS يعزز الأمان ويتحايل على الكشف بواسطة أنظمة DPI المتطورة التي تستخدم تقنيات التحقيق النشطة. وهذا يجعل من REALITY حلاً قويًا للحفاظ على حرية الإنترنت في البيئات التي تخضع لرقابة صارمة.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="245"/>
@@ -3446,39 +3165,26 @@ For more detailed information, you can
         <translation>استبدل خادم ال DNS الحالي مع الخادم الخاص بك, هذا سيزيد من خصوصيتك.</translation>
     </message>
     <message>
-        <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
-It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
+        <location filename="../containers/containers_defs.cpp" line="172"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection and blocking. 
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
 * Available in the VPNNaruzhu across all platforms
-* Normal power consumption on mobile devices
-
-* Flexible customisation to suit user needs to work with different operating systems and devices
-* Recognised by DPI analysis systems and therefore susceptible to blocking
-* Can operate over both TCP and UDP network protocols.</source>
-        <translation type="vanished">يبقا OpenVPN كأحد اشهر بروتوكولات VPN و التي تم اختبارها عبر الزمن.
-ينشأ بروتوكول امان مميز, يستفيد من SSL/TLS للتشفير و تغير المفاتيح. واكثر من ذلك, OpenVPN يدعم تعدد طرق المصادقة يجعلة متعدد الاستخدامات وقابلة للتكيف, تلبية مجموعة واسعة من الأجهزة وأنظمة التشغيل. بسبب طبيعتة مفتوحة المصدر, يستفيد OpenVPN  من التدقيق الشامل من قبل المجتمع العالمي, مما يعزز أمنها باستمرار. مع توازن قوي بين الأداء والأمان والتوافق, يظل OpenVPN الخيار الأفضل للأفراد والشركات المهتمين بالخصوصية على حدٍ سواء.
-
-* مٌتاح في VPNNaruzhu عبر جميع المنصات
-* استهلاك طاقة عادي علي اجهزة المحمول
-* مرونة في التخصيص كي يلائم احتياجات المستخدم حتي يعمل مع انظمة تشغيل واجهزة مختلفة
-* يٌلاحظ بواسطة انظمة تحليل DPI و لذلك عرضة للحجب
-* يمكن ان يعمل علي بروتوكولات شبكة TCP و UDP.</translation>
-    </message>
-    <message>
-        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
-
-* Available in the VPNNaruzhu only on desktop platforms
-* Normal power consumption on mobile devices
-* Configurable encryption protocol
-* Detectable by some DPI systems
-* Works over TCP network protocol.</source>
-        <translation type="vanished">Shadowsocks, مستوحي من بروتوكول SOCKS5, يحمي الاتصال بأستعمال شفرة AEAD. كذلك Shadowsocks صٌمم كي يكون متحفظاً ويصعب تحديدة, إنه ليس مطابقًا لاتصال HTTPS القياسي. عمتاُ. بعض انظمة تحليل حركات المرور قد تتعرف علي اتصال Shadowsocks. بسبب الدعم المحدود في Amnezia, يٌنصح بأستخدام بروتوكول AmneziaWG.
-
-* مٌتاح في VPNNaruzhu عبر جميع المنصات
-* استهلاك طاقة عادي علي اجهزة المحمول
-* بروتوكول تشفير قابل للتكوين
-* قابل للكشف بواسطة بعض انظمة DPI
-* يعمل عبر بروتوكول شبكة TCP.</translation>
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by DPI analysis systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="204"/>
@@ -3502,8 +3208,17 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 * يعمل عبر بروتوكول شبكة UDP.</translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
 * Available in the VPNNaruzhu only on Windows
@@ -3511,14 +3226,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="vanished">IKEv2, مقترن مع طبقة التشفير IPSec, يبقا بروتوكول VPN مستقر و حديث.
-من مميزاتةقدرته على التبديل بسرعة بين الشبكات والأجهزة، مما يجعله قابلاً للتكيف بشكل خاص في بيئات الشبكات الديناميكية.
-
-*. مٌتاح في VPNNaruzhu فقط علي منصة وندوز
-* استهلاك طاقة قليل, علي اجهزة المحمول
-* اقل تكوين
-* يٌلاحظ بواسطة انظمة تحليل DPI
-* يعمل عبر بروتوكول شبكة UDP, منفذ 500 و منفذ 4500.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="243"/>

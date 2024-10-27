@@ -184,22 +184,11 @@
     </message>
 </context>
 <context>
-    <name>ExportController</name>
-    <message>
-        <source>Access error!</source>
-        <translation type="vanished">访问错误</translation>
-    </message>
-</context>
-<context>
     <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="109"/>
         <source>Unable change protocol while there is an active connection</source>
         <translation>已建立连接时无法更改服务器配置</translation>
-    </message>
-    <message>
-        <source>The selected protocol is not supported on the current platform</source>
-        <translation type="vanished">当前平台不支持所选协议</translation>
     </message>
 </context>
 <context>
@@ -220,14 +209,8 @@
         <translation>服务器上的分割隧道</translation>
     </message>
     <message>
-        <source>Enabled
-Can&apos;t be disabled for current server</source>
-        <translation type="vanished">已启用
-无法禁用当前服务器</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled
+        <source>Enabled 
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -487,25 +470,17 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Split tunneling enabled</source>
-        <translation type="vanished">用户分隔隧道已启用</translation>
-    </message>
-    <message>
-        <source>Split tunneling disabled</source>
-        <translation type="vanished">分隔隧道已禁用</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="335"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
         <source>VPN protocol</source>
         <translation>VPN协议</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="390"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
         <source>Servers</source>
         <translation>服务器</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="502"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
         <source>Unable change server while there is an active connection</source>
         <translation>已建立连接时无法更改服务器配置</translation>
     </message>
@@ -526,14 +501,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="126"/>
         <source>MTU</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove AmneziaWG</source>
-        <translation type="vanished">移除AmneziaWG</translation>
-    </message>
-    <message>
-        <source>Remove AmneziaWG from server?</source>
-        <translation type="vanished">从服务上移除AmneziaWG？</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="374"/>
@@ -826,18 +793,6 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove OpenVPN</source>
-        <translation type="vanished">移除OpenVPN</translation>
-    </message>
-    <message>
-        <source>Remove OpenVPN from server?</source>
-        <translation type="vanished">从服务器移除OpenVPN吗?</translation>
-    </message>
-    <message>
-        <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="vanished">与您共享连接的所有用户将无法再连接到该连接。</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="437"/>
         <source>Save</source>
         <translation>保存</translation>
@@ -845,14 +800,6 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <source>All users with whom you shared a connection will no longer be able to connect to it</source>
         <translation type="obsolete">与您共享连接的所有用户将无法再连接到此链接</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">继续</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">取消</translation>
     </message>
 </context>
 <context>
@@ -1113,22 +1060,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Detailed instructions</source>
         <translation>详细说明</translation>
     </message>
-    <message>
-        <source>Remove SFTP and all data stored there</source>
-        <translation type="vanished">移除SFTP和其本地所有数据</translation>
-    </message>
-    <message>
-        <source>Remove SFTP and all data stored there?</source>
-        <translation type="vanished">移除SFTP和其本地所有数据？</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">继续</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">取消</translation>
-    </message>
 </context>
 <context>
     <name>PageServiceSocksProxySettings</name>
@@ -1236,22 +1167,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="128"/>
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>配置 WordPress 时，将此洋葱地址设置为域。</translation>
-    </message>
-    <message>
-        <source>Remove website</source>
-        <translation type="vanished">移除网站</translation>
-    </message>
-    <message>
-        <source>The site with all data will be removed from the tor network.</source>
-        <translation type="vanished">网站及其所有数据将从 Tor 网络中删除</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">继续</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">取消</translation>
     </message>
 </context>
 <context>
@@ -1652,14 +1567,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>连接</translation>
     </message>
     <message>
-        <source>When AmneziaDNS is not used or installed</source>
-        <translation type="vanished">当未使用或未安装AmneziaDNS时</translation>
-    </message>
-    <message>
-        <source>Allows you to use the VPN only for certain Apps</source>
-        <translation type="vanished">只允许在某些应用程序中使用 VPN</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="87"/>
         <source>KillSwitch</source>
         <translation type="unfinished"></translation>
@@ -1679,33 +1586,9 @@ Already installed containers were found on the server. All installed containers 
         <translation type="obsolete">使用AmneziaDNS，如其已安装在服务器上</translation>
     </message>
     <message>
-        <source>Use AmneziaDNS</source>
-        <translation type="vanished">使用AmneziaDNS</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is installed on the server</source>
-        <translation type="vanished">如果已在服务器安装AmneziaDNS</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>DNS servers</source>
         <translation>DNS服务器</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is not used or installed</source>
-        <translation type="vanished">如果未使用或未安装AmneziaDNS</translation>
-    </message>
-    <message>
-        <source>Site-based split tunneling</source>
-        <translation type="vanished">基于网站的隧道分离</translation>
-    </message>
-    <message>
-        <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation type="vanished">配置想要通过VPN访问网站</translation>
-    </message>
-    <message>
-        <source>App-based split tunneling</source>
-        <translation type="vanished">基于应用的隧道分离</translation>
     </message>
     <message>
         <source>Split site tunneling</source>
@@ -1719,10 +1602,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Separate application tunneling</source>
         <translation type="obsolete">应用级VPN分流</translation>
     </message>
-    <message>
-        <source>Allows you to use the VPN only for certain applications</source>
-        <translation type="vanished">仅指定应用使用VPN</translation>
-    </message>
 </context>
 <context>
     <name>PageSettingsDns</name>
@@ -1735,10 +1614,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="65"/>
         <source>DNS servers</source>
         <translation>DNS服务器</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is not used or installed</source>
-        <translation type="vanished">如果未使用或未安装AmneziaDNS</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
@@ -1799,14 +1674,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>默认情况下，日志功能是禁用的。如果应用程序出现故障，则启用日志保存功能。</translation>
     </message>
     <message>
-        <source>Save logs</source>
-        <translation type="vanished">记录日志</translation>
-    </message>
-    <message>
-        <source>Open folder with logs</source>
-        <translation type="vanished">打开日志文件夹</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="171"/>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="255"/>
         <source>Save</source>
@@ -1823,10 +1690,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="265"/>
         <source>Logs file saved</source>
         <translation>日志文件已保存</translation>
-    </message>
-    <message>
-        <source>Save logs to file</source>
-        <translation type="vanished">保存日志到文件</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="68"/>
@@ -1902,18 +1765,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="33"/>
         <source>No new installed containers found</source>
         <translation>未发现新安装的容器</translation>
-    </message>
-    <message>
-        <source>Clear Amnezia cache</source>
-        <translation type="vanished">清除 Amnezia 缓存</translation>
-    </message>
-    <message>
-        <source>May be needed when changing other settings</source>
-        <translation type="vanished">更改其他设置时可能需要缓存</translation>
-    </message>
-    <message>
-        <source>Clear cached profiles?</source>
-        <translation type="vanished">清除缓存？</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="127"/>
@@ -2012,10 +1863,6 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove server?</source>
-        <translation type="vanished">移除本地服务器信息?</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
         <source>All installed VPNNaruzhu services will still remain on the server.</source>
         <translation>所有已安装的 VPNNaruzhu 服务仍将保留在服务器上。</translation>
@@ -2024,14 +1871,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
         <source>Clear server from Amnezia software</source>
         <translation>清理Amnezia中服务器信息</translation>
-    </message>
-    <message>
-        <source>Clear server from Amnezia software?</source>
-        <translation type="vanished">清理Amnezia中服务器信息</translation>
-    </message>
-    <message>
-        <source>All containers will be deleted on the server. This means that configuration files, keys and certificates will be deleted.</source>
-        <translation type="vanished">服务器上的所有容器都将被删除。配置文件、密钥和证书也将被删除。</translation>
     </message>
 </context>
 <context>
@@ -2060,10 +1899,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="242"/>
         <source>Management</source>
         <translation>管理</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">数据</translation>
     </message>
 </context>
 <context>
@@ -2107,10 +1942,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="198"/>
         <source>Cannot remove active container</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All users who you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="vanished">使用此共享连接的所有用户，将无法再连接它。</translation>
     </message>
     <message>
         <source> from server?</source>
@@ -2166,10 +1997,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>默认服务器不支持分离隧道功能</translation>
     </message>
     <message>
-        <source>Addresses from the list should be accessed via VPN</source>
-        <translation type="vanished">仅使用VPN访问</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="78"/>
         <source>Addresses from the list should not be accessed via VPN</source>
         <translation>不使用VPN访问</translation>
@@ -2198,14 +2025,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="274"/>
         <source>Cancel</source>
         <translation>取消</translation>
-    </message>
-    <message>
-        <source>Site or IP</source>
-        <translation type="vanished">网站或IP地址</translation>
-    </message>
-    <message>
-        <source>Import/Export Sites</source>
-        <translation type="vanished">导入/导出网站</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="37"/>
@@ -2325,24 +2144,9 @@ Already installed containers were found on the server. All installed containers 
         <translation>服务器连接</translation>
     </message>
     <message>
-        <source>Do not use connection code from public sources. It may have been created to intercept your data.
-
-It&apos;s okay as long as it&apos;s from someone you trust.</source>
-        <translation type="vanished">请勿使用公共来源的连接码。它可能是为了拦截您的数据而创建的。
-请确保连接码来源可信。</translation>
-    </message>
-    <message>
-        <source>Do not use connection codes from untrusted sources, as they may be created to intercept your data.</source>
-        <translation type="vanished">请勿使用来自不受信任来源的连接代码，因为它们可能是为了拦截您的数据而创建的。</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
         <source>What do you have?</source>
         <translation>你用什么方式创建连接？</translation>
-    </message>
-    <message>
-        <source>File with connection settings or backup</source>
-        <translation type="vanished">包含连接配置或备份的文件</translation>
     </message>
     <message>
         <source>Connection</source>
@@ -2374,18 +2178,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation type="obsolete">打开备份文件</translation>
     </message>
     <message>
-        <source>File with connection settings</source>
-        <translation type="vanished">包含连接配置的文件</translation>
-    </message>
-    <message>
-        <source>Open config file</source>
-        <translation type="vanished">打开配置文件</translation>
-    </message>
-    <message>
-        <source>QR code</source>
-        <translation type="vanished">二维码</translation>
-    </message>
-    <message>
         <source>I have nothing</source>
         <translation type="obsolete">我没有</translation>
     </message>
@@ -2398,67 +2190,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="264"/>
         <source>Open key file</source>
         <translation>打开配置文件</translation>
-    </message>
-    <message>
-        <source>Key as text</source>
-        <translation type="vanished">授权码文本</translation>
-    </message>
-</context>
-<context>
-    <name>PageSetupWizardCredentials</name>
-    <message>
-        <source>Server connection</source>
-        <translation type="vanished">连接服务器</translation>
-    </message>
-    <message>
-        <source>Server IP address [:port]</source>
-        <translation type="vanished">服务器IP [:端口]</translation>
-    </message>
-    <message>
-        <source>Login to connect via SSH</source>
-        <translation type="vanished">用户</translation>
-    </message>
-    <message>
-        <source>Password / SSH private key</source>
-        <translation type="vanished">密码 或 私钥</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">继续</translation>
-    </message>
-    <message>
-        <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation type="vanished">您输入的所有数据将严格保密，不会与 Amnezia 或任何第三方共享或披露</translation>
-    </message>
-    <message>
-        <source>All data you enter will remain strictly confidential
-and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation type="vanished">您输入的所有数据将严格保密
-不会向 Amnezia 或任何第三方分享或披露</translation>
-    </message>
-    <message>
-        <source>SSH Username</source>
-        <translation type="vanished">SSH 用户名</translation>
-    </message>
-    <message>
-        <source>Password or SSH private key</source>
-        <translation type="vanished">密码或 SSH 私钥</translation>
-    </message>
-    <message>
-        <source>Ip address cannot be empty</source>
-        <translation type="vanished">IP不能为空</translation>
-    </message>
-    <message>
-        <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation type="vanished">按照这种格式输入 255.255.255.255:88</translation>
-    </message>
-    <message>
-        <source>Login cannot be empty</source>
-        <translation type="vanished">账号不能为空</translation>
-    </message>
-    <message>
-        <source>Password/private key cannot be empty</source>
-        <translation type="vanished">密码或私钥不能为空</translation>
     </message>
 </context>
 <context>
@@ -2479,21 +2210,9 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>跳过设置</translation>
     </message>
     <message>
-        <source>Set up a VPN yourself</source>
-        <translation type="vanished">自己架设VPN</translation>
-    </message>
-    <message>
-        <source>I want to choose a VPN protocol</source>
-        <translation type="vanished">我想选择VPN协议</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="165"/>
         <source>Continue</source>
         <translation>继续</translation>
-    </message>
-    <message>
-        <source>Set up later</source>
-        <translation type="vanished">稍后设置</translation>
     </message>
 </context>
 <context>
@@ -2523,14 +2242,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="164"/>
         <source>Cancel installation</source>
         <translation>取消安装</translation>
-    </message>
-    <message>
-        <source>Amnesia has detected that your server is currently </source>
-        <translation type="vanished">Amnezia 检测到您的服务器当前</translation>
-    </message>
-    <message>
-        <source>busy installing other software. Amnesia installation </source>
-        <translation type="vanished">正安装其他软件。Amnezia安装</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
@@ -2605,18 +2316,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <source>Settings restored from backup file</source>
-        <translation type="vanished">从备份文件还原配置</translation>
-    </message>
-    <message>
-        <source>Free service for creating a personal VPN on your server.</source>
-        <translation type="vanished">在您的服务器上架设私人免费VPN服务。</translation>
-    </message>
-    <message>
-        <source> Helps you access blocked content without revealing your privacy, even to VPN providers.</source>
-        <translation type="vanished">帮助您访问受限内容，保护您的隐私，即使是VPN提供商也无法获取。</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="46"/>
         <source>Open foreign and Russian websites.</source>
         <translation type="unfinished"></translation>
@@ -2678,26 +2377,14 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Do not use connection code from public sources. It could be created to intercept your data.</source>
-        <translation type="vanished">请勿使用公共来源的连接码。它可以被创建来拦截您的数据。</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
         <source>Collapse content</source>
         <translation>折叠内容</translation>
     </message>
     <message>
-        <source>Show content</source>
-        <translation type="vanished">显示内容</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation type="vanished">只使用您信任的来源提供的连接代码。公共来源的代码可能是为了拦截您的数据而创建的。</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="187"/>
@@ -2824,10 +2511,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Creation date: </source>
-        <translation type="vanished">创建日期: </translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="862"/>
         <source>Rename</source>
         <translation>重新命名</translation>
@@ -2868,33 +2551,9 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>取消</translation>
     </message>
     <message>
-        <source>Share access to server management. The user with whom you share full access to the server will be able to add and remove any protocols and services to the server, as well as change settings.</source>
-        <translation type="vanished">共享服务器管理访问权限。与您共享服务器全部访问权限的用户将可以添加和删除服务器上的任何协议和服务，以及更改设置。</translation>
-    </message>
-    <message>
-        <source>VPN Access</source>
-        <translation type="vanished">访问VPN</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="289"/>
         <source>Connection</source>
         <translation>连接</translation>
-    </message>
-    <message>
-        <source>Full access</source>
-        <translation type="vanished">完全访问</translation>
-    </message>
-    <message>
-        <source>VPN access without the ability to manage the server</source>
-        <translation type="vanished">访问VPN，但没有权限管理服务。</translation>
-    </message>
-    <message>
-        <source>Access to server management. The user with whom you share full access to the connection will be able to add and remove your protocols and services to the server, as well as change settings.</source>
-        <translation type="vanished">除访问VPN外，用户还能添加和删除协议、服务以及更改配置信息</translation>
-    </message>
-    <message>
-        <source>Access to server management. The user with whom you share full access to the connection will be able to add and remove your protocols and services to the servers, as well as change settings.</source>
-        <translation type="vanished">除访问VPN外，用户还能添加和删除协议、服务以及更改配置信息</translation>
     </message>
     <message>
         <source>Full access to server</source>
@@ -2909,14 +2568,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="363"/>
         <source>Server</source>
         <translation>服务器</translation>
-    </message>
-    <message>
-        <source>Accessing </source>
-        <translation type="vanished">访问</translation>
-    </message>
-    <message>
-        <source>File with accessing settings to </source>
-        <translation type="vanished">访问配置文件的内容为:</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="48"/>
@@ -3384,58 +3035,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sftp error: End-of-file encountered</source>
-        <translation type="vanished">Sftp错误: End-of-file encountered</translation>
-    </message>
-    <message>
-        <source>Sftp error: File does not exist</source>
-        <translation type="vanished">Sftp错误: 文件不存在</translation>
-    </message>
-    <message>
-        <source>Sftp error: Permission denied</source>
-        <translation type="vanished">Sftp错误: 权限不足</translation>
-    </message>
-    <message>
-        <source>Sftp error: Generic failure</source>
-        <translation type="vanished">Sftp错误: 一般失败</translation>
-    </message>
-    <message>
-        <source>Sftp error: Garbage received from server</source>
-        <translation type="vanished">Sftp错误: 从服务器收到垃圾信息</translation>
-    </message>
-    <message>
-        <source>Sftp error: No connection has been set up</source>
-        <translation type="vanished">Sftp 错误: 未建立连接</translation>
-    </message>
-    <message>
-        <source>Sftp error: There was a connection, but we lost it</source>
-        <translation type="vanished">Sftp 错误: 已有连接丢失</translation>
-    </message>
-    <message>
-        <source>Sftp error: Operation not supported by libssh yet</source>
-        <translation type="vanished">Sftp error: libssh不支持该操作</translation>
-    </message>
-    <message>
-        <source>Sftp error: Invalid file handle</source>
-        <translation type="vanished">Sftp error: 无效的文件句柄</translation>
-    </message>
-    <message>
-        <source>Sftp error: No such file or directory path exists</source>
-        <translation type="vanished">Sftp 错误: 文件夹或文件不存在</translation>
-    </message>
-    <message>
-        <source>Sftp error: An attempt to create an already existing file or directory has been made</source>
-        <translation type="vanished">Sftp 错误: 文件或目录已存在</translation>
-    </message>
-    <message>
-        <source>Sftp error: Write-protected filesystem</source>
-        <translation type="vanished">Sftp 错误: 文件系统写保护</translation>
-    </message>
-    <message>
-        <source>Sftp error: No media was in remote drive</source>
-        <translation type="vanished">Sftp 错误: 远程驱动器中没有媒介</translation>
-    </message>
-    <message>
         <location filename="../core/errorstrings.cpp" line="55"/>
         <source>VPN connection error</source>
         <translation>VPN 连接错误</translation>
@@ -3506,10 +3105,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>错误代码: %1. </translation>
     </message>
     <message>
-        <source>Failed to save config to disk</source>
-        <translation type="vanished">配置保存到磁盘失败</translation>
-    </message>
-    <message>
         <location filename="../core/errorstrings.cpp" line="37"/>
         <source>OpenVPN config missing</source>
         <translation>OpenVPN配置丢失</translation>
@@ -3565,10 +3160,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>配置不包含任何用于连接服务器的容器和凭据</translation>
     </message>
     <message>
-        <source>The config does not contain any containers and credentiaks for connecting to the server</source>
-        <translation type="vanished">该配置不包含任何用于连接到服务器的容器和凭据。</translation>
-    </message>
-    <message>
         <location filename="../core/errorstrings.cpp" line="75"/>
         <source>Internal error</source>
         <translation></translation>
@@ -3612,49 +3203,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     <message>
         <location filename="../containers/containers_defs.cpp" line="130"/>
         <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss. It has native support on the latest versions of Android and iOS.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="172"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking.
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="220"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="231"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the VPNNaruzhu only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3707,10 +3255,6 @@ WireGuard非常容易被阻挡，因为其独特的数据包签名。与一些�
     通过UDP网络协议运行。</translation>
     </message>
     <message>
-        <source>Shadowsocks - masks VPN traffic, making it similar to normal web traffic, but is recognised by analysis systems in some highly censored regions.</source>
-        <translation type="vanished">Shadowsocks - 混淆 VPN 流量，使其与正常的 Web 流量相似，但在一些审查力度高的地区可以被分析系统识别。</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="116"/>
         <source>OpenVPN over Cloak - OpenVPN with VPN masquerading as web traffic and protection against active-probing detection. Ideal for bypassing blocking in regions with the highest levels of censorship.</source>
         <translation>OpenVPN over Cloak - OpenVPN与VPN结合，伪装成Web流量，并保护免受主动探测的侦测。非常适合在具有最高审查水平的地区绕过封锁.</translation>
@@ -3726,10 +3270,6 @@ WireGuard非常容易被阻挡，因为其独特的数据包签名。与一些�
         <translation>AmneziaWG - Amnezia 的特殊协议，基于 WireGuard。它的速度像 WireGuard 一样快，但非常抗堵塞。推荐用于审查较严的地区。</translation>
     </message>
     <message>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation type="vanished">IKEv2/IPsec - 现代稳定协议，相比其他协议较快一些，在信号丢失后恢复连接。</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="133"/>
         <source>Deploy a WordPress site on the Tor network in two clicks.</source>
         <translation>只需点击两次即可架设 WordPress 网站到 Tor 网络.</translation>
@@ -3738,10 +3278,6 @@ WireGuard非常容易被阻挡，因为其独特的数据包签名。与一些�
         <location filename="../containers/containers_defs.cpp" line="135"/>
         <source>Replace the current DNS server with your own. This will increase your privacy level.</source>
         <translation>将当前的 DNS 服务器替换为您自己的。这将提高您的隐私保护级别。</translation>
-    </message>
-    <message>
-        <source>Creates a file vault on your server to securely store and transfer files.</source>
-        <translation type="vanished">在您的服务器上创建文件仓库，以便安全地存储和传输文件</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="146"/>
@@ -3782,11 +3318,12 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * 通过 TCP 网络协议工作。</translation>
     </message>
     <message>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for blocking protection.
+        <location filename="../containers/containers_defs.cpp" line="172"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
-OpenVPN provides a secure VPN connection by encrypting all Internet traffic between the client and the server.
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking.
+Cloak protects OpenVPN from detection and blocking. 
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3800,43 +3337,7 @@ If there is a extreme level of Internet censorship in your region, we advise you
 * Not recognised by DPI analysis systems
 * Works over TCP network protocol, 443 port.
 </source>
-        <translation type="vanished">这是 OpenVPN 协议和专门用于阻止保护的 Cloak 插件的组合。
-
-OpenVPN 通过加密客户端和服务器之间的所有 Internet 流量来提供安全的 VPN 连接。
-
-Cloak 可保护 OpenVPN 免遭检测和阻止。
-
-Cloak 可以修改数据包元数据，以便将 VPN 流量完全屏蔽为正常 Web 流量，并且还可以保护 VPN 免受主动探测的检测。这使得它非常难以被发现
-
-收到第一个数据包后，Cloak 立即对传入连接进行身份验证。如果身份验证失败，该插件会将服务器伪装成虚假网站，并且您的 VPN 对分析系统来说将变得不可见。
-
-如果您所在地区的互联网审查非常严格，我们建议您在第一次连接时仅使用 OpenVPN over Cloak
-
-* 可在所有平台的 VPNNaruzhu 中使用
-* 移动设备功耗高
-* 配置灵活
-* 不被 DPI 分析系统识别
-* 通过 TCP 网络协议、443 端口工作。</translation>
-    </message>
-    <message>
-        <source>A relatively new popular VPN protocol with a simplified architecture.
-Provides stable VPN connection, high performance on all devices. Uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
-WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
-
-* Available in the VPNNaruzhu across all platforms
-* Low power consumption
-* Minimum number of settings
-* Easily recognised by DPI analysis systems, susceptible to blocking
-* Works over UDP network protocol.</source>
-        <translation type="vanished">一种相对较新的流行 VPN 协议，具有简化的架构。
-在所有设备上提供稳定的 VPN 连接和高性能。使用硬编码的加密设置。 WireGuard 与 OpenVPN 相比具有更低的延迟和更好的数据传输吞吐量。
-由于其独特的数据包签名，WireGuard 非常容易受到阻塞。与其他一些采用混淆技术的 VPN 协议不同，WireGuard 数据包的一致签名模式可以更容易地被高级深度数据包检测 (DPI) 系统和其他网络监控工具识别并阻止。
-
-* 可在所有平台的 VPNNaruzhu 中使用
-* 低功耗
-* 配置简单
-* 容易被DPI分析系统识别，容易被阻塞
-* 通过 UDP 网络协议工作。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="204"/>
@@ -3860,8 +3361,17 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 * 通过 UDP 网络协议工作。</translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
 * Available in the VPNNaruzhu only on Windows
@@ -3869,44 +3379,12 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="vanished">IKEv2 与 IPSec 加密层配合使用，是一种现代且稳定的 VPN 协议。
-其显着特征之一是能够在网络和设备之间快速切换，使其特别适应动态网络环境。
-虽然 IKEv2 兼具安全性、稳定性和速度，但必须注意的是，IKEv2 很容易被检测到，并且容易受到阻止。
-
-* 仅在 Windows 上的 VPNNaruzhu 中可用
-* 低功耗，在移动设备上
-* 最低配置
-* 获得DPI分析系统认可
-* 通过 UDP 网络协议、端口 500 和 4500 工作。</translation>
-    </message>
-    <message>
-        <source>OpenVPN container</source>
-        <translation type="vanished">OpenVPN容器</translation>
-    </message>
-    <message>
-        <source>Container with OpenVPN and ShadowSocks</source>
-        <translation type="vanished">含 OpenVPN 和 ShadowSocks 的容器</translation>
-    </message>
-    <message>
-        <source>Container with OpenVPN and ShadowSocks protocols configured with traffic masking by Cloak plugin</source>
-        <translation type="vanished">含 OpenVPN 和 ShadowSocks 协议的容器，通过 Cloak 插件配置混淆流量</translation>
-    </message>
-    <message>
-        <source>WireGuard container</source>
-        <translation type="vanished">WireGuard 容器</translation>
-    </message>
-    <message>
-        <source>IPsec container</source>
-        <translation type="vanished">IPsec 容器</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>DNS 服务</translation>
-    </message>
-    <message>
-        <source>Sftp file sharing service - is secure FTP service</source>
-        <translation type="vanished">Sftp 文件共享服务 - 安全的 FTP 服务</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/libsecret.cpp" line="119"/>
@@ -4129,10 +3607,6 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <source>All settings have been reset to default values</source>
         <translation>所配置恢复为默认值</translation>
     </message>
-    <message>
-        <source>Cached profiles cleared</source>
-        <translation type="vanished">缓存的配置文件已清除</translation>
-    </message>
 </context>
 <context>
     <name>ShareConnectionDrawer</name>
@@ -4326,10 +3800,6 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation>中或高</translation>
     </message>
     <message>
-        <source>Extreme</source>
-        <translation type="vanished">极度</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>只是想提高隐私保护级别。</translation>
@@ -4338,26 +3808,6 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>想要绕过审查制度。大多数情况下推荐使用此选项。</translation>
-    </message>
-    <message>
-        <source>Most VPN protocols are blocked. Recommended if other options are not working.</source>
-        <translation type="vanished">大多数 VPN 协议都被阻止。如果其他选项不起作用，推荐此选项。</translation>
-    </message>
-    <message>
-        <source>Medium</source>
-        <translation type="vanished">中</translation>
-    </message>
-    <message>
-        <source>I just want to increase the level of privacy</source>
-        <translation type="vanished">我只是想提高隐私保护级别</translation>
-    </message>
-    <message>
-        <source>Many foreign websites and VPN providers are blocked</source>
-        <translation type="vanished">大多国外网站和VPN提供商被屏蔽</translation>
-    </message>
-    <message>
-        <source>Some foreign sites are blocked, but VPN providers are not blocked</source>
-        <translation type="vanished">一些国外网站被屏蔽，但VPN提供商未被屏蔽</translation>
     </message>
 </context>
 <context>

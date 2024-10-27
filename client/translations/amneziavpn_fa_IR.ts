@@ -186,22 +186,11 @@
     </message>
 </context>
 <context>
-    <name>ExportController</name>
-    <message>
-        <source>Access error!</source>
-        <translation type="vanished">خطای دسترسی!</translation>
-    </message>
-</context>
-<context>
     <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="109"/>
         <source>Unable change protocol while there is an active connection</source>
         <translation>امکان تغییر پروتکل در هنگام متصل بودن وجود ندارد</translation>
-    </message>
-    <message>
-        <source>The selected protocol is not supported on the current platform</source>
-        <translation type="vanished">پروتکل انتخاب شده بر روی این پلتفرم پشتیبانی نمی‎‎شود</translation>
     </message>
 </context>
 <context>
@@ -222,13 +211,8 @@
         <translation>تقسیم تونل‌ها در سرور</translation>
     </message>
     <message>
-        <source>Enabled
-Can&apos;t be disabled for current server</source>
-        <translation type="vanished">فعال</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled
+        <source>Enabled 
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -465,25 +449,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>لاگ‌برداری فعال شد</translation>
     </message>
     <message>
-        <source>Split tunneling enabled</source>
-        <translation type="vanished">فعال شدن تونل تقسیم‌شده</translation>
-    </message>
-    <message>
-        <source>Split tunneling disabled</source>
-        <translation type="vanished">تونل تقسیم‌شده غیرفعال شده</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="335"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
         <source>VPN protocol</source>
         <translation>پروتکل وی‎پی‎ان</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="390"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
         <source>Servers</source>
         <translation>سرورها</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="502"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
         <source>Unable change server while there is an active connection</source>
         <translation>امکان تغییر سرور در هنگام متصل بودن وجود ندارد</translation>
     </message>
@@ -504,14 +480,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="126"/>
         <source>MTU</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove AmneziaWG</source>
-        <translation type="vanished">حذف AmneziaWG</translation>
-    </message>
-    <message>
-        <source>Remove AmneziaWG from server?</source>
-        <translation type="vanished">آیا میخواهید AmneziaWG از سرور حذف شود؟</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="374"/>
@@ -804,26 +772,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>نمی‌توان تنظیمات را تغییر داد در حالی که اتصال فعال است.</translation>
     </message>
     <message>
-        <source>Remove OpenVPN</source>
-        <translation type="vanished">حذف OpenVPN</translation>
-    </message>
-    <message>
-        <source>Remove OpenVPN from server?</source>
-        <translation type="vanished">آیا میخواهید OpenVPN از سرور حذف شود؟</translation>
-    </message>
-    <message>
-        <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="vanished">همه کاربرانی که با آن‌ها ارتباطی به اشتراک گذاشته‌اید دیگر قادر به اتصال به آن نخواهند بود.</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">ادامه</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">کنسل</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="437"/>
         <source>Save</source>
         <translation>ذخیره</translation>
@@ -1078,22 +1026,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Detailed instructions</source>
         <translation>جزییات دستورالعمل‎ها</translation>
     </message>
-    <message>
-        <source>Remove SFTP and all data stored there</source>
-        <translation type="vanished">حذف SFTP و تمام داده‎های ذخیره شده در آن</translation>
-    </message>
-    <message>
-        <source>Remove SFTP and all data stored there?</source>
-        <translation type="vanished">پوشه SFTP و تمام داده‎های آن حذف شوند؟</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">ادامه</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">کنسل</translation>
-    </message>
 </context>
 <context>
     <name>PageServiceSocksProxySettings</name>
@@ -1201,22 +1133,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="128"/>
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>زمانی که سایت وردپرس را تنظیم میکنید این آدرس پیازی را به عنوان دامنه قرار دهید.</translation>
-    </message>
-    <message>
-        <source>Remove website</source>
-        <translation type="vanished">حذف وب سایت</translation>
-    </message>
-    <message>
-        <source>The site with all data will be removed from the tor network.</source>
-        <translation type="vanished">سایت با تمام داده‎ها از شبکه Tor حذف خواهد شد.</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">ادامه</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">کنسل</translation>
     </message>
 </context>
 <context>
@@ -1605,25 +1521,9 @@ Already installed containers were found on the server. All installed containers 
         <translation>ارتباط</translation>
     </message>
     <message>
-        <source>Use AmneziaDNS</source>
-        <translation type="vanished">استفاده از AmneziaDNS</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is installed on the server</source>
-        <translation type="vanished">اگر AmneziaDNS بر روی سرور نصب شده باشد</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>DNS servers</source>
         <translation>سرورهای DNS</translation>
-    </message>
-    <message>
-        <source>When AmneziaDNS is not used or installed</source>
-        <translation type="vanished">وقتی AmneziaDNS استفاده نشده یا نصب نشده است</translation>
-    </message>
-    <message>
-        <source>Allows you to use the VPN only for certain Apps</source>
-        <translation type="vanished">به شما امکان می دهد از VPN فقط برای برخی برنامه ها استفاده کنید</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="87"/>
@@ -1640,18 +1540,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Cannot change killSwitch settings during active connection</source>
         <translation>نمی‌توان تنظیمات Kill Switch را در حین اتصال فعال تغییر داد.</translation>
     </message>
-    <message>
-        <source>Site-based split tunneling</source>
-        <translation type="vanished">جداسازی ترافیک بر اساس سایت</translation>
-    </message>
-    <message>
-        <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation type="vanished">میتوانید مشخص کنید که چه سایت‎هایی از وی‎پی‎ان استفاده کنند</translation>
-    </message>
-    <message>
-        <source>App-based split tunneling</source>
-        <translation type="vanished">جداسازی ترافیک بر اساس نرم‎افزار</translation>
-    </message>
 </context>
 <context>
     <name>PageSettingsDns</name>
@@ -1664,10 +1552,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="65"/>
         <source>DNS servers</source>
         <translation>سرورهای DNS</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is not used or installed</source>
-        <translation type="vanished">اگر AmneziaDNS نصب نباشد یا استفاده نشود</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
@@ -1718,10 +1602,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsLogging</name>
     <message>
-        <source>Logging is enabled. Note that logs will be automatically disabled after 14 days, and all log files will be deleted.</source>
-        <translation type="vanished">ثبت وقایع فعال است. توجه داشته باشید که ثبت وقایع به‌طور خودکار پس از ۱۴ روز غیرفعال شده و تمام فایل‌های ثبت وقایع حذف خواهند شد.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="56"/>
         <source>Logging</source>
         <translation>گزارشات</translation>
@@ -1730,14 +1610,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="57"/>
         <source>Enabling this function will save application&apos;s logs automatically. By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
         <translation>فعال کردن این عملکرد باعث ذخیره خودکار لاگ‌های برنامه می‌شود. به طور پیش‌فرض، قابلیت ثبت لاگ غیرفعال است. در صورت بروز خطا در برنامه، ذخیره لاگ را فعال کنید.</translation>
-    </message>
-    <message>
-        <source>Save logs</source>
-        <translation type="vanished">ذخیره گزارشات</translation>
-    </message>
-    <message>
-        <source>Open folder with logs</source>
-        <translation type="vanished">باز کردن پوشه گزارشات</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="171"/>
@@ -1756,10 +1628,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="265"/>
         <source>Logs file saved</source>
         <translation>فایل گزارشات ذخیره شد</translation>
-    </message>
-    <message>
-        <source>Save logs to file</source>
-        <translation type="vanished">ذخیره گزارشات در فایل</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="68"/>
@@ -1830,18 +1698,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="31"/>
         <source>All installed containers have been added to the application</source>
         <translation>تمام کانتینرهای نصب شده به نرم‎افزار اضافه شدند</translation>
-    </message>
-    <message>
-        <source>Clear Amnezia cache</source>
-        <translation type="vanished">پاک کردن حافظه داخلی Amnezia</translation>
-    </message>
-    <message>
-        <source>May be needed when changing other settings</source>
-        <translation type="vanished">وقتی تنظیمات دیگر را تغییر دهید ممکن است نیاز باشد</translation>
-    </message>
-    <message>
-        <source>Clear cached profiles?</source>
-        <translation type="vanished">پاک کردن پروفایل ذخیره شده؟</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="33"/>
@@ -2206,33 +2062,9 @@ Already installed containers were found on the server. All installed containers 
         <translation>ارتباط سرور</translation>
     </message>
     <message>
-        <source>Do not use connection code from public sources. It may have been created to intercept your data.
-
-It&apos;s okay as long as it&apos;s from someone you trust.</source>
-        <translation type="vanished">از کد اتصالاتی که در منابع عمومی هستند استفاده نکنید. ممکن است برای شنود اطلاعات شما ایجاد شده باشند.
-
-ایرادی ندارد که از طرف کسی باشد که به او اعتماد دارید.</translation>
-    </message>
-    <message>
-        <source>Do not use connection codes from untrusted sources, as they may be created to intercept your data.</source>
-        <translation type="vanished">از کدهای اتصال از منابع نامعتبر استفاده نکنید، زیرا ممکن است برای رهگیری داده های شما ایجاد شده باشند.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
         <source>What do you have?</source>
         <translation>چی داری؟</translation>
-    </message>
-    <message>
-        <source>File with connection settings</source>
-        <translation type="vanished">فایل شامل تنظیمات اتصال</translation>
-    </message>
-    <message>
-        <source>File with connection settings or backup</source>
-        <translation type="vanished">فایل شامل تنظیمات اتصال یا بک‎آپ</translation>
-    </message>
-    <message>
-        <source>Connection</source>
-        <translation type="vanished">ارتباط</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -2244,66 +2076,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Insert the key, add a configuration file or scan the QR-code</source>
-        <translation type="vanished">کلید را وارد کنید، فایل پیکربندی را اضافه کنید یا کد QR را اسکن کنید</translation>
-    </message>
-    <message>
-        <source>Insert key</source>
-        <translation type="vanished">کلید را وارد کنید</translation>
-    </message>
-    <message>
-        <source>Insert</source>
-        <translation type="vanished">وارد کردن</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">ادامه دهید</translation>
-    </message>
-    <message>
-        <source>Other connection options</source>
-        <translation type="vanished">گزینه‌های اتصال دیگر</translation>
-    </message>
-    <message>
-        <source>VPN by Amnezia</source>
-        <translation type="vanished">VPN توسط Amnezia</translation>
-    </message>
-    <message>
-        <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation type="vanished">اتصال به سرویس‌های VPN کلاسیک پولی و رایگان از Amnezia</translation>
-    </message>
-    <message>
-        <source>Self-hosted VPN</source>
-        <translation type="vanished">Self-hosted VPN</translation>
-    </message>
-    <message>
-        <source>Configure Amnezia VPN on your own server</source>
-        <translation type="vanished">پیکربندی VPN Amnezia بر روی سرور خودتان</translation>
-    </message>
-    <message>
-        <source>Restore from backup</source>
-        <translation type="vanished">بازیابی از پشتیبان</translation>
-    </message>
-    <message>
-        <source>Open backup file</source>
-        <translation type="vanished">باز کردن فایل پشتیبان</translation>
-    </message>
-    <message>
-        <source>Backup files (*.backup)</source>
-        <translation type="vanished">Backup files (*.backup)</translation>
-    </message>
-    <message>
-        <source>Open config file</source>
-        <translation type="vanished">باز کردن فایل تنظیمات</translation>
-    </message>
-    <message>
-        <source>QR code</source>
-        <translation type="vanished">QR-Code</translation>
-    </message>
-    <message>
-        <source>I have nothing</source>
-        <translation type="vanished">من هیچی ندارم</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="257"/>
         <source>Key as file</source>
         <translation>فایل شامل تنظیمات اتصال</translation>
@@ -2312,45 +2084,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="264"/>
         <source>Open key file</source>
         <translation>باز کردن فایل تنظیمات</translation>
-    </message>
-    <message>
-        <source>Key as text</source>
-        <translation type="vanished">متن شامل کلید</translation>
-    </message>
-</context>
-<context>
-    <name>PageSetupWizardCredentials</name>
-    <message>
-        <source>Server IP address [:port]</source>
-        <translation type="vanished">آدرس آی‎پی سرور (:پورت)</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">ادامه</translation>
-    </message>
-    <message>
-        <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation type="vanished">آدرس را با فرمت 255.255.255.255:88 وارد کنید</translation>
-    </message>
-    <message>
-        <source>Password or SSH private key</source>
-        <translation type="vanished">رمز عبور یا کلید خصوصی SSH</translation>
-    </message>
-    <message>
-        <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation type="vanished">تمام داده‎هایی که شما وارد می‎کنید به شدت محرمانه‎ است و با Amnezia یا هر شخص ثالث دیگری به اشتراک گذاشته نمی‎شود</translation>
-    </message>
-    <message>
-        <source>Ip address cannot be empty</source>
-        <translation type="vanished">آدرس آی‎پی نمی‎تواند خالی باشد</translation>
-    </message>
-    <message>
-        <source>Login cannot be empty</source>
-        <translation type="vanished">نام‎کاربری نمی‎تواند خالی باشد</translation>
-    </message>
-    <message>
-        <source>Password/private key cannot be empty</source>
-        <translation type="vanished">پسورد یا کلید خصوصی نمی‎تواند خالی باشد</translation>
     </message>
 </context>
 <context>
@@ -2477,18 +2210,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <source>Settings restored from backup file</source>
-        <translation type="vanished">تنظیمات از فایل بک‎آپ بازیابی شدند</translation>
-    </message>
-    <message>
-        <source>Free service for creating a personal VPN on your server.</source>
-        <translation type="vanished">سرویس رایگان برای ایجاد وی‎پی‎ان شخصی بر روی سرور خودتان.</translation>
-    </message>
-    <message>
-        <source> Helps you access blocked content without revealing your privacy, even to VPN providers.</source>
-        <translation type="vanished"> به شما کمک می‎کند که بدون فاش کردن حریم شخصی خودتان, حتی برای ارائه دهنده وی‎پی‎ان به محتوای مسدود شده دسترسی پیدا کنید.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="46"/>
         <source>Open foreign and Russian websites.</source>
         <translation type="unfinished"></translation>
@@ -2502,10 +2223,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="124"/>
         <source>https://naruzhu.click/appam</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Let&apos;s get started</source>
-        <translation type="vanished">بیایید شروع کنیم</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="105"/>
@@ -2559,17 +2276,9 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show content</source>
-        <translation type="vanished">نمایش محتوا</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation>فعال‌سازی استتار WireGuard. این ممکن است مفید باشد اگر WireGuard توسط ارائه‌دهنده شما مسدود شده باشد.</translation>
-    </message>
-    <message>
-        <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation type="vanished">از کدهای اتصال فقط از منابع مورد اعتماد خود استفاده کنید. ممکن است کدهایی از منابع عمومی برای رهگیری داده های شما ایجاد شده باشند</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="187"/>
@@ -2720,10 +2429,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="841"/>
         <source>Data sent: %1</source>
         <translation>داده‌های ارسال شده: %1</translation>
-    </message>
-    <message>
-        <source>Creation date: </source>
-        <translation type="vanished">تاریخ ایجاد: </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="862"/>
@@ -3185,58 +2890,6 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation>Timeout connecting to server</translation>
     </message>
     <message>
-        <source>Sftp error: End-of-file encountered</source>
-        <translation type="vanished">Sftp error: End-of-file encountered</translation>
-    </message>
-    <message>
-        <source>Sftp error: File does not exist</source>
-        <translation type="vanished">Sftp error: File does not exist</translation>
-    </message>
-    <message>
-        <source>Sftp error: Permission denied</source>
-        <translation type="vanished">Sftp error: Permission denied</translation>
-    </message>
-    <message>
-        <source>Sftp error: Generic failure</source>
-        <translation type="vanished">Sftp error: Generic failure</translation>
-    </message>
-    <message>
-        <source>Sftp error: Garbage received from server</source>
-        <translation type="vanished">Sftp error: Garbage received from server</translation>
-    </message>
-    <message>
-        <source>Sftp error: No connection has been set up</source>
-        <translation type="vanished">Sftp error: No connection has been set up</translation>
-    </message>
-    <message>
-        <source>Sftp error: There was a connection, but we lost it</source>
-        <translation type="vanished">Sftp error: There was a connection, but we lost it</translation>
-    </message>
-    <message>
-        <source>Sftp error: Operation not supported by libssh yet</source>
-        <translation type="vanished">Sftp error: Operation not supported by libssh yet</translation>
-    </message>
-    <message>
-        <source>Sftp error: Invalid file handle</source>
-        <translation type="vanished">Sftp error: Invalid file handle</translation>
-    </message>
-    <message>
-        <source>Sftp error: No such file or directory path exists</source>
-        <translation type="vanished">Sftp error: No such file or directory path exists</translation>
-    </message>
-    <message>
-        <source>Sftp error: An attempt to create an already existing file or directory has been made</source>
-        <translation type="vanished">Sftp error: An attempt to create an already existing file or directory has been made</translation>
-    </message>
-    <message>
-        <source>Sftp error: Write-protected filesystem</source>
-        <translation type="vanished">Sftp error: Write-protected filesystem</translation>
-    </message>
-    <message>
-        <source>Sftp error: No media was in remote drive</source>
-        <translation type="vanished">Sftp error: No media was in remote drive</translation>
-    </message>
-    <message>
         <location filename="../core/errorstrings.cpp" line="52"/>
         <source>The config does not contain any containers and credentials for connecting to the server</source>
         <translation>تنظیمات شامل هیچ کانتینر یا اعتبارنامه‎ای برای اتصال به سرور نیست</translation>
@@ -3412,11 +3065,12 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation>ساختن یک گنجانده فایل بر روی سرور شما برای ذخیره و انتقال ایمن فایل‌ها.</translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
         <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking.
+Cloak protects OpenVPN from detection and blocking. 
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3430,24 +3084,7 @@ If there is a extreme level of Internet censorship in your region, we advise you
 * Not recognised by DPI analysis systems
 * Works over TCP network protocol, 443 port.
 </source>
-        <translation type="vanished">این ترکیبی از پروتکل OpenVPN و پلاگین Cloak به طور خاص برای محافظت در برابر مسدود کردن طراحی شده است.
-
-OpenVPN ارتباط امن VPN را با رمزگذاری تمام ترافیک اینترنتی بین مشتری و سرور فراهم می‌کند.
-
-Cloak OpenVPN را از شناسایی و مسدود کردن محافظت می‌کند.
-
-Cloak می‌تواند اطلاعات فراداده بسته را تغییر دهد تا ترافیک VPN را به طور کامل به عنوان ترافیک وب عادی پنهان کند و همچنین VPN را از شناسایی توسط Active Probing محافظت کند. این باعث می‌شود این سیستم بسیار مقاوم در برابر شناسایی شود.
-
-فوراً پس از دریافت اولین بسته داده، Cloak اتصال ورودی را تأیید می‌کند. اگر تأیید اعتبار ناموفق باشد، پلاگین سرور را به عنوان یک وب‌سایت جعلی پنهان می‌کند و VPN شما برای سیستم‌های تجزیه و تحلیل غیر قابل دسترسی می‌شود
-
-اگر در منطقه شما سطح بسیار بالایی از سانسور اینترنت وجود دارد، به شما توصیه می‌شود که از اولین اتصال فقط از OpenVPN over Cloak استفاده کنید.
-
-* در دسترس در VPNNaruzhu بر روی تمام پلتفرم‌ها
-* مصرف بالای برق در دستگاه‌های تلفن همراه
-* تنظیمات انعطاف پذیر
-* توسط سیستم‌های تجزیه و تحلیل DPI شناخته نمی‌شود
-* بر روی پروتکل شبکه TCP، پورت 443 کار می‌کند.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="191"/>
@@ -3471,19 +3108,17 @@ WireGuard به دلیل امضاهای بسته متمایز خود، بسیار
 * روی پروتکل شبکه UDP کار می کند.</translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="vanished">پروتکل REALITY، یک توسعه پیشگامانه توسط خالقان XRay، به‌طور خاص برای مقابله با بالاترین سطح سانسور اینترنتی طراحی شده است و از رویکرد نوآورانه‌ای برای دور زدن محدودیت‌ها استفاده می‌کند.
-
-REALITY به‌طور منحصربه‌فردی سانسورچیان را در مرحله دست‌دهی TLS شناسایی می‌کند و به‌صورت یکپارچه به‌عنوان پراکسی برای کاربران قانونی عمل می‌کند، در حالی که سانسورچیان را به سایت‌های معتبر مانند google.com هدایت می‌کند و در نتیجه یک گواهی TLS واقعی و داده‌های اصلی ارائه می‌دهد.
-
-این قابلیت پیشرفته، REALITY را از فناوری‌های مشابه متمایز می‌کند، زیرا می‌تواند ترافیک وب را بدون نیاز به پیکربندی‌های خاص، به‌عنوان ترافیک از سایت‌های تصادفی و معتبر جا بزند. برخلاف پروتکل‌های قدیمی‌تر مانند VMess، VLESS و انتقال XTLS-Vision، تشخیص نوآورانه &quot;دوست یا دشمن&quot; REALITY در مرحله دست‌دهی TLS امنیت را افزایش داده و از شناسایی توسط سیستم‌های پیشرفته DPI که از تکنیک‌های پروب فعال استفاده می‌کنند، جلوگیری می‌کند. این ویژگی REALITY را به یک راه‌حل قوی برای حفظ آزادی اینترنت در محیط‌هایی با سانسور شدید تبدیل می‌کند.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
 * Available in the VPNNaruzhu only on Windows
@@ -3491,15 +3126,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="vanished">پروتکل IKEv2 به همراه لایه رمزنگاری IPSec به عنوان پروتکل وی‎پی‎ان مدرن و پایدار است.
-یکی از قابلیت‎‎های متمایز این پروتکل قابلیت سوییچ بین شبکه‎ها و دستگاه‎هاست که قابلیت انطباق بالایی در محیط شبکه‎های دینامیک را دارد
-در حالیکه ترکیبی از امنیت، پایداری و سرعت را ارائه میدهد اما مهم است که اشاره کنیم IKEv2 به راحتی قابل تشخیص در شبکه و بلاک شدن میباشد.
-
-* در VPNNaruzhu فقط بر روی ویندوز در دسترس است
-* مصرف باتری کم روی دستگاه‎های موبایل
-* تنظیمات ساده
-* امکان شناسایی شدن در شبکه‎های تحلیل DPI
-* روی پروتکل شبکه UDP، پورت‎های 500 و 4500 کار می‎کند.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="243"/>
@@ -3536,10 +3163,6 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <location filename="../containers/containers_defs.cpp" line="123"/>
         <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
         <translation>پروتکل AmneziaWG یک پروتکل اختصاصی Amnezia که بر اساس WireGaurd کار میکند. به اندازه WireGaurd پرسرعت است و در عین حال بسیار مقاوم به بلاک شدن توسط شبکه ست. مناسب برای مناطق با سطح سانسور بالاست.</translation>
-    </message>
-    <message>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation type="vanished">پروتکل IKEv2/IPsec پروتکلی پایدار و مدرن که مقداری سریعتر از سایر پروتکل‎هاست. بعد از قطع سیگنال دوباره اتصال را بازیابی می‎کند.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="133"/>
@@ -3592,28 +3215,6 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * عملکرد بر روی پروتکل شبکه TCP</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="172"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking.
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
@@ -3633,27 +3234,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 * کمترین میزان تنظیمات
 * غیرقابل تشخیص توسط سیستم‎های تحلیل عمیق DPI و مقاوم به بلاک شدن
 * کار بر روی پروتکل شبکه UDP</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="220"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="231"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the VPNNaruzhu only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="245"/>
@@ -3903,10 +3483,6 @@ For more detailed information, you can
         <translation>تمام تنظیمات به مقادیر پیش فرض ریست شد</translation>
     </message>
     <message>
-        <source>Cached profiles cleared</source>
-        <translation type="vanished">پروفایل ذخیره شده پاک شد</translation>
-    </message>
-    <message>
         <location filename="../ui/controllers/settingsController.cpp" line="154"/>
         <source>Backup file is corrupted</source>
         <translation>فایل بک‎آپ خراب شده است</translation>
@@ -4100,10 +3676,6 @@ For more detailed information, you can
         <translation>متوسط یا بالا</translation>
     </message>
     <message>
-        <source>Extreme</source>
-        <translation type="vanished">شدید</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>من فقط میخواهم سطح حریم شخصی خودم را بالا ببرم</translation>
@@ -4112,10 +3684,6 @@ For more detailed information, you can
         <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>من میخواهم از سانسور عبور کنم. این گزینه در اکثر موارد توصیه می‎‌شود</translation>
-    </message>
-    <message>
-        <source>Most VPN protocols are blocked. Recommended if other options are not working.</source>
-        <translation type="vanished">اکثر پروتکل‎های وی‎پی‎ان مسدود شده‎اند. در مواردی که بقیه گزینه‎ها کار نمی‎کنند توصی می‎شود.</translation>
     </message>
 </context>
 <context>

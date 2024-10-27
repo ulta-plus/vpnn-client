@@ -184,13 +184,6 @@
     </message>
 </context>
 <context>
-    <name>ExportController</name>
-    <message>
-        <source>Access error!</source>
-        <translation type="vanished">رساءی ناممکن!</translation>
-    </message>
-</context>
-<context>
     <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="109"/>
@@ -214,11 +207,6 @@
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="58"/>
         <source>Split tunneling on the server</source>
         <translation>سرور پر سپلٹ ٹنلنگ</translation>
-    </message>
-    <message>
-        <source>Enabled
-Can&apos;t be disabled for current server</source>
-        <translation type="vanished">فعال کو موجودہ سرور کے لیے غیر فعال نہیں کیا جا سکتا</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
@@ -461,25 +449,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>لاگنگ فعال ہے</translation>
     </message>
     <message>
-        <source>Split tunneling enabled</source>
-        <translation type="vanished">سپلٹ ٹنلنگ فعال ہے</translation>
-    </message>
-    <message>
-        <source>Split tunneling disabled</source>
-        <translation type="vanished">سپلٹ ٹنلنگ غیر فعال ہے</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="335"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
         <source>VPN protocol</source>
         <translation>وی پی این پروٹوکول</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="390"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
         <source>Servers</source>
         <translation>سرور</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="502"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
         <source>Unable change server while there is an active connection</source>
         <translation>فعال کنکشن موجود ہونے کی وجہ سے سرور تبدیل کرنے میں ناکام ہیں</translation>
     </message>
@@ -1029,22 +1009,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Detailed instructions</source>
         <translation>تفصیلی ہدایات</translation>
     </message>
-    <message>
-        <source>Remove SFTP and all data stored there</source>
-        <translation type="vanished">کو ہٹا دیں اور وہاں ذخیرہ شدہ تمام ڈیٹا کو ختم کر دیں</translation>
-    </message>
-    <message>
-        <source>Remove SFTP and all data stored there?</source>
-        <translation type="vanished">SFTP اور وہاں ذخیرہ کردہ تمام ڈیٹا کو ہٹائیں؟</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">جاری رہے</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">منسوخ کریں</translation>
-    </message>
 </context>
 <context>
     <name>PageServiceSocksProxySettings</name>
@@ -1155,22 +1119,6 @@ Already installed containers were found on the server. All installed containers 
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>وورڈپریس کو ترتیب دیتے وقت، اس انیون ایڈریس کو ڈومین کے طور پر مقرر کریں.</translation>
     </message>
-    <message>
-        <source>Remove website</source>
-        <translation type="vanished">ویب سائٹ کو ہٹا دیں</translation>
-    </message>
-    <message>
-        <source>The site with all data will be removed from the tor network.</source>
-        <translation type="vanished">تمام ڈیٹا والی سائٹ کو ٹور نیٹ ورک سے ہٹا دیا جائے گا.</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">جاری رکھیں</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">منسوخ کریں</translation>
-    </message>
 </context>
 <context>
     <name>PageSettings</name>
@@ -1233,85 +1181,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="202"/>
         <source>Close application</source>
         <translation>براہ کرم ایپلیکیشن بند کریں</translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsAbout</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="72"/>
-        <source>Support Amnezia</source>
-        <translation>Amnezia کی حمایت کریں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="87"/>
-        <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>ایمنیزیا ایک مفت اور آزاد سورس ایپلیکیشن ہے۔ آپ اگر اسے پسند کریں تو ڈویلپرز کی حمایت کرسکتے ہیں.</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="97"/>
-        <source>Contacts</source>
-        <translation>رابطے</translation>
-    </message>
-    <message>
-        <source>Telegram group</source>
-        <translation type="vanished">ٹیلیگرام گروپ</translation>
-    </message>
-    <message>
-        <source>To discuss features</source>
-        <translation type="vanished">&quot;فیچرز&quot; پر گفتگو کرنے کے لئے</translation>
-    </message>
-    <message>
-        <source>Mail</source>
-        <translation type="vanished">میل</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="126"/>
-        <source>For reviews and bug reports</source>
-        <translation>جائزہ اور بگ رپورٹس کے لئے</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="133"/>
-        <source>https://github.com/vpn-naruzhu/vpnn-client/issues</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Github</source>
-        <translation type="vanished">گِٹ ہَب</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="125"/>
-        <source>support@amnezia.org</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="144"/>
-        <source>GitHub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="151"/>
-        <source>https://github.com/vpn-naruzhu/vpnn-client</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="162"/>
-        <source>Website</source>
-        <translation>ویب سائٹ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="182"/>
-        <source>Software version: %1</source>
-        <translation>سافٹ ویئر ورژن: %1</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="211"/>
-        <source>Check for updates</source>
-        <translation>اپ ڈیٹس چیک کریں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="234"/>
-        <source>Privacy Policy</source>
-        <translation>رازداری کی پالیسی</translation>
     </message>
 </context>
 <context>
@@ -1395,14 +1264,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="30"/>
         <source>Cannot change split tunneling settings during active connection</source>
         <translation>فعال کنکشن کے دوران سپلٹ ٹنلنگ کی ترتیبات تبدیل نہیں کی جا سکتیں</translation>
-    </message>
-    <message>
-        <source>Only the Apps listed here will be accessed through the VPN</source>
-        <translation type="vanished">صرف اس ایپ کو وی پی این کے ذریعے دسترس حاصل کی جائے گی جو یہاں فہرست میں شامل ہے</translation>
-    </message>
-    <message>
-        <source>Apps from the list should not be accessed via VPN</source>
-        <translation type="vanished">فہرست میں شامل ایپ کو وی پی این کے ذریعے دسترس نہیں کیا جائے گا</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="51"/>
@@ -1645,50 +1506,22 @@ Already installed containers were found on the server. All installed containers 
         <translation>کنکشن</translation>
     </message>
     <message>
-        <source>When AmneziaDNS is not used or installed</source>
-        <translation type="vanished">ایمنیزیا ڈی این ایس کو استعمال نہیں کیا گیا ہو یا اسے انسٹال نہیں کیا گیاہے</translation>
-    </message>
-    <message>
-        <source>Allows you to use the VPN only for certain Apps</source>
-        <translation type="vanished">آپ کو صرف مخصوص ایپلیکیشنز کے لئے وی پی این استعمال کرنے کی اجازت دیتا ہے</translation>
-    </message>
-    <message>
-        <source>Use AmneziaDNS</source>
-        <translation type="vanished">AmneziaDNS استعمال کریں</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is installed on the server</source>
-        <translation type="vanished">اگر سرور پر AmneziaDNS انسٹال کیا گیا ہو تو</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="82"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
         <source>DNS servers</source>
         <translation>ڈی این ایس سرور</translation>
     </message>
     <message>
-        <source>Site-based split tunneling</source>
-        <translation type="vanished">سائٹ کے بنیادی سپلٹ ٹنلنگ</translation>
-    </message>
-    <message>
-        <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation type="vanished">آپ کو یہ امکان فراہم کرتا ہے کہ آپ وی پی این کے ذریعہ کس سائٹ کو دسترس دینا چاہتے ہیں وہ منتخب کریں</translation>
-    </message>
-    <message>
-        <source>App-based split tunneling</source>
-        <translation type="vanished">ایپ کے بنیاد پر سپلٹ ٹنلنگ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="87"/>
         <source>KillSwitch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="167"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="88"/>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="99"/>
         <source>Cannot change killSwitch settings during active connection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1704,10 +1537,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="65"/>
         <source>DNS servers</source>
         <translation>ڈی این ایس سرور</translation>
-    </message>
-    <message>
-        <source>If AmneziaDNS is not used or installed</source>
-        <translation type="vanished">اگر AmneziaDNS استعمال نہیں کیا گیا ہو یا انسٹال نہیں کیا گیا ہو تو</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
@@ -1758,10 +1587,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsLogging</name>
     <message>
-        <source>Logging is enabled. Note that logs will be automatically disabled after 14 days, and all log files will be deleted.</source>
-        <translation type="vanished">لاگنگ فعال ہے۔ یاد رہے کہ لاگوں کو 14 دنوں کے بعد خود بخود غیر فعال کر دیا جائے گا، اور تمام لاگ فائلیں حذف کردی جائیں گی.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="56"/>
         <source>Logging</source>
         <translation>لاگنگ</translation>
@@ -1770,14 +1595,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="57"/>
         <source>Enabling this function will save application&apos;s logs automatically. By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
         <translation>اس فعل کو فعال کرنے سے، ایپلیکیشن کے لاگ خود بخود محفوظ ہوجائیں گے۔ پہلے سے، لاگنگ کی فعالیت غیر فعال ہوتی ہے۔ اگر ایپلیکیشن میں کوئی خرابی ہو، تو لاگ کو بچانا فعال کریں.</translation>
-    </message>
-    <message>
-        <source>Save logs</source>
-        <translation type="vanished">لاگوں کو محفوظ کریں</translation>
-    </message>
-    <message>
-        <source>Open folder with logs</source>
-        <translation type="vanished">فائلوں کے فولڈر کو کھولیں</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="171"/>
@@ -1796,10 +1613,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="265"/>
         <source>Logs file saved</source>
         <translation>لاگ فائل محفوظ ہوگئی</translation>
-    </message>
-    <message>
-        <source>Save logs to file</source>
-        <translation type="vanished">لاگوں کو فائل میں محفوظ کریں</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="68"/>
@@ -2234,17 +2047,9 @@ Already installed containers were found on the server. All installed containers 
         <translation>سرور کنکشن</translation>
     </message>
     <message>
-        <source>Do not use connection codes from untrusted sources, as they may be created to intercept your data.</source>
-        <translation type="vanished">غیر معتبر ماخذ سے کنکشن کوڈ استعمال نہ کریں، کیونکہ یہ آپ کے ڈیٹا کو منسلک کرنے کے لئے تخلیق کیا گیا ہوسکتا ہے.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
         <source>What do you have?</source>
         <translation>آپ کو کس میں مدد چاہیے؟</translation>
-    </message>
-    <message>
-        <source>File with connection settings or backup</source>
-        <translation type="vanished">کنکشن کی ترتیبات یا بیک اپ والی فائل</translation>
     </message>
     <message>
         <source>Connection</source>
@@ -2276,18 +2081,6 @@ Already installed containers were found on the server. All installed containers 
         <translation type="obsolete">بیک اپ فائلیں (*.backup)</translation>
     </message>
     <message>
-        <source>File with connection settings</source>
-        <translation type="vanished">کنکشن کی ترتیبات والی فائل</translation>
-    </message>
-    <message>
-        <source>Open config file</source>
-        <translation type="vanished">کنفیگ فائل کو کھولیں</translation>
-    </message>
-    <message>
-        <source>QR code</source>
-        <translation type="vanished">QR کوڈ</translation>
-    </message>
-    <message>
         <source>I have nothing</source>
         <translation type="obsolete">میرے پاس کچھ نہیں ہے</translation>
     </message>
@@ -2300,49 +2093,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="264"/>
         <source>Open key file</source>
         <translation>کنفیگ فائل کو کھولیں</translation>
-    </message>
-    <message>
-        <source>Key as text</source>
-        <translation type="vanished">متن کے طور پر کلید</translation>
-    </message>
-</context>
-<context>
-    <name>PageSetupWizardCredentials</name>
-    <message>
-        <source>Server IP address [:port]</source>
-        <translation type="vanished">سرور آئی پی پتہ [:پورٹ]</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">براہ کرم جاری رکھیں</translation>
-    </message>
-    <message>
-        <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation type="vanished">آپ جو ڈیٹا داخل کریں گے وہ بالکل خفیہ رہے گا اور نہ تو امنیزیا یا کسی تیسری شخصیت کے ساتھ اشتراک کیا جائے گا</translation>
-    </message>
-    <message>
-        <source>SSH Username</source>
-        <translation type="vanished">ایس ایس ایچ صارف نام</translation>
-    </message>
-    <message>
-        <source>Password or SSH private key</source>
-        <translation type="vanished">پاس ورڈ یا SSH نجی کلید</translation>
-    </message>
-    <message>
-        <source>Ip address cannot be empty</source>
-        <translation type="vanished">آئی پی پتہ خالی نہیں ہو سکتا</translation>
-    </message>
-    <message>
-        <source>Enter the address in the format 255.255.255.255:88</source>
-        <translation type="vanished">ایڈریس درج کریں فارمیٹ 255.255.255.255:88</translation>
-    </message>
-    <message>
-        <source>Login cannot be empty</source>
-        <translation type="vanished">لاگ ان نام خالی نہیں ہو سکتا</translation>
-    </message>
-    <message>
-        <source>Password/private key cannot be empty</source>
-        <translation type="vanished">پاس ورڈ یا نجی کلید خالی نہیں ہو سکتی</translation>
     </message>
 </context>
 <context>
@@ -2469,18 +2219,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <source>Settings restored from backup file</source>
-        <translation type="vanished">ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
-    </message>
-    <message>
-        <source>Free service for creating a personal VPN on your server.</source>
-        <translation type="vanished">آپ کے سرور پر ایک ذاتی وی پی این بنانے کے لئے مفت خدمات.</translation>
-    </message>
-    <message>
-        <source> Helps you access blocked content without revealing your privacy, even to VPN providers.</source>
-        <translation type="vanished"> آپ کو ریاست کردہ مواد تک رسائی فراہم کرتا ہے بغیر آپ کے خصوصیت کو وی پی این فراہم کرنے والوں تک بھی ظاہر نہیں کرتا.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="46"/>
         <source>Open foreign and Russian websites.</source>
         <translation type="unfinished"></translation>
@@ -2547,17 +2285,9 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show content</source>
-        <translation type="vanished">مواد دکھائیں</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation>وائر گارڈ کی غلط شناخت کو بروئے کار لانے کے لئے وائر گارڈ غلط شناخت کو فعال کریں۔ آپ کے پرووائیڈر پر وائر گارڈ بند ہونے کی صورت میں یہ کار آمد ہو سکتی ہے۔</translation>
-    </message>
-    <message>
-        <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation type="vanished">صرف ان ماخذ سے کنکشن کوڈ استعمال کریں جن پر آپ کو اعتماد ہو۔ عوامی ماخذوں سے کوڈز آپ کے ڈیٹا کو منسلک کرنے کے لیے بنائے گئے ہو سکتے ہیں.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="187"/>
@@ -2601,10 +2331,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
         <source>For the VPNNaruzhu app</source>
         <translation>VPNNaruzhu ایپ کے لئے</translation>
-    </message>
-    <message>
-        <source>OpenVpn native format</source>
-        <translation type="vanished">OpenVPN کا اصل فارمیٹ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="132"/>
@@ -2681,10 +2407,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageShare.qml" line="841"/>
         <source>Data sent: %1</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Creation date: </source>
-        <translation type="vanished">تخلیق کی تاریخ: </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="862"/>
@@ -3385,6 +3107,41 @@ Already installed containers were found on the server. All installed containers 
         <translation>فائلوں کو محفوظ طریقے سے اسٹور اور ٹرانسفر کرنے کے لیے اپنے سرور پر ایک فائل والٹ بنائیں.</translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection and blocking. 
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
+
+* Available in the VPNNaruzhu across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by DPI analysis systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
+        <source>A relatively new popular VPN protocol with a simplified architecture.
+WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
+WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
+
+* Available in the VPNNaruzhu across all platforms
+* Low power consumption
+* Minimum number of settings
+* Easily recognised by DPI analysis systems, susceptible to blocking
+* Works over UDP network protocol.</source>
+        <translation>ایک نسبتاً نیا مقبول وی پی این پروٹوکول جس میں سادہ معماری ہے۔ وائر گارڈ تمام آلات پر مضبوط وی پی این کنکشن اور اعلی کارکردگی فراہم کرتا ہے۔ اس میں ہارڈ کوڈ کردہ انکرپشن سیٹنگز استعمال کی جاتی ہیں۔ وائر گارڈ کو اوپن وی پی این سے موازنہ کرنے پر لیٹنسی میں کمی اور بہتر ڈیٹا ٹرانسفر تھروپٹ حاصل ہوتی ہے۔ وائر گارڈ کا مخصوص پیکٹ سائنیچرز کی وجہ سے بلاک کرنا زیادہ آسان ہوتا ہے۔ کچھ دوسرے وی پی این پروٹوکول کے مخالف، جو اوبفسکیشن ٹیکنیکس کا استعمال کرتے ہیں، وائر گارڈ کے پیکٹس کے مسلسل سائنیچر پیٹرنز کو زیادہ آسانی سے پہچانا جا سکتا ہے اور اس طرح معقد ڈیپ پیکٹ انسپیکشن (DPI) سسٹمز اور دیگر نیٹ ورک مانیٹرنگ ٹولز کے ذریعے بلاک کیا جا سکتا ہے۔ * تمام پلیٹ فارمز پر دستیاب ہے * کم بجلی کی استعمال * کم سیٹنگز کی تعداد * ڈی پی آئی تجزیہ سسٹمز کے ذریعے آسانی سے پہچانا جاتا ہے، بلاک کرنے کے لئے زیادہ متاثر ہے * یو ڈی پی نیٹ ورک پروٹوکول پر کام کرتا ہے.</translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
 It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
@@ -3404,52 +3161,6 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking.
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="vanished">یہ اوپن وی پی این پروٹوکول اور کلوک پلگ ان کا مجموعہ ہے جو خاص طور پر بلاکنگ سے تحفظ کے لیے ڈیزائن کیا گیا ہے۔ اوپن وی پی این کلائنٹ اور سرور کے درمیان تمام انٹرنیٹ ٹریفک کو انکرپٹ کرکے ایک محفوظ وی پی این کنکشن فراہم کرتا ہے۔ Cloak OpenVPN کو پتہ لگانے اور بلاک کرنے سے بچاتا ہے۔ کلوک پیکٹ میٹا ڈیٹا میں ترمیم کر سکتا ہے تاکہ یہ VPN ٹریفک کو عام ویب ٹریفک کے طور پر مکمل طور پر ماسک کر دے، اور VPN کو ایکٹیو پروبنگ کے ذریعے پتہ لگانے سے بھی محفوظ رکھتا ہے۔ یہ پہلا ڈیٹا پیکٹ حاصل کرنے کے فوراً بعد پتہ لگانے کے لیے بہت مزاحم بناتا ہے، کلوک آنے والے کنکشن کی تصدیق کرتا ہے۔ اگر تصدیق ناکام ہو جاتی ہے، تو پلگ ان سرور کو ایک جعلی ویب سائٹ کے طور پر ماسک کر دیتا ہے اور آپ کا VPN تجزیہ کے نظام کے لیے پوشیدہ ہو جاتا ہے۔ اگر آپ کے علاقے میں انتہائی درجے کی انٹرنیٹ سنسرشپ ہے، تو ہم آپ کو مشورہ دیتے ہیں کہ پہلے کنکشن سے صرف اوپن وی پی این اوور کلوک استعمال کریں * تمام پلیٹ فارمز پر ایمنیزیا وی پی این میں دستیاب ہے * موبائل ڈیوائسز پر زیادہ بجلی کی کھپت * لچکدار ترتیبات * ڈی پی آئی تجزیہ کے ذریعے تسلیم شدہ نہیں سسٹمز * TCP نیٹ ورک پروٹوکول، 443 پورٹ پر کام کرتا ہے.
-</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="191"/>
-        <source>A relatively new popular VPN protocol with a simplified architecture.
-WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
-WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
-
-* Available in the VPNNaruzhu across all platforms
-* Low power consumption
-* Minimum number of settings
-* Easily recognised by DPI analysis systems, susceptible to blocking
-* Works over UDP network protocol.</source>
-        <translation>ایک نسبتاً نیا مقبول وی پی این پروٹوکول جس میں سادہ معماری ہے۔ وائر گارڈ تمام آلات پر مضبوط وی پی این کنکشن اور اعلی کارکردگی فراہم کرتا ہے۔ اس میں ہارڈ کوڈ کردہ انکرپشن سیٹنگز استعمال کی جاتی ہیں۔ وائر گارڈ کو اوپن وی پی این سے موازنہ کرنے پر لیٹنسی میں کمی اور بہتر ڈیٹا ٹرانسفر تھروپٹ حاصل ہوتی ہے۔ وائر گارڈ کا مخصوص پیکٹ سائنیچرز کی وجہ سے بلاک کرنا زیادہ آسان ہوتا ہے۔ کچھ دوسرے وی پی این پروٹوکول کے مخالف، جو اوبفسکیشن ٹیکنیکس کا استعمال کرتے ہیں، وائر گارڈ کے پیکٹس کے مسلسل سائنیچر پیٹرنز کو زیادہ آسانی سے پہچانا جا سکتا ہے اور اس طرح معقد ڈیپ پیکٹ انسپیکشن (DPI) سسٹمز اور دیگر نیٹ ورک مانیٹرنگ ٹولز کے ذریعے بلاک کیا جا سکتا ہے۔ * تمام پلیٹ فارمز پر دستیاب ہے * کم بجلی کی استعمال * کم سیٹنگز کی تعداد * ڈی پی آئی تجزیہ سسٹمز کے ذریعے آسانی سے پہچانا جاتا ہے، بلاک کرنے کے لئے زیادہ متاثر ہے * یو ڈی پی نیٹ ورک پروٹوکول پر کام کرتا ہے.</translation>
-    </message>
-    <message>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="vanished">REALITY پروٹوکول، جو ایکس رے کے تخلیق کاروں کی ایک نوعیتی پیشرفت ہے، انٹرنیٹ سینسرشپ کی بلند ترین سطحوں کو مقابلہ کرنے کے لئے مخصوص طریقہ کار بنایا گیا ہے۔
-یہ فرد معین کو TLS ہینڈشیک فیز کے دوران سینسرز کو شناخت کرتا ہے، اصل کلائنٹس کے طور پر پراکسی کے طور پر بغیر رکاوٹ چلنے کے دوران سینسرز کو اصل ویب سائٹوں جیسے google.com پر منتقل کرتا ہے، اس طرح ایک مستند TLS سرٹیفکیٹ اور ڈیٹا کو پیش کرتا ہے۔
-یہ بلند پذیرای کی صلاحیت کو مخصوص ترتیبات کی ضرورت کے بغیر ویب ٹریفک کو اصلی سائٹس سے آنے کی طرح بنانے کی بنیاد میں مختلف ہے۔
-پرانے پروٹوکولوں جیسے VMess، VLESS، اور XTLS-Vision ٹرانسپورٹ کے برعکس، REALITY کا TLS ہینڈشیک کے دوران نئی &quot;دوست یا دشمن&quot; شناخت TLS پر سکیورٹی کو بڑھاتا ہے اور توانائی کے ساتھ DPI سسٹمز کی پیشہ ورانہ چھان بین تکنیکوں کے ذریعے شناخت سے بچتا ہے۔
-یہ REALITY کو سخت سینسرشپ والے ماحولوں میں انٹرنیٹ کی آزادی کو برقرار رکھنے کے لئے ایک مضبوط حل بناتا ہے۔</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="245"/>
@@ -3472,10 +3183,6 @@ For more detailed information, you can
         <location filename="../containers/containers_defs.cpp" line="123"/>
         <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
         <translation>AmneziaWG - Amnezia سے خصوصی پروٹوکول، WireGuard پر مبنی۔ یہ وائر گارڈ کی طرح تیز ہے، لیکن رکاوٹوں کے خلاف بہت مزاحم ہے۔ اعلی درجے کی سنسر شپ والے خطوں کے لیے تجویز کردہ۔</translation>
-    </message>
-    <message>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation type="vanished">IKEv2/IPsec - جدید مستحکم پروٹوکول، دوسروں کے مقابلے میں تھوڑا تیز، سگنل ضائع ہونے کے بعد کنکشن بحال کرتا ہے۔</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="133"/>
@@ -3510,28 +3217,6 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>شیڈو ساکس، SOCKS5 پروٹوکول سے متاثر، AEAD سائفر کا استعمال کرتے ہوئے کنکشن کی حفاظت کرتا ہے۔ اگرچہ شیڈو ساکس کو سمجھدار اور شناخت کرنے کے لیے چیلنج کرنے کے لیے ڈیزائن کیا گیا ہے، لیکن یہ معیاری HTTPS کنکشن سے مماثل نہیں ہے۔ تاہم، کچھ ٹریفک تجزیہ نظام اب بھی شیڈو ساکس کنکشن کا پتہ لگا سکتے ہیں۔ Amnezia میں محدود تعاون کی وجہ سے، AmneziaWG پروٹوکول استعمال کرنے کی سفارش کی جاتی ہے۔ * صرف ڈیسک ٹاپ پلیٹ فارمز پر VPNNaruzhu میں دستیاب ہے * موبائل آلات پر بجلی کی عام کھپت * قابل ترتیب انکرپشن پروٹوکول * کچھ DPI سسٹمز کے ذریعے قابل شناخت * TCP نیٹ ورک پروٹوکول پر کام کرتا ہے.</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="172"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking. 
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="204"/>
@@ -3859,31 +3544,31 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>SystemTrayNotificationHandler</name>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
         <source>Show</source>
         <translation>دکھائیں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
         <translation>منسلک کریں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
         <translation>منقطع کریں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
         <translation>ویب سائٹ دیکھیں</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
         <source>Quit</source>
         <translation>بند کریں</translation>
@@ -3956,14 +3641,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation>کم</translation>
     </message>
     <message>
-        <source>Medium or High</source>
-        <translation type="vanished">متوسط یا زیادہ</translation>
-    </message>
-    <message>
-        <source>Extreme</source>
-        <translation type="vanished">انتہائی</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation type="unfinished"></translation>
@@ -3977,10 +3654,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>میں سانسر شدگی سے چھٹکارا حاصل کرنا چاہتا ہوں۔ یہ اختیار بیشتر صورتوں میں تجویز کیا جاتا ہے.</translation>
-    </message>
-    <message>
-        <source>Most VPN protocols are blocked. Recommended if other options are not working.</source>
-        <translation type="vanished">زیادہ تر وی پی این پروٹوکولز بلاک ہوتے ہیں۔ اگر دوسرے اختیارات کام نہیں کر رہے ہیں تو یہ تجویز کی جاتی ہے.</translation>
     </message>
 </context>
 <context>

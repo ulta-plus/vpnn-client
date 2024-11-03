@@ -362,6 +362,10 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(site);
             }
 
+            for (const auto &r: excludedRoutes) {
+                sitesJsonArray.append(r);
+            }
+
             // Allow traffic to Amnezia DNS
             if (routeMode == Settings::VpnOnlyForwardSites) {
                 sitesJsonArray.append(m_vpnConfiguration.value(config_key::dns1).toString());

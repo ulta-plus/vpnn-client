@@ -466,7 +466,6 @@ void AmneziaApplication::initControllers()
 
     connect(m_importController.get(), &ImportController::siteNeedsAddition, m_sitesController.get(), &SitesController::addSite);
     connect(m_vpnConnection.get(), &VpnConnection::newRoute, m_sitesController.get(), &SitesController::addSite);
-    connect(this, &AmneziaApplication::excludeRoute, m_sitesController.get(), &SitesController::addSite);
     connect(m_vpnConnection.get(), &VpnConnection::restartConnection, this, &AmneziaApplication::restartConnection);
     connect(this, &AmneziaApplication::toggleConnection, m_connectionController.get(),
         &ConnectionController::toggleConnection, Qt::QueuedConnection);
@@ -511,7 +510,7 @@ void AmneziaApplication::updateSmartRouting()
                     {
                         QJsonObject json_obj = elem.toObject();
                         QString host = json_obj.find("hostname").value().toString();
-                        emit excludeRoute(host);
+                        m_vpnConnection->excludeRoute(host);
                     }
                         break;
                     default:

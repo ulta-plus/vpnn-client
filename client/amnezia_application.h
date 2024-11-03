@@ -84,7 +84,6 @@ public:
 signals:
     void translationsUpdated();
     void toggleConnection();
-    void excludeRoute(QString addr);
 
 private:
     void initModels();

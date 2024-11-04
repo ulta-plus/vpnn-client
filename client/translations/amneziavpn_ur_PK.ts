@@ -3585,7 +3585,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="422"/>
+        <location filename="../vpnconnection.cpp" line="426"/>
         <source>Mbps</source>
         <translation>ایم بی پی ایس</translation>
     </message>

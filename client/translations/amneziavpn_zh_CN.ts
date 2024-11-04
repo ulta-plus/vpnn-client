@@ -3739,7 +3739,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="422"/>
+        <location filename="../vpnconnection.cpp" line="426"/>
         <source>Mbps</source>
         <translation></translation>
     </message>

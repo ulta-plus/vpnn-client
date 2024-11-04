@@ -42,6 +42,11 @@ public:
     const QString &remoteAddress() const;
     void addSitesRoutes(const QString &gw, Settings::RouteMode mode);
 
+    void excludeRoute(const QString &route)
+    {
+        excludedRoutes.append(route);
+    }
+
 #ifdef Q_OS_ANDROID
     void restoreConnection();
 #endif
@@ -86,6 +91,8 @@ private:
     QJsonObject m_vpnConfiguration;
     QJsonObject m_routeMode;
     QString m_remoteAddress;
+
+    QStringList excludedRoutes;
 
     // Only for iOS for now, check counters
     QTimer m_checkTimer;

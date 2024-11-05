@@ -252,12 +252,12 @@ Can&apos;t be disabled for current server</source>
         <translation>अमान्य कॉन्फ़िगरेशन फ़ाइल</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="627"/>
+        <location filename="../ui/controllers/importController.cpp" line="631"/>
         <source>Scanned %1 of %2.</source>
         <translation>%2 में से %1 स्कैन किया गया.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="662"/>
+        <location filename="../ui/controllers/importController.cpp" line="666"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>

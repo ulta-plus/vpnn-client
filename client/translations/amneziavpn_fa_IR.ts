@@ -253,12 +253,12 @@ Can&apos;t be disabled for current server</source>
         <translation>فایل پیکربندی نامعتبر است.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="627"/>
+        <location filename="../ui/controllers/importController.cpp" line="631"/>
         <source>Scanned %1 of %2.</source>
         <translation>ارزیابی %1 از %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="662"/>
+        <location filename="../ui/controllers/importController.cpp" line="666"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>در پیکربندی وارد شده، خطوطی که ممکن است خطرناک باشند، یافت شدند:</translation>
     </message>

@@ -1,0 +1,56 @@
+{
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 4,
+
+    "[cmake]": {
+        "editor.tabSize": 2
+    },
+
+    // Insert spaces when pressing Tab.
+    "editor.insertSpaces": true,
+
+    // When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
+    "editor.detectIndentation": false,
+
+    // Show WhiteSpases
+    "editor.renderWhitespace": "all",
+
+    // Remove Trailing WhiteSpases
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "atomic": "cpp",
+        "deque": "cpp",
+        "filesystem": "cpp",
+        "forward_list": "cpp",
+        "ios": "cpp",
+        "list": "cpp",
+        "strstream": "cpp",
+        "system_error": "cpp",
+        "vector": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "*.ipp": "cpp",
+        "array": "cpp",
+        "format": "cpp",
+        "future": "cpp",
+        "istream": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "variant": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xutility": "cpp",
+        "xlocale": "cpp",
+        "chrono": "cpp",
+        "optional": "cpp",
+        "regex": "cpp",
+        "random": "cpp",
+        "iterator": "cpp"
+    }
+}

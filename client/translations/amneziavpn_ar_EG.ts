@@ -230,10 +230,9 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
-        <translation>مٌفعل 
-لا يمكن إقافة للخادم الحالي</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="64"/>
@@ -408,8 +407,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>VPNNaruzhu</source>
+        <translation>VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -423,8 +422,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>AmneziaVPN notification</source>
-        <translation>إشعار من AmneziaVPN</translation>
+        <source>VPNNaruzhu notification</source>
+        <translation>إشعار من VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -1310,9 +1309,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Close application</source>
         <translation>إغلاق التطبيق</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsAbout</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="145"/>
         <source>Support Amnezia</source>
@@ -3287,7 +3283,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
         <location filename="../containers/containers_defs.cpp" line="104"/>
-        <location filename="../containers/containers_defs.cpp" line="248"/>
+        <location filename="../containers/containers_defs.cpp" line="249"/>
         <source>SOCKS5 proxy server</source>
         <translation></translation>
     </message>
@@ -3534,7 +3530,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <location filename="../containers/containers_defs.cpp" line="241"/>
+        <location filename="../containers/containers_defs.cpp" line="242"/>
         <source>Website in Tor network</source>
         <translation>موقع في شبكة Tor</translation>
     </message>
@@ -3581,53 +3577,36 @@ Already installed containers were found on the server. All installed containers 
         <translation>انشأ مخزن ملفات علي الخادم الخاص بك حتي تخزن الملفات و تنقلها بسرية.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="171"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
+        <location filename="../containers/containers_defs.cpp" line="146"/>
+        <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
+It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking. 
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the AmneziaVPN across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation>هذه مجموعة من بروتوكول OpenVPN و برنامج Cloak المساعد مٌصمم خصيصاً للحماية ضد الحجب 
-
-يوفر OpenVPN اتصال VPN امن عن طريق تشفير جميع حركات المرور بين العميل والخادم
-
-Cloak يحمي OpenVPN من ان يٌكتشف والحجب
-
-يمكن ان يعدل Cloak حزمة البيانات حتي يجعل حركة مرور VPN تبدو بالكامل كحركة ويب طبيعية,
-وايضاُ يحمي ال VPN من ان يٌكتشف عن طريق انظمة الكشف الفعالة. هذا يجعلة مقاوم جداُ لأن يٌكتشف
-
-فوراُ بعد استلام اول حزمة بيانات, يصادق Cloak الاتصال القادم.
-إذا فشل التصادق, البرنامج المساعد يجعل الخادم يبدو ك موقع مزيف ويصبح ال VPN مخفي لأنظمة التحليل.
-
-إذا كان هناك رقابة شديدة علي الانترنت في منطقتك, نحن ننصحك بأن تستخدم OpenVPN over Cloak من اول اتصال
-
-* مٌتاح في AmneziaVPN عبر جميع المنصات
-* استهلاك طاقة عالية علي اجهزة المحمول
-* مرونة في الإعدادات
-* لا يٌكتشف بواسطة انظمة تحليل DPI
-* يعمل عبر بروتوكول شبكة TCK, منفذ 443.
-</translation>
+* Available in the VPNNaruzhu across all platforms
+* Normal power consumption on mobile devices
+* Flexible customisation to suit user needs to work with different operating systems and devices
+* Recognised by DPI analysis systems and therefore susceptible to blocking
+* Can operate over both TCP and UDP network protocols.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="190"/>
+        <location filename="../containers/containers_defs.cpp" line="162"/>
+        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
+
+* Available in the VPNNaruzhu only on desktop platforms
+* Normal power consumption on mobile devices
+
+* Configurable encryption protocol
+* Detectable by some DPI systems
+* Works over TCP network protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3636,25 +3615,14 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 يوفر WireGuard اتصال VPN مستقر و اداء عالي علي جميع الاجهزة. يستعمل إعدادات تشفير معقدة. WireGuard مٌقارنة مع OpenVPN يتمتع بزمن وصول أقل وتحسين إنتاجية نقل البيانات.
 بسبب توقيعات الحزمة المميزة WireGuard عرضة جداُ للحجب. علي عكس باقي برتوكولات VPN التي تستعمل تقنيات تشويش. حزمة أنماط التوقيع المتسقة الخاصة ب WireGuard يمكن التعرف عليها بسهولة ولذلك تٌحجب بواسطة أنظمة الفحص العميق للحزم (DPI) المتقدمة وأدوات مراقبة الشبكة الأخرى.
 
-* مٌتاح في AmneziaVPN عبر جميع المنصات
+* مٌتاح في VPNNaruzhu عبر جميع المنصات
 * استهلاك قليل للطاقة
 * عدد قليل من الإعدادات
 سهل التعرف علية بواسطة انظمة تحليل DPI, عرضة للحجب
 * يعمل عبر بروتوكول شبكة UDP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="219"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation>تم تصميم بروتوكول REALITY، وهو تطور رائد قام به مبدعو XRay، خصيصًا لمواجهة أعلى مستويات الرقابة على الإنترنت من خلال نهجه الجديد في التهرب.
-فهو يحدد بشكل فريد الرقباء أثناء مرحلة مصافحة TLS، ويعمل بسلاسة كوكيل للعملاء الشرعيين بينما يحول الرقباء إلى مواقع الويب الأصلية مثل google.com، وبالتالي يقدم شهادة وبيانات TLS أصلية.
-هذه الإمكانية المتقدمة تميز REALITY عن التقنيات المشابهة من خلال قدرتها على إخفاء حركة مرور الويب على أنها قادمة من مواقع عشوائية وشرعية دون الحاجة إلى تكوينات محددة.
-على عكس البروتوكولات القديمة مثل VMess وVLESS ونقل XTLS-Vision، فإن التعرف المبتكر على &quot;الصديق أو العدو&quot; من REALITY عند مصافحة TLS يعزز الأمان ويتحايل على الكشف بواسطة أنظمة DPI المتطورة التي تستخدم تقنيات التحقيق النشطة. وهذا يجعل من REALITY حلاً قويًا للحفاظ على حرية الإنترنت في البيئات التي تخضع لرقابة صارمة.</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="244"/>
+        <location filename="../containers/containers_defs.cpp" line="245"/>
         <source>After installation, Amnezia will create a
 
  file storage on your server. You will be able to access it using
@@ -3693,46 +3661,34 @@ For more detailed information, you can
         <translation>استبدل خادم ال DNS الحالي مع الخادم الخاص بك, هذا سيزيد من خصوصيتك.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="146"/>
-        <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
-It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
+        <location filename="../containers/containers_defs.cpp" line="172"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
-* Available in the AmneziaVPN across all platforms
-* Normal power consumption on mobile devices
-* Flexible customisation to suit user needs to work with different operating systems and devices
-* Recognised by DPI analysis systems and therefore susceptible to blocking
-* Can operate over both TCP and UDP network protocols.</source>
-        <translation>يبقا OpenVPN كأحد اشهر بروتوكولات VPN و التي تم اختبارها عبر الزمن.
-ينشأ بروتوكول امان مميز, يستفيد من SSL/TLS للتشفير و تغير المفاتيح. واكثر من ذلك, OpenVPN يدعم تعدد طرق المصادقة يجعلة متعدد الاستخدامات وقابلة للتكيف, تلبية مجموعة واسعة من الأجهزة وأنظمة التشغيل. بسبب طبيعتة مفتوحة المصدر, يستفيد OpenVPN  من التدقيق الشامل من قبل المجتمع العالمي, مما يعزز أمنها باستمرار. مع توازن قوي بين الأداء والأمان والتوافق, يظل OpenVPN الخيار الأفضل للأفراد والشركات المهتمين بالخصوصية على حدٍ سواء.
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-* مٌتاح في AmneziaVPN عبر جميع المنصات
-* استهلاك طاقة عادي علي اجهزة المحمول
-* مرونة في التخصيص كي يلائم احتياجات المستخدم حتي يعمل مع انظمة تشغيل واجهزة مختلفة
-* يٌلاحظ بواسطة انظمة تحليل DPI و لذلك عرضة للحجب
-* يمكن ان يعمل علي بروتوكولات شبكة TCP و UDP.</translation>
+Cloak protects OpenVPN from detection and blocking.
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
+
+* Available in the VPNNaruzhu across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by DPI analysis systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="162"/>
-        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
-
-* Available in the AmneziaVPN only on desktop platforms
-* Configurable encryption protocol
-* Detectable by some DPI systems
-* Works over TCP network protocol.</source>
-        <translation>Shadowsocks, مستوحي من بروتوكول SOCKS5, يحمي الاتصال بأستعمال شفرة AEAD. كذلك Shadowsocks صٌمم كي يكون متحفظاً ويصعب تحديدة, إنه ليس مطابقًا لاتصال HTTPS القياسي. عمتاُ. بعض انظمة تحليل حركات المرور قد تتعرف علي اتصال Shadowsocks. بسبب الدعم المحدود في Amnezia, يٌنصح بأستخدام بروتوكول AmneziaWG.
-
-* مٌتاح في AmneziaVPN عبر جميع المنصات
-* بروتوكول تشفير قابل للتكوين
-* قابل للكشف بواسطة بعض انظمة DPI
-* يعمل عبر بروتوكول شبكة TCP.</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="203"/>
+        <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -3741,34 +3697,35 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 بينما WireGuard معروف بأدائة العالي. لدية مشاكل مع سهولة التعرف علية بسبب توقيعات الحزمة المميزة الخاصة بة. يٌصلح AmneziaWG هذه المشكلة عن طريق استخدام طرق تشويش افضل, يجعل حركة المرور تبقا مع حركة مرور انترنت عادية.
 هذا يعني ان AmneziaWG يبقا الاداء العالي الاساسي بينما يضيف طبقة من العزل, هذا يجعلة اختيار ممتاز لهولاء الذين يريدون اتصال VPN سريع و متخفي.
 
-* مٌتاح في AmneziaVPN علي جميع المنصات
+* مٌتاح في VPNNaruzhu علي جميع المنصات
 * استهلاك طاقة قليل
 * اقل عدد من الإعدادات
 * لا يٌكتشف من قبل انظمة تحليل DPI, مقاوم للحجب
 * يعمل عبر بروتوكول شبكة UDP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="230"/>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the AmneziaVPN only on Windows
+* Available in the VPNNaruzhu only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation>IKEv2, مقترن مع طبقة التشفير IPSec, يبقا بروتوكول VPN مستقر و حديث.
-من مميزاتةقدرته على التبديل بسرعة بين الشبكات والأجهزة، مما يجعله قابلاً للتكيف بشكل خاص في بيئات الشبكات الديناميكية. 
-
-*. مٌتاح في AmneziaVPN فقط علي منصة وندوز
-* استهلاك طاقة قليل, علي اجهزة المحمول
-* اقل تكوين
-* يٌلاحظ بواسطة انظمة تحليل DPI
-* يعمل عبر بروتوكول شبكة UDP, منفذ 500 و منفذ 4500.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="242"/>
+        <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>خدمة ال DNS</translation>
     </message>
@@ -4007,8 +3964,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
-        <source>Save AmneziaVPN config</source>
-        <translation>احفظ تكوين AmneziaVPN</translation>
+        <source>Save VPNNaruzhu config</source>
+        <translation>احفظ تكوين VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="83"/>
@@ -4088,31 +4045,31 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>SystemTrayNotificationHandler</name>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
         <source>Show</source>
         <translation>اظهر</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
         <translation>اتصل</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
         <translation>اقطع الاتصال</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
         <translation>زور الموقع</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
         <source>Quit</source>
         <translation>اغلاق</translation>
@@ -4180,22 +4137,22 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="345"/>
+        <location filename="../containers/containers_defs.cpp" line="346"/>
         <source>Low</source>
         <translation>منخفض</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="346"/>
+        <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation>متوسط او عالي</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="355"/>
+        <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>انا فقط اريد زيادة مستوي الخصوصية.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="356"/>
+        <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>أريد تجاوز الرقابة. يوصى بهذا الخيار في معظم الحالات.</translation>
     </message>

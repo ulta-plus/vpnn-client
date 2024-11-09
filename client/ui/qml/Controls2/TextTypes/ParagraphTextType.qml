@@ -7,8 +7,8 @@ Text {
 
     color: AmneziaStyle.color.paleGray
     font.pixelSize: 16
-    font.weight: 400
-    font.family: "PT Root UI VF"
+    font.weight: Font.DemiBold
+    font.family: "Inter"
 
     wrapMode: Text.WordWrap
 }

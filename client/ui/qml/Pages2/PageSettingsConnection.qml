@@ -21,6 +21,8 @@ PageType {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: 20
+
+        KeyNavigation.tab: dnsServersButton // issue_13: amneziaDnsSwitch
     }
 
     FlickableType {
@@ -44,6 +46,7 @@ PageType {
                 headerText: qsTr("Connection")
             }
 
+        /* issue_13: amneziaDnsSwitch
             SwitcherType {
                 id: amneziaDnsSwitch
                 Layout.fillWidth: true
@@ -59,6 +62,7 @@ PageType {
                     }
                 }
             }
+        */
 
             DividerType {}
 
@@ -67,7 +71,6 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("DNS servers")
-                descriptionText: qsTr("When AmneziaDNS is not used or installed")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
 
                 parentFlickable: fl
@@ -77,6 +80,7 @@ PageType {
                 }
             }
 
+        /*
             DividerType {}
 
             LabelWithButtonType {
@@ -114,10 +118,9 @@ PageType {
                     PageController.goToPage(PageEnum.PageSettingsAppSplitTunneling)
                 }
             }
+        */
 
-            DividerType {
-                visible: root.isAppSplitTinnelingEnabled
-            }
+            DividerType {}
 
             SwitcherType {
                 id: killSwitchSwitcher

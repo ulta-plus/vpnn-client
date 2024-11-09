@@ -90,8 +90,11 @@ PageType {
 
                 Layout.fillHeight: true
                 Layout.alignment: Qt.AlignCenter
+
+                KeyNavigation.tab: drawer // issue_5 splitTunnelingButton
             }
 
+        /* issue_5 splitTunnelingButton
             BasicButtonType {
                 id: splitTunnelingButton
                 objectName: "splitTunnelingButton"
@@ -136,6 +139,7 @@ PageType {
                     parent: root
                 }
             }
+        */
         }
     }
 
@@ -315,7 +319,7 @@ PageType {
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                     spacing: 8
 
-                    visible: !ServersModel.isDefaultServerFromApi
+                    visible: false
 
                     DropDownType {
                         id: containersDropDown

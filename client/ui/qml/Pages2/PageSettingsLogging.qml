@@ -61,7 +61,7 @@ PageType {
                 text: qsTr("Enable logs")
 
                 checked: SettingsController.isLoggingEnabled
-                
+
                 onCheckedChanged: {
                     if (checked !== SettingsController.isLoggingEnabled) {
                         SettingsController.isLoggingEnabled = checked
@@ -171,7 +171,7 @@ PageType {
         id: clientLogs
 
         readonly property string title: qsTr("Client logs")
-        readonly property string description: qsTr("AmneziaVPN logs")
+        readonly property string description: qsTr("VPNNaruzhu logs")
         readonly property bool isVisible: true
         readonly property var openLogsHandler: function() {
             SettingsController.openLogsFolder()
@@ -179,11 +179,11 @@ PageType {
         readonly property var exportLogsHandler: function() {
             var fileName = ""
             if (GC.isMobile()) {
-                fileName = "AmneziaVPN.log"
+                fileName = "VPNNaruzhu.log"
             } else {
                 fileName = SystemController.getFileName(qsTr("Save"),
                                                         qsTr("Logs files (*.log)"),
-                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu",
                                                         true,
                                                         ".log")
             }
@@ -200,7 +200,7 @@ PageType {
         id: serviceLogs
 
         readonly property string title: qsTr("Service logs")
-        readonly property string description: qsTr("AmneziaVPN-service logs")
+        readonly property string description: qsTr("VPNNaruzhu-service logs")
         readonly property bool isVisible: !GC.isMobile()
         readonly property var openLogsHandler: function() {
             SettingsController.openServiceLogsFolder()
@@ -208,11 +208,11 @@ PageType {
         readonly property var exportLogsHandler: function() {
             var fileName = ""
             if (GC.isMobile()) {
-                fileName = "AmneziaVPN-service.log"
+                fileName = "VPNNaruzhu-service.log"
             } else {
                 fileName = SystemController.getFileName(qsTr("Save"),
                                                         qsTr("Logs files (*.log)"),
-                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN-service",
+                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu-service",
                                                         true,
                                                         ".log")
             }

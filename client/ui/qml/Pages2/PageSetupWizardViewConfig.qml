@@ -129,15 +129,6 @@ PageType {
                 imageColor: AmneziaStyle.color.vibrantRed
             }
 
-            WarningType {
-                Layout.topMargin: 16
-                Layout.fillWidth: true
-
-                textString: qsTr("Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.")
-
-                iconPath: "qrc:/images/controls/alert-circle.svg"
-            }
-
             Rectangle {
                 Layout.fillWidth: true
                 Layout.bottomMargin: 48
@@ -184,6 +175,28 @@ PageType {
             Layout.bottomMargin: 32
 
             text: qsTr("Connect")
+
+            defaultColor: "transparent"
+            hoveredColor: "#FFDD51"
+            pressedColor: "#FFDD51"
+            disabledColor: "#878B91"
+            textColor: "#000000" // Set default text color to black
+
+            // Button styling
+            background: Rectangle {
+                color: parent.hovered ? "#FFDD51" : "transparent"
+                border.color: parent.hovered ? "#191919" : "#FFDD51" // Set border color to corner color when hovered
+                radius: 10
+            }
+
+            // Button text color
+            contentItem: Text {
+                text: parent.text
+                color: parent.hovered ? "#000000" : "#FFDD51" // Change text color when hovered
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 16
+            }
             clickedFunc: function() {
                 if (cloakingCheckBox.checked) {
                     ImportController.processNativeWireGuardConfig()

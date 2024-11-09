@@ -80,6 +80,7 @@ public:
 
 signals:
     void translationsUpdated();
+    void toggleConnection();
 
 private:
     void initModels();
@@ -108,7 +109,7 @@ private:
     QScopedPointer<OpenVpnConfigModel> m_openVpnConfigModel;
     QScopedPointer<ShadowSocksConfigModel> m_shadowSocksConfigModel;
     QScopedPointer<CloakConfigModel> m_cloakConfigModel;
-    QScopedPointer<XrayConfigModel> m_xrayConfigModel;    
+    QScopedPointer<XrayConfigModel> m_xrayConfigModel;
     QScopedPointer<WireGuardConfigModel> m_wireGuardConfigModel;
     QScopedPointer<AwgConfigModel> m_awgConfigModel;
 #ifdef Q_OS_WINDOWS
@@ -138,6 +139,10 @@ private:
     QNetworkAccessManager *m_nam;
 
     QMetaObject::Connection m_reloadConfigErrorOccurredConnection;
+
+public slots:
+    void restartConnection();
+    void updateSmartRouting();
 };
 
 #endif // AMNEZIA_APPLICATION_H

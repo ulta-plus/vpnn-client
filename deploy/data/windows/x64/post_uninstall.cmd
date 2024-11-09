@@ -1,12 +1,14 @@
 set AmneziaPath=%~dp0
 echo %AmneziaPath%
 
-"%AmneziaPath%\AmneziaVPN.exe" -c
+"%AmneziaPath%\VPNNaruzhu.exe" -c
 timeout /t 1
-sc stop AmneziaVPN-service
-sc delete AmneziaVPN-service
-sc stop AmneziaWGTunnel$AmneziaVPN
-sc delete AmneziaWGTunnel$AmneziaVPN
-taskkill /IM "AmneziaVPN-service.exe" /F
-taskkill /IM "AmneziaVPN.exe" /F
+sc stop VPNNaruzhu-service
+sc delete VPNNaruzhu-service
+sc stop AmneziaWGTunnel$VPNNaruzhu
+sc delete AmneziaWGTunnel$VPNNaruzhu
+taskkill /IM "VPNNaruzhu-service.exe" /F
+taskkill /IM "VPNNaruzhu.exe" /F
+reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" /v VPNNaruzhu /f
+
 exit /b 0

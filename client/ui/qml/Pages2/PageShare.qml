@@ -117,8 +117,8 @@ PageType {
 
     QtObject {
         id: amneziaConnectionFormat
-        readonly property string name: qsTr("For the AmneziaVPN app")
-        readonly property int type: PageShare.ConfigType.AmneziaConnection
+        readonly property string name: qsTr("For the VPNNaruzhu app")
+        readonly property var type: PageShare.ConfigType.AmneziaConnection
     }
     QtObject {
         id: openVpnConnectionFormat

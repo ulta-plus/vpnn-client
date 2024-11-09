@@ -231,10 +231,9 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
-        <translation>सक्रिय
-वर्तमान सर्वर के लिए अक्षम नहीं किया जा सकता</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="64"/>
@@ -408,8 +407,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>VPNNaruzhu</source>
+        <translation>VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -423,8 +422,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>AmneziaVPN notification</source>
-        <translation>AmneziaVPN अधिसूचना</translation>
+        <source>VPNNaruzhu notification</source>
+        <translation>VPNNaruzhu अधिसूचना</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -1167,22 +1166,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Detailed instructions</source>
         <translation>विस्तृत निर्देश</translation>
     </message>
-    <message>
-        <source>Remove SFTP and all data stored there</source>
-        <translation type="vanished">एसएफटीपी और वहां संग्रहीत सभी डेटा हटा दें</translation>
-    </message>
-    <message>
-        <source>Remove SFTP and all data stored there?</source>
-        <translation type="vanished">एसएफटीपी और वहां संग्रहीत सभी डेटा हटाएं?</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">जारी रखना</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">रद्द करना</translation>
-    </message>
 </context>
 <context>
     <name>PageServiceSocksProxySettings</name>
@@ -1291,22 +1274,6 @@ Already installed containers were found on the server. All installed containers 
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>वर्डप्रेस को कॉन्फ़िगर करते समय इस प्याज पते को डोमेन के रूप में सेट करें.</translation>
     </message>
-    <message>
-        <source>Remove website</source>
-        <translation type="vanished">वेबसाइट हटाएँ</translation>
-    </message>
-    <message>
-        <source>The site with all data will be removed from the tor network.</source>
-        <translation type="vanished">सभी डेटा वाली साइट को टोर नेटवर्क से हटा दिया जाएगा.</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">जारी रखना</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">रद्द करना</translation>
-    </message>
 </context>
 <context>
     <name>PageSettings</name>
@@ -1350,9 +1317,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Close application</source>
         <translation>एप्लिकेशन बंद करो</translation>
     </message>
-</context>
-<context>
-    <name>PageSettingsAbout</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="145"/>
         <source>Support Amnezia</source>
@@ -2406,16 +2370,14 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="61"/>
         <source>Server connection</source>
-        <translation type="vanished">सर्वर कनेक्शन</translation>
+        <translation>सर्वर कनेक्शन</translation>
     </message>
     <message>
-        <source>Do not use connection codes from untrusted sources, as they may be created to intercept your data.</source>
-        <translation type="vanished">अविश्वसनीय स्रोतों से कनेक्शन कोड का उपयोग न करें, क्योंकि वे आपके डेटा को बाधित करने के लिए बनाए जा सकते हैं.</translation>
-    </message>
-    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
         <source>What do you have?</source>
-        <translation type="vanished">तुम्हारे पास क्या है?</translation>
+        <translation>तुम्हारे पास क्या है?</translation>
     </message>
     <message>
         <source>File with connection settings or backup</source>
@@ -2424,7 +2386,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="56"/>
         <source>Connection</source>
-        <translation type="unfinished">कनेक्शन</translation>
+        <translation type="obsolete">कनेक्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="83"/>
@@ -2459,12 +2421,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="150"/>
         <source>Insert</source>
-        <translation type="unfinished">डालना</translation>
+        <translation type="obsolete">डालना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="168"/>
         <source>Continue</source>
-        <translation type="unfinished">जारी रखना</translation>
+        <translation type="obsolete">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="185"/>
@@ -2499,7 +2461,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="278"/>
         <source>Restore from backup</source>
-        <translation type="unfinished">बैकअप से बहाल करना</translation>
+        <translation type="obsolete">बैकअप से बहाल करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="279"/>
@@ -2509,12 +2471,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="283"/>
         <source>Open backup file</source>
-        <translation type="unfinished">बैकअप फ़ाइल खोलें</translation>
+        <translation type="obsolete">बैकअप फ़ाइल खोलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="284"/>
         <source>Backup files (*.backup)</source>
-        <translation type="unfinished">बैकअप फ़ाइलें (*.backup)</translation>
+        <translation type="obsolete">बैकअप फ़ाइलें (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="296"/>
@@ -2544,7 +2506,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="330"/>
         <source>I have nothing</source>
-        <translation type="unfinished">मेरे पास कुछ नहीं है</translation>
+        <translation type="obsolete">मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="331"/>
@@ -2748,24 +2710,19 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <source>Settings restored from backup file</source>
-        <translation type="vanished">बैकअप फ़ाइल से सेटिंग्स पुनर्स्थापित की गईं</translation>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="46"/>
+        <source>Open foreign and Russian websites.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Free service for creating a personal VPN on your server.</source>
-        <translation type="vanished">आपके सर्वर पर व्यक्तिगत वीपीएन बनाने के लिए निःशुल्क सेवा.</translation>
-    </message>
-    <message>
-        <source> Helps you access blocked content without revealing your privacy, even to VPN providers.</source>
-        <translation type="vanished"> आपकी गोपनीयता को उजागर किए बिना, यहां तक ​​कि वीपीएन प्रदाताओं को भी, अवरुद्ध सामग्री तक पहुंचने में आपकी सहायता करता है.</translation>
-    </message>
-    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="61"/>
         <source>I have the data to connect</source>
-        <translation type="vanished">मेरे पास कनेक्ट करने के लिए डेटा है</translation>
+        <translation>मेरे पास कनेक्ट करने के लिए डेटा है</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
         <source>I have nothing</source>
-        <translation type="vanished">मेरे पास कुछ नहीं है</translation>
+        <translation>मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="41"/>
@@ -3382,7 +3339,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
         <location filename="../containers/containers_defs.cpp" line="104"/>
-        <location filename="../containers/containers_defs.cpp" line="248"/>
+        <location filename="../containers/containers_defs.cpp" line="249"/>
         <source>SOCKS5 proxy server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3629,7 +3586,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <location filename="../containers/containers_defs.cpp" line="241"/>
+        <location filename="../containers/containers_defs.cpp" line="242"/>
         <source>Website in Tor network</source>
         <translation>टोर नेटवर्क में वेबसाइट</translation>
     </message>
@@ -3674,12 +3631,12 @@ Already installed containers were found on the server. All installed containers 
         <translation>फ़ाइलों को सुरक्षित रूप से संग्रहीत और स्थानांतरित करने के लिए अपने सर्वर पर एक फ़ाइल वॉल्ट बनाएं.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="171"/>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
         <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3687,38 +3644,21 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
 * Works over TCP network protocol, 443 port.
 </source>
-        <translation>यह OpenVPN प्रोटोकॉल और क्लॉक प्लगइन का एक संयोजन है जिसे विशेष रूप से ब्लॉकिंग से बचाने के लिए डिज़ाइन किया गया है।
-
-OpenVPN क्लाइंट और सर्वर के बीच सभी इंटरनेट ट्रैफ़िक को एन्क्रिप्ट करके एक सुरक्षित वीपीएन कनेक्शन प्रदान करता है।
-
-क्लोक ओपनवीपीएन को पहचान और अवरोधन से बचाता है।
-
-क्लोक पैकेट मेटाडेटा को संशोधित कर सकता है ताकि यह वीपीएन ट्रैफ़िक को सामान्य वेब ट्रैफ़िक के रूप में पूरी तरह से मास्क कर दे, और वीपीएन को सक्रिय जांच द्वारा पता लगाने से भी बचाता है। यह इसे पहचाने जाने के प्रति अत्यधिक प्रतिरोधी बनाता है
-
-पहला डेटा पैकेट प्राप्त करने के तुरंत बाद, क्लोक आने वाले कनेक्शन को प्रमाणित करता है। यदि प्रमाणीकरण विफल हो जाता है, तो प्लगइन सर्वर को नकली वेबसाइट के रूप में छिपा देता है और आपका वीपीएन विश्लेषण प्रणालियों के लिए अदृश्य हो जाता है।
-
-यदि आपके क्षेत्र में इंटरनेट सेंसरशिप अत्यधिक स्तर पर है, तो हम आपको सलाह देते हैं कि पहले कनेक्शन से क्लोक पर केवल ओपनवीपीएन का उपयोग करें।
-
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
-* मोबाइल उपकरणों पर उच्च बिजली की खपत
-* लचीली सेटिंग्स
-* डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त नहीं
-* टीसीपी नेटवर्क प्रोटोकॉल, 443 पोर्ट पर काम करता है।.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="190"/>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3727,14 +3667,14 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 वायरगार्ड सभी उपकरणों पर स्थिर वीपीएन कनेक्शन और उच्च प्रदर्शन प्रदान करता है। यह हार्ड-कोडित एन्क्रिप्शन सेटिंग्स का उपयोग करता है। ओपनवीपीएन की तुलना में वायरगार्ड में कम विलंबता और बेहतर डेटा ट्रांसफर थ्रूपुट है।
 वायरगार्ड अपने विशिष्ट पैकेट हस्ताक्षरों के कारण अवरुद्ध होने के प्रति अतिसंवेदनशील है। कुछ अन्य वीपीएन प्रोटोकॉल के विपरीत, जो अस्पष्टता तकनीकों को नियोजित करते हैं, वायरगार्ड पैकेट के सुसंगत हस्ताक्षर पैटर्न को अधिक आसानी से पहचाना जा सकता है और इस प्रकार उन्नत डीप पैकेट निरीक्षण (डीपीआई) सिस्टम और अन्य नेटवर्क निगरानी उपकरणों द्वारा अवरुद्ध किया जा सकता है।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर VPNNaruzhu में उपलब्ध है
 * कम बिजली की खपत
 * सेटिंग्स की न्यूनतम संख्या
 * डीपीआई विश्लेषण प्रणालियों द्वारा आसानी से पहचाना जाना, अवरुद्ध होने की आशंका
 * यूडीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="244"/>
+        <location filename="../containers/containers_defs.cpp" line="245"/>
         <source>After installation, Amnezia will create a
 
  file storage on your server. You will be able to access it using
@@ -3763,10 +3703,6 @@ For more detailed information, you can
         <translation>AmneziaWG - वायरगार्ड पर आधारित Amnezia का विशेष प्रोटोकॉल। यह वायरगार्ड की तरह तेज़ है, लेकिन रुकावटों के प्रति बहुत प्रतिरोधी है। उच्च स्तर की सेंसरशिप वाले क्षेत्रों के लिए अनुशंसित.</translation>
     </message>
     <message>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation type="vanished">IKEv2/IPsec - आधुनिक स्थिर प्रोटोकॉल, दूसरों की तुलना में थोड़ा तेज़, सिग्नल हानि के बाद कनेक्शन पुनर्स्थापित करता है।</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="133"/>
         <source>Deploy a WordPress site on the Tor network in two clicks.</source>
         <translation>दो क्लिक में टोर नेटवर्क पर एक वर्डप्रेस साइट तैनात करें।.</translation>
@@ -3781,7 +3717,7 @@ For more detailed information, you can
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
@@ -3789,7 +3725,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN उपलब्ध सबसे लोकप्रिय और समय-परीक्षणित वीपीएन प्रोटोकॉल में से एक है।
 यह एन्क्रिप्शन और कुंजी विनिमय के लिए एसएसएल/टीएलएस की ताकत का लाभ उठाते हुए, अपने अद्वितीय सुरक्षा प्रोटोकॉल को नियोजित करता है। इसके अलावा, कई प्रमाणीकरण विधियों के लिए ओपनवीपीएन का समर्थन इसे उपकरणों और ऑपरेटिंग सिस्टम की एक विस्तृत श्रृंखला को पूरा करते हुए बहुमुखी और अनुकूलनीय बनाता है। अपनी ओपन-सोर्स प्रकृति के कारण, ओपनवीपीएन को वैश्विक समुदाय द्वारा व्यापक जांच से लाभ मिलता है, जो लगातार इसकी सुरक्षा को मजबूत करता है। प्रदर्शन, सुरक्षा और अनुकूलता के मजबूत संतुलन के साथ, ओपनवीपीएन गोपनीयता के प्रति जागरूक व्यक्तियों और व्यवसायों के लिए शीर्ष विकल्प बना हुआ है।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर VPNNaruzhu में उपलब्ध है
 * मोबाइल उपकरणों पर सामान्य बिजली की खपत
 * विभिन्न ऑपरेटिंग सिस्टम और उपकरणों के साथ काम करने के लिए उपयोगकर्ता की जरूरतों के अनुरूप लचीला अनुकूलन
 * डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त और इसलिए अवरुद्ध होने के लिए अतिसंवेदनशील
@@ -3799,24 +3735,28 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <location filename="../containers/containers_defs.cpp" line="162"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the VPNNaruzhu only on desktop platforms
+* Normal power consumption on mobile devices
+
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>शैडोसॉक्स, SOCKS5 प्रोटोकॉल से प्रेरित होकर, AEAD सिफर का उपयोग करके कनेक्शन की सुरक्षा करता है। हालाँकि शैडोसॉक्स को विवेकपूर्ण और पहचानने में चुनौतीपूर्ण बनाया गया है, यह एक मानक HTTPS कनेक्शन के समान नहीं है। हालाँकि, कुछ ट्रैफ़िक विश्लेषण प्रणालियाँ अभी भी शैडोसॉक्स कनेक्शन का पता लगा सकती हैं। Amnezia में सीमित समर्थन के कारण, AmneziaWG प्रोटोकॉल का उपयोग करने की अनुशंसा की जाती है।
 
-* AmneziaVPN केवल डेस्कटॉप प्लेटफ़ॉर्म पर उपलब्ध है
+* VPNNaruzhu केवल डेस्कटॉप प्लेटफ़ॉर्म पर उपलब्ध है
+* मोबाइल उपकरणों पर सामान्य बिजली की खपत
+
 * कॉन्फ़िगर करने योग्य एन्क्रिप्शन प्रोटोकॉल
 * कुछ डीपीआई सिस्टम द्वारा पता लगाने योग्य
 * टीसीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="203"/>
+        <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -3825,46 +3765,35 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 जबकि वायरगार्ड अपनी दक्षता के लिए जाना जाता है, इसके विशिष्ट पैकेट हस्ताक्षरों के कारण इसे आसानी से पहचाने जाने में समस्याएँ थीं। AmneziaWG बेहतर अस्पष्टीकरण विधियों का उपयोग करके इस समस्या को हल करता है, जिससे इसका ट्रैफ़िक नियमित इंटरनेट ट्रैफ़िक के साथ मिश्रित हो जाता है।
 इसका मतलब यह है कि AmneziaWG स्टील्थ की एक अतिरिक्त परत जोड़ते हुए मूल के तेज़ प्रदर्शन को बनाए रखता है, जिससे यह तेज़ और विवेकपूर्ण वीपीएन कनेक्शन चाहने वालों के लिए एक बढ़िया विकल्प बन जाता है।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर VPNNaruzhu में उपलब्ध है
 * कम बिजली की खपत
 * सेटिंग्स की न्यूनतम संख्या
 * डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त नहीं, अवरोधन के प्रति प्रतिरोधी
 * यूडीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="219"/>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation>रियलिटी प्रोटोकॉल, एक्सरे के रचनाकारों द्वारा एक अग्रणी विकास, विशेष रूप से चोरी के अपने नए दृष्टिकोण के माध्यम से इंटरनेट सेंसरशिप के उच्चतम स्तर का प्रतिकार करने के लिए डिज़ाइन किया गया है।
-यह टीएलएस हैंडशेक चरण के दौरान सेंसर की विशिष्ट रूप से पहचान करता है, सेंसर को google.com जैसी वास्तविक वेबसाइटों की ओर मोड़ते हुए वैध ग्राहकों के लिए प्रॉक्सी के रूप में निर्बाध रूप से काम करता है, इस प्रकार एक प्रामाणिक टीएलएस प्रमाणपत्र और डेटा प्रस्तुत करता है।
-यह उन्नत क्षमता विशिष्ट कॉन्फ़िगरेशन की आवश्यकता के बिना यादृच्छिक, वैध साइटों से आने वाले वेब ट्रैफ़िक को छिपाने की क्षमता के कारण REALITY को समान तकनीकों से अलग करती है।
-VMess, VLESS और XTLS-Vision ट्रांसपोर्ट जैसे पुराने प्रोटोकॉल के विपरीत, TLS हैंडशेक पर REALITY की अभिनव &quot;दोस्त या दुश्मन&quot; पहचान सुरक्षा को बढ़ाती है और सक्रिय जांच तकनीकों को नियोजित करने वाले परिष्कृत DPI सिस्टम द्वारा पहचान को रोकती है। यह REALITY को कठोर सेंसरशिप वाले वातावरण में इंटरनेट की स्वतंत्रता बनाए रखने के लिए एक मजबूत समाधान बनाता है.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="230"/>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the AmneziaVPN only on Windows
+* Available in the VPNNaruzhu only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation>IKEv2, IPSec एन्क्रिप्शन परत के साथ मिलकर, एक आधुनिक और स्थिर वीपीएन प्रोटोकॉल के रूप में खड़ा है।
-इसकी विशिष्ट विशेषताओं में से एक नेटवर्क और उपकरणों के बीच तेजी से स्विच करने की क्षमता है, जो इसे गतिशील नेटवर्क वातावरण में विशेष रूप से अनुकूली बनाती है।
-हालाँकि यह सुरक्षा, स्थिरता और गति का मिश्रण प्रदान करता है, यह ध्यान रखना आवश्यक है कि IKEv2 को आसानी से पहचाना जा सकता है और अवरुद्ध होने की संभावना है।
-
-* केवल विंडोज़ पर AmneziaVPN में उपलब्ध है
-* मोबाइल उपकरणों पर कम बिजली की खपत
-* न्यूनतम विन्यास
-* डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त
-* यूडीपी नेटवर्क प्रोटोकॉल, पोर्ट 500 और 4500 पर काम करता है.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="242"/>
+        <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>DNS सेवाएँ</translation>
     </message>
@@ -4103,8 +4032,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
-        <source>Save AmneziaVPN config</source>
-        <translation>AmneziaVPN कॉन्फ़िगरेशन सहेजें</translation>
+        <source>Save VPNNaruzhu config</source>
+        <translation>VPNNaruzhu कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="83"/>
@@ -4184,31 +4113,31 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>SystemTrayNotificationHandler</name>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
         <source>Show</source>
         <translation>दिखाओ</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
         <translation>कनेक्ट</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
         <translation>डिस्कनेक्ट</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
         <translation>बेवसाइट देखना</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
         <source>Quit</source>
         <translation>छोड़ना</translation>
@@ -4276,36 +4205,24 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="345"/>
+        <location filename="../containers/containers_defs.cpp" line="346"/>
         <source>Low</source>
         <translation>कम</translation>
     </message>
     <message>
-        <source>Medium or High</source>
-        <translation type="vanished">मध्यम या उच्च</translation>
-    </message>
-    <message>
-        <source>Extreme</source>
-        <translation type="vanished">चरम</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="346"/>
+        <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="355"/>
+        <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>मैं बस अपनी गोपनीयता का स्तर बढ़ाना चाहता हूं.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="356"/>
+        <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>मैं सेंसरशिप को दरकिनार करना चाहता हूं। अधिकांश मामलों में इस विकल्प की अनुशंसा की जाती है.</translation>
-    </message>
-    <message>
-        <source>Most VPN protocols are blocked. Recommended if other options are not working.</source>
-        <translation type="vanished">अधिकांश वीपीएन प्रोटोकॉल अवरुद्ध हैं। यदि अन्य विकल्प काम नहीं कर रहे हों तो अनुशंसित.</translation>
     </message>
 </context>
 <context>

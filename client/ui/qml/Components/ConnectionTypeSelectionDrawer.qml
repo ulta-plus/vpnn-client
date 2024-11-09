@@ -36,6 +36,7 @@ DrawerType2 {
             headerText: qsTr("Add new connection")
         }
 
+    /*
         LabelWithButtonType {
             id: ip
             Layout.fillWidth: true
@@ -49,11 +50,12 @@ DrawerType2 {
                 root.closeTriggered()
             }
         }
+    */
 
         DividerType {}
 
         LabelWithButtonType {
-            id: qrCode
+            id: key
             Layout.fillWidth: true
 
             text: qsTr("Open config file, key or QR code")

@@ -59,6 +59,7 @@
         <file>images/tray/active.png</file>
         <file>images/tray/default.png</file>
         <file>images/tray/error.png</file>
+<<<<<<< HEAD
         <file>server_scripts/awg/configure_container.sh</file>
         <file>server_scripts/awg/Dockerfile</file>
         <file>server_scripts/awg/run_container.sh</file>
@@ -224,6 +225,11 @@
         <file>ui/qml/Pages2/PageShare.qml</file>
         <file>ui/qml/Pages2/PageShareFullAccess.qml</file>
         <file>ui/qml/Pages2/PageStart.qml</file>
+        <file>images/naruzhu_logo.png</file>
+        <file>images/controls/email.svg</file>
+        <file>images/controls/tabBarChat.svg</file>
+        <file>images/controls/chat.svg</file>
+        <file>images/controls/telegramNaruzhu.svg</file>
     </qresource>
     <qresource prefix="/countriesFlags">
         <file>images/flagKit/ZW.svg</file>

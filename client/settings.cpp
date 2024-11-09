@@ -261,9 +261,10 @@ QString Settings::routeModeString(RouteMode mode) const
 
 Settings::RouteMode Settings::routeMode() const
 {
-    return static_cast<RouteMode>(value("Conf/routeMode", 0).toInt());
+    return static_cast<RouteMode>(value("Conf/routeMode", VpnAllExceptSites).toInt());
 }
 
+/* issue_5
 bool Settings::isSitesSplitTunnelingEnabled() const
 {
     return value("Conf/sitesSplitTunnelingEnabled", false).toBool();
@@ -272,6 +273,13 @@ bool Settings::isSitesSplitTunnelingEnabled() const
 void Settings::setSitesSplitTunnelingEnabled(bool enabled)
 {
     setValue("Conf/sitesSplitTunnelingEnabled", enabled);
+}
+*/
+
+bool Settings::isVpnSiteInSettings(const QString &site)
+{
+    QVariantMap sites = vpnSites(VpnAllExceptSites);
+    return sites.contains(site);
 }
 
 bool Settings::addVpnSite(RouteMode mode, const QString &site, const QString &ip)
@@ -435,7 +443,7 @@ void Settings::setAppsSplitTunnelingEnabled(bool enabled)
 
 bool Settings::isKillSwitchEnabled() const
 {
-    return value("Conf/killSwitchEnabled", true).toBool();
+    return value("Conf/killSwitchEnabled", false).toBool();
 }
 
 void Settings::setKillSwitchEnabled(bool enabled)

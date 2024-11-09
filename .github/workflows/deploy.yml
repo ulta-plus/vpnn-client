@@ -69,7 +69,7 @@ jobs:
     - name: 'Upload translations artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VNPNaruzhu_translations
+        name: VPNNaruzhu_translations
         path: client/translations
         retention-days: 7
 

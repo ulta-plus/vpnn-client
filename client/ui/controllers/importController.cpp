@@ -267,6 +267,10 @@ void ImportController::importConfig()
     credentials.port = m_config.value(config_key::port).toInt();
     credentials.userName = m_config.value(config_key::userName).toString();
     credentials.secretData = m_config.value(config_key::password).toString();
+    QString dns1 = m_config.value(config_key::dns1).toString();
+    QString dns2 = m_config.value(config_key::dns2).toString();
+    m_settings->setPrimaryDns(dns1);
+    m_settings->setSecondaryDns(dns2);
 
     if (credentials.isValid() || m_config.contains(config_key::containers)) {
         m_serversModel->addServer(m_config);

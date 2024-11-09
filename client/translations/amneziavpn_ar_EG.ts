@@ -251,12 +251,12 @@ Can&apos;t be disabled for current server</source>
         <translation>ملف تكوين غير صحيح</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="627"/>
+        <location filename="../ui/controllers/importController.cpp" line="631"/>
         <source>Scanned %1 of %2.</source>
         <translation>تم فحص%1 من %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="662"/>
+        <location filename="../ui/controllers/importController.cpp" line="666"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>في التكوين المستورد، تم العثور على سطور يحتمل أن تكون خطرة:</translation>
     </message>

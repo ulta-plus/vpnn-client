@@ -252,12 +252,12 @@ Can&apos;t be disabled for current server</source>
         <translation>Неверный файл конфигурации</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="627"/>
+        <location filename="../ui/controllers/importController.cpp" line="631"/>
         <source>Scanned %1 of %2.</source>
         <translation>Отсканировано %1 из %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="662"/>
+        <location filename="../ui/controllers/importController.cpp" line="666"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>В импортированной конфигурации были обнаружены потенциально опасные строки:</translation>
     </message>

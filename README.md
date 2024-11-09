@@ -33,10 +33,10 @@
 
 ## Links
 
-[https://naruzhu.click/appam](https://naruzhu.click/appam) - project website
-[https://www.reddit.com/r/AmneziaVPN](https://www.reddit.com/r/AmneziaVPN) - Reddit of original project
-[https://t.me/vpn_naruzhu_support_bot](https://t.me/vpn_naruzhu_support_bot) - Telegram support
-[https://t.me/vpn_naruzhu](https://t.me/vpn_naruzhu) - Telegram group
+- [https://naruzhu.click/appam](https://naruzhu.click/appam) - project website
+- [https://www.reddit.com/r/AmneziaVPN](https://www.reddit.com/r/AmneziaVPN) - Reddit of original project
+- [https://t.me/vpn_naruzhu_support_bot](https://t.me/vpn_naruzhu_support_bot) - Telegram support
+- [https://t.me/vpn_naruzhu](https://t.me/vpn_naruzhu) - Telegram group
 
 ## Tech
 

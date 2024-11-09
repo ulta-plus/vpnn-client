@@ -60,6 +60,8 @@ signals:
 
     void restoreAppConfig(const QByteArray &data);
 
+    void siteNeedsAddition(const QString& hostname);
+
 private:
     QJsonObject extractOpenVpnConfig(const QString &data);
     QJsonObject extractWireGuardConfig(const QString &data);
@@ -72,6 +74,8 @@ private:
 #if defined Q_OS_ANDROID || defined Q_OS_IOS
     void stopDecodingQr();
 #endif
+
+    QString getNewServerName();
 
     QSharedPointer<ServersModel> m_serversModel;
     QSharedPointer<ContainersModel> m_containersModel;

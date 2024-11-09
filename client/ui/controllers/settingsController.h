@@ -30,8 +30,10 @@ public:
     Q_PROPERTY(bool isDevGatewayEnv READ isDevGatewayEnv WRITE toggleDevGatewayEnv NOTIFY devGatewayEnvChanged)
 
 public slots:
+    /* issue_13: don't allow to use Amnezia DNS
     void toggleAmneziaDns(bool enable);
     bool isAmneziaDnsEnabled();
+    */
 
     QString getPrimaryDns();
     void setPrimaryDns(const QString &dns);
@@ -102,7 +104,9 @@ signals:
 
     void importBackupFromOutside(QString filePath);
 
+    /* issue_13: don't allow to use Amnezia DNS
     void amneziaDnsToggled(bool enable);
+    */
 
     void loggingDisableByWatcher();
 

@@ -11,15 +11,16 @@ import Style 1.0
 Button {
     id: root
 
-    property string defaultButtonColor: AmneziaStyle.color.paleGray
-    property string progressButtonColor: AmneziaStyle.color.paleGray
-    property string connectedButtonColor: AmneziaStyle.color.goldenApricot
+    property string defaultButtonColor: "#F1F0EF"
+    property string progressButtonColor: "#FFDD51"
+    property string connectedButtonColor: "#33CC8C"
+    property string errorButtonColor: "#FF6969"
     property bool buttonActiveFocus: activeFocus && (Qt.platform.os !== "android" || SettingsController.isOnTv())
 
     implicitWidth: 190
     implicitHeight: 190
 
-    text: ConnectionController.connectionStateText
+    text: qsTr(ConnectionController.connectionStateText)
 
     Connections {
         target: ConnectionController
@@ -51,7 +52,7 @@ Button {
                 verticalOffset: 0
                 radius: 10
                 samples: 25
-                color: root.buttonActiveFocus ? AmneziaStyle.color.paleGray : AmneziaStyle.color.goldenApricot
+                color: root.activeFocus ? "#D7D8DB" : "#F1F0EF"
                 source: backgroundCircle
             }
 
@@ -75,9 +76,11 @@ Button {
                 fillColor: AmneziaStyle.color.transparent
                 strokeColor: {
                     if (ConnectionController.isConnectionInProgress) {
-                        return AmneziaStyle.color.darkCharcoal
+                        return progressButtonColor
                     } else if (ConnectionController.isConnected) {
                         return connectedButtonColor
+                    } else if (ConnectionController.isConnectionFailed) {
+                        return errorButtonColor
                     } else {
                         return defaultButtonColor
                     }
@@ -115,8 +118,8 @@ Button {
             visible: ConnectionController.isConnectionInProgress
 
             ShapePath {
-                fillColor: AmneziaStyle.color.transparent
-                strokeColor: AmneziaStyle.color.paleGray
+                fillColor: "transparent"
+                strokeColor: "black"
                 strokeWidth: 3
                 capStyle: ShapePath.RoundCap
 
@@ -148,7 +151,18 @@ Button {
         font.weight: 700
         font.pixelSize: 20
 
-        color: ConnectionController.isConnected ? connectedButtonColor : defaultButtonColor
+        color: {
+            if (ConnectionController.isConnectionInProgress) {
+                return progressButtonColor
+            } else if (ConnectionController.isConnected) {
+                return connectedButtonColor
+            } else if (ConnectionController.isConnectionFailed) {
+                return errorButtonColor
+            } else {
+                return defaultButtonColor
+            }
+        }
+
         text: root.text
 
         horizontalAlignment: Text.AlignHCenter

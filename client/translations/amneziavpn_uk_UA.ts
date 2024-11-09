@@ -2,29 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="uk_UA">
 <context>
-    <name>AmneziaApplication</name>
-    <message>
-        <source>Split tunneling for WireGuard is not implemented, the option was disabled</source>
-        <translation type="vanished">Роздільне тунелювання для &quot;Wireguard&quot; не реалізовано, опцію вимкнено</translation>
-    </message>
-    <message>
-        <source>Split tunneling for %1 is not implemented, the option was disabled</source>
-        <translation type="vanished">Роздільне тунелювання для %1 не реалізовано, опцію вимкнено</translation>
-    </message>
-</context>
-<context>
-    <name>AndroidController</name>
-    <message>
-        <source>AmneziaVPN</source>
-        <translation type="vanished">AmneziaVPN</translation>
-    </message>
-    <message>
-        <source>VPN Connected</source>
-        <extracomment>Refers to the app - which is currently running the background and waiting</extracomment>
-        <translation type="vanished">VPN Підключено</translation>
-    </message>
-</context>
-<context>
     <name>ApiServicesModel</name>
     <message>
         <location filename="../ui/models/apiServicesModel.cpp" line="65"/>
@@ -111,14 +88,14 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="214"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="220"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
         <translation>VPN протоколи не встановлено.
  Будь-ласка, встановіть VPN контейнер</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="233"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="239"/>
         <source>unable to create configuration</source>
         <translation>Неможливо створити конфігурацію</translation>
     </message>
@@ -148,7 +125,7 @@
         <translation>Налаштування оновлено</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="209"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="215"/>
         <source>The selected protocol is not supported on the current platform</source>
         <translation>Вибраний протокол не підтримується на цьому пристрої</translation>
     </message>
@@ -158,7 +135,7 @@
         <translation>Перепідключення...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="80"/>
+        <location filename="../ui/controllers/connectionController.h" line="83"/>
         <location filename="../ui/controllers/connectionController.cpp" line="100"/>
         <location filename="../ui/controllers/connectionController.cpp" line="115"/>
         <location filename="../ui/controllers/connectionController.cpp" line="121"/>
@@ -179,12 +156,7 @@
         <translation>Додати нове з&apos;єднання</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="57"/>
-        <source>Configure your server</source>
-        <translation>Налаштувати свій сервер</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="74"/>
+        <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="58"/>
         <source>Open config file, key or QR code</source>
         <translation>Відкрити файл конфігурації, ключ або QR код</translation>
     </message>
@@ -226,14 +198,6 @@
         <source>Unable change protocol while there is an active connection</source>
         <translation>Неможливо змінити протокол при активному підключенні</translation>
     </message>
-    <message>
-        <source>The selected protocol is not supported on the current platform</source>
-        <translation type="vanished">Вибраний протокол не підтримується на цьому пристрої</translation>
-    </message>
-    <message>
-        <source>Reconnect via VPN Procotol: </source>
-        <translation type="vanished">Перепідлючення VPN протоколом: </translation>
-    </message>
 </context>
 <context>
     <name>HomeSplitTunnelingDrawer</name>
@@ -254,10 +218,9 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="59"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
-        <translation>Увімкнено.
-Не може бути вимкнено для даного сервера</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="79"/>
@@ -433,8 +396,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <source>VPNNaruzhu</source>
+        <translation>VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -448,8 +411,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>AmneziaVPN notification</source>
-        <translation>Сповіщення AmneziaVPN</translation>
+        <source>VPNNaruzhu notification</source>
+        <translation>Сповіщення VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -491,27 +454,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>Логування увімкнено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
-        <source>Split tunneling enabled</source>
-        <translation>Роздільне тунелювання увімкнено</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="111"/>
-        <source>Split tunneling disabled</source>
-        <translation>Роздільне тунелювання вимкнено</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="328"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
         <source>VPN protocol</source>
         <translation>VPN протокол</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="383"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
         <source>Servers</source>
         <translation>Сервери</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="495"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
         <source>Unable change server while there is an active connection</source>
         <translation>Не можна змінити сервер при активному підключенні</translation>
     </message>
@@ -682,10 +635,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Cancel</source>
         <translation>Відмінити</translation>
     </message>
-    <message>
-        <source>Save and Restart Amnezia</source>
-        <translation type="vanished">Зберегти і перезапустити Amnezia</translation>
-    </message>
 </context>
 <context>
     <name>PageProtocolCloakSettings</name>
@@ -720,10 +669,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Неможливо змінити налаштування, поки є активне підключення</translation>
     </message>
-    <message>
-        <source>Save and Restart Amnezia</source>
-        <translation type="vanished">Зберегти і перезавантажити Amnezia</translation>
-    </message>
 </context>
 <context>
     <name>PageProtocolOpenVpnSettings</name>
@@ -731,10 +676,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="94"/>
         <source>OpenVPN settings</source>
         <translation>налаштування OpenVPN</translation>
-    </message>
-    <message>
-        <source>VPN Addresses Subnet</source>
-        <translation type="vanished">Підмережа для VPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="103"/>
@@ -904,34 +845,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Unable change settings while there is an active connection</source>
         <translation>Неможливо змінити налаштування, поки є активне підключення</translation>
     </message>
-    <message>
-        <source>Remove OpenVPN</source>
-        <translation type="vanished">Видалити OpenVPN</translation>
-    </message>
-    <message>
-        <source>Remove OpenVPN from server?</source>
-        <translation type="vanished">Видалити OpenVPN з серверу?</translation>
-    </message>
-    <message>
-        <source>All users with whom you shared a connection will no longer be able to connect to it.</source>
-        <translation type="vanished">Користувачі, з якими ви поділились цим протоколм, більше не зможуть до нього підключитись.</translation>
-    </message>
-    <message>
-        <source>All users who you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="vanished">Користувачі, з якими ви поділились цим протоколм, більше не зможуть до нього підключитись.</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продовжити</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">Відмінити</translation>
-    </message>
-    <message>
-        <source>Save and Restart Amnezia</source>
-        <translation type="vanished">Зберегти и перезапустити Amnezia</translation>
-    </message>
 </context>
 <context>
     <name>PageProtocolRaw</name>
@@ -964,10 +877,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="232"/>
         <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
         <translation>Усі користувачі, з якими ви поділилися підключенням, більше не зможуть підключитися до нього.</translation>
-    </message>
-    <message>
-        <source>All users with whom you shared a connection will no longer be able to connect to it.</source>
-        <translation type="vanished">Користувачі, з якими ви поділились цим протоколм, більше не зможуть до нього підключитись.</translation>
     </message>
     <message>
         <source>All users who you shared a connection with will no longer be able to connect to it.</source>
@@ -1218,10 +1127,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>Порт</translation>
     </message>
     <message>
-        <source>Login</source>
-        <translation type="vanished">Логін</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="157"/>
         <source>User name</source>
         <translation>Імя користувача</translation>
@@ -1257,22 +1162,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="290"/>
         <source>Detailed instructions</source>
         <translation>Детальні інструкції</translation>
-    </message>
-    <message>
-        <source>Remove SFTP and all data stored there</source>
-        <translation type="vanished">Видалити SFTP-сховище з усіма даними</translation>
-    </message>
-    <message>
-        <source>Remove SFTP and all data stored there?</source>
-        <translation type="vanished">Видалити SFTP-сховище з усіма даними які там зберігаються?</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продовжити</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">Відмінити</translation>
     </message>
 </context>
 <context>
@@ -1382,26 +1271,6 @@ Already installed containers were found on the server. All installed containers 
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>При налаштуванні WordPress, вкажіть цей Onion в якості домена.</translation>
     </message>
-    <message>
-        <source>When configuring WordPress set the this address as domain.</source>
-        <translation type="vanished">При налаштуванні WordPress, вкажіть цей Onion в якості домена.</translation>
-    </message>
-    <message>
-        <source>Remove website</source>
-        <translation type="vanished">Видалити сайт</translation>
-    </message>
-    <message>
-        <source>The site with all data will be removed from the tor network.</source>
-        <translation type="vanished">Сайт з усіма даними буде видалено з мережі Tor.</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продовжити</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">Відмінити</translation>
-    </message>
 </context>
 <context>
     <name>PageSettings</name>
@@ -1432,8 +1301,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
-        <source>About AmneziaVPN</source>
-        <translation>Про AmneziaVPN</translation>
+        <source>About VPNNaruzhu</source>
+        <translation>Про VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
@@ -1441,25 +1310,24 @@ Already installed containers were found on the server. All installed containers 
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
-        <source>Close application</source>
-        <translation>Закрити застосунок</translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsAbout</name>
-    <message>
-        <source>Support the project with a donation</source>
-        <translation type="vanished">Підтримайте проект донатом</translation>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="156"/>
+        <source>Support via Telegram</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="72"/>
-        <source>Support Amnezia</source>
-        <translation>Підтримайте Amnezia</translation>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="171"/>
+        <source>Support via Email</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This is a free and open source application. If you like it, support the developers with a donation. </source>
-        <translation type="vanished">Це безкоштовний застосунок з відкритим кодом. Якщо він вам подобається - підтримайте розробників донатом.</translation>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="172"/>
+        <source>team@vpn-naruzhu.com</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="187"/>
+        <source>Telegram Group</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>And if you don’t like the application, all the more reason to support it - the donation will be used for the improving the application.</source>
@@ -1773,8 +1641,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
-        <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>Всі дані із застосунку будуть видалені, всі встановлені сервіси AmneziaVPN залишаться на сервері.</translation>
+        <source>All settings will be reset to default. All installed VPNNaruzhu services will still remain on the server.</source>
+        <translation>Всі дані із застосунку будуть видалені, всі встановлені сервіси VPNNaruzhu залишаться на сервері.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
@@ -1795,17 +1663,9 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsBackup</name>
     <message>
-        <source>Backup</source>
-        <translation type="vanished">Резервне копіювання</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="30"/>
         <source>Settings restored from backup file</source>
         <translation>Відновлення налаштувань із бекап файлу</translation>
-    </message>
-    <message>
-        <source>Configuration backup</source>
-        <translation type="vanished">Бекап конфігурація</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="75"/>
@@ -1819,8 +1679,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
-        <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>Резервна копія міститиме ваші паролі та приватні ключі для всіх серверів, доданих до AmneziaVPN. Зберігайте цю інформацію у безпечному місці.</translation>
+        <source>The backup will contain your passwords and private keys for all servers added to VPNNaruzhu. Keep this information in a secure place.</source>
+        <translation>Резервна копія міститиме ваші паролі та приватні ключі для всіх серверів, доданих до VPNNaruzhu. Зберігайте цю інформацію у безпечному місці.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1887,71 +1747,24 @@ Already installed containers were found on the server. All installed containers 
         <translation>З&apos;єднання</translation>
     </message>
     <message>
-        <source>Auto connect</source>
-        <translation type="vanished">Автопідключення</translation>
-    </message>
-    <message>
-        <source>Connect to VPN on app start</source>
-        <translation type="vanished">Підключення до VPN при старті застосунку</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="61"/>
-        <source>Use AmneziaDNS</source>
-        <translation>Використовувати AmneziaDNS</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="62"/>
-        <source>If AmneziaDNS is installed on the server</source>
-        <translation>Якщо він встановлений на сервері</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="80"/>
         <source>DNS servers</source>
         <translation>DNS сервер</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="81"/>
-        <source>When AmneziaDNS is not used or installed</source>
-        <translation>Ці адреси будуть використовуватись коли вимкнений AmneziaDNS</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="127"/>
-        <source>Allows you to use the VPN only for certain Apps</source>
-        <translation>Дозволяє використовувати VPN тільки для вибраних застосунків</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="154"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="87"/>
         <source>KillSwitch</source>
         <translation>KillSwitch</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="155"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="88"/>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
         <translation>Вимикає ваш інтернет, якщо ваше захищене VPN-підключення зникає з будь-якої причини.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="99"/>
         <source>Cannot change killSwitch settings during active connection</source>
         <translation>Неможливо змінити налаштування killSwitch під час активного підключення</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="97"/>
-        <source>Site-based split tunneling</source>
-        <translation>Роздільне тунелювання сайтів</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="98"/>
-        <source>Allows you to select which sites you want to access through the VPN</source>
-        <translation>Дозволяє доступ до одних сайтів через VPN, а для інших в обхід VPN</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="126"/>
-        <source>App-based split tunneling</source>
-        <translation>Роздільне VPN-тунелювання застосунків</translation>
-    </message>
-    <message>
-        <source>Allows you to use the VPN only for certain applications</source>
-        <translation type="vanished">Дозволяє використовувати VPN тільки для вибраних програм</translation>
     </message>
 </context>
 <context>
@@ -1967,56 +1780,47 @@ Already installed containers were found on the server. All installed containers 
         <translation>DNS сервер</translation>
     </message>
     <message>
-        <source>When AmneziaDNS is not used or installed</source>
-        <translation type="vanished">Ці адреси будуть використовуватись, коли вимкнено або не встановлено AmneziaDNS</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="70"/>
-        <source>If AmneziaDNS is not used or installed</source>
-        <translation>Якщо AmneziaDNS вимкнено або не встановлено</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="79"/>
         <source>Primary DNS</source>
         <translation>Основний DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="93"/>
         <source>Secondary DNS</source>
         <translation>Допоміжний DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="114"/>
         <source>Restore default</source>
         <translation>Відновити за замовчуванням</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="115"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
         <source>Restore default DNS settings?</source>
         <translation>Відновити налаштування DNS за замовчуванням?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="118"/>
         <source>Continue</source>
         <translation>Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="117"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="119"/>
         <source>Cancel</source>
         <translation>Відмінити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="126"/>
         <source>Settings have been reset</source>
         <translation>Налаштування скинуті</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="149"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="156"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="158"/>
         <source>Settings saved</source>
         <translation>Зберегти налаштування</translation>
     </message>
@@ -2138,18 +1942,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>Всі встановлені протоколи та сервіси були додані в застосунок</translation>
     </message>
     <message>
-        <source>Clear Amnezia cache</source>
-        <translation type="vanished">Очистити кеш Amnezia</translation>
-    </message>
-    <message>
-        <source>May be needed when changing other settings</source>
-        <translation type="vanished">Може знадобитись при зміні інших налаштувань</translation>
-    </message>
-    <message>
-        <source>Clear cached profiles?</source>
-        <translation type="vanished">Видалити кеш Amnezia?</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="33"/>
         <source>No new installed containers found</source>
         <translation>Нові встановлені протоколи і сервіси не виявлені</translation>
@@ -2260,29 +2052,9 @@ Already installed containers were found on the server. All installed containers 
         <translation>Ви хочете скинути API конфігурацію?</translation>
     </message>
     <message>
-        <source>Remove this server from the app</source>
-        <translation type="vanished">Видалити сервер із застосунку</translation>
-    </message>
-    <message>
-        <source>Remove server from application?</source>
-        <translation type="vanished">Видалити сервер із застосунку?</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
-        <source>All installed AmneziaVPN services will still remain on the server.</source>
+        <source>All installed VPNNaruzhu services will still remain on the server.</source>
         <translation>Всі встановлені сервіси та протоколи Amnezia все ще залишаться на сервері.</translation>
-    </message>
-    <message>
-        <source>Clear server Amnezia-installed services</source>
-        <translation type="vanished">Видалити всі сервіси і протоколи Amnezia з сервера</translation>
-    </message>
-    <message>
-        <source>Clear server Amnezia-installed services?</source>
-        <translation type="vanished">Видалити всі сервіси і протоколи Amnezia з сервера?</translation>
-    </message>
-    <message>
-        <source>All containers will be deleted on the server. This means that configuration files, keys and certificates will be deleted.</source>
-        <translation type="vanished">На сервері будуть видалені всі дані, повязані з Amnezia: протоколи, сервіси, конфігураційні файли, ключі та сертифікати.</translation>
     </message>
 </context>
 <context>
@@ -2311,10 +2083,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="242"/>
         <source>Management</source>
         <translation>Управління</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">Дані</translation>
     </message>
 </context>
 <context>
@@ -2416,10 +2184,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsSplitTunneling</name>
     <message>
-        <source>Only the sites listed here will be accessed via VPN</source>
-        <translation type="vanished">Тільки адреси із списку мають відкриватись через VPN</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="78"/>
         <source>Addresses from the list should not be accessed via VPN</source>
         <translation>Адреси із списку не повинні відкриватись через VPN</translation>
@@ -2448,10 +2212,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="274"/>
         <source>Cancel</source>
         <translation>Відмінити</translation>
-    </message>
-    <message>
-        <source>Website or IP</source>
-        <translation type="vanished">Сайт чи IP</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="399"/>
@@ -2571,24 +2331,14 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="61"/>
         <source>Server connection</source>
-        <translation type="vanished">Підключення до сервера</translation>
+        <translation>Підключення до сервера</translation>
     </message>
     <message>
-        <source>Do not use connection code from public sources. It may have been created to intercept your data.
-
-It&apos;s okay as long as it&apos;s from someone you trust.</source>
-        <translation type="vanished">Не використовуйте код підключення з загальнодоступних джерел. Можливо, його було створено для перехоплення ваших даних.
-
-Все в порядку, якщо ви використовуєте код, яким поділився користувач, якому ви довіряєте.</translation>
-    </message>
-    <message>
-        <source>Do not use connection codes from untrusted sources, as they may be created to intercept your data.</source>
-        <translation type="vanished">Не використовуйте код підключення з загальнодоступних джерел. Можливо, його було створено для перехоплення ваших даних.</translation>
-    </message>
-    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
         <source>What do you have?</source>
-        <translation type="vanished">Виберіть що у вас є</translation>
+        <translation>Виберіть що у вас є</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="241"/>
@@ -2596,13 +2346,14 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
         <translation>Файл з налаштуваннями підключення</translation>
     </message>
     <message>
-        <source>File with connection settings or backup</source>
-        <translation type="vanished">Файл з налаштуваннями підключення або бекап</translation>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="281"/>
+        <source>Key as Text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="57"/>
-        <source>Connection</source>
-        <translation>Підключення</translation>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="257"/>
+        <source>Key as file</source>
+        <translation>Ключ як файл</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="83"/>
@@ -2802,21 +2553,9 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>Пропустити налаштування</translation>
     </message>
     <message>
-        <source>Set up a VPN yourself</source>
-        <translation type="vanished">Налаштувати VPN самостійно</translation>
-    </message>
-    <message>
-        <source>I want to choose a VPN protocol</source>
-        <translation type="vanished">Вибрати VPN-протокол</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="165"/>
         <source>Continue</source>
         <translation>Продовжити</translation>
-    </message>
-    <message>
-        <source>Set up later</source>
-        <translation type="vanished">Налаштувати пізніше</translation>
     </message>
 </context>
 <context>
@@ -2825,14 +2564,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="59"/>
         <source>The server has already been added to the application</source>
         <translation>Сервер уже додано в застосунок</translation>
-    </message>
-    <message>
-        <source>Amnesia has detected that your server is currently </source>
-        <translation type="vanished">Amnezia виявила, що ваш сервер зараз</translation>
-    </message>
-    <message>
-        <source>busy installing other software. Amnesia installation </source>
-        <translation type="vanished">зайнятий встановленням інших протоколів та сервісів. Встановлення Amnezia </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
@@ -2928,29 +2659,24 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <source>Settings restored from backup file</source>
-        <translation type="vanished">Відновлення налаштувань із бекап файлу</translation>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="46"/>
+        <source>Open foreign and Russian websites.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Free service for creating a personal VPN on your server.</source>
-        <translation type="vanished">Простий і безкоштовний застосунок для запуска self-hosted VPN з високими вимогами до приватності.</translation>
-    </message>
-    <message>
-        <source> Helps you access blocked content without revealing your privacy, even to VPN providers.</source>
-        <translation type="vanished"> Допомагає отримати доступ до заблокованого вмісту, не повідомляючи про вашу конфіденційність, навіть постачальникам VPN.</translation>
-    </message>
-    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="61"/>
         <source>I have the data to connect</source>
-        <translation type="vanished">У мене є дані для підключення</translation>
+        <translation>У мене є дані для підключення</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="123"/>
+        <source>https://naruzhu.click/appam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
         <source>I have nothing</source>
-        <translation type="vanished">У мене нічого нема</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="48"/>
-        <source>Let&apos;s get started</source>
-        <translation>Почнемо</translation>
+        <translation>У мене нічого нема</translation>
     </message>
 </context>
 <context>
@@ -2989,12 +2715,9 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>Нове підключення</translation>
     </message>
     <message>
-        <source>Do not use connection code from public sources. It could be created to intercept your data.</source>
-        <translation type="vanished">Не використовуйте код підключення з загальнодоступних джерел. Він може бути створений для перехоплення ваших даних.</translation>
-    </message>
-    <message>
-        <source>Do not use connection codes from untrusted sources, as they may be created to intercept your data.</source>
-        <translation type="vanished">Не використовуйте код підключення з загальнодоступних джерел. Він може бути створений для перехоплення ваших даних.</translation>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
+        <source>View debugging information</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
@@ -3002,22 +2725,12 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>Згорнути</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="109"/>
-        <source>Show content</source>
-        <translation>Показати вміст ключа</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="123"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
         <translation>Увімкніть обфускацію WireGuard. Це може бути корисним, якщо WireGuard заблокований у вашого провайдера.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="144"/>
-        <source>Use connection codes only from sources you trust. Codes from public sources may have been created to intercept your data.</source>
-        <translation>Використовуйте коди підключення тільки з джерел, яким ви довіряєте. Коди з публічних джерел можуть бути створені для перехоплення ваших даних.</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="196"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="187"/>
         <source>Connect</source>
         <translation>Підключитись</translation>
     </message>
@@ -3035,31 +2748,15 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>WireGuard нативний формат</translation>
     </message>
     <message>
-        <source>VPN Access</source>
-        <translation type="vanished">VPN-Доступ</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="289"/>
         <source>Connection</source>
         <translation>З&apos;єднання</translation>
-    </message>
-    <message>
-        <source>VPN access without the ability to manage the server</source>
-        <translation type="vanished">Доступ до VPN, без можливості керування сервером</translation>
-    </message>
-    <message>
-        <source>Access to server management. The user with whom you share full access to the connection will be able to add and remove your protocols and services to the server, as well as change settings.</source>
-        <translation type="vanished">Доступ до керування сервером. Користувач, з яким ви ділитесь повним доступом до підключення, зможе додавати та видаляти протоколи і служби на сервері, а також змінювати налаштування.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="362"/>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="363"/>
         <source>Server</source>
         <translation>Сервер</translation>
-    </message>
-    <message>
-        <source>Accessing </source>
-        <translation type="vanished">Доступ </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="40"/>
@@ -3108,8 +2805,8 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
-        <source>For the AmneziaVPN app</source>
-        <translation>Для AmneziaVPN</translation>
+        <source>For the VPNNaruzhu app</source>
+        <translation>Для VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="137"/>
@@ -3225,10 +2922,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="962"/>
         <source>Cancel</source>
         <translation>Відмінити</translation>
-    </message>
-    <message>
-        <source>Full access</source>
-        <translation type="vanished">Повний доступ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="329"/>
@@ -3664,58 +3357,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sftp error: End-of-file encountered</source>
-        <translation type="vanished">Sftp error: End-of-file encountered</translation>
-    </message>
-    <message>
-        <source>Sftp error: File does not exist</source>
-        <translation type="vanished">Sftp error: File does not exist</translation>
-    </message>
-    <message>
-        <source>Sftp error: Permission denied</source>
-        <translation type="vanished">Sftp error: Permission denied</translation>
-    </message>
-    <message>
-        <source>Sftp error: Generic failure</source>
-        <translation type="vanished">Sftp error: Generic failure</translation>
-    </message>
-    <message>
-        <source>Sftp error: Garbage received from server</source>
-        <translation type="vanished">Sftp error: Garbage received from server</translation>
-    </message>
-    <message>
-        <source>Sftp error: No connection has been set up</source>
-        <translation type="vanished">Sftp error: No connection has been set up</translation>
-    </message>
-    <message>
-        <source>Sftp error: There was a connection, but we lost it</source>
-        <translation type="vanished">Sftp error: There was a connection, but we lost it</translation>
-    </message>
-    <message>
-        <source>Sftp error: Operation not supported by libssh yet</source>
-        <translation type="vanished">Sftp error: Operation not supported by libssh yet</translation>
-    </message>
-    <message>
-        <source>Sftp error: Invalid file handle</source>
-        <translation type="vanished">Sftp error: Invalid file handle</translation>
-    </message>
-    <message>
-        <source>Sftp error: No such file or directory path exists</source>
-        <translation type="vanished">Sftp error: No such file or directory path exists</translation>
-    </message>
-    <message>
-        <source>Sftp error: An attempt to create an already existing file or directory has been made</source>
-        <translation type="vanished">Sftp error: An attempt to create an already existing file or directory has been made</translation>
-    </message>
-    <message>
-        <source>Sftp error: Write-protected filesystem</source>
-        <translation type="vanished">Sftp error: Write-protected filesystem</translation>
-    </message>
-    <message>
-        <source>Sftp error: No media was in remote drive</source>
-        <translation type="vanished">Sftp error: No media was in remote drive</translation>
-    </message>
-    <message>
         <location filename="../core/errorstrings.cpp" line="52"/>
         <source>The config does not contain any containers and credentials for connecting to the server</source>
         <translation type="unfinished">Конфігурація не містить контейнерів і облікових даних для підключення до серверу</translation>
@@ -3734,10 +3375,6 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <location filename="../core/errorstrings.cpp" line="78"/>
         <source>ErrorCode: %1. </source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to save config to disk</source>
-        <translation type="vanished">Failed to save config to disk</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="37"/>
@@ -3875,12 +3512,12 @@ and will not be shared or disclosed to the Amnezia or any third parties</source>
         <translation>Створіть на сервері файлове сховище для безпечного зберігання та передачі файлів.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="171"/>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
         <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3888,38 +3525,21 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
 
 If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by DPI analysis systems
 * Works over TCP network protocol, 443 port.
 </source>
-        <translation>Це комбінація протоколу OpenVPN та плагіна Cloak, розроблена спеціально для захисту від блокувань.
-
-OpenVPN забезпечує безпечне VPN-підключення шляхом шифрування всього інтернет-трафіку між клієнтом і сервером.
-
-Cloak захищає OpenVPN від виявлення та блокування.
-
-Cloak може змінювати метадані пакетів так, що повністю маскує VPN-трафік як звичайний веб-трафік і також захищає VPN від виявлення за допомогою активного сканування. Це робить його дуже стійким до виявлення.
-
-Одразу після отримання першого пакета даних Cloak аутентифікує вхідне підключення. Якщо аутентифікація не вдається, плагін маскує сервер як фальшивий вебсайт, і ваш VPN стає невидимим для систем аналізу.
-
-Якщо у вашому регіоні екстремальний рівень інтернет-цензури, ми радимо використовувати тільки OpenVPN через Cloak з самого початку роботи з додатком.
-
-    Доступний в AmneziaVPN на всіх платформах
-    Високе споживання енергії на мобільних пристроях
-    Гнучкі налаштування
-    Не розпізнається системами аналізу DPI
-    Працює через TCP мережевий протокол, порт 443.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="190"/>
+        <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -3929,46 +3549,35 @@ WireGuard забезпечує стабільне VPN-підключення т�
 
 WireGuard дуже чутливий до блокувань через свої чіткі підписи пакетів. На відміну від деяких інших VPN-протоколів, які використовують техніки обфускації, постійні шаблони підписів пакетів WireGuard легше ідентифікуються та можуть бути заблоковані просунутими системами глибокого аналізу пакетів (DPI) та іншими інструментами моніторингу мережі.
 
-* Доступний в AmneziaVPN на всіх платформах
+* Доступний в VPNNaruzhu на всіх платформах
 * Низьке споживання енергії
 * Мінімальна кількість налаштувань
 * Легко розпізнається системами аналізу DPI, схильний до блокування
 * Працює через UDP мережевий протокол.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="219"/>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation>Протокол **REALITY**, сучасна розробка XRay. Спеціально розроблений для протидії найвищим рівням інтернет-цензури завдяки новому підходу до маскування.
-REALITY унікально ідентифікує цензорів під час фази TLS-handshake, працюючи як проксі для VPN клієнтів, при цьому перенаправляючи цензорів на справжні вебсайти, такі як google.com, надаючи справжній TLS-сертифікат та інші дані.
-Цей функціонал, відрізняє REALITY від подібних технологій, своєю здатністю маскувати веб-трафік у такий такий, що походить із випадкових справжніх сайтів без необхідності спеціальних налаштувань.
-На відміну від старіших протоколів, таких як VMess, VLESS та XTLS-Vision transport, продвиуте розпізнавання &quot;Свій — Чужий&quot; REALITY під час TLS-handshake підвищує безпеку та протидіє виявленню складними системами DPI, що використовують активні техніки аналізу. Це робить REALITY надійним рішенням для підтримання інтернет-свободи в середовищах з жорсткою цензурою.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="230"/>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the AmneziaVPN only on Windows
+* Available in the VPNNaruzhu only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems
 * Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation>IKEv2 разом з шифруванням IPSec -- це сучасний та стабільний протокол VPN.
-Він може швидко переключись між мережами та пристроями, що робить його осболиво адаптованим під динамічні мережеві середовища.
-Потрібно зазначити, що незважаючи на стабільність та швидкість, IKEv2 легко розпізнається та вразливий до блокувань. 
-
-* IKEv2/IPsec в AmneziaVPN тільки для Windows.
-* Низьке енергоспоживання, на мобільних пристроях
-* Мінімальна конфігурація
-* Розпізнається системами DPI-анализу
-* Працює по мережевому протоколу UDP, порти 500 і 4500.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="242"/>
+        <location filename="../containers/containers_defs.cpp" line="243"/>
         <source>DNS Service</source>
         <translation>DNS Сервіс</translation>
     </message>
@@ -3979,7 +3588,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
-        <location filename="../containers/containers_defs.cpp" line="241"/>
+        <location filename="../containers/containers_defs.cpp" line="242"/>
         <source>Website in Tor network</source>
         <translation>Веб-сайт в мережі Tor</translation>
     </message>
@@ -4009,10 +3618,6 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation>XRay with REALITY — підходить для країн з найвищим рівнем інтернет-цензури. Маскування трафіку під веб-трафік на рівні TLS. Захист від виявлення активними методами сканування (active-probing).</translation>
     </message>
     <message>
-        <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
-        <translation type="vanished">IKEv2/IPsec сучасний стабільний протокол, трішки швидше за інших відновлює підключення.</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="133"/>
         <source>Deploy a WordPress site on the Tor network in two clicks.</source>
         <translation>Розгорніть сайт WordPress в мережі Tor в два кліка.</translation>
@@ -4027,7 +3632,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
@@ -4035,7 +3640,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN один із самих популярних і перевірених часом протоколів VPN.
 Він використовує власний протокол, який опирається на протокол SSL/TLS для шифрування та обміну ключами. Крім того, підтримка OpenVPN багатьох методів аутентифікації робить його універсальним і адаптованим до широкого спектру пристроїв і операційних систем. Завдяки відкритому коду, OpenVPN піддається ретельному аналізу зі сторони світової спільноти, що постійно підвищує його безпеку. Завдяки оптимальному співвідношенню продуктивності, безпеки та сумісності OpenVPN залишається найкращим вибором як для приватних осіб, так і для компаній.
 
-* Доступний в AmneziaVPN для всіх платформ
+* Доступний в VPNNaruzhu для всіх платформ
 * Нормальне енергоспоживання на мобільних пристроях
 * Гнучка настройка під користувача для роботи з різними пристроями та оперційними системами
 * Розпізнається системами DPI-анализу і тому вразливий до блокувань
@@ -4045,19 +3650,21 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <location filename="../containers/containers_defs.cpp" line="162"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the AmneziaVPN only on desktop platforms
+* Available in the VPNNaruzhu only on desktop platforms
+* Normal power consumption on mobile devices
+
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
         <translation>Shadowsocks, створений на основі протоколу SOCKS5, захищає з&apos;єднання AEAD шифруванням. Незважаючи на те, що протокол Shadowsocks розроблений таким чином, щоб бути незаметним і складним для ідентифікації, він не ідентичний стандартному HTTPS-з&apos;єднанню. Однак деякі системи аналізу трафіку все-таки можуть знайти підключення Shadowsocks. У зв’язку з обмеженою підтримкою в Amnezia рекомендується використовувати протокол AmneziaWG або OpenVPN через Cloak.
 
-* Доступний в AmneziaVPN тільки на ПК.
+* Доступний в VPNNaruzhu тільки на ПК.
 * Гнучке налаштування протоколу шифрування
 * Розпізнається деякими DPI-системами
 * Працює по мережевому протоколу TCP.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="244"/>
+        <location filename="../containers/containers_defs.cpp" line="245"/>
         <source>After installation, Amnezia will create a
 
  file storage on your server. You will be able to access it using
@@ -4066,79 +3673,22 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 
 For more detailed information, you can
  find it in the support section under &quot;Create SFTP file storage.&quot; </source>
-        <translation>Після встановлення Amnezia створить 
+        <translation>Після встановлення Amnezia створить
 
  файл-сховище на вашому сервері. Ви зможете отримати
- доступ до нього за допомогою FileZilla та інших SFTP-клієнтів, 
+ доступ до нього за допомогою FileZilla та інших SFTP-клієнтів,
 а також змонтувати диск на вашому пристрої для безпосереднього доступу до нього.
 
 Для більш детальної інформації зверніться
  до розділу підтримки під заголовком «Створення SFTP файл-сховища». </translation>
     </message>
     <message>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for blocking protection.
-
-OpenVPN provides a secure VPN connection by encrypting all Internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking. 
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the AmneziaVPN across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="vanished">OpenVPN over Cloak - це комбінація протоколу OpenVPN і плагіна Cloak, розроблена спеціально для подолання блокувань.
-
-OpenVPN забезпечує найдійне VPN-підключення за рахунок шифрування всього інтернет-трафіку між клієнтом і сервером.
-
-Cloak захищає OpenVPN від розпізнаванння та блокування системами DPI. 
-
-Cloak може замінити метаданні пакетів. Він повністю маскується під звичайний HTTPS трафік, а також, захищає VPN від розпізнаванння за допомогою Active Probing. Це робить його дуже стійким до розпізнання.
-
-Одразу після отримання першого пакету даних Cloak перевіряє автентичність вхідного з’єднання. Якщо автентифікація не вдається, плагін маскує сервер як підроблений веб-сайт, і ваша VPN стає невидимою для систем аналізу.
-
-Якщо в вашому регіоні екстремальний рівень цензури в Інтернеті, ми рекомендуємо відразу використовувати OpenVPN over Cloak.
-
-* Доступний в AmneziaVPN на всіх платформах
-* Високе енергоспоживання на мобільних пристроях
-* Гнучке налаштування
-* Не розпізнається системами DPI-анализу
-* Працює по протоколу TCP, 443 порт.
-</translation>
-    </message>
-    <message>
-        <source>A relatively new popular VPN protocol with a simplified architecture.
-Provides stable VPN connection, high performance on all devices. Uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
-WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
-
-* Available in the AmneziaVPN across all platforms
-* Low power consumption
-* Minimum number of settings
-* Easily recognised by DPI analysis systems, susceptible to blocking
-* Works over UDP network protocol.</source>
-        <translation type="vanished">WireGuard - відносно новий та популярний VPN-протокол з простою архітектурою.
-Забезпечує стабільне VPN-з&apos;єднання, високу продуктивність на всіх пристроях. Використовує жорстко закодовані параметри шифрування. WireGuard порівняно з OpenVPN має нижчу затримку та кращу пропускну здатність передачі даних.
-WireGuard дуже вразливий до блокування. На відміну від деяких інших протоколів VPN, які використовують методи обфускації, узгоджені шаблони пакетів WireGuard можна легше ідентифікувати та, таким чином, заблокувати вдосконаленими системами Deep Packet Inspection (DPI) та іншими інструментами моніторингу мережі.
-* Доступний в AmneziaVPN для всіх платформ
-* Низьке енергоспоживання
-* Мінімальна кількість налаштувань
-* Легко розпізнається системами DPI-анализу, вразливий до блокувань
-* Працює по протоколу UDP.</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="203"/>
+        <location filename="../containers/containers_defs.cpp" line="204"/>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the AmneziaVPN across all platforms
+* Available in the VPNNaruzhu across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -4147,19 +3697,11 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 Незважаючи на те, що WireGuard відомий своєю ефективністю, він має проблеми з легким виявленням через чіткі підписи пакетів. AmneziaWG вирішує цю проблему, використовуючи кращі методи обфускації, завдяки чому її трафік змішується зі звичайним інтернет-трафіком.
 Це означає, що AmneziaWG зберігає швидку роботу оригінального протоколу WireGuard, додаючи додатковий рівень скритності, що робить його чудовим вибором для тих, хто бажає швидкого та непомітного VPN-з’єднання.
 
-* Доступно в AmneziaVPN на всіх платформах
+* Доступно в VPNNaruzhu на всіх платформах
 * Низьке енергоспоживання
 * Мінімальна кількість налаштувань
 * Не розпізнається системами аналізу DPI, стійкий до блокування
 * Працює через мережевий протокол UDP.</translation>
-    </message>
-    <message>
-        <source>AmneziaWG container</source>
-        <translation type="vanished">AmneziaWG протокол</translation>
-    </message>
-    <message>
-        <source>Sftp file sharing service - is secure FTP service</source>
-        <translation type="vanished">Файлове сховище для безпечного зберігання даних</translation>
     </message>
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="80"/>
@@ -4169,7 +3711,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
         <location filename="../containers/containers_defs.cpp" line="104"/>
-        <location filename="../containers/containers_defs.cpp" line="248"/>
+        <location filename="../containers/containers_defs.cpp" line="249"/>
         <source>SOCKS5 proxy server</source>
         <translation>SOCKS5 proxy server</translation>
     </message>
@@ -4404,8 +3946,8 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
-        <source>Save AmneziaVPN config</source>
-        <translation>Зберегти config AmneziaVPN</translation>
+        <source>Save VPNNaruzhu config</source>
+        <translation>Зберегти config VPNNaruzhu</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="86"/>
@@ -4485,31 +4027,31 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>SystemTrayNotificationHandler</name>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="28"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
         <source>Show</source>
         <translation>Показати</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
         <translation>Підключитись</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="33"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
         <translation>Відключитись</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="37"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
         <source>Visit Website</source>
         <translation>Відвідати сайт</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="41"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
         <source>Quit</source>
         <translation>Закрити</translation>
@@ -4577,48 +4119,24 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="345"/>
+        <location filename="../containers/containers_defs.cpp" line="346"/>
         <source>Low</source>
         <translation>Низький</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="346"/>
+        <location filename="../containers/containers_defs.cpp" line="347"/>
         <source>High</source>
         <translation>Високий</translation>
     </message>
     <message>
-        <source>Extreme</source>
-        <translation type="vanished">Екстремальний</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="355"/>
+        <location filename="../containers/containers_defs.cpp" line="356"/>
         <source>I just want to increase the level of my privacy.</source>
         <translation>Я просто хочу підвищити свій рівень безпеки в інтернеті.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="356"/>
+        <location filename="../containers/containers_defs.cpp" line="357"/>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
         <translation>Я хочу обійти блокування. Цей варіант рекомендується в більшості випадків.</translation>
-    </message>
-    <message>
-        <source>Most VPN protocols are blocked. Recommended if other options are not working.</source>
-        <translation type="vanished">Більшість протоколів VPN заблоковано. Рекомендовано, якщо інші варіанти не підходять.</translation>
-    </message>
-    <message>
-        <source>Medium</source>
-        <translation type="vanished">Середній</translation>
-    </message>
-    <message>
-        <source>Many foreign websites and VPN providers are blocked</source>
-        <translation type="vanished">Багато іноземних сайтів і VPN-провайдерів заблоковано</translation>
-    </message>
-    <message>
-        <source>Some foreign sites are blocked, but VPN providers are not blocked</source>
-        <translation type="vanished">Деякі іноземні сайти заблоковані, але VPN-провайдери не заблоковані</translation>
-    </message>
-    <message>
-        <source>I just want to increase the level of privacy</source>
-        <translation type="vanished">Я просто хочу підвищити свій рівень безпеки в інтернеті.</translation>
     </message>
 </context>
 <context>

@@ -44,9 +44,13 @@ PageType {
 
             Item {
                 id: focusItem
-                KeyNavigation.tab: textKey.textField
+                KeyNavigation.tab: backButton
             }
 
+            BackButtonType {
+                id: backButton
+                Layout.topMargin: 20
+            }
 
             HeaderType {
                 property bool isVisible: SettingsController.getInstallationUuid() !== "" || PageController.isStartPageVisible()
@@ -56,8 +60,9 @@ PageType {
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
 
-                headerText: qsTr("Connection")
+                headerText: qsTr("Server connection")
 
+            /*
                 actionButtonImage: isVisible ? "qrc:/images/controls/more-vertical.svg" : ""
                 actionButtonFunction: function() {
                     moreActionsDrawer.open()
@@ -128,8 +133,18 @@ PageType {
                         }
                     }
                 }
+            */
             }
 
+            Header2TextType {
+                Layout.fillWidth: true
+                Layout.topMargin: 48
+                Layout.rightMargin: 16
+                Layout.leftMargin: 16
+
+                text: qsTr("What do you have?")
+            }
+            /*
             ParagraphTextType {
                 Layout.fillWidth: true
                 Layout.topMargin: 32
@@ -257,24 +272,25 @@ PageType {
                     }
                 }
             }
+            */
 
             CardWithIconsType {
                 id: openFile
 
                 Layout.fillWidth: true
+                Layout.topMargin: 16
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
                 Layout.bottomMargin: 16
 
-                headerText: qsTr("File with connection settings")
+                headerText: qsTr("Key as file")
 
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
                 leftImageSource: "qrc:/images/controls/folder-search-2.svg"
 
                 onClicked: {
-                    var nameFilter = !ServersModel.getServersCount() ? "Config or backup files (*.vpn *.ovpn *.conf *.json *.backup)" :
-                                                                       "Config files (*.vpn *.ovpn *.conf *.json)"
-                    var fileName = SystemController.getFileName(qsTr("Open config file"), nameFilter)
+                    var nameFilter = "Config files (*.vpn *.ovpn *.conf *.json)"
+                    var fileName = SystemController.getFileName(qsTr("Open key file"), nameFilter)
                     if (fileName !== "") {
                         if (ImportController.extractConfigFromFile(fileName)) {
                             PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
@@ -283,6 +299,25 @@ PageType {
                 }
             }
 
+            CardWithIconsType {
+                id: openAsText
+
+                Layout.fillWidth: true
+                Layout.rightMargin: 16
+                Layout.leftMargin: 16
+                Layout.bottomMargin: 16
+
+                headerText: qsTr("Key as Text")
+
+                rightImageSource: "qrc:/images/controls/chevron-right.svg"
+                leftImageSource: "qrc:/images/controls/text-cursor.svg"
+
+                onClicked: {
+                    PageController.goToPage(PageEnum.PageSetupWizardTextKey)
+                }
+            }
+
+            /*
             CardWithIconsType {
                 id: scanQr
 
@@ -325,6 +360,7 @@ PageType {
                     Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl())
                 }
             }
+            */
         }
     }
 }

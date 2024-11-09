@@ -129,7 +129,7 @@ PageType {
                 Layout.rightMargin: 16
 
                 color: AmneziaStyle.color.mutedGray
-                text: qsTr("AmneziaVPN logs")
+                text: qsTr("VPNNaruzhu logs")
             }
 
             LabelWithButtonType {
@@ -166,11 +166,11 @@ PageType {
                 clickedFunction: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "AmneziaVPN.log"
+                        fileName = "VPNNaruzhu.log"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save"),
                                                                 qsTr("Logs files (*.log)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu",
                                                                 true,
                                                                 ".log")
                     }
@@ -205,7 +205,7 @@ PageType {
                 Layout.rightMargin: 16
 
                 color: AmneziaStyle.color.mutedGray
-                text: qsTr("AmneziaVPN-service logs")
+                text: qsTr("VPNNaruzhu-service logs")
             }
 
             LabelWithButtonType {
@@ -250,11 +250,11 @@ PageType {
                 clickedFunction: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "AmneziaVPN-service.log"
+                        fileName = "VPNNaruzhu-service.log"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save"),
                                                                 qsTr("Logs files (*.log)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN-service",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu-service",
                                                                 true,
                                                                 ".log")
                     }

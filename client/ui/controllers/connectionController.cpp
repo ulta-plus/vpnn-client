@@ -155,6 +155,11 @@ QString ConnectionController::connectionStateText() const
     return m_connectionStateText;
 }
 
+void ConnectionController::waitForConnectionFinished(int msecs)
+{
+    m_vpnConnection->waitForVpnConnectionFinished(msecs);
+}
+
 void ConnectionController::toggleConnection()
 {
     if (m_state == Vpn::ConnectionState::Preparing) {
@@ -167,6 +172,7 @@ void ConnectionController::toggleConnection()
     } else if (isConnected()) {
         closeConnection();
     } else {
+        emit updateSmartRouting();
         openConnection();
     }
 }

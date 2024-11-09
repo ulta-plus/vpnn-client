@@ -224,6 +224,9 @@ PageType {
         anchors.left: parent.left
         anchors.bottom: tabBar.top
 
+        width: parent.width
+        height: root.height - tabBar.height
+
         enabled: !root.isControlsDisabled
 
         function goToTabBarPage(page) {
@@ -259,6 +262,7 @@ PageType {
         anchors.left: parent.left
         anchors.bottom: parent.bottom
 
+        implicitHeight: contentHeight + topPadding + bottomPadding
         topPadding: 8
         bottomPadding: 8
         leftPadding: 96
@@ -345,11 +349,27 @@ PageType {
             isSelected: tabBar.currentIndex === 3
             image: "qrc:/images/controls/plus.svg"
             clickedFunc: function () {
-                tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardConfigSource)
-                tabBar.currentIndex = 3
+                connectionTypeSelection.open()
             }
 
             Keys.onTabPressed: PageController.forceStackActiveFocus()
+        }
+
+        TabImageButtonType {
+            isSelected: tabBar.currentIndex === 4
+            image: "qrc:/images/controls/tabBarChat.svg"
+            onClicked: {
+                Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
+            }
+        }
+    }
+
+    ConnectionTypeSelectionDrawer {
+        id: connectionTypeSelection
+
+        onAboutToHide: {
+            PageController.forceTabBarActiveFocus()
+            tabBar.setCurrentIndex(tabBar.previousIndex)
         }
     }
 }

@@ -25,7 +25,9 @@ public:
 
         HasWriteAccessRole,
 
+        /* issue_13: don't allow to use Amnezia DNS
         ContainsAmneziaDnsRole,
+        */
 
         DefaultContainerRole,
 
@@ -38,7 +40,9 @@ public:
         ApiAvailableCountriesRole,
         ApiServerCountryCodeRole,
 
+        /* issue_13: don't allow to use Amnezia DNS
         HasAmneziaDns
+        */
     };
 
     ServersModel(std::shared_ptr<Settings> settings, QObject *parent = nullptr);
@@ -106,7 +110,9 @@ public slots:
 
     QStringList getAllInstalledServicesName(const int serverIndex);
 
+    /* issue_13: don't allow to use Amnezia DNS
     void toggleAmneziaDns(bool enabled);
+    */
     QPair<QString, QString> getDnsPair(const int serverIndex);
 
     bool isServerFromApiAlreadyExists(const quint16 crc);
@@ -146,8 +152,9 @@ private:
 
     QString getServerDescription(const QJsonObject &server, const int index) const;
 
+    /* issue_13: don't allow to use Amnezia DNS
     bool isAmneziaDnsContainerInstalled(const int serverIndex) const;
-
+    */
     bool serverHasInstalledContainers(const int serverIndex) const;
 
     QJsonArray m_servers;
@@ -157,7 +164,9 @@ private:
     int m_defaultServerIndex;
     int m_processedServerIndex;
 
+    /* issue_13: don't allow to use Amnezia DNS
     bool m_isAmneziaDnsEnabled = m_settings->useAmneziaDns();
+    */
 };
 
 #endif // SERVERSMODEL_H

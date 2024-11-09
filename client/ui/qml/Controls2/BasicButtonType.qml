@@ -57,7 +57,7 @@ Button {
 
         anchors.fill: parent
 
-        radius: 16
+        radius: 10
 
         Rectangle {
             id: background
@@ -65,7 +65,7 @@ Button {
             anchors.fill: focusBorder
             anchors.margins: root.activeFocus ? 2 : 0
 
-            radius: root.activeFocus ? 14 : 16
+            radius: root.activeFocus ? 10 : 10
             color: {
                 if (root.enabled) {
                     if (root.pressed) {

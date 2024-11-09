@@ -12,6 +12,7 @@
 #include <QTranslator>
 #include <QLocalSocket>
 #include <QLocalServer>
+#include <QNetworkReply>
 
 #include "logger.h"
 #include "ui/models/installedAppsModel.h"
@@ -244,13 +245,18 @@ void AmneziaApplication::updateTranslator(const QLocale &locale)
         QCoreApplication::removeTranslator(m_translator.get());
     }
 
-    QString strFileName = QString(":/translations/amneziavpn") + QLatin1String("_") + locale.name() + ".qm";
-    if (m_translator->load(strFileName)) {
-        if (QCoreApplication::installTranslator(m_translator.get())) {
-            m_settings->setAppLanguage(locale);
-        }
-    } else {
+    if (locale == QLocale::English) {
+        // English as a default language doesn't have a translation file
         m_settings->setAppLanguage(QLocale::English);
+    } else {
+        QString strFileName = QString(":/translations/vpnnaruzhu") + QLatin1String("_") + locale.name() + ".qm";
+        if (m_translator->load(strFileName)) {
+            if (QCoreApplication::installTranslator(m_translator.get())) {
+                m_settings->setAppLanguage(locale);
+            }
+        } else {
+            m_settings->setAppLanguage(QLocale::Russian);
+        }
     }
 
     m_engine->retranslate();
@@ -450,7 +456,9 @@ void AmneziaApplication::initControllers()
     if (m_settingsController->isAutoConnectEnabled() && m_serversModel->getDefaultServerIndex() >= 0) {
         QTimer::singleShot(1000, this, [this]() { m_connectionController->openConnection(); });
     }
+    /* issue_13: don't allow to use Amnezia DNS
     connect(m_settingsController.get(), &SettingsController::amneziaDnsToggled, m_serversModel.get(), &ServersModel::toggleAmneziaDns);
+    */
 
     m_sitesController.reset(new SitesController(m_settings, m_vpnConnection, m_sitesModel));
     m_engine->rootContext()->setContextProperty("SitesController", m_sitesController.get());
@@ -460,4 +468,65 @@ void AmneziaApplication::initControllers()
 
     m_systemController.reset(new SystemController(m_settings));
     m_engine->rootContext()->setContextProperty("SystemController", m_systemController.get());
+
+    connect(m_importController.get(), &ImportController::siteNeedsAddition, m_sitesController.get(), &SitesController::addSite);
+    connect(m_vpnConnection.get(), &VpnConnection::newRoute, m_sitesController.get(), &SitesController::addSite);
+    connect(m_vpnConnection.get(), &VpnConnection::restartConnection, this, &AmneziaApplication::restartConnection);
+    connect(this, &AmneziaApplication::toggleConnection, m_connectionController.get(),
+        &ConnectionController::toggleConnection, Qt::QueuedConnection);
+    connect(m_connectionController.get(), &ConnectionController::updateSmartRouting, this,
+        &AmneziaApplication::updateSmartRouting);
+}
+
+void AmneziaApplication::restartConnection()
+{
+    emit toggleConnection();
+    m_connectionController->waitForConnectionFinished(10000);
+    emit toggleConnection();
+}
+
+void AmneziaApplication::updateSmartRouting()
+{
+    QNetworkRequest request;
+    request.setTransferTimeout(7000);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+
+    QString routing_file("https://raw.githubusercontent.com/vpn-naruzhu/public/refs/heads/main/local.json");
+    request.setUrl(routing_file);
+
+    QNetworkReply *reply;
+    reply = manager()->get(request);
+
+    QEventLoop wait;
+    QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);
+    wait.exec();
+
+    if (reply->error() == QNetworkReply::NoError) {
+        QByteArray r = reply->readAll();
+        reply->deleteLater();
+
+        QJsonParseError json_error;
+        QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
+        if (json_error.error == QJsonParseError::NoError) {
+            QJsonArray json_array = json_doc.array();
+            for (const auto &elem: json_array) {
+                switch (elem.type()) {
+                    case QJsonValue::Object:
+                    {
+                        QJsonObject json_obj = elem.toObject();
+                        QString host = json_obj.find("hostname").value().toString();
+                        m_vpnConnection->excludeRoute(host);
+                    }
+                        break;
+                    default:
+                        qDebug() << "json_array elem unknown type: " << elem;
+                        break;
+                }
+            }
+        } else {
+            qDebug() << "Cannot parse json error: " << json_error.error << " json file: " << r;
+        }
+    } else {
+        qDebug() << "Cannot download json file: " << routing_file;
+    }
 }

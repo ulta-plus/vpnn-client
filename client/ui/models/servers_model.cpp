@@ -28,7 +28,9 @@ namespace
 
 ServersModel::ServersModel(std::shared_ptr<Settings> settings, QObject *parent) : m_settings(settings), QAbstractListModel(parent)
 {
+    /* issue_13: don't allow to use Amnezia DNS
     m_isAmneziaDnsEnabled = m_settings->useAmneziaDns();
+    */
 
     connect(this, &ServersModel::defaultServerIndexChanged, this, &ServersModel::defaultServerNameChanged);
 
@@ -112,10 +114,12 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
         auto credentials = serverCredentials(index.row());
         return (!credentials.userName.isEmpty() && !credentials.secretData.isEmpty());
     }
+    /* issue_13: don't allow to use Amnezia DNS
     case ContainsAmneziaDnsRole: {
         QString primaryDns = server.value(config_key::dns1).toString();
         return primaryDns == protocols::dns::amneziaDnsIp;
     }
+    */
     case DefaultContainerRole: {
         return ContainerProps::containerFromString(server.value(config_key::defaultContainer).toString());
     }
@@ -140,10 +144,12 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
     case ApiServerCountryCodeRole: {
         return apiConfig.value(configKey::serverCountryCode).toString();
     }
+    /* issue_13: don't allow to use Amnezia DNS
     case HasAmneziaDns: {
         QString primaryDns = server.value(config_key::dns1).toString();
         return primaryDns == protocols::dns::amneziaDnsIp;
     }
+    */
     }
 
     return QVariant();
@@ -193,7 +199,9 @@ QString ServersModel::getServerDescription(const QJsonObject &server, const int 
         return apiConfig.value(configKey::serverCountryName).toString();
     } else if (configVersion) {
         return server.value(config_key::description).toString();
-    } else if (data(index, HasWriteAccessRole).toBool()) {
+    }
+    /* issue_13: don't allow to use Amnezia DNS
+    else if (data(index, HasWriteAccessRole).toBool()) {
         if (m_isAmneziaDnsEnabled && isAmneziaDnsContainerInstalled(index)) {
             description += "Amnezia DNS | ";
         }
@@ -202,6 +210,7 @@ QString ServersModel::getServerDescription(const QJsonObject &server, const int 
             description += "Amnezia DNS | ";
         }
     }
+    */
     return description;
 }
 
@@ -359,7 +368,9 @@ QHash<int, QByteArray> ServersModel::roleNames() const
 
     roles[HasWriteAccessRole] = "hasWriteAccess";
 
+    /* issue_13: don't allow to use Amnezia DNS
     roles[ContainsAmneziaDnsRole] = "containsAmneziaDns";
+    */
 
     roles[DefaultContainerRole] = "defaultContainer";
     roles[HasInstalledContainers] = "hasInstalledContainers";
@@ -545,6 +556,7 @@ void ServersModel::clearCachedProfile(const DockerContainer container)
     updateContainersModel();
 }
 
+/* issue_13: don't allow to use Amnezia DNS
 bool ServersModel::isAmneziaDnsContainerInstalled(const int serverIndex) const
 {
     QJsonObject server = m_servers.at(serverIndex).toObject();
@@ -556,6 +568,7 @@ bool ServersModel::isAmneziaDnsContainerInstalled(const int serverIndex) const
     }
     return false;
 }
+*/
 
 QPair<QString, QString> ServersModel::getDnsPair(int serverIndex)
 {
@@ -574,9 +587,11 @@ QPair<QString, QString> ServersModel::getDnsPair(int serverIndex)
     dns.second = server.value(config_key::dns2).toString();
 
     if (dns.first.isEmpty() || !NetworkUtilities::checkIPv4Format(dns.first)) {
+        /* issue_13: don't allow to use Amnezia DNS
         if (m_isAmneziaDnsEnabled && isDnsContainerInstalled) {
             dns.first = protocols::dns::amneziaDnsIp;
         } else
+        */
             dns.first = m_settings->primaryDns();
     }
     if (dns.second.isEmpty() || !NetworkUtilities::checkIPv4Format(dns.second)) {
@@ -610,11 +625,13 @@ QStringList ServersModel::getAllInstalledServicesName(const int serverIndex)
     return servicesName;
 }
 
+/* issue_13: don't allow to use Amnezia DNS
 void ServersModel::toggleAmneziaDns(bool enabled)
 {
     m_isAmneziaDnsEnabled = enabled;
     emit defaultServerDescriptionChanged();
 }
+*/
 
 bool ServersModel::isServerFromApiAlreadyExists(const quint16 crc)
 {

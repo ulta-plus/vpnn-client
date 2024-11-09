@@ -69,7 +69,7 @@ jobs:
     - name: 'Upload translations artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: AmneziaVPN_translations
+        name: VNPNaruzhu_translations
         path: client/translations
         retention-days: 7
 
@@ -459,6 +459,6 @@ jobs:
 
       - name: Add PR link to build summary
         if: ${{ fromJSON(steps.pull_request.outputs.data)[0].number != '' }}
-        run: | 
+        run: |
           echo "Pull request:" >> $GITHUB_STEP_SUMMARY
           echo "[[#${{ fromJSON(steps.pull_request.outputs.data)[0].number }}] ${{ fromJSON(steps.pull_request.outputs.data)[0].title }}](${{ fromJSON(steps.pull_request.outputs.data)[0].html_url }})" >> $GITHUB_STEP_SUMMARY

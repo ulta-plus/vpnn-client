@@ -50,6 +50,7 @@
         "chrono": "cpp",
         "optional": "cpp",
         "regex": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "iterator": "cpp"
     }
 }

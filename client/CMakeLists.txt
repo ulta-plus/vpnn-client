@@ -68,23 +68,23 @@ qt6_add_resources(QRC ${QRC} ${CMAKE_CURRENT_LIST_DIR}/resources.qrc)
 # -- i18n begin
 set(CMAKE_AUTORCC ON)
 
-set(AMNEZIAVPN_TS_FILES
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ru_RU.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_zh_CN.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_fa_IR.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ar_EG.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_my_MM.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_uk_UA.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_ur_PK.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/amneziavpn_hi_IN.ts
+set(VPNNARUZHU_TS_FILES
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ru_RU.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_zh_CN.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_fa_IR.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ar_EG.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_my_MM.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_uk_UA.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ur_PK.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_hi_IN.ts
 )
 
-file(GLOB_RECURSE AMNEZIAVPN_TS_SOURCES *.qrc *.cpp *.h *.ui)
+file(GLOB_RECURSE VPNNARUZHU_TS_SOURCES *.qrc *.cpp *.h *.ui)
 
-qt_create_translation(AMNEZIAVPN_QM_FILES ${AMNEZIAVPN_TS_SOURCES} ${AMNEZIAVPN_TS_FILES})
+qt_create_translation(VPNNARUZHU_QM_FILES ${VPNNARUZHU_TS_SOURCES} ${VPNNARUZHU_TS_FILES})
 
 set(QM_FILE_LIST "")
-foreach(FILE ${AMNEZIAVPN_QM_FILES})
+foreach(FILE ${VPNNARUZHU_QM_FILES})
     get_filename_component(QM_FILE_NAME ${FILE} NAME)
     list(APPEND QM_FILE_LIST "<file>${QM_FILE_NAME}</file>")
 endforeach()

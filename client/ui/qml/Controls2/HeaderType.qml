@@ -68,7 +68,7 @@ Item {
 
             text: root.descriptionText
 
-            color: AmneziaStyle.color.mutedGray
+            color: "#F1F0EF"
 
             visible: root.descriptionText !== ""
         }

@@ -66,11 +66,17 @@ public:
 
     static VpnProtocol* factory(amnezia::DockerContainer container, const QJsonObject &configuration);
 
+    virtual void waitForDisconected(int msecs) {}
+
 signals:
     void bytesChanged(quint64 receivedBytes, quint64 sentBytes);
     void connectionStateChanged(Vpn::ConnectionState state);
     void timeoutTimerEvent();
     void protocolError(amnezia::ErrorCode e);
+
+    void newRoute(const QString& ip);
+    void newDns(const QString& dnsAddr);
+    void finishReceivingSettings();
 
 public slots:
     virtual void onTimeout(); // todo: remove?

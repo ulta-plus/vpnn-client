@@ -3,7 +3,6 @@
         <file>images/tray/active.png</file>
         <file>images/tray/default.png</file>
         <file>images/tray/error.png</file>
-        <file>images/AmneziaVPN.png</file>
         <file>server_scripts/remove_container.sh</file>
         <file>server_scripts/setup_host_firewall.sh</file>
         <file>server_scripts/openvpn_cloak/Dockerfile</file>
@@ -62,9 +61,7 @@
         <file>ui/qml/Controls2/DropDownType.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardStart.qml</file>
         <file>ui/qml/main2.qml</file>
-        <file>images/amneziaBigLogo.png</file>
         <file>ui/qml/Controls2/FlickableType.qml</file>
-        <file>ui/qml/Pages2/PageSetupWizardCredentials.qml</file>
         <file>ui/qml/Controls2/HeaderType.qml</file>
         <file>images/controls/arrow-left.svg</file>
         <file>ui/qml/Pages2/PageSetupWizardProtocols.qml</file>
@@ -139,7 +136,6 @@
         <file>ui/qml/Pages2/PageSettingsApplication.qml</file>
         <file>ui/qml/Pages2/PageSettingsBackup.qml</file>
         <file>images/controls/delete.svg</file>
-        <file>ui/qml/Pages2/PageSettingsAbout.qml</file>
         <file>images/controls/github.svg</file>
         <file>images/controls/mail.svg</file>
         <file>images/controls/telegram.svg</file>
@@ -220,6 +216,12 @@
         <file>ui/qml/Pages2/PageSettingsApiLanguageList.qml</file>
         <file>images/controls/archive-restore.svg</file>
         <file>images/controls/help-circle.svg</file>
+        <file>images/naruzhu_logo.png</file>
+        <file>images/controls/email.svg</file>
+        <file>images/controls/tabBarChat.svg</file>
+        <file>images/controls/chat.svg</file>
+        <file>images/controls/external-link.svg</file>
+        <file>images/controls/telegramNaruzhu.svg</file>
     </qresource>
     <qresource prefix="/countriesFlags">
         <file>images/flagKit/ZW.svg</file>

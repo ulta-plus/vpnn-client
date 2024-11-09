@@ -42,7 +42,7 @@ private:
     QAction* m_trayActionDisconnect = nullptr;
     QAction* m_trayActionVisitWebSite = nullptr;
     QAction* m_trayActionQuit = nullptr;
-    QAction* m_statusLabel = nullptr;    
+    QAction* m_statusLabel = nullptr;
     QAction* m_separator = nullptr;
 
     const QString ConnectedTrayIconName = "active.png";

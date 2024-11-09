@@ -318,6 +318,49 @@ void OpenVpnProtocol::onReadyReadDataFromManagementServer()
     }
 }
 
+static void
+transformNetMask(QString &mask)
+{
+    if (mask.split(".").size() != 4)
+        return;
+
+    uint val = 0;
+    for (const QString &v: mask.split(".")) {
+        switch (v.toUInt()) {
+        case 255:
+            val += 8;
+            break;
+        case 254:
+            val += 7;
+            break;
+        case 252:
+            val += 6;
+            break;
+        case 248:
+            val += 5;
+            break;
+        case 240:
+            val += 4;
+            break;
+        case 224:
+            val += 3;
+            break;
+        case 192:
+            val += 2;
+            break;
+        case 128:
+            val += 1;
+            break;
+        case 0:
+            break;
+        default:
+            return;
+        }
+    }
+
+    mask = QString::number(val);
+}
+
 void OpenVpnProtocol::updateVpnGateway(const QString &line)
 {
     // line looks like
@@ -360,5 +403,30 @@ void OpenVpnProtocol::updateVpnGateway(const QString &line)
                 qDebug() << QString("Set vpn local address %1, gw %2").arg(m_vpnLocalAddress).arg(vpnGateway());
             }
         }
+
+        if (l.contains("route")) {
+            if (l.split(" ").size() == 4) {
+                QString addr = l.split(" ").at(1);
+                QString mask = l.split(" ").at(2);
+                transformNetMask(mask);
+                emit newRoute(addr + "/" + mask);
+            }
+        }
+
+        if (l.contains("DNS")) {
+            if (l.split(" ").size() == 3) {
+                QString dnsAddr = l.split(" ").at(2);
+                emit newDns(dnsAddr);
+            }
+        }
+
+        if (l.contains("push-continuation 1")) {
+            emit finishReceivingSettings();
+        }
     }
+}
+
+void OpenVpnProtocol::waitForDisconected(int msecs)
+{
+    m_openVpnProcess->waitForFinished(msecs);
 }

@@ -115,8 +115,10 @@ public:
     RouteMode routeMode() const;
     void setRouteMode(RouteMode mode) { setValue("Conf/routeMode", mode); }
 
+    /* issue_5
     bool isSitesSplitTunnelingEnabled() const;
     void setSitesSplitTunnelingEnabled(bool enabled);
+    */
 
     QVariantMap vpnSites(RouteMode mode) const
     {
@@ -127,6 +129,7 @@ public:
         setValue("Conf/" + routeModeString(mode), sites);
         m_settings.sync();
     }
+    bool isVpnSiteInSettings(const QString &site);
     bool addVpnSite(RouteMode mode, const QString &site, const QString &ip = "");
     void addVpnSites(RouteMode mode, const QMap<QString, QString> &sites); // map <site, ip>
     QStringList getVpnIps(RouteMode mode) const;
@@ -136,6 +139,7 @@ public:
     void removeVpnSites(RouteMode mode, const QStringList &sites);
     void removeAllVpnSites(RouteMode mode);
 
+    /* issue_13: don't allow to use Amnezia DNS
     bool useAmneziaDns() const
     {
         return value("Conf/useAmneziaDns", true).toBool();
@@ -144,6 +148,7 @@ public:
     {
         setValue("Conf/useAmneziaDns", enabled);
     }
+    */
 
     QString primaryDns() const;
     QString secondaryDns() const;
@@ -174,7 +179,7 @@ public:
 
     QLocale getAppLanguage()
     {
-        return value("Conf/appLanguage", QLocale()).toLocale();
+        return value("Conf/appLanguage", QLocale::Russian).toLocale();
     };
     void setAppLanguage(QLocale locale)
     {

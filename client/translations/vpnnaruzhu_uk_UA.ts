@@ -444,17 +444,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>Логування увімкнено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="299"/>
         <source>VPN protocol</source>
         <translation>VPN протокол</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="354"/>
         <source>Servers</source>
         <translation>Сервери</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="466"/>
         <source>Unable change server while there is an active connection</source>
         <translation>Не можна змінити сервер при активному підключенні</translation>
     </message>

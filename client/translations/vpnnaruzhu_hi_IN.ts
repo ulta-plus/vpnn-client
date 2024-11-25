@@ -445,17 +445,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>लॉगिंग सक्षम</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="299"/>
         <source>VPN protocol</source>
         <translation>VPN प्रोटोकॉल</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="354"/>
         <source>Servers</source>
         <translation>सर्वर</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="466"/>
         <source>Unable change server while there is an active connection</source>
         <translation>सक्रिय कनेक्शन होने पर सर्वर बदलने में असमर्थ</translation>
     </message>

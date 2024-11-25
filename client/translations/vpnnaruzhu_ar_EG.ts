@@ -445,17 +445,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>تم تمكين التسجيل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="277"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="299"/>
         <source>VPN protocol</source>
         <translation>بروتوكول VPN</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="332"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="354"/>
         <source>Servers</source>
         <translation>الخوادم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="444"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="466"/>
         <source>Unable change server while there is an active connection</source>
         <translation>لا يمكن تغير الخادم بينما هناك اتصال مفعل</translation>
     </message>

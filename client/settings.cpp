@@ -443,7 +443,7 @@ void Settings::setAppsSplitTunnelingEnabled(bool enabled)
 
 bool Settings::isKillSwitchEnabled() const
 {
-    return value("Conf/killSwitchEnabled", true).toBool();
+    return value("Conf/killSwitchEnabled", false).toBool();
 }
 
 void Settings::setKillSwitchEnabled(bool enabled)

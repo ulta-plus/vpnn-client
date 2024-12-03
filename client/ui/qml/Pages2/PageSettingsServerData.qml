@@ -160,7 +160,6 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("Remove server from application")
-                textColor: UltaStyle.color.attentionText
 
                 Keys.onTabPressed: {
                     if (content.isServerWithWriteAccess) {
@@ -251,7 +250,6 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("Reset API config")
-                textColor: AmneziaStyle.color.vibrantRed
 
                 Keys.onTabPressed: root.lastItemTabClickedSignal()
 

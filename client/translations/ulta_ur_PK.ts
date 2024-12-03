@@ -2006,7 +2006,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="129"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="178"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="220"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="260"/>
         <source>Continue</source>
         <translation>براہ کرم جاری رکھیں</translation>
     </message>
@@ -2014,7 +2014,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="130"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="179"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="221"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="262"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
         <source>Cancel</source>
         <translation>منسوخ</translation>
     </message>
@@ -2074,12 +2074,12 @@ in our Telegram channel!</source>
         <translation>API کونفیگ کو دوبارہ ترتیب دیں</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="259"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="258"/>
         <source>Do you want to reset API config?</source>
         <translation>کیا آپ API کونفیگ کو دوبارہ ترتیب دینا چاہتے ہیں؟</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="266"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="265"/>
         <source>Cannot reset API config during active connection</source>
         <translation>چالو کنکشن کے دوران API ترتیبات کو دوبارہ ترتیب نہیں دی جا سکتی</translation>
     </message>

@@ -121,6 +121,7 @@ PageType {
 
                 MouseArea {
                     anchors.fill: telegramButton
+                    cursorShape: Qt.PointingHandCursor
                     onClicked: {
                         Qt.openUrlExternally("https://t.me/ultarussia")
                     }

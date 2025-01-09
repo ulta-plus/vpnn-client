@@ -491,7 +491,7 @@ void AmneziaApplication::updateSmartRouting()
     request.setTransferTimeout(7000);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
-    QString routing_file("https://raw.githubusercontent.com/vpn-naruzhu/public/refs/heads/main/local.json");
+    QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/local.json");
     request.setUrl(routing_file);
 
     QNetworkReply *reply;

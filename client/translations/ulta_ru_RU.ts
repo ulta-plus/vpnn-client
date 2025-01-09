@@ -2089,7 +2089,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="129"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="178"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="220"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="260"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
@@ -2097,7 +2097,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="130"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="179"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="221"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="262"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
@@ -2162,12 +2162,12 @@ in our Telegram channel!</source>
         <translation>Сбросить конфигурацию API</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="259"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="258"/>
         <source>Do you want to reset API config?</source>
         <translation>Вы хотите сбросить конфигурацию API?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="266"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="265"/>
         <source>Cannot reset API config during active connection</source>
         <translation>Невозможно сбросить конфигурацию API во время активного соединения</translation>
     </message>

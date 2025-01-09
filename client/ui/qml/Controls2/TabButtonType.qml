@@ -6,11 +6,11 @@ import Style 1.0
 TabButton {
     id: root
 
-    property string hoveredColor: "#633303"
-    property string defaultColor: "#2C2D30"
-    property string selectedColor: "#FFDD51"
+    property string hoveredColor: UltaStyle.color.buttonBackGroundSelected
+    property string defaultColor: UltaStyle.color.buttonBackGround
+    property string selectedColor: UltaStyle.color.buttonBackGroundSelected
 
-    property string textColor: AmneziaStyle.color.paleGray
+    property string textColor: UltaStyle.color.mainText
 
     property string borderFocusedColor: AmneziaStyle.color.paleGray
     property int borderFocusedWidth: 1

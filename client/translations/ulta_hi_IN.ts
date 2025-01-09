@@ -2002,7 +2002,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="129"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="178"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="220"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="260"/>
         <source>Continue</source>
         <translation>जारी रखना</translation>
     </message>
@@ -2010,7 +2010,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="130"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="179"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="221"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="262"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
         <source>Cancel</source>
         <translation>रद्द करना</translation>
     </message>
@@ -2070,12 +2070,12 @@ in our Telegram channel!</source>
         <translation>एपीआई कॉन्फिगरेशन रीसेट करें</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="259"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="258"/>
         <source>Do you want to reset API config?</source>
         <translation>क्या आप एपीआई कॉन्फिगरेशन रीसेट करना चाहते हैं?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="266"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="265"/>
         <source>Cannot reset API config during active connection</source>
         <translation>सक्रिय कनेक्शन के दौरान एपीआई कॉन्फिगरेशन को रीसेट नहीं किया जा सकता</translation>
     </message>

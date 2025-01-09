@@ -2098,7 +2098,7 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="129"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="178"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="220"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="260"/>
         <source>Continue</source>
         <translation>继续</translation>
     </message>
@@ -2106,7 +2106,7 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="130"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="179"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="221"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="262"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -2166,12 +2166,12 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation>重置 API 配置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="259"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="258"/>
         <source>Do you want to reset API config?</source>
         <translation>您想重置 API 配置吗？</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="266"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="265"/>
         <source>Cannot reset API config during active connection</source>
         <translation type="unfinished"></translation>
     </message>

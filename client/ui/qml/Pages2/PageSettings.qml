@@ -122,7 +122,7 @@ PageType {
                 clickedFunction: function() {
                      Qt.openUrlExternally("https://t.me/ultarussia")
                 }
-                KeyNavigation.tab: account.rightButton
+                KeyNavigation.tab: telegrammGroup.rightButton
             }
 
             DividerType {}

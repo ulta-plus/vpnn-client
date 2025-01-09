@@ -2169,7 +2169,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="129"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="178"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="220"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="260"/>
         <source>Continue</source>
         <translation>Продовжити</translation>
     </message>
@@ -2177,7 +2177,7 @@ in our Telegram channel!</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="130"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="179"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="221"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="262"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="261"/>
         <source>Cancel</source>
         <translation>Відмінити</translation>
     </message>
@@ -2247,7 +2247,7 @@ in our Telegram channel!</source>
         <translation>Неможливо очистити сервер від програмного забезпечення Amnezia під час активного підключення</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="266"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="265"/>
         <source>Cannot reset API config during active connection</source>
         <translation>Неможливо скинути конфігурацію API під час активного підключення</translation>
     </message>
@@ -2261,7 +2261,7 @@ in our Telegram channel!</source>
         <translation>Скинути API конфігурацію</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="259"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="258"/>
         <source>Do you want to reset API config?</source>
         <translation>Ви хочете скинути API конфігурацію?</translation>
     </message>

@@ -249,12 +249,12 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">Configuration ဖိုင် မမှန်ကန်ပါ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="648"/>
+        <location filename="../ui/controllers/importController.cpp" line="659"/>
         <source>Scanned %1 of %2.</source>
         <translation>%2 ၏ %1 ကို စကင်န်ဖတ်ထားသည်.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="683"/>
+        <location filename="../ui/controllers/importController.cpp" line="694"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>တင်သွင်းသည့် configuration တွင်၊ အန္တရာယ်ရှိနိုင်သည့်စာလိုင်းများကို တွေ့ရှိခဲ့သည်:</translation>
     </message>

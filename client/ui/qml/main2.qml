@@ -30,8 +30,6 @@ Window  {
         PageController.closeWindow()
     }
 
-    title: "VPNNaruzhu"
-
     Item { // This item is needed for focus handling
         id: defaultFocusItem
         objectName: "defaultFocusItem"

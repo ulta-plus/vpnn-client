@@ -61,9 +61,9 @@ int main(int argc, char *argv[])
 
     app.registerTypes();
 
-    app.setApplicationName(APPLICATION_NAME);
+    app.setApplicationName(APPLICATION_NAME "-" APP_VERSION);
     app.setOrganizationName(ORGANIZATION_NAME);
-    app.setApplicationDisplayName(APPLICATION_NAME);
+    app.setApplicationDisplayName(APPLICATION_NAME "-" APP_VERSION);
     app.setWindowIcon(QIcon(":/images/app.ico"));
 
     app.loadFonts();

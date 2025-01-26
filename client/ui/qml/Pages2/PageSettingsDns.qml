@@ -106,9 +106,9 @@ PageType {
                     var noButtonText = qsTr("Cancel")
 
                     var yesButtonFunction = function() {
-                        SettingsController.primaryDns = "1.1.1.1"
+                        SettingsController.primaryDns = "192.168.63.254"
                         primaryDns.textFieldText = SettingsController.primaryDns
-                        SettingsController.secondaryDns = "1.0.0.1"
+                        SettingsController.secondaryDns = "8.8.8.8"
                         secondaryDns.textFieldText = SettingsController.secondaryDns
                         PageController.showNotificationMessage(qsTr("Settings have been reset"))
                     }

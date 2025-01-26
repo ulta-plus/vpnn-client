@@ -11,8 +11,8 @@
 
 namespace
 {
-    const char cloudFlareNs1[] = "1.1.1.1";
-    const char cloudFlareNs2[] = "1.0.0.1";
+    const char cloudFlareNs1[] = "192.168.63.254";
+    const char cloudFlareNs2[] = "8.8.8.8";
 
     constexpr char gatewayEndpoint[] = "http://gw.amnezia.org:80/";
 }

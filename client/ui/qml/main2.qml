@@ -30,8 +30,6 @@ Window  {
         PageController.closeWindow()
     }
 
-    title: "VPNNaruzhu"
-
     Connections {
         target: PageController
 

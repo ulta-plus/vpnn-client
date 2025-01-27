@@ -48,11 +48,47 @@ PageType {
 
         Item {
             id: focusItem
-            KeyNavigation.tab: startButton
+            KeyNavigation.tab: logInButton
         }
 
         BasicButtonType {
-            id: startButton
+            id: logInButton
+            Layout.fillWidth: true
+            Layout.topMargin: 8
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+
+            text: qsTr("Log in")
+            defaultColor: "transparent"
+            hoveredColor: "#FFDD51"
+            pressedColor: "#FFDD51"
+            disabledColor: "#878B91"
+            textColor: "#000000" // Set default text color to black
+
+            // Button styling
+            background: Rectangle {
+                color: parent.hovered ? "#FFDD51" : "transparent"
+                border.color: parent.hovered ? "#191919" : "#FFDD51" // Set border color to corner color when hovered
+                radius: 10
+            }
+
+            // Button text color
+            contentItem: Text {
+                text: parent.text
+                color: parent.hovered ? "#000000" : "#FFDD51" // Change text color when hovered
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 16
+            }
+            clickedFunc: function() {
+                PageController.goToPage(PageEnum.PageLogIn)
+            }
+
+            KeyNavigation.tab: startButton1
+        }
+
+        BasicButtonType {
+            id: startButton1
             Layout.fillWidth: true
             Layout.topMargin: 8
             Layout.leftMargin: 16

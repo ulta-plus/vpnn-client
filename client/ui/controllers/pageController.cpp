@@ -30,7 +30,7 @@ PageController::PageController(const QSharedPointer<ServersModel> &serversModel,
 #endif
 
     connect(this, qOverload<ErrorCode>(&PageController::showErrorMessage), this, &PageController::onShowErrorMessage);
-    
+
     m_isTriggeredByConnectButton = false;
 }
 

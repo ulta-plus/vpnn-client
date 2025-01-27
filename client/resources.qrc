@@ -222,6 +222,7 @@
         <file>images/controls/chat.svg</file>
         <file>images/controls/external-link.svg</file>
         <file>images/controls/telegramNaruzhu.svg</file>
+        <file>ui/qml/Pages2/PageLogIn.qml</file>
     </qresource>
     <qresource prefix="/countriesFlags">
         <file>images/flagKit/ZW.svg</file>

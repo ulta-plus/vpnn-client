@@ -475,6 +475,14 @@ Already installed containers were found on the server. All installed containers 
     </message>
 </context>
 <context>
+    <name>PageLogIn</name>
+    <message>
+        <location filename="../ui/qml/Pages2/PageLogIn.qml" line="41"/>
+        <source>Enter your e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PageProtocolAwgClientSettings</name>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="96"/>
@@ -2439,16 +2447,21 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="61"/>
+        <source>Log in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="97"/>
         <source>I have the data to connect</source>
         <translation>我有连接配置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="104"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="140"/>
         <source>I have nothing</source>
         <translation>我没有</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="123"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="159"/>
         <source>https://naruzhu.click/appam</source>
         <translation type="unfinished"></translation>
     </message>

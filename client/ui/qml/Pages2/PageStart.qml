@@ -366,7 +366,8 @@ PageType {
             isSelected: tabBar.currentIndex === 3
             image: "qrc:/images/controls/plus.svg"
             clickedFunc: function () {
-                connectionTypeSelection.open()
+                tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardConfigSource)
+                tabBar.currentIndex = 3
             }
         }
 

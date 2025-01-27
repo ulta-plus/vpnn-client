@@ -491,7 +491,7 @@ void AmneziaApplication::restartConnection()
 void AmneziaApplication::updateSmartRouting()
 {
     QNetworkRequest request;
-    request.setTransferTimeout(7000);
+    request.setTransferTimeout(1000);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/local.json");

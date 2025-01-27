@@ -51,6 +51,10 @@
         "optional": "cpp",
         "regex": "cpp",
         "random": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "map": "cpp",
+        "unordered_map": "cpp",
+        "*.in": "cpp",
+        "ranges": "cpp"
     }
 }

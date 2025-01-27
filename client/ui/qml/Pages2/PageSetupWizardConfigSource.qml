@@ -25,8 +25,6 @@ PageType {
         }
     }
 
-    defaultActiveFocusItem: focusItem
-
     FlickableType {
         id: fl
         anchors.top: parent.top

@@ -431,9 +431,10 @@ jobs:
         ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/android.keystore
         ANDROID_KEYSTORE_KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEYSTORE_KEY_ALIAS }}
         ANDROID_KEYSTORE_KEY_PASS: ${{ secrets.ANDROID_RELEASE_KEYSTORE_KEY_PASS }}
-        VPNN_VERSION: ${{ env.VPNN_VERSION }}
       shell: bash
-      run: ./deploy/build_android.sh --aab --apk all --build-platform ${{ env.ANDROID_BUILD_PLATFORM }}
+      run: |
+        export VPNN_VERSION="${{ env.VPNN_VERSION }}"
+        ./deploy/build_android.sh --aab --apk all --build-platform ${{ env.ANDROID_BUILD_PLATFORM }}
 
     - name: 'Upload x86_64 apk'
       uses: actions/upload-artifact@v4

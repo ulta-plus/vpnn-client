@@ -56,7 +56,7 @@ clang -v
 echo "Building App..."
 cd $BUILD_DIR
 
-$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -B $BUILD_DIR
+$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -B $BUILD_DIR -DVPNN_VERSION=$VPNN_VERSION
 cmake --build . --config release --target all
 
 # Build and run tests here

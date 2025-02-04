@@ -111,6 +111,7 @@ fi
 $QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -B $BUILD_DIR \
   -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL=ON \
   -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
+  -DVPNN_VERSION=$VPNN_VERSION \
   "${qt_cmake_opts[@]}"
 
 # Build app

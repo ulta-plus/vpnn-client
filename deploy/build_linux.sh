@@ -55,7 +55,7 @@ gcc -v
 echo "Building App..."
 cd $BUILD_DIR
 
-$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR
+$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -DVPNN_VERSION=$VPNN_VERSION
 cmake --build . --config release
 
 # Build and run tests here

@@ -98,7 +98,7 @@ echo "Using Android SDK in $ANDROID_SDK_ROOT"
 echo "Using Android NDK in $ANDROID_NDK_ROOT"
 
 # Run qt-cmake to configure build
-qt_cmake_opts=()
+qt_cmake_opts=(-DVPNN_VERSION="$VPNN_VERSION")
 
 if [[ -v AAB || "$ABIS" = "all" ]]; then
   qt_cmake_opts+=(-DQT_ANDROID_BUILD_ALL_ABIS=ON)

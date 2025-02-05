@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
 set(PROJECT VPNNaruzhu)
 
-project(${PROJECT} VERSION 2.0.2.4
+project(${PROJECT} VERSION "${VPNN_VERSION}"
         DESCRIPTION "VPNNaruzhu"
         HOMEPAGE_URL "https://naruzhu.click/appam"
 )

@@ -63,6 +63,10 @@ namespace PageLoader
 
         PageShareFullAccess,
 
+        VPNNaruzhuPageLogIn,
+        VPNNaruzhuPageSignUp,
+        VPNNaruzhuPageEmailLogIn,
+
         PageDevMenu
     };
     Q_ENUM_NS(PageEnum)

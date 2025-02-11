@@ -811,3 +811,59 @@ const QString ServersModel::getDefaultServerImagePathCollapsed()
     }
     return QString("qrc:/countriesFlags/images/flagKit/%1.svg").arg(countryCode.toUpper());
 }
+
+QJsonObject ServersModel::getDefaultConfig()
+{
+    for (size_t i = 0; i < m_servers.size(); ++i) {
+        QJsonObject s = getServerConfig(i);
+        if (s.value(config_key::is_default).toBool()) {
+            return s;
+        }
+    }
+
+    return QJsonObject();
+}
+
+bool ServersModel::isThereDefaultConfig()
+{
+    for (size_t i = 0; i < m_servers.size(); ++i) {
+        QJsonObject s = getServerConfig(i);
+        if (s.value(config_key::is_default).toBool()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+int ServersModel::getDefaultConfigIndex()
+{
+    int i = 0;
+    for (i = 0; i < m_servers.size(); ++i) {
+        QJsonObject s = getServerConfig(i);
+        if (s.value(config_key::is_default).toBool()) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+void ServersModel::updateDefaultConfig(QString configStatus)
+{
+    int i = getDefaultConfigIndex();
+    if (i < 0) {
+        return;
+    }
+
+    QJsonObject defaultConfig = getServerConfig(i);
+
+    auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
+    auto request = doc["data"]["request"];
+
+    defaultConfig[config_key::public_request_id] = request[config_key::public_request_id].toString();
+    defaultConfig[config_key::payment_link] = request[config_key::payment_link].toString();
+    defaultConfig[config_key::paid_until] = request[config_key::paid_until].toString();
+
+    editServer(defaultConfig, i);
+}

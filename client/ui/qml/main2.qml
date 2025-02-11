@@ -6,6 +6,7 @@ import QtQuick.Dialogs
 
 import PageEnum 1.0
 import Style 1.0
+import WebAPI 1.0
 
 import "Config"
 import "Controls2"
@@ -64,6 +65,7 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
+            VPNNaruzhuAPI.updateDefaultConfig()
         }
 
         function onHideMainWindow() {

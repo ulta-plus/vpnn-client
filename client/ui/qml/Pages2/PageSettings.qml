@@ -44,7 +44,7 @@ PageType {
                 Layout.fillWidth: true
                 Layout.topMargin: 16
 
-                text: qsTr("Servers")
+                text: qsTr("Keys")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
                 leftImageSource: "qrc:/images/controls/server.svg"
 
@@ -145,7 +145,7 @@ PageType {
                 leftImageSource: "qrc:/images/controls/telegramNaruzhu.svg"
 
                 clickedFunction: function() {
-                     Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
+                    Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
                 }
             }
 

@@ -391,7 +391,7 @@ PageType {
                     Layout.leftMargin: 16
                     Layout.rightMargin: 16
 
-                    headerText: qsTr("Servers")
+                    headerText: qsTr("Keys")
                 }
             }
 

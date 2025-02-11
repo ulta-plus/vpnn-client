@@ -91,6 +91,23 @@ bool ImportController::extractConfigFromFile(const QString &fileName)
     return extractConfigFromData(data);
 }
 
+bool ImportController::extractDefaultConfig(QString data, QString configStatus)
+{
+    m_configFileName = tr("Default Key");
+    bool extractResult = extractConfigFromData(data);
+    if (extractResult) {
+        auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
+        auto request = doc["data"]["request"];
+
+        m_config[config_key::is_default] = true;
+        m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
+        m_config[config_key::payment_link] = request[config_key::payment_link].toString();
+        m_config[config_key::paid_until] = request[config_key::paid_until].toString();
+    }
+
+    return extractResult;
+}
+
 bool ImportController::extractConfigFromData(QString data)
 {
     QString config = data;

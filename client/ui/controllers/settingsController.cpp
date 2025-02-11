@@ -267,9 +267,9 @@ void SettingsController::requestNotificationPermission()
 #endif
 }
 
-QString SettingsController::getInstallationUuid()
+QString SettingsController::getInstallationUuid(bool needCreate = false)
 {
-    return m_settings->getInstallationUuid(false);
+    return m_settings->getInstallationUuid(needCreate);
 }
 
 void SettingsController::enableDevMode()

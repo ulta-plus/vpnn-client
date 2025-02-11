@@ -30,12 +30,13 @@ PageController::PageController(const QSharedPointer<ServersModel> &serversModel,
 #endif
 
     connect(this, qOverload<ErrorCode>(&PageController::showErrorMessage), this, &PageController::onShowErrorMessage);
-    
+
     m_isTriggeredByConnectButton = false;
 }
 
 bool PageController::isStartPageVisible()
 {
+    /*
     if (m_serversModel->getServersCount()) {
         if (m_serversModel->getDefaultServerIndex() < 0) {
             auto defaultServerIndex = m_serversModel->index(0);
@@ -45,6 +46,9 @@ bool PageController::isStartPageVisible()
     } else {
         return true;
     }
+    */
+
+    return !m_serversModel->isThereDefaultConfig();
 }
 
 QString PageController::getPagePath(PageLoader::PageEnum page)

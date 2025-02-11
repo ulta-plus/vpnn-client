@@ -30,6 +30,7 @@ public:
 
 public slots:
     void importConfig();
+    bool extractDefaultConfig(QString data, QString configStatus);
     bool extractConfigFromFile(const QString &fileName);
     bool extractConfigFromData(QString data);
     bool extractConfigFromQr(const QByteArray &data);

@@ -15,8 +15,12 @@
     // Show WhiteSpases
     "editor.renderWhitespace": "all",
 
-    // Remove Trailing WhiteSpases
+    // When enabled, will trim trailing whitespace when saving a file.
     "files.trimTrailingWhitespace": true,
+
+    // When enabled, the diff editor ignores changes in leading or trailing whitespace.
+    "diffEditor.ignoreTrimWhitespace": false,
+
     "files.associations": {
         "atomic": "cpp",
         "deque": "cpp",
@@ -55,6 +59,11 @@
         "map": "cpp",
         "unordered_map": "cpp",
         "*.in": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "span": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "xlocinfo": "cpp",
+        "initializer_list": "cpp"
     }
 }

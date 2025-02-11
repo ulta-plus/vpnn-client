@@ -1,0 +1,3 @@
+module WebAPI
+
+singleton VPNNaruzhuAPI 1.0 VPNNaruzhuAPI.qml

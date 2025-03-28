@@ -15,6 +15,7 @@ Rectangle {
     visible: false
 
     property int textSize: 16
+    property bool pop_up: true
 
     property string text: qsTr('ERROR')
     property string buttonText: qsTr('Close')
@@ -22,7 +23,7 @@ Rectangle {
     property string borderColor: VPNNaruzhuStyle.color.notificationBorder
     property string backgroundColor: VPNNaruzhuStyle.color.notificationBackground
 
-    property var withClose: function() {} // function executed with close Notification
+    property var onClick: function() {} // function executed with close Notification
 
     color: root.backgroundColor
     border.width: 1
@@ -49,7 +50,7 @@ Rectangle {
 
     VPNNaruzhuButton {
         implicitHeight: 30
-        implicitWidth: 80
+        implicitWidth: (contentItem.implicitWidth > 80) ? contentItem.implicitWidth + 20 : 80
 
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 10
@@ -58,8 +59,11 @@ Rectangle {
         mainText: root.buttonText
 
         onClicked: {
-            root.visible = false;
-            withClose();
+            if (pop_up) {
+                root.visible = false;
+            }
+
+            onClick();
         }
     }
 }

@@ -92,6 +92,11 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>कॉन्फ़िगरेशन तैयारी के दौरान डिस्कनेक्ट करने में असमर्थ</translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="203"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -262,12 +267,12 @@ Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="667"/>
+        <location filename="../ui/controllers/importController.cpp" line="668"/>
         <source>Scanned %1 of %2.</source>
         <translation>%2 में से %1 स्कैन किया गया.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="702"/>
+        <location filename="../ui/controllers/importController.cpp" line="703"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -458,12 +463,22 @@ Already installed containers were found on the server. All installed containers 
         <translation>लॉगिंग सक्षम</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
+        <source>Subscription valid until</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="106"/>
+        <source>Renew Subscription</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="356"/>
         <source>VPN protocol</source>
         <translation>VPN प्रोटोकॉल</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="394"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="409"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4018,12 +4033,12 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>VPNNaruzhuNotification</name>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="19"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
         <source>ERROR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="21"/>
         <source>Close</source>
         <translation type="unfinished">बंद करना</translation>
     </message>

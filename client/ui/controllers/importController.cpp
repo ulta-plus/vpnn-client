@@ -103,6 +103,7 @@ bool ImportController::extractDefaultConfig(QString data, QString configStatus)
         m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
         m_config[config_key::payment_link] = request[config_key::payment_link].toString();
         m_config[config_key::paid_until] = request[config_key::paid_until].toString();
+        m_config[config_key::simplified_status] = request[config_key::simplified_status].toString();
     }
 
     return extractResult;

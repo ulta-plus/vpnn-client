@@ -94,6 +94,21 @@ PageType {
                 KeyNavigation.tab: drawer // issue_5 splitTunnelingButton
             }
 
+            VPNNaruzhuNotification {
+                pop_up: false
+                visible: true
+
+                Layout.alignment: Qt.AlignCenter
+
+                property var defaultConfig: ServersModel.getDefaultConfig()
+
+                text: qsTr('Subscription valid until') + ':\n' + defaultConfig.paid_until.substring(0, 10)
+                buttonText: qsTr('Renew Subscription')
+
+                onClick: function() {
+                    Qt.openUrlExternally(defaultConfig.payment_link)
+                }
+            }
         /* issue_5 splitTunnelingButton
             BasicButtonType {
                 id: splitTunnelingButton

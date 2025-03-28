@@ -152,7 +152,7 @@ PageType {
         id: errorNotification
         anchors.centerIn: parent
         text: root.error
-        withClose: root.enableAll
+        onClick: root.enableAll
     }
 
     function getKeyFile() {

@@ -92,6 +92,11 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>در هنگام آماده‌سازی پیکربندی، نمی‌توان از اتصال خارج شد.</translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="203"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -263,12 +268,12 @@ Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="667"/>
+        <location filename="../ui/controllers/importController.cpp" line="668"/>
         <source>Scanned %1 of %2.</source>
         <translation>ارزیابی %1 از %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="702"/>
+        <location filename="../ui/controllers/importController.cpp" line="703"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>در پیکربندی وارد شده، خطوطی که ممکن است خطرناک باشند، یافت شدند:</translation>
     </message>
@@ -459,12 +464,22 @@ Already installed containers were found on the server. All installed containers 
         <translation>لاگ‌برداری فعال شد</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
+        <source>Subscription valid until</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="106"/>
+        <source>Renew Subscription</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="356"/>
         <source>VPN protocol</source>
         <translation>پروتکل وی‎پی‎ان</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="394"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="409"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4000,12 +4015,12 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuNotification</name>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="19"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
         <source>ERROR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="21"/>
         <source>Close</source>
         <translation type="unfinished">بستن</translation>
     </message>

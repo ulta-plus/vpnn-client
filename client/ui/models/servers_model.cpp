@@ -864,6 +864,7 @@ void ServersModel::updateDefaultConfig(QString configStatus)
     defaultConfig[config_key::public_request_id] = request[config_key::public_request_id].toString();
     defaultConfig[config_key::payment_link] = request[config_key::payment_link].toString();
     defaultConfig[config_key::paid_until] = request[config_key::paid_until].toString();
+    defaultConfig[config_key::simplified_status] = request[config_key::simplified_status].toString();
 
     editServer(defaultConfig, i);
 }

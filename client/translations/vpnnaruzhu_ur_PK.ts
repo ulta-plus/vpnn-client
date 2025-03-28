@@ -92,6 +92,11 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>تشکیل کی تیاری کے دوران منقطع ہونا ممکن نہیں ہے</translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="203"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -261,12 +266,12 @@ Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="667"/>
+        <location filename="../ui/controllers/importController.cpp" line="668"/>
         <source>Scanned %1 of %2.</source>
         <translation>سکین%1 کی%2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="702"/>
+        <location filename="../ui/controllers/importController.cpp" line="703"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -459,12 +464,22 @@ Already installed containers were found on the server. All installed containers 
         <translation>لاگنگ فعال ہے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
+        <source>Subscription valid until</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="106"/>
+        <source>Renew Subscription</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="356"/>
         <source>VPN protocol</source>
         <translation>وی پی این پروٹوکول</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="394"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="409"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3982,12 +3997,12 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>VPNNaruzhuNotification</name>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="19"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
         <source>ERROR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="21"/>
         <source>Close</source>
         <translation type="unfinished">بند</translation>
     </message>

@@ -131,6 +131,7 @@
         <file>ui/qml/Config/qmldir</file>
         <file>ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml</file>
         <file>ui/qml/Controls2/VPNNaruzhuNotification.qml</file>
+        <file>ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml</file>
         <file>ui/qml/Controls2/VPNNaruzhuTextField.qml</file>
         <file>ui/qml/Controls2/VPNNaruzhuButton.qml</file>
         <file>ui/qml/Controls2/BackButtonType.qml</file>
@@ -237,6 +238,7 @@
         <file>images/controls/tabBarChat.svg</file>
         <file>images/controls/chat.svg</file>
         <file>images/controls/telegramNaruzhu.svg</file>
+        <file>images/controls/sign-out.svg</file>
     </qresource>
     <qresource prefix="/countriesFlags">
         <file>images/flagKit/ZW.svg</file>

@@ -867,3 +867,14 @@ void ServersModel::updateDefaultConfig(QString configStatus)
 
     editServer(defaultConfig, i);
 }
+
+void ServersModel::removeDefaultConfig()
+{
+    int i = getDefaultConfigIndex();
+    if (i < 0) {
+        return;
+    }
+
+    m_processedServerIndex = i;
+    removeServer();
+}

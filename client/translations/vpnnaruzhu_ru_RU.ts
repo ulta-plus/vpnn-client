@@ -219,7 +219,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2888,6 +2888,26 @@ Already installed containers were found on the server. All installed containers 
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="394"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation>Нельзя выйти при активном соединении</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="397"/>
+        <source>Sign out?</source>
+        <translation>Выйти из акаунта?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="398"/>
+        <source>Continue</source>
+        <translation>Продолжить</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
+        <source>Cancel</source>
+        <translation>Отменить</translation>
+    </message>
 </context>
 <context>
     <name>PopupType</name>
@@ -3395,7 +3415,7 @@ Already installed containers were found on the server. All installed containers 
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection and blocking. 
+Cloak protects OpenVPN from detection and blocking.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -3435,15 +3455,15 @@ WireGuard очень уязвим для блокировки из-за хара
     <message>
         <location filename="../containers/containers_defs.cpp" line="220"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="231"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
 * Available in the VPNNaruzhu only on Windows
@@ -4045,6 +4065,19 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
         <source>Sign up with e-mail</source>
         <translation>Регистрация по e-mail</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuYesNoNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="21"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
+        <source>No</source>
+        <translation>Нет</translation>
     </message>
 </context>
 <context>

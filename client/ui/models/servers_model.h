@@ -134,6 +134,7 @@ public slots:
     bool isThereDefaultConfig();
     int getDefaultConfigIndex();
     void updateDefaultConfig(QString configStatus);
+    void removeDefaultConfig();
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

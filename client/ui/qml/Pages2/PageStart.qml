@@ -372,12 +372,48 @@ PageType {
         }
 
         TabImageButtonType {
+            id: supportButton
+            objectName: "supportButton"
+
             isSelected: tabBar.currentIndex === 4
             image: "qrc:/images/controls/tabBarChat.svg"
             onClicked: {
                 Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
+                tabBar.currentIndex = 4
             }
         }
+
+        TabImageButtonType {
+            id: signOutButton
+            objectName: "signOutButton"
+
+            isSelected: tabBar.currentIndex === 5
+            image: "qrc:/images/controls/sign-out.svg"
+            onClicked: {
+                if (ConnectionController.isConnected || ConnectionController.isConnectionInProgress) {
+                    notification.text = qsTr('Cannot sign out with an active connection')
+                    notification.visible = true
+                } else {
+                    var headerText = qsTr('Sign out?')
+                    var yesButtonText = qsTr("Continue")
+                    var noButtonText = qsTr("Cancel")
+                    var yesButtonFunction = function() {
+                        ServersModel.removeDefaultConfig()
+                        PageController.goToPageHome()
+                    }
+                    var noButtonFunction = function() {
+                    }
+                    showQuestionDrawer(headerText, '', yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+                }
+                tabBar.currentIndex = 5
+            }
+        }
+    }
+
+    VPNNaruzhuNotification {
+        id: notification
+        objectName: "notification"
+        anchors.centerIn: parent
     }
 
     ConnectionTypeSelectionDrawer {

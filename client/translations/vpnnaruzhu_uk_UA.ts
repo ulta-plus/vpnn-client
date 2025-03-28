@@ -2918,6 +2918,26 @@ Already installed containers were found on the server. All installed containers 
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="394"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="397"/>
+        <source>Sign out?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="398"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продовжити</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Відмінити</translation>
+    </message>
 </context>
 <context>
     <name>PopupType</name>
@@ -4079,6 +4099,19 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
         <source>Sign up with e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuYesNoNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="21"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
+        <source>No</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

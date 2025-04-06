@@ -91,6 +91,7 @@ PageType {
         KeyNavigation.tab: backButton
 
         onClicked: {
+            root.disableAll()
             root.email = emailText.text
 
             var http = new XMLHttpRequest()
@@ -106,7 +107,7 @@ PageType {
 
             http.onreadystatechange = function() {
                 if(http.readyState === XMLHttpRequest.DONE) {
-                    root.disableAll()
+                    waitingBox.visible = false
                     if (http.status == 200) {
                         inputOTPCode.visible = true
                     } else {
@@ -115,6 +116,7 @@ PageType {
                 }
             }
 
+            waitingBox.visible = true
             http.send()
         }
     }
@@ -153,6 +155,12 @@ PageType {
         anchors.centerIn: parent
         text: root.error
         onClick: root.enableAll
+    }
+
+    BusyIndicator {
+        id: waitingBox
+        anchors.centerIn: parent
+        visible: false
     }
 
     function getKeyFile() {

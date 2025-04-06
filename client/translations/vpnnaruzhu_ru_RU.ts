@@ -88,12 +88,12 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="203"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
         <source>Your account blocked</source>
         <translation>Ваш аккаунт заблокирован</translation>
     </message>
@@ -4021,17 +4021,17 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="176"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="183"/>
         <source>Wrong Key File</source>
         <translation>Получен неправильный ключ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="190"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="197"/>
         <source>Enter a code from the e-mail</source>
         <translation>Введите код из e-mail</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="191"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="198"/>
         <source>code</source>
         <translation>код</translation>
     </message>

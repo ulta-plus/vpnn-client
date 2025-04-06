@@ -88,12 +88,12 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>कॉन्फ़िगरेशन तैयारी के दौरान डिस्कनेक्ट करने में असमर्थ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="203"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4064,17 +4064,17 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="176"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="183"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="190"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="197"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="191"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="198"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>

@@ -30,11 +30,6 @@ PageType {
         }
 
         function onImportFinished() {
-            if (!ConnectionController.isConnected) {
-                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1)
-                ServersModel.processedIndex = ServersModel.defaultIndex
-            }
-
             PageController.goToPageHome()
         }
     }

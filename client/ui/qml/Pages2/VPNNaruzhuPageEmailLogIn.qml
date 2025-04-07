@@ -30,6 +30,12 @@ PageType {
         }
 
         function onImportFinished() {
+            if (ServersModel.getServersCount() == 1) {
+                // There is only new default config
+                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1)
+                ServersModel.processedIndex = ServersModel.defaultIndex
+            }
+
             PageController.goToPageHome()
         }
     }

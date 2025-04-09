@@ -37,7 +37,7 @@ PageType {
         }
 
         function onRemoveProcessedServerFinished(finishedMessage) {
-            if (!ServersModel.getServersCount()) {
+            if (!ServersModel.isThereDefaultConfig()) {
                 PageController.goToPageHome()
             } else {
                 PageController.goToStartPage()

@@ -7,6 +7,7 @@ import Qt5Compat.GraphicalEffects
 import ConnectionState 1.0
 import PageEnum 1.0
 import Style 1.0
+import WebAPI 1.0
 
 Button {
     id: root
@@ -18,7 +19,7 @@ Button {
     property bool buttonActiveFocus: activeFocus && (Qt.platform.os !== "android" || SettingsController.isOnTv())
 
     property bool isFocusable: true
-    
+
     Keys.onTabPressed: {
         FocusController.nextKeyTabItem()
     }
@@ -30,11 +31,11 @@ Button {
     Keys.onUpPressed: {
         FocusController.nextKeyUpItem()
     }
-    
+
     Keys.onDownPressed: {
         FocusController.nextKeyDownItem()
     }
-    
+
     Keys.onLeftPressed: {
         FocusController.nextKeyLeftItem()
     }
@@ -42,7 +43,7 @@ Button {
     Keys.onRightPressed: {
         FocusController.nextKeyRightItem()
     }
-        
+
     implicitWidth: 190
     implicitHeight: 190
 
@@ -196,8 +197,14 @@ Button {
     }
 
     onClicked: {
-        ServersModel.setProcessedServerIndex(ServersModel.defaultIndex)
-        ConnectionController.connectButtonClicked()
+        VPNNaruzhuAPI.updateDefaultConfig()
+
+        if (ServersModel.getDefaultConfig().simplified_status != 'blocked') {
+            ServersModel.setProcessedServerIndex(ServersModel.defaultIndex)
+            ConnectionController.connectButtonClicked()
+        } else {
+            PageController.showNotificationMessage(qsTr('Your account blocked'))
+        }
     }
 
     Keys.onEnterPressed: this.clicked()

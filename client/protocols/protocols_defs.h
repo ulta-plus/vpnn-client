@@ -101,6 +101,12 @@ namespace amnezia
 
         constexpr char clientId[] = "clientId";
 
+        constexpr char is_default[] = "is_default";
+        constexpr char public_request_id[] = "public_request_id";
+        constexpr char payment_link[] = "payment_link";
+        constexpr char paid_until[] = "paid_until";
+        constexpr char simplified_status[] = "simplified_status";
+
     }
 
     namespace protocols

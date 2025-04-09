@@ -172,8 +172,9 @@ void AmneziaApplication::init()
 #ifdef Q_OS_WIN
     if (m_parser.isSet("a"))
         m_pageController->showOnStartup();
-    else
+    else {
         emit m_pageController->raiseMainWindow();
+    }
 #else
     m_pageController->showOnStartup();
 #endif

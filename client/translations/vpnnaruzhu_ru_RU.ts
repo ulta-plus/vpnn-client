@@ -88,9 +88,14 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Невозможно отключиться во время подготовки конфигурации</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
+        <source>Your account blocked</source>
+        <translation>Ваш аккаунт заблокирован</translation>
     </message>
 </context>
 <context>
@@ -257,12 +262,17 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">Неверный файл конфигурации</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="650"/>
+        <location filename="../ui/controllers/importController.cpp" line="96"/>
+        <source>Default Key</source>
+        <translation>Стандартный ключ</translation>
+    </message>
+    <message>
+        <location filename="../ui/controllers/importController.cpp" line="668"/>
         <source>Scanned %1 of %2.</source>
         <translation>Отсканировано %1 из %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="685"/>
+        <location filename="../ui/controllers/importController.cpp" line="703"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>В импортированной конфигурации были обнаружены потенциально опасные строки:</translation>
     </message>
@@ -453,18 +463,24 @@ Already installed containers were found on the server. All installed containers 
         <translation>Логирование включено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
+        <source>Subscription valid until</source>
+        <translation>Подписка действительна до</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="106"/>
+        <source>Renew Subscription</source>
+        <translation>Продлить Подписку</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="356"/>
         <source>VPN protocol</source>
         <translation>VPN-протокол</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="394"/>
-        <source>Servers</source>
-        <translation>Серверы</translation>
-    </message>
-    <message>
-        <source>Unable change server while there is an active connection</source>
-        <translation type="vanished">Невозможно изменить сервер во время активного соединения</translation>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="409"/>
+        <source>Keys</source>
+        <translation>Ключи</translation>
     </message>
 </context>
 <context>
@@ -1273,8 +1289,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="47"/>
-        <source>Servers</source>
-        <translation>Серверы</translation>
+        <source>Keys</source>
+        <translation>Ключи</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="62"/>
@@ -2160,8 +2176,8 @@ Already installed containers were found on the server. All installed containers 
     <name>PageSettingsServersList</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
-        <source>Servers</source>
-        <translation>Серверы</translation>
+        <source>Keys</source>
+        <translation>Ключи</translation>
     </message>
 </context>
 <context>
@@ -2330,7 +2346,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="106"/>
         <source>Key as Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Ключ в виде текста</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="82"/>
@@ -2541,18 +2557,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="54"/>
-        <source>I have the data to connect</source>
-        <translation>У меня есть данные для подключения</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="97"/>
-        <source>I have nothing</source>
-        <translation>У меня ничего нет</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="116"/>
-        <source>https://naruzhu.click/appam</source>
-        <translation type="unfinished"></translation>
+        <source>Log in</source>
+        <translation>Войти</translation>
     </message>
 </context>
 <context>
@@ -2896,6 +2902,26 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageStart.qml" line="210"/>
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="394"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation>Нельзя выйти при активном соединении</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="397"/>
+        <source>Sign out?</source>
+        <translation>Выйти из акаунта?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="398"/>
+        <source>Continue</source>
+        <translation>Продолжить</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
+        <source>Cancel</source>
+        <translation>Отменить</translation>
     </message>
 </context>
 <context>
@@ -3399,28 +3425,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>Создайте на сервере файловое хранилище для безопасного хранения и передачи файлов.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="172"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection and blocking. 
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by DPI analysis systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="191"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
@@ -3440,27 +3444,6 @@ WireGuard очень уязвим для блокировки из-за хара
 * Минимальная конфигурация
 * Легко распознается системами DPI-анализа, поддается блокировке
 * Работает по сетевому протоколу UDP</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="220"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
-It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="231"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the VPNNaruzhu only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="243"/>
@@ -3548,6 +3531,49 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * Настраиваемый протокол шифрования
 * Распознается некоторыми системами DPI-анализа
 * Работает по сетевому протоколу TCP</translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="172"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against blocking.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection and blocking. 
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+If there is a extreme level of Internet censorship in your region, we advise you to use only OpenVPN over Cloak from the first connection
+
+* Available in the VPNNaruzhu across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by DPI analysis systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="220"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is specifically designed to counteract the highest levels of internet censorship through its novel approach to evasion.
+It uniquely identifies censors during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting censors to genuine websites like google.com, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security and circumvents detection by sophisticated DPI systems employing active probing techniques. This makes REALITY a robust solution for maintaining internet freedom in environments with stringent censorship.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="231"/>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+
+* Available in the VPNNaruzhu only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="245"/>
@@ -3962,6 +3988,114 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     </message>
 </context>
 <context>
+    <name>VPNNaruzhuNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
+        <source>ERROR</source>
+        <translation>ОШИБКА</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="21"/>
+        <source>Close</source>
+        <translation>Закрыть</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuNotificationWithInput</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="22"/>
+        <source>Continue</source>
+        <translation>Продолжить</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageEmailLogIn</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="60"/>
+        <source>Enter your e-mail</source>
+        <translation>Введите свой e-mail</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="90"/>
+        <source>Continue</source>
+        <translation>Продолжить</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <source>Wrong Key File</source>
+        <translation>Получен неправильный ключ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="199"/>
+        <source>Enter a code from the e-mail</source>
+        <translation>Введите код из e-mail</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="200"/>
+        <source>code</source>
+        <translation>код</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageLogIn</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="34"/>
+        <source>Select login method</source>
+        <translation>Выберите способ авторизации</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="63"/>
+        <source>Login with an e-mail</source>
+        <translation>Авторизация по e-mail</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="45"/>
+        <source>Login with Telegram</source>
+        <translation>Авторизация через Telegram</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="81"/>
+        <source>Login with a key file</source>
+        <translation>Авторизация по файлу с ключом</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="88"/>
+        <source>Open key file</source>
+        <translation>Открыть файл с ключём</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageSignUp</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="34"/>
+        <source>Select sign up way</source>
+        <translation>Выберите способ регистрации</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="45"/>
+        <source>Sign up with Telegram</source>
+        <translation>Регистрация через Telegram</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
+        <source>Sign up with e-mail</source>
+        <translation>Регистрация по e-mail</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuYesNoNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="21"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
+        <source>No</source>
+        <translation>Нет</translation>
+    </message>
+</context>
+<context>
     <name>VpnConnection</name>
     <message>
         <location filename="../vpnconnection.cpp" line="471"/>
@@ -4038,12 +4172,12 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="198"/>
+        <location filename="../ui/qml/main2.qml" line="200"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="219"/>
+        <location filename="../ui/qml/main2.qml" line="221"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

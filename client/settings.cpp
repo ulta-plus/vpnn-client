@@ -469,6 +469,7 @@ QString Settings::getInstallationUuid(const bool needCreate)
 
         setInstallationUuid(uuid);
     }
+
     return uuid;
 }
 

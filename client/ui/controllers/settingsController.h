@@ -80,7 +80,7 @@ public slots:
     bool isNotificationPermissionGranted();
     void requestNotificationPermission();
 
-    QString getInstallationUuid();
+    QString getInstallationUuid(bool needCreate);
 
     void enableDevMode();
     bool isDevModeEnabled();

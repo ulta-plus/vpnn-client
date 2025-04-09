@@ -88,9 +88,14 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Неможливо відключитися під час підготовки конфігурації</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -257,12 +262,17 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">Недійсний файл конфігурації</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="650"/>
+        <location filename="../ui/controllers/importController.cpp" line="96"/>
+        <source>Default Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/controllers/importController.cpp" line="668"/>
         <source>Scanned %1 of %2.</source>
         <translation>Відскановано %1 з %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="685"/>
+        <location filename="../ui/controllers/importController.cpp" line="703"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>У імпортованій конфігурації знайдено потенційно небезпечні рядки:</translation>
     </message>
@@ -452,14 +462,28 @@ Already installed containers were found on the server. All installed containers 
         <translation>Логування увімкнено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
+        <source>Subscription valid until</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="106"/>
+        <source>Renew Subscription</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="356"/>
         <source>VPN protocol</source>
         <translation>VPN протокол</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="394"/>
+        <location filename="../ui/qml/Pages2/PageHome.qml" line="409"/>
+        <source>Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Servers</source>
-        <translation>Сервери</translation>
+        <translation type="vanished">Сервери</translation>
     </message>
     <message>
         <source>Unable change server while there is an active connection</source>
@@ -1271,9 +1295,13 @@ Already installed containers were found on the server. All installed containers 
         <translation>Налаштування</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="47"/>
         <source>Servers</source>
-        <translation>Сервери</translation>
+        <translation type="vanished">Сервери</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="47"/>
+        <source>Keys</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="62"/>
@@ -2162,9 +2190,13 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsServersList</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
         <source>Servers</source>
-        <translation>Сервери</translation>
+        <translation type="vanished">Сервери</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
+        <source>Keys</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2544,18 +2576,16 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="54"/>
-        <source>I have the data to connect</source>
-        <translation>У мене є дані для підключення</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="116"/>
-        <source>https://naruzhu.click/appam</source>
+        <source>Log in</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="97"/>
+        <source>I have the data to connect</source>
+        <translation type="vanished">У мене є дані для підключення</translation>
+    </message>
+    <message>
         <source>I have nothing</source>
-        <translation>У мене нічого нема</translation>
+        <translation type="vanished">У мене нічого нема</translation>
     </message>
 </context>
 <context>
@@ -2902,6 +2932,26 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageStart.qml" line="210"/>
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="394"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="397"/>
+        <source>Sign out?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="398"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продовжити</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Відмінити</translation>
     </message>
 </context>
 <context>
@@ -3969,6 +4019,118 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     </message>
 </context>
 <context>
+    <name>VPNNaruzhuNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="21"/>
+        <source>Close</source>
+        <translation type="unfinished">Закрити</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuNotificationWithInput</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="22"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продовжити</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageEmailLogIn</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="60"/>
+        <source>Enter your e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="90"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продовжити</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <source>Wrong Key File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="199"/>
+        <source>Enter a code from the e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="200"/>
+        <source>code</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageLogIn</name>
+    <message>
+        <source>Key as file</source>
+        <translation type="obsolete">Ключ як файл</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="34"/>
+        <source>Select login method</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="63"/>
+        <source>Login with an e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="45"/>
+        <source>Login with Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="81"/>
+        <source>Login with a key file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="88"/>
+        <source>Open key file</source>
+        <translation type="unfinished">Відкрити файл із ключем</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageSignUp</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="34"/>
+        <source>Select sign up way</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="45"/>
+        <source>Sign up with Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
+        <source>Sign up with e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuYesNoNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="21"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>VpnConnection</name>
     <message>
         <location filename="../vpnconnection.cpp" line="471"/>
@@ -4045,12 +4207,12 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="198"/>
+        <location filename="../ui/qml/main2.qml" line="200"/>
         <source>Private key passphrase</source>
         <translation>Пароль для особистого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="219"/>
+        <location filename="../ui/qml/main2.qml" line="221"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>

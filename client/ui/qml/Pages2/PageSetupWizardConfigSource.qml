@@ -51,7 +51,7 @@ PageType {
             }
 
             HeaderType {
-                property bool isVisible: SettingsController.getInstallationUuid() !== "" || PageController.isStartPageVisible()
+                property bool isVisible: SettingsController.getInstallationUuid(false) !== "" || PageController.isStartPageVisible()
 
                 Layout.fillWidth: true
                 Layout.topMargin: 24

@@ -377,7 +377,9 @@ PageType {
 
             isSelected: tabBar.currentIndex === 4
             image: "qrc:/images/controls/tabBarChat.svg"
+
             onClicked: {
+                GC.copyToClipBoard(SettingsController.getInstallationUuid(true))
                 Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
                 tabBar.currentIndex = 4
             }

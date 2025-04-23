@@ -2904,22 +2904,22 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="394"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="406"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="397"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="409"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="398"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="410"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="411"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>

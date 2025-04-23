@@ -145,6 +145,7 @@ PageType {
                 leftImageSource: "qrc:/images/controls/telegramNaruzhu.svg"
 
                 clickedFunction: function() {
+                    GC.copyToClipBoard(SettingsController.getInstallationUuid(true))
                     Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
                 }
             }
@@ -161,7 +162,8 @@ PageType {
                 leftImageSource: "qrc:/images/controls/email.svg"
 
                 clickedFunction: function() {
-                     Qt.openUrlExternally("mailto:team@vpn-naruzhu.com")
+                    GC.copyToClipBoard(SettingsController.getInstallationUuid(true))
+                    Qt.openUrlExternally("mailto:team@vpn-naruzhu.com")
                 }
             }
 

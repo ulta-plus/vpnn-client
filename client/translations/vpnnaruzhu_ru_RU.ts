@@ -198,6 +198,14 @@
     </message>
 </context>
 <context>
+    <name>GlobalConfig</name>
+    <message>
+        <location filename="../ui/qml/Config/GlobalConfig.qml" line="45"/>
+        <source>UUID copied to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="63"/>
@@ -1323,22 +1331,22 @@ Already installed containers were found on the server. All installed containers 
         <translation>Поддержка в Телеграм</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="159"/>
         <source>Support via Email</source>
         <translation>Поддержка по Email</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="159"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="160"/>
         <source>team@vpn-naruzhu.com</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="174"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="176"/>
         <source>Telegram Group</source>
         <translation>Группа в Телеграм</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="189"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="191"/>
         <source>Close application</source>
         <translation>Закрыть приложение</translation>
     </message>
@@ -2904,22 +2912,22 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="406"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="396"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="409"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="410"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="400"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="411"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="401"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>

@@ -379,7 +379,7 @@ PageType {
             image: "qrc:/images/controls/tabBarChat.svg"
 
             onClicked: {
-                GC.copyToClipBoard(SettingsController.getInstallationUuid(true))
+                GC.coppyUUIDToClipBoard()
                 Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
                 tabBar.currentIndex = 4
             }

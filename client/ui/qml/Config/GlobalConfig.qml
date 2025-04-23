@@ -38,4 +38,10 @@ Item {
         clipboard.copy()
         clipboard.select(0, 0)
     }
+
+    function coppyUUIDToClipBoard() {
+        var uuid = SettingsController.getInstallationUuid(true)
+        copyToClipBoard(uuid)
+        NotificationHandler.showSystemNotification(qsTr('UUID copied to the clipboard'), uuid, 1000)
+    }
 }

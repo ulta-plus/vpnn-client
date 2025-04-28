@@ -182,6 +182,7 @@
         <file>ui/qml/Modules/Style/VPNNaruzhuStyle.qml</file>
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>
         <file>ui/qml/Modules/Style/qmldir</file>
+        <file>ui/qml/Pages2/DummyKey.conf</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageLogIn.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageSignUp.qml</file>

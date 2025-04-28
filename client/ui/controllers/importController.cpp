@@ -91,19 +91,42 @@ bool ImportController::extractConfigFromFile(const QString &fileName)
     return extractConfigFromData(data);
 }
 
+void ImportController::extractConfigStatus(QString configStatus)
+{
+    auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
+    auto request = doc["data"]["request"];
+
+    m_config[config_key::is_default] = true;
+    m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
+    m_config[config_key::payment_link] = request[config_key::payment_link].toString();
+    m_config[config_key::paid_until] = request[config_key::paid_until].toString();
+    m_config[config_key::simplified_status] = request[config_key::simplified_status].toString();
+}
+
 bool ImportController::extractDefaultConfig(QString data, QString configStatus)
 {
     m_configFileName = tr("Default Key");
     bool extractResult = extractConfigFromData(data);
     if (extractResult) {
-        auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
-        auto request = doc["data"]["request"];
+        extractConfigStatus(configStatus);
+    }
 
-        m_config[config_key::is_default] = true;
-        m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
-        m_config[config_key::payment_link] = request[config_key::payment_link].toString();
-        m_config[config_key::paid_until] = request[config_key::paid_until].toString();
-        m_config[config_key::simplified_status] = request[config_key::simplified_status].toString();
+    return extractResult;
+}
+
+bool ImportController::extractDummyConfig(QString configStatus)
+{
+    QString data;
+    if (!SystemController::readFile(":/ui/qml/Pages2/DummyKey.conf", data)) {
+        emit importErrorOccurred(ErrorCode::ImportOpenConfigError, false);
+        return false;
+    }
+    qDebug() << data;
+
+    m_configFileName = tr("Default Key");
+    bool extractResult = extractConfigFromData(data);
+    if (extractResult) {
+        extractConfigStatus(configStatus);
     }
 
     return extractResult;

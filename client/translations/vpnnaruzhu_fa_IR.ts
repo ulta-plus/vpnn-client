@@ -271,17 +271,18 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">فایل پیکربندی نامعتبر است.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="96"/>
+        <location filename="../ui/controllers/importController.cpp" line="108"/>
+        <location filename="../ui/controllers/importController.cpp" line="126"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="668"/>
+        <location filename="../ui/controllers/importController.cpp" line="691"/>
         <source>Scanned %1 of %2.</source>
         <translation>ارزیابی %1 از %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="703"/>
+        <location filename="../ui/controllers/importController.cpp" line="726"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>در پیکربندی وارد شده، خطوطی که ممکن است خطرناک باشند، یافت شدند:</translation>
     </message>
@@ -4044,28 +4045,33 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageEmailLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="60"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="53"/>
         <source>Enter your e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="90"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="83"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="169"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="199"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="200"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="186"/>
         <source>code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="212"/>
+        <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

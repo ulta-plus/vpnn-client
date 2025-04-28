@@ -31,6 +31,7 @@ public:
 public slots:
     void importConfig();
     bool extractDefaultConfig(QString data, QString configStatus);
+    bool extractDummyConfig(QString configStatus);
     bool extractConfigFromFile(const QString &fileName);
     bool extractConfigFromData(QString data);
     bool extractConfigFromQr(const QByteArray &data);
@@ -77,6 +78,7 @@ private:
 #endif
 
     QString getNewServerName();
+    void extractConfigStatus(QString configStatus);
 
     QSharedPointer<ServersModel> m_serversModel;
     QSharedPointer<ContainersModel> m_containersModel;

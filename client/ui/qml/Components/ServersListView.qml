@@ -108,6 +108,8 @@ ListView {
 
                     z: 1
 
+                    visible: ServersModel.isConfigDefault(index) ? false : true;
+
                     onClicked: function() {
                         ServersModel.processedIndex = index
                         PageController.goToPage(PageEnum.PageSettingsServerInfo)

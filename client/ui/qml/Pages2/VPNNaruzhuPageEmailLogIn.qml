@@ -17,7 +17,7 @@ PageType {
     property string otpCode: ''
     property string public_request_id: ''
     property string error: ''
-    property string configStatus: ''
+    property string account_status: ''
 
     Connections {
         target: ImportController
@@ -163,7 +163,7 @@ PageType {
         http.onreadystatechange = function() {
             if(http.readyState === XMLHttpRequest.DONE) {
                 if (http.status == 200) {
-                    if (ImportController.extractDefaultConfig(http.responseText, root.configStatus)) {
+                    if (ImportController.extractDefaultConfig(root.email, http.responseText, root.account_status)) {
                         ImportController.importConfig()
                     } else {
                         showError(qsTr('Wrong Key File'))
@@ -198,7 +198,7 @@ PageType {
                 if(http.readyState === XMLHttpRequest.DONE) {
                     if (http.status == 200) {
                         const json_obj = JSON.parse(http.responseText.toString())
-                        root.configStatus = http.responseText.toString()
+                        root.account_status = http.responseText.toString()
                         root.public_request_id = json_obj.data.request.public_request_id
 
                         var status = json_obj.data.request.simplified_status
@@ -206,7 +206,7 @@ PageType {
                             root.getKeyFile()
                         } else {
                             // 'blocked', 'new', 'else'
-                            if (ImportController.extractDummyConfig(root.configStatus)) {
+                            if (ImportController.extractDummyConfig(root.email, root.account_status)) {
                                 ImportController.importConfig()
                             } else {
                                 showError(qsTr('Wrong Dummy Key File'))

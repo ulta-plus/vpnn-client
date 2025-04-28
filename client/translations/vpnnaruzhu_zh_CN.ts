@@ -261,7 +261,7 @@ Can&apos;t be disabled for current server</source>
 <context>
     <name>ImportController</name>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="108"/>
+        <location filename="../ui/controllers/importController.cpp" line="109"/>
         <location filename="../ui/controllers/importController.cpp" line="126"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>

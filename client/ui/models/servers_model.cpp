@@ -111,6 +111,10 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
         return name;
     }
     case ServerDescriptionRole: {
+        if (isConfigDefault(index.row())) {
+            return server.value(config_key::email).toString();
+        }
+
         auto description = getServerDescription(server, index.row());
         return configVersion ? description : description + server.value(config_key::hostName).toString();
     }
@@ -226,6 +230,11 @@ QString ServersModel::getServerDescription(const QJsonObject &server, const int 
 const QString ServersModel::getDefaultServerDescriptionCollapsed()
 {
     const QJsonObject server = m_servers.at(m_defaultServerIndex).toObject();
+
+    if (isConfigDefault(m_defaultServerIndex)) {
+        return server.value(config_key::email).toString();
+    }
+
     const auto configVersion = server.value(config_key::configVersion).toInt();
     auto description = getServerDescription(server, m_defaultServerIndex);
     if (configVersion) {
@@ -240,6 +249,11 @@ const QString ServersModel::getDefaultServerDescriptionCollapsed()
 const QString ServersModel::getDefaultServerDescriptionExpanded()
 {
     const QJsonObject server = m_servers.at(m_defaultServerIndex).toObject();
+
+    if (isConfigDefault(m_defaultServerIndex)) {
+        return server.value(config_key::email).toString();
+    }
+
     const auto configVersion = server.value(config_key::configVersion).toInt();
     auto description = getServerDescription(server, m_defaultServerIndex);
     if (configVersion) {
@@ -418,7 +432,7 @@ void ServersModel::updateDefaultServerContainersModel()
     emit defaultServerContainersUpdated(containers);
 }
 
-QJsonObject ServersModel::getServerConfig(const int serverIndex)
+QJsonObject ServersModel::getServerConfig(const int serverIndex) const
 {
     return m_servers.at(serverIndex).toObject();
 }
@@ -812,7 +826,7 @@ const QString ServersModel::getDefaultServerImagePathCollapsed()
     return QString("qrc:/countriesFlags/images/flagKit/%1.svg").arg(countryCode.toUpper());
 }
 
-QJsonObject ServersModel::getDefaultConfig()
+QJsonObject ServersModel::getDefaultConfig() const
 {
     for (size_t i = 0; i < m_servers.size(); ++i) {
         QJsonObject s = getServerConfig(i);
@@ -824,7 +838,7 @@ QJsonObject ServersModel::getDefaultConfig()
     return QJsonObject();
 }
 
-bool ServersModel::isThereDefaultConfig()
+bool ServersModel::isThereDefaultConfig() const
 {
     for (size_t i = 0; i < m_servers.size(); ++i) {
         QJsonObject s = getServerConfig(i);
@@ -836,7 +850,13 @@ bool ServersModel::isThereDefaultConfig()
     return false;
 }
 
-int ServersModel::getDefaultConfigIndex()
+bool ServersModel::isConfigDefault(int index) const
+{
+    QJsonObject s = getServerConfig(index);
+    return s.value(config_key::is_default).toBool();
+}
+
+int ServersModel::getDefaultConfigIndex() const
 {
     int i = 0;
     for (i = 0; i < m_servers.size(); ++i) {

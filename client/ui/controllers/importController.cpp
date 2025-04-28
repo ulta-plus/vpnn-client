@@ -91,42 +91,42 @@ bool ImportController::extractConfigFromFile(const QString &fileName)
     return extractConfigFromData(data);
 }
 
-void ImportController::extractConfigStatus(QString configStatus)
+void ImportController::processAccountData(QString email, QString account_status)
 {
-    auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
+    auto doc = QJsonDocument::fromJson(account_status.toUtf8());
     auto request = doc["data"]["request"];
 
     m_config[config_key::is_default] = true;
+    m_config[config_key::email] = email;
     m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
     m_config[config_key::payment_link] = request[config_key::payment_link].toString();
     m_config[config_key::paid_until] = request[config_key::paid_until].toString();
     m_config[config_key::simplified_status] = request[config_key::simplified_status].toString();
 }
 
-bool ImportController::extractDefaultConfig(QString data, QString configStatus)
+bool ImportController::extractDefaultConfig(QString email, QString config, QString account_status)
 {
     m_configFileName = tr("Default Key");
-    bool extractResult = extractConfigFromData(data);
+    bool extractResult = extractConfigFromData(config);
     if (extractResult) {
-        extractConfigStatus(configStatus);
+        processAccountData(email, account_status);
     }
 
     return extractResult;
 }
 
-bool ImportController::extractDummyConfig(QString configStatus)
+bool ImportController::extractDummyConfig(QString email, QString account_status)
 {
-    QString data;
-    if (!SystemController::readFile(":/ui/qml/Pages2/DummyKey.conf", data)) {
+    QString config;
+    if (!SystemController::readFile(":/ui/qml/Pages2/DummyKey.conf", config)) {
         emit importErrorOccurred(ErrorCode::ImportOpenConfigError, false);
         return false;
     }
-    qDebug() << data;
 
     m_configFileName = tr("Default Key");
-    bool extractResult = extractConfigFromData(data);
+    bool extractResult = extractConfigFromData(config);
     if (extractResult) {
-        extractConfigStatus(configStatus);
+        processAccountData(email, account_status);
     }
 
     return extractResult;

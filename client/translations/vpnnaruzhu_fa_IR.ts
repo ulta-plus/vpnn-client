@@ -205,6 +205,11 @@
         <source>UUID copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Config/GlobalConfig.qml" line="45"/>
+        <source>Please, share with support</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HomeContainersListView</name>

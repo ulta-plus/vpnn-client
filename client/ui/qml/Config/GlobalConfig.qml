@@ -42,6 +42,6 @@ Item {
     function coppyUUIDToClipBoard() {
         var uuid = SettingsController.getInstallationUuid(true)
         copyToClipBoard(uuid)
-        NotificationHandler.showSystemNotification(qsTr('UUID copied to the clipboard'), uuid, 1000)
+        NotificationHandler.showSystemNotification(qsTr('UUID copied to the clipboard'), qsTr('Please, share with support'), 1000)
     }
 }

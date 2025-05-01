@@ -93,7 +93,7 @@
         <translation>Configuration ပြင်ဆင်ခြင်းလုပ်ဆောင်နေချိန်အတွင်း ချိတ်ဆက်မှုဖြတ်တောက်၍မရပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="247"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -275,18 +275,19 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">Configuration ဖိုင် မမှန်ကန်ပါ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="109"/>
-        <location filename="../ui/controllers/importController.cpp" line="126"/>
+        <location filename="../ui/controllers/importController.cpp" line="734"/>
+        <location filename="../ui/controllers/importController.cpp" line="751"/>
+        <location filename="../ui/controllers/importController.cpp" line="768"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="691"/>
+        <location filename="../ui/controllers/importController.cpp" line="650"/>
         <source>Scanned %1 of %2.</source>
         <translation>%2 ၏ %1 ကို စကင်န်ဖတ်ထားသည်.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="726"/>
+        <location filename="../ui/controllers/importController.cpp" line="685"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>တင်သွင်းသည့် configuration တွင်၊ အန္တရာယ်ရှိနိုင်သည့်စာလိုင်းများကို တွေ့ရှိခဲ့သည်:</translation>
     </message>
@@ -1339,21 +1340,11 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="159"/>
-        <source>Support via Email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="160"/>
-        <source>team@vpn-naruzhu.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="176"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="191"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="174"/>
         <source>Close application</source>
         <translation>အပလီကေးရှင်းကို ပိတ်မည်</translation>
     </message>
@@ -4051,22 +4042,22 @@ For more detailed information, you can
         <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="169"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="160"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="176"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="186"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="177"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="212"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="203"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4137,7 +4128,7 @@ For more detailed information, you can
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="471"/>
+        <location filename="../vpnconnection.cpp" line="470"/>
         <source>Mbps</source>
         <translation>Mbps</translation>
     </message>

@@ -65,7 +65,7 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
-            VPNNaruzhuAPI.updateDefaultConfig()
+            VPNNaruzhuAPI.updateDefaultAccountStatus()
         }
 
         function onHideMainWindow() {

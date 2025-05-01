@@ -93,7 +93,7 @@
         <translation>غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="247"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -274,18 +274,19 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">ملف تكوين غير صحيح</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="109"/>
-        <location filename="../ui/controllers/importController.cpp" line="126"/>
+        <location filename="../ui/controllers/importController.cpp" line="734"/>
+        <location filename="../ui/controllers/importController.cpp" line="751"/>
+        <location filename="../ui/controllers/importController.cpp" line="768"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="691"/>
+        <location filename="../ui/controllers/importController.cpp" line="650"/>
         <source>Scanned %1 of %2.</source>
         <translation>تم فحص%1 من %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="726"/>
+        <location filename="../ui/controllers/importController.cpp" line="685"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>في التكوين المستورد، تم العثور على سطور يحتمل أن تكون خطرة:</translation>
     </message>
@@ -1331,21 +1332,11 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="159"/>
-        <source>Support via Email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="160"/>
-        <source>team@vpn-naruzhu.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="176"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="191"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="174"/>
         <source>Close application</source>
         <translation>إغلاق التطبيق</translation>
     </message>
@@ -4031,22 +4022,22 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="unfinished">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="169"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="160"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="176"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="186"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="177"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="212"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="203"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4117,7 +4108,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="471"/>
+        <location filename="../vpnconnection.cpp" line="470"/>
         <source>Mbps</source>
         <translation></translation>
     </message>

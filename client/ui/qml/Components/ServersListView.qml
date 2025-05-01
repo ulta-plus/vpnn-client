@@ -108,7 +108,7 @@ ListView {
 
                     z: 1
 
-                    visible: ServersModel.isConfigDefault(index) ? false : true;
+                    visible: !ServersModel.isAccountDefault(index);
 
                     onClicked: function() {
                         ServersModel.processedIndex = index

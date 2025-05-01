@@ -48,7 +48,7 @@ bool PageController::isStartPageVisible()
     }
     */
 
-    return !m_serversModel->isThereDefaultConfig();
+    return !m_serversModel->isThereDefaultAccount();
 }
 
 QString PageController::getPagePath(PageLoader::PageEnum page)

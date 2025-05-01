@@ -29,9 +29,11 @@ public:
                               const std::shared_ptr<Settings> &settings, QObject *parent = nullptr);
 
 public slots:
+    void updateDefaultAccountConfig();
+    bool extractDefaultAccountConfig(QString email, QString config, QString account_status);
+    bool extractDefaultAccountDummyConfig(QString email, QString account_status);
+
     void importConfig();
-    bool extractDefaultConfig(QString email, QString config, QString account_status);
-    bool extractDummyConfig(QString email, QString account_status);
     bool extractConfigFromFile(const QString &fileName);
     bool extractConfigFromData(QString data);
     bool extractConfigFromQr(const QByteArray &data);
@@ -78,7 +80,7 @@ private:
 #endif
 
     QString getNewServerName();
-    void processAccountData(QString email, QString configStatus);
+    void processDefaultAccountStatus(QString email, QString configStatus);
 
     QSharedPointer<ServersModel> m_serversModel;
     QSharedPointer<ContainersModel> m_containersModel;

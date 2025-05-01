@@ -149,21 +149,12 @@ PageType {
     }
 
     function getKeyFile() {
-        var http = new XMLHttpRequest()
-        const url = 'https://web-api.vpn-naruzhu.website'
-        const request_key_api = '/api/v1/wg_keys/download_mobile_request_key?public_request_id='
-        http.open('GET', url + request_key_api + root.public_request_id)
-
-        const uuid = SettingsController.getInstallationUuid(true)
-        http.setRequestHeader('X-Device-Id', uuid)
-
-        const user_agent = 'naruzhu-desktop/1.2.1.123'
-        http.setRequestHeader('User-Agent', user_agent)
+        var http = VPNNaruzhuAPI.getRequestKeyHTTP(root.public_request_id)
 
         http.onreadystatechange = function() {
             if(http.readyState === XMLHttpRequest.DONE) {
                 if (http.status == 200) {
-                    if (ImportController.extractDefaultConfig(root.email, http.responseText, root.account_status)) {
+                    if (ImportController.extractDefaultAccountConfig(root.email, http.responseText, root.account_status)) {
                         ImportController.importConfig()
                     } else {
                         showError(qsTr('Wrong Key File'))
@@ -206,7 +197,7 @@ PageType {
                             root.getKeyFile()
                         } else {
                             // 'blocked', 'new', 'else'
-                            if (ImportController.extractDummyConfig(root.email, root.account_status)) {
+                            if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
                                 ImportController.importConfig()
                             } else {
                                 showError(qsTr('Wrong Dummy Key File'))

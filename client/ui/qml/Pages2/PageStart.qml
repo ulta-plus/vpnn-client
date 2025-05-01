@@ -400,7 +400,7 @@ PageType {
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
                     var yesButtonFunction = function() {
-                        ServersModel.removeDefaultConfig()
+                        ServersModel.removeDefaultAccount()
                         PageController.goToPageHome()
                     }
                     var noButtonFunction = function() {

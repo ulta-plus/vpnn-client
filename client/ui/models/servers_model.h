@@ -130,12 +130,13 @@ public slots:
     bool isApiKeyExpired(const int serverIndex);
     void removeApiConfig(const int serverIndex);
 
-    QJsonObject getDefaultConfig() const;
-    bool isThereDefaultConfig() const;
-    bool isConfigDefault(int index) const;
-    int getDefaultConfigIndex() const;
-    void updateDefaultConfig(QString configStatus);
-    void removeDefaultConfig();
+    QJsonObject getDefaultAccount() const;
+    bool isThereDefaultAccount() const;
+    bool isAccountDefault(int index) const;
+    int getDefaultAccountIndex() const;
+    void updateDefaultAccountStatus(QString account_status);
+    void removeDefaultAccount();
+    void updateDefaultAccountConfig(const QJsonObject &new_config);
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

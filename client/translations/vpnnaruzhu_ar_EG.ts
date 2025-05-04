@@ -200,7 +200,7 @@
         <translation>غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="247"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2940,89 +2940,66 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="65"/>
         <source>Connection</source>
-        <translation type="unfinished">الاتصال</translation>
+        <translation type="obsolete">الاتصال</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="92"/>
         <source>Settings</source>
-        <translation type="unfinished">إعدادات</translation>
+        <translation type="obsolete">إعدادات</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="102"/>
-        <source>Enable logs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
-        <source>Export client logs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="126"/>
         <source>Save</source>
-        <translation type="unfinished">احفظ</translation>
+        <translation type="obsolete">احفظ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="127"/>
         <source>Logs files (*.log)</source>
-        <translation type="unfinished">ملفات الولوج (*.log)</translation>
+        <translation type="obsolete">ملفات الولوج (*.log)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="136"/>
         <source>Logs file saved</source>
-        <translation type="unfinished">تم حفظ ملف السجل</translation>
+        <translation type="obsolete">تم حفظ ملف السجل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="146"/>
         <source>Support tag</source>
-        <translation type="unfinished">علامة الدعم</translation>
+        <translation type="obsolete">علامة الدعم</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="157"/>
-        <source>Copied</source>
-        <translation type="unfinished"></translation>
+        <source>Insert</source>
+        <translation type="obsolete">ادخل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="188"/>
         <source>Continue</source>
-        <translation type="unfinished">واصل</translation>
+        <translation type="obsolete">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="205"/>
-        <source>Other connection options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="247"/>
-        <source>Site Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="310"/>
         <source>VPN by Amnezia</source>
         <translation type="unfinished">VPN بواسطة Amnezia</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="271"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="311"/>
         <source>Connect to classic paid and free VPN services from Amnezia</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="287"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="327"/>
         <source>Self-hosted VPN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="288"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="328"/>
         <source>Configure Amnezia VPN on your own server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="299"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
         <source>Restore from backup</source>
         <translation type="unfinished">استرجاع من ملف يحتوي علي نسخة احتياطية</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="403"/>
+        <source>Key as text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="300"/>
@@ -3030,52 +3007,44 @@ Already installed containers were found on the server. All installed containers 
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="304"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="344"/>
         <source>Open backup file</source>
         <translation type="unfinished">افتح ملف نسخ احتياطي</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="305"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="345"/>
         <source>Backup files (*.backup)</source>
         <translation type="unfinished">ملفات نٌسخ احتياطية (*.backup)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="317"/>
-        <source>File with connection settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="324"/>
-        <source>Open config file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="336"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="376"/>
         <source>QR code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="351"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="391"/>
         <source>I have nothing</source>
         <translation type="unfinished">ليس لدي اي شئ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="175"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="190"/>
         <source>What do you have?</source>
         <translation>ماذا لديك؟</translation>
     </message>
     <message>
-        <source>Key as file</source>
-        <translation type="vanished">ملف إعدادات اتصال</translation>
-    </message>
-    <message>
-        <source>Open key file</source>
-        <translation type="vanished">افتح ملف تكوين</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="220"/>
-        <source>Key as Text</source>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="178"/>
+        <source>Add new key</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="357"/>
+        <source>Key as file</source>
+        <translation>ملف إعدادات اتصال</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="364"/>
+        <source>Open key file</source>
+        <translation>افتح ملف تكوين</translation>
     </message>
 </context>
 <context>
@@ -3300,28 +3269,28 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardTextKey</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="41"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="54"/>
         <source>Connection key</source>
         <translation>مفتاح اتصال</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="42"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="55"/>
         <source>A line that starts with vpn://...</source>
         <translatorcomment>يجب ان تٌكتب بهذه الطريقة حتي بوجود التحذير كي تظهر بشكل صحيح داخل التطبيق</translatorcomment>
         <translation>سطر يبدأ ب ...//:vpn</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="53"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="66"/>
         <source>Key</source>
         <translation>مفتاح</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="55"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="68"/>
         <source>Insert</source>
         <translation>ادخل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="75"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="88"/>
         <source>Continue</source>
         <translation>واصل</translation>
     </message>

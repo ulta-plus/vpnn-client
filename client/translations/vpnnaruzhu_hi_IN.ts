@@ -184,7 +184,7 @@
         <translation>कॉन्फ़िगरेशन तैयारी के दौरान डिस्कनेक्ट करने में असमर्थ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="247"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2904,103 +2904,71 @@ Already installed containers were found on the server. All installed containers 
         <translation type="vanished">सर्वर कनेक्शन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="175"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="190"/>
         <source>What do you have?</source>
         <translation>तुम्हारे पास क्या है?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="65"/>
         <source>Connection</source>
-        <translation type="unfinished">कनेक्शन</translation>
+        <translation type="obsolete">कनेक्शन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="92"/>
         <source>Settings</source>
-        <translation type="unfinished">समायोजन</translation>
+        <translation type="obsolete">समायोजन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="102"/>
-        <source>Enable logs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="116"/>
-        <source>Export client logs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="126"/>
         <source>Save</source>
-        <translation type="unfinished">सहेजें</translation>
+        <translation type="obsolete">सहेजें</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="127"/>
         <source>Logs files (*.log)</source>
-        <translation type="unfinished">लॉग फ़ाइलें (*.log)</translation>
+        <translation type="obsolete">लॉग फ़ाइलें (*.log)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="136"/>
         <source>Logs file saved</source>
-        <translation type="unfinished">लॉग फ़ाइल सहेजी गई</translation>
+        <translation type="obsolete">लॉग फ़ाइल सहेजी गई</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="146"/>
-        <source>Support tag</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="157"/>
         <source>Copied</source>
-        <translation type="unfinished">कॉपी किया गया</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="205"/>
-        <source>Other connection options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="220"/>
-        <source>Key as Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">कॉपी किया गया</translation>
     </message>
     <message>
         <source>Insert</source>
         <translation type="obsolete">डालना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="188"/>
         <source>Continue</source>
-        <translation type="unfinished">जारी रखना</translation>
+        <translation type="obsolete">जारी रखना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="247"/>
-        <source>Site Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="310"/>
         <source>VPN by Amnezia</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="271"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="311"/>
         <source>Connect to classic paid and free VPN services from Amnezia</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="287"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="327"/>
         <source>Self-hosted VPN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="288"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="328"/>
         <source>Configure Amnezia VPN on your own server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="299"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
         <source>Restore from backup</source>
         <translation type="unfinished">बैकअप से बहाल करना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="403"/>
+        <source>Key as text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="300"/>
@@ -3008,42 +2976,39 @@ Already installed containers were found on the server. All installed containers 
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="304"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="344"/>
         <source>Open backup file</source>
         <translation type="unfinished">बैकअप फ़ाइल खोलें</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="305"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="345"/>
         <source>Backup files (*.backup)</source>
         <translation type="unfinished">बैकअप फ़ाइलें (*.backup)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="317"/>
-        <source>File with connection settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="324"/>
-        <source>Open config file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="336"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="376"/>
         <source>QR code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="351"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="391"/>
         <source>I have nothing</source>
         <translation type="unfinished">मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="357"/>
         <source>Key as file</source>
-        <translation type="vanished">कनेक्शन सेटिंग्स वाली फ़ाइल</translation>
+        <translation>कनेक्शन सेटिंग्स वाली फ़ाइल</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="178"/>
+        <source>Add new key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="364"/>
         <source>Open key file</source>
-        <translation type="vanished">कॉन्फ़िग फ़ाइल खोलें</translation>
+        <translation>कॉन्फ़िग फ़ाइल खोलें</translation>
     </message>
 </context>
 <context>
@@ -3268,27 +3233,27 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardTextKey</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="41"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="54"/>
         <source>Connection key</source>
         <translation>कनेक्शन कुंजी</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="42"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="55"/>
         <source>A line that starts with vpn://...</source>
         <translation>एक लाइन जो vpn://... से शुरू होती है...</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="53"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="66"/>
         <source>Key</source>
         <translation>चाबी</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="55"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="68"/>
         <source>Insert</source>
         <translation>डालना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="75"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="88"/>
         <source>Continue</source>
         <translation>जारी रखना</translation>
     </message>

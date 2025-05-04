@@ -1,3 +1,4 @@
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -25,44 +26,47 @@ PageType {
             }
             PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
         }
+
+        function onImportFinished() {
+            if (!ConnectionController.isConnected) {
+                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
+                ServersModel.processedIndex = ServersModel.defaultIndex
+            }
+
+            PageController.goToPageHome()
+        }
     }
 
-    FlickableType {
-        id: fl
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        contentHeight: content.height
+    ListView {
+        id: listView
 
-        ColumnLayout {
-            id: content
+        anchors.fill: parent
 
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
+        property bool isFocusable: true
 
-            spacing: 0
+        ScrollBar.vertical: ScrollBarType {}
 
-            Item {
-                id: focusItem
-                KeyNavigation.tab: backButton
-            }
+        model: variants
 
-            BackButtonType {
-                id: backButton
-                Layout.topMargin: 20
-            }
+        clip: true
 
+        reuseItems: true
+
+        header: ColumnLayout {
+            width: listView.width
+
+        /*
             HeaderTypeWithButton {
                 id: moreButton
 
-                property bool isVisible: SettingsController.getInstallationUuid() !== "" || PageController.isStartPageVisible()
+                property bool isVisible: SettingsController.getInstallationUuid(false) !== "" || PageController.isStartPageVisible()
 
                 Layout.fillWidth: true
                 Layout.topMargin: 24
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
 
-                headerText: qsTr("Connection")
+                headerText: qsTr("Add new key")
 
                 actionButtonImage: isVisible ? "qrc:/images/controls/more-vertical.svg" : ""
                 actionButtonFunction: function() {
@@ -144,14 +148,14 @@ PageType {
                             Layout.topMargin: 16
 
                             text: qsTr("Support tag")
-                            descriptionText: SettingsController.getInstallationUuid()
+                            descriptionText: SettingsController.getInstallationUuid(false)
 
                             descriptionOnTop: true
 
                             rightImageSource: "qrc:/images/controls/copy.svg"
                             rightImageColor: AmneziaStyle.color.paleGray
 
-                            visible: SettingsController.getInstallationUuid() !== ""
+                            visible: SettingsController.getInstallationUuid(false) !== ""
                             clickedFunction: function() {
                                 GC.copyToClipBoard(descriptionText)
                                 PageController.showNotificationMessage(qsTr("Copied"))
@@ -163,20 +167,48 @@ PageType {
                     }
                 }
             }
+        */
+
+            Header1TextType {
+                Layout.fillWidth: true
+                Layout.topMargin: 24
+                Layout.rightMargin: 16
+                Layout.leftMargin: 16
+
+                text: qsTr("Add new key")
+            }
 
             ParagraphTextType {
                 objectName: "insertKeyLabel"
 
                 Layout.fillWidth: true
-                Layout.topMargin: 48
+                Layout.topMargin: 32
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
+                Layout.bottomMargin: 24
 
                 text: qsTr("What do you have?")
             }
 
-            CardWithIconsType {
-                id: openFile
+        /*
+            TextFieldWithHeaderType {
+                id: textKey
+
+                Layout.fillWidth: true
+                Layout.rightMargin: 16
+                Layout.leftMargin: 16
+
+                headerText: qsTr("Insert key")
+                buttonText: qsTr("Insert")
+
+                clickedFunc: function() {
+                    textField.text = ""
+                    textField.paste()
+                }
+            }
+
+            BasicButtonType {
+                id: continueButton
 
                 Layout.fillWidth: true
                 Layout.topMargin: 16
@@ -204,20 +236,22 @@ PageType {
                 color: AmneziaStyle.color.charcoalGray
                 text: qsTr("Other connection options")
             }
+        */
         }
 
         delegate: ColumnLayout {
             width: listView.width
 
             CardWithIconsType {
-                id: openAsText
-
                 Layout.fillWidth: true
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
                 Layout.bottomMargin: 16
 
-                headerText: qsTr("Key as Text")
+                visible: isVisible
+
+                headerText: title
+                bodyText: description
 
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
                 leftImageSource: imageSource
@@ -226,6 +260,7 @@ PageType {
             }
         }
 
+    /*
         footer: ColumnLayout {
             width: listView.width
 
@@ -253,15 +288,20 @@ PageType {
                 }
             }
         }
+    */
     }
 
     property list<QtObject> variants: [
+        /*
         amneziaVpn,
         selfHostVpn,
         backupRestore,
         fileOpen,
         qrScan,
         siteLink
+        */
+        fileOpen,
+        textKey
     ]
 
     QtObject {
@@ -314,17 +354,17 @@ PageType {
     QtObject {
         id: fileOpen
 
-        property string title: qsTr("File with connection settings")
+        property string title: qsTr("Key as file")
         property string description: qsTr("")
         property string imageSource: "qrc:/images/controls/folder-search-2.svg"
         property bool isVisible: true
         property var handler: function() {
             var nameFilter = !ServersModel.getServersCount() ? "Config or backup files (*.vpn *.ovpn *.conf *.json *.backup)" :
                                                                "Config files (*.vpn *.ovpn *.conf *.json)"
-            var fileName = SystemController.getFileName(qsTr("Open config file"), nameFilter)
+            var fileName = SystemController.getFileName(qsTr("Open key file"), nameFilter)
             if (fileName !== "") {
                 if (ImportController.extractConfigFromFile(fileName)) {
-                    PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
+                    ImportController.importConfig()
                 }
             }
         }
@@ -354,6 +394,18 @@ PageType {
         property bool isVisible: PageController.isStartPageVisible() && Qt.platform.os !== "ios"
         property var handler: function() {
             Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl())
+        }
+    }
+
+    QtObject {
+        id: textKey
+
+        property string title: qsTr("Key as text")
+        property string description: qsTr("")
+        property string imageSource: "qrc:/images/controls/text-cursor.svg"
+        property bool isVisible: true
+        property var handler: function() {
+            PageController.goToPage(PageEnum.PageSetupWizardTextKey)
         }
     }
 }

@@ -13,6 +13,19 @@ import "../Config"
 PageType {
     id: root
 
+    Connections {
+        target: ImportController
+
+        function onImportFinished() {
+            if (!ConnectionController.isConnected) {
+                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
+                ServersModel.processedIndex = ServersModel.defaultIndex
+            }
+
+            PageController.goToPageHome()
+        }
+    }
+
     FlickableType {
         id: fl
         anchors.top: parent.top
@@ -76,7 +89,7 @@ PageType {
 
         clickedFunc: function() {
             if (ImportController.extractConfigFromData(textKey.textField.text)) {
-                PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
+                ImportController.importConfig()
             }
         }
     }

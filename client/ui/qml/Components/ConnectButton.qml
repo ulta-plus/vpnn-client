@@ -215,6 +215,7 @@ Button {
                     defaultConnectButtonClicked()
                 } else {
                     print('Cannot update default account config')
+                    shape.startConnectionAnimation = false
                 }
             }
         }
@@ -245,9 +246,11 @@ Button {
                         }
                     } else {
                         PageController.showNotificationMessage(qsTr('Your account blocked'))
+                        shape.startConnectionAnimation = false
                     }
                 } else {
                     print('Cannot update default account status')
+                    shape.startConnectionAnimation = false
                 }
             }
         }

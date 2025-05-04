@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QQmlContext>
 #include <QThread>
+#include <QNetworkReply>
 
 #include "ui/controllers/api/apiConfigsController.h"
 #include "ui/controllers/api/apiSettingsController.h"
@@ -54,6 +55,7 @@ class CoreController : public QObject
 public:
     explicit CoreController(const QSharedPointer<VpnConnection> &vpnConnection, const std::shared_ptr<Settings> &settings,
                             QQmlApplicationEngine *engine, QObject *parent = nullptr);
+    ~CoreController() { delete m_networkManager; }
 
     QSharedPointer<PageController> pageController() const;
     void setQmlRoot();
@@ -140,6 +142,7 @@ private:
     QScopedPointer<SftpConfigModel> m_sftpConfigModel;
     QScopedPointer<Socks5ProxyConfigModel> m_socks5ConfigModel;
 
+    QNetworkAccessManager *m_networkManager;
 public slots:
     void restartConnection();
     void updateSmartRouting();

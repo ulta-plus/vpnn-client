@@ -466,12 +466,14 @@ void VpnConnection::appendSplitTunnelingConfig()
     m_vpnConfiguration.insert(config_key::appSplitTunnelType, appsRouteMode);
     m_vpnConfiguration.insert(config_key::splitTunnelApps, appsJsonArray);
 
+    /* issue_5
     qDebug() << QString("Site split tunneling is %1, route mode is %2")
                         .arg(m_settings->isSitesSplitTunnelingEnabled() ? "enabled" : "disabled")
                         .arg(sitesRouteMode);
     qDebug() << QString("App split tunneling is %1, route mode is %2")
                         .arg(m_settings->isAppsSplitTunnelingEnabled() ? "enabled" : "disabled")
                         .arg(appsRouteMode);
+    */
 }
 
 #ifdef Q_OS_ANDROID

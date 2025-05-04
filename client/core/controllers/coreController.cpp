@@ -29,6 +29,8 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     auto locale = m_settings->getAppLanguage();
     m_translator.reset(new QTranslator());
     updateTranslator(locale);
+
+    m_networkManager = new QNetworkAccessManager(this);
 }
 
 void CoreController::initModels()
@@ -410,7 +412,7 @@ void CoreController::updateSmartRouting()
     request.setUrl(routing_file);
 
     QNetworkReply *reply;
-    reply = manager()->get(request);
+    reply = m_networkManager->get(request);
 
     QEventLoop wait;
     QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);

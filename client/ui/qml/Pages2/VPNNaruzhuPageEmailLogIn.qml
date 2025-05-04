@@ -4,6 +4,7 @@ import QtQuick.Layouts
 
 import PageEnum 1.0
 import Style 1.0
+import WebAPI 1.0
 
 import './'
 import '../Controls2'
@@ -16,18 +17,10 @@ PageType {
     property string otpCode: ''
     property string public_request_id: ''
     property string error: ''
-    property string configStatus: ''
+    property string account_status: ''
 
     Connections {
         target: ImportController
-
-        function onImportErrorOccurred(error, goToPageHome) {
-            if (goToPageHome) {
-                PageController.goToStartPage()
-            } else {
-                PageController.closePage()
-            }
-        }
 
         function onImportFinished() {
             if (ServersModel.getServersCount() == 1) {
@@ -95,16 +88,7 @@ PageType {
             root.disableAll()
             root.email = emailText.text
 
-            var http = new XMLHttpRequest()
-            const url = 'https://web-api.vpn-naruzhu.website'
-            const check_email_api = '/api/v1/auth/request_email_verification?reason=mobile_request&email='
-            http.open('GET', url + check_email_api + root.email)
-
-            var uuid = SettingsController.getInstallationUuid(true)
-            http.setRequestHeader('X-Device-Id', uuid)
-
-            const user_agent = 'naruzhu-desktop/1.2.1.123'
-            http.setRequestHeader('User-Agent', user_agent)
+            var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
 
             http.onreadystatechange = function() {
                 if(http.readyState === XMLHttpRequest.DONE) {
@@ -165,26 +149,19 @@ PageType {
     }
 
     function getKeyFile() {
-        var http = new XMLHttpRequest()
-        const url = 'https://web-api.vpn-naruzhu.website'
-        const request_key_api = '/api/v1/wg_keys/download_mobile_request_key?public_request_id='
-        http.open('GET', url + request_key_api + root.public_request_id)
-
-        const uuid = SettingsController.getInstallationUuid(true)
-        http.setRequestHeader('X-Device-Id', uuid)
-
-        const user_agent = 'naruzhu-desktop/1.2.1.123'
-        http.setRequestHeader('User-Agent', user_agent)
+        var http = VPNNaruzhuAPI.getRequestKeyHTTP(root.public_request_id)
 
         http.onreadystatechange = function() {
             if(http.readyState === XMLHttpRequest.DONE) {
                 if (http.status == 200) {
-                    if (ImportController.extractDefaultConfig(http.responseText, root.configStatus)) {
+                    if (ImportController.extractDefaultAccountConfig(root.email, http.responseText, root.account_status)) {
                         ImportController.importConfig()
                     } else {
                         showError(qsTr('Wrong Key File'))
                     }
                 } else {
+                    print('Cannot download file')
+                    print(http.responseText.toString())
                     showHTTPError(http)
                 }
             }
@@ -206,27 +183,26 @@ PageType {
                 return
             }
 
-            var http = new XMLHttpRequest()
-            const url = 'https://web-api.vpn-naruzhu.website'
-            const verify_email_api = '/api/v1/mobile_request'
-            http.open('POST', url + verify_email_api)
-
-            const contentType = 'application/json'
-            http.setRequestHeader('Content-Type', contentType)
-
-            var uuid = SettingsController.getInstallationUuid(true)
-            http.setRequestHeader('X-Device-Id', uuid)
-
-            const user_agent = 'naruzhu-desktop/1.2.1.123'
-            http.setRequestHeader('User-Agent', user_agent)
+            var http = VPNNaruzhuAPI.getOTPVerificationHTTPRequest()
 
             http.onreadystatechange = function() {
                 if(http.readyState === XMLHttpRequest.DONE) {
                     if (http.status == 200) {
                         const json_obj = JSON.parse(http.responseText.toString())
-                        root.configStatus = http.responseText.toString()
+                        root.account_status = http.responseText.toString()
                         root.public_request_id = json_obj.data.request.public_request_id
-                        root.getKeyFile()
+
+                        var status = json_obj.data.request.simplified_status
+                        if (status == 'paid' || status == 'trial') {
+                            root.getKeyFile()
+                        } else {
+                            // 'blocked', 'new', 'else'
+                            if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
+                                ImportController.importConfig()
+                            } else {
+                                showError(qsTr('Wrong Dummy Key File'))
+                            }
+                        }
                         root.enableAll()
                     } else {
                         showHTTPError(http)

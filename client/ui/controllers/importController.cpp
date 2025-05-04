@@ -91,24 +91,6 @@ bool ImportController::extractConfigFromFile(const QString &fileName)
     return extractConfigFromData(data);
 }
 
-bool ImportController::extractDefaultConfig(QString data, QString configStatus)
-{
-    m_configFileName = tr("Default Key");
-    bool extractResult = extractConfigFromData(data);
-    if (extractResult) {
-        auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
-        auto request = doc["data"]["request"];
-
-        m_config[config_key::is_default] = true;
-        m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
-        m_config[config_key::payment_link] = request[config_key::payment_link].toString();
-        m_config[config_key::paid_until] = request[config_key::paid_until].toString();
-        m_config[config_key::simplified_status] = request[config_key::simplified_status].toString();
-    }
-
-    return extractResult;
-}
-
 bool ImportController::extractConfigFromData(QString data)
 {
     QString config = data;
@@ -732,4 +714,62 @@ void ImportController::processAmneziaConfig(QJsonObject &config)
             config.insert(config_key::containers, containers);
         }
     }
+}
+
+void ImportController::processDefaultAccountStatus(QString email, QString account_status)
+{
+    auto doc = QJsonDocument::fromJson(account_status.toUtf8());
+    auto request = doc["data"]["request"];
+
+    m_config[config_key::is_default] = true;
+    m_config[config_key::email] = email;
+    m_config[config_key::public_request_id] = request[config_key::public_request_id].toString();
+    m_config[config_key::payment_link] = request[config_key::payment_link].toString();
+    m_config[config_key::paid_until] = request[config_key::paid_until].toString();
+    m_config[config_key::simplified_status] = request[config_key::simplified_status].toString();
+}
+
+bool ImportController::extractDefaultAccountConfig(QString email, QString config, QString account_status)
+{
+    m_configFileName = tr("Default Key");
+    bool extractResult = extractConfigFromData(config);
+    if (extractResult) {
+        processDefaultAccountStatus(email, account_status);
+    }
+
+    return extractResult;
+}
+
+bool ImportController::extractDefaultAccountDummyConfig(QString email, QString account_status)
+{
+    QString config;
+    if (!SystemController::readFile(":/ui/qml/Pages2/DummyKey.conf", config)) {
+        emit importErrorOccurred(ErrorCode::ImportOpenConfigError, false);
+        return false;
+    }
+
+    m_configFileName = tr("Default Key");
+    bool extractResult = extractConfigFromData(config);
+    if (extractResult) {
+        processDefaultAccountStatus(email, account_status);
+    }
+
+    return extractResult;
+}
+
+void ImportController::updateDefaultAccountConfig()
+{
+    ServerCredentials credentials;
+    credentials.hostName = m_config.value(config_key::hostName).toString();
+    credentials.port = m_config.value(config_key::port).toInt();
+    credentials.userName = m_config.value(config_key::userName).toString();
+    credentials.secretData = m_config.value(config_key::password).toString();
+
+    m_config[config_key::description] = tr("Default Key");
+    m_serversModel->updateDefaultAccountConfig(m_config);
+    emit siteNeedsAddition(credentials.hostName);
+
+    m_config = {};
+    m_configFileName.clear();
+    m_maliciousWarningText.clear();
 }

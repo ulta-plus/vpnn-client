@@ -95,7 +95,7 @@ public slots:
     void editServer(const QJsonObject &server, const int serverIndex);
     void removeServer();
 
-    QJsonObject getServerConfig(const int serverIndex);
+    QJsonObject getServerConfig(const int serverIndex) const;
 
     void reloadDefaultServerContainerConfig();
     void updateContainerConfig(const int containerIndex, const QJsonObject config);
@@ -130,11 +130,13 @@ public slots:
     bool isApiKeyExpired(const int serverIndex);
     void removeApiConfig(const int serverIndex);
 
-    QJsonObject getDefaultConfig();
-    bool isThereDefaultConfig();
-    int getDefaultConfigIndex();
-    void updateDefaultConfig(QString configStatus);
-    void removeDefaultConfig();
+    QJsonObject getDefaultAccount() const;
+    bool isThereDefaultAccount() const;
+    bool isAccountDefault(int index) const;
+    int getDefaultAccountIndex() const;
+    void updateDefaultAccountStatus(QString account_status);
+    void removeDefaultAccount();
+    void updateDefaultAccountConfig(const QJsonObject &new_config);
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

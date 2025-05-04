@@ -117,3 +117,8 @@ void NotificationHandler::messageClickHandle() {
     emit notificationClicked(m_lastMessage);
     m_lastMessage = VpnState;
 }
+
+void NotificationHandler::showSystemNotification(const QString& title, const QString& message, int timerMsec)
+{
+    notify(VpnState, title, message, timerMsec);
+}

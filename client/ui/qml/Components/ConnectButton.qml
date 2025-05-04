@@ -142,7 +142,8 @@ Button {
             layer.enabled: true
             layer.samples: 4
 
-            visible: ConnectionController.isConnectionInProgress
+            property bool startConnectionAnimation: false
+            visible: ConnectionController.isConnectionInProgress || startConnectionAnimation
 
             ShapePath {
                 fillColor: "transparent"
@@ -162,7 +163,7 @@ Button {
 
             RotationAnimator {
                 target: shape
-                running: ConnectionController.isConnectionInProgress
+                running: ConnectionController.isConnectionInProgress || shape.startConnectionAnimation
                 from: 0
                 to: 360
                 loops: Animation.Infinite
@@ -196,15 +197,62 @@ Button {
         verticalAlignment: Text.AlignVCenter
     }
 
-    onClicked: {
-        VPNNaruzhuAPI.updateDefaultConfig()
+    function defaultConnectButtonClicked() {
+        ServersModel.setProcessedServerIndex(ServersModel.defaultIndex)
+        ConnectionController.connectButtonClicked()
+        shape.startConnectionAnimation = false
+    }
 
-        if (ServersModel.getDefaultConfig().simplified_status != 'blocked') {
-            ServersModel.setProcessedServerIndex(ServersModel.defaultIndex)
-            ConnectionController.connectButtonClicked()
-        } else {
-            PageController.showNotificationMessage(qsTr('Your account blocked'))
+    function updateDefaultAccountConfigAndConnect() {
+        const public_request_id = ServersModel.getDefaultAccount().public_request_id
+        var http = VPNNaruzhuAPI.getRequestKeyHTTP(public_request_id)
+
+        http.onreadystatechange = function() {
+            if(http.readyState === XMLHttpRequest.DONE) {
+                if (http.status == 200) {
+                    ImportController.extractConfigFromData(http.responseText.toString())
+                    ImportController.updateDefaultAccountConfig()
+                    defaultConnectButtonClicked()
+                } else {
+                    print('Cannot update default account config')
+                }
+            }
         }
+
+        http.send()
+    }
+
+    onClicked: {
+        if (ConnectionController.isConnected) {
+            defaultConnectButtonClicked()
+            return
+        } else {
+            shape.startConnectionAnimation = true
+        }
+
+        const public_request_id = ServersModel.getDefaultAccount().public_request_id
+        var http = VPNNaruzhuAPI.getPublicRequestIdStatusHTTP(public_request_id)
+
+        http.onreadystatechange = function() {
+            if(http.readyState === XMLHttpRequest.DONE) {
+                if (http.status == 200) {
+                    ServersModel.updateDefaultAccountStatus(http.responseText.toString())
+                    if (ServersModel.getDefaultAccount().simplified_status != 'blocked') {
+                        if (ServersModel.defaultIndex == ServersModel.getDefaultAccountIndex()) {
+                            updateDefaultAccountConfigAndConnect()
+                        } else {
+                            defaultConnectButtonClicked()
+                        }
+                    } else {
+                        PageController.showNotificationMessage(qsTr('Your account blocked'))
+                    }
+                } else {
+                    print('Cannot update default account status')
+                }
+            }
+        }
+
+        http.send()
     }
 
     Keys.onEnterPressed: this.clicked()

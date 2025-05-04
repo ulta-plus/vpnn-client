@@ -33,6 +33,7 @@ public:
 public slots:
     virtual void setConnectionState(Vpn::ConnectionState state);
     virtual void onTranslationsUpdated();
+    void showSystemNotification(const QString& title, const QString& message, int timerMsec);
 
 signals:
     void notificationShown(const QString& title, const QString& message);

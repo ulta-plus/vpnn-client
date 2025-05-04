@@ -102,6 +102,7 @@ namespace amnezia
         constexpr char clientId[] = "clientId";
 
         constexpr char is_default[] = "is_default";
+        constexpr char email[] = "email";
         constexpr char public_request_id[] = "public_request_id";
         constexpr char payment_link[] = "payment_link";
         constexpr char paid_until[] = "paid_until";

@@ -93,7 +93,7 @@
         <translation>در هنگام آماده‌سازی پیکربندی، نمی‌توان از اتصال خارج شد.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="206"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="247"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -199,6 +199,19 @@
     </message>
 </context>
 <context>
+    <name>GlobalConfig</name>
+    <message>
+        <location filename="../ui/qml/Config/GlobalConfig.qml" line="45"/>
+        <source>UUID copied to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Config/GlobalConfig.qml" line="45"/>
+        <source>Please, share with support</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>HomeContainersListView</name>
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="63"/>
@@ -263,17 +276,19 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">فایل پیکربندی نامعتبر است.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="96"/>
+        <location filename="../ui/controllers/importController.cpp" line="734"/>
+        <location filename="../ui/controllers/importController.cpp" line="751"/>
+        <location filename="../ui/controllers/importController.cpp" line="768"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="668"/>
+        <location filename="../ui/controllers/importController.cpp" line="650"/>
         <source>Scanned %1 of %2.</source>
         <translation>ارزیابی %1 از %2.</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="703"/>
+        <location filename="../ui/controllers/importController.cpp" line="685"/>
         <source>In the imported configuration, potentially dangerous lines were found:</source>
         <translation>در پیکربندی وارد شده، خطوطی که ممکن است خطرناک باشند، یافت شدند:</translation>
     </message>
@@ -1332,22 +1347,12 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
-        <source>Support via Email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="159"/>
-        <source>team@vpn-naruzhu.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="174"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="189"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="174"/>
         <source>Close application</source>
         <translation>بستن نرم‎افزار</translation>
     </message>
@@ -2925,22 +2930,22 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="394"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="396"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="397"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
         <source>Sign out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="398"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="400"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="399"/>
+        <location filename="../ui/qml/Pages2/PageStart.qml" line="401"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4036,28 +4041,33 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageEmailLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="60"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="53"/>
         <source>Enter your e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="90"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="83"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="160"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="199"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="176"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="200"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="177"/>
         <source>code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="203"/>
+        <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4127,7 +4137,7 @@ For more detailed information, you can
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="471"/>
+        <location filename="../vpnconnection.cpp" line="470"/>
         <source>Mbps</source>
         <translation>Mbps</translation>
     </message>

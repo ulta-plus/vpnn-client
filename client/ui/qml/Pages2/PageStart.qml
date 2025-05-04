@@ -377,7 +377,9 @@ PageType {
 
             isSelected: tabBar.currentIndex === 4
             image: "qrc:/images/controls/tabBarChat.svg"
+
             onClicked: {
+                GC.coppyUUIDToClipBoard()
                 Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
                 tabBar.currentIndex = 4
             }
@@ -398,7 +400,7 @@ PageType {
                     var yesButtonText = qsTr("Continue")
                     var noButtonText = qsTr("Cancel")
                     var yesButtonFunction = function() {
-                        ServersModel.removeDefaultConfig()
+                        ServersModel.removeDefaultAccount()
                         PageController.goToPageHome()
                     }
                     var noButtonFunction = function() {

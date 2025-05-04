@@ -17,34 +17,90 @@ QtObject {
         return http
     }
 
-    function getPublicRequestIdStatusHTTP() {
-        const public_request_id = ServersModel.getDefaultConfig().public_request_id
-
+    function getPublicRequestIdStatusHTTP(public_request_id) {
         const check_public_request_id = '/api/v1/mobile_request?public_request_id='
         const request = check_public_request_id + public_request_id
 
         var http = createGetRequest(request)
-
         return http
     }
 
-    function updateDefaultConfig() {
-        if (!ServersModel.isThereDefaultConfig()) {
+    function getRequestKeyHTTP(public_request_id) {
+        const request_key_api = '/api/v1/wg_keys/download_mobile_request_key?public_request_id='
+        const request = request_key_api + public_request_id
+
+        var http = createGetRequest(request)
+        return http
+    }
+
+    function updateDefaultAccountStatus() {
+        if (!ServersModel.isThereDefaultAccount()) {
             return
         }
 
-        var http = getPublicRequestIdStatusHTTP()
+        const public_request_id = ServersModel.getDefaultAccount().public_request_id
+        var http = getPublicRequestIdStatusHTTP(public_request_id)
 
         http.onreadystatechange = function() {
             if(http.readyState === XMLHttpRequest.DONE) {
                 if (http.status == 200) {
-                    ServersModel.updateDefaultConfig(http.responseText.toString())
+                    ServersModel.updateDefaultAccountStatus(http.responseText.toString())
                 } else {
-                    print('Cannot update default key status')
+                    print('Cannot update default account status')
                 }
             }
         }
 
         http.send()
+    }
+
+    function updateDefaultAccountConfig() {
+        if (!ServersModel.isThereDefaultAccount()) {
+            return
+        }
+
+        const public_request_id = ServersModel.getDefaultAccount().public_request_id
+        var http = getRequestKeyHTTP(public_request_id)
+
+        http.onreadystatechange = function() {
+            if(http.readyState === XMLHttpRequest.DONE) {
+                if (http.status == 200) {
+                    ImportController.extractConfigFromData(http.responseText.toString())
+                    ServersModel.updateDefaultAccountConfig()
+                } else {
+                    print('Cannot update default account key')
+                }
+            }
+        }
+
+        http.send()
+    }
+
+    function getEmailVerificationHTTPRequest(email) {
+        const check_email_api = '/api/v1/auth/request_email_verification?reason=mobile_request&email='
+        const request = check_email_api + email
+
+        var http = createGetRequest(request)
+        return http
+    }
+
+    function createPostRequest(request) {
+        var http = new XMLHttpRequest()
+        http.open('POST', api_url + request)
+
+        const contentType = 'application/json'
+        http.setRequestHeader('Content-Type', contentType)
+
+        const uuid = SettingsController.getInstallationUuid(true)
+        http.setRequestHeader('X-Device-Id', uuid)
+        http.setRequestHeader('User-Agent', user_agent)
+
+        return http
+    }
+
+    function getOTPVerificationHTTPRequest() {
+        const verify_otp_api = '/api/v1/mobile_request'
+        var http = createPostRequest(verify_otp_api)
+        return http
     }
 }

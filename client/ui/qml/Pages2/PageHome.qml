@@ -100,7 +100,7 @@ PageType {
 
                 Layout.alignment: Qt.AlignCenter
 
-                property var defaultConfig: ServersModel.getDefaultConfig()
+                property var defaultConfig: ServersModel.getDefaultAccount()
 
                 text: qsTr('Subscription valid until') + ':\n' + defaultConfig.paid_until.substring(0, 10)
                 buttonText: qsTr('Renew Subscription')

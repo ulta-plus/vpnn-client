@@ -396,7 +396,6 @@ void VpnConnection::appendSplitTunnelingConfig()
     if (m_settings->isSitesSplitTunnelingEnabled()) {
     */
         routeMode = m_settings->routeMode();
-        qDebug() << "routeMode " << routeMode;
 
         /* issue_42
         if (allowSiteBasedSplitTunneling) {

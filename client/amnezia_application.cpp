@@ -153,6 +153,8 @@ void AmneziaApplication::init()
     connect(m_notificationHandler.get(), &NotificationHandler::disconnectRequested, m_connectionController.get(),
             &ConnectionController::closeConnection);
     connect(this, &AmneziaApplication::translationsUpdated, m_notificationHandler.get(), &NotificationHandler::onTranslationsUpdated);
+
+    m_engine->rootContext()->setContextProperty("NotificationHandler", m_notificationHandler.get());
 #endif
 
     m_engine->addImportPath("qrc:/ui/qml/Modules/");

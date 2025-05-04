@@ -111,6 +111,10 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
         return name;
     }
     case ServerDescriptionRole: {
+        if (isAccountDefault(index.row())) {
+            return server.value(config_key::email).toString();
+        }
+
         auto description = getServerDescription(server, index.row());
         return configVersion ? description : description + server.value(config_key::hostName).toString();
     }
@@ -226,6 +230,11 @@ QString ServersModel::getServerDescription(const QJsonObject &server, const int 
 const QString ServersModel::getDefaultServerDescriptionCollapsed()
 {
     const QJsonObject server = m_servers.at(m_defaultServerIndex).toObject();
+
+    if (isAccountDefault(m_defaultServerIndex)) {
+        return server.value(config_key::email).toString();
+    }
+
     const auto configVersion = server.value(config_key::configVersion).toInt();
     auto description = getServerDescription(server, m_defaultServerIndex);
     if (configVersion) {
@@ -240,6 +249,11 @@ const QString ServersModel::getDefaultServerDescriptionCollapsed()
 const QString ServersModel::getDefaultServerDescriptionExpanded()
 {
     const QJsonObject server = m_servers.at(m_defaultServerIndex).toObject();
+
+    if (isAccountDefault(m_defaultServerIndex)) {
+        return server.value(config_key::email).toString();
+    }
+
     const auto configVersion = server.value(config_key::configVersion).toInt();
     auto description = getServerDescription(server, m_defaultServerIndex);
     if (configVersion) {
@@ -418,7 +432,7 @@ void ServersModel::updateDefaultServerContainersModel()
     emit defaultServerContainersUpdated(containers);
 }
 
-QJsonObject ServersModel::getServerConfig(const int serverIndex)
+QJsonObject ServersModel::getServerConfig(const int serverIndex) const
 {
     return m_servers.at(serverIndex).toObject();
 }
@@ -812,7 +826,7 @@ const QString ServersModel::getDefaultServerImagePathCollapsed()
     return QString("qrc:/countriesFlags/images/flagKit/%1.svg").arg(countryCode.toUpper());
 }
 
-QJsonObject ServersModel::getDefaultConfig()
+QJsonObject ServersModel::getDefaultAccount() const
 {
     for (size_t i = 0; i < m_servers.size(); ++i) {
         QJsonObject s = getServerConfig(i);
@@ -824,7 +838,7 @@ QJsonObject ServersModel::getDefaultConfig()
     return QJsonObject();
 }
 
-bool ServersModel::isThereDefaultConfig()
+bool ServersModel::isThereDefaultAccount() const
 {
     for (size_t i = 0; i < m_servers.size(); ++i) {
         QJsonObject s = getServerConfig(i);
@@ -836,7 +850,13 @@ bool ServersModel::isThereDefaultConfig()
     return false;
 }
 
-int ServersModel::getDefaultConfigIndex()
+bool ServersModel::isAccountDefault(int index) const
+{
+    QJsonObject s = getServerConfig(index);
+    return s.value(config_key::is_default).toBool();
+}
+
+int ServersModel::getDefaultAccountIndex() const
 {
     int i = 0;
     for (i = 0; i < m_servers.size(); ++i) {
@@ -849,16 +869,16 @@ int ServersModel::getDefaultConfigIndex()
     return -1;
 }
 
-void ServersModel::updateDefaultConfig(QString configStatus)
+void ServersModel::updateDefaultAccountStatus(QString account_status)
 {
-    int i = getDefaultConfigIndex();
+    int i = getDefaultAccountIndex();
     if (i < 0) {
         return;
     }
 
     QJsonObject defaultConfig = getServerConfig(i);
 
-    auto doc = QJsonDocument::fromJson(configStatus.toUtf8());
+    auto doc = QJsonDocument::fromJson(account_status.toUtf8());
     auto request = doc["data"]["request"];
 
     defaultConfig[config_key::public_request_id] = request[config_key::public_request_id].toString();
@@ -869,13 +889,28 @@ void ServersModel::updateDefaultConfig(QString configStatus)
     editServer(defaultConfig, i);
 }
 
-void ServersModel::removeDefaultConfig()
+void ServersModel::removeDefaultAccount()
 {
-    int i = getDefaultConfigIndex();
+    int i = getDefaultAccountIndex();
     if (i < 0) {
         return;
     }
 
     m_processedServerIndex = i;
     removeServer();
+}
+
+void ServersModel::updateDefaultAccountConfig(const QJsonObject &new_config)
+{
+    int i = getDefaultAccountIndex();
+    if (i < 0) {
+        return;
+    }
+
+    QJsonObject defaultConfig = getServerConfig(i);
+    for (const auto &key: new_config.keys()) {
+        defaultConfig[key] = new_config[key];
+    }
+
+    editServer(defaultConfig, i);
 }

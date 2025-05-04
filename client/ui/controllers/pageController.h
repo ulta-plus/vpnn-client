@@ -30,7 +30,15 @@ namespace PageLoader
         PageSettingsLogging,
         PageSettingsSplitTunneling,
         PageSettingsAppSplitTunneling,
-
+        PageSettingsKillSwitch,
+        PageSettingsApiServerInfo,
+        PageSettingsApiAvailableCountries,
+        PageSettingsApiSupport,
+        PageSettingsApiInstructions,
+        PageSettingsApiNativeConfigs,
+        PageSettingsApiDevices,
+        PageSettingsKillSwitchExceptions,
+        
         PageServiceSftpSettings,
         PageServiceTorWebsiteSettings,
         PageServiceDnsSettings,
@@ -107,7 +115,7 @@ public slots:
     int incrementDrawerDepth();
     int decrementDrawerDepth();
 
-  private slots:
+private slots:
     void onShowErrorMessage(amnezia::ErrorCode errorCode);
 
 signals:

@@ -78,7 +78,7 @@ PageType {
 
                         spacing: 0
 
-                        HeaderType {
+                        BaseHeaderType {
                             Layout.fillWidth: true
 
                             headerText: qsTr("Shadowsocks settings")
@@ -93,13 +93,13 @@ PageType {
                             enabled: isPortEditable
 
                             headerText: qsTr("Port")
-                            textFieldText: port
+                            textField.text: port
                             textField.maximumLength: 5
                             textField.validator: IntValidator { bottom: 1; top: 65535 }
 
                             textField.onEditingFinished: {
-                                if (textFieldText !== port) {
-                                    port = textFieldText
+                                if (textField.text !== port) {
+                                    port = textField.text
                                 }
                             }
                         }

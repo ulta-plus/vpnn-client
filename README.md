@@ -4,14 +4,14 @@
 [![Build Status](https://github.com/vpn-naruzhu/vpnn-client/actions/workflows/deploy.yml/badge.svg?branch=dev)](https://github.com/vpn-naruzhu/vpnn-client/actions/workflows/deploy.yml?query=branch:dev)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/vpn-naruzhu/vpnn-client)
 
-### [English]([https://github.com/amnezia-vpn/amnezia-client/blob/dev/README_RU.md](https://github.com/amnezia-vpn/amnezia-client/tree/dev?tab=readme-ov-file#)) | [Русский](https://github.com/amnezia-vpn/amnezia-client/blob/dev/README_RU.md)
+### [English]([https://github.com/ulta-plus/vpnn-client/blob/dev/README_RU.md](https://github.com/ulta-plus/vpnn-client/tree/dev?tab=readme-ov-file#)) | [Русский](https://github.com/ulta-plus/vpnn-client/blob/dev/README_RU.md)
 
 
 [Amnezia](https://amnezia.org) is an open-source VPN client, with a key feature that enables you to deploy your own VPN server on your server.
 
-[![Image](https://github.com/amnezia-vpn/amnezia-client/blob/dev/metadata/img-readme/uipic4.png)](https://amnezia.org)
+[![Image](https://github.com/ulta-plus/vpnn-client/blob/dev/metadata/img-readme/uipic4.png)](https://amnezia.org)
 
-### [Website](https://amnezia.org) | [Alt website link](https://storage.googleapis.com/kldscp/amnezia.org) | [Documentation](https://docs.amnezia.org) | [Troubleshooting](https://docs.amnezia.org/troubleshooting)
+### [Website](https://amnezia.org) | [Alt website link](https://storage.googleapis.com/amnezia/amnezia.org) | [Documentation](https://docs.amnezia.org) | [Troubleshooting](https://docs.amnezia.org/troubleshooting)
 
 <a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/VPNNaruzhu_Windows_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/win.png" width="150" style="max-width: 100%;"></a>
 <a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/VPNNaruzhu_MacOS_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/mac.png" width="150" style="max-width: 100%;"></a>
@@ -19,11 +19,11 @@
 
 <br>
 
-[All releases](https://github.com/vpn-naruzhu/vpnn-client/releases)
+[All releases](https://github.com/ulta-plus/vpnn-client/releases)
 
 <br/>
 
-<a href="https://www.testiny.io"><img src="https://github.com/amnezia-vpn/amnezia-client/blob/dev/metadata/img-readme/testiny.png" height="28px"></a>
+<a href="https://www.testiny.io"><img src="https://github.com/ulta-plus/vpnn-client/blob/dev/metadata/img-readme/testiny.png" height="28px"></a>
 
 ## Features
 
@@ -68,7 +68,7 @@ Want to contribute? Welcome!
 
 Download the most actual translation files.
 
-Go to ["Actions" tab](https://github.com/amnezia-vpn/amnezia-client/actions?query=is%3Asuccess+branch%3Adev), click on the first line.
+Go to ["Actions" tab](https://github.com/ulta-plus/vpnn-client/actions?query=is%3Asuccess+branch%3Adev), click on the first line.
 Then scroll down to the "Artifacts" section and download "VPNNaruzhu_translations".
 
 Unzip this file.

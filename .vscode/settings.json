@@ -64,6 +64,7 @@
         "queue": "cpp",
         "stack": "cpp",
         "xlocinfo": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "complex": "cpp"
     }
 }

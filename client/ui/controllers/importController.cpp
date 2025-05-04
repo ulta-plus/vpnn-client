@@ -7,7 +7,10 @@
 #include <QStandardPaths>
 #include <QUrlQuery>
 
+#include "core/api/apiDefs.h"
+#include "core/api/apiUtils.h"
 #include "core/errorstrings.h"
+#include "core/qrCodeUtils.h"
 #include "core/serialization/serialization.h"
 #include "systemController.h"
 #include "utilities.h"
@@ -24,8 +27,6 @@ namespace
     ConfigTypes checkConfigFormat(const QString &config)
     {
         const QString openVpnConfigPatternCli = "client";
-        const QString openVpnConfigPatternProto1 = "proto tcp";
-        const QString openVpnConfigPatternProto2 = "proto udp";
         const QString openVpnConfigPatternDriver1 = "dev tun";
         const QString openVpnConfigPatternDriver2 = "dev tap";
 
@@ -45,18 +46,18 @@ namespace
 
         if (config.contains(backupPattern)) {
             return ConfigTypes::Backup;
-        } else if (config.contains(amneziaConfigPattern) || config.contains(amneziaFreeConfigPattern) || config.contains(amneziaPremiumConfigPattern)
+        } else if (config.contains(amneziaConfigPattern) || config.contains(amneziaFreeConfigPattern)
+                   || config.contains(amneziaPremiumConfigPattern)
                    || (config.contains(amneziaConfigPatternHostName) && config.contains(amneziaConfigPatternUserName)
                        && config.contains(amneziaConfigPatternPassword))) {
             return ConfigTypes::Amnezia;
-        } else if (config.contains(openVpnConfigPatternCli)
-                   && (config.contains(openVpnConfigPatternProto1) || config.contains(openVpnConfigPatternProto2))
-                   && (config.contains(openVpnConfigPatternDriver1) || config.contains(openVpnConfigPatternDriver2))) {
-            return ConfigTypes::OpenVpn;
         } else if (config.contains(wireguardConfigPatternSectionInterface) && config.contains(wireguardConfigPatternSectionPeer)) {
             return ConfigTypes::WireGuard;
         } else if ((config.contains(xrayConfigPatternInbound)) && (config.contains(xrayConfigPatternOutbound))) {
             return ConfigTypes::Xray;
+        } else if (config.contains(openVpnConfigPatternCli)
+                   && (config.contains(openVpnConfigPatternDriver1) || config.contains(openVpnConfigPatternDriver2))) {
+            return ConfigTypes::OpenVpn;
         }
         return ConfigTypes::Invalid;
     }
@@ -93,6 +94,8 @@ bool ImportController::extractConfigFromFile(const QString &fileName)
 
 bool ImportController::extractConfigFromData(QString data)
 {
+    m_maliciousWarningText.clear();
+
     QString config = data;
     QString prefix;
     QString errormsg;
@@ -149,11 +152,11 @@ bool ImportController::extractConfigFromData(QString data)
 
     m_configType = checkConfigFormat(config);
     if (m_configType == ConfigTypes::Invalid) {
-        data.replace("vpn://", "");
-        QByteArray ba = QByteArray::fromBase64(data.toUtf8(), QByteArray::Base64UrlEncoding | QByteArray::OmitTrailingEquals);
-        QByteArray ba_uncompressed = qUncompress(ba);
-        if (!ba_uncompressed.isEmpty()) {
-            ba = ba_uncompressed;
+        config.replace("vpn://", "");
+        QByteArray ba = QByteArray::fromBase64(config.toUtf8(), QByteArray::Base64UrlEncoding | QByteArray::OmitTrailingEquals);
+        QByteArray baUncompressed = qUncompress(ba);
+        if (!baUncompressed.isEmpty()) {
+            ba = baUncompressed;
         }
 
         config = ba;
@@ -180,6 +183,13 @@ bool ImportController::extractConfigFromData(QString data)
     }
     case ConfigTypes::Amnezia: {
         m_config = QJsonDocument::fromJson(config.toUtf8()).object();
+
+        if (apiUtils::isServerFromApi(m_config)) {
+            auto apiConfig = m_config.value(apiDefs::key::apiConfig).toObject();
+            apiConfig[apiDefs::key::vpnKey] = data;
+            m_config[apiDefs::key::apiConfig] = apiConfig;
+        }
+
         processAmneziaConfig(m_config);
         if (!m_config.empty()) {
             checkForMaliciousStrings(m_config);
@@ -215,6 +225,21 @@ bool ImportController::extractConfigFromQr(const QByteArray &data)
     if (!ba_uncompressed.isEmpty()) {
         m_config = QJsonDocument::fromJson(ba_uncompressed).object();
         return true;
+    }
+
+    m_configType = checkConfigFormat(data);
+    if (m_configType == ConfigTypes::Invalid) {
+        QByteArray ba = QByteArray::fromBase64(data, QByteArray::Base64UrlEncoding | QByteArray::OmitTrailingEquals);
+        QByteArray baUncompressed = qUncompress(ba);
+
+        if (!baUncompressed.isEmpty()) {
+            ba = baUncompressed;
+        }
+
+        if (!ba.isEmpty()) {
+            m_config = QJsonDocument::fromJson(ba).object();
+            return true;
+        }
     }
 
     return false;
@@ -344,7 +369,7 @@ QJsonObject ImportController::extractOpenVpnConfig(const QString &data)
     arr.push_back(containers);
 
     QString hostName;
-    const static QRegularExpression hostNameRegExp("remote (.*) [0-9]*");
+    const static QRegularExpression hostNameRegExp("remote\\s+([^\\s]+)");
     QRegularExpressionMatch hostNameMatch = hostNameRegExp.match(data);
     if (hostNameMatch.hasMatch()) {
         hostName = hostNameMatch.captured(1);
@@ -594,7 +619,7 @@ bool ImportController::parseQrCodeChunk(const QString &code)
     qint16 magic;
     s >> magic;
 
-    if (magic == amnezia::qrMagicCode) {
+    if (magic == qrCodeUtils::qrMagicCode) {
         quint8 chunksCount;
         s >> chunksCount;
         if (m_totalQrCodeChunksCount != chunksCount) {
@@ -660,6 +685,7 @@ void ImportController::checkForMaliciousStrings(const QJsonObject &serverConfig)
         if ((containerName == ContainerProps::containerToString(DockerContainer::OpenVpn))
             || (containerName == ContainerProps::containerToString(DockerContainer::Cloak))
             || (containerName == ContainerProps::containerToString(DockerContainer::ShadowSocks))) {
+
             QString protocolConfig =
                     containerConfig[ProtocolProps::protoToString(Proto::OpenVpn)].toObject()[config_key::last_config].toString();
             QString protocolConfigJson = QJsonDocument::fromJson(protocolConfig.toUtf8()).object()[config_key::config].toString();
@@ -681,8 +707,11 @@ void ImportController::checkForMaliciousStrings(const QJsonObject &serverConfig)
                 }
             }
 
+            m_maliciousWarningText = tr("This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious "
+                                        "scripts, so only add it if you fully trust the provider of this config. ");
+
             if (maliciousStrings.size() >= dangerousTagsMaxCount) {
-                m_maliciousWarningText = tr("In the imported configuration, potentially dangerous lines were found:");
+                m_maliciousWarningText.push_back(tr("<br>In the imported configuration, potentially dangerous lines were found:"));
                 for (const auto &string : maliciousStrings) {
                     m_maliciousWarningText.push_back(QString("<br><i>%1</i>").arg(string));
                 }
@@ -705,7 +734,8 @@ void ImportController::processAmneziaConfig(QJsonObject &config)
             }
 
             QJsonObject jsonConfig = QJsonDocument::fromJson(protocolConfig.toUtf8()).object();
-            jsonConfig[config_key::mtu] = dockerContainer == DockerContainer::Awg ? protocols::awg::defaultMtu : protocols::wireguard::defaultMtu;
+            jsonConfig[config_key::mtu] =
+                    dockerContainer == DockerContainer::Awg ? protocols::awg::defaultMtu : protocols::wireguard::defaultMtu;
 
             containerConfig[config_key::last_config] = QString(QJsonDocument(jsonConfig).toJson());
 

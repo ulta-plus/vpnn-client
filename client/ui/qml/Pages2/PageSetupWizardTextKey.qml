@@ -33,7 +33,7 @@ PageType {
                 Layout.topMargin: 20
             }
 
-            HeaderType {
+            BaseHeaderType {
                 Layout.fillWidth: true
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
@@ -51,7 +51,7 @@ PageType {
                 Layout.leftMargin: 16
 
                 headerText: qsTr("Key")
-                textFieldPlaceholderText: "vpn://"
+                textField.placeholderText: "vpn://"
                 buttonText: qsTr("Insert")
 
                 clickedFunc: function() {
@@ -75,7 +75,7 @@ PageType {
         text: qsTr("Continue")
 
         clickedFunc: function() {
-            if (ImportController.extractConfigFromData(textKey.textFieldText)) {
+            if (ImportController.extractConfigFromData(textKey.textField.text)) {
                 PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
             }
         }

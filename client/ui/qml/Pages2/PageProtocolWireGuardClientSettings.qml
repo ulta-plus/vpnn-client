@@ -85,7 +85,7 @@ PageType {
 
                         spacing: 0
 
-                        HeaderType {
+                        BaseHeaderType {
                             Layout.fillWidth: true
 
                             headerText: qsTr("WG settings")
@@ -97,12 +97,12 @@ PageType {
                             Layout.topMargin: 40
 
                             headerText: qsTr("MTU")
-                            textFieldText: clientMtu
+                            textField.text: clientMtu
                             textField.validator: IntValidator { bottom: 576; top: 65535 }
 
                             textField.onEditingFinished: {
-                                if (textFieldText !== clientMtu) {
-                                    clientMtu = textFieldText
+                                if (textField.text !== clientMtu) {
+                                    clientMtu = textField.text
                                 }
                             }
                             checkEmptyText: true
@@ -124,7 +124,7 @@ PageType {
                             enabled: false
 
                             headerText: qsTr("Port")
-                            textFieldText: port
+                            textField.text: port
                         }
                     }
                 }

@@ -218,6 +218,10 @@ public:
 
     bool isKillSwitchEnabled() const;
     void setKillSwitchEnabled(bool enabled);
+
+    bool isStrictKillSwitchEnabled() const;
+    void setStrictKillSwitchEnabled(bool enabled);
+
     QString getInstallationUuid(const bool needCreate);
 
     void resetGatewayEndpoint();
@@ -229,6 +233,9 @@ public:
 
     bool isHomeAdLabelVisible();
     void disableHomeAdLabel();
+
+    QStringList allowedDnsServers() const;
+    void setAllowedDnsServers(const QStringList &servers);
 
 signals:
     void saveLogsChanged(bool enabled);

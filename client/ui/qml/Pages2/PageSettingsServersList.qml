@@ -31,7 +31,7 @@ PageType {
             id: backButton
         }
 
-        HeaderType {
+        BaseHeaderType {
             Layout.fillWidth: true
             Layout.leftMargin: 16
             Layout.rightMargin: 16
@@ -93,7 +93,19 @@ PageType {
 
                     clickedFunction: function() {
                         ServersModel.processedIndex = index
-                        PageController.goToPage(PageEnum.PageSettingsServerInfo)
+
+                        if (ServersModel.getProcessedServerData("isServerFromGatewayApi")) {
+                            PageController.showBusyIndicator(true)
+                            let result = ApiSettingsController.getAccountInfo(false)
+                            PageController.showBusyIndicator(false)
+                            if (!result) {
+                                return
+                            }
+
+                            PageController.goToPage(PageEnum.PageSettingsApiServerInfo)
+                        } else {
+                            PageController.goToPage(PageEnum.PageSettingsServerInfo)
+                        }
                     }
                 }
 

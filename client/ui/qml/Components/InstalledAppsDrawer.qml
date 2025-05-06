@@ -135,7 +135,7 @@ DrawerType2 {
 
             backgroundColor: AmneziaStyle.color.slateGray
 
-            textFieldPlaceholderText: qsTr("application name")
+            textField.placeholderText: qsTr("application name")
         }
 
         BasicButtonType {

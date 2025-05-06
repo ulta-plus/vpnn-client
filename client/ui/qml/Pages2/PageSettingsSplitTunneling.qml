@@ -94,33 +94,22 @@ PageType {
             id: backButton
         }
 
-        RowLayout {
-            HeaderType {
-                enabled: root.pageEnabled
+        HeaderTypeWithSwitcher {
+            Layout.fillWidth: true
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
 
-                Layout.fillWidth: true
-                Layout.leftMargin: 16
+            headerText: qsTr("Split tunneling")
 
-                headerText: qsTr("Split tunneling")
-            }
-
-            SwitcherType {
-                id: switcher
-
-                enabled: root.pageEnabled
-
-                Layout.fillWidth: true
-                Layout.rightMargin: 16
-
-                function onToggledFunc() {
-                    SitesModel.toggleSplitTunneling(this.checked)
-                    selector.text = root.routeModesModel[getRouteModesModelIndex()].name
-                }
-
+            enabled: root.pageEnabled
+            showSwitcher: true
+            switcher {
                 checked: SitesModel.isTunnelingEnabled
-                onToggled: { onToggledFunc() }
-                Keys.onEnterPressed: { onToggledFunc() }
-                Keys.onReturnPressed: { onToggledFunc() }
+                enabled: root.pageEnabled
+            }
+            switcherFunction: function(checked) {
+                SitesModel.toggleSplitTunneling(checked)
+                selector.text = root.routeModesModel[getRouteModesModelIndex()].name
             }
         }
 
@@ -274,13 +263,13 @@ PageType {
             Layout.fillWidth: true
             rightButtonClickedOnEnter: true
 
-            textFieldPlaceholderText: qsTr("website or IP")
+            textField.placeholderText: qsTr("website or IP")
             buttonImageSource: "qrc:/images/controls/plus.svg"
 
             clickedFunc: function() {
                 PageController.showBusyIndicator(true)
-                SitesController.addSite(textFieldText)
-                textFieldText = ""
+                SitesController.addSite(textField.text)
+                textField.text = ""
                 PageController.showBusyIndicator(false)
             }
         }
@@ -338,7 +327,6 @@ PageType {
 
             LabelWithButtonType {
                 id: exportSitesButton
-                enabled: !SettingsController.isOnTv()
                 Layout.fillWidth: true
                 text: qsTr("Save site list")
 
@@ -362,9 +350,7 @@ PageType {
                 }
             }
 
-            DividerType {
-                enabled: !SettingsController.isOnTv()
-            }
+            DividerType {}
         }
     }
 

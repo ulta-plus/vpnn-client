@@ -96,7 +96,7 @@ PageType {
                             Layout.leftMargin: -16
                         }
 
-                        HeaderType {
+                        BaseHeaderType {
                             id: header
 
                             Layout.fillWidth: true
@@ -257,7 +257,7 @@ PageType {
                                 }
 
                                 PageController.goToPage(PageEnum.PageSetupWizardInstalling);
-                                InstallController.install(dockerContainer, port.textFieldText, transportProtoSelector.currentIndex)
+                                InstallController.install(dockerContainer, port.textField.text, transportProtoSelector.currentIndex)
                             }
                         }
 
@@ -267,7 +267,7 @@ PageType {
                             if (ProtocolProps.defaultPort(defaultContainerProto) < 0) {
                                 port.visible = false
                             } else {
-                                port.textFieldText = ProtocolProps.getPortForInstall(defaultContainerProto)
+                                port.textField.text = ProtocolProps.getPortForInstall(defaultContainerProto)
                             }
                             transportProtoSelector.currentIndex = ProtocolProps.defaultTransportProto(defaultContainerProto)
 

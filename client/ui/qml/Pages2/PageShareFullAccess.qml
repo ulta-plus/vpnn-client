@@ -44,7 +44,7 @@ PageType {
 
             spacing: 0
 
-            HeaderType {
+            BaseHeaderType {
                 Layout.fillWidth: true
                 Layout.topMargin: 24
 
@@ -141,7 +141,6 @@ PageType {
                     shareConnectionDrawer.configContentHeaderText = qsTr("File with connection settings to ") + serverSelector.text
 
                     shareConnectionDrawer.openTriggered()
-                    shareConnectionDrawer.contentVisible = true
 
                     PageController.showBusyIndicator(false)
                 }

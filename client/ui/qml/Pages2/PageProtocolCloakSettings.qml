@@ -76,7 +76,7 @@ PageType {
 
                         spacing: 0
 
-                        HeaderType {
+                        BaseHeaderType {
                             Layout.fillWidth: true
 
                             headerText: qsTr("Cloak settings")
@@ -89,18 +89,18 @@ PageType {
                             Layout.topMargin: 32
 
                             headerText: qsTr("Disguised as traffic from")
-                            textFieldText: site
+                            textField.text: site
 
                             textField.onEditingFinished: {
-                                if (textFieldText !== site) {
-                                    var tmpText = textFieldText
+                                if (textField.text !== site) {
+                                    var tmpText = textField.text
                                     tmpText = tmpText.toLocaleLowerCase()
 
                                     var indexHttps = tmpText.indexOf("https://")
                                     if (indexHttps === 0) {
-                                        tmpText = textFieldText.substring(8)
+                                        tmpText = textField.text.substring(8)
                                     } else {
-                                        site = textFieldText
+                                        site = textField.text
                                     }
                                 }
                             }
@@ -113,13 +113,13 @@ PageType {
                             Layout.topMargin: 16
 
                             headerText: qsTr("Port")
-                            textFieldText: port
+                            textField.text: port
                             textField.maximumLength: 5
                             textField.validator: IntValidator { bottom: 1; top: 65535 }
 
                             textField.onEditingFinished: {
-                                if (textFieldText !== port) {
-                                    port = textFieldText
+                                if (textField.text !== port) {
+                                    port = textField.text
                                 }
                             }
                         }

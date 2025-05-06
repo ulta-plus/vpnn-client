@@ -176,12 +176,12 @@ Window  {
                 Connections {
                     target: privateKeyPassphraseDrawer
                     function onOpened() {
-                        passphrase.textFieldText = ""
+                        passphrase.textField.text = ""
                         passphrase.textField.forceActiveFocus()
                     }
 
                     function onAboutToHide() {
-                        if (passphrase.textFieldText !== "") {
+                        if (passphrase.textField.text !== "") {
                             PageController.showBusyIndicator(true)
                         }
                     }
@@ -222,7 +222,7 @@ Window  {
 
                     clickedFunc: function() {
                         privateKeyPassphraseDrawer.closeTriggered()
-                        PageController.passphraseRequestDrawerClosed(passphrase.textFieldText)
+                        PageController.passphraseRequestDrawerClosed(passphrase.textField.text)
                     }
                 }
             }

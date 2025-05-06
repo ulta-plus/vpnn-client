@@ -77,7 +77,7 @@ PageType {
 
                     spacing: 0
 
-                    HeaderType {
+                    BaseHeaderType {
                         Layout.fillWidth: true
                         Layout.leftMargin: 16
                         Layout.rightMargin: 16
@@ -211,13 +211,13 @@ PageType {
                                     port = tempPort
                                     username = tempUsername
                                     password = tempPassword
-                                    portTextField.textFieldText = port
-                                    usernameTextField.textFieldText = username
-                                    passwordTextField.textFieldText = password
+                                    portTextField.textField.text = port
+                                    usernameTextField.textField.text = username
+                                    passwordTextField.textField.text = password
                                 }
                             }
 
-                            HeaderType {
+                            BaseHeaderType {
                                 Layout.fillWidth: true
 
                                 headerText: qsTr("SOCKS5 settings")
@@ -231,14 +231,14 @@ PageType {
                                 parentFlickable: fl
 
                                 headerText: qsTr("Port")
-                                textFieldText: port
+                                textField.text: port
                                 textField.maximumLength: 5
                                 textField.validator: IntValidator { bottom: 1; top: 65535 }
 
                                 textField.onEditingFinished: {
-                                    textFieldText = textField.text.replace(/^\s+|\s+$/g, '')
-                                    if (textFieldText !== port) {
-                                        port = textFieldText
+                                    textField.text = textField.text.replace(/^\s+|\s+$/g, '')
+                                    if (textField.text !== port) {
+                                        port = textField.text
                                     }
                                 }
                             }
@@ -251,14 +251,14 @@ PageType {
                                 parentFlickable: fl
 
                                 headerText: qsTr("Username")
-                                textFieldPlaceholderText: "username"
-                                textFieldText: username
+                                textField.placeholderText: "username"
+                                textField.text: username
                                 textField.maximumLength: 32
 
                                 textField.onEditingFinished: {
-                                    textFieldText = textField.text.replace(/^\s+|\s+$/g, '')
-                                    if (textFieldText !== username) {
-                                        username = textFieldText
+                                    textField.text = textField.text.replace(/^\s+|\s+$/g, '')
+                                    if (textField.text !== username) {
+                                        username = textField.text
                                     }
                                 }
                             }
@@ -273,12 +273,12 @@ PageType {
                                 parentFlickable: fl
 
                                 headerText: qsTr("Password")
-                                textFieldPlaceholderText: "password"
-                                textFieldText: password
+                                textField.placeholderText: "password"
+                                textField.text: password
                                 textField.maximumLength: 32
 
                                 textField.echoMode: hidePassword ? TextInput.Password : TextInput.Normal
-                                buttonImageSource: textFieldText !== "" ? (hidePassword ? "qrc:/images/controls/eye.svg" : "qrc:/images/controls/eye-off.svg")
+                                buttonImageSource: textField.text !== "" ? (hidePassword ? "qrc:/images/controls/eye.svg" : "qrc:/images/controls/eye-off.svg")
                                                                         : ""
 
                                 clickedFunc: function() {
@@ -286,9 +286,9 @@ PageType {
                                 }
 
                                 textField.onFocusChanged: {
-                                    textFieldText = textField.text.replace(/^\s+|\s+$/g, '')
-                                    if (textFieldText !== password) {
-                                        password = textFieldText
+                                    textField.text = textField.text.replace(/^\s+|\s+$/g, '')
+                                    if (textField.text !== password) {
+                                        password = textField.text
                                     }
                                 }
                             }
@@ -309,19 +309,19 @@ PageType {
                                         portTextField.errorText = qsTr("The port must be in the range of 1 to 65535")
                                         return
                                     }
-                                    if (usernameTextField.textFieldText && passwordTextField.textFieldText === "") {
+                                    if (usernameTextField.textField.text && passwordTextField.textField.text === "") {
                                         passwordTextField.errorText = qsTr("Password cannot be empty")
                                         return
-                                    } else if (usernameTextField.textFieldText === "" && passwordTextField.textFieldText) {
+                                    } else if (usernameTextField.textField.text === "" && passwordTextField.textField.text) {
                                         usernameTextField.errorText = qsTr("Username cannot be empty")
                                         return
                                     }
 
                                     PageController.goToPage(PageEnum.PageSetupWizardInstalling)
                                     InstallController.updateContainer(Socks5ProxyConfigModel.getConfig())
-                                    tempPort = portTextField.textFieldText
-                                    tempUsername = usernameTextField.textFieldText
-                                    tempPassword = passwordTextField.textFieldText
+                                    tempPort = portTextField.textField.text
+                                    tempUsername = usernameTextField.textField.text
+                                    tempPassword = passwordTextField.textField.text
                                     changeSettingsDrawer.closeTriggered()
                                 }
                             }

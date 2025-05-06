@@ -39,7 +39,7 @@ PageType {
         header: ColumnLayout {
             width: listView.width
 
-            HeaderType {
+            BaseHeaderType {
                 id: header
 
                 Layout.fillWidth: true
@@ -66,18 +66,18 @@ PageType {
                 Layout.leftMargin: 16
 
                 headerText: qsTr("Gateway endpoint")
-                textFieldText: SettingsController.gatewayEndpoint
+                textField.text: SettingsController.gatewayEndpoint
 
-                buttonImageSource: textFieldText !== "" ? "qrc:/images/controls/refresh-cw.svg" : ""
+                buttonImageSource: textField.text !== "" ? "qrc:/images/controls/refresh-cw.svg" : ""
 
                 clickedFunc: function() {
                     SettingsController.resetGatewayEndpoint()
                 }
 
                 textField.onEditingFinished: {
-                    textFieldText = textField.text.replace(/^\s+|\s+$/g, '')
-                    if (textFieldText !== SettingsController.gatewayEndpoint) {
-                        SettingsController.gatewayEndpoint = textFieldText
+                    textField.text = textField.text.replace(/^\s+|\s+$/g, '')
+                    if (textField.text !== SettingsController.gatewayEndpoint) {
+                        SettingsController.gatewayEndpoint = textField.text
                     }
                 }
             }

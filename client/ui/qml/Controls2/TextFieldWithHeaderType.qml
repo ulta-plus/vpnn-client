@@ -22,11 +22,9 @@ Item {
     property var clickedFunc
 
     property alias textField: textField
-    property alias textFieldText: textField.text
     property string textFieldTextColor: AmneziaStyle.color.paleGray
     property string textFieldTextDisabledColor: AmneziaStyle.color.mutedGray
 
-    property string textFieldPlaceholderText
     property bool textFieldEditable: true
 
     property string borderColor: AmneziaStyle.color.slateGray
@@ -101,7 +99,6 @@ Item {
 
                         inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhSensitiveData | Qt.ImhNoPredictiveText
 
-                        placeholderText: root.textFieldPlaceholderText
                         placeholderTextColor: AmneziaStyle.color.charcoalGray
 
                         selectionColor:  AmneziaStyle.color.richBrown
@@ -129,8 +126,8 @@ Item {
                         }
 
                         onActiveFocusChanged: {
-                            if (checkEmptyText && textFieldText === "") {
-                                errorText = qsTr("The field can't be empty")
+                            if (root.checkEmptyText && text === "") {
+                                root.errorText = qsTr("The field can't be empty")
                             }
                         }
 

@@ -77,7 +77,7 @@ PageType {
 
                         spacing: 0
 
-                        HeaderType {
+                        BaseHeaderType {
                             Layout.fillWidth: true
                             headerText: qsTr("WG settings")
                         }
@@ -90,11 +90,11 @@ PageType {
                             enabled: delegateItem.isEnabled
 
                             headerText: qsTr("VPN address subnet")
-                            textFieldText: subnetAddress
+                            textField.text: subnetAddress
 
                             textField.onEditingFinished: {
-                                if (textFieldText !== subnetAddress) {
-                                    subnetAddress = textFieldText
+                                if (textField.text !== subnetAddress) {
+                                    subnetAddress = textField.text
                                 }
                             }
 
@@ -109,13 +109,13 @@ PageType {
                             enabled: delegateItem.isEnabled
 
                             headerText: qsTr("Port")
-                            textFieldText: port
+                            textField.text: port
                             textField.maximumLength: 5
                             textField.validator: IntValidator { bottom: 1; top: 65535 }
 
                             textField.onEditingFinished: {
-                                if (textFieldText !== port) {
-                                    port = textFieldText
+                                if (textField.text !== port) {
+                                    port = textField.text
                                 }
                             }
 

@@ -91,7 +91,7 @@ PageType {
 
                 spacing: 0
 
-                HeaderType {
+                BaseHeaderType {
                     Layout.fillWidth: true
 
                     headerText: qsTr("AmneziaWG settings")
@@ -103,12 +103,12 @@ PageType {
                     Layout.topMargin: 40
 
                     headerText: qsTr("MTU")
-                    textFieldText: clientMtu
+                    textField.text: clientMtu
                     textField.validator: IntValidator { bottom: 576; top: 65535 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== clientMtu) {
-                            clientMtu = textFieldText
+                        if (textField.text !== clientMtu) {
+                            clientMtu = textField.text
                         }
                     }
                     checkEmptyText: true
@@ -121,12 +121,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: "Jc - Junk packet count"
-                    textFieldText: clientJunkPacketCount
+                    textField.text: clientJunkPacketCount
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== clientJunkPacketCount) {
-                            clientJunkPacketCount = textFieldText
+                        if (textField.text !== clientJunkPacketCount) {
+                            clientJunkPacketCount = textField.text
                         }
                     }
 
@@ -141,12 +141,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: "Jmin - Junk packet minimum size"
-                    textFieldText: clientJunkPacketMinSize
+                    textField.text: clientJunkPacketMinSize
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== clientJunkPacketMinSize) {
-                            clientJunkPacketMinSize = textFieldText
+                        if (textField.text !== clientJunkPacketMinSize) {
+                            clientJunkPacketMinSize = textField.text
                         }
                     }
 
@@ -161,12 +161,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: "Jmax - Junk packet maximum size"
-                    textFieldText: clientJunkPacketMaxSize
+                    textField.text: clientJunkPacketMaxSize
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== clientJunkPacketMaxSize) {
-                            clientJunkPacketMaxSize = textFieldText
+                        if (textField.text !== clientJunkPacketMaxSize) {
+                            clientJunkPacketMaxSize = textField.text
                         }
                     }
 
@@ -189,7 +189,7 @@ PageType {
                     enabled: false
 
                     headerText: qsTr("Port")
-                    textFieldText: port
+                    textField.text: port
                 }
 
                 TextFieldWithHeaderType {
@@ -200,7 +200,7 @@ PageType {
                     enabled: false
 
                     headerText: "S1 - Init packet junk size"
-                    textFieldText: serverInitPacketJunkSize
+                    textField.text: serverInitPacketJunkSize
                 }
 
                 TextFieldWithHeaderType {
@@ -211,7 +211,7 @@ PageType {
                     enabled: false
 
                     headerText: "S2 - Response packet junk size"
-                    textFieldText: serverResponsePacketJunkSize
+                    textField.text: serverResponsePacketJunkSize
                 }
 
                 TextFieldWithHeaderType {
@@ -222,7 +222,7 @@ PageType {
                     enabled: false
 
                     headerText: "H1 - Init packet magic header"
-                    textFieldText: serverInitPacketMagicHeader
+                    textField.text: serverInitPacketMagicHeader
                 }
 
                 TextFieldWithHeaderType {
@@ -233,7 +233,7 @@ PageType {
                     enabled: false
 
                     headerText: "H2 - Response packet magic header"
-                    textFieldText: serverResponsePacketMagicHeader
+                    textField.text: serverResponsePacketMagicHeader
                 }
 
                 TextFieldWithHeaderType {
@@ -244,7 +244,7 @@ PageType {
                     enabled: false
 
                     headerText: "H3 - Underload packet magic header"
-                    textFieldText: serverUnderloadPacketMagicHeader
+                    textField.text: serverUnderloadPacketMagicHeader
                 }
 
                 TextFieldWithHeaderType {
@@ -255,7 +255,7 @@ PageType {
                     enabled: false
 
                     headerText: "H4 - Transport packet magic header"
-                    textFieldText: serverTransportPacketMagicHeader
+                    textField.text: serverTransportPacketMagicHeader
                 }
             }
         }

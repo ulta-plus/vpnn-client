@@ -91,7 +91,7 @@ PageType {
 
                 spacing: 0
 
-                HeaderType {
+                BaseHeaderType {
                     Layout.fillWidth: true
 
                     headerText: qsTr("AmneziaWG settings")
@@ -106,11 +106,11 @@ PageType {
                     enabled: delegateItem.isEnabled
 
                     headerText: qsTr("VPN address subnet")
-                    textFieldText: subnetAddress
+                    textField.text: subnetAddress
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== subnetAddress) {
-                            subnetAddress = textFieldText
+                        if (textField.text !== subnetAddress) {
+                            subnetAddress = textField.text
                         }
                     }
 
@@ -125,13 +125,13 @@ PageType {
                     enabled: delegateItem.isEnabled
 
                     headerText: qsTr("Port")
-                    textFieldText: port
+                    textField.text: port
                     textField.maximumLength: 5
                     textField.validator: IntValidator { bottom: 1; top: 65535 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== port) {
-                            port = textFieldText
+                        if (textField.text !== port) {
+                            port = textField.text
                         }
                     }
 
@@ -144,16 +144,16 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("Jc - Junk packet count")
-                    textFieldText: serverJunkPacketCount
+                    textField.text: serverJunkPacketCount
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText === "") {
-                            textFieldText = "0"
+                        if (textField.text === "") {
+                            textField.text = "0"
                         }
 
-                        if (textFieldText !== serverJunkPacketCount) {
-                            serverJunkPacketCount = textFieldText
+                        if (textField.text !== serverJunkPacketCount) {
+                            serverJunkPacketCount = textField.text
                         }
                     }
 
@@ -166,12 +166,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("Jmin - Junk packet minimum size")
-                    textFieldText: serverJunkPacketMinSize
+                    textField.text: serverJunkPacketMinSize
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverJunkPacketMinSize) {
-                            serverJunkPacketMinSize = textFieldText
+                        if (textField.text !== serverJunkPacketMinSize) {
+                            serverJunkPacketMinSize = textField.text
                         }
                     }
 
@@ -184,12 +184,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("Jmax - Junk packet maximum size")
-                    textFieldText: serverJunkPacketMaxSize
+                    textField.text: serverJunkPacketMaxSize
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverJunkPacketMaxSize) {
-                            serverJunkPacketMaxSize = textFieldText
+                        if (textField.text !== serverJunkPacketMaxSize) {
+                            serverJunkPacketMaxSize = textField.text
                         }
                     }
 
@@ -202,12 +202,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("S1 - Init packet junk size")
-                    textFieldText: serverInitPacketJunkSize
+                    textField.text: serverInitPacketJunkSize
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverInitPacketJunkSize) {
-                            serverInitPacketJunkSize = textFieldText
+                        if (textField.text !== serverInitPacketJunkSize) {
+                            serverInitPacketJunkSize = textField.text
                         }
                     }
 
@@ -226,12 +226,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("S2 - Response packet junk size")
-                    textFieldText: serverResponsePacketJunkSize
+                    textField.text: serverResponsePacketJunkSize
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverResponsePacketJunkSize) {
-                            serverResponsePacketJunkSize = textFieldText
+                        if (textField.text !== serverResponsePacketJunkSize) {
+                            serverResponsePacketJunkSize = textField.text
                         }
                     }
 
@@ -250,12 +250,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("H1 - Init packet magic header")
-                    textFieldText: serverInitPacketMagicHeader
+                    textField.text: serverInitPacketMagicHeader
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverInitPacketMagicHeader) {
-                            serverInitPacketMagicHeader = textFieldText
+                        if (textField.text !== serverInitPacketMagicHeader) {
+                            serverInitPacketMagicHeader = textField.text
                         }
                     }
 
@@ -268,12 +268,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("H2 - Response packet magic header")
-                    textFieldText: serverResponsePacketMagicHeader
+                    textField.text: serverResponsePacketMagicHeader
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverResponsePacketMagicHeader) {
-                            serverResponsePacketMagicHeader = textFieldText
+                        if (textField.text !== serverResponsePacketMagicHeader) {
+                            serverResponsePacketMagicHeader = textField.text
                         }
                     }
 
@@ -286,12 +286,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("H4 - Transport packet magic header")
-                    textFieldText: serverTransportPacketMagicHeader
+                    textField.text: serverTransportPacketMagicHeader
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverTransportPacketMagicHeader) {
-                            serverTransportPacketMagicHeader = textFieldText
+                        if (textField.text !== serverTransportPacketMagicHeader) {
+                            serverTransportPacketMagicHeader = textField.text
                         }
                     }
 
@@ -304,12 +304,12 @@ PageType {
                     Layout.topMargin: 16
 
                     headerText: qsTr("H3 - Underload packet magic header")
-                    textFieldText: serverUnderloadPacketMagicHeader
+                    textField.text: serverUnderloadPacketMagicHeader
                     textField.validator: IntValidator { bottom: 0 }
 
                     textField.onEditingFinished: {
-                        if (textFieldText !== serverUnderloadPacketMagicHeader) {
-                            serverUnderloadPacketMagicHeader = textFieldText
+                        if (textField.text !== serverUnderloadPacketMagicHeader) {
+                            serverUnderloadPacketMagicHeader = textField.text
                         }
                     }
 

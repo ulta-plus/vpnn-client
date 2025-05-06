@@ -13,6 +13,19 @@ import "../Config"
 PageType {
     id: root
 
+    Connections {
+        target: ImportController
+
+        function onImportFinished() {
+            if (!ConnectionController.isConnected) {
+                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
+                ServersModel.processedIndex = ServersModel.defaultIndex
+            }
+
+            PageController.goToPageHome()
+        }
+    }
+
     FlickableType {
         id: fl
         anchors.top: parent.top
@@ -33,7 +46,7 @@ PageType {
                 Layout.topMargin: 20
             }
 
-            HeaderType {
+            BaseHeaderType {
                 Layout.fillWidth: true
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
@@ -51,7 +64,7 @@ PageType {
                 Layout.leftMargin: 16
 
                 headerText: qsTr("Key")
-                textFieldPlaceholderText: "vpn://"
+                textField.placeholderText: "vpn://"
                 buttonText: qsTr("Insert")
 
                 clickedFunc: function() {
@@ -75,8 +88,8 @@ PageType {
         text: qsTr("Continue")
 
         clickedFunc: function() {
-            if (ImportController.extractConfigFromData(textKey.textFieldText)) {
-                PageController.goToPage(PageEnum.PageSetupWizardViewConfig)
+            if (ImportController.extractConfigFromData(textKey.textField.text)) {
+                ImportController.importConfig()
             }
         }
     }

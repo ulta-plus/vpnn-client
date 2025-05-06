@@ -40,7 +40,7 @@ PageType {
         header: ColumnLayout {
             width: listView.width
 
-            HeaderType {
+            BaseHeaderType {
                 Layout.fillWidth: true
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
@@ -136,6 +136,8 @@ PageType {
                 Layout.fillWidth: true
                 Layout.topMargin: -8
                 Layout.bottomMargin: -8
+
+                visible: !GC.isMobile()
 
                 text: qsTr("Open logs folder")
                 leftImageSource: "qrc:/images/controls/folder-open.svg"

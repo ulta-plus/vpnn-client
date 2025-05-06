@@ -38,7 +38,7 @@ PageType {
             anchors.left: parent.left
             anchors.right: parent.right
 
-            HeaderType {
+            BaseHeaderType {
                 Layout.fillWidth: true
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
@@ -98,9 +98,7 @@ PageType {
                 }
             }
 
-            DividerType {
-                visible: root.isAppSplitTinnelingEnabled
-            }
+            DividerType {}
 
             LabelWithButtonType {
                 id: splitTunnelingButton2
@@ -122,29 +120,20 @@ PageType {
 
             DividerType {}
 
-            SwitcherType {
-                id: killSwitchSwitcher
+            LabelWithButtonType {
+                id: killSwitchButton
                 visible: !GC.isMobile()
 
                 Layout.fillWidth: true
-                Layout.margins: 16
 
                 text: qsTr("KillSwitch")
-                descriptionText: qsTr("Disables your internet if your encrypted VPN connection drops out for any reason.")
+                descriptionText: qsTr("Blocks network connections without VPN")
+                rightImageSource: "qrc:/images/controls/chevron-right.svg"
 
                 parentFlickable: fl
 
-                checked: SettingsController.isKillSwitchEnabled()
-                checkable: !ConnectionController.isConnected
-                onCheckedChanged: {
-                    if (checked !== SettingsController.isKillSwitchEnabled()) {
-                        SettingsController.toggleKillSwitch(checked)
-                    }
-                }
-                onClicked: {
-                    if (!checkable) {
-                        PageController.showNotificationMessage(qsTr("Cannot change killSwitch settings during active connection"))
-                    }
+                clickedFunction: function() {
+                    PageController.goToPage(PageEnum.PageSettingsKillSwitch)
                 }
             }
 

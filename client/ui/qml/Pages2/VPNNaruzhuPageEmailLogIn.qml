@@ -183,7 +183,7 @@ PageType {
         placeholderText: qsTr('code')
 
         withClose: function() {
-            root.otpCode = inputOTPCode.getInput()
+            root.otpCode = inputOTPCode.getInput().trim()
             if (root.otpCode == '') {
                 inputOTPCode.visible = true
                 return

@@ -178,11 +178,13 @@ PageType {
 
     VPNNaruzhuNotificationWithInput {
         id: inputOTPCode
+        withCloseButton: true
         anchors.centerIn: parent
         text: qsTr('Enter a code from the e-mail')
+        buttonYesText: qsTr('Send')
         placeholderText: qsTr('code')
 
-        withClose: function() {
+        withYesButton: function() {
             root.otpCode = inputOTPCode.getInput().trim()
             if (root.otpCode == '') {
                 inputOTPCode.visible = true
@@ -218,6 +220,10 @@ PageType {
 
             const body = '{ "email": "' + root.email +'", "otp_code": "' + root.otpCode + '" }'
             http.send(body)
+        }
+
+        withNoButton: function() {
+            root.enableAll()
         }
     }
 }

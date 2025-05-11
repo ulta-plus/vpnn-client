@@ -425,6 +425,7 @@ void CoreController::updateSmartRouting()
         QJsonParseError json_error;
         QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
         if (json_error.error == QJsonParseError::NoError) {
+            m_vpnConnection->clearExcludeRouteList();
             QJsonArray json_array = json_doc.array();
             for (const auto &elem: json_array) {
                 switch (elem.type()) {

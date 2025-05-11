@@ -3,8 +3,8 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    readonly property string api_url: 'https://web-api.vpn-naruzhu.website'
-    readonly property string user_agent: 'naruzhu-desktop/1.2.1.123'
+    readonly property string api_url: SettingsController.vpnNaruzhuGetApiBaseUrl()
+    readonly property string user_agent: 'naruzhu-desktop/2.1.4.0'
 
     function createGetRequest(request) {
         var http = new XMLHttpRequest()

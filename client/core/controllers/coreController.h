@@ -89,6 +89,8 @@ private:
     void initPrepareConfigHandler();
     void initStrictKillSwitchHandler();
 
+    QNetworkReply* downloadFile(const QString &url);
+
     QQmlApplicationEngine *m_engine {}; // TODO use parent child system here?
     std::shared_ptr<Settings> m_settings;
     QSharedPointer<VpnConnection> m_vpnConnection;
@@ -146,6 +148,7 @@ private:
 public slots:
     void restartConnection();
     void updateSmartRouting();
+    void updateApiBaseUrl();
 };
 
 #endif // CORECONTROLLER_H

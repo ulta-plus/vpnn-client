@@ -44,7 +44,7 @@ public:
 
     void clearExcludeRouteList()
     {
-        excludeRoute.clear();
+        excludedRoutes.clear();
     }
 
     void excludeRoute(const QString &route)

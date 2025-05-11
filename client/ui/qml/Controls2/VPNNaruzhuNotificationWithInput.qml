@@ -16,15 +16,19 @@ Rectangle {
     visible: false
 
     property int textSize: 20
+    property bool withCloseButton: false
 
     property string text: ''
     property string placeholderText: ''
-    property string buttonText: qsTr('Continue')
+    property string buttonYesText: qsTr('Continue')
+    property string buttonNoText: qsTr('Close')
+
     property string textColor: VPNNaruzhuStyle.color.notificationText
     property string borderColor: VPNNaruzhuStyle.color.notificationBorder
     property string backgroundColor: VPNNaruzhuStyle.color.notificationBackground
 
-    property var withClose: function() {} // function executed with close Notification
+    property var withYesButton: function() {} // function executed with close Notification
+    property var withNoButton: function() {}
     property var getInput: function() {
         return input.text;
     }
@@ -66,20 +70,42 @@ Rectangle {
             backgroundColor: AmneziaStyle.color.midnightBlack
         }
 
-        VPNNaruzhuButton {
-            implicitHeight: 30
-
-            Layout.fillWidth: true
-            Layout.rightMargin: 50
-            Layout.leftMargin: 50
+        RowLayout {
+            Layout.alignment: Qt.AlignBottom | Qt.AlignHCenter
             Layout.bottomMargin: 10
 
-            mainText: root.buttonText
+            VPNNaruzhuButton {
+                implicitHeight: 30
+                implicitWidth: withCloseButton ? 100 : 140
 
-            onClicked: {
-                root.visible = false;
-                root.withClose();
-                input.text = '';
+                Layout.fillWidth: withCloseButton ? false : true
+                Layout.leftMargin: withCloseButton ? 10 : 50
+                Layout.rightMargin: withCloseButton ? 5 : 50
+
+                mainText: root.buttonYesText
+
+                onClicked: {
+                    root.visible = false;
+                    root.withYesButton();
+                    input.text = '';
+                }
+            }
+
+            VPNNaruzhuButton {
+                visible: withCloseButton
+                implicitHeight: 30
+                implicitWidth: withCloseButton ? 100 : 140
+
+                Layout.leftMargin: 5
+                Layout.rightMargin: 10
+
+                mainText: root.buttonNoText
+
+                onClicked: {
+                    root.visible = false;
+                    root.withNoButton();
+                    input.text = '';
+                }
             }
         }
     }

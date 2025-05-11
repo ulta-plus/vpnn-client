@@ -86,7 +86,12 @@ PageType {
 
         onClicked: {
             root.disableAll()
-            root.email = emailText.text
+            root.email = emailText.text.trim()
+
+            if (root.email == '') {
+                showError(qsTr('Please, provide an email'))
+                return
+            }
 
             var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
 
@@ -130,6 +135,7 @@ PageType {
             error = object.error.localized_message
         } catch (e) {
             error = 'UNKNOWN ERROR: ' + http.status
+            print(http.responseText)
         }
 
         showError(error)
@@ -172,12 +178,14 @@ PageType {
 
     VPNNaruzhuNotificationWithInput {
         id: inputOTPCode
+        withCloseButton: true
         anchors.centerIn: parent
         text: qsTr('Enter a code from the e-mail')
+        buttonYesText: qsTr('Send')
         placeholderText: qsTr('code')
 
-        withClose: function() {
-            root.otpCode = inputOTPCode.getInput()
+        withYesButton: function() {
+            root.otpCode = inputOTPCode.getInput().trim()
             if (root.otpCode == '') {
                 inputOTPCode.visible = true
                 return
@@ -212,6 +220,10 @@ PageType {
 
             const body = '{ "email": "' + root.email +'", "otp_code": "' + root.otpCode + '" }'
             http.send(body)
+        }
+
+        withNoButton: function() {
+            root.enableAll()
         }
     }
 }

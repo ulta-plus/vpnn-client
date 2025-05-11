@@ -19,6 +19,7 @@ Rectangle {
 
     property string text: qsTr('ERROR')
     property string buttonText: qsTr('Close')
+
     property string textColor: VPNNaruzhuStyle.color.notificationText
     property string borderColor: VPNNaruzhuStyle.color.notificationBorder
     property string backgroundColor: VPNNaruzhuStyle.color.notificationBackground

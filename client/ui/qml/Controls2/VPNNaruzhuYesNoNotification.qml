@@ -16,6 +16,7 @@ Rectangle {
     visible: false
 
     property int textSize: 16
+    property bool pop_up: true
 
     property string text: ''
     property string buttonYesText: qsTr('Yes')
@@ -65,7 +66,10 @@ Rectangle {
             mainText: root.buttonYesText
 
             onClicked: {
-                root.visible = false;
+                if (pop_up) {
+                    root.visible = false;
+                }
+
                 withYesClick();
             }
         }
@@ -81,7 +85,10 @@ Rectangle {
             mainText: root.buttonNoText
 
             onClicked: {
-                root.visible = false;
+                if (pop_up) {
+                    root.visible = false;
+                }
+
                 withNoClick();
             }
         }

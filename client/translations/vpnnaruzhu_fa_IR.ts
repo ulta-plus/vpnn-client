@@ -4850,9 +4850,14 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuNotificationWithInput</name>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="22"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="23"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="24"/>
+        <source>Close</source>
+        <translation type="unfinished">بستن</translation>
     </message>
 </context>
 <context>
@@ -4868,22 +4873,32 @@ For more detailed information, you can
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="160"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="92"/>
+        <source>Please, provide an email</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="166"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="176"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="183"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="177"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="184"/>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="203"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="211"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4941,12 +4956,12 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuYesNoNotification</name>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="21"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
+        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="23"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>

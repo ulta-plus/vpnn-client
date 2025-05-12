@@ -151,6 +151,7 @@ void CoreController::initControllers()
     m_apiConfigsController.reset(new ApiConfigsController(m_serversModel, m_apiServicesModel, m_settings));
     m_engine->rootContext()->setContextProperty("ApiConfigsController", m_apiConfigsController.get());
 
+    m_engine->rootContext()->setContextProperty("CoreController", this);
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
         m_sitesController.get(), &SitesController::addSite);
     connect(m_vpnConnection.get(), &VpnConnection::restartConnection,
@@ -402,14 +403,12 @@ void CoreController::restartConnection()
     emit toggleConnection();
 }
 
-void CoreController::updateSmartRouting()
+QNetworkReply* CoreController::downloadFile(const QString &url)
 {
     QNetworkRequest request;
     request.setTransferTimeout(1000);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-
-    QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/local.json");
-    request.setUrl(routing_file);
+    request.setUrl(url);
 
     QNetworkReply *reply;
     reply = m_networkManager->get(request);
@@ -418,6 +417,13 @@ void CoreController::updateSmartRouting()
     QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);
     wait.exec();
 
+    return reply;
+}
+
+void CoreController::updateSmartRouting()
+{
+    QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/local.json");
+    QNetworkReply *reply = downloadFile(routing_file);
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray r = reply->readAll();
         reply->deleteLater();
@@ -425,6 +431,7 @@ void CoreController::updateSmartRouting()
         QJsonParseError json_error;
         QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
         if (json_error.error == QJsonParseError::NoError) {
+            m_vpnConnection->clearExcludeRouteList();
             QJsonArray json_array = json_doc.array();
             for (const auto &elem: json_array) {
                 switch (elem.type()) {
@@ -445,5 +452,27 @@ void CoreController::updateSmartRouting()
         }
     } else {
         qDebug() << "Cannot download json file: " << routing_file;
+    }
+}
+
+void CoreController::updateApiBaseUrl()
+{
+    QString url("https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json");
+    QNetworkReply *reply = downloadFile(url);
+
+    if (reply->error() == QNetworkReply::NoError) {
+        QByteArray r = reply->readAll();
+        reply->deleteLater();
+
+        QJsonParseError json_error;
+        QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
+        if (json_error.error == QJsonParseError::NoError) {
+            QString apiBaseUrl = json_doc.object().find("apiBaseUrl").value().toString();
+            m_settingsController->vpnNaruzhuSetApiBaseUrl(apiBaseUrl);
+        } else {
+            qDebug() << "Cannot parse json error: " << json_error.error << " json file: " << r;
+        }
+    } else {
+        qDebug() << "Cannot download json file: " << url;
     }
 }

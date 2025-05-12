@@ -5052,12 +5052,12 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="200"/>
+        <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
         <translation>私钥密码</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="221"/>
+        <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>

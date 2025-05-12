@@ -42,6 +42,11 @@ public:
     const QString &remoteAddress() const;
     void addSitesRoutes(const QString &gw, Settings::RouteMode mode);
 
+    void clearExcludeRouteList()
+    {
+        excludedRoutes.clear();
+    }
+
     void excludeRoute(const QString &route)
     {
         excludedRoutes.append(route);

@@ -150,6 +150,16 @@ public:
     }
     */
 
+    QString apiBaseUrl() const
+    {
+        return value("Conf/apiBaseUrl", "https://mobile.vvppnn.click").toString();
+    }
+
+    void setApiBaseUrl(const QString &apiBaseUrl)
+    {
+        setValue("Conf/apiBaseUrl", apiBaseUrl);
+    }
+
     QString primaryDns() const;
     QString secondaryDns() const;
 

@@ -5049,12 +5049,12 @@ For more detailed information, you can
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="200"/>
+        <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
         <translation>عبارت کلید خصوصی</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="221"/>
+        <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
         <translation>ذخیره</translation>
     </message>

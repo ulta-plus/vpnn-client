@@ -5028,12 +5028,12 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="200"/>
+        <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="221"/>
+        <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

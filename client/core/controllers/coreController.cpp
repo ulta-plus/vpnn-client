@@ -422,7 +422,7 @@ QNetworkReply* CoreController::downloadFile(const QString &url)
 
 void CoreController::updateSmartRouting()
 {
-    QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/local.json");
+    QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/test-local.json");
     QNetworkReply *reply = downloadFile(routing_file);
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray r = reply->readAll();

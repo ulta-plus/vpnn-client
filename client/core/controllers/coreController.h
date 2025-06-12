@@ -43,6 +43,7 @@
 #include "ui/models/services/sftpConfigModel.h"
 #include "ui/models/services/socks5ProxyConfigModel.h"
 #include "ui/models/sites_model.h"
+#include "vpnnaruzhu/web_api.h"
 
 #ifndef Q_OS_ANDROID
     #include "ui/notificationhandler.h"
@@ -144,7 +145,9 @@ private:
     QScopedPointer<SftpConfigModel> m_sftpConfigModel;
     QScopedPointer<Socks5ProxyConfigModel> m_socks5ConfigModel;
 
+    void initVPNNaruzhuExtension(void);
     QNetworkAccessManager *m_networkManager;
+    QSharedPointer<VpnNaruzhuWebApi> m_webApi;
 public slots:
     void restartConnection();
     void updateSmartRouting();

@@ -20,6 +20,7 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     initModels();
     initControllers();
     initSignalHandlers();
+    initVPNNaruzhuExtension();
 
     initAndroidController();
     initAppleController();
@@ -150,6 +151,12 @@ void CoreController::initControllers()
 
     m_apiConfigsController.reset(new ApiConfigsController(m_serversModel, m_apiServicesModel, m_settings));
     m_engine->rootContext()->setContextProperty("ApiConfigsController", m_apiConfigsController.get());
+}
+
+void CoreController::initVPNNaruzhuExtension()
+{
+    m_webApi.reset(new VpnNaruzhuWebApi(m_settings, m_serversModel, m_engine));
+    m_engine->rootContext()->setContextProperty("VPNNWebApi", m_webApi.get());
 
     m_engine->rootContext()->setContextProperty("CoreController", this);
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
@@ -370,6 +377,19 @@ void CoreController::initPrepareConfigHandler()
 {
     connect(m_connectionController.get(), &ConnectionController::prepareConfig, this, [this]() {
         emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Preparing);
+
+        m_webApi->updateDefaultAccountStatus();
+        if (m_serversModel->getDefaultAccount()
+                [config_key::simplified_status].toString() == "blocked")
+        {
+            m_pageController->showNotificationMessage(
+                tr("Your account blocked"));
+            emit m_vpnConnection->connectionStateChanged(
+                Vpn::ConnectionState::Disconnected);
+            return;
+        }
+
+        m_webApi->updateDefaultAccountConfig();
 
         if (!m_apiConfigsController->isConfigValid()) {
             emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Disconnected);

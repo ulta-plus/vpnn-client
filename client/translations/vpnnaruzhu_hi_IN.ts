@@ -183,11 +183,6 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>कॉन्फ़िगरेशन तैयारी के दौरान डिस्कनेक्ट करने में असमर्थ</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
-        <source>Your account blocked</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -283,6 +278,14 @@
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="29"/>
         <source>&amp;SelectAll</source>
         <translation>&amp;सबका चयन करें</translation>
+    </message>
+</context>
+<context>
+    <name>CoreController</name>
+    <message>
+        <location filename="../core/controllers/coreController.cpp" line="386"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4743,31 +4746,27 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Show</source>
         <translation>दिखाओ</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
-        <translation>कनेक्ट</translation>
+        <translation type="vanished">कनेक्ट</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
-        <translation>डिस्कनेक्ट</translation>
+        <translation type="vanished">डिस्कनेक्ट</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
         <source>Visit Website</source>
         <translation>बेवसाइट देखना</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
         <source>Quit</source>
         <translation>छोड़ना</translation>
     </message>

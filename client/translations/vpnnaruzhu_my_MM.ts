@@ -199,11 +199,6 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Configuration ပြင်ဆင်ခြင်းလုပ်ဆောင်နေချိန်အတွင်း ချိတ်ဆက်မှုဖြတ်တောက်၍မရပါ</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
-        <source>Your account blocked</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -299,6 +294,14 @@
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="29"/>
         <source>&amp;SelectAll</source>
         <translation>&amp;SelectAll</translation>
+    </message>
+</context>
+<context>
+    <name>CoreController</name>
+    <message>
+        <location filename="../core/controllers/coreController.cpp" line="386"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4796,31 +4799,27 @@ For more detailed information, you can
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Show</source>
         <translation>ပြမည်</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
-        <translation>ချိတ်ဆက်မည်</translation>
+        <translation type="vanished">ချိတ်ဆက်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
-        <translation>ဖြုတ်ချမည်</translation>
+        <translation type="vanished">ဖြုတ်ချမည်</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
         <source>Visit Website</source>
         <translation>ဝဘ်ဆိုက်ကိုဝင်ကြည့်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
         <source>Quit</source>
         <translation>ထွက်မည်</translation>
     </message>

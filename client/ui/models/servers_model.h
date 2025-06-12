@@ -134,7 +134,7 @@ public slots:
     bool isThereDefaultAccount() const;
     bool isAccountDefault(int index) const;
     int getDefaultAccountIndex() const;
-    void updateDefaultAccountStatus(QString account_status);
+    void updateDefaultAccountStatus(const QJsonDocument &json_doc);
     void removeDefaultAccount();
     void updateDefaultAccountConfig(const QJsonObject &new_config);
 

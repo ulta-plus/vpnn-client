@@ -33,27 +33,6 @@ QtObject {
         return http
     }
 
-    function updateDefaultAccountStatus() {
-        if (!ServersModel.isThereDefaultAccount()) {
-            return
-        }
-
-        const public_request_id = ServersModel.getDefaultAccount().public_request_id
-        var http = getPublicRequestIdStatusHTTP(public_request_id)
-
-        http.onreadystatechange = function() {
-            if(http.readyState === XMLHttpRequest.DONE) {
-                if (http.status == 200) {
-                    ServersModel.updateDefaultAccountStatus(http.responseText.toString())
-                } else {
-                    print('Cannot update default account status')
-                }
-            }
-        }
-
-        http.send()
-    }
-
     function updateDefaultAccountConfig() {
         if (!ServersModel.isThereDefaultAccount()) {
             return

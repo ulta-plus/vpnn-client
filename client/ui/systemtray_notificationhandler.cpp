@@ -28,10 +28,12 @@ SystemTrayNotificationHandler::SystemTrayNotificationHandler(QObject* parent) :
         emit raiseRequested();
     });
     m_menu.addSeparator();
+    /* APP-116
     m_trayActionConnect = m_menu.addAction(tr("Connect"), this, [this](){ emit connectRequested(); });
     m_trayActionDisconnect = m_menu.addAction(tr("Disconnect"), this, [this](){ emit disconnectRequested(); });
 
     m_menu.addSeparator();
+    */
 
     m_trayActionVisitWebSite = m_menu.addAction(QIcon(":/images/tray/link.png"), tr("Visit Website"), [&](){
         QDesktopServices::openUrl(QUrl("https://naruzhu.click/appam"));
@@ -58,8 +60,10 @@ void SystemTrayNotificationHandler::setConnectionState(Vpn::ConnectionState stat
 void SystemTrayNotificationHandler::onTranslationsUpdated()
 {
     m_trayActionShow->setText(tr("Show") + " " + APPLICATION_NAME);
+    /* APP-116
     m_trayActionConnect->setText(tr("Connect"));
     m_trayActionDisconnect->setText(tr("Disconnect"));
+    */
     m_trayActionVisitWebSite->setText(tr("Visit Website"));
     m_trayActionQuit->setText(tr("Quit")+ " " + APPLICATION_NAME);
 }
@@ -89,43 +93,59 @@ void SystemTrayNotificationHandler::setTrayState(Vpn::ConnectionState state)
     switch (state) {
     case Vpn::ConnectionState::Disconnected:
         setTrayIcon(QString(resourcesPath).arg(DisconnectedTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(true);
         m_trayActionDisconnect->setEnabled(false);
+        */
         break;
     case Vpn::ConnectionState::Preparing:
         setTrayIcon(QString(resourcesPath).arg(DisconnectedTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(false);
         m_trayActionDisconnect->setEnabled(true);
+        */
         break;
     case Vpn::ConnectionState::Connecting:
         setTrayIcon(QString(resourcesPath).arg(DisconnectedTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(false);
         m_trayActionDisconnect->setEnabled(true);
+        */
         break;
     case Vpn::ConnectionState::Connected:
         setTrayIcon(QString(resourcesPath).arg(ConnectedTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(false);
         m_trayActionDisconnect->setEnabled(true);
+        */
         break;
     case Vpn::ConnectionState::Disconnecting:
         setTrayIcon(QString(resourcesPath).arg(DisconnectedTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(false);
         m_trayActionDisconnect->setEnabled(true);
+        */
         break;
     case Vpn::ConnectionState::Reconnecting:
         setTrayIcon(QString(resourcesPath).arg(DisconnectedTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(false);
         m_trayActionDisconnect->setEnabled(true);
+        */
         break;
     case Vpn::ConnectionState::Error:
         setTrayIcon(QString(resourcesPath).arg(ErrorTrayIconName));
+        /* APP-116
         m_trayActionConnect->setEnabled(true);
         m_trayActionDisconnect->setEnabled(false);
+        */
         break;
     case Vpn::ConnectionState::Unknown:
     default:
+        /* APP-116
         m_trayActionConnect->setEnabled(false);
         m_trayActionDisconnect->setEnabled(true);
+        */
         setTrayIcon(QString(resourcesPath).arg(DisconnectedTrayIconName));
     }
 

@@ -39,6 +39,11 @@ set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/mozilla/localsocketcontroller.h
 )
 
+# VPNNaruzhu headers
+set(HEADERS ${HEADERS}
+    ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.h
+)
+
 if(NOT IOS)
     set(HEADERS ${HEADERS}
         ${CLIENT_ROOT_DIR}/platforms/ios/QRCodeReaderBase.h
@@ -79,6 +84,11 @@ set(SOURCES ${SOURCES}
     ${CLIENT_ROOT_DIR}/../common/logger/logger.cpp
     ${CLIENT_ROOT_DIR}/utils/qmlUtils.cpp
     ${CLIENT_ROOT_DIR}/core/api/apiUtils.cpp
+)
+
+# VPNNaruzhu sources
+set(SOURCES ${SOURCES}
+    ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.cpp
 )
 
 # Mozilla sources

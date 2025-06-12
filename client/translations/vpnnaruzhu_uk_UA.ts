@@ -199,11 +199,6 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Неможливо відключитися під час підготовки конфігурації</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
-        <source>Your account blocked</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -299,6 +294,14 @@
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="29"/>
         <source>&amp;SelectAll</source>
         <translation>&amp;Вибрати все</translation>
+    </message>
+</context>
+<context>
+    <name>CoreController</name>
+    <message>
+        <location filename="../core/controllers/coreController.cpp" line="386"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4799,31 +4802,27 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Show</source>
         <translation>Показати</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
-        <translation>Підключитись</translation>
+        <translation type="vanished">Підключитись</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
-        <translation>Відключитись</translation>
+        <translation type="vanished">Відключитись</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
         <source>Visit Website</source>
         <translation>Відвідати сайт</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
         <source>Quit</source>
         <translation>Закрити</translation>
     </message>

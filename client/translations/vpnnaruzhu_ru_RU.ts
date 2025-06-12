@@ -107,27 +107,6 @@
 <context>
     <name>ApiServicesModel</name>
     <message>
-        <source>Classic VPN for comfortable work, downloading large files and watching videos. Works for any sites. Speed up to %1 MBit/s</source>
-        <translation type="vanished">Классический VPN для комфортной работы, загрузки больших файлов и просмотра видео. Работает для любых сайтов. Скорость до %1 Мбит/с</translation>
-    </message>
-    <message>
-        <source>VPN to access blocked sites in regions with high levels of Internet censorship. </source>
-        <translation type="vanished">VPN для доступа к заблокированным сайтам в регионах с высоким уровнем интернет-цензуры. </translation>
-    </message>
-    <message>
-        <location filename="../ui/models/api/apiServicesModel.cpp" line="74"/>
-        <source>&lt;p&gt;&lt;a style=&quot;color: #EB5757;&quot;&gt;Not available in your region. If you have VPN enabled, disable it, return to the previous screen, and try again.&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Amnezia Premium - A classic VPN for comfortable work, downloading large files, and watching videos in high resolution. It works for all websites, even in countries with the highest level of internet censorship.</source>
-        <translation type="vanished">Amnezia Premium — классический VPN для комфортной работы, загрузки больших файлов и просмотра видео в высоком разрешении. Работает на всех сайтах, даже в странах с самым высоким уровнем интернет-цензуры.</translation>
-    </message>
-    <message>
-        <source>Amnezia Free is a free VPN to bypass blocking in countries with high levels of internet censorship</source>
-        <translation type="vanished">Amnezia Free - это бесплатный VPN для обхода блокировок в странах с высоким уровнем интернет-цензуры</translation>
-    </message>
-    <message>
         <location filename="../ui/models/api/apiServicesModel.cpp" line="68"/>
         <source>Amnezia Premium is classic VPN for seamless work, downloading large files, and watching videos. Access all websites and online resources. Speeds up to %1 Mbps.</source>
         <translation type="unfinished"></translation>
@@ -136,6 +115,11 @@
         <location filename="../ui/models/api/apiServicesModel.cpp" line="72"/>
         <location filename="../ui/models/api/apiServicesModel.cpp" line="85"/>
         <source>AmneziaFree provides free unlimited access to a basic set of web sites, such as Facebook, Instagram, Twitter (X), Discord, Telegram, and others. YouTube is not included in the free plan.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/models/api/apiServicesModel.cpp" line="74"/>
+        <source>&lt;p&gt;&lt;a style=&quot;color: #EB5757;&quot;&gt;Not available in your region. If you have VPN enabled, disable it, return to the previous screen, and try again.&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -199,20 +183,9 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
-        <source>Your account blocked</source>
-        <translation>Ваш аккаунт заблокирован</translation>
-    </message>
 </context>
 <context>
     <name>ConnectionController</name>
-    <message>
-        <source>VPN Protocols is not installed.
- Please install VPN container at first</source>
-        <translation type="vanished">VPN-протоколы не установлены.
- Пожалуйста, установите протокол</translation>
-    </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="79"/>
         <source>Connecting...</source>
@@ -237,14 +210,6 @@
         <location filename="../ui/controllers/connectionController.cpp" line="133"/>
         <source>Settings updated successfully</source>
         <translation>Настройки успешно обновлены</translation>
-    </message>
-    <message>
-        <source>The selected protocol is not supported on the current platform</source>
-        <translation type="vanished">Выбранный протокол не поддерживается на данном устройстве</translation>
-    </message>
-    <message>
-        <source>unable to create configuration</source>
-        <translation type="vanished">не удалось создать конфигурацию</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="93"/>
@@ -299,6 +264,14 @@
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="29"/>
         <source>&amp;SelectAll</source>
         <translation>Выбрать всё</translation>
+    </message>
+</context>
+<context>
+    <name>CoreController</name>
+    <message>
+        <location filename="../core/controllers/coreController.cpp" line="386"/>
+        <source>Your account blocked</source>
+        <translation>Ваш аккаунт заблокирован</translation>
     </message>
 </context>
 <context>
@@ -371,14 +344,6 @@ Can&apos;t be disabled for current server</source>
 <context>
     <name>ImportController</name>
     <message>
-        <source>Unable to open file</source>
-        <translation type="vanished">Невозможно открыть файл</translation>
-    </message>
-    <message>
-        <source>Invalid configuration file</source>
-        <translation type="vanished">Неверный файл конфигурации</translation>
-    </message>
-    <message>
         <location filename="../ui/controllers/importController.cpp" line="710"/>
         <source>This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious scripts, so only add it if you fully trust the provider of this config. </source>
         <translation type="unfinished"></translation>
@@ -399,10 +364,6 @@ Can&apos;t be disabled for current server</source>
         <location filename="../ui/controllers/importController.cpp" line="675"/>
         <source>Scanned %1 of %2.</source>
         <translation>Отсканировано %1 из %2.</translation>
-    </message>
-    <message>
-        <source>In the imported configuration, potentially dangerous lines were found:</source>
-        <translation type="vanished">В импортированной конфигурации были обнаружены потенциально опасные строки:</translation>
     </message>
 </context>
 <context>
@@ -475,18 +436,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/controllers/installController.cpp" line="772"/>
         <source>Server added successfully</source>
         <translation>Сервер успешно добавлен</translation>
-    </message>
-    <message>
-        <source>%1 installed successfully.</source>
-        <translation type="vanished">%1 успешно установлен.</translation>
-    </message>
-    <message>
-        <source>API config reloaded</source>
-        <translation type="vanished">Конфигурация API перезагружена</translation>
-    </message>
-    <message>
-        <source>Successfully changed the country of connection to %1</source>
-        <translation type="vanished">Изменение страны подключения на %1</translation>
     </message>
 </context>
 <context>
@@ -672,10 +621,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="127"/>
         <source>Port</source>
         <translation>Порт</translation>
-    </message>
-    <message>
-        <source>MTU</source>
-        <translation type="vanished">MTU</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="366"/>
@@ -1145,10 +1090,6 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished">Отменить</translation>
     </message>
     <message>
-        <source>MTU</source>
-        <translation type="vanished">MTU</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="146"/>
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
@@ -1446,10 +1387,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="140"/>
         <source>Support via Telegram</source>
         <translation>Поддержка в Телеграм</translation>
-    </message>
-    <message>
-        <source>Support via Email</source>
-        <translation type="vanished">Поддержка по Email</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="156"/>
@@ -1793,26 +1730,6 @@ Already installed containers were found on the server. All installed containers 
 </context>
 <context>
     <name>PageSettingsApiServerInfo</name>
-    <message>
-        <source>For the region</source>
-        <translation type="vanished">Для региона</translation>
-    </message>
-    <message>
-        <source>Price</source>
-        <translation type="vanished">Цена</translation>
-    </message>
-    <message>
-        <source>Work period</source>
-        <translation type="vanished">Период работы</translation>
-    </message>
-    <message>
-        <source>Speed</source>
-        <translation type="vanished">Скорость</translation>
-    </message>
-    <message>
-        <source>Copied</source>
-        <translation type="vanished">Скопировано</translation>
-    </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="29"/>
         <source>Subscription Status</source>
@@ -2253,14 +2170,6 @@ Already installed containers were found on the server. All installed containers 
         <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
-        <translation type="vanished">Отключает ваше интернет-соединение, если ваше зашифрованное VPN-соединение по какой-либо причине прерывается.</translation>
-    </message>
-    <message>
-        <source>Cannot change killSwitch settings during active connection</source>
-        <translation type="vanished">Невозможно изменить настройки аварийного выключателя во время активного соединения</translation>
-    </message>
 </context>
 <context>
     <name>PageSettingsDns</name>
@@ -2682,14 +2591,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsServerInfo</name>
     <message>
-        <source>Server name</source>
-        <translation type="vanished">Имя сервера</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="vanished">Сохранить</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="131"/>
         <source>Protocols</source>
         <translation>Протоколы</translation>
@@ -2711,10 +2612,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="43"/>
         <source> settings</source>
         <translation> настройки</translation>
-    </message>
-    <message>
-        <source>Clear %1 profile</source>
-        <translation type="vanished">Очистить профиль %1</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="175"/>
@@ -2947,10 +2844,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardConfigSource</name>
     <message>
-        <source>Server connection</source>
-        <translation type="vanished">Подключение к серверу</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="190"/>
         <source>What do you have?</source>
         <translation>Выберите что у вас есть</translation>
@@ -3128,10 +3021,6 @@ Already installed containers were found on the server. All installed containers 
 </context>
 <context>
     <name>PageSetupWizardEasy</name>
-    <message>
-        <source>What is the level of internet control in your region?</source>
-        <translation type="vanished">Какой уровень контроля над интернетом в вашем регионе?</translation>
-    </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="68"/>
         <source>Choose Installation Type</source>
@@ -3918,14 +3807,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>Установка отменена пользователем</translation>
     </message>
     <message>
-        <source>The user does not have permission to use sudo</source>
-        <translation type="vanished">У пользователя нет прав на использование sudo</translation>
-    </message>
-    <message>
-        <source>Server error: Packet manager error</source>
-        <translation type="vanished">Ошибка сервера: ошибка менеджера пакетов</translation>
-    </message>
-    <message>
         <location filename="../core/errorstrings.cpp" line="33"/>
         <source>SSH request was denied</source>
         <translation>SSH-запрос был отклонён</translation>
@@ -4169,14 +4050,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>IPsec</translation>
     </message>
     <message>
-        <source>Shadowsocks - masks VPN traffic, making it similar to normal web traffic, but it may be recognized by analysis systems in some highly censored regions.</source>
-        <translation type="vanished">Shadowsocks маскирует VPN-трафик под обычный веб-трафик, но распознается системами анализа в некоторых регионах с высоким уровнем цензуры.</translation>
-    </message>
-    <message>
-        <source>OpenVPN over Cloak - OpenVPN with VPN masquerading as web traffic and protection against active-probing detection. Ideal for bypassing blocking in regions with the highest levels of censorship.</source>
-        <translation type="vanished">OpenVPN over Cloak — это OpenVPN с маскировкой VPN-трафика под обычный веб-трафик и защитой от обнаружения активным зондированием. Подходит для регионов с самым высоким уровнем цензуры.</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="127"/>
         <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss. It has native support on the latest versions of Android and iOS.</source>
         <translation>IKEv2/IPsec — современный стабильный протокол, немного быстрее других, восстанавливает соединение после потери сигнала. Он имеет встроенную поддержку в последних версиях Android и iOS.</translation>
@@ -4187,24 +4060,25 @@ Already installed containers were found on the server. All installed containers 
         <translation>Создайте на сервере файловое хранилище для безопасного хранения и передачи файлов.</translation>
     </message>
     <message>
-        <source>A relatively new popular VPN protocol with a simplified architecture.
-WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
-WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
+        <location filename="../containers/containers_defs.cpp" line="215"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
+It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="226"/>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the VPNNaruzhu across all platforms
-* Low power consumption
-* Minimum number of settings
-* Easily recognised by DPI analysis systems, susceptible to blocking
-* Works over UDP network protocol.</source>
-        <translation type="vanished">Относительно новый и популярный VPN-протокол с простой архитектурой.
-WireGuard обеспечивает стабильное VPN-соединение и высокую производительность на всех устройствах. Он использует строго заданные настройки шифрования. WireGuard по сравнению с OpenVPN имеет меньшую задержку и лучшую пропускную способность при передаче данных.
-WireGuard очень уязвим для блокировки из-за характерных сигнатур пакетов. В отличие от некоторых других VPN-протоколов, использующих методы обфускации, последовательные сигнатуры пакетов WireGuard легче идентифицируются и, следовательно, могут блокироваться современными Deep Packet Inspection (DPI) системами и другими инструментами для сетевого мониторинга.
-
-* Доступен в VPNNaruzhu на всех платформах
-* Низкое энергопотребление
-* Минимальная конфигурация
-* Легко распознается системами DPI-анализа, поддается блокировке
-* Работает по сетевому протоколу UDP</translation>
+* Available in the VPNNaruzhu only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="238"/>
@@ -4270,6 +4144,26 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="169"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against detection.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection. 
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+* Available in the VPNNaruzhu across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by detection systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="186"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
@@ -4296,18 +4190,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WireGuard - New popular VPN protocol with high performance, high speed and low power consumption. Recommended for regions with low levels of censorship.</source>
-        <translation type="vanished">WireGuard — новый популярный VPN-протокол с высокой производительностью, высокой скоростью и низким энергопотреблением. Рекомендуется для регионов с низким уровнем цензуры.</translation>
-    </message>
-    <message>
-        <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
-        <translation type="vanished">AmneziaWG — специальный протокол от Amnezia, основанный на протоколе WireGuard. Он такой же быстрый, как WireGuard, но очень устойчив к блокировкам. Рекомендуется для регионов с высоким уровнем цензуры.</translation>
-    </message>
-    <message>
-        <source>XRay with REALITY - Suitable for countries with the highest level of internet censorship. Traffic masking as web traffic at the TLS level, and protection against detection by active probing methods.</source>
-        <translation type="vanished">XRay with REALITY подойдет для стран с самым высоким уровнем цензуры. Маскировка трафика под веб-трафик на уровне TLS и защита от обнаружения методами активного зондирования.</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="130"/>
         <source>Deploy a WordPress site on the Tor network in two clicks.</source>
         <translation>Разверните сайт на WordPress в сети Tor в два клика.</translation>
@@ -4316,24 +4198,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <location filename="../containers/containers_defs.cpp" line="132"/>
         <source>Replace the current DNS server with your own. This will increase your privacy level.</source>
         <translation>Замените текущий DNS-сервер на свой собственный. Это повысит уровень вашей конфиденциальности.</translation>
-    </message>
-    <message>
-        <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
-It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
-
-* Available in the VPNNaruzhu across all platforms
-* Normal power consumption on mobile devices
-* Flexible customisation to suit user needs to work with different operating systems and devices
-* Recognised by DPI analysis systems and therefore susceptible to blocking
-* Can operate over both TCP and UDP network protocols.</source>
-        <translation type="vanished">OpenVPN — один из самых популярных и проверенных временем VPN-протоколов.
-В нем используется уникальный протокол безопасности, опирающийся на SSL/TLS для шифрования и обмена ключами. Кроме того, OpenVPN поддерживает множество методов аутентификации, что делает его универсальным и адаптируемым к широкому спектру устройств и операционных систем. Благодаря открытому исходному коду OpenVPN подвергается тщательному анализу со стороны мирового сообщества, что постоянно повышает его безопасность. Оптимальное соотношение производительности, безопасности и совместимости делает OpenVPN лучшим выбором как для частных лиц, так и для компаний, заботящихся о конфиденциальности.
-
-* Доступен в VPNNaruzhu для всех платформ
-* Нормальное энергопотребление на мобильных устройствах
-* Гибкая настройка под нужды пользователя для работы с различными операционными системами и устройствами
-* Распознается системами DPI-анализа и поэтому подвержен блокировке
-* Может работать по сетевым протоколам TCP и UDP</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="159"/>
@@ -4353,47 +4217,6 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * Работает по сетевому протоколу TCP</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="169"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against detection.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection. 
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-* Available in the VPNNaruzhu across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by detection systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="215"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
-It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="226"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the VPNNaruzhu only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="240"/>
         <source>After installation, Amnezia will create a
 
@@ -4411,26 +4234,6 @@ For more detailed information, you can
 
 Более подробную информацию вы можете
 найти в разделе поддержки &quot;Создание файлового хранилища SFTP.&quot;</translation>
-    </message>
-    <message>
-        <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
-While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
-This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
-
-* Available in the VPNNaruzhu across all platforms
-* Low power consumption
-* Minimum number of settings
-* Not recognised by DPI analysis systems, resistant to blocking
-* Works over UDP network protocol.</source>
-        <translation type="vanished">AmneziaWG — усовершенствованная версия популярного VPN-протокола WireGuard. AmneziaWG опирается на фундамент, заложенный WireGuard, сохраняя упрощенную архитектуру и высокую производительность на различных устройствах.
-Хотя WireGuard известен своей эффективностью, у него были проблемы с обнаружением из-за характерных сигнатур пакетов. AmneziaWG решает эту проблему за счет использования более совершенных методов обфускации, благодаря чему его трафик сливается с обычным интернет-трафиком.
-Таким образом, AmneziaWG сохраняет высокую производительность оригинального протокола, добавляя при этом дополнительный уровень скрытности, что делает его отличным выбором для тех, кому нужно быстрое и незаметное VPN-соединение.
-
-* Доступен в VPNNaruzhu для всех платформ
-* Низкое энергопотребление на мобильных устройствах
-* Минимальное количество настроек
-* Не распознается системами DPI-анализа, устойчив к блокировке
-* Работает по сетевому протоколу UDP</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/libsecret.cpp" line="119"/>
@@ -4780,31 +4583,19 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Show</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
-        <source>Connect</source>
-        <translation>Подключиться</translation>
-    </message>
-    <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
-        <source>Disconnect</source>
-        <translation>Отключиться</translation>
-    </message>
-    <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
         <source>Visit Website</source>
         <translation>Посетить сайт</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
         <source>Quit</source>
         <translation>Закрыть</translation>
     </message>
@@ -4998,22 +4789,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 </context>
 <context>
     <name>amnezia::ContainerProps</name>
-    <message>
-        <source>Low</source>
-        <translation type="vanished">Низкий</translation>
-    </message>
-    <message>
-        <source>High</source>
-        <translation type="vanished">Высокий</translation>
-    </message>
-    <message>
-        <source>I just want to increase the level of my privacy.</source>
-        <translation type="vanished">Я просто хочу повысить уровень своей приватности.</translation>
-    </message>
-    <message>
-        <source>I want to bypass censorship. This option recommended in most cases.</source>
-        <translation type="vanished">Я хочу обойти блокировки. Этот вариант рекомендуется в большинстве случаев.</translation>
-    </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="339"/>
         <source>Automatic</source>

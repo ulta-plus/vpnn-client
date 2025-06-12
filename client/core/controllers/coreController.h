@@ -56,7 +56,6 @@ class CoreController : public QObject
 public:
     explicit CoreController(const QSharedPointer<VpnConnection> &vpnConnection, const std::shared_ptr<Settings> &settings,
                             QQmlApplicationEngine *engine, QObject *parent = nullptr);
-    ~CoreController() { delete m_networkManager; }
 
     QSharedPointer<PageController> pageController() const;
     void setQmlRoot();
@@ -71,6 +70,8 @@ private:
     void initAndroidController();
     void initAppleController();
     void initSignalHandlers();
+
+    void initVPNNaruzhuExtension(void);
 
     void initNotificationHandler();
 
@@ -89,8 +90,6 @@ private:
     */
     void initPrepareConfigHandler();
     void initStrictKillSwitchHandler();
-
-    QNetworkReply* downloadFile(const QString &url);
 
     QQmlApplicationEngine *m_engine {}; // TODO use parent child system here?
     std::shared_ptr<Settings> m_settings;
@@ -145,13 +144,9 @@ private:
     QScopedPointer<SftpConfigModel> m_sftpConfigModel;
     QScopedPointer<Socks5ProxyConfigModel> m_socks5ConfigModel;
 
-    void initVPNNaruzhuExtension(void);
-    QNetworkAccessManager *m_networkManager;
     QSharedPointer<VpnNaruzhuWebApi> m_webApi;
 public slots:
     void restartConnection();
-    void updateSmartRouting();
-    void updateApiBaseUrl();
 };
 
 #endif // CORECONTROLLER_H

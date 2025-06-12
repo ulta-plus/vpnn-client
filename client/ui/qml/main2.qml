@@ -65,7 +65,7 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
-            CoreController.updateApiBaseUrl()
+            VPNNWebApi.updateApiBaseUrl()
             VPNNWebApi.updateDefaultAccountStatus()
         }
 

@@ -109,3 +109,50 @@ void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
         m_importController->updateDefaultAccountConfig();
     }
 }
+
+QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
+{
+    QNetworkRequest request;
+    request.setTransferTimeout(10000);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setUrl(url);
+
+    QNetworkReply *reply = replyGetRequest(request);
+    return getJsonFromReply(reply, "downloadJsonFile");
+}
+
+void VpnNaruzhuWebApi::updateApiBaseUrl(void) const
+{
+    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    if (config.isEmpty()) {
+        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+    } else {
+        QString apiBaseUrl = config["apiBaseUrl"].toString();
+        m_settings->setApiBaseUrl(apiBaseUrl);
+    }
+}
+
+void VpnNaruzhuWebApi::updateSmartRouting(void) const
+{
+    QJsonDocument json_doc = downloadJsonFile(smart_routs_url);
+    if (json_doc.isEmpty()) {
+        qDebug() << "Cannot download smart routs: " << smart_routs_url;
+    } else {
+        m_vpnConnection->clearExcludeRouteList();
+        QJsonArray json_array = json_doc.array();
+        for (const auto &elem: json_array) {
+            switch (elem.type()) {
+                case QJsonValue::Object:
+                {
+                    QJsonObject json_obj = elem.toObject();
+                    QString host = json_obj["hostname"].toString();
+                    m_vpnConnection->excludeRoute(host);
+                }
+                    break;
+                default:
+                    qDebug() << "json_array elem unknown type: " << elem;
+                    break;
+            }
+        }
+    }
+}

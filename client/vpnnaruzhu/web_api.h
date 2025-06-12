@@ -10,6 +10,7 @@
 
 #include "version.h"
 #include "settings.h"
+#include "vpnconnection.h"
 #include "ui/models/servers_model.h"
 #include "ui/controllers/importController.h"
 
@@ -20,17 +21,22 @@ class VpnNaruzhuWebApi: public QObject
 public:
     VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
         const QSharedPointer<ServersModel> &sm,
+        const QSharedPointer<VpnConnection> &vpnc,
         QQmlApplicationEngine* engine)
-            : m_settings(s), m_serversModel(sm), m_engine(engine)
+            : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
+                m_engine(engine)
     {
         m_importController = (ImportController*)
             m_engine->rootContext()->objectForName("ImportController");
     }
 
-    QJsonDocument getDefaultAccountStatus(void) const;
     QString getDefaultAccountConfig(void) const;
+    QJsonDocument getDefaultAccountStatus(void) const;
+    QJsonDocument downloadJsonFile(const QString &url) const;
 
 public slots:
+    void updateApiBaseUrl(void) const;
+    void updateSmartRouting(void) const;
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
 
@@ -39,10 +45,15 @@ private:
 
     std::shared_ptr<Settings> m_settings;
     QSharedPointer<ServersModel> m_serversModel;
+    QSharedPointer<VpnConnection> m_vpnConnection;
     QQmlApplicationEngine* m_engine;
     ImportController* m_importController;
 
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
+    const QString amnezia_config_url =
+        "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json";
+    const QString smart_routs_url =
+        "https://storage.googleapis.com/naruzhu/amnezia/local.json";
 
     QString getApiBaseUrl(void) const
     {

@@ -39,7 +39,6 @@ public slots:
     bool isAmneziaDnsEnabled();
     */
     QString vpnNaruzhuGetApiBaseUrl() const;
-    void vpnNaruzhuSetApiBaseUrl(const QString &apiBaseUrl);
 
     QString getPrimaryDns();
     void setPrimaryDns(const QString &dns);

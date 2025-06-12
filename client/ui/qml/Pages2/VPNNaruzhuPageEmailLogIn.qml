@@ -134,8 +134,13 @@ PageType {
             const object = JSON.parse(http.responseText.toString())
             error = object.error.localized_message
         } catch (e) {
-            error = 'UNKNOWN ERROR: ' + http.status
             print(http.responseText)
+
+            if (http.status == 0) {
+                error = qsTr('Cannot connect to Sever')
+            } else {
+                error = qsTr('UNKNOWN ERROR: ') + http.status
+            }
         }
 
         showError(error)

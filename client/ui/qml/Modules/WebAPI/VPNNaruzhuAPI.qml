@@ -4,7 +4,7 @@ import QtQuick
 
 QtObject {
     readonly property string api_url: SettingsController.vpnNaruzhuGetApiBaseUrl()
-    readonly property string user_agent: 'naruzhu-desktop/2.1.4.0'
+    readonly property string user_agent: 'naruzhu-desktop/2.1.5.0'
 
     function createGetRequest(request) {
         var http = new XMLHttpRequest()
@@ -17,42 +17,12 @@ QtObject {
         return http
     }
 
-    function getPublicRequestIdStatusHTTP(public_request_id) {
-        const check_public_request_id = '/api/v1/mobile_request?public_request_id='
-        const request = check_public_request_id + public_request_id
-
-        var http = createGetRequest(request)
-        return http
-    }
-
     function getRequestKeyHTTP(public_request_id) {
         const request_key_api = '/api/v1/wg_keys/download_mobile_request_key?public_request_id='
         const request = request_key_api + public_request_id
 
         var http = createGetRequest(request)
         return http
-    }
-
-    function updateDefaultAccountConfig() {
-        if (!ServersModel.isThereDefaultAccount()) {
-            return
-        }
-
-        const public_request_id = ServersModel.getDefaultAccount().public_request_id
-        var http = getRequestKeyHTTP(public_request_id)
-
-        http.onreadystatechange = function() {
-            if(http.readyState === XMLHttpRequest.DONE) {
-                if (http.status == 200) {
-                    ImportController.extractConfigFromData(http.responseText.toString())
-                    ServersModel.updateDefaultAccountConfig()
-                } else {
-                    print('Cannot update default account key')
-                }
-            }
-        }
-
-        http.send()
     }
 
     function getEmailVerificationHTTPRequest(email) {

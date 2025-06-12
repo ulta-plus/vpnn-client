@@ -4880,27 +4880,37 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="140"/>
+        <source>Cannot connect to Sever</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="142"/>
+        <source>UNKNOWN ERROR: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="171"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="183"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="188"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="184"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="189"/>
         <source>Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="190"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="211"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="216"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>

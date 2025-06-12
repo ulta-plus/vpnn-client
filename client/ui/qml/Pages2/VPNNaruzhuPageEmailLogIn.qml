@@ -93,6 +93,13 @@ PageType {
                 return
             }
 
+            // Email verification RegExp
+            let re = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+            if (!re.test(root.email)) {
+                showError(qsTr('Invalid e-mail'))
+                return
+            }
+
             var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
 
             http.onreadystatechange = function() {

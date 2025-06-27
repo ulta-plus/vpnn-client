@@ -183,11 +183,6 @@
         <source>Unable to disconnect during configuration preparation</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="248"/>
-        <source>Your account blocked</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ConnectionController</name>
@@ -278,6 +273,14 @@
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="29"/>
         <source>&amp;SelectAll</source>
         <translation>全选</translation>
+    </message>
+</context>
+<context>
+    <name>CoreController</name>
+    <message>
+        <location filename="../core/controllers/coreController.cpp" line="386"/>
+        <source>Your account blocked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4800,31 +4803,27 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="60"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Show</source>
         <translation>显示</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="31"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="61"/>
         <source>Connect</source>
-        <translation>连接</translation>
+        <translation type="vanished">连接</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="32"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Disconnect</source>
-        <translation>断开</translation>
+        <translation type="vanished">断开</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="36"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="63"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
         <source>Visit Website</source>
         <translation>官网</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="40"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
@@ -4881,27 +4880,42 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="99"/>
+        <source>Invalid e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="147"/>
+        <source>Cannot connect to Sever</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="149"/>
+        <source>UNKNOWN ERROR: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="178"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="183"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="195"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="184"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="196"/>
         <source>Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="197"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="211"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="223"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>

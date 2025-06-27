@@ -358,8 +358,3 @@ QString SettingsController::vpnNaruzhuGetApiBaseUrl() const
 {
     return m_settings->apiBaseUrl();
 }
-
-void SettingsController::vpnNaruzhuSetApiBaseUrl(const QString &apiBaseUrl)
-{
-    m_settings->setApiBaseUrl(apiBaseUrl);
-}

@@ -20,6 +20,7 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     initModels();
     initControllers();
     initSignalHandlers();
+    initVPNNaruzhuExtension();
 
     initAndroidController();
     initAppleController();
@@ -29,8 +30,6 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     auto locale = m_settings->getAppLanguage();
     m_translator.reset(new QTranslator());
     updateTranslator(locale);
-
-    m_networkManager = new QNetworkAccessManager(this);
 }
 
 void CoreController::initModels()
@@ -150,8 +149,13 @@ void CoreController::initControllers()
 
     m_apiConfigsController.reset(new ApiConfigsController(m_serversModel, m_apiServicesModel, m_settings));
     m_engine->rootContext()->setContextProperty("ApiConfigsController", m_apiConfigsController.get());
+}
 
-    m_engine->rootContext()->setContextProperty("CoreController", this);
+void CoreController::initVPNNaruzhuExtension()
+{
+    m_webApi.reset(new VpnNaruzhuWebApi(m_settings, m_serversModel, m_vpnConnection, m_engine));
+    m_engine->rootContext()->setContextProperty("VPNNWebApi", m_webApi.get());
+
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
         m_sitesController.get(), &SitesController::addSite);
     connect(m_vpnConnection.get(), &VpnConnection::restartConnection,
@@ -160,8 +164,11 @@ void CoreController::initControllers()
         m_sitesController.get(), &SitesController::addSite);
     connect(this, &CoreController::toggleConnection, m_connectionController.get(),
         &ConnectionController::toggleConnection, Qt::QueuedConnection);
-    connect(m_connectionController.get(), &ConnectionController::updateSmartRouting, this,
-        &CoreController::updateSmartRouting);
+    connect( m_connectionController.get()
+           , &ConnectionController::updateSmartRouting
+           , m_webApi.get()
+           , &VpnNaruzhuWebApi::updateSmartRouting
+           );
 }
 
 void CoreController::initAndroidController()
@@ -371,6 +378,19 @@ void CoreController::initPrepareConfigHandler()
     connect(m_connectionController.get(), &ConnectionController::prepareConfig, this, [this]() {
         emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Preparing);
 
+        m_webApi->updateDefaultAccountStatus();
+        if (m_serversModel->getDefaultAccount()
+                [config_key::simplified_status].toString() == "blocked")
+        {
+            m_pageController->showNotificationMessage(
+                tr("Your account blocked"));
+            emit m_vpnConnection->connectionStateChanged(
+                Vpn::ConnectionState::Disconnected);
+            return;
+        }
+
+        m_webApi->updateDefaultAccountConfig();
+
         if (!m_apiConfigsController->isConfigValid()) {
             emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Disconnected);
             return;
@@ -401,78 +421,4 @@ void CoreController::restartConnection()
     emit toggleConnection();
     m_connectionController->waitForConnectionFinished(10000);
     emit toggleConnection();
-}
-
-QNetworkReply* CoreController::downloadFile(const QString &url)
-{
-    QNetworkRequest request;
-    request.setTransferTimeout(1000);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-    request.setUrl(url);
-
-    QNetworkReply *reply;
-    reply = m_networkManager->get(request);
-
-    QEventLoop wait;
-    QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);
-    wait.exec();
-
-    return reply;
-}
-
-void CoreController::updateSmartRouting()
-{
-    QString routing_file("https://storage.googleapis.com/naruzhu/amnezia/local.json");
-    QNetworkReply *reply = downloadFile(routing_file);
-    if (reply->error() == QNetworkReply::NoError) {
-        QByteArray r = reply->readAll();
-        reply->deleteLater();
-
-        QJsonParseError json_error;
-        QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
-        if (json_error.error == QJsonParseError::NoError) {
-            m_vpnConnection->clearExcludeRouteList();
-            QJsonArray json_array = json_doc.array();
-            for (const auto &elem: json_array) {
-                switch (elem.type()) {
-                    case QJsonValue::Object:
-                    {
-                        QJsonObject json_obj = elem.toObject();
-                        QString host = json_obj.find("hostname").value().toString();
-                        m_vpnConnection->excludeRoute(host);
-                    }
-                        break;
-                    default:
-                        qDebug() << "json_array elem unknown type: " << elem;
-                        break;
-                }
-            }
-        } else {
-            qDebug() << "Cannot parse json error: " << json_error.error << " json file: " << r;
-        }
-    } else {
-        qDebug() << "Cannot download json file: " << routing_file;
-    }
-}
-
-void CoreController::updateApiBaseUrl()
-{
-    QString url("https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json");
-    QNetworkReply *reply = downloadFile(url);
-
-    if (reply->error() == QNetworkReply::NoError) {
-        QByteArray r = reply->readAll();
-        reply->deleteLater();
-
-        QJsonParseError json_error;
-        QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
-        if (json_error.error == QJsonParseError::NoError) {
-            QString apiBaseUrl = json_doc.object().find("apiBaseUrl").value().toString();
-            m_settingsController->vpnNaruzhuSetApiBaseUrl(apiBaseUrl);
-        } else {
-            qDebug() << "Cannot parse json error: " << json_error.error << " json file: " << r;
-        }
-    } else {
-        qDebug() << "Cannot download json file: " << url;
-    }
 }

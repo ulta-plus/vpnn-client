@@ -93,6 +93,13 @@ PageType {
                 return
             }
 
+            // Email verification RegExp
+            let re = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+            if (!re.test(root.email)) {
+                showError(qsTr('Invalid e-mail'))
+                return
+            }
+
             var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
 
             http.onreadystatechange = function() {
@@ -134,8 +141,13 @@ PageType {
             const object = JSON.parse(http.responseText.toString())
             error = object.error.localized_message
         } catch (e) {
-            error = 'UNKNOWN ERROR: ' + http.status
             print(http.responseText)
+
+            if (http.status == 0) {
+                error = qsTr('Cannot connect to Sever')
+            } else {
+                error = qsTr('UNKNOWN ERROR: ') + http.status
+            }
         }
 
         showError(error)

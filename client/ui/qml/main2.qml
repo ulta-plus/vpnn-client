@@ -65,8 +65,8 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
-            VPNNaruzhuAPI.updateDefaultAccountStatus()
-            CoreController.updateApiBaseUrl()
+            VPNNWebApi.updateApiBaseUrl()
+            VPNNWebApi.updateDefaultAccountStatus()
         }
 
         function onHideMainWindow() {

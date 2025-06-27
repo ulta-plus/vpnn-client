@@ -38,8 +38,10 @@ private:
     QSystemTrayIcon m_systemTrayIcon;
 
     QAction* m_trayActionShow = nullptr;
+    /* APP-116
     QAction* m_trayActionConnect = nullptr;
     QAction* m_trayActionDisconnect = nullptr;
+    */
     QAction* m_trayActionVisitWebSite = nullptr;
     QAction* m_trayActionQuit = nullptr;
     QAction* m_statusLabel = nullptr;

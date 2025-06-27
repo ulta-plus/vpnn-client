@@ -869,7 +869,7 @@ int ServersModel::getDefaultAccountIndex() const
     return -1;
 }
 
-void ServersModel::updateDefaultAccountStatus(QString account_status)
+void ServersModel::updateDefaultAccountStatus(const QJsonDocument &json_doc)
 {
     int i = getDefaultAccountIndex();
     if (i < 0) {
@@ -877,9 +877,7 @@ void ServersModel::updateDefaultAccountStatus(QString account_status)
     }
 
     QJsonObject defaultConfig = getServerConfig(i);
-
-    auto doc = QJsonDocument::fromJson(account_status.toUtf8());
-    auto request = doc["data"]["request"];
+    auto request = json_doc["data"]["request"];
 
     defaultConfig[config_key::public_request_id] = request[config_key::public_request_id].toString();
     defaultConfig[config_key::payment_link] = request[config_key::payment_link].toString();

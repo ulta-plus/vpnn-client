@@ -8,13 +8,15 @@ import '../Controls2'
 TextField {
     id: root
 
+    property int radius: 0
     property int textSize: 16
-    property string textColor: VPNNaruzhuStyle.color.textFieldText
-    property string borderColor: VPNNaruzhuStyle.color.textFieldBorder
-    property string backgroundColor: VPNNaruzhuStyle.color.textFieldBackgroundColor
-    property string borderFocusedColor: VPNNaruzhuStyle.color.textFieldBorderFocusedColor
-    property string backgroundTextColor: VPNNaruzhuStyle.color.textFieldBackgroundTextColor
-    property string backgroundDisabledColor: VPNNaruzhuStyle.color.textFieldBackgroundDisabledColor
+    property int borderWidth: 1
+    property int borderFocusedWidth: 2
+    property string textColor: Sotka.color.textFieldText
+    property string borderColor: Sotka.color.textFieldBorder
+    property string backgroundColor: Sotka.color.textFieldBackgroundColor
+    property string backgroundTextColor: Sotka.color.textFieldBackgroundTextColor
+    property string backgroundDisabledColor: Sotka.color.textFieldBackgroundDisabledColor
 
     placeholderText: ''
     placeholderTextColor: root.backgroundTextColor
@@ -22,21 +24,17 @@ TextField {
     color: root.textColor
     font.pixelSize: root.textSize
     font.weight: 400
-    font.family: 'PT Root UI VF'
+    font.family: Sotka.font
 
     background: Rectangle {
-        radius: 16
-        color: root.getBackgroundColor()
-        border.color: root.getBorderColor()
-        border.width: 1
-        implicitHeight: 40
+        radius: root.radius
+        color: root.backgroundColor
+        border.color: root.borderColor
+        border.width: getBorderWidht()
+        implicitHeight: 45
     }
 
-    function getBorderColor() {
-        return root.focus ? root.borderFocusedColor : root.borderColor
-    }
-
-    function getBackgroundColor() {
-        return root.enabled ? root.backgroundColor : root.backgroundDisabledColor
+    function getBorderWidht() {
+        return root.hovered || root.focus ? root.borderFocusedWidth : root.borderWidth
     }
 }

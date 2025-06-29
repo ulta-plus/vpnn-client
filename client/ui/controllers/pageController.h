@@ -38,7 +38,7 @@ namespace PageLoader
         PageSettingsApiNativeConfigs,
         PageSettingsApiDevices,
         PageSettingsKillSwitchExceptions,
-        
+
         PageServiceSftpSettings,
         PageServiceTorWebsiteSettings,
         PageServiceDnsSettings,
@@ -71,9 +71,8 @@ namespace PageLoader
 
         PageShareFullAccess,
 
-        VPNNaruzhuPageLogIn,
-        VPNNaruzhuPageSignUp,
-        VPNNaruzhuPageEmailLogIn,
+        SotkaLogIn,
+        SotkaKeyBinding,
 
         PageDevMenu
     };

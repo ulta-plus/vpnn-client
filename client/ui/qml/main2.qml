@@ -18,14 +18,14 @@ Window  {
     objectName: "mainWindow"
 
     visible: true
-    width: GC.screenWidth
-    height: GC.screenHeight
-    minimumWidth: GC.isDesktop() ? 360 : 0
-    minimumHeight: GC.isDesktop() ? 640 : 0
-    maximumWidth: 600
-    maximumHeight: 800
+    width: 375
+    height: 559
+    minimumWidth: 375
+    minimumHeight: 559
+    maximumWidth: 375
+    maximumHeight: 559
 
-    color: AmneziaStyle.color.midnightBlack
+    color: Sotka.color.mainBackGround
 
     onClosing: function() {
         PageController.closeWindow()

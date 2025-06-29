@@ -1,6 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>fonts/pt-root-ui_vf.ttf</file>
+        <file>fonts/IBMPlexMono-Regular.ttf</file>
+        <file>fonts/IBMPlexMono-Medium.ttf</file>
+        <file>fonts/IBMPlexMono-Bold.ttf</file>
+        <file>fonts/IBMPlexMono-Thin.ttf</file>
         <file>images/controls/alert-circle.svg</file>
         <file>images/controls/amnezia.svg</file>
         <file>images/controls/app.svg</file>
@@ -17,7 +20,6 @@
         <file>images/controls/delete.svg</file>
         <file>images/controls/download.svg</file>
         <file>images/controls/edit-3.svg</file>
-        <file>images/controls/eye-off.svg</file>
         <file>images/controls/eye.svg</file>
         <file>images/controls/external-link.svg</file>
         <file>images/controls/file-check-2.svg</file>
@@ -182,13 +184,12 @@
         <file>ui/qml/main2.qml</file>
         <file>ui/qml/Modules/WebAPI/VPNNaruzhuAPI.qml</file>
         <file>ui/qml/Modules/WebAPI/qmldir</file>
-        <file>ui/qml/Modules/Style/VPNNaruzhuStyle.qml</file>
+        <file>ui/qml/Modules/Style/Sotka.qml</file>
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>
         <file>ui/qml/Modules/Style/qmldir</file>
         <file>ui/qml/Pages2/DummyKey.conf</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageSignUp.qml</file>
+        <file>ui/qml/Pages2/SotkaLogIn.qml</file>
+        <file>ui/qml/Pages2/SotkaKeyBinding.qml</file>
         <file>ui/qml/Pages2/PageDeinstalling.qml</file>
         <file>ui/qml/Pages2/PageDevMenu.qml</file>
         <file>ui/qml/Pages2/PageHome.qml</file>
@@ -246,7 +247,7 @@
         <file>ui/qml/Pages2/PageSettingsApiNativeConfigs.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiDevices.qml</file>
         <file>images/controls/monitor.svg</file>
-        <file>images/naruzhu_logo.png</file>
+        <file>images/sotka_logo.png</file>
         <file>images/controls/email.svg</file>
         <file>images/controls/tabBarChat.svg</file>
         <file>images/controls/chat.svg</file>

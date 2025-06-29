@@ -22,9 +22,9 @@ Rectangle {
     property string buttonYesText: qsTr('Yes')
     property string buttonNoText: qsTr('No')
 
-    property string textColor: VPNNaruzhuStyle.color.notificationText
-    property string borderColor: VPNNaruzhuStyle.color.notificationBorder
-    property string backgroundColor: VPNNaruzhuStyle.color.notificationBackground
+    property string textColor: Sotka.color.notificationText
+    property string borderColor: Sotka.color.notificationBorder
+    property string backgroundColor: Sotka.color.notificationBackground
 
     property var withYesClick: function() {}
     property var withNoClick: function() {}

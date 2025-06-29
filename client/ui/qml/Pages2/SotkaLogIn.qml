@@ -40,17 +40,30 @@ PageType {
 
         spacing: 0
 
-        BackButtonType {
-            id: backButton
-            Layout.topMargin: 20
-            KeyNavigation.tab: emailText
+        Image {
+            id: image
+            source: "qrc:/images/sotka_logo.png"
+
+            Layout.alignment: Qt.AlignCenter
+            Layout.topMargin: 135
+            Layout.leftMargin: 90
+            Layout.rightMargin: 90
+            Layout.preferredWidth: 196
+            Layout.preferredHeight: 48
         }
 
-        Header2TextType {
-            Layout.topMargin: 20
-            Layout.bottomMargin: 20
+        Text {
+            Layout.fillWidth: true
+            Layout.topMargin: 27
             Layout.leftMargin: 16
-            text: qsTr('Enter your e-mail')
+            Layout.rightMargin: 16
+            horizontalAlignment: Text.AlignHCenter
+            color: Sotka.color.text
+            font.family: Sotka.font
+            font.pixelSize: 14
+            font.weight: 500
+            font.letterSpacing: -0.7
+            text: qsTr('Please, enter Telegram key')
         }
 
         VPNNaruzhuTextField {
@@ -58,16 +71,48 @@ PageType {
             objectName: 'emailText'
 
             Layout.fillWidth: true
+            Layout.topMargin: 23
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            placeholderText: 'e-mail'
+            placeholderText: qsTr('Telegram key')
 
             KeyNavigation.tab: continueButton
         }
+
+        VPNNaruzhuButton {
+            id: continueButton
+            Layout.topMargin: 12
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+
+            defaultColor: Sotka.color.yellow
+            disableColor: defaultColor
+            hoveredColor: defaultColor
+            pressedColor: defaultColor
+
+            mainText: qsTr('Continue')
+
+            onClicked: {
+                PageController.goToPage(PageEnum.SotkaKeyBinding)
+            }
+        }
+
+        VPNNaruzhuButton {
+            id: backButton
+            Layout.topMargin: 12
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+
+            mainText: qsTr('Return back')
+
+            onClicked: {
+                PageController.closePage()
+            }
+        }
     }
 
-    VPNNaruzhuButton {
+    /*VPNNaruzhuButton {
         id: continueButton
         objectName: 'connectButton'
 
@@ -117,6 +162,7 @@ PageType {
             http.send()
         }
     }
+    */
 
     function enableAll() {
         emailText.enabled = true

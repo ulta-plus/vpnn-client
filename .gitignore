@@ -1,9 +1,9 @@
 # User settings
 *.user
 macOSPackage/
-VPNNaruzhu.dmg
-VPNNaruzhu.exe
-VPNNaruzhu_*.exe
+Sotka.dmg
+Sotka.exe
+Sotka_*.exe
 deploy/build/*
 deploy/build_32/*
 deploy/build_64/*

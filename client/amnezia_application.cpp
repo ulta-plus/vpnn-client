@@ -153,7 +153,10 @@ void AmneziaApplication::loadFonts()
 {
     QQuickStyle::setStyle("Basic");
 
-    QFontDatabase::addApplicationFont(":/fonts/pt-root-ui_vf.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Regular.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Medium.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Bold.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Thin.ttf");
 }
 
 bool AmneziaApplication::parseCommands()

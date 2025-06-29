@@ -1,4 +1,4 @@
 module Style
 
 singleton AmneziaStyle 1.0 AmneziaStyle.qml
-singleton VPNNaruzhuStyle 1.0 VPNNaruzhuStyle.qml
+singleton Sotka 1.0 Sotka.qml

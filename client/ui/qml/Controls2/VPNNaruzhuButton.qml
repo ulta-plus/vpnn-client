@@ -7,16 +7,22 @@ Button {
     id: root
 
     property string mainText: ''
-    property string disableColor: VPNNaruzhuStyle.color.buttonDisable
-    property string hoveredColor: VPNNaruzhuStyle.color.buttonHovered
-    property string defaultColor: VPNNaruzhuStyle.color.buttonDefault
-    property string pressedColor: VPNNaruzhuStyle.color.buttonPressed
-    property string borderColor: VPNNaruzhuStyle.color.buttonBorder
-    property string borderFocusedColor: VPNNaruzhuStyle.color.buttonBorderFocused
-    property string textColor: VPNNaruzhuStyle.color.buttonText
+    property string disableColor: Sotka.color.buttonDisable
+    property string hoveredColor: Sotka.color.buttonHovered
+    property string defaultColor: Sotka.color.buttonDefault
+    property string pressedColor: Sotka.color.buttonPressed
+    property string borderColor: Sotka.color.buttonBorder
+    property string borderFocusedColor: Sotka.color.buttonBorderFocused
+    property string textColor: Sotka.color.buttonText
 
-    property int borderWidth: 0
-    property int borderFocusedWidth: 1
+    property int borderWidth: 1
+    property int borderFocusedWidth: 2
+    property int buttonWidth: 343
+    property int buttonHeight: 45
+    property int buttonRaidus: 0
+
+    implicitWidth: root.buttonWidth
+    implicitHeight: root.buttonHeight
 
     contentItem: Text {
         text: root.mainText
@@ -24,15 +30,16 @@ Button {
 
         color: root.textColor
         font.pixelSize: 16
-        font.weight: 600
-        font.family: 'PT Root UI VF'
+        font.weight: 700
+        font.family: Sotka.font
+        font.capitalization: Font.AllUppercase
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
     }
 
     background: Rectangle {
-        radius: 10
+        radius: root.buttonRaidus
 
         color: {
             if (root.enabled) {
@@ -45,8 +52,8 @@ Button {
             }
         }
 
-        border.color: root.activeFocus ? root.borderFocusedColor : AmneziaStyle.color.transparent
-        border.width: root.activeFocus ? root.borderFocusedWidth : root.borderWidth
+        border.color: root.hovered ? root.borderFocusedColor : root.borderColor
+        border.width: root.hovered ? root.borderFocusedWidth : root.borderWidth
 
         Behavior on color {
             PropertyAnimation { duration: 200 }

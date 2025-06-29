@@ -5,21 +5,36 @@ import QtQuick.Layouts
 import PageEnum 1.0
 import Style 1.0
 
-import "./"
-import "../Controls2"
-import "../Config"
-import "../Controls2/TextTypes"
-import "../Components"
+import '../Controls2'
 
 PageType {
     id: root
 
-    ColumnLayout {
-        id: content
+    property string email: ''
+    property string otpCode: ''
+    property string public_request_id: ''
+    property string error: ''
+    property string account_status: ''
 
+    Connections {
+        target: ImportController
+
+        function onImportFinished() {
+            if (ServersModel.getServersCount() == 1) {
+                // There is only new default config
+                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1)
+                ServersModel.processedIndex = ServersModel.defaultIndex
+            }
+
+            PageController.goToPageHome()
+        }
+    }
+
+    ColumnLayout {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
+
         spacing: 0
 
         Image {
@@ -45,12 +60,12 @@ PageType {
             font.pixelSize: 14
             font.weight: 500
             font.letterSpacing: -0.7
-            text: qsTr("Do you already have a Telegram Key?")
+            text: qsTr('Key is being used with another device.\nShould it be bonded to this device?')
         }
 
         VPNNaruzhuButton {
-            id: logInButton
-            Layout.topMargin: 23
+            id: useHereButton
+            Layout.topMargin: 60
             Layout.leftMargin: 16
             Layout.rightMargin: 16
 
@@ -59,23 +74,35 @@ PageType {
             hoveredColor: defaultColor
             pressedColor: defaultColor
 
-            mainText: qsTr("Yes, I have key")
+            mainText: qsTr('Use here')
 
             onClicked: {
-                PageController.goToPage(PageEnum.SotkaLogIn)
             }
         }
 
         VPNNaruzhuButton {
-            id: telegramButton
+            id: buyNewButton
             Layout.topMargin: 12
             Layout.leftMargin: 16
             Layout.rightMargin: 16
 
-            mainText: qsTr("No, Recieve key")
+            mainText: qsTr('Buy new key')
 
             onClicked: {
-                Qt.openUrlExternally("https://t.me/sotka_install_bot")
+            }
+        }
+
+
+        VPNNaruzhuButton {
+            id: backButton
+            Layout.topMargin: 12
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+
+            mainText: qsTr('Return back')
+
+            onClicked: {
+                PageController.closePage()
             }
         }
     }

@@ -5,10 +5,10 @@ Text {
     lineHeight: 24 + LanguageModel.getLineHeightAppend()
     lineHeightMode: Text.FixedHeight
 
-    color: AmneziaStyle.color.paleGray
+    color: Sotka.color.text
     font.pixelSize: 16
-    font.weight: Font.DemiBold
-    font.family: "Inter"
+    font.weight: 500
+    font.family: Sotka.font
 
     wrapMode: Text.WordWrap
 }

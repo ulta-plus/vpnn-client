@@ -20,9 +20,9 @@ Rectangle {
     property string text: qsTr('ERROR')
     property string buttonText: qsTr('Close')
 
-    property string textColor: VPNNaruzhuStyle.color.notificationText
-    property string borderColor: VPNNaruzhuStyle.color.notificationBorder
-    property string backgroundColor: VPNNaruzhuStyle.color.notificationBackground
+    property string textColor: Sotka.color.notificationText
+    property string borderColor: Sotka.color.notificationBorder
+    property string backgroundColor: Sotka.color.notificationBackground
 
     property var onClick: function() {} // function executed with close Notification
 

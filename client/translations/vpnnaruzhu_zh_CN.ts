@@ -3261,22 +3261,27 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="44"/>
-        <source>Open foreign and Russian websites.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="54"/>
-        <source>Log in</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>I have the data to connect</source>
         <translation type="vanished">我有连接配置</translation>
     </message>
     <message>
         <source>I have nothing</source>
         <translation type="vanished">我没有</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="48"/>
+        <source>Do you already have a Telegram Key?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="62"/>
+        <source>Yes, I have key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="75"/>
+        <source>No, Recieve key</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4800,6 +4805,92 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     </message>
 </context>
 <context>
+    <name>SotkaKeyBinding</name>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="63"/>
+        <source>Key is being used with another device.
+Should it be bonded to this device?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="77"/>
+        <source>Use here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="89"/>
+        <source>Buy new key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Continue</source>
+        <translation type="obsolete">继续</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="102"/>
+        <source>Return back</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SotkaLogIn</name>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="66"/>
+        <source>Please, enter Telegram key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="78"/>
+        <source>Telegram key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="94"/>
+        <source>Continue</source>
+        <translation type="unfinished">继续</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="107"/>
+        <source>Return back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="193"/>
+        <source>Cannot connect to Sever</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="195"/>
+        <source>UNKNOWN ERROR: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="224"/>
+        <source>Wrong Key File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="241"/>
+        <source>Enter a code from the e-mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="242"/>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="243"/>
+        <source>code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="269"/>
+        <source>Wrong Dummy Key File</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
@@ -4865,59 +4956,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 <context>
     <name>VPNNaruzhuPageEmailLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="53"/>
-        <source>Enter your e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="83"/>
         <source>Continue</source>
-        <translation type="unfinished">继续</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="92"/>
-        <source>Please, provide an email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="99"/>
-        <source>Invalid e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="147"/>
-        <source>Cannot connect to Sever</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="149"/>
-        <source>UNKNOWN ERROR: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="178"/>
-        <source>Wrong Key File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="195"/>
-        <source>Enter a code from the e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="196"/>
-        <source>Send</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="197"/>
-        <source>code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="223"/>
-        <source>Wrong Dummy Key File</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">继续</translation>
     </message>
 </context>
 <context>
@@ -4927,47 +4967,8 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <translation type="obsolete">包含连接配置的文件</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="34"/>
-        <source>Select login method</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="63"/>
-        <source>Login with an e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="45"/>
-        <source>Login with Telegram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="81"/>
-        <source>Login with a key file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="88"/>
         <source>Open key file</source>
-        <translation type="unfinished">打开配置文件</translation>
-    </message>
-</context>
-<context>
-    <name>VPNNaruzhuPageSignUp</name>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="34"/>
-        <source>Select sign up way</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="45"/>
-        <source>Sign up with Telegram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
-        <source>Sign up with e-mail</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">打开配置文件</translation>
     </message>
 </context>
 <context>

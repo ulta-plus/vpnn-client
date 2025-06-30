@@ -1,5 +1,5 @@
-#ifndef _VPNNARUZHU_WEB_API_H
-#define _VPNNARUZHU_WEB_API_H
+#ifndef _SOTKA_WEB_API_H
+#define _SOTKA_WEB_API_H
 
 #include <QObject>
 #include <QString>
@@ -14,12 +14,12 @@
 #include "ui/models/servers_model.h"
 #include "ui/controllers/importController.h"
 
-class VpnNaruzhuWebApi: public QObject
+class SotkaWebApi: public QObject
 {
     Q_OBJECT
 
 public:
-    VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
+    SotkaWebApi(const std::shared_ptr<Settings> &s,
         const QSharedPointer<ServersModel> &sm,
         const QSharedPointer<VpnConnection> &vpnc,
         QQmlApplicationEngine* engine)
@@ -41,7 +41,7 @@ public slots:
     void updateDefaultAccountConfig(void) const;
 
 private:
-    VpnNaruzhuWebApi();
+    SotkaWebApi();
 
     std::shared_ptr<Settings> m_settings;
     QSharedPointer<ServersModel> m_serversModel;
@@ -70,4 +70,4 @@ private:
     QNetworkReply* replyGetRequest(const QNetworkRequest &request) const;
 };
 
-#endif /* _VPNNARUZHU_WEB_API_H */
+#endif /* _SOTKA_WEB_API_H */

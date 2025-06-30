@@ -1,10 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Type=Application
-Name=VPNNaruzhu
+Name=Sotka
 Version=@CMAKE_PROJECT_VERSION@
 Comment=Client of your self-hosted VPN
-Exec=VPNNaruzhu
-Icon=/usr/share/pixmaps/VPNNaruzhu.png
+Exec=Sotka
+Icon=/usr/share/pixmaps/Sotka.png
 Categories=Network;Qt;Security;
 Terminal=false

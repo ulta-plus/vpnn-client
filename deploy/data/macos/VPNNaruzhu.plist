@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>VPNNaruzhu-service</string>
+    <string>Sotka-service</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Applications/VPNNaruzhu.app/Contents/MacOS/VPNNaruzhu-service</string>
+        <string>/Applications/Sotka.app/Contents/MacOS/Sotka-service</string>
     </array>
     <key>KeepAlive</key>
     <true/>

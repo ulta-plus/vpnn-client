@@ -185,7 +185,7 @@ bool AmneziaApplication::parseCommands()
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 void AmneziaApplication::startLocalServer()
 {
-    const QString serverName("VPNNaruzhuInstance");
+    const QString serverName("SotkaInstance");
     QLocalServer::removeServer(serverName);
 
     QLocalServer *server = new QLocalServer(this);

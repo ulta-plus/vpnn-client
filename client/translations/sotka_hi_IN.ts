@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ur_PK">
+<TS version="2.1" language="hi_IN">
 <context>
     <name>AdLabel</name>
     <message>
@@ -34,27 +34,27 @@
     <message>
         <location filename="../ui/controllers/allowedDnsController.cpp" line="51"/>
         <source>Can&apos;t open file: %1</source>
-        <translation type="unfinished">فائل نہیں کھول سکتا: %1</translation>
+        <translation type="unfinished">फ़ाइल नहीं खुल सकती: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/allowedDnsController.cpp" line="57"/>
         <source>Failed to parse JSON data from file: %1</source>
-        <translation type="unfinished">فائل سے JSON ڈیٹا پارس کرنے میں ناکامی: %1</translation>
+        <translation type="unfinished">फ़ाइल से JSON डेटा पार्स करने में विफल:%1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/allowedDnsController.cpp" line="62"/>
         <source>The JSON data is not an array in file: %1</source>
-        <translation type="unfinished">فائل میں JSON ڈیٹا ایک ایرے نہیں ہے: %1</translation>
+        <translation type="unfinished">JSON डेटा फ़ाइल में कोई सरणी नहीं है: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/allowedDnsController.cpp" line="82"/>
         <source>Import completed</source>
-        <translation type="unfinished">واردات مکمل ہوگئی ہے</translation>
+        <translation type="unfinished">आयात पूरा हुआ</translation>
     </message>
     <message>
         <location filename="../ui/controllers/allowedDnsController.cpp" line="100"/>
         <source>Export completed</source>
-        <translation type="unfinished">ایکسپورٹ مکمل ہوگیا</translation>
+        <translation type="unfinished">निर्यात पूरा हुआ</translation>
     </message>
 </context>
 <context>
@@ -158,22 +158,22 @@
     <message>
         <location filename="../ui/controllers/appSplitTunnelingController.cpp" line="23"/>
         <source>Application added: %1</source>
-        <translation>ایپلیکیشن شامل ہوگیا: %1</translation>
+        <translation>एप्लिकेशन जोड़ा गया: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/appSplitTunnelingController.cpp" line="26"/>
         <source>The application has already been added</source>
-        <translation>یہ ایپلیکیشن پہلے سے شامل کیا گیا ہے</translation>
+        <translation>एप्लिकेशन पहले ही जोड़ा जा चुका है</translation>
     </message>
     <message>
         <location filename="../ui/controllers/appSplitTunnelingController.cpp" line="37"/>
         <source>The selected applications have been added</source>
-        <translation>منتخب شدہ ایپلیکیشنز شامل کردی گئی ہیں</translation>
+        <translation>चयनित एप्लिकेशन जोड़ दिए गए हैं</translation>
     </message>
     <message>
         <location filename="../ui/controllers/appSplitTunnelingController.cpp" line="48"/>
         <source>Application removed: %1</source>
-        <translation>ایپلیکیشن ہٹا دی گئی: %1</translation>
+        <translation>एप्लिकेशन हटाया गया: %1</translation>
     </message>
 </context>
 <context>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation>تشکیل کی تیاری کے دوران منقطع ہونا ممکن نہیں ہے</translation>
+        <translation>कॉन्फ़िगरेशन तैयारी के दौरान डिस्कनेक्ट करने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -192,55 +192,56 @@
         <location filename="../ui/controllers/connectionController.cpp" line="113"/>
         <location filename="../ui/controllers/connectionController.cpp" line="119"/>
         <source>Connect</source>
-        <translation>جوڑنا</translation>
-    </message>
-    <message>
-        <source>The selected protocol is not supported on the current platform</source>
-        <translation type="vanished">منتخب کردہ پروٹوکول موجودہ پلیٹ فارم پر تعاون یافتہ نہیں ہے</translation>
+        <translation>कनेक्ट</translation>
     </message>
     <message>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
-        <translation type="vanished">وی پی این پروٹوکول انسٹال نہیں ہے,براہ کرم پہلےوی پی این کنٹینر انسٹال کریں</translation>
-    </message>
-    <message>
-        <source>unable to create configuration</source>
-        <translation type="vanished">تشکیل تیار کرنے میں ناکام</translation>
-    </message>
-    <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="79"/>
-        <source>Connecting...</source>
-        <translation>جوڑاجارھاھے....</translation>
+        <translation type="vanished">पीएन प्रोटोकॉल स्थापित नहीं है.
+कृपया पहले वीपीएन कंटेनर स्थापित करें</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="84"/>
         <source>Connected</source>
-        <translation>جوڑاجارھاھے</translation>
+        <translation>जुड़ा हुआ</translation>
+    </message>
+    <message>
+        <source>The selected protocol is not supported on the current platform</source>
+        <translation type="vanished">चयनित प्रोटोकॉल वर्तमान प्लेटफ़ॉर्म पर समर्थित नहीं है</translation>
+    </message>
+    <message>
+        <source>unable to create configuration</source>
+        <translation type="vanished">कॉन्फ़िगरेशन बनाने में असमर्थ</translation>
+    </message>
+    <message>
+        <location filename="../ui/controllers/connectionController.cpp" line="79"/>
+        <source>Connecting...</source>
+        <translation>कनेक्ट...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="93"/>
         <source>Reconnecting...</source>
-        <translation>دوبارہ جوڑنےکی کوشش...</translation>
+        <translation>पुनः कनेक्ट हो रहा है...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="103"/>
         <source>Disconnecting...</source>
-        <translation>منقطع کرنا...</translation>
+        <translation>डिस्कनेक्ट हो रहा है...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="108"/>
         <source>Preparing...</source>
-        <translation>تیاری کیا جا رہا ہے...</translation>
+        <translation>तैयार कर रहे हैं...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="130"/>
         <source>Settings updated successfully, reconnnection...</source>
-        <translation>ترتیب ک ھوگی،دوبارہ جوڑنےکی کوشش...</translation>
+        <translation>सेटिंग्स सफलतापूर्वक अपडेट हो गईं...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="133"/>
         <source>Settings updated successfully</source>
-        <translation>دوبارہ ترتیب تاذہ کامیاب</translation>
+        <translation>सेटिंग्स सफलतापूर्वक अपडेट हो गईं</translation>
     </message>
 </context>
 <context>
@@ -248,12 +249,12 @@
     <message>
         <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="36"/>
         <source>Add new connection</source>
-        <translation>نیا کنکشن کا اندراج کریں</translation>
+        <translation>नया कनेक्शन जोड़ें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ConnectionTypeSelectionDrawer.qml" line="61"/>
         <source>Open config file, key or QR code</source>
-        <translation>کھولو کنفیگ فاءیل،کی یا کور کوڈ</translation>
+        <translation>कॉन्फ़िग फ़ाइल, कुंजी या QR कोड खोलें</translation>
     </message>
 </context>
 <context>
@@ -261,22 +262,22 @@
     <message>
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="9"/>
         <source>C&amp;ut</source>
-        <translation>ک&amp;اٹنا</translation>
+        <translation>काट&amp;न</translation>
     </message>
     <message>
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="15"/>
         <source>&amp;Copy</source>
-        <translation>&amp;کاپی</translation>
+        <translation>&amp;कॉपी करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="21"/>
         <source>&amp;Paste</source>
-        <translation>چ&amp;سپاںکریں</translation>
+        <translation>&amp;चपकाएं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Controls2/ContextMenuType.qml" line="29"/>
         <source>&amp;SelectAll</source>
-        <translation>&amp;تمام منتخب کریں</translation>
+        <translation>&amp;सबका चयन करें</translation>
     </message>
 </context>
 <context>
@@ -305,7 +306,7 @@
     <message>
         <location filename="../ui/qml/Components/HomeContainersListView.qml" line="64"/>
         <source>Unable change protocol while there is an active connection</source>
-        <translation>موجودہ کنکشن ہونے کے دوران پروٹوکول کو تبدیل کرنے سے قاصر ہے</translation>
+        <translation>सक्रिय कनेक्शन होने पर प्रोटोकॉल बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -313,17 +314,17 @@
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="34"/>
         <source>Split tunneling</source>
-        <translation>سپلٹ ٹنلنگ</translation>
+        <translation>विभाजित सुरंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="35"/>
         <source>Allows you to connect to some sites or applications through a VPN connection and bypass others</source>
-        <translation>آپ کو VPN کنکشن کے ذریعے کچھ سائٹس یا ایپلیکیشنز سے جڑنے اور دوسروں کو نظرانداز کرنے کی اجازت دیتا ہے</translation>
+        <translation>आपको वीपीएन कनेक्शन के माध्यम से कुछ साइटों या एप्लिकेशन से जुड़ने और अन्य को बायपास करने की अनुमति देता है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="45"/>
         <source>Split tunneling on the server</source>
-        <translation>سرور پر سپلٹ ٹنلنگ</translation>
+        <translation>सर्वर पर स्प्लिट टनलिंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
@@ -334,35 +335,35 @@ Can&apos;t be disabled for current server</source>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="64"/>
         <source>Site-based split tunneling</source>
-        <translation>سائٹ پر مبنی ٹونلنگ</translation>
+        <translation>साइट-आधारित विभाजित टनलिंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
         <source>Enabled</source>
-        <translation>فعال</translation>
+        <translation>सक्षम किया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
         <source>Disabled</source>
-        <translation>فعال نہیں</translation>
+        <translation>अक्षम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="83"/>
         <source>App-based split tunneling</source>
-        <translation>ایپ پر مبنی سپلٹ ٹونلنگ</translation>
+        <translation>ऐप-आधारित स्प्लिट टनलिंग</translation>
     </message>
 </context>
 <context>
     <name>ImportController</name>
     <message>
         <source>Unable to open file</source>
-        <translation type="vanished">فائل کو کھولنے سے قاصر ہے</translation>
+        <translation type="vanished">फाइल खोलने में असमर्थ</translation>
     </message>
     <message>
         <source>Invalid configuration file</source>
-        <translation type="vanished">غلط کنفیگریشن فائل</translation>
+        <translation type="vanished">अमान्य कॉन्फ़िगरेशन फ़ाइल</translation>
     </message>
     <message>
         <location filename="../ui/controllers/importController.cpp" line="710"/>
@@ -384,7 +385,7 @@ Can&apos;t be disabled for current server</source>
     <message>
         <location filename="../ui/controllers/importController.cpp" line="675"/>
         <source>Scanned %1 of %2.</source>
-        <translation>سکین%1 کی%2.</translation>
+        <translation>%2 में से %1 स्कैन किया गया.</translation>
     </message>
 </context>
 <context>
@@ -392,51 +393,51 @@ Can&apos;t be disabled for current server</source>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="156"/>
         <source>%1 installed successfully. </source>
-        <translation>%1 کامیابی سےنصب. </translation>
+        <translation>%1 सफलतापूर्वक स्थापित हुआ. </translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="158"/>
         <source>%1 is already installed on the server. </source>
-        <translation>%1 پہلے ہی سرور پر انسٹال ہے. </translation>
+        <translation>%1 पहले से ही सर्वर पर स्थापित है. </translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="178"/>
         <source>
 Added containers that were already installed on the server</source>
         <translation>
-وہ کنٹینرز شامل کیے گئے جو پہلے سے سرور پر نصب تھے</translation>
+सर्वर पर पहले से स्थापित कंटेनर जोड़े गए</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="258"/>
         <source>
 Already installed containers were found on the server. All installed containers have been added to the application</source>
         <translation>
-سرور پر پہلے سے نصب کنٹینرز پائے گئے۔ تمام نصب کنٹینرز کو ایپلی کیشن میں شامل کر دیا گیا ہے</translation>
+सर्वर पर पहले से स्थापित कंटेनर पाए गए। सभी स्थापित कंटेनरों को एप्लिकेशन में जोड़ दिया गया है</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="516"/>
         <source>Settings updated successfully</source>
-        <translation>ترتیب کامیابی کے ساتھ اپ ڈیٹ ہو گئی</translation>
+        <translation>सेटिंग्स सफलतापूर्वक अपडेट हो गईं</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="533"/>
         <source>Server &apos;%1&apos; was rebooted</source>
-        <translation>سرور %1 دوبارہ چالو کیا گیا تھا</translation>
+        <translation>सर्वर &apos;%1&apos; रीबूट किया गया था</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="545"/>
         <source>Server &apos;%1&apos; was removed</source>
-        <translation>سرور %1 ہٹا دیا گیا تھا</translation>
+        <translation>सर्वर &apos;%1&apos; रीबूट किया गया था</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="556"/>
         <source>All containers from server &apos;%1&apos; have been removed</source>
-        <translation>سرور &apos;%1&apos; سے تمام کنٹینرز ہٹا دیے گئے ہیں</translation>
+        <translation>सर्वर &apos;%1&apos; से सभी कंटेनर हटा दिए गए हैं</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="574"/>
         <source>%1 has been removed from the server &apos;%2&apos;</source>
-        <translation>سرور &apos;%2&apos; سے %1 ہٹا دیا گیا ہے</translation>
+        <translation>%1 को सर्वर &apos;%2&apos; से हटा दिया गया है</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="583"/>
@@ -446,17 +447,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/controllers/installController.cpp" line="605"/>
         <source>%1 cached profile cleared</source>
-        <translation>%1 کیش کردہ پروفائل ختم کر دی گئی</translation>
+        <translation>%1 कैश्ड प्रोफ़ाइल साफ़ की गई</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="744"/>
         <source>Please login as the user</source>
-        <translation>براہ کرم صارف کے طور پر لاگ ان کریں</translation>
+        <translation>कृपया उपयोगकर्ता के रूप में लॉगिन करें</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="772"/>
         <source>Server added successfully</source>
-        <translation>سرور کامیابی سے شامل کیا گیا</translation>
+        <translation>सर्वर सफलतापूर्वक जोड़ा गया</translation>
     </message>
 </context>
 <context>
@@ -464,17 +465,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Components/InstalledAppsDrawer.qml" line="57"/>
         <source>Choose application</source>
-        <translation>ایپلیکیشن کو منتخب کریں</translation>
+        <translation>एप्लिकेशन चुनें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/InstalledAppsDrawer.qml" line="138"/>
         <source>application name</source>
-        <translation>ایپلیکیشن کا نام</translation>
+        <translation>आवेदन का नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/InstalledAppsDrawer.qml" line="151"/>
         <source>Add selected</source>
-        <translation>ایپلیکیشن کا نام</translation>
+        <translation>चुने हुए को जोड़ो</translation>
     </message>
 </context>
 <context>
@@ -482,17 +483,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../3rd/qtkeychain/TestAppExample/keychainclass.cpp" line="22"/>
         <source>Read key failed: %1</source>
-        <translation>کلید پڑھنے میں ناکامی: %1</translation>
+        <translation>कुंजी पढ़ें विफल: %1</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/TestAppExample/keychainclass.cpp" line="37"/>
         <source>Write key failed: %1</source>
-        <translation>کلید لکھنے میں ناکامی: %1</translation>
+        <translation>कुंजी लिखें विफल: %1</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/TestAppExample/keychainclass.cpp" line="54"/>
         <source>Delete key failed: %1</source>
-        <translation>کلید حذف کرنے میں ناکامی: %1</translation>
+        <translation>कुंजी हटाएँ विफल: %1</translation>
     </message>
 </context>
 <context>
@@ -500,30 +501,28 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>VPNNaruzhu</source>
-        <translation>The translation of &quot;VPNNaruzhu&quot; in Urdu would be:
-
-امنیزیا وی پی ای</translation>
+        <source>Sotka</source>
+        <translation>Sotka</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
         <source>VPN Connected</source>
-        <translation>وی پی این متصل ہوگیا</translation>
+        <translation>कनेक्ट</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="71"/>
         <source>VPN Disconnected</source>
-        <translation>وی پی این منقطع ہوگیا</translation>
+        <translation>कनेक्ट</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>VPNNaruzhu notification</source>
-        <translation>امنیزیا وی پی این کی اطلاعات</translation>
+        <source>Sotka notification</source>
+        <translation>Sotka अधिसूचना</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
         <source>Unsecured network detected: </source>
-        <translation>غیر محفوظ نیٹ ورک کا پتہ لگایا گیا ہے: </translation>
+        <translation>असुरक्षित नेटवर्क का पता चला: </translation>
     </message>
 </context>
 <context>
@@ -531,12 +530,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="63"/>
         <source>Removing services from %1</source>
-        <translation>سروسز کو %1 سے ہٹایا جا رہا ہے</translation>
+        <translation>सर्वर से %1 हटाया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="88"/>
         <source>Usually it takes no more than 5 minutes</source>
-        <translation>عام طور پر اس میں 5 منٹ سے زیادہ نہیں لگتا ہے</translation>
+        <translation>आमतौर पर इसमें 5 मिनट से अधिक समय नहीं लगता है</translation>
     </message>
 </context>
 <context>
@@ -557,7 +556,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="77"/>
         <source>Logging enabled</source>
-        <translation>لاگنگ فعال ہے</translation>
+        <translation>लॉगिंग सक्षम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
@@ -572,7 +571,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="372"/>
         <source>VPN protocol</source>
-        <translation>وی پی این پروٹوکول</translation>
+        <translation>VPN प्रोटोकॉल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="425"/>
@@ -581,11 +580,11 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <source>Servers</source>
-        <translation type="vanished">سرور</translation>
+        <translation type="vanished">सर्वर</translation>
     </message>
     <message>
         <source>Unable change server while there is an active connection</source>
-        <translation type="vanished">فعال کنکشن موجود ہونے کی وجہ سے سرور تبدیل کرنے میں ناکام ہیں</translation>
+        <translation type="vanished">सक्रिय कनेक्शन होने पर सर्वर बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -593,12 +592,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="97"/>
         <source>AmneziaWG settings</source>
-        <translation type="unfinished">امنیزیا وی جی کی ترتیبات</translation>
+        <translation type="unfinished">Amneziaडब्ल्यूजी सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="105"/>
         <source>MTU</source>
-        <translation type="unfinished">ام ٹی یو</translation>
+        <translation type="unfinished">एमटीयू</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="181"/>
@@ -608,17 +607,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="191"/>
         <source>Port</source>
-        <translation type="unfinished">پورٹ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="278"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="288"/>
         <source>Save settings?</source>
-        <translation type="unfinished">ترتیبات محفوظ کریں?</translation>
+        <translation type="unfinished">सेटिंग्स सेव करें?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="289"/>
@@ -628,17 +627,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="290"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="291"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgClientSettings.qml" line="295"/>
         <source>Unable change settings while there is an active connection</source>
-        <translation type="unfinished">جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation type="unfinished">सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -646,31 +645,21 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="97"/>
         <source>AmneziaWG settings</source>
-        <translation>امنیزیا وی جی کی ترتیبات</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="127"/>
-        <source>Port</source>
-        <translation>پورٹ</translation>
-    </message>
-    <message>
-        <source>MTU</source>
-        <translation type="vanished">ام ٹی یو</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="366"/>
-        <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation>آپ جن لوگوں کے ساتھ آپ نے اس کنکشن کا اشتراک کیا تھا، وہ اس سے مزید جڑ نہیں سکیں گے۔</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="338"/>
-        <source>Save</source>
-        <translation>محفوظ کریں</translation>
+        <translation>Amneziaडब्ल्यूजी सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="108"/>
         <source>VPN address subnet</source>
-        <translation type="unfinished">وی پی این ایڈریس سب نیٹ</translation>
+        <translation type="unfinished">VPN एड्रेस सबनेट</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="127"/>
+        <source>Port</source>
+        <translation>पोर्ट</translation>
+    </message>
+    <message>
+        <source>MTU</source>
+        <translation type="vanished">एमटीयू</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="146"/>
@@ -718,34 +707,44 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="338"/>
+        <source>Save</source>
+        <translation>सहेजें</translation>
+    </message>
+    <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="354"/>
         <source>The values of the H1-H4 fields must be unique</source>
-        <translation>H1 تا H4 فیلڈز کی قیمتیں مخصوص ہونی چاہیے</translation>
+        <translation>H1-H4 फ़ील्ड का मान अद्वितीय होना चाहिए</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="360"/>
         <source>The value of the field S1 + message initiation size (148) must not equal S2 + message response size (92)</source>
-        <translation>S1 + پیغام شروع کار (148) کے فیلڈ کی قیمت S2 + پیغام جواب (92) کے سائز کے برابر نہیں ہونی چاہئے</translation>
+        <translation>फ़ील्ड S1 + संदेश आरंभ आकार (148) का मान S2 + संदेश प्रतिक्रिया आकार (92) के बराबर नहीं होना चाहिए</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="365"/>
         <source>Save settings?</source>
-        <translation>ترتیبات محفوظ کریں?</translation>
+        <translation>सेटिंग्स सेव करें?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="367"/>
-        <source>Continue</source>
-        <translation>جاری رکھیں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="368"/>
-        <source>Cancel</source>
-        <translation>منسوخ کریں</translation>
+        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="366"/>
+        <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
+        <translation>वे सभी उपयोगकर्ता जिनके साथ आपने कनेक्शन साझा किया था, वे अब इससे कनेक्ट नहीं हो पाएंगे.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="372"/>
         <source>Unable change settings while there is an active connection</source>
-        <translation>جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="367"/>
+        <source>Continue</source>
+        <translation>जारी रखना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="368"/>
+        <source>Cancel</source>
+        <translation>रद्द करना</translation>
     </message>
 </context>
 <context>
@@ -753,33 +752,33 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="82"/>
         <source>Cloak settings</source>
-        <translation>پوشیدہ ترتیب</translation>
+        <translation>लबादा सेटिंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="91"/>
         <source>Disguised as traffic from</source>
-        <translation>کے طور پر ٹریفک کی طرح</translation>
+        <translation>से यातायात के रूप में प्रच्छन्न</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="115"/>
         <source>Port</source>
-        <translation>پورٹ</translation>
+        <translation>पोर्ट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="132"/>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="133"/>
         <source>Cipher</source>
-        <translation>رمز</translation>
+        <translation>साइफर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="175"/>
         <source>Save</source>
-        <translation>محفوظ کریں</translation>
+        <translation>सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolCloakSettings.qml" line="181"/>
         <source>Unable change settings while there is an active connection</source>
-        <translation>جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -787,33 +786,33 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="81"/>
         <source>OpenVPN settings</source>
-        <translation>اوپن وی پی این ترتیبات</translation>
+        <translation>OpenVPN सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="90"/>
         <source>VPN address subnet</source>
-        <translation>وی پی این ایڈریس سب نیٹ</translation>
+        <translation>VPN एड्रेस सबनेट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="106"/>
         <source>Network protocol</source>
-        <translation>نیٹ ورک پروٹوکول</translation>
+        <translation>नेटवर्क प्रोटोकॉल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="139"/>
         <source>Port</source>
-        <translation>پورٹ</translation>
+        <translation>पोर्ट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="158"/>
         <source>Auto-negotiate encryption</source>
-        <translation>خود کار مذاکرتی رمزنگاری</translation>
+        <translation>स्वतः-निगोशिएट एन्क्रिप्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="175"/>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="176"/>
         <source>Hash</source>
-        <translation>ہیش</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="186"/>
@@ -848,7 +847,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="192"/>
         <source>whirlpool</source>
-        <translation>بھنور</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="193"/>
@@ -858,7 +857,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="194"/>
         <source>BLAKE2s256</source>
-        <translation></translation>
+        <translation>अक्षम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="195"/>
@@ -869,7 +868,7 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="223"/>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="224"/>
         <source>Cipher</source>
-        <translation>رمز</translation>
+        <translation>साइफर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="234"/>
@@ -884,7 +883,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="236"/>
         <source>AES-128-GCM</source>
-        <translation></translation>
+        <translation>एईएस-128-जीसीएम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="237"/>
@@ -899,63 +898,63 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="239"/>
         <source>AES-128-CBC</source>
-        <translation></translation>
+        <translation>एईएस-128-सीबीसी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="240"/>
         <source>ChaCha20-Poly1305</source>
-        <translation></translation>
+        <translation>चाचा20-पॉली1305</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="241"/>
         <source>ARIA-256-CBC</source>
-        <translation></translation>
+        <translation>एआरआईए-256-सीबीसी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="242"/>
         <source>CAMELLIA-256-CBC</source>
-        <translation></translation>
+        <translation>कैमेलिया-256-सीबीसी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="243"/>
         <source>none</source>
-        <translation>کوئی نہیں</translation>
+        <translation>कोई नहीं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="291"/>
         <source>TLS auth</source>
-        <translation>TLS توثیق</translation>
+        <translation>टीएलएस प्राधिकरण</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="308"/>
         <source>Block DNS requests outside of VPN</source>
-        <translation>وی پی این کے باہر DNS درخواستوں کو بلاک کریں</translation>
+        <translation>VPN के बाहर डीएनएस अनुरोधों को ब्लॉक करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="328"/>
         <source>Additional client configuration commands</source>
-        <translation>مزید کلائنٹ ترتیباتی احکامات</translation>
+        <translation>अतिरिक्त क्लाइंट कॉन्फ़िगरेशन आदेश</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="347"/>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="381"/>
         <source>Commands:</source>
-        <translation>احکامات:</translation>
+        <translation>आदेश:</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="364"/>
         <source>Additional server configuration commands</source>
-        <translation>اضافی سرور کنفیگریشن احکامات</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="404"/>
-        <source>Unable change settings while there is an active connection</source>
-        <translation>جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation>अतिरिक्त सर्वर कॉन्फ़िगरेशन आदेश</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="397"/>
         <source>Save</source>
-        <translation>احفظ</translation>
+        <translation>सहेजें</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="404"/>
+        <source>Unable change settings while there is an active connection</source>
+        <translation>सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -963,42 +962,42 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="40"/>
         <source> settings</source>
-        <translation> ترتیبات</translation>
+        <translation> समायोजन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="86"/>
         <source>Show connection options</source>
-        <translation>کنکشن کے اختیارات دکھائیں</translation>
+        <translation>कनेक्शन विकल्प दिखाएँ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="143"/>
         <source>Connection options %1</source>
-        <translation>کنکشن کے اختیارات %1</translation>
+        <translation>कनेक्शन विकल्प%1</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="188"/>
         <source>Remove </source>
-        <translation>ہٹائیں </translation>
+        <translation>निकालना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="192"/>
         <source>Remove %1 from server?</source>
-        <translation>سرور سے %1 کو ہٹائیں؟</translation>
+        <translation>सर्वर से %1 हटाएँ?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="193"/>
         <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation>آپ جن لوگوں کے ساتھ آپ نے ایک کنکشن شیئر کیا تھا، وہ اب اس سے مزید جڑ نہیں سکیں گے.</translation>
+        <translation>वे सभी उपयोगकर्ता जिनके साथ आपने कनेक्शन साझा किया था, वे अब इससे कनेक्ट नहीं हो पाएंगे.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="194"/>
         <source>Continue</source>
-        <translation>جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="195"/>
         <source>Cancel</source>
-        <translation>منسوخ کریں</translation>
+        <translation>रद्द करना</translation>
     </message>
 </context>
 <context>
@@ -1006,28 +1005,28 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="84"/>
         <source>Shadowsocks settings</source>
-        <translation>شیڈو ساکس ترتیبات</translation>
+        <translation>शैडोसॉक्स सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="95"/>
         <source>Port</source>
-        <translation>پورٹ</translation>
+        <translation>पोर्ट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="114"/>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="115"/>
         <source>Cipher</source>
-        <translation>رمز</translation>
+        <translation>साइफर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="160"/>
         <source>Save</source>
-        <translation>محفوظ کریں</translation>
+        <translation>सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolShadowSocksSettings.qml" line="166"/>
         <source>Unable change settings while there is an active connection</source>
-        <translation>جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -1035,12 +1034,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="91"/>
         <source>WG settings</source>
-        <translation type="unfinished">وائر گارڈ ترتیبات</translation>
+        <translation type="unfinished">डब्ल्यूजी सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="99"/>
         <source>MTU</source>
-        <translation type="unfinished">ام ٹی یو</translation>
+        <translation type="unfinished">एमटीयू</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="116"/>
@@ -1050,17 +1049,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="126"/>
         <source>Port</source>
-        <translation type="unfinished">پورٹ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="149"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="153"/>
         <source>Save settings?</source>
-        <translation type="unfinished">ترتیبات محفوظ کریں?</translation>
+        <translation type="unfinished">सेटिंग्स सेव करें?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="154"/>
@@ -1070,17 +1069,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="155"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="156"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardClientSettings.qml" line="160"/>
         <source>Unable change settings while there is an active connection</source>
-        <translation type="unfinished">جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation type="unfinished">सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -1088,51 +1087,51 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="82"/>
         <source>WG settings</source>
-        <translation>وائر گارڈ ترتیبات</translation>
+        <translation>डब्ल्यूजी सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="92"/>
         <source>VPN address subnet</source>
-        <translation type="unfinished">وی پی این ایڈریس سب نیٹ</translation>
+        <translation type="unfinished">VPN एड्रेस सबनेट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="111"/>
         <source>Port</source>
-        <translation>پورٹ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="139"/>
-        <source>Save settings?</source>
-        <translation type="unfinished">ترتیبات محفوظ کریں?</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="140"/>
-        <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="141"/>
-        <source>Continue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="142"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>बंदरगाह</translation>
     </message>
     <message>
         <source>MTU</source>
-        <translation type="vanished">ام ٹی یو</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="146"/>
-        <source>Unable change settings while there is an active connection</source>
-        <translation>جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation type="vanished">एमटीयू</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="134"/>
         <source>Save</source>
-        <translation>محفوظ کریں</translation>
+        <translation>सहेजें</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="139"/>
+        <source>Save settings?</source>
+        <translation type="unfinished">सेटिंग्स सेव करें?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="140"/>
+        <source>All users with whom you shared a connection with will no longer be able to connect to it.</source>
+        <translation type="unfinished">वे सभी उपयोगकर्ता जिनके साथ आपने कनेक्शन साझा किया था, वे अब इससे कनेक्ट नहीं हो पाएंगे.</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="141"/>
+        <source>Continue</source>
+        <translation type="unfinished">जारी रखना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="142"/>
+        <source>Cancel</source>
+        <translation type="unfinished">रद्द करना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageProtocolWireGuardSettings.qml" line="146"/>
+        <source>Unable change settings while there is an active connection</source>
+        <translation>सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -1140,22 +1139,22 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySettings.qml" line="80"/>
         <source>XRay settings</source>
-        <translation>XRay کی ترتیبات</translation>
+        <translation>एक्सरे सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySettings.qml" line="88"/>
         <source>Disguised as traffic from</source>
-        <translation>کے طور پر ٹریفک کی طرح</translation>
+        <translation>से यातायात के रूप में प्रच्छन्न</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySettings.qml" line="112"/>
         <source>Save</source>
-        <translation>محفوظ</translation>
+        <translation>सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolXraySettings.qml" line="118"/>
         <source>Unable change settings while there is an active connection</source>
-        <translation>جب ایک فعال کنکشن موجود ہو تو ترتیبات کو تبدیل نہیں کیا جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन होने पर सेटिंग बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -1164,38 +1163,38 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="54"/>
         <source>A DNS service is installed on your server, and it is only accessible via VPN.
 </source>
-        <translation>ایک DNS سروس آپ کے سرور پر انسٹال کی گئی ہے، اور صرف VPN کے ذریعے یہ قابل رسائی ہے.
+        <translation>आपके सर्वर पर एक DNS सेवा स्थापित है, और यह केवल वीपीएन के माध्यम से पहुंच योग्य है.
 </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="55"/>
         <source>The DNS address is the same as the address of your server. You can configure DNS in the settings, under the connections tab.</source>
-        <translation>ایڈریس وہی ہے جو آپ کے سرور کا پتہ ہے۔ آپ کنکشنز ٹیب کے نیچے سیٹنگز میں DNS کنفیگر کر سکتے ہیں.</translation>
+        <translation>DNS पता आपके सर्वर के पते के समान है। आप कनेक्शन टैब के अंतर्गत सेटिंग्स में DNS को कॉन्फ़िगर कर सकते हैं.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="64"/>
         <source>Remove </source>
-        <translation>ہٹائیں </translation>
+        <translation>निकालना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="68"/>
         <source>Remove %1 from server?</source>
-        <translation>سرور سے %1 کو ہٹا دیں?</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="75"/>
-        <source>Cannot remove AmneziaDNS from running server</source>
-        <translation>آمنیزیا ڈی این ایس کو چل رہے سرور سے ہٹا نہیں سکتے</translation>
+        <translation>सर्वर से %1 हटाएँ?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="69"/>
         <source>Continue</source>
-        <translation>جاری رہے</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="70"/>
         <source>Cancel</source>
-        <translation>منسوخ کریں</translation>
+        <translation>रद्द करना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageServiceDnsSettings.qml" line="75"/>
+        <source>Cannot remove AmneziaDNS from running server</source>
+        <translation>चल रहे सर्वर से एम्नेज़िया डीएनएस को नहीं हटाया जा सकता</translation>
     </message>
 </context>
 <context>
@@ -1203,19 +1202,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="23"/>
         <source>Settings updated successfully</source>
-        <translation>ترتیبات کامیابی سے اپ ڈیٹ ہوگئیں</translation>
+        <translation>सेटिंग्स सफलतापूर्वक अपडेट हो गईं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="93"/>
         <source>SFTP settings</source>
-        <translation>ایس ایف ٹی پی ترتیبات</translation>
+        <translation>एसएफटीपी सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="103"/>
         <source>Host</source>
-        <translation>The term &quot;Host&quot; in the context of SFTP (Secure File Transfer Protocol) can be translated into Urdu as:
-
-میزبان</translation>
+        <translation>मेज़बान</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="113"/>
@@ -1223,49 +1220,49 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="159"/>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="184"/>
         <source>Copied</source>
-        <translation>نقل کر دیا گیا</translation>
+        <translation>कॉपी किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="124"/>
         <source>Port</source>
-        <translation>پورٹ</translation>
+        <translation>पोर्ट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="147"/>
         <source>User name</source>
-        <translation>صارف کا نام</translation>
+        <translation>उपयोगकर्ता नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="170"/>
         <source>Password</source>
-        <translation>پاس ورڈ</translation>
+        <translation>पासवर्ड</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="210"/>
         <source>Mount folder on device</source>
-        <translation>آلے پر فولڈر ماؤنٹ کریں</translation>
+        <translation>डिवाइस पर फ़ोल्डर माउंट करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="235"/>
         <source>In order to mount remote SFTP folder as local drive, perform following steps: &lt;br&gt;</source>
-        <translation>ریموٹ SFTP فولڈر کو لوکل ڈرائیو کے طور پر ماؤنٹ کرنے کے لیے، درج ذیل اقدامات کریں</translation>
+        <translation>दूरस्थ SFTP फ़ोल्डर को स्थानीय ड्राइव के रूप में माउंट करने के लिए, निम्नलिखित चरण निष्पादित करें: &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="237"/>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="240"/>
         <source>&lt;br&gt;1. Install the latest version of </source>
-        <translation>&lt;br&gt;1کا تازہ ترین ورژن انسٹال کریں </translation>
+        <translation>&lt;br&gt;1. का नवीनतम संस्करण स्थापित करें </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="238"/>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="241"/>
         <source>&lt;br&gt;2. Install the latest version of </source>
-        <translation>.&lt;br&gt;2کا تازہ ترین ورژن انسٹال کریں ۔ </translation>
+        <translation>&lt;br&gt;2. का नवीनतम संस्करण स्थापित करें </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSftpSettings.qml" line="270"/>
         <source>Detailed instructions</source>
-        <translation>تفصیلی ہدایات</translation>
+        <translation>विस्तृत निर्देश</translation>
     </message>
 </context>
 <context>
@@ -1273,7 +1270,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="24"/>
         <source>Settings updated successfully</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">सेटिंग्स सफलतापूर्वक अपडेट हो गईं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="85"/>
@@ -1284,9 +1281,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="95"/>
         <source>Host</source>
-        <translation type="unfinished">The term &quot;Host&quot; in the context of SFTP (Secure File Transfer Protocol) can be translated into Urdu as:
-
-میزبان</translation>
+        <translation type="unfinished">मेज़बान</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="105"/>
@@ -1294,24 +1289,24 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="151"/>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="176"/>
         <source>Copied</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">कॉपी किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="116"/>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="233"/>
         <source>Port</source>
-        <translation type="unfinished">پورٹ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="139"/>
         <source>User name</source>
-        <translation type="unfinished">صارف کا نام</translation>
+        <translation type="unfinished">उपयोगकर्ता नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="162"/>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="275"/>
         <source>Password</source>
-        <translation type="unfinished">پاس ورڈ</translation>
+        <translation type="unfinished">पासवर्ड</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceSocksProxySettings.qml" line="253"/>
@@ -1345,37 +1340,37 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="24"/>
         <source>Settings updated successfully</source>
-        <translation>ترتیبات کامیابی سے اپ ڈیٹ ہوگئی ہیں</translation>
+        <translation>सेटिंग्स सफलतापूर्वक अपडेट हो गईं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="62"/>
         <source>Tor website settings</source>
-        <translation>ویب سائٹ کی ترتیبات</translation>
+        <translation>टोर वेबसाइट सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="70"/>
         <source>Website address</source>
-        <translation>ویب سائٹ کا پتہ</translation>
+        <translation>वेबसाइट का पता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="85"/>
         <source>Copied</source>
-        <translation>نقل کر لیا گیا</translation>
+        <translation>कॉपी किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="100"/>
         <source>Use &lt;a href=&quot;https://www.torproject.org/download/&quot; style=&quot;color: #FBB26A;&quot;&gt;Tor Browser&lt;/a&gt; to open this URL.</source>
-        <translation></translation>
+        <translation>इस यूआरएल को खोलने के लिए &lt;a href=&apos;https://www.torproject.org/download/&apos; style=&apos;color: #FBB26A;&apos;&gt;Tor ब्राउज़र&lt;/a&gt; का उपयोग करें।</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="109"/>
         <source>After creating your onion site, it takes a few minutes for the Tor network to make it available for use.</source>
-        <translation>اپنی اونین ویب سائٹ بنانے کے بعد، ٹور نیٹ ورک کو اسے دستیاب کرنے میں کچھ منٹ لگ سکتے ہیں۔</translation>
+        <translation>आपकी onionसाइट बनाने के बाद, टोर नेटवर्क को इसे उपयोग के लिए उपलब्ध कराने में कुछ मिनट लगते हैं.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="118"/>
         <source>When configuring WordPress set the this onion address as domain.</source>
-        <translation>وورڈپریس کو ترتیب دیتے وقت، اس انیون ایڈریس کو ڈومین کے طور پر مقرر کریں.</translation>
+        <translation>वर्डप्रेस को कॉन्फ़िगर करते समय इस प्याज पते को डोमेन के रूप में सेट करें.</translation>
     </message>
 </context>
 <context>
@@ -1383,11 +1378,11 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="39"/>
         <source>Settings</source>
-        <translation>ترتیبات</translation>
+        <translation>समायोजन</translation>
     </message>
     <message>
         <source>Servers</source>
-        <translation type="vanished">سرور</translation>
+        <translation type="vanished">सर्वर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="47"/>
@@ -1397,22 +1392,22 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="62"/>
         <source>Connection</source>
-        <translation>کنکشن</translation>
+        <translation>कनेक्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="77"/>
         <source>Application</source>
-        <translation>ایپلیکیشن</translation>
+        <translation>एप्लिकेशन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="92"/>
         <source>Backup</source>
-        <translation>بیک اپ</translation>
+        <translation>बैकअप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="107"/>
-        <source>About VPNNaruzhu</source>
-        <translation>VPNNaruzhu کے بارے میں</translation>
+        <source>About Sotka</source>
+        <translation>Sotka के बारे में</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="123"/>
@@ -1432,7 +1427,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="171"/>
         <source>Close application</source>
-        <translation>براہ کرم ایپلیکیشن بند کریں</translation>
+        <translation>एप्लिकेशन बंद करो</translation>
     </message>
 </context>
 <context>
@@ -1461,6 +1456,10 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="47"/>
         <source>For reviews and bug reports</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copied</source>
+        <translation type="obsolete">कॉपी किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="50"/>
@@ -1586,12 +1585,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiDevices.qml" line="81"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiDevices.qml" line="82"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
 </context>
 <context>
@@ -1752,16 +1751,20 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiNativeConfigs.qml" line="204"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiNativeConfigs.qml" line="205"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
 </context>
 <context>
     <name>PageSettingsApiServerInfo</name>
+    <message>
+        <source>Copied</source>
+        <translation type="obsolete">कॉपी किया गया</translation>
+    </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="29"/>
         <source>Subscription Status</source>
@@ -1847,14 +1850,14 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="337"/>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="374"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="300"/>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="338"/>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="375"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="304"/>
@@ -1894,7 +1897,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiServerInfo.qml" line="379"/>
         <source>Cannot remove server during active connection</source>
-        <translation type="unfinished">چالو کنکشن کے دوران سرور کو ہٹایا نہیں جا سکتا</translation>
+        <translation type="unfinished">सक्रिय कनेक्शन के दौरान सर्वर को हटाया नहीं जा सकता</translation>
     </message>
 </context>
 <context>
@@ -1937,7 +1940,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiSupport.qml" line="119"/>
         <source>Copied</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">कॉपी किया गया</translation>
     </message>
 </context>
 <context>
@@ -1945,7 +1948,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="28"/>
         <source>Cannot change split tunneling settings during active connection</source>
-        <translation>فعال کنکشن کے دوران سپلٹ ٹنلنگ کی ترتیبات تبدیل نہیں کی جا سکتیں</translation>
+        <translation>सक्रिय कनेक्शन के दौरान स्प्लिट टनलिंग सेटिंग्स को नहीं बदला जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="50"/>
@@ -1960,42 +1963,42 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="87"/>
         <source>App split tunneling</source>
-        <translation>ایپ اسپلٹ ٹنلنگ</translation>
+        <translation>ऐप स्प्लिट टनलिंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="112"/>
         <source>Mode</source>
-        <translation>موڈ</translation>
+        <translation>तरीका</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="202"/>
         <source>Remove </source>
-        <translation>ہٹائیں </translation>
+        <translation>निकालना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="203"/>
         <source>Continue</source>
-        <translation>جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="204"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="248"/>
         <source>application name</source>
-        <translation>ایپ کا نام</translation>
+        <translation>आवेदन का नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="258"/>
         <source>Open executable file</source>
-        <translation>قابل اجراء فائل کو کھولیں</translation>
+        <translation>निष्पादन योग्य फ़ाइल खोलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="259"/>
         <source>Executable files (*.*)</source>
-        <translation>قابل اجراء فائل (*.*)</translation>
+        <translation>निष्पादनीय फाइल (*.*)</translation>
     </message>
 </context>
 <context>
@@ -2003,12 +2006,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="46"/>
         <source>Application</source>
-        <translation>ایپلیکیشن</translation>
+        <translation>एप्लिकेशन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="56"/>
         <source>Allow application screenshots</source>
-        <translation>ایپلیکیشن میں تصویریں لینے کی اجازت دیں</translation>
+        <translation>एप्लिकेशन स्क्रीनशॉट की अनुमति दें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="79"/>
@@ -2023,82 +2026,82 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="101"/>
         <source>Auto start</source>
-        <translation>خود کار شروع</translation>
+        <translation>ऑटो स्टार्ट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="102"/>
         <source>Launch the application every time the device is starts</source>
-        <translation>جب بھی آلہ چلائے، ایپلیکیشن کو لانچ کریں</translation>
+        <translation>हर बार डिवाइस चालू होने पर एप्लिकेशन लॉन्च करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="125"/>
         <source>Auto connect</source>
-        <translation>خودکار منسلک</translation>
+        <translation>ऑटो कनेक्ट</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="126"/>
         <source>Connect to VPN on app start</source>
-        <translation>ایپ شروع ہونے پر VPN سے جڑیں</translation>
+        <translation>ऐप शुरू होने पर वीपीएन से कनेक्ट करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="149"/>
         <source>Start minimized</source>
-        <translation>کمینائز شروع کریں</translation>
+        <translation>स्टार्ट को मिनिमाइज किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="150"/>
         <source>Launch application minimized</source>
-        <translation>ایپلیکیشن کو کمینائز کر کے لانچ کریں</translation>
+        <translation>लॉन्च एप्लिकेशन को न्यूनतम किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="170"/>
         <source>Language</source>
-        <translation>زبان</translation>
+        <translation>भाषा</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="187"/>
         <source>Logging</source>
-        <translation>لاگنگ</translation>
+        <translation>लॉगिंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="188"/>
         <source>Enabled</source>
-        <translation>فعال</translation>
+        <translation>सक्रिय किया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="188"/>
         <source>Disabled</source>
-        <translation>غیر فعال</translation>
+        <translation>अक्षम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="204"/>
         <source>Reset settings and remove all data from the application</source>
-        <translation>ترتیبات کو دوبارہ ترتیب کریں اور ایپلیکیشن سے تمام ڈیٹا کو ختم کریں</translation>
+        <translation>सेटिंग्स रीसेट करें और एप्लिकेशन से सभी डेटा हटा दें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="211"/>
         <source>Reset settings and remove all data from the application?</source>
-        <translation>ترتیبات کو دوبارہ ترتیب دیں اور ایپلیکیشن سے تمام ڈیٹا کو ہٹا دیں؟</translation>
+        <translation>सेटिंग्स रीसेट करें और एप्लिकेशन से सभी डेटा हटा दें?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="212"/>
-        <source>All settings will be reset to default. All installed VPNNaruzhu services will still remain on the server.</source>
-        <translation>تمام ترتیبات کو معمولی حالت پر لوٹایا جائے گا۔ سب انسٹال کیے گئے امنیزیا وی پی این سروسزسرورپرموجودرہیںگی.</translation>
+        <source>All settings will be reset to default. All installed Sotka services will still remain on the server.</source>
+        <translation>सभी सेटिंग्स डिफ़ॉल्ट पर रीसेट हो जाएंगी. सभी स्थापित Sotka सेवाएँ अभी भी सर्वर पर रहेंगी।.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="213"/>
         <source>Continue</source>
-        <translation>جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="218"/>
         <source>Cannot reset settings during active connection</source>
-        <translation>چالو کنکشن کے دوران ترتیبات کو دوبارہ ترتیب نہیں دی جا سکتی</translation>
+        <translation>सक्रिय कनेक्शन के दौरान सेटिंग्स रीसेट नहीं की जा सकतीं</translation>
     </message>
 </context>
 <context>
@@ -2106,78 +2109,78 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="28"/>
         <source>Settings restored from backup file</source>
-        <translation>ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
+        <translation>बैकअप फ़ाइल से सेटिंग्स पुनर्स्थापित की गईं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="66"/>
         <source>Back up your configuration</source>
-        <translation>اپنی ترتیبات کا بیک اپ بنائیں</translation>
+        <translation>अपने कॉन्फ़िगरेशन का बैकअप लें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="67"/>
         <source>You can save your settings to a backup file to restore them the next time you install the application.</source>
-        <translation>آپ اپنی ترتیبات کو بیک اپ فائل میں محفوظ کرکے اگلی دفعہ جب آپ ایپلیکیشن کو انسٹال کریں تو انہیں بحال کرنے کے لئے استعمال کرسکتے ہیں۔</translation>
+        <translation>अगली बार जब आप एप्लिकेशन इंस्टॉल करेंगे तो उन्हें पुनर्स्थापित करने के लिए आप अपनी सेटिंग्स को बैकअप फ़ाइल में सहेज सकते हैं.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="74"/>
-        <source>The backup will contain your passwords and private keys for all servers added to VPNNaruzhu. Keep this information in a secure place.</source>
-        <translation>بیک اپ میں آپ کے تمام سرورز جنہیں VPNNaruzhu میں شامل کیا گیا ہے، ان کے پاسورڈ اور نجی کلید شامل ہوں گے۔ اس معلومات کو ایک محفوظ جگہ میں محفوظ رکھیں.</translation>
+        <source>The backup will contain your passwords and private keys for all servers added to Sotka. Keep this information in a secure place.</source>
+        <translation>बैकअप में Sotka में जोड़े गए सभी सर्वरों के लिए आपके पासवर्ड और निजी कुंजी शामिल होंगी। इस जानकारी को सुरक्षित स्थान पर रखें.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="85"/>
         <source>Make a backup</source>
-        <translation>ایک بیک اپ بنائیں</translation>
+        <translation>बैकअप बनाएं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
         <source>Save backup file</source>
-        <translation>بیک اپ فائل کو محفوظ کریں</translation>
+        <translation>बैकअप फ़ाइल सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="95"/>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="127"/>
         <source>Backup files (*.backup)</source>
-        <translation>بیک اپ فائلیں (*.backup)</translation>
+        <translation>बैकअप फ़ाइलें (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="104"/>
         <source>Backup file saved</source>
-        <translation>بیک اپ فائل محفوظ ہو گئی</translation>
+        <translation>बैकअप फ़ाइल सहेजी गई</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="121"/>
         <source>Restore from backup</source>
-        <translation>بیک اپ سے بحال کریں</translation>
+        <translation>बैकअप से बहाल करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="126"/>
         <source>Open backup file</source>
-        <translation>بیک اپ فائل کو کھولیں</translation>
+        <translation>बैकअप फ़ाइल खोलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="137"/>
         <source>Import settings from a backup file?</source>
-        <translation>بیک اپ فائل سے ترتیبات کو درآمد کریں؟</translation>
+        <translation>बैकअप फ़ाइल से सेटिंग्स आयात करें?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="138"/>
         <source>All current settings will be reset</source>
-        <translation>تمام موجودہ ترتیبات کو دوبارہ ترتیب دیں</translation>
+        <translation>सभी मौजूदा सेटिंग्स रीसेट कर दी जाएंगी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="139"/>
         <source>Continue</source>
-        <translation>جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="140"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="144"/>
         <source>Cannot restore backup settings during active connection</source>
-        <translation>چالو کنکشن کے دوران بیک اپ ترتیبات کو دوبارہ قائم نہیں کیا جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन के दौरान बैकअप सेटिंग्स को पुनर्स्थापित नहीं किया जा सकता</translation>
     </message>
 </context>
 <context>
@@ -2185,22 +2188,30 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="46"/>
         <source>Connection</source>
-        <translation>کنکشن</translation>
+        <translation>कनेक्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="73"/>
         <source>DNS servers</source>
-        <translation>ڈی این ایس سرور</translation>
+        <translation>DNS सर्वर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="129"/>
         <source>KillSwitch</source>
-        <translation type="unfinished"></translation>
+        <translation>स्विच बन्द कर दो</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="130"/>
         <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
+        <translation type="vanished">यदि आपका एन्क्रिप्टेड वीपीएन कनेक्शन किसी भी कारण से बंद हो जाता है तो आपका इंटरनेट अक्षम कर देता है.</translation>
+    </message>
+    <message>
+        <source>Cannot change killSwitch settings during active connection</source>
+        <translation type="vanished">सक्रिय कनेक्शन के दौरान किलस्विच सेटिंग्स को नहीं बदला जा सकता</translation>
     </message>
 </context>
 <context>
@@ -2208,57 +2219,57 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="38"/>
         <source>Default server does not support custom DNS</source>
-        <translation>افتراضی سرور کا مخصوص DNS کو سپورٹ نہیں کرتا ہے</translation>
+        <translation>डिफ़ॉल्ट सर्वर कस्टम डीएनएस का समर्थन नहीं करता है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="56"/>
         <source>DNS servers</source>
-        <translation>ڈی این ایس سرور</translation>
+        <translation>DNS सर्वर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="70"/>
         <source>Primary DNS</source>
-        <translation>اولین DNS</translation>
+        <translation>प्राथमिक डीएनएस</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="82"/>
         <source>Secondary DNS</source>
-        <translation>ثانوی DNS</translation>
+        <translation>द्वितीयक डीएनएस</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="101"/>
         <source>Restore default</source>
-        <translation>اصل حالت کو بحال کریں</translation>
+        <translation>डिफ़ॉल्ट बहाल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="104"/>
         <source>Restore default DNS settings?</source>
-        <translation>اصل DNS ترتیبات کو بحال کریں؟</translation>
+        <translation>डिफ़ॉल्ट DNS सेटिंग्स पुनर्स्थापित करें?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="105"/>
         <source>Continue</source>
-        <translation>براہ کرم جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="106"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="113"/>
         <source>Settings have been reset</source>
-        <translation>ترتیبات کو دوبارہ ترتیب دیا گیا ہے</translation>
+        <translation>सेटिंग्स रीसेट कर दी गई हैं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="127"/>
         <source>Save</source>
-        <translation>محفوظ</translation>
+        <translation>सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="136"/>
         <source>Settings saved</source>
-        <translation>ترتیبات محفوظ ہوگئیں</translation>
+        <translation>सेटिंग्स को सहेजा गया</translation>
     </message>
 </context>
 <context>
@@ -2266,7 +2277,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="40"/>
         <source>KillSwitch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">स्विच बन्द कर दो</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="41"/>
@@ -2276,7 +2287,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="52"/>
         <source>Cannot change killSwitch settings during active connection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">सक्रिय कनेक्शन के दौरान किलस्विच सेटिंग्स को नहीं बदला जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="68"/>
@@ -2311,12 +2322,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="93"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="94"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="113"/>
@@ -2349,12 +2360,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="107"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="108"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="138"/>
@@ -2369,7 +2380,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="175"/>
         <source>Import</source>
-        <translation type="unfinished">درآمد</translation>
+        <translation type="unfinished">आयात</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="188"/>
@@ -2415,30 +2426,30 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="48"/>
         <source>Logging</source>
-        <translation>لاگنگ</translation>
+        <translation>लॉगिंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="49"/>
         <source>Enabling this function will save application&apos;s logs automatically. By default, logging functionality is disabled. Enable log saving in case of application malfunction.</source>
-        <translation>اس فعل کو فعال کرنے سے، ایپلیکیشن کے لاگ خود بخود محفوظ ہوجائیں گے۔ پہلے سے، لاگنگ کی فعالیت غیر فعال ہوتی ہے۔ اگر ایپلیکیشن میں کوئی خرابی ہو، تو لاگ کو بچانا فعال کریں.</translation>
+        <translation>इस फ़ंक्शन को सक्षम करने से एप्लिकेशन के लॉग स्वचालित रूप से सहेजे जाएंगे, डिफ़ॉल्ट रूप से, लॉगिंग कार्यक्षमता अक्षम है। एप्लिकेशन की खराबी की स्थिति में लॉग सेविंग सक्षम करें.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="186"/>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="215"/>
         <source>Save</source>
-        <translation>محفوظ</translation>
+        <translation>सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="187"/>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="216"/>
         <source>Logs files (*.log)</source>
-        <translation>لاگ فائلیں (*.log)</translation>
+        <translation>लॉग फ़ाइलें (*.log)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="196"/>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="225"/>
         <source>Logs file saved</source>
-        <translation>لاگ فائل محفوظ ہوگئی</translation>
+        <translation>लॉग फ़ाइल सहेजी गई</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="61"/>
@@ -2448,22 +2459,22 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="83"/>
         <source>Clear logs?</source>
-        <translation>کیا آپ لاگوں کو صاف کرنا چاہتے ہیں؟</translation>
+        <translation>लॉग साफ़ करें?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="84"/>
         <source>Continue</source>
-        <translation>براہ کرم جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="85"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="91"/>
         <source>Logs have been cleaned up</source>
-        <translation>تم مسح السجلاتلاگوں کو صاف کر دیا گیا ہے</translation>
+        <translation>लॉग साफ़ कर दिए गए हैं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="175"/>
@@ -2472,7 +2483,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="176"/>
-        <source>VPNNaruzhu logs</source>
+        <source>Sotka logs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2492,13 +2503,13 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="205"/>
-        <source>VPNNaruzhu-service logs</source>
+        <source>Sotka-service logs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="78"/>
         <source>Clear logs</source>
-        <translation>لاگوں کو صاف کریں</translation>
+        <translation>लॉग साफ़ करें</translation>
     </message>
 </context>
 <context>
@@ -2506,22 +2517,22 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="31"/>
         <source>All installed containers have been added to the application</source>
-        <translation>تمام انسٹال شدہ کنٹینرز کو ایپلیکیشن میں شامل کر دیا گیا ہے</translation>
+        <translation>सभी स्थापित कंटेनरों को एप्लिकेशन में जोड़ दिया गया है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="33"/>
         <source>No new installed containers found</source>
-        <translation>کوئی نئے انسٹال شدہ کنٹینرز نہیں ملے</translation>
+        <translation>कोई नया स्थापित कंटेनर नहीं मिला</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="113"/>
         <source>Do you want to reboot the server?</source>
-        <translation>کیا آپ سرور کو دوبارہ چالو کرنا چاہتے ہیں؟</translation>
+        <translation>क्या आप सर्वर को रीबूट करना चाहते हैं?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="190"/>
         <source>Do you want to clear server from Amnezia software?</source>
-        <translation>هل تريد حذف الخادم من Amnezia?کیا آپ سرور کو Amnezia سافٹ ویئر سے صاف کرنا چاہتے ہیں؟</translation>
+        <translation>क्या आप एमनेज़िया सॉफ़्टवेयर से सर्वर साफ़ करना चाहते हैं?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="92"/>
@@ -2534,7 +2545,7 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="192"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="231"/>
         <source>Continue</source>
-        <translation>براہ کرم جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="116"/>
@@ -2542,108 +2553,108 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="193"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="232"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="90"/>
         <source>Check the server for previously installed Amnezia services</source>
-        <translation>سرور پر پہلے سے انسٹال کی گئی Amnezia سروسز کو چیک کریں</translation>
+        <translation>पहले से स्थापित एमनेज़िया सेवाओं के लिए सर्वर की जाँच करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="91"/>
         <source>Add them to the application if they were not displayed</source>
-        <translation>اگر وہ دکھایا نہیں گیا تو انہیں ایپلیکیشن میں شامل کریں</translation>
+        <translation>यदि वे प्रदर्शित नहीं थे तो उन्हें एप्लिकेशन में जोड़ें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="109"/>
         <source>Reboot server</source>
-        <translation>سرور کو دوبارہ چالو کریں</translation>
+        <translation>सर्वर रीबूट करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="114"/>
         <source>The reboot process may take approximately 30 seconds. Are you sure you wish to proceed?</source>
-        <translation>ریبوٹ کا عمل تقریباً 30 سیکنڈ لے سکتا ہے۔ کیا آپ براہ کرم جاری رکھنا چاہتے ہیں؟</translation>
+        <translation>रीबूट प्रक्रिया में लगभग 30 सेकंड लग सकते हैं। आप निश्चित है आप आगे बढ़ना चाहते है?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="120"/>
         <source>Cannot reboot server during active connection</source>
-        <translation>چالو کنکشن کے دوران سرور کو دوبارہ چالو نہیں کیا جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन के दौरान सर्वर को रीबूट नहीं किया जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="148"/>
         <source>Remove server from application</source>
-        <translation>ایپلیکیشن سے سرور کو ہٹا دیں</translation>
+        <translation>एप्लिकेशन से सर्वर हटाएं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="152"/>
         <source>Do you want to remove the server from application?</source>
-        <translation>کیا آپ ایپلیکیشن سے سرور کو ہٹانا چاہتے ہیں؟</translation>
+        <translation>क्या आप एप्लिकेशन से सर्वर हटाना चाहते हैं?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="159"/>
         <source>Cannot remove server during active connection</source>
-        <translation>چالو کنکشن کے دوران سرور کو ہٹایا نہیں جا سکتا</translation>
+        <translation>सक्रिय कनेक्शन के दौरान सर्वर को हटाया नहीं जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="191"/>
         <source>All users whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation>آپ نے اپنی کنکشن کا اشتراک دینے والے تمام صارفین کو اس سے جڑنے کی اجازت نہیں ہوگی.</translation>
+        <translation>वे सभी उपयोगकर्ता जिनके साथ आपने कनेक्शन साझा किया था, वे अब इससे कनेक्ट नहीं हो पाएंगे.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="197"/>
         <source>Cannot clear server from Amnezia software during active connection</source>
-        <translation>چالو کنکشن کے دوران سرور کو ایمنیزیا سافٹ ویئر سے صاف کرنا ممکن نہیں</translation>
+        <translation>सक्रिय कनेक्शन के दौरान एमनेज़िया सॉफ़्टवेयर से सर्वर साफ़ नहीं किया जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="225"/>
         <source>Reset API config</source>
-        <translation>API کونفیگ کو دوبارہ ترتیب دیں</translation>
+        <translation>एपीआई कॉन्फिगरेशन रीसेट करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="229"/>
         <source>Do you want to reset API config?</source>
-        <translation>کیا آپ API کونفیگ کو دوبارہ ترتیب دینا چاہتے ہیں؟</translation>
+        <translation>क्या आप एपीआई कॉन्फिगरेशन रीसेट करना चाहते हैं?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="236"/>
         <source>Cannot reset API config during active connection</source>
-        <translation>چالو کنکشن کے دوران API ترتیبات کو دوبارہ ترتیب نہیں دی جا سکتی</translation>
+        <translation>सक्रिय कनेक्शन के दौरान एपीआई कॉन्फिगरेशन को रीसेट नहीं किया जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="153"/>
-        <source>All installed VPNNaruzhu services will still remain on the server.</source>
-        <translation>سرور پر تمام انسٹال شدہ VPNNaruzhu سروسز محفوظ رہیں گے.</translation>
+        <source>All installed Sotka services will still remain on the server.</source>
+        <translation>सभी स्थापित Sotka सेवाएँ अभी भी सर्वर पर रहेंगी.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="186"/>
         <source>Clear server from Amnezia software</source>
-        <translation>Amnezia سافٹ ویئر کو سرور سے صاف کریں</translation>
+        <translation>एमनेज़िया सॉफ़्टवेयर से सर्वर साफ़ करें</translation>
     </message>
 </context>
 <context>
     <name>PageSettingsServerInfo</name>
     <message>
         <source>Server name</source>
-        <translation type="vanished">سرور کا نام</translation>
+        <translation type="vanished">सर्वर का नाम</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="vanished">محفوظ</translation>
+        <translation type="vanished">सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="131"/>
         <source>Protocols</source>
-        <translation>پروٹوکولات</translation>
+        <translation>प्रोटोकॉल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="142"/>
         <source>Services</source>
-        <translation>خدمات</translation>
+        <translation>सेवाएं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="151"/>
         <source>Management</source>
-        <translation>مینجمنٹ</translation>
+        <translation>प्रबंध</translation>
     </message>
 </context>
 <context>
@@ -2651,46 +2662,46 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="43"/>
         <source> settings</source>
-        <translation> ترتیبات</translation>
+        <translation> समायोजन</translation>
     </message>
     <message>
         <source>Clear %1 profile</source>
-        <translation type="vanished">%1 پروفائل کو صاف کریں</translation>
+        <translation type="vanished">%1 प्रोफ़ाइल साफ़ करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="175"/>
         <source>Clear %1 profile?</source>
-        <translation>کیا آپ واقعی %1 پروفائل کو صاف کرنا چاہتے ہیں؟</translation>
+        <translation>%1 प्रोफ़ाइल साफ़ करें?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="182"/>
-        <source>Unable to clear %1 profile while there is an active connection</source>
-        <translation>فعال کنکشن کے دوران %1 پروفائل کو صاف نہیں کیا جا سکتا</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="234"/>
-        <source>Cannot remove active container</source>
-        <translation>فعال کنٹینر کو ہٹانا ممکن نہیں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="103"/>
+        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="134"/>
         <source></source>
         <translation></translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="182"/>
+        <source>Unable to clear %1 profile while there is an active connection</source>
+        <translation>सक्रिय कनेक्शन होने पर %1 प्रोफ़ाइल साफ़ करने में असमर्थ</translation>
+    </message>
+    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="222"/>
         <source>Remove </source>
-        <translation>ہٹائیں </translation>
+        <translation>निकालना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="227"/>
         <source>All users with whom you shared a connection will no longer be able to connect to it.</source>
-        <translation>آپ نے جن کے ساتھ کنکشن شئیر کیا تھا، ان تمام صارفین کو اس سے جڑنے کی اجازت نہیں ہوگی.</translation>
+        <translation>वे सभी उपयोगकर्ता जिनके साथ आपने कनेक्शन साझा किया था, वे अब इससे कनेक्ट नहीं हो पाएंगे.</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="234"/>
+        <source>Cannot remove active container</source>
+        <translation>सक्रिय कंटेनर को हटाया नहीं जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="226"/>
         <source>Remove %1 from server?</source>
-        <translation>کیا آپ سرور سے %1 کو ہٹانا چاہتے ہیں؟</translation>
+        <translation>सर्वर से %1 हटाएँ?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="98"/>
@@ -2721,20 +2732,20 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="177"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="228"/>
         <source>Continue</source>
-        <translation>براہ کرم جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="178"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="229"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
 </context>
 <context>
     <name>PageSettingsServersList</name>
     <message>
         <source>Servers</source>
-        <translation type="vanished">سرور</translation>
+        <translation type="vanished">सर्वर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
@@ -2747,100 +2758,100 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="33"/>
         <source>Default server does not support split tunneling function</source>
-        <translation>افتراضی سرور سپلٹ ٹنلنگ فعال نہیں کرتا</translation>
+        <translation>डिफ़ॉल्ट सर्वर स्प्लिट टनलिंग फ़ंक्शन का समर्थन नहीं करता है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="71"/>
         <source>Addresses from the list should not be accessed via VPN</source>
-        <translation>اس فہرست سے پتوں کا وی پی این کے ذریعے دسترس حاصل نہیں کیا جانا چاہئے</translation>
+        <translation>सूची के पतों को वीपीएन के माध्यम से एक्सेस नहीं किया जाना चाहिए</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="102"/>
         <source>Split tunneling</source>
-        <translation>اسپلٹ ٹنلنگ</translation>
+        <translation>विभाजित सुरंग</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="129"/>
         <source>Mode</source>
-        <translation>موڈ</translation>
+        <translation>तरीका</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="215"/>
         <source>Remove </source>
-        <translation>ہٹائیں </translation>
+        <translation>निकालना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="216"/>
         <source>Continue</source>
-        <translation>براہ کرم جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="217"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="66"/>
         <source>Only the sites listed here will be accessed through the VPN</source>
-        <translation>صرف یہاں درج کردہ سائٹس وی پی این کے ذریعے دسترس حاصل کریں گی</translation>
+        <translation>केवल यहां सूचीबद्ध साइटों को ही वीपीएन के माध्यम से एक्सेस किया जाएगा</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="30"/>
         <source>Cannot change split tunneling settings during active connection</source>
-        <translation>فعال کنکشن کے دوران سپلٹ ٹنلنگ کی ترتیبات تبدیل نہیں کی جا سکتیں</translation>
+        <translation>सक्रिय कनेक्शन के दौरान स्प्लिट टनलिंग सेटिंग्स को नहीं बदला जा सकता</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="266"/>
         <source>website or IP</source>
-        <translation>ویب سائٹ یا آئی پی</translation>
+        <translation>वेबसाइट या आईपी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="311"/>
         <source>Import / Export Sites</source>
-        <translation>سائٹس درآمد / برآمد</translation>
+        <translation>आयात/निर्यात साइटें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="318"/>
         <source>Import</source>
-        <translation>درآمد</translation>
+        <translation>आयात</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="331"/>
         <source>Save site list</source>
-        <translation>سائٹ کی فہرست کو محفوظ کریں</translation>
+        <translation>साइट सूची सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="338"/>
         <source>Save sites</source>
-        <translation>سائٹس کو محفوظ کریں</translation>
+        <translation>साइटें सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="339"/>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="409"/>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="425"/>
         <source>Sites files (*.json)</source>
-        <translation>سائٹس فائلیں (*.json)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="398"/>
         <source>Import a list of sites</source>
-        <translation>ایک فہرست کو درآمد کریں</translation>
+        <translation>साइटों की सूची आयात करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="405"/>
         <source>Replace site list</source>
-        <translation>سائٹ کی فہرست کو بدلیں</translation>
+        <translation>साइट सूची बदलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="408"/>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="424"/>
         <source>Open sites file</source>
-        <translation>سائٹس فائل کو کھولیں</translation>
+        <translation>साइट फ़ाइल खोलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="421"/>
         <source>Add imported sites to existing ones</source>
-        <translation>آمدہ سائٹس کو موجودہ میں شامل کریں</translation>
+        <translation>आयातित साइटों को मौजूदा साइटों में जोड़ें</translation>
     </message>
 </context>
 <context>
@@ -2873,7 +2884,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardApiServiceInfo.qml" line="131"/>
         <source>Connect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">कनेक्ट</translation>
     </message>
 </context>
 <context>
@@ -2893,28 +2904,44 @@ Already installed containers were found on the server. All installed containers 
     <name>PageSetupWizardConfigSource</name>
     <message>
         <source>Server connection</source>
-        <translation type="vanished">سرور کنکشن</translation>
+        <translation type="vanished">सर्वर कनेक्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="190"/>
         <source>What do you have?</source>
-        <translation>آپ کو کس میں مدد چاہیے؟</translation>
+        <translation>तुम्हारे पास क्या है?</translation>
     </message>
     <message>
         <source>Connection</source>
-        <translation type="obsolete">کنکشن</translation>
+        <translation type="obsolete">कनेक्शन</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="obsolete">ترتیبات</translation>
+        <translation type="obsolete">समायोजन</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="obsolete">सहेजें</translation>
     </message>
     <message>
         <source>Logs files (*.log)</source>
-        <translation type="obsolete">لاگ فائلیں (*.log)</translation>
+        <translation type="obsolete">लॉग फ़ाइलें (*.log)</translation>
     </message>
     <message>
         <source>Logs file saved</source>
-        <translation type="obsolete">لاگ فائل محفوظ ہوگئی</translation>
+        <translation type="obsolete">लॉग फ़ाइल सहेजी गई</translation>
+    </message>
+    <message>
+        <source>Copied</source>
+        <translation type="obsolete">कॉपी किया गया</translation>
+    </message>
+    <message>
+        <source>Insert</source>
+        <translation type="obsolete">डालना</translation>
+    </message>
+    <message>
+        <source>Continue</source>
+        <translation type="obsolete">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="310"/>
@@ -2937,28 +2964,29 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="352"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
+        <source>Restore from backup</source>
+        <translation type="unfinished">बैकअप से बहाल करना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="403"/>
+        <source>Key as text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="300"/>
         <source></source>
         <translation></translation>
     </message>
     <message>
-        <source>Insert</source>
-        <translation type="obsolete">داخل کریں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
-        <source>Restore from backup</source>
-        <translation type="unfinished">بیک اپ سے بحال کریں</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="344"/>
         <source>Open backup file</source>
-        <translation type="unfinished">بیک اپ فائل کو کھولیں</translation>
+        <translation type="unfinished">बैकअप फ़ाइल खोलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="345"/>
         <source>Backup files (*.backup)</source>
-        <translation type="unfinished">بیک اپ فائلیں (*.backup)</translation>
+        <translation type="unfinished">बैकअप फ़ाइलें (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="376"/>
@@ -2968,17 +2996,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="391"/>
         <source>I have nothing</source>
-        <translation type="unfinished">میرے پاس کچھ نہیں ہے</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="403"/>
-        <source>Key as text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="357"/>
         <source>Key as file</source>
-        <translation>کنکشن کی ترتیبات والی فائل</translation>
+        <translation>कनेक्शन सेटिंग्स वाली फ़ाइल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="178"/>
@@ -2988,7 +3011,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="364"/>
         <source>Open key file</source>
-        <translation>کنفیگ فائل کو کھولیں</translation>
+        <translation>कॉन्फ़िग फ़ाइल खोलें</translation>
     </message>
 </context>
 <context>
@@ -3001,7 +3024,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="128"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="160"/>
@@ -3063,7 +3086,7 @@ Already installed containers were found on the server. All installed containers 
     <name>PageSetupWizardEasy</name>
     <message>
         <source>What is the level of internet control in your region?</source>
-        <translation type="vanished">آپ کے علاقے میں انٹرنیٹ کنٹرول کا سطح کیا ہے؟</translation>
+        <translation type="vanished">आपके क्षेत्र में इंटरनेट नियंत्रण का स्तर क्या है?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="68"/>
@@ -3078,17 +3101,17 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="143"/>
         <source>Choose a VPN protocol</source>
-        <translation>ایک VPN پروٹوکول کا انتخاب کریں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="200"/>
-        <source>Skip setup</source>
-        <translation>ترتیب چھوڑیں</translation>
+        <translation>एक वीपीएन प्रोटोकॉल चुनें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="157"/>
         <source>Continue</source>
-        <translation>جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSetupWizardEasy.qml" line="200"/>
+        <source>Skip setup</source>
+        <translation>सेटअप छोड़ें</translation>
     </message>
 </context>
 <context>
@@ -3097,37 +3120,37 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="22"/>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="71"/>
         <source>Usually it takes no more than 5 minutes</source>
-        <translation>عموماً یہ 5 منٹ سے زیادہ نہیں لیتا</translation>
+        <translation>आमतौर पर इसमें 5 मिनट से अधिक समय नहीं लगता है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="59"/>
         <source>The server has already been added to the application</source>
-        <translation>سرور پہلے ہی ایپلیکیشن میں شامل کر دیا گیا ہے</translation>
+        <translation>सर्वर को पहले ही एप्लिकेशन में जोड़ा जा चुका है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
         <source>Amnezia has detected that your server is currently </source>
-        <translation>ایمنیزیا نے دریافت کیا ہے کہ آپ کا سرور موجودہ </translation>
+        <translation>Amnezia ने पता लगाया है कि आपका सर्वर वर्तमान में है </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="66"/>
         <source>busy installing other software. Amnezia installation </source>
-        <translation>مصروف ہے اور دوسرے سافٹ ویئر کی انسٹالیشن کر رہا ہے </translation>
+        <translation>अन्य सॉफ़्टवेयर स्थापित करने में व्यस्त। भूलने की बीमारी की स्थापना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="164"/>
         <source>Cancel installation</source>
-        <translation>انسٹالیشن منسوخ</translation>
+        <translation>स्थापना रद्द करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
         <source>will pause until the server finishes installing other software</source>
-        <translation>دوسرے سافٹ ویئر کی انسٹالیشن ختم ہونے تک انتظار کرے گا</translation>
+        <translation>जब तक सर्वर अन्य सॉफ़्टवेयर इंस्टॉल करना समाप्त नहीं कर लेता तब तक रुकेगा</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="125"/>
         <source>Installing</source>
-        <translation>انسٹال ہو رہی ہے</translation>
+        <translation>स्थापित कर रहा है</translation>
     </message>
 </context>
 <context>
@@ -3135,32 +3158,32 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="104"/>
         <source>Installing %1</source>
-        <translation>%1 کی انسٹالیشن</translation>
+        <translation>%1 स्थापित किया जा रहा है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="122"/>
         <source>More detailed</source>
-        <translation>مزید تفصیلات والا</translation>
+        <translation>अधिक विवरण</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="201"/>
         <source>Close</source>
-        <translation>بند</translation>
+        <translation>बंद करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="217"/>
         <source>Network protocol</source>
-        <translation>نیٹ ورک پروٹوکول</translation>
+        <translation>नेटवर्क प्रोटोकॉल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="233"/>
         <source>Port</source>
-        <translation>پورٹ</translation>
+        <translation>منفذ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="249"/>
         <source>Install</source>
-        <translation>انسٹال</translation>
+        <translation>स्थापित करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocolSettings.qml" line="255"/>
@@ -3173,12 +3196,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocols.qml" line="69"/>
         <source>VPN protocol</source>
-        <translation>وی پی این پروٹوکول</translation>
+        <translation>VPN प्रोटोकॉल</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardProtocols.qml" line="70"/>
         <source>Choose the one with the highest priority for you. Later, you can install other protocols and additional services, such as DNS proxy and SFTP.</source>
-        <translation>آپ کے لئے سب سے زیادہ اہم پروٹوکول کا انتخاب کریں۔ بعد میں، آپ دوسرے پروٹوکول اور اضافی خدمات، جیسے DNS پراکسی اور SFTP، انسٹال کر سکتے ہیں۔</translation>
+        <translation>वह चुनें जो आपके लिए सर्वोच्च प्राथमिकता हो। बाद में, आप अन्य प्रोटोकॉल और अतिरिक्त सेवाएँ, जैसे DNS प्रॉक्सी और SFTP स्थापित कर सकते हैं.</translation>
     </message>
 </context>
 <context>
@@ -3186,18 +3209,18 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardQrReader.qml" line="38"/>
         <source>Point the camera at the QR code and hold for a couple of seconds. </source>
-        <translation>کیمرے کو QR کوڈ پر موجود کریں اور کچھ سیکنڈ کے لئے رکھیں. </translation>
+        <translation>कैमरे को QR कोड पर रखें और कुछ सेकंड के लिए रोककर रखें. </translation>
     </message>
 </context>
 <context>
     <name>PageSetupWizardStart</name>
     <message>
         <source>I have the data to connect</source>
-        <translation type="vanished">میرے پاس اس کنکشن کے لئے ڈیٹا موجود ہے</translation>
+        <translation type="vanished">मेरे पास कनेक्ट करने के लिए डेटा है</translation>
     </message>
     <message>
         <source>I have nothing</source>
-        <translation type="vanished">میرے پاس کچھ نہیں ہے</translation>
+        <translation type="vanished">मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="48"/>
@@ -3220,27 +3243,27 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="54"/>
         <source>Connection key</source>
-        <translation>کنکشن کی کلید</translation>
+        <translation>कनेक्शन कुंजी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="55"/>
         <source>A line that starts with vpn://...</source>
-        <translation>ایک لائن جو vpn:// سے شروع ہوتی ہے...</translation>
+        <translation>एक लाइन जो vpn://... से शुरू होती है...</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="66"/>
         <source>Key</source>
-        <translation>کلید</translation>
+        <translation>चाबी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="68"/>
         <source>Insert</source>
-        <translation>داخل کریں</translation>
+        <translation>डालना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardTextKey.qml" line="88"/>
         <source>Continue</source>
-        <translation>جاری رہنے دیں</translation>
+        <translation>जारी रखना</translation>
     </message>
 </context>
 <context>
@@ -3248,12 +3271,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="65"/>
         <source>New connection</source>
-        <translation>نیا کنکشن</translation>
+        <translation>नया कनेक्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="100"/>
         <source>Collapse content</source>
-        <translation>مواد کو غیر فعال کریں</translation>
+        <translation>सामग्री संक्षिप्त करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="100"/>
@@ -3263,12 +3286,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="115"/>
         <source>Enable WireGuard obfuscation. It may be useful if WireGuard is blocked on your provider.</source>
-        <translation>وائر گارڈ کی غلط شناخت کو بروئے کار لانے کے لئے وائر گارڈ غلط شناخت کو فعال کریں۔ آپ کے پرووائیڈر پر وائر گارڈ بند ہونے کی صورت میں یہ کار آمد ہو سکتی ہے۔</translation>
+        <translation>वायरगार्ड अस्पष्टीकरण सक्षम करें. यदि आपके प्रदाता पर वायरगार्ड अवरुद्ध है तो यह उपयोगी हो सकता है.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardViewConfig.qml" line="177"/>
         <source>Connect</source>
-        <translation>کنکٹ</translation>
+        <translation>कनेक्ट</translation>
     </message>
 </context>
 <context>
@@ -3276,113 +3299,113 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="58"/>
         <source>Save OpenVPN config</source>
-        <translation>اوپن وی پی این کی ترتیبات کو محفوظ کریں</translation>
+        <translation>OpenVPN कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="65"/>
         <source>Save WireGuard config</source>
-        <translation>وائر گارڈ کی ترتیبات کو محفوظ کریں</translation>
+        <translation>वायरगार्ड कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="72"/>
         <source>Save AmneziaWG config</source>
-        <translation>ایمنیزیا ڈبلیو جی کی ترتیبات کو محفوظ کریں</translation>
+        <translation>AmneziaWG कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="79"/>
         <source>Save Shadowsocks config</source>
-        <translation>شیڈو ساکس کی ترتیبات کو محفوظ کریں</translation>
+        <translation>शैडोसॉक्स कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="86"/>
         <source>Save Cloak config</source>
-        <translation>چادر کی ترتیبات کو محفوظ کریں</translation>
+        <translation>क्लोक कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="93"/>
         <source>Save XRay config</source>
-        <translation>&quot;XRay کنفیگ کو محفوظ کریں</translation>
+        <translation>एक्सरे कॉन्फिगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="119"/>
-        <source>For the VPNNaruzhu app</source>
-        <translation>VPNNaruzhu ایپ کے لئے</translation>
+        <source>For the Sotka app</source>
+        <translation>Sotka ऐप के लिए</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="129"/>
         <source>WireGuard native format</source>
-        <translation>وائر گارڈ کا اصل فارمیٹ</translation>
+        <translation>वायरगार्ड मूल प्रारूप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="134"/>
         <source>AmneziaWG native format</source>
-        <translation>ایمنیزیا ڈبلیو جی کا اصل فارمیٹ</translation>
+        <translation>AmneziaWG मूल प्रारूप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="139"/>
         <source>Shadowsocks native format</source>
-        <translation>شیڈو ساکس کا اصل فارمیٹ</translation>
+        <translation>शैडोसॉक्स मूल प्रारूप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="144"/>
         <source>Cloak native format</source>
-        <translation>Cloak کا اصل فارمیٹ</translation>
+        <translation>लबादा देशी स्वरूप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="149"/>
         <source>XRay native format</source>
-        <translation>ایکس رے کا نیٹویٹ فارمیٹ</translation>
+        <translation>एक्सरे देशी प्रारूप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="177"/>
         <source>Share VPN Access</source>
-        <translation>VPN دسترسی شیئر</translation>
+        <translation>VPN एक्सेस साझा करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="211"/>
         <source>Share full access to the server and VPN</source>
-        <translation>سرور اور وی پی این کے لئے مکمل دسترسی کو شیئر کریں</translation>
+        <translation>सर्वर और वीपीएन तक पूर्ण पहुंच साझा करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="212"/>
         <source>Use for your own devices, or share with those you trust to manage the server.</source>
-        <translation>اپنی خود کی ڈیوائسز کے لئے استعمال کریں، یا ان لوگوں کے ساتھ شیئر کریں جن پر آپ کا بھروسہ ہو کہ وہ سرور کو منظم کر سکیں.</translation>
+        <translation>अपने स्वयं के उपकरणों के लिए उपयोग करें, या सर्वर को प्रबंधित करने के लिए उन लोगों के साथ साझा करें जिन पर आप भरोसा करते हैं.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="266"/>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="541"/>
         <source>Users</source>
-        <translation>صارفین</translation>
+        <translation>उपयोगकर्ताओं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="286"/>
         <source>Share VPN access without the ability to manage the server</source>
-        <translation>سرور کو منظم کرنے کی صلاحیت کے بغیر وی پی این کی دسترسی شیئر</translation>
+        <translation>सर्वर को प्रबंधित करने की क्षमता के बिना वीपीएन एक्सेस साझा करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="557"/>
         <source>Search</source>
-        <translation>تلاش</translation>
+        <translation>खोज</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="680"/>
         <source>Creation date: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>निर्माण दिनांक: %1</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="692"/>
         <source>Latest handshake: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>नवीनतम हाथ मिलाना: %1</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="704"/>
         <source>Data received: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>प्राप्त डेटा: %1</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="716"/>
         <source>Data sent: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>डेटा भेजा गया: %1</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="726"/>
@@ -3392,74 +3415,74 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="741"/>
         <source>Rename</source>
-        <translation>نام تبدیل</translation>
+        <translation>नाम बदलें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="766"/>
         <source>Client name</source>
-        <translation>کلائنٹ کا نام</translation>
+        <translation>ग्राहक नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="777"/>
         <source>Save</source>
-        <translation>محفوظ</translation>
+        <translation>सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="811"/>
         <source>Revoke</source>
-        <translation>واپس لین</translation>
+        <translation>निरस्त करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="814"/>
         <source>Revoke the config for a user - %1?</source>
-        <translation>کیا آپ مستعمل کے لئے کنفیگ کو واپس لینا چاہتے ہیں - %1؟</translation>
+        <translation>किसी उपयोक्ता के लिए कॉन्फ़िगरेशन निरस्त करें - %1?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="815"/>
         <source>The user will no longer be able to connect to your server.</source>
-        <translation>صارف آپ کے سرور سے متصل ہونے کا اختیار نہیں رہے گا.</translation>
+        <translation>उपयोगकर्ता अब आपके सर्वर से कनेक्ट नहीं हो पाएगा.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="816"/>
         <source>Continue</source>
-        <translation>جاری رکھیں</translation>
+        <translation>जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="817"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="254"/>
         <source>Connection</source>
-        <translation>کنکشن</translation>
+        <translation>कनेक्शन</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="316"/>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="317"/>
         <source>Server</source>
-        <translation>سرور</translation>
+        <translation>सर्वर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="46"/>
         <source>File with connection settings to </source>
-        <translation>کنکشن کی ترتیبات کی فائل </translation>
+        <translation>कनेक्शन सेटिंग्स वाली फ़ाइल </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="377"/>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="378"/>
         <source>Protocol</source>
-        <translation>پروٹوکول</translation>
+        <translation>शिष्टाचार</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="45"/>
         <source>Connection to </source>
-        <translation>کنکشن کو </translation>
+        <translation>कनेक्शन के लिए </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="38"/>
         <source>Config revoked</source>
-        <translation>کنفیگ منسوخ</translation>
+        <translation>कॉन्फ़िगरेशन निरस्त कर दिया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="124"/>
@@ -3469,19 +3492,19 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="297"/>
         <source>User name</source>
-        <translation>صارف کا نام</translation>
+        <translation>उपयोगकर्ता नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="479"/>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="480"/>
         <source>Connection format</source>
-        <translation>کنکشن فارمیٹ</translation>
+        <translation>कनेक्शन प्रारूप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="219"/>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="520"/>
         <source>Share</source>
-        <translation>شیئر</translation>
+        <translation>शेयर करना</translation>
     </message>
 </context>
 <context>
@@ -3489,55 +3512,55 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="51"/>
         <source>Full access to the server and VPN</source>
-        <translation>سرور اور وی پی این کی مکمل رسائی</translation>
+        <translation>सर्वर और वीपीएन तक पूर्ण पहुंच</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="59"/>
         <source>We recommend that you use full access to the server only for your own additional devices.
 </source>
-        <translation>ہم آپ کو سرور کا مکمل رسائی صرف اپنی اضافی ڈیوائسز کے لئے استعمال کرنے کی تجویز دیتے ہیں.
+        <translation>हम अनुशंसा करते हैं कि आप सर्वर तक पूर्ण पहुंच का उपयोग केवल अपने अतिरिक्त उपकरणों के लिए करें.
 </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="60"/>
         <source>If you share full access with other people, they can remove and add protocols and services to the server, which will cause the VPN to work incorrectly for all users. </source>
-        <translation>&quot;اگر آپ دوسروں کے ساتھ مکمل رسائی شیئر کریں تو وہ سرور پروٹوکول اور خدمات کو ہٹا سکتے ہیں اور شامل کر سکتے ہیں، جس سے وی پی این تمام صارفین کے لئے غلط کام کرے گا. </translation>
+        <translation>यदि आप अन्य लोगों के साथ पूर्ण पहुंच साझा करते हैं, तो वे सर्वर पर प्रोटोकॉल और सेवाओं को हटा और जोड़ सकते हैं, जिससे वीपीएन सभी उपयोगकर्ताओं के लिए गलत तरीके से काम करेगा. </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="76"/>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="77"/>
         <source>Server</source>
-        <translation>سرور</translation>
+        <translation>सर्वर</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="103"/>
         <source>Accessing </source>
-        <translation>رسائی </translation>
+        <translation>एक्सेस करना </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="104"/>
         <source>File with accessing settings to </source>
-        <translation>ترتیبات کے ساتھ دسترسی کی فائل </translation>
+        <translation>एक्सेस सेटिंग्स वाली फ़ाइल </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="126"/>
         <source>Share</source>
-        <translation>شیئر</translation>
+        <translation>शेयर करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="134"/>
         <source>Access error!</source>
-        <translation type="unfinished">رساءی ناممکن!</translation>
+        <translation type="unfinished">प्रवेश त्रुटि!</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="140"/>
         <source>Connection to </source>
-        <translation>کنکشن کو </translation>
+        <translation>के लिए कनेक्शन </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShareFullAccess.qml" line="141"/>
         <source>File with connection settings to </source>
-        <translation>کنکشن کی ترتیبات کی فائل </translation>
+        <translation>कनेक्शन सेटिंग्स वाली फ़ाइल </translation>
     </message>
 </context>
 <context>
@@ -3545,12 +3568,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="187"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
-        <translation>لاگنگ کو 14 دنوں کے بعد غیر فعال کر دیا گیا، لاگ فائلوں کو حذف کر دیا گیا</translation>
+        <translation>14 दिनों के बाद लॉगिंग अक्षम कर दी गई, लॉग फ़ाइलें हटा दी गईं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="191"/>
         <source>Settings restored from backup file</source>
-        <translation type="unfinished">ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
+        <translation type="unfinished">बैकअप फ़ाइल से सेटिंग्स पुनर्स्थापित की गईं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="197"/>
@@ -3570,12 +3593,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="419"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="420"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">रद्द करना</translation>
     </message>
 </context>
 <context>
@@ -3583,7 +3606,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Controls2/PopupType.qml" line="101"/>
         <source>Close</source>
-        <translation>بند</translation>
+        <translation>बंद करना</translation>
     </message>
 </context>
 <context>
@@ -3591,38 +3614,38 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="104"/>
         <source>Password entry not found</source>
-        <translation>پاس ورڈ انٹری نہیں ملی</translation>
+        <translation>पासवर्ड प्रविष्टि नहीं मिली</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="108"/>
         <source>Could not decrypt data</source>
-        <translation>ڈیٹا کو ڈیکرپٹ نہیں کیا جا سکا</translation>
+        <translation>डेटा डिक्रिप्ट नहीं किया जा सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="585"/>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="593"/>
         <source>Unknown error</source>
-        <translation>نا معلوم خطا</translation>
+        <translation>अज्ञात त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="614"/>
         <source>Could not open wallet: %1; %2</source>
-        <translation>والٹ کو نہیں کھول سکا: %1؛ %2</translation>
+        <translation>बटुआ नहीं खुल सका: %1; %2</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_haiku.cpp" line="177"/>
         <source>Password not found</source>
-        <translation>پاس ورڈ نہیں ملا</translation>
+        <translation>पासवर्ड नहीं मिला</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="175"/>
         <source>Could not open keystore</source>
-        <translation>کی اسٹور کھولا نہیں جا سکا</translation>
+        <translation>कीस्टोर नहीं खुल सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="181"/>
         <source>Could not remove private key from keystore</source>
-        <translation>خصوصی کلید کو کی اسٹور سے ہٹانا نہیں ہو سکا</translation>
+        <translation>कीस्टोर से निजी कुंजी नहीं हटाई जा सकी</translation>
     </message>
 </context>
 <context>
@@ -3630,12 +3653,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="295"/>
         <source>Unknown error</source>
-        <translation>غیر معروف خطا</translation>
+        <translation>अज्ञात त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="542"/>
         <source>Access to keychain denied</source>
-        <translation>کی چین تک رسائی منسوخ</translation>
+        <translation>चाबी का गुच्छा तक पहुंच अस्वीकृत</translation>
     </message>
 </context>
 <context>
@@ -3643,27 +3666,27 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/plaintextstore.cpp" line="65"/>
         <source>Could not store data in settings: access error</source>
-        <translation>ترتیبات میں ڈیٹا کو محفوظ نہیں کیا جا سکا: رسائی کی خطا</translation>
+        <translation>सेटिंग्स में डेटा संग्रहीत नहीं किया जा सका: एक्सेस त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/plaintextstore.cpp" line="67"/>
         <source>Could not store data in settings: format error</source>
-        <translation>ترتیبات میں ڈیٹا کو محفوظ نہیں کیا جا سکا: فارمیٹ کی خطا</translation>
+        <translation>सेटिंग्स में डेटा संग्रहीत नहीं किया जा सका: प्रारूप त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/plaintextstore.cpp" line="85"/>
         <source>Could not delete data from settings: access error</source>
-        <translation>ترتیبات سے ڈیٹا کو حذف نہیں کیا جا سکا: رسائی کی خطا</translation>
+        <translation>सेटिंग्स से डेटा हटाया नहीं जा सका: एक्सेस त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/plaintextstore.cpp" line="87"/>
         <source>Could not delete data from settings: format error</source>
-        <translation>ترتیبات سے ڈیٹا کو حذف نہیں کیا جا سکا: فارمیٹ کی خطا</translation>
+        <translation>सेटिंग्स से डेटा हटाया नहीं जा सका: प्रारूप त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/plaintextstore.cpp" line="104"/>
         <source>Entry not found</source>
-        <translation>لم يتم العثور علي اندراج نہیں ملا</translation>
+        <translation>प्रवेश नहीं मिला</translation>
     </message>
 </context>
 <context>
@@ -3671,80 +3694,80 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="32"/>
         <source>Password entry not found</source>
-        <translation>پاس ورڈ انٹری نہیں ملی</translation>
+        <translation>पासवर्ड प्रविष्टि नहीं मिली</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="36"/>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="139"/>
         <source>Could not decrypt data</source>
-        <translation>ڈیٹا کو ڈیکرپٹ نہیں کر سکا</translation>
+        <translation>डेटा डिक्रिप्ट नहीं किया जा सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="205"/>
         <source>D-Bus is not running</source>
-        <translation>ڈی بس چل رہا نہیں ہے</translation>
+        <translation>डी-बस नहीं चल रही है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="214"/>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="224"/>
         <source>Unknown error</source>
-        <translation>نامعلوم خطا</translation>
+        <translation>अज्ञात त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="316"/>
         <source>No keychain service available</source>
-        <translation>کوئی کی چین سروس دستیاب نہیں</translation>
+        <translation>कोई चाबी का गुच्छा सेवा उपलब्ध नहीं है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="318"/>
         <source>Could not open wallet: %1; %2</source>
-        <translation>والٹ کو کھولنا نا ممکن: %1؛ %2</translation>
+        <translation>बटुआ नहीं खोल सकाः %1; %2</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="363"/>
         <source>Access to keychain denied</source>
-        <translation>کی چین تک رسائی منسوخ</translation>
+        <translation>चाबी का गुच्छा तक पहुंच अस्वीकृत</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="384"/>
         <source>Could not determine data type: %1; %2</source>
-        <translation>ڈیٹا کی قسم تعین نہیں کی جا سکی: %1؛ %2</translation>
+        <translation>डेटा प्रकार निर्धारित नहीं किया जा सका: %1; %2</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="393"/>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="52"/>
         <source>Entry not found</source>
-        <translation>اندراج نہیں ملا</translation>
+        <translation>प्रवेश नहीं मिला</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="402"/>
         <source>Unsupported entry type &apos;Map&apos;</source>
-        <translation>غیر معتبر انٹری قسم &apos;Map&apos;</translation>
+        <translation>असमर्थित प्रविष्टि प्रकार &apos;मानचित्र&apos;</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="405"/>
         <source>Unknown kwallet entry type &apos;%1&apos;</source>
-        <translation>نامعلوم kwallet انٹری قسم &apos;%1&apos;</translation>
+        <translation>अज्ञात क्वॉलेट प्रविष्टि प्रकार &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_haiku.cpp" line="96"/>
         <source>Password not found</source>
-        <translation>پاس ورڈ نہیں ملا</translation>
+        <translation>पासवर्ड नहीं मिला</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="60"/>
         <source>Could not open keystore</source>
-        <translation>کی اسٹور کھولنا ممکن نہیں تھا</translation>
+        <translation>कीस्टोर नहीं खुल सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="68"/>
         <source>Could not retrieve private key from keystore</source>
-        <translation>کی اسٹور سے نجی کلید حاصل نہیں کی جا سکی</translation>
+        <translation>कीस्टोर से निजी कुंजी पुनर्प्राप्त नहीं की जा सकी</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="75"/>
         <source>Could not create decryption cipher</source>
-        <translation>ڈیکرپشن سائفر تخلیق نہیں کر سکا</translation>
+        <translation>डिक्रिप्शन सिफर नहीं बनाया जा सका</translation>
     </message>
 </context>
 <context>
@@ -3752,73 +3775,73 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="78"/>
         <source>Credential size exceeds maximum size of %1</source>
-        <translation>کریڈنشل کا سائز حد سے زیادہ ہے جو %1 ہے</translation>
+        <translation>क्रेडेंशियल का आकार अधिकतम आकार %1 से अधिक है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="87"/>
         <source>Credential key exceeds maximum size of %1</source>
-        <translation>کریڈنشل کی چابی کا حد سب سے زیادہ سائز %1 کا ہے</translation>
+        <translation>क्रेडेंशियल कुंजी अधिकतम आकार%1 से अधिक है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="92"/>
         <source>Writing credentials failed: Win32 error code %1</source>
-        <translation>کریڈنشلز لکھنا ناکام رہا: ون32 خطا کوڈ %1</translation>
+        <translation>क्रेडेंशियल कुंजी मुख्य आकार%1 से अधिक है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_win.cpp" line="162"/>
         <source>Encryption failed</source>
-        <translation>خفیہ کاری ناکام ہوگئی</translation>
+        <translation>एन्क्रिप्शन विफल</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="445"/>
         <source>D-Bus is not running</source>
-        <translation>ڈی بس چل رہا نہیں ہے</translation>
+        <translation>डी-बस नहीं चल रही है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="455"/>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="482"/>
         <source>Unknown error</source>
-        <translation>نامعلوم خطا</translation>
+        <translation>अज्ञात त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="501"/>
         <source>Could not open wallet: %1; %2</source>
-        <translation>والٹ کو کھولنے میں ناکام: %1؛ %2</translation>
+        <translation>बटुआ नहीं खोल सकाः %1; %2</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_haiku.cpp" line="144"/>
         <source>Password not found</source>
-        <translation>پاس ورڈ نہیں ملا</translation>
+        <translation>पासवर्ड नहीं मिला</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="95"/>
         <source>Could not open keystore</source>
-        <translation>کی اسٹور کھولنے میں ناکام</translation>
+        <translation>कीस्टोर नहीं खुल सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="126"/>
         <source>Could not create private key generator</source>
-        <translation>پرائیویٹ کلید جنریٹر تخلیق نہیں کیا</translation>
+        <translation>निजी कुंजी जेनरेटर नहीं बनाया जा सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="133"/>
         <source>Could not generate new private key</source>
-        <translation>نیا نجی کلید تخلیق نہیں کیا جا سکا</translation>
+        <translation>नई निजी कुंजी उत्पन्न नहीं हो सकी</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="141"/>
         <source>Could not retrieve private key from keystore</source>
-        <translation>کی اسٹور سے نجی کلید حاصل نہیں کیا</translation>
+        <translation>कीस्टोर से निजी कुंजी पुनर्प्राप्त नहीं की जा सकी</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="149"/>
         <source>Could not create encryption cipher</source>
-        <translation>تشکیل تشکیل نہیں کر سکا</translation>
+        <translation>एन्क्रिप्शन सिफर नहीं बनाया जा सका</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_android.cpp" line="157"/>
         <source>Could not encrypt data</source>
-        <translation>ڈیٹا کو محفوظ کرنے میں ناکام</translation>
+        <translation>डेटा एन्क्रिप्ट नहीं किया जा सका</translation>
     </message>
 </context>
 <context>
@@ -3826,7 +3849,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="80"/>
         <source>SFTP service</source>
-        <translation>ایس ایف ٹی پی سروس</translation>
+        <translation>एसएफटीपी सेवा</translation>
     </message>
     <message>
         <location filename="../protocols/protocols_defs.cpp" line="81"/>
@@ -3838,108 +3861,18 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../core/errorstrings.cpp" line="11"/>
         <source>No error</source>
-        <translation>کوئی غلطی نہیں</translation>
+        <translation>कोई ग़लती नहीं</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="12"/>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="276"/>
         <source>Unknown error</source>
-        <translation>نامعلوم خامی</translation>
+        <translation>अज्ञात त्रुटि</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="13"/>
         <source>Function not implemented</source>
-        <translation>فنکشن نافذ نہیں ہوا</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="15"/>
-        <source>The selected protocol is not supported on the current platform</source>
-        <translation type="unfinished">منتخب کردہ پروٹوکول موجودہ پلیٹ فارم پر تعاون یافتہ نہیں ہے</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="18"/>
-        <source>Server check failed</source>
-        <translation>سرور کی جانچ ناکام ہوگئی</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="19"/>
-        <source>Server port already used. Check for another software</source>
-        <translation>سرور پورٹ پہلے ہی استعمال ہو چکا ہے۔ دوسرا سافٹ ویئر چیک کریں</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="20"/>
-        <source>Server error: Docker container missing</source>
-        <translation>سرور کی خرابی: ڈوکر کنٹینر غائب ہے</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="21"/>
-        <source>Server error: Docker failed</source>
-        <translation>سرور کی خرابی: ڈوکر ناکام ہو گیا</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="22"/>
-        <source>Installation canceled by user</source>
-        <translation>صارف کے ذریعے انسٹالیشن منسوخ کر دی گئی</translation>
-    </message>
-    <message>
-        <source>The user does not have permission to use sudo</source>
-        <translation type="vanished">صارف کو sudo استعمال کرنے کی اجازت نہیں ہے</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="33"/>
-        <source>SSH request was denied</source>
-        <translation>SSH درخواست مسترد کر دی گئی</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="34"/>
-        <source>SSH request was interrupted</source>
-        <translation>SSH درخواست میں خلل پڑ</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="35"/>
-        <source>SSH internal error</source>
-        <translation>SSH اندرونی خرابی</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="36"/>
-        <source>Invalid private key or invalid passphrase entered</source>
-        <translation>غلط نجی کلید یا غلط پاسفریز درج کیا گیا</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="37"/>
-        <source>The selected private key format is not supported, use openssh ED25519 key types or PEM key types</source>
-        <translation>منتخب کردہ پرائیویٹ کلیدی فارمیٹ تعاون یافتہ نہیں ہے، openssh ED25519 کلیدی اقسام یا PEM کلیدی اقسام استعمال کریں</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="38"/>
-        <source>Timeout connecting to server</source>
-        <translation>سرور سے منسلک ہونے کا ٹائم آؤٹ</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="64"/>
-        <source>VPN connection error</source>
-        <translation>VPN کنکشن کی خرابی</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="67"/>
-        <location filename="../core/errorstrings.cpp" line="76"/>
-        <source>Error when retrieving configuration from API</source>
-        <translation>آپی سے کنفیگریشن بازیافت کرتے وقت خرابی</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="68"/>
-        <source>This config has already been added to the application</source>
-        <translation>یہ تشکیل پہلے ہی ایپلی کیشن میں شامل کی جا چکی ہے</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="91"/>
-        <source>ErrorCode: %1. </source>
-        <translation>ایرر کوڈ: %1. </translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="44"/>
-        <source>OpenVPN config missing</source>
-        <translation>OpenVPN تشکیل غائب ہے</translation>
+        <translation>फ़ंक्शन क्रियान्वित नहीं किया गया</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="14"/>
@@ -3947,8 +3880,133 @@ Already installed containers were found on the server. All installed containers 
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../core/errorstrings.cpp" line="18"/>
+        <source>Server check failed</source>
+        <translation>सर्वर जाँच विफल रही</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="19"/>
+        <source>Server port already used. Check for another software</source>
+        <translation>सर्वर पोर्ट पहले ही उपयोग किया जा चुका है. किसी अन्य सॉफ़्टवेयर की जाँच करें</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="20"/>
+        <source>Server error: Docker container missing</source>
+        <translation>सर्वर त्रुटि: डॉकर कंटेनर गायब है</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="21"/>
+        <source>Server error: Docker failed</source>
+        <translation>सर्वर त्रुटि: डॉकर विफल</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="22"/>
+        <source>Installation canceled by user</source>
+        <translation>उपयोगकर्ता द्वारा इंस्टॉलेशन रद्द कर दिया गया</translation>
+    </message>
+    <message>
+        <source>The user does not have permission to use sudo</source>
+        <translation type="vanished">उपयोगकर्ता के पास sudo का उपयोग करने की अनुमति नहीं है</translation>
+    </message>
+    <message>
         <source>Server error: Packet manager error</source>
-        <translation type="vanished">سرور خطا: پیکیج منیجر خطا</translation>
+        <translation type="vanished">सर्वर त्रुटि: पैकेट प्रबंधक त्रुटि</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="33"/>
+        <source>SSH request was denied</source>
+        <translation>SSH अनुरोध अस्वीकार कर दिया गया</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="34"/>
+        <source>SSH request was interrupted</source>
+        <translation>SSH अनुरोध बाधित हो गया था</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="35"/>
+        <source>SSH internal error</source>
+        <translation>SSH आंतरिक त्रुटि</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="36"/>
+        <source>Invalid private key or invalid passphrase entered</source>
+        <translation>अमान्य निजी कुंजी या अमान्य पासफ़्रेज़ दर्ज किया गया</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="37"/>
+        <source>The selected private key format is not supported, use openssh ED25519 key types or PEM key types</source>
+        <translation>चयनित निजी कुंजी प्रारूप समर्थित नहीं है, ओपनश ED25519 कुंजी प्रकार या PEM कुंजी प्रकार का उपयोग करें</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="38"/>
+        <source>Timeout connecting to server</source>
+        <translation>सर्वर से कनेक्ट होने का समय समाप्त</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="60"/>
+        <source>Unable to open config file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="64"/>
+        <source>VPN connection error</source>
+        <translation>VPN कनेक्शन त्रुटि</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="67"/>
+        <location filename="../core/errorstrings.cpp" line="76"/>
+        <source>Error when retrieving configuration from API</source>
+        <translation>एपीआई से कॉन्फ़िगरेशन पुनर्प्राप्त करते समय त्रुटि</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="68"/>
+        <source>This config has already been added to the application</source>
+        <translation>यह कॉन्फ़िगरेशन पहले ही एप्लिकेशन में जोड़ा जा चुका है</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="69"/>
+        <source>In the response from the server, an empty config was received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="70"/>
+        <source>SSL error occurred</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="71"/>
+        <source>Server response timeout on api request</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="72"/>
+        <source>Missing AGW public key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="73"/>
+        <source>Failed to decrypt response payload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="74"/>
+        <source>Missing list of available services</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="91"/>
+        <source>ErrorCode: %1. </source>
+        <translation>ErrorCode: %1. </translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="44"/>
+        <source>OpenVPN config missing</source>
+        <translation>OpenVPN प्रबंधन सर्वर त्रुटि</translation>
+    </message>
+    <message>
+        <location filename="../core/errorstrings.cpp" line="15"/>
+        <source>The selected protocol is not supported on the current platform</source>
+        <translation type="unfinished">चयनित प्रोटोकॉल वर्तमान प्लेटफ़ॉर्म पर समर्थित नहीं है</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="23"/>
@@ -3993,98 +4051,64 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../core/errorstrings.cpp" line="41"/>
         <source>SCP error: Generic failure</source>
-        <translation>ایس سی پی کی خرابی: عام ناکامی</translation>
+        <translation>एससीपी त्रुटि: सामान्य विफलता</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="45"/>
         <source>OpenVPN management server error</source>
-        <translation>OpenVPN مینجمنٹ سرور کی خرابی</translation>
+        <translation>OpenVPN प्रबंधन सर्वर त्रुटि</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="48"/>
         <source>OpenVPN executable missing</source>
-        <translation>OpenVPN قابل عمل غائب ہے</translation>
+        <translation>OpenVPN निष्पादन योग्य गायब है</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="49"/>
         <source>Shadowsocks (ss-local) executable missing</source>
-        <translation>شیڈو ساکس (ss-local) قابل عمل غائب</translation>
+        <translation>शैडोसॉक्स (एसएस-स्थानीय) निष्पादन योग्य गायब है</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="50"/>
         <source>Cloak (ck-client) executable missing</source>
-        <translation>Cloak (ck-client) قابل عمل غائب</translation>
+        <translation>क्लोक (सीके-क्लाइंट) निष्पादन योग्य गायब है</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="51"/>
         <source>Amnezia helper service error</source>
-        <translation>ایمنیزیا مددگار سروس کی خرابی</translation>
+        <translation>Amnezia भूलने की बीमारी सहायक सेवा त्रुटि</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="52"/>
         <source>OpenSSL failed</source>
-        <translation>OpenSSL ناکام ہوگیا</translation>
+        <translation>ओपनएसएसएल विफल रहा</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="55"/>
         <source>Can&apos;t connect: another VPN connection is active</source>
-        <translation>منسلک نہیں ہو سکتا: دوسرا VPN کنکشن فعال ہے</translation>
+        <translation>कनेक्ट नहीं हो सकता: कोई अन्य वीपीएन कनेक्शन सक्रिय है</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="56"/>
         <source>Can&apos;t setup OpenVPN TAP network adapter</source>
-        <translation>OpenVPN TAP نیٹ ورک اڈاپٹر سیٹ اپ نہیں کر سکتے</translation>
+        <translation>OpenVPN TAP नेटवर्क एडाप्टर सेटअप नहीं कर सकता</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="57"/>
         <source>VPN pool error: no available addresses</source>
-        <translation>VPN پول کی خرابی: کوئی پتہ دستیاب نہیں ہے</translation>
+        <translation>VPN pool error: لا يوجد عنواين مٌتاحة</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="59"/>
         <source>The config does not contain any containers and credentials for connecting to the server</source>
-        <translation>ترتیب میں سرور سے منسلک ہونے کے لیے کوئی کنٹینرز اور اسناد نہیں ہیں</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="60"/>
-        <source>Unable to open config file</source>
-        <translation type="unfinished"></translation>
+        <translation>कॉन्फ़िगरेशन में सर्वर से कनेक्ट करने के लिए कोई कंटेनर और क्रेडेंशियल नहीं है</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="61"/>
         <source>VPN Protocols is not installed.
  Please install VPN container at first</source>
-        <translation type="unfinished">وی پی این پروٹوکول انسٹال نہیں ہے,براہ کرم پہلےوی پی این کنٹینر انسٹال کریں</translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="69"/>
-        <source>In the response from the server, an empty config was received</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="70"/>
-        <source>SSL error occurred</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="71"/>
-        <source>Server response timeout on api request</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="72"/>
-        <source>Missing AGW public key</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="73"/>
-        <source>Failed to decrypt response payload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core/errorstrings.cpp" line="74"/>
-        <source>Missing list of available services</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">पीएन प्रोटोकॉल स्थापित नहीं है.
+कृपया पहले वीपीएन कंटेनर स्थापित करें</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="75"/>
@@ -4094,63 +4118,63 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../core/errorstrings.cpp" line="79"/>
         <source>QFile error: The file could not be opened</source>
-        <translation>QFile کی خرابی: فائل کو نہیں کھولا جا سکا</translation>
+        <translation>Qफ़ाइल त्रुटि: फ़ाइल खोली नहीं जा सकी</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="80"/>
         <source>QFile error: An error occurred when reading from the file</source>
-        <translation>کیو فائل کی خرابی: فائل سے پڑھتے وقت ایک خرابی پیش آگئی</translation>
+        <translation>Qफ़ाइल त्रुटि: फ़ाइल से पढ़ते समय एक त्रुटि उत्पन्न हुई</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="81"/>
         <source>QFile error: The file could not be accessed</source>
-        <translation>QFile کی خرابی: فائل تک رسائی نہیں ہو سکی</translation>
+        <translation>Qफ़ाइल त्रुटि: फ़ाइल तक नहीं पहुंचा जा सका</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="82"/>
         <source>QFile error: An unspecified error occurred</source>
-        <translation>کیو فائل میں خرابی: ایک غیر متعینہ خرابی پیش آگئی</translation>
+        <translation>Qफ़ाइल त्रुटि: एक अनिर्दिष्ट त्रुटि उत्पन्न हुई</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="83"/>
         <source>QFile error: A fatal error occurred</source>
-        <translation>کیو فائل میں خرابی: ایک مہلک خرابی پیش آگئی</translation>
+        <translation>Qफ़ाइल त्रुटि: एक घातक त्रुटि उत्पन्न हुई</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="84"/>
         <source>QFile error: The operation was aborted</source>
-        <translation>کیو فائل کی خرابی: آپریشن روک دیا گیا تھا</translation>
+        <translation>Qफ़ाइल त्रुटि: ऑपरेशन निरस्त कर दिया गया था</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="88"/>
         <source>Internal error</source>
-        <translation>داخلی خامی</translation>
+        <translation>आंतरिक त्रुटि</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="98"/>
         <source>IPsec</source>
-        <translation>آئی پی ایس سی</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="101"/>
         <location filename="../containers/containers_defs.cpp" line="237"/>
         <source>Website in Tor network</source>
-        <translation>ٹور نیٹ ورک میں ویب سائٹ</translation>
+        <translation>टोर नेटवर्क में वेबसाइट</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="102"/>
         <source>AmneziaDNS</source>
-        <translation>ایمنیزیا ڈی این ایس</translation>
+        <translation>AmneziaDNS</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="103"/>
         <source>SFTP file sharing service</source>
-        <translation>SFTP فائل شیئرنگ سروس</translation>
+        <translation>SFTP फ़ाइल साझाकरण सेवा</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="110"/>
         <source>OpenVPN is the most popular VPN protocol, with flexible configuration options. It uses its own security protocol with SSL/TLS for key exchange.</source>
-        <translation>اوپن وی پی این لچکدار ترتیب کے اختیارات کے ساتھ سب سے زیادہ مقبول VPN پروٹوکول ہے۔ یہ کلیدی تبادلے کے لیے SSL/TLS کے ساتھ اپنا سیکیورٹی پروٹوکول استعمال کرتا ہے۔</translation>
+        <translation>लचीले कॉन्फ़िगरेशन विकल्पों के साथ ओपनवीपीएन सबसे लोकप्रिय वीपीएन प्रोटोकॉल है। यह कुंजी विनिमय के लिए एसएसएल/टीएलएस के साथ अपने स्वयं के सुरक्षा प्रोटोकॉल का उपयोग करता है.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="113"/>
@@ -4182,7 +4206,7 @@ Already installed containers were found on the server. All installed containers 
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI systems and therefore susceptible to blocking
@@ -4201,7 +4225,7 @@ Cloak can modify packet metadata so that it completely masks VPN traffic as norm
 
 Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * High power consumption on mobile devices
 * Flexible settings
 * Not recognised by detection systems
@@ -4210,12 +4234,33 @@ Immediately after receiving the first data packet, Cloak authenticates the incom
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="215"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
+It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="226"/>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+
+* Available in the Sotka only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="186"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to detection and blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -4228,7 +4273,7 @@ WireGuard is very susceptible to detection and blocking due to its distinct pack
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by traffic analysis systems
@@ -4236,24 +4281,16 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="215"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
-It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Shadowsocks - masks VPN traffic, making it similar to normal web traffic, but it may be recognized by analysis systems in some highly censored regions.</source>
-        <translation type="vanished">شیڈو ساکس - VPN ٹریفک کو ماسک کرتا ہے، جو اسے عام ویب ٹریفک جیسا بناتا ہے، لیکن اسے کچھ انتہائی سنسر والے علاقوں میں تجزیہ کے نظام کے ذریعے پہچانا جا سکتا ہے.</translation>
+        <translation type="vanished">शैडोसॉक्स - वीपीएन ट्रैफ़िक को मास्क करता है, जिससे यह सामान्य वेब ट्रैफ़िक के समान हो जाता है, लेकिन इसे कुछ अत्यधिक सेंसर किए गए क्षेत्रों में विश्लेषण प्रणालियों द्वारा पहचाना जा सकता है.</translation>
     </message>
     <message>
         <source>OpenVPN over Cloak - OpenVPN with VPN masquerading as web traffic and protection against active-probing detection. Ideal for bypassing blocking in regions with the highest levels of censorship.</source>
-        <translation type="vanished">اوپن وی پی این اوور کلوک - اوپن وی پی این کے ساتھ وی پی این کو ویب ٹریفک کے طور پر چھپانا اور ایکٹیو پروبنگ ڈٹیکشن کے خلاف تحفظ۔ سنسرشپ کی اعلی ترین سطح والے خطوں میں بلاکنگ کو نظرانداز کرنے کے لیے مثالی.</translation>
+        <translation type="vanished">क्लोक पर ओपनवीपीएन - ओपनवीपीएन वीपीएन के साथ वेब ट्रैफिक और सक्रिय-जांच पहचान के खिलाफ सुरक्षा का मुखौटा लगाता है। उच्चतम स्तर की सेंसरशिप वाले क्षेत्रों में अवरोध को दूर करने के लिए आदर्श.</translation>
     </message>
     <message>
         <source>XRay with REALITY - Suitable for countries with the highest level of internet censorship. Traffic masking as web traffic at the TLS level, and protection against detection by active probing methods.</source>
-        <translation type="vanished">حقیقت کے ساتھ ایکسرےواقعیت کے ساتھ ایکس رے - سب سے زیادہ انٹرنیٹ سینسرشپ والے ممالک کے لئے مناسب ہے۔ ٹریفک ویب ٹریفک کی سطح TLS پر ماسکنگ اور فعال پرابنگ کے طریقوں سے شناخت سے بچائے جانے کی حفاظت۔</translation>
+        <translation type="vanished">वास्तविकता के साथ एक्सरे - उच्चतम स्तर की इंटरनेट सेंसरशिप वाले देशों के लिए उपयुक्त। टीएलएस स्तर पर ट्रैफ़िक को वेब ट्रैफ़िक के रूप में छिपाया जाता है, और सक्रिय जांच विधियों द्वारा पता लगाने से सुरक्षा प्रदान की जाती है.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="127"/>
@@ -4263,32 +4300,27 @@ Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REAL
     <message>
         <location filename="../containers/containers_defs.cpp" line="134"/>
         <source>Create a file vault on your server to securely store and transfer files.</source>
-        <translation>فائلوں کو محفوظ طریقے سے اسٹور اور ٹرانسفر کرنے کے لیے اپنے سرور پر ایک فائل والٹ بنائیں.</translation>
+        <translation>फ़ाइलों को सुरक्षित रूप से संग्रहीत और स्थानांतरित करने के लिए अपने सर्वर पर एक फ़ाइल वॉल्ट बनाएं.</translation>
     </message>
     <message>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
 * Works over UDP network protocol.</source>
-        <translation type="vanished">ایک نسبتاً نیا مقبول وی پی این پروٹوکول جس میں سادہ معماری ہے۔ وائر گارڈ تمام آلات پر مضبوط وی پی این کنکشن اور اعلی کارکردگی فراہم کرتا ہے۔ اس میں ہارڈ کوڈ کردہ انکرپشن سیٹنگز استعمال کی جاتی ہیں۔ وائر گارڈ کو اوپن وی پی این سے موازنہ کرنے پر لیٹنسی میں کمی اور بہتر ڈیٹا ٹرانسفر تھروپٹ حاصل ہوتی ہے۔ وائر گارڈ کا مخصوص پیکٹ سائنیچرز کی وجہ سے بلاک کرنا زیادہ آسان ہوتا ہے۔ کچھ دوسرے وی پی این پروٹوکول کے مخالف، جو اوبفسکیشن ٹیکنیکس کا استعمال کرتے ہیں، وائر گارڈ کے پیکٹس کے مسلسل سائنیچر پیٹرنز کو زیادہ آسانی سے پہچانا جا سکتا ہے اور اس طرح معقد ڈیپ پیکٹ انسپیکشن (DPI) سسٹمز اور دیگر نیٹ ورک مانیٹرنگ ٹولز کے ذریعے بلاک کیا جا سکتا ہے۔ * تمام پلیٹ فارمز پر دستیاب ہے * کم بجلی کی استعمال * کم سیٹنگز کی تعداد * ڈی پی آئی تجزیہ سسٹمز کے ذریعے آسانی سے پہچانا جاتا ہے، بلاک کرنے کے لئے زیادہ متاثر ہے * یو ڈی پی نیٹ ورک پروٹوکول پر کام کرتا ہے.</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="226"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+        <translation type="vanished">सरलीकृत वास्तुकला के साथ एक अपेक्षाकृत नया लोकप्रिय वीपीएन प्रोटोकॉल।
+वायरगार्ड सभी उपकरणों पर स्थिर वीपीएन कनेक्शन और उच्च प्रदर्शन प्रदान करता है। यह हार्ड-कोडित एन्क्रिप्शन सेटिंग्स का उपयोग करता है। ओपनवीपीएन की तुलना में वायरगार्ड में कम विलंबता और बेहतर डेटा ट्रांसफर थ्रूपुट है।
+वायरगार्ड अपने विशिष्ट पैकेट हस्ताक्षरों के कारण अवरुद्ध होने के प्रति अतिसंवेदनशील है। कुछ अन्य वीपीएन प्रोटोकॉल के विपरीत, जो अस्पष्टता तकनीकों को नियोजित करते हैं, वायरगार्ड पैकेट के सुसंगत हस्ताक्षर पैटर्न को अधिक आसानी से पहचाना जा सकता है और इस प्रकार उन्नत डीप पैकेट निरीक्षण (डीपीआई) सिस्टम और अन्य नेटवर्क निगरानी उपकरणों द्वारा अवरुद्ध किया जा सकता है।
 
-* Available in the VPNNaruzhu only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="unfinished"></translation>
+* सभी प्लेटफार्मों पर Sotka में उपलब्ध है
+* कम बिजली की खपत
+* सेटिंग्स की न्यूनतम संख्या
+* डीपीआई विश्लेषण प्रणालियों द्वारा आसानी से पहचाना जाना, अवरुद्ध होने की आशंका
+* यूडीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="240"/>
@@ -4300,120 +4332,149 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 
 For more detailed information, you can
  find it in the support section under &quot;Create SFTP file storage.&quot; </source>
-        <translation>انسٹالیشن کے بعد، ایمنیزیا آپ کے سرور پر ایک فائل اسٹوریج بنائے گا۔ آپ اس تک رسائی حاصل کر سکیں گے فائل زلا یا دیگر ایس ایف ٹی پی کلائنٹس کے ذریعے، اور اسکے علاوہ آپ اس ڈسک کو اپنے آلہ پر ماؤنٹ کر کے اس تک سیدھے راستے سے رسائی حاصل کر سکیں گے۔ مزید تفصیلات کے لئے، آپ سپورٹ سیکشن میں &quot;ایس ایف ٹی پی فائل اسٹوریج بنانا&quot; میں جا کر مزید معلومات حاصل کر سکتے ہیں.&quot; </translation>
+        <translation>इंस्टालेशन के बाद, एम्नेज़िया एक बनाएगा
+
+ आपके सर्वर पर फ़ाइल भंडारण। आप इसका उपयोग करके इसे एक्सेस कर पाएंगे
+ FileZilla या अन्य SFTP क्लाइंट, साथ ही एक्सेस करने के लिए अपने डिवाइस पर डिस्क को माउंट करें
+ यह सीधे आपके डिवाइस से.
+
+अधिक विस्तृत जानकारी के लिए आप यह कर सकते हैं
+ इसे &quot;एसएफटीपी फ़ाइल संग्रहण बनाएं&quot; के अंतर्गत सहायता अनुभाग में ढूंढें </translation>
     </message>
     <message>
         <source>WireGuard - New popular VPN protocol with high performance, high speed and low power consumption. Recommended for regions with low levels of censorship.</source>
-        <translation type="vanished">وائر گارڈ - اعلی کارکردگی، تیز رفتار اور کم بجلی کی کھپت کے ساتھ نیا مقبول VPN پروٹوکول۔ سنسرشپ کی کم سطح والے علاقوں کے لیے تجویز کردہ.</translation>
+        <translation type="vanished">वायरगार्ड - उच्च प्रदर्शन, उच्च गति और कम बिजली की खपत के साथ नया लोकप्रिय वीपीएन प्रोटोकॉल। सेंसरशिप के निम्न स्तर वाले क्षेत्रों के लिए अनुशंसित.</translation>
     </message>
     <message>
         <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
-        <translation type="vanished">AmneziaWG - Amnezia سے خصوصی پروٹوکول، WireGuard پر مبنی۔ یہ وائر گارڈ کی طرح تیز ہے، لیکن رکاوٹوں کے خلاف بہت مزاحم ہے۔ اعلی درجے کی سنسر شپ والے خطوں کے لیے تجویز کردہ۔</translation>
+        <translation type="vanished">AmneziaWG - वायरगार्ड पर आधारित Amnezia का विशेष प्रोटोकॉल। यह वायरगार्ड की तरह तेज़ है, लेकिन रुकावटों के प्रति बहुत प्रतिरोधी है। उच्च स्तर की सेंसरशिप वाले क्षेत्रों के लिए अनुशंसित.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="130"/>
         <source>Deploy a WordPress site on the Tor network in two clicks.</source>
-        <translation>ٹور نیٹ ورک پر ایک ورڈپریس سائٹ کو دو کلکس میں تعینات کریں.</translation>
+        <translation>दो क्लिक में टोर नेटवर्क पर एक वर्डप्रेस साइट तैनात करें।.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="132"/>
         <source>Replace the current DNS server with your own. This will increase your privacy level.</source>
-        <translation>موجودہ DNS سرور کو اپنے سے تبدیل کریں۔ اس سے آپ کی رازداری کی سطح میں اضافہ ہوگا.</translation>
+        <translation>वर्तमान DNS सर्वर को अपने स्वयं के DNS सर्वर से बदलें। इससे आपकी गोपनीयता का स्तर बढ़ जाएगा.</translation>
     </message>
     <message>
         <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
 It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Normal power consumption on mobile devices
 * Flexible customisation to suit user needs to work with different operating systems and devices
 * Recognised by DPI analysis systems and therefore susceptible to blocking
 * Can operate over both TCP and UDP network protocols.</source>
-        <translation type="vanished">OpenVPN دستیاب سب سے زیادہ مقبول اور وقتی آزمائشی VPN پروٹوکولز میں سے ایک ہے۔ یہ انکرپشن اور کلیدی تبادلے کے لیے SSL/TLS کی طاقت کا فائدہ اٹھاتے ہوئے اپنا منفرد سیکیورٹی پروٹوکول استعمال کرتا ہے۔ مزید برآں، توثیق کے بہت سے طریقوں کے لیے OpenVPN کی حمایت اسے ورسٹائل اور قابل موافق بناتی ہے، جو آلات اور آپریٹنگ سسٹم کی ایک وسیع رینج کو پورا کرتی ہے۔ اوپن سورس کی نوعیت کی وجہ سے، اوپن وی پی این کو عالمی برادری کی طرف سے وسیع جانچ سے فائدہ ہوتا ہے، جو اس کی سلامتی کو مسلسل تقویت دیتا ہے۔ کارکردگی، سیکورٹی اور مطابقت کے مضبوط توازن کے ساتھ، OpenVPN رازداری کے بارے میں شعور رکھنے والے افراد اور کاروباروں کے لیے یکساں انتخاب ہے۔ * تمام پلیٹ فارمز پر VPNNaruzhu میں دستیاب ہے * موبائل آلات پر بجلی کی عام کھپت * صارف کو مختلف آپریٹنگ سسٹمز اور ڈیوائسز کے ساتھ کام کرنے کی ضرورت کے مطابق لچکدار تخصیص * DPI تجزیہ سسٹمز کے ذریعہ پہچانا جاتا ہے اور اس وجہ سے بلاک کرنے کا خطرہ ہوتا ہے * TCP اور UDP دونوں نیٹ ورک پر کام کر سکتا ہے۔ پروٹوکول</translation>
+        <translation type="vanished">OpenVPN उपलब्ध सबसे लोकप्रिय और समय-परीक्षणित वीपीएन प्रोटोकॉल में से एक है।
+यह एन्क्रिप्शन और कुंजी विनिमय के लिए एसएसएल/टीएलएस की ताकत का लाभ उठाते हुए, अपने अद्वितीय सुरक्षा प्रोटोकॉल को नियोजित करता है। इसके अलावा, कई प्रमाणीकरण विधियों के लिए ओपनवीपीएन का समर्थन इसे उपकरणों और ऑपरेटिंग सिस्टम की एक विस्तृत श्रृंखला को पूरा करते हुए बहुमुखी और अनुकूलनीय बनाता है। अपनी ओपन-सोर्स प्रकृति के कारण, ओपनवीपीएन को वैश्विक समुदाय द्वारा व्यापक जांच से लाभ मिलता है, जो लगातार इसकी सुरक्षा को मजबूत करता है। प्रदर्शन, सुरक्षा और अनुकूलता के मजबूत संतुलन के साथ, ओपनवीपीएन गोपनीयता के प्रति जागरूक व्यक्तियों और व्यवसायों के लिए शीर्ष विकल्प बना हुआ है।
+
+* सभी प्लेटफार्मों पर Sotka में उपलब्ध है
+* मोबाइल उपकरणों पर सामान्य बिजली की खपत
+* विभिन्न ऑपरेटिंग सिस्टम और उपकरणों के साथ काम करने के लिए उपयोगकर्ता की जरूरतों के अनुरूप लचीला अनुकूलन
+* डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त और इसलिए अवरुद्ध होने के लिए अतिसंवेदनशील
+* टीसीपी और यूडीपी दोनों नेटवर्क प्रोटोकॉल पर काम कर सकता है।.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="159"/>
         <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
 
-* Available in the VPNNaruzhu only on desktop platforms
+* Available in the Sotka only on desktop platforms
 * Normal power consumption on mobile devices
 
 * Configurable encryption protocol
 * Detectable by some DPI systems
 * Works over TCP network protocol.</source>
-        <translation>شیڈو ساکس، SOCKS5 پروٹوکول سے متاثر، AEAD سائفر کا استعمال کرتے ہوئے کنکشن کی حفاظت کرتا ہے۔ اگرچہ شیڈو ساکس کو سمجھدار اور شناخت کرنے کے لیے چیلنج کرنے کے لیے ڈیزائن کیا گیا ہے، لیکن یہ معیاری HTTPS کنکشن سے مماثل نہیں ہے۔ تاہم، کچھ ٹریفک تجزیہ نظام اب بھی شیڈو ساکس کنکشن کا پتہ لگا سکتے ہیں۔ Amnezia میں محدود تعاون کی وجہ سے، AmneziaWG پروٹوکول استعمال کرنے کی سفارش کی جاتی ہے۔ * صرف ڈیسک ٹاپ پلیٹ فارمز پر VPNNaruzhu میں دستیاب ہے * موبائل آلات پر بجلی کی عام کھپت * قابل ترتیب انکرپشن پروٹوکول * کچھ DPI سسٹمز کے ذریعے قابل شناخت * TCP نیٹ ورک پروٹوکول پر کام کرتا ہے.</translation>
+        <translation>शैडोसॉक्स, SOCKS5 प्रोटोकॉल से प्रेरित होकर, AEAD सिफर का उपयोग करके कनेक्शन की सुरक्षा करता है। हालाँकि शैडोसॉक्स को विवेकपूर्ण और पहचानने में चुनौतीपूर्ण बनाया गया है, यह एक मानक HTTPS कनेक्शन के समान नहीं है। हालाँकि, कुछ ट्रैफ़िक विश्लेषण प्रणालियाँ अभी भी शैडोसॉक्स कनेक्शन का पता लगा सकती हैं। Amnezia में सीमित समर्थन के कारण, AmneziaWG प्रोटोकॉल का उपयोग करने की अनुशंसा की जाती है।
+
+* Sotka केवल डेस्कटॉप प्लेटफ़ॉर्म पर उपलब्ध है
+* मोबाइल उपकरणों पर सामान्य बिजली की खपत
+
+* कॉन्फ़िगर करने योग्य एन्क्रिप्शन प्रोटोकॉल
+* कुछ डीपीआई सिस्टम द्वारा पता लगाने योग्य
+* टीसीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
         <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
 * Works over UDP network protocol.</source>
-        <translation type="vanished">ایک معاصر اشارہ جاتا ہے مقبول وی پی این پروٹوکول کا امنیزیہ ڈبلیو جی۔ امنیزیہ ڈبلیو جی وائر گارڈ کے بنیادی ڈھانچے پر مبنی ہے، جس نے اس کی آسانی سے معماری اور ایکسیلنٹ کارکردگی کی خصوصیات کو برقرار رکھا۔ جبکہ وائر گارڈ کو اس کی کارآمدی کے لئے جانا جاتا ہے، اس میں اپنے ممتاز پیکٹ سائنیچرز کی وجہ سے آسانی سے پہچان میں مسائل پیش آتے تھے۔ امنیزیہ ڈبلیو جی اس مسئلے کا حل پیش کرتا ہے بہتر اوبفسکیشن میتھڈس کے ذریعے، جس سے اس کی ٹریفک عام انٹرنیٹ ٹریفک کے ساتھ مل جل کر رہتی ہے۔ اس سے مطلب یہ ہے کہ امنیزیہ ڈبلیو جی نے اصل وائر گارڈ کی تیزی کارکردگی کو برقرار رکھا جبکہ اس میں ایک اضافی پردہ شامل کیا، جو اسے ایک تیز اور پرانے طریقہ سے وی پی این کنکشن کی درخواست کرنے والوں کے لئے ایک عمدہ چوئس بناتا ہے۔ * تمام پلیٹ فارمز پر دستیاب ہے * کم بجلی کی استعمال * کم سیٹنگز کی تعداد * ڈی پی آئی تجزیہ سسٹمز سے پہچانا نہیں جاتا، بند کرنے کے لئے مزید مضبوط ہے * یو ڈی پی نیٹ ورک پروٹوکول پر کام کرتا ہے۔</translation>
+        <translation type="vanished">लोकप्रिय वीपीएन प्रोटोकॉल का एक आधुनिक पुनरावृत्ति, एमनेज़ियाडब्ल्यूजी वायरगार्ड द्वारा निर्धारित नींव पर आधारित है, जो सभी उपकरणों में इसकी सरलीकृत वास्तुकला और उच्च-प्रदर्शन क्षमताओं को बरकरार रखता है।
+जबकि वायरगार्ड अपनी दक्षता के लिए जाना जाता है, इसके विशिष्ट पैकेट हस्ताक्षरों के कारण इसे आसानी से पहचाने जाने में समस्याएँ थीं। AmneziaWG बेहतर अस्पष्टीकरण विधियों का उपयोग करके इस समस्या को हल करता है, जिससे इसका ट्रैफ़िक नियमित इंटरनेट ट्रैफ़िक के साथ मिश्रित हो जाता है।
+इसका मतलब यह है कि AmneziaWG स्टील्थ की एक अतिरिक्त परत जोड़ते हुए मूल के तेज़ प्रदर्शन को बनाए रखता है, जिससे यह तेज़ और विवेकपूर्ण वीपीएन कनेक्शन चाहने वालों के लिए एक बढ़िया विकल्प बन जाता है।
+
+* सभी प्लेटफार्मों पर Sotka में उपलब्ध है
+* कम बिजली की खपत
+* सेटिंग्स की न्यूनतम संख्या
+* डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त नहीं, अवरोधन के प्रति प्रतिरोधी
+* यूडीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="238"/>
         <source>DNS Service</source>
-        <translation>DNS سروس</translation>
+        <translation>DNS सेवाएँ</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/libsecret.cpp" line="119"/>
         <source>Entry not found</source>
-        <translation>اندراج نہیں ملا</translation>
+        <translation>प्रवेश नहीं मिला</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="255"/>
         <source>Access to keychain denied</source>
-        <translation>کی چین تک رسائی منسوخ</translation>
+        <translation>चाबी का गुच्छा तक पहुंच अस्वीकृत</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="257"/>
         <source>No keyring daemon</source>
-        <translation>کوئی کیرنگ ڈیمون نہیں</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="259"/>
         <source>Already unlocked</source>
-        <translation>&quot;پہلے سے ہی انلاک ہوگیا ہے</translation>
+        <translation>पहले से ही अनलॉक है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="261"/>
         <source>No such keyring</source>
-        <translation>ایسی کوئی کیرنگ نہیں</translation>
+        <translation>ऐसी कोई कीरिंग नहीं</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="263"/>
         <source>Bad arguments</source>
-        <translation>برے دلائل</translation>
+        <translation>ख़राब तर्क</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="265"/>
         <source>I/O error</source>
-        <translation>I/O غلطی</translation>
+        <translation>I/O त्रुटि</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="267"/>
         <source>Cancelled</source>
-        <translation>منسوخ</translation>
+        <translation>रद्द</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="269"/>
         <source>Keyring already exists</source>
-        <translation>کیرنگ پہلے سے موجود ہے</translation>
+        <translation>कीरिंग पहले से मौजूद है</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_unix.cpp" line="271"/>
         <source>No match</source>
-        <translation>کوئی میچ نہیں</translation>
+        <translation>कोई मुकाबला नहीं</translation>
     </message>
     <message>
         <location filename="../3rd/qtkeychain/qtkeychain/keychain_haiku.cpp" line="72"/>
         <source>error 0x%1: %2</source>
-        <translation>غلطی 0x%1: %2</translation>
+        <translation>त्रुटि 0x%1: %2</translation>
     </message>
     <message>
         <location filename="../core/serialization/vmess_new.cpp" line="57"/>
@@ -4552,12 +4613,12 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Components/RenameServerDrawer.qml" line="30"/>
         <source>Server name</source>
-        <translation type="unfinished">سرور کا نام</translation>
+        <translation type="unfinished">सर्वर का नाम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/RenameServerDrawer.qml" line="41"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">सहेजें</translation>
     </message>
 </context>
 <context>
@@ -4565,7 +4626,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Components/SelectLanguageDrawer.qml" line="48"/>
         <source>Choose language</source>
-        <translation>زبان کا انتخاب کریں</translation>
+        <translation>भाषा चुनें</translation>
     </message>
 </context>
 <context>
@@ -4573,7 +4634,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Components/ServersListView.qml" line="86"/>
         <source>Unable change server while there is an active connection</source>
-        <translation type="unfinished">فعال کنکشن موجود ہونے کی وجہ سے سرور تبدیل کرنے میں ناکام ہیں</translation>
+        <translation type="unfinished">सक्रिय कनेक्शन होने पर सर्वर बदलने में असमर्थ</translation>
     </message>
 </context>
 <context>
@@ -4581,13 +4642,13 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../settings.cpp" line="35"/>
         <source>Server #1</source>
-        <translation>سرور نمبر 1</translation>
+        <translation>सर्वर #1</translation>
     </message>
     <message>
         <location filename="../settings.cpp" line="213"/>
         <location filename="../settings.cpp" line="220"/>
         <source>Server</source>
-        <translation>سرور</translation>
+        <translation>सर्वर</translation>
     </message>
 </context>
 <context>
@@ -4595,12 +4656,12 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/controllers/settingsController.cpp" line="150"/>
         <source>Backup file is corrupted</source>
-        <translation>بیک اپ فائل خراب ہو گئی ہے</translation>
+        <translation>बैकअप फ़ाइल दूषित है</translation>
     </message>
     <message>
         <location filename="../ui/controllers/settingsController.cpp" line="174"/>
         <source>All settings have been reset to default values</source>
-        <translation>تمام ترتیبات کو ڈیفالٹ اقدار پر دوبارہ ترتیب دیا گیا ہے</translation>
+        <translation>सभी सेटिंग्स को डिफ़ॉल्ट मानों पर रीसेट कर दिया गया है</translation>
     </message>
 </context>
 <context>
@@ -4608,39 +4669,39 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="30"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="37"/>
-        <source>Save VPNNaruzhu config</source>
-        <translation>VPNNaruzhu ترتیب کو محفوظ کریں</translation>
+        <source>Save Sotka config</source>
+        <translation>Sotka कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="25"/>
         <source>Share</source>
-        <translation>بانٹیں</translation>
+        <translation>शेयर करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="26"/>
         <source>Copy</source>
-        <translation>کاپی</translation>
+        <translation>कॉपी</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="191"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="201"/>
         <source>Copied</source>
-        <translation>کاپی</translation>
+        <translation>कॉपी किया गया</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="142"/>
         <source>Copy config string</source>
-        <translation>تشکیل سٹرنگ کو کاپی کریں</translation>
+        <translation>कॉन्फिग स्ट्रिंग कॉपी करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="165"/>
         <source>Show connection settings</source>
-        <translation>کنکشن کی ترتیبات دکھائیں</translation>
+        <translation>कनेक्शन सेटिंग दिखाएं</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="370"/>
         <source>To read the QR code in the Amnezia app, select &quot;Add server&quot; → &quot;I have data to connect&quot; → &quot;QR code, key or settings file&quot;</source>
-        <translation>ایمنیزیا ایپ میں QR کوڈ پڑھنے کے لیے، &quot;سرور شامل کریں&quot; → &quot;میرے پاس جوڑنے کے لیے ڈیٹا ہے&quot; → &quot;QR کوڈ، کلید یا سیٹنگ فائل&quot; کو منتخب کریں</translation>
+        <translation>एमनेज़िया ऐप में क्यूआर कोड पढ़ने के लिए, &quot;सर्वर जोड़ें&quot; → &quot;मेरे पास कनेक्ट करने के लिए डेटा है&quot; → &quot;क्यूआर कोड, कुंजी या सेटिंग्स फ़ाइल&quot; चुनें।</translation>
     </message>
 </context>
 <context>
@@ -4648,42 +4709,42 @@ This means that AmneziaWG keeps the fast performance of the original while addin
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="24"/>
         <source>Hostname not look like ip adress or domain name</source>
-        <translation>میزبان کا نام آئی پی ایڈریس یا ڈومین نام نظر نہیں آ رہا ہے</translation>
+        <translation>होस्टनाम आईपी एड्रेस या डोमेन नाम जैसा नहीं दिखता</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="66"/>
         <source>New site added: %1</source>
-        <translation>نیا سائٹ شامل ہوگئی ہے: %1</translation>
+        <translation>नई साइट जोड़ी गई: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="78"/>
         <source>Site removed: %1</source>
-        <translation>سائٹ ہٹا دی گئی ہے: %1</translation>
+        <translation>साइट हटाई गई: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="85"/>
         <source>Can&apos;t open file: %1</source>
-        <translation>فائل نہیں کھول سکتا: %1</translation>
+        <translation>फ़ाइल नहीं खुल सकती: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="91"/>
         <source>Failed to parse JSON data from file: %1</source>
-        <translation>فائل سے JSON ڈیٹا پارس کرنے میں ناکامی: %1</translation>
+        <translation>फ़ाइल से JSON डेटा पार्स करने में विफल:%1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="96"/>
         <source>The JSON data is not an array in file: %1</source>
-        <translation>فائل میں JSON ڈیٹا ایک ایرے نہیں ہے: %1</translation>
+        <translation>JSON डेटा फ़ाइल में कोई सरणी नहीं है: %1</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="126"/>
         <source>Import completed</source>
-        <translation>واردات مکمل ہوگئی ہے</translation>
+        <translation>आयात पूरा हुआ</translation>
     </message>
     <message>
         <location filename="../ui/controllers/sitesController.cpp" line="145"/>
         <source>Export completed</source>
-        <translation>ایکسپورٹ مکمل ہوگیا</translation>
+        <translation>निर्यात पूरा हुआ</translation>
     </message>
 </context>
 <context>
@@ -4703,6 +4764,10 @@ Should it be bonded to this device?</source>
         <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="89"/>
         <source>Buy new key</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Continue</source>
+        <translation type="obsolete">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="102"/>
@@ -4725,7 +4790,7 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="94"/>
         <source>Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="107"/>
@@ -4769,32 +4834,89 @@ Should it be bonded to this device?</source>
     </message>
 </context>
 <context>
+    <name>SotkaNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/SotkaNotification.qml" line="20"/>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/SotkaNotification.qml" line="21"/>
+        <source>Close</source>
+        <translation type="unfinished">बंद करना</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaNotificationWithInput</name>
+    <message>
+        <location filename="../ui/qml/Controls2/SotkaNotificationWithInput.qml" line="23"/>
+        <source>Continue</source>
+        <translation type="unfinished">जारी रखना</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/SotkaNotificationWithInput.qml" line="24"/>
+        <source>Close</source>
+        <translation type="unfinished">बंद करना</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaPageEmailLogIn</name>
+    <message>
+        <source>Continue</source>
+        <translation type="obsolete">जारी रखना</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaPageLogIn</name>
+    <message>
+        <source>Key as file</source>
+        <translation type="obsolete">कनेक्शन सेटिंग्स वाली फ़ाइल</translation>
+    </message>
+    <message>
+        <source>Open key file</source>
+        <translation type="obsolete">कॉन्फ़िग फ़ाइल खोलें</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaYesNoNotification</name>
+    <message>
+        <location filename="../ui/qml/Controls2/SotkaYesNoNotification.qml" line="22"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Controls2/SotkaYesNoNotification.qml" line="23"/>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
         <source>Show</source>
-        <translation>دکھائیں</translation>
+        <translation>दिखाओ</translation>
     </message>
     <message>
         <source>Connect</source>
-        <translation type="vanished">منسلک کریں</translation>
+        <translation type="vanished">कनेक्ट</translation>
     </message>
     <message>
         <source>Disconnect</source>
-        <translation type="vanished">منقطع کریں</translation>
+        <translation type="vanished">डिस्कनेक्ट</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
         <source>Visit Website</source>
-        <translation>ویب سائٹ دیکھیں</translation>
+        <translation>बेवसाइट देखना</translation>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
         <source>Quit</source>
-        <translation>بند کریں</translation>
+        <translation>छोड़ना</translation>
     </message>
 </context>
 <context>
@@ -4802,57 +4924,7 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../ui/qml/Controls2/TextFieldWithHeaderType.qml" line="130"/>
         <source>The field can&apos;t be empty</source>
-        <translation>یہ فیلڈ خالی نہیں ہو سکتا</translation>
-    </message>
-</context>
-<context>
-    <name>VPNNaruzhuNotification</name>
-    <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
-        <source>ERROR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="21"/>
-        <source>Close</source>
-        <translation type="unfinished">بند</translation>
-    </message>
-</context>
-<context>
-    <name>VPNNaruzhuNotificationWithInput</name>
-    <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="23"/>
-        <source>Continue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml" line="24"/>
-        <source>Close</source>
-        <translation type="unfinished">بند</translation>
-    </message>
-</context>
-<context>
-    <name>VPNNaruzhuPageLogIn</name>
-    <message>
-        <source>Key as file</source>
-        <translation type="obsolete">کنکشن کی ترتیبات والی فائل</translation>
-    </message>
-    <message>
-        <source>Open key file</source>
-        <translation type="obsolete">کنفیگ فائل کو کھولیں</translation>
-    </message>
-</context>
-<context>
-    <name>VPNNaruzhuYesNoNotification</name>
-    <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="22"/>
-        <source>Yes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml" line="23"/>
-        <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ील्ड खाली नहीं हो सकती</translation>
     </message>
 </context>
 <context>
@@ -4860,7 +4932,7 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../vpnconnection.cpp" line="507"/>
         <source>Mbps</source>
-        <translation>ایم بی پی ایس</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4868,57 +4940,57 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="133"/>
         <source>Unknown</source>
-        <translation>نامعلوم</translation>
+        <translation>अज्ञात</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="134"/>
         <source>Disconnected</source>
-        <translation>منقطع</translation>
+        <translation>اडिस्कनेक्ट किया गया</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="135"/>
         <source>Preparing</source>
-        <translation>تیاری مکمل</translation>
+        <translation>तैयार कर रहे हैं</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="136"/>
         <source>Connecting...</source>
-        <translation>منسلک ہو رہا ہے...</translation>
+        <translation>कनेक्ट...</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="137"/>
         <source>Connected</source>
-        <translation>منسلک</translation>
+        <translation>जुड़ा हुआ</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="138"/>
         <source>Disconnecting...</source>
-        <translation>منقطع ہو رہا ہے...</translation>
+        <translation>कनेक्ट...</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="139"/>
         <source>Reconnecting...</source>
-        <translation>دوبارہ منسلک ہو رہا ہے...</translation>
+        <translation>कनेक्ट...</translation>
     </message>
     <message>
         <location filename="../protocols/vpnprotocol.cpp" line="140"/>
         <source>Error</source>
-        <translation>خرابی</translation>
+        <translation>गलती</translation>
     </message>
 </context>
 <context>
     <name>amnezia::ContainerProps</name>
     <message>
         <source>Low</source>
-        <translation type="vanished">کم</translation>
+        <translation type="vanished">कम</translation>
     </message>
     <message>
         <source>I just want to increase the level of my privacy.</source>
-        <translation type="vanished">میں صرف اپنی خصوصیت کا سطح بڑھانا چاہتا ہوں.</translation>
+        <translation type="vanished">मैं बस अपनी गोपनीयता का स्तर बढ़ाना चाहता हूं.</translation>
     </message>
     <message>
         <source>I want to bypass censorship. This option recommended in most cases.</source>
-        <translation type="vanished">میں سانسر شدگی سے چھٹکارا حاصل کرنا چاہتا ہوں۔ یہ اختیار بیشتر صورتوں میں تجویز کیا جاتا ہے.</translation>
+        <translation type="vanished">मैं सेंसरशिप को दरकिनार करना चाहता हूं। अधिकांश मामलों में इस विकल्प की अनुशंसा की जाती है.</translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="339"/>
@@ -4936,12 +5008,12 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
-        <translation>نجی کلید پاس فریز</translation>
+        <translation>निजी कुंजी पासफ़्रेज़</translation>
     </message>
     <message>
         <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
-        <translation>محفوظ کریں</translation>
+        <translation>सहेजें</translation>
     </message>
 </context>
 </TS>

@@ -1,3 +1,3 @@
-FROM vpnnaruzhu/torpress:latest
+FROM sotka/torpress:latest
 
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"

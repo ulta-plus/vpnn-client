@@ -20,7 +20,7 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     initModels();
     initControllers();
     initSignalHandlers();
-    initVPNNaruzhuExtension();
+    initSotkaExtension();
 
     initAndroidController();
     initAppleController();
@@ -151,9 +151,9 @@ void CoreController::initControllers()
     m_engine->rootContext()->setContextProperty("ApiConfigsController", m_apiConfigsController.get());
 }
 
-void CoreController::initVPNNaruzhuExtension()
+void CoreController::initSotkaExtension()
 {
-    m_webApi.reset(new VpnNaruzhuWebApi(m_settings, m_serversModel, m_vpnConnection, m_engine));
+    m_webApi.reset(new SotkaWebApi(m_settings, m_serversModel, m_vpnConnection, m_engine));
     m_engine->rootContext()->setContextProperty("VPNNWebApi", m_webApi.get());
 
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
@@ -167,7 +167,7 @@ void CoreController::initVPNNaruzhuExtension()
     connect( m_connectionController.get()
            , &ConnectionController::updateSmartRouting
            , m_webApi.get()
-           , &VpnNaruzhuWebApi::updateSmartRouting
+           , &SotkaWebApi::updateSmartRouting
            );
 }
 
@@ -271,15 +271,15 @@ void CoreController::updateTranslator(const QLocale &locale)
     }
 
     QStringList availableTranslations;
-    QDirIterator it(":/translations", QStringList("vpnnaruzhu_*.qm"), QDir::Files);
+    QDirIterator it(":/translations", QStringList("sotka_*.qm"), QDir::Files);
     while (it.hasNext()) {
         availableTranslations << it.next();
     }
 
     // This code allow to load translation for the language only, without country code
     const QString lang = locale.name().split("_").first();
-    const QString translationFilePrefix = QString(":/translations/vpnnaruzhu_") + lang;
-    QString strFileName = QString(":/translations/vpnnaruzhu_%1.qm").arg(locale.name());
+    const QString translationFilePrefix = QString(":/translations/sotka_") + lang;
+    QString strFileName = QString(":/translations/sotka_%1.qm").arg(locale.name());
     for (const QString &translation : availableTranslations) {
         if (translation.contains(translationFilePrefix)) {
             strFileName = translation;

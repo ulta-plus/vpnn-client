@@ -40,7 +40,7 @@ static QString getStringFromReply(QNetworkReply* reply, const QString &comment)
     return QString();
 }
 
-void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
+void SotkaWebApi::initRequest(QNetworkRequest &request,
     const QString &url) const
 {
     request.setTransferTimeout(10000);
@@ -51,7 +51,7 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     request.setUrl(url);
 }
 
-QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(const QNetworkRequest &request) const
+QNetworkReply* SotkaWebApi::replyGetRequest(const QNetworkRequest &request) const
 {
     QNetworkReply *reply;
     reply = amnApp->networkManager()->get(request);
@@ -63,7 +63,7 @@ QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(const QNetworkRequest &request)
     return reply;
 }
 
-QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
+QJsonDocument SotkaWebApi::getDefaultAccountStatus(void) const
 {
     QString url = getApiBaseUrl()
                 + "/api/v1/mobile_request?public_request_id="
@@ -76,7 +76,7 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
     return getJsonFromReply(reply, "getDefaultAccountStatus");
 }
 
-void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
+void SotkaWebApi::updateDefaultAccountStatus(void) const
 {
     QJsonDocument json_doc = getDefaultAccountStatus();
     if (json_doc.isEmpty()) {
@@ -86,7 +86,7 @@ void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
     }
 }
 
-QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
+QString SotkaWebApi::getDefaultAccountConfig(void) const
 {
     QString url = getApiBaseUrl()
             + "/api/v1/wg_keys/download_mobile_request_key?public_request_id="
@@ -99,7 +99,7 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
     return getStringFromReply(reply, "getDefaultAccountConfig");
 }
 
-void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
+void SotkaWebApi::updateDefaultAccountConfig(void) const
 {
     QString key = getDefaultAccountConfig();
     if (key.isEmpty()) {
@@ -110,7 +110,7 @@ void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
     }
 }
 
-QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
+QJsonDocument SotkaWebApi::downloadJsonFile(const QString &url) const
 {
     QNetworkRequest request;
     request.setTransferTimeout(10000);
@@ -121,7 +121,7 @@ QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
-void VpnNaruzhuWebApi::updateApiBaseUrl(void) const
+void SotkaWebApi::updateApiBaseUrl(void) const
 {
     QJsonDocument config = downloadJsonFile(amnezia_config_url);
     if (config.isEmpty()) {
@@ -132,7 +132,7 @@ void VpnNaruzhuWebApi::updateApiBaseUrl(void) const
     }
 }
 
-void VpnNaruzhuWebApi::updateSmartRouting(void) const
+void SotkaWebApi::updateSmartRouting(void) const
 {
     QJsonDocument json_doc = downloadJsonFile(smart_routs_url);
     if (json_doc.isEmpty()) {

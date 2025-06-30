@@ -1,5 +1,5 @@
 FROM alpine:3.15
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"
 
 ARG XRAY_RELEASE="v1.8.6"
 

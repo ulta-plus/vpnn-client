@@ -1,6 +1,6 @@
-FROM vpnnaruzhu/amnezia-wg:latest
+FROM sotka/amnezia-wg:latest
 
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"
 
 #Install required packages
 RUN apk add --no-cache bash curl dumb-init

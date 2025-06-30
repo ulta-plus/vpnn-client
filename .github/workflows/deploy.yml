@@ -7,7 +7,7 @@ on:
 
 env:
   QT_MIRROR: https://mirrors.ocf.berkeley.edu/qt/ # https://download.qt.io/static/mirrorlist/
-  VPNN_VERSION: 2.1.5.0
+  SOTKA_VERSION: 1.0.0.0
 
 jobs:
   Build-Linux-Ubuntu:
@@ -51,30 +51,30 @@ jobs:
         sudo apt-get install libxkbcommon-x11-0
         export QT_BIN_DIR=${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/gcc_64/bin
         export QIF_BIN_DIR=${{ runner.temp }}/Qt/Tools/QtInstallerFramework/${{ env.QIF_VERSION }}/bin
-        export VPNN_VERSION=${{ env.VPNN_VERSION }}
+        export SOTKA_VERSION=${{ env.SOTKA_VERSION }}
         bash deploy/build_linux.sh
 
     - name: 'Pack installer'
-      run: cd deploy && tar -cf VPNNaruzhu_Linux_Installer_${{ env.VPNN_VERSION }}.tar VPNNaruzhu_Linux_Installer.bin
+      run: cd deploy && tar -cf Sotka_Linux_Installer_${{ env.SOTKA_VERSION }}.tar Sotka_Linux_Installer.bin
 
     - name: 'Upload installer artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_Linux_installer_${{ env.VPNN_VERSION }}.tar
-        path: deploy/VPNNaruzhu_Linux_Installer_${{ env.VPNN_VERSION }}.tar
+        name: Sotka_Linux_installer_${{ env.SOTKA_VERSION }}.tar
+        path: deploy/Sotka_Linux_Installer_${{ env.SOTKA_VERSION }}.tar
         retention-days: 7
 
     - name: 'Upload unpacked artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_Linux_unpacked_${{ env.VPNN_VERSION }}
+        name: Sotka_Linux_unpacked_${{ env.SOTKA_VERSION }}
         path: deploy/AppDir
         retention-days: 7
 
     - name: 'Upload translations artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_translations_${{ env.VPNN_VERSION }}
+        name: Sotka_translations_${{ env.SOTKA_VERSION }}
         path: client/translations
         retention-days: 7
 
@@ -128,20 +128,20 @@ jobs:
         set BUILD_ARCH=${{ env.BUILD_ARCH }}
         set QT_BIN_DIR="${{ runner.temp }}\\Qt\\${{ env.QT_VERSION }}\\msvc2019_64\\bin"
         set QIF_BIN_DIR="${{ runner.temp }}\\Qt\\Tools\\QtInstallerFramework\\${{ env.QIF_VERSION }}\\bin"
-        set VPNN_VERSION="${{ env.VPNN_VERSION }}"
+        set SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
         call deploy\\build_windows.bat
 
     - name: 'Upload installer artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_Windows_installer_${{ env.VPNN_VERSION }}
-        path: VPNNaruzhu_x${{ env.BUILD_ARCH }}_${{ env.VPNN_VERSION }}.exe
+        name: Sotka_Windows_installer_${{ env.SOTKA_VERSION }}
+        path: Sotka_x${{ env.BUILD_ARCH }}_${{ env.SOTKA_VERSION }}.exe
         retention-days: 7
 
     - name: 'Upload unpacked artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_Windows_unpacked_${{ env.VPNN_VERSION }}
+        name: Sotka_Windows_unpacked_${{ env.SOTKA_VERSION }}
         path: deploy\\build_${{ env.BUILD_ARCH }}\\client\\Release
         retention-days: 7
 
@@ -219,7 +219,7 @@ jobs:
         git submodule update --init --recursive
         export QT_BIN_DIR="${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/ios/bin"
         export QT_MACOS_ROOT_DIR="${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/macos"
-        export VPNN_VERSION="${{ env.VPNN_VERSION }}"
+        export SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
         export PATH=$PATH:~/go/bin
         sh deploy/build_ios.sh | \
           sed -e '/-Xcc -DPROD_AGW_PUBLIC_KEY/,/-Xcc/ { /-Xcc/!d; }' -e '/-Xcc -DPROD_AGW_PUBLIC_KEY/d' | \
@@ -241,7 +241,7 @@ jobs:
 #      with:
 #        name: app-store ipa & dsyms
 #        path: |
-#          ${{ github.workspace }}/VPNNaruzhu-iOS.ipa
+#          ${{ github.workspace }}/Sotka-iOS.ipa
 #          ${{ github.workspace }}/*.app.dSYM.zip
 #        retention-days: 7
 
@@ -298,21 +298,21 @@ jobs:
       run: |
         export QT_BIN_DIR="${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/macos/bin"
         export QIF_BIN_DIR="${{ runner.temp }}/Qt/Tools/QtInstallerFramework/${{ env.QIF_VERSION }}/bin"
-        export VPNN_VERSION="${{ env.VPNN_VERSION }}"
+        export SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
         bash deploy/build_macos.sh
 
     - name: 'Upload installer artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_MacOS_installer_${{ env.VPNN_VERSION }}
-        path: VPNNaruzhu.dmg
+        name: Sotka_MacOS_installer_${{ env.SOTKA_VERSION }}
+        path: Sotka.dmg
         retention-days: 7
 
     - name: 'Upload unpacked artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu_MacOS_unpacked_${{ env.VPNN_VERSION }}
-        path: deploy/build/client/VPNNaruzhu.app
+        name: Sotka_MacOS_unpacked_${{ env.SOTKA_VERSION }}
+        path: deploy/build/client/Sotka.app
         retention-days: 7
 
 # ------------------------------------------------------
@@ -433,46 +433,46 @@ jobs:
         ANDROID_KEYSTORE_KEY_PASS: ${{ secrets.ANDROID_RELEASE_KEYSTORE_KEY_PASS }}
       shell: bash
       run: |
-        export VPNN_VERSION="${{ env.VPNN_VERSION }}"
+        export SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
         ./deploy/build_android.sh --aab --apk all --build-platform ${{ env.ANDROID_BUILD_PLATFORM }}
 
     - name: 'Upload x86_64 apk'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu-android-x86_64_${{ env.VPNN_VERSION }}
-        path: deploy/build/VPNNaruzhu-x86_64-release.apk
+        name: Sotka-android-x86_64_${{ env.SOTKA_VERSION }}
+        path: deploy/build/Sotka-x86_64-release.apk
         compression-level: 0
         retention-days: 7
 
     - name: 'Upload x86 apk'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu-android-x86_${{ env.VPNN_VERSION }}
-        path: deploy/build/VPNNaruzhu-x86-release.apk
+        name: Sotka-android-x86_${{ env.SOTKA_VERSION }}
+        path: deploy/build/Sotka-x86-release.apk
         compression-level: 0
         retention-days: 7
 
     - name: 'Upload arm64-v8a apk'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu-android-arm64-v8a_${{ env.VPNN_VERSION }}
-        path: deploy/build/VPNNaruzhu-arm64-v8a-release.apk
+        name: Sotka-android-arm64-v8a_${{ env.SOTKA_VERSION }}
+        path: deploy/build/Sotka-arm64-v8a-release.apk
         compression-level: 0
         retention-days: 7
 
     - name: 'Upload armeabi-v7a apk'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu-android-armeabi-v7a_${{ env.VPNN_VERSION }}
-        path: deploy/build/VPNNaruzhu-armeabi-v7a-release.apk
+        name: Sotka-android-armeabi-v7a_${{ env.SOTKA_VERSION }}
+        path: deploy/build/Sotka-armeabi-v7a-release.apk
         compression-level: 0
         retention-days: 7
 
     - name: 'Upload aab'
       uses: actions/upload-artifact@v4
       with:
-        name: VPNNaruzhu-android_${{ env.VPNN_VERSION }}
-        path: deploy/build/VPNNaruzhu-release.aab
+        name: Sotka-android_${{ env.SOTKA_VERSION }}
+        path: deploy/build/Sotka-release.aab
         compression-level: 0
         retention-days: 7
 

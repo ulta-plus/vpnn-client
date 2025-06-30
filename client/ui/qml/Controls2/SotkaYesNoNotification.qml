@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 
 import Style 1.0
 
@@ -17,14 +18,16 @@ Rectangle {
     property int textSize: 16
     property bool pop_up: true
 
-    property string text: qsTr('ERROR')
-    property string buttonText: qsTr('Close')
+    property string text: ''
+    property string buttonYesText: qsTr('Yes')
+    property string buttonNoText: qsTr('No')
 
     property string textColor: Sotka.color.notificationText
     property string borderColor: Sotka.color.notificationBorder
     property string backgroundColor: Sotka.color.notificationBackground
 
-    property var onClick: function() {} // function executed with close Notification
+    property var withYesClick: function() {}
+    property var withNoClick: function() {}
 
     color: root.backgroundColor
     border.width: 1
@@ -49,22 +52,45 @@ Rectangle {
         font.family: 'PT Root UI VF'
     }
 
-    VPNNaruzhuButton {
-        implicitHeight: 30
-        implicitWidth: (contentItem.implicitWidth > 80) ? contentItem.implicitWidth + 20 : 80
-
+    RowLayout {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
 
-        mainText: root.buttonText
+        SotkaButton {
+            id: yesButton
 
-        onClicked: {
-            if (pop_up) {
-                root.visible = false;
+            implicitHeight: 30
+            implicitWidth: 80
+
+            mainText: root.buttonYesText
+
+            onClicked: {
+                if (pop_up) {
+                    root.visible = false;
+                }
+
+                withYesClick();
             }
+        }
 
-            onClick();
+        SotkaButton {
+            id: noButton
+
+            implicitHeight: 30
+            implicitWidth: 80
+
+            anchors.leftMargin: 10
+
+            mainText: root.buttonNoText
+
+            onClicked: {
+                if (pop_up) {
+                    root.visible = false;
+                }
+
+                withNoClick();
+            }
         }
     }
 }

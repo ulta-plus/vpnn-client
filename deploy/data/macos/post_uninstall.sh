@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_NAME=VPNNaruzhu
+APP_NAME=Sotka
 PLIST_NAME=$APP_NAME.plist
 LAUNCH_DAEMONS_PLIST_NAME="/Library/LaunchDaemons/$PLIST_NAME"
 APP_PATH="/Applications/$APP_NAME.app"

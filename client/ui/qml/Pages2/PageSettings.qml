@@ -104,7 +104,7 @@ PageType {
                 id: about
                 Layout.fillWidth: true
 
-                text: qsTr("About VPNNaruzhu")
+                text: qsTr("About Sotka")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
                 leftImageSource: "qrc:/images/controls/external-link.svg"
 

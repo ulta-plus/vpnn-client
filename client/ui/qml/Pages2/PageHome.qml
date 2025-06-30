@@ -94,7 +94,7 @@ PageType {
                 KeyNavigation.tab: drawer // issue_5 splitTunnelingButton
             }
 
-            VPNNaruzhuNotification {
+            SotkaNotification {
                 pop_up: false
                 visible: true
 

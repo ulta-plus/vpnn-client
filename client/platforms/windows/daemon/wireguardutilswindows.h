@@ -30,7 +30,7 @@ class WireguardUtilsWindows final : public WireguardUtils {
   QString interfaceName() override {
     return WireguardUtilsWindows::s_interfaceName();
   }
-  static const QString s_interfaceName() { return "VPNNaruzhu"; }
+  static const QString s_interfaceName() { return "Sotka"; }
   bool addInterface(const InterfaceConfig& config) override;
   bool deleteInterface() override;
 

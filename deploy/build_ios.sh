@@ -12,9 +12,9 @@ mkdir -p $BUILD_DIR
 echo "Project dir: ${PROJECT_DIR}"
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=VPNNaruzhu
+APP_NAME=Sotka
 APP_FILENAME=$APP_NAME.app
-APP_DOMAIN=org.vpnnaruzhu.package
+APP_DOMAIN=org.sotka.package
 PLIST_NAME=$APP_NAME.plist
 
 
@@ -32,7 +32,7 @@ cmake --version
 clang -v
 
 # Generate XCodeProj
-$QT_BIN_DIR/qt-cmake . -B $BUILD_DIR -GXcode -DQT_HOST_PATH=$QT_MACOS_ROOT_DIR -DVPNN_VERSION=$VPNN_VERSION
+$QT_BIN_DIR/qt-cmake . -B $BUILD_DIR -GXcode -DQT_HOST_PATH=$QT_MACOS_ROOT_DIR -DSOTKA_VERSION=$SOTKA_VERSION
 
 KEYCHAIN=amnezia.build.ios.keychain
 KEYCHAIN_FILE=$HOME/Library/Keychains/${KEYCHAIN}-db
@@ -91,9 +91,9 @@ fi
 xcodebuild \
 "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN_FILE'" \
 -configuration Release \
--scheme VPNNaruzhu \
+-scheme Sotka \
 -destination "generic/platform=iOS,name=Any iOS'" \
--project $BUILD_DIR/VPNNaruzhu.xcodeproj
+-project $BUILD_DIR/Sotka.xcodeproj
 
 # restore keychain
 security default-keychain -s login.keychain

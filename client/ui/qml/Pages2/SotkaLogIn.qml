@@ -66,7 +66,7 @@ PageType {
             text: qsTr('Please, enter Telegram key')
         }
 
-        VPNNaruzhuTextField {
+        SotkaTextField {
             id: emailText
             objectName: 'emailText'
 
@@ -80,7 +80,7 @@ PageType {
             KeyNavigation.tab: continueButton
         }
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: continueButton
             Layout.topMargin: 12
             Layout.leftMargin: 16
@@ -98,7 +98,7 @@ PageType {
             }
         }
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: backButton
             Layout.topMargin: 12
             Layout.leftMargin: 16
@@ -112,7 +112,7 @@ PageType {
         }
     }
 
-    /*VPNNaruzhuButton {
+    /*SotkaButton {
         id: continueButton
         objectName: 'connectButton'
 
@@ -145,7 +145,7 @@ PageType {
                 return
             }
 
-            var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
+            var http = SotkaAPI.getEmailVerificationHTTPRequest(root.email)
 
             http.onreadystatechange = function() {
                 if(http.readyState === XMLHttpRequest.DONE) {
@@ -199,7 +199,7 @@ PageType {
         showError(error)
     }
 
-    VPNNaruzhuNotification {
+    SotkaNotification {
         id: errorNotification
         anchors.centerIn: parent
         text: root.error
@@ -213,7 +213,7 @@ PageType {
     }
 
     function getKeyFile() {
-        var http = VPNNaruzhuAPI.getRequestKeyHTTP(root.public_request_id)
+        var http = SotkaAPI.getRequestKeyHTTP(root.public_request_id)
 
         http.onreadystatechange = function() {
             if(http.readyState === XMLHttpRequest.DONE) {
@@ -234,7 +234,7 @@ PageType {
         http.send()
     }
 
-    VPNNaruzhuNotificationWithInput {
+    SotkaNotificationWithInput {
         id: inputOTPCode
         withCloseButton: true
         anchors.centerIn: parent
@@ -249,7 +249,7 @@ PageType {
                 return
             }
 
-            var http = VPNNaruzhuAPI.getOTPVerificationHTTPRequest()
+            var http = SotkaAPI.getOTPVerificationHTTPRequest()
 
             http.onreadystatechange = function() {
                 if(http.readyState === XMLHttpRequest.DONE) {

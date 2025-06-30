@@ -173,7 +173,7 @@ PageType {
         id: clientLogs
 
         readonly property string title: qsTr("Client logs")
-        readonly property string description: qsTr("VPNNaruzhu logs")
+        readonly property string description: qsTr("Sotka logs")
         readonly property bool isVisible: true
         readonly property var openLogsHandler: function() {
             SettingsController.openLogsFolder()
@@ -181,11 +181,11 @@ PageType {
         readonly property var exportLogsHandler: function() {
             var fileName = ""
             if (GC.isMobile()) {
-                fileName = "VPNNaruzhu.log"
+                fileName = "Sotka.log"
             } else {
                 fileName = SystemController.getFileName(qsTr("Save"),
                                                         qsTr("Logs files (*.log)"),
-                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu",
+                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/Sotka",
                                                         true,
                                                         ".log")
             }
@@ -202,7 +202,7 @@ PageType {
         id: serviceLogs
 
         readonly property string title: qsTr("Service logs")
-        readonly property string description: qsTr("VPNNaruzhu-service logs")
+        readonly property string description: qsTr("Sotka-service logs")
         readonly property bool isVisible: !GC.isMobile()
         readonly property var openLogsHandler: function() {
             SettingsController.openServiceLogsFolder()
@@ -210,11 +210,11 @@ PageType {
         readonly property var exportLogsHandler: function() {
             var fileName = ""
             if (GC.isMobile()) {
-                fileName = "VPNNaruzhu-service.log"
+                fileName = "Sotka-service.log"
             } else {
                 fileName = SystemController.getFileName(qsTr("Save"),
                                                         qsTr("Logs files (*.log)"),
-                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu-service",
+                                                        StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/Sotka-service",
                                                         true,
                                                         ".log")
             }

@@ -14,7 +14,7 @@ struct Log {
     }
   }
 
-  private static let appGroupID = "group.org.amnezia.VPNNaruzhu"
+  private static let appGroupID = "group.org.amnezia.Sotka"
 
   static let appLogURL = {
     let sharedContainerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupID)!

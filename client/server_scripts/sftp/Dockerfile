@@ -1,3 +1,3 @@
 FROM atmoz/sftp
 
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"

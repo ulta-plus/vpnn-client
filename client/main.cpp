@@ -20,9 +20,9 @@
 bool isAnotherInstanceRunning()
 {
     QLocalSocket socket;
-    socket.connectToServer("VPNNaruzhuInstance");
+    socket.connectToServer("SotkaInstance");
     if (socket.waitForConnected(500)) {
-        qWarning() << "VPNNaruzhu is already running";
+        qWarning() << "Sotka is already running";
         return true;
     }
     return false;

@@ -58,7 +58,7 @@ Rectangle {
             font.family: 'PT Root UI VF'
         }
 
-        VPNNaruzhuTextField {
+        SotkaTextField {
             id: input
 
             Layout.fillWidth: true
@@ -74,7 +74,7 @@ Rectangle {
             Layout.alignment: Qt.AlignBottom | Qt.AlignHCenter
             Layout.bottomMargin: 10
 
-            VPNNaruzhuButton {
+            SotkaButton {
                 implicitHeight: 30
                 implicitWidth: withCloseButton ? 100 : 140
 
@@ -91,7 +91,7 @@ Rectangle {
                 }
             }
 
-            VPNNaruzhuButton {
+            SotkaButton {
                 visible: withCloseButton
                 implicitHeight: 30
                 implicitWidth: withCloseButton ? 100 : 140

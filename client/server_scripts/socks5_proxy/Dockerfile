@@ -1,6 +1,6 @@
 FROM 3proxy/3proxy:latest
 
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"
 
 RUN mkdir -p /opt/amnezia
 RUN echo -e "#!/bin/bash\ntail -f /dev/null" > /opt/amnezia/start.sh

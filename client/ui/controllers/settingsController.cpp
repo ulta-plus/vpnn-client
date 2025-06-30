@@ -354,7 +354,7 @@ void SettingsController::disableHomeAdLabel()
     emit isHomeAdLabelVisibleChanged(false);
 }
 
-QString SettingsController::vpnNaruzhuGetApiBaseUrl() const
+QString SettingsController::sotkaGetApiBaseUrl() const
 {
     return m_settings->apiBaseUrl();
 }

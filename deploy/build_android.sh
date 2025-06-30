@@ -9,7 +9,7 @@ usage() {
 Usage:
   build_android [options] <artifact_types>
 
-Build VPNNaruzhu android client.
+Build Sotka android client.
 
 Artifact types:
  -u, --aab                        Build Android App Bundle (AAB)
@@ -98,7 +98,7 @@ echo "Using Android SDK in $ANDROID_SDK_ROOT"
 echo "Using Android NDK in $ANDROID_NDK_ROOT"
 
 # Run qt-cmake to configure build
-qt_cmake_opts=(-DVPNN_VERSION="$VPNN_VERSION")
+qt_cmake_opts=(-DSOTKA_VERSION="$SOTKA_VERSION")
 
 if [[ -v AAB || "$ABIS" = "all" ]]; then
   qt_cmake_opts+=(-DQT_ANDROID_BUILD_ALL_ABIS=ON)
@@ -138,7 +138,7 @@ fi
 export ANDROIDDEPLOYQT_RUN=1
 
 $QT_HOST_PATH/bin/androiddeployqt \
-  --input $OUT_APP_DIR/android-VPNNaruzhu-deployment-settings.json \
+  --input $OUT_APP_DIR/android-Sotka-deployment-settings.json \
   --output $OUT_APP_DIR/android-build \
   "${deployqt_opts[@]}"
 
@@ -164,7 +164,7 @@ $OUT_APP_DIR/android-build/gradlew \
 if [[ -v CI || -v MOVE_RESULT ]]; then
   echo "Moving APK/AAB..."
   if [ -v AAB ]; then
-    mv -u $OUT_APP_DIR/android-build/build/outputs/bundle/$BUILD_TYPE/VPNNaruzhu-$BUILD_TYPE.aab \
+    mv -u $OUT_APP_DIR/android-build/build/outputs/bundle/$BUILD_TYPE/Sotka-$BUILD_TYPE.aab \
        $PROJECT_DIR/deploy/build/
   fi
 
@@ -181,7 +181,7 @@ if [[ -v CI || -v MOVE_RESULT ]]; then
     IFS=';' read -r -a abi_array <<< "$ABIS"
     for ABI in "${abi_array[@]}"
     do
-      mv -u $OUT_APP_DIR/android-build/build/outputs/apk/$BUILD_TYPE/VPNNaruzhu-$ABI-$BUILD_TYPE.apk \
+      mv -u $OUT_APP_DIR/android-build/build/outputs/apk/$BUILD_TYPE/Sotka-$ABI-$BUILD_TYPE.apk \
        $PROJECT_DIR/deploy/build/
     done
   fi

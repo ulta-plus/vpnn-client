@@ -63,7 +63,7 @@ PageType {
             text: qsTr('Key is being used with another device.\nShould it be bonded to this device?')
         }
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: useHereButton
             Layout.topMargin: 60
             Layout.leftMargin: 16
@@ -80,7 +80,7 @@ PageType {
             }
         }
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: buyNewButton
             Layout.topMargin: 12
             Layout.leftMargin: 16
@@ -93,7 +93,7 @@ PageType {
         }
 
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: backButton
             Layout.topMargin: 12
             Layout.leftMargin: 16

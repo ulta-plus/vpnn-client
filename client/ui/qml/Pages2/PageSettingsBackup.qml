@@ -72,7 +72,7 @@ PageType {
                 Layout.fillWidth: true
 
                 textString: qsTr("The backup will contain your passwords and private keys for all servers added " +
-                                            "to VPNNaruzhu. Keep this information in a secure place.")
+                                            "to Sotka. Keep this information in a secure place.")
 
                 iconPath: "qrc:/images/controls/alert-circle.svg"
             }
@@ -89,11 +89,11 @@ PageType {
                 clickedFunc: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "VPNNaruzhu.backup"
+                        fileName = "Sotka.backup"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save backup file"),
                                                                 qsTr("Backup files (*.backup)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/Sotka",
                                                                 true,
                                                                 ".backup")
                     }

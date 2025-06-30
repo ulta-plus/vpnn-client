@@ -431,7 +431,7 @@ PageType {
         }
     }
 
-    VPNNaruzhuNotification {
+    SotkaNotification {
         id: notification
         objectName: "notification"
         anchors.centerIn: parent

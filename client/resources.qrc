@@ -132,11 +132,11 @@
         <file>ui/qml/Components/AddSitePanel.qml</file>
         <file>ui/qml/Config/GlobalConfig.qml</file>
         <file>ui/qml/Config/qmldir</file>
-        <file>ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuNotification.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuTextField.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuButton.qml</file>
+        <file>ui/qml/Controls2/SotkaNotificationWithInput.qml</file>
+        <file>ui/qml/Controls2/SotkaNotification.qml</file>
+        <file>ui/qml/Controls2/SotkaYesNoNotification.qml</file>
+        <file>ui/qml/Controls2/SotkaTextField.qml</file>
+        <file>ui/qml/Controls2/SotkaButton.qml</file>
         <file>ui/qml/Controls2/BackButtonType.qml</file>
         <file>ui/qml/Controls2/BasicButtonType.qml</file>
         <file>ui/qml/Controls2/BusyIndicatorType.qml</file>
@@ -182,7 +182,7 @@
         <file>ui/qml/Controls2/WarningType.qml</file>
         <file>ui/qml/Filters/ContainersModelFilters.qml</file>
         <file>ui/qml/main2.qml</file>
-        <file>ui/qml/Modules/WebAPI/VPNNaruzhuAPI.qml</file>
+        <file>ui/qml/Modules/WebAPI/SotkaAPI.qml</file>
         <file>ui/qml/Modules/WebAPI/qmldir</file>
         <file>ui/qml/Modules/Style/Sotka.qml</file>
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>

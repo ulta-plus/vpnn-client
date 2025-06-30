@@ -48,7 +48,7 @@ PageType {
             text: qsTr("Do you already have a Telegram Key?")
         }
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: logInButton
             Layout.topMargin: 23
             Layout.leftMargin: 16
@@ -66,7 +66,7 @@ PageType {
             }
         }
 
-        VPNNaruzhuButton {
+        SotkaButton {
             id: telegramButton
             Layout.topMargin: 12
             Layout.leftMargin: 16

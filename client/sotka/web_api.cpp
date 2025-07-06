@@ -22,6 +22,7 @@ static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comme
         }
     } else {
         qDebug() << "Reply failed: " << comment;
+        qDebug() << reply->readAll();
     }
 
     return QJsonDocument();
@@ -45,9 +46,11 @@ void SotkaWebApi::initRequest(QNetworkRequest &request,
 {
     request.setTransferTimeout(10000);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-    request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
+    qDebug() << "UUID: " << m_settings->getInstallationUuid(true).toUtf8();
+    request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
+    qDebug() << "user_agent" << user_agent;
     request.setUrl(url);
 }
 
@@ -66,8 +69,9 @@ QNetworkReply* SotkaWebApi::replyGetRequest(const QNetworkRequest &request) cons
 QJsonDocument SotkaWebApi::getDefaultAccountStatus(void) const
 {
     QString url = getApiBaseUrl()
-                + "/api/v1/mobile_request?public_request_id="
+                + "/client-api/v1/get-request?public_request_id="
                 + getPublicRequestId();
+    qDebug() << url;
 
     QNetworkRequest request;
     initRequest(request, url);
@@ -121,6 +125,7 @@ QJsonDocument SotkaWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
+/*  Currently Sotka doesn't support dynamic ApiBase URL
 void SotkaWebApi::updateApiBaseUrl(void) const
 {
     QJsonDocument config = downloadJsonFile(amnezia_config_url);
@@ -131,7 +136,9 @@ void SotkaWebApi::updateApiBaseUrl(void) const
         m_settings->setApiBaseUrl(apiBaseUrl);
     }
 }
+*/
 
+/* Currently Sotka doesn't support smart routing
 void SotkaWebApi::updateSmartRouting(void) const
 {
     QJsonDocument json_doc = downloadJsonFile(smart_routs_url);
@@ -156,3 +163,4 @@ void SotkaWebApi::updateSmartRouting(void) const
         }
     }
 }
+*/

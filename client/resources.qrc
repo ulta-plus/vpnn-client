@@ -192,7 +192,7 @@
         <file>ui/qml/Pages2/SotkaKeyBinding.qml</file>
         <file>ui/qml/Pages2/PageDeinstalling.qml</file>
         <file>ui/qml/Pages2/PageDevMenu.qml</file>
-        <file>ui/qml/Pages2/PageHome.qml</file>
+        <file>ui/qml/Pages2/SotkaPageHome.qml</file>
         <file>ui/qml/Pages2/PageProtocolAwgSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolCloakSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolOpenVpnSettings.qml</file>
@@ -247,7 +247,7 @@
         <file>ui/qml/Pages2/PageSettingsApiNativeConfigs.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiDevices.qml</file>
         <file>images/controls/monitor.svg</file>
-        <file>images/sotka_logo.png</file>
+        <file>images/start_logo.png</file>
         <file>images/controls/email.svg</file>
         <file>images/controls/tabBarChat.svg</file>
         <file>images/controls/chat.svg</file>

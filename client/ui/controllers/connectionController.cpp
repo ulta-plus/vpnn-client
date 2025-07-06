@@ -167,7 +167,9 @@ void ConnectionController::toggleConnection()
     } else if (isConnected()) {
         closeConnection();
     } else {
+        /* Currently Sotka doesn't support smart routing
         emit updateSmartRouting();
+        */
         emit prepareConfig();
     }
 }

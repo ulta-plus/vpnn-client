@@ -34,7 +34,7 @@ PageType {
             PageController.closePage() // close installing page
             PageController.closePage() // close protocol settings page
 
-            if (stackView.currentItem.objectName === PageController.getPagePath(PageEnum.PageHome)) {
+            if (stackView.currentItem.objectName === PageController.getPagePath(PageEnum.SotkaPageHome)) {
                 PageController.restorePageHomeState(true)
             }
 

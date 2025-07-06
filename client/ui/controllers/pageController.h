@@ -12,7 +12,7 @@ namespace PageLoader
     Q_NAMESPACE
     enum class PageEnum {
         PageStart = 0,
-        PageHome,
+        SotkaPageHome,
         PageShare,
         PageDeinstalling,
 

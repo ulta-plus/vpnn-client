@@ -65,7 +65,9 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
+            /* Currently Sotka doesn't support
             VPNNWebApi.updateApiBaseUrl()
+            */
             VPNNWebApi.updateDefaultAccountStatus()
         }
 

@@ -164,11 +164,13 @@ void CoreController::initSotkaExtension()
         m_sitesController.get(), &SitesController::addSite);
     connect(this, &CoreController::toggleConnection, m_connectionController.get(),
         &ConnectionController::toggleConnection, Qt::QueuedConnection);
+    /* Currently Sotka doesn't support smart routing
     connect( m_connectionController.get()
            , &ConnectionController::updateSmartRouting
            , m_webApi.get()
            , &SotkaWebApi::updateSmartRouting
            );
+    */
 }
 
 void CoreController::initAndroidController()

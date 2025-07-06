@@ -4,8 +4,11 @@ import QtQuick
 
 QtObject {
     property QtObject color: QtObject {
-        readonly property color text: '#000000'
+        readonly property color black: '#000000'
+        readonly property color white: '#FFFFFF'
         readonly property color yellow: '#FFDA00'
+        readonly property color red: '#FF0000'
+        readonly property color text: '#000000'
         readonly property color mainBackGround: '#FFFFFF'
         readonly property color buttonText: '#000000'
         readonly property color buttonDefault: 'transparent'

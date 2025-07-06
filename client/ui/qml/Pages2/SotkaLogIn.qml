@@ -13,8 +13,6 @@ import '../Controls2/TextTypes'
 PageType {
     id: root
 
-    property string email: ''
-    property string otpCode: ''
     property string public_request_id: ''
     property string error: ''
     property string account_status: ''
@@ -42,7 +40,7 @@ PageType {
 
         Image {
             id: image
-            source: "qrc:/images/sotka_logo.png"
+            source: "qrc:/images/start_logo.png"
 
             Layout.alignment: Qt.AlignCenter
             Layout.topMargin: 135
@@ -67,8 +65,8 @@ PageType {
         }
 
         SotkaTextField {
-            id: emailText
-            objectName: 'emailText'
+            id: telegramKey
+            objectName: 'telegramKey'
 
             Layout.fillWidth: true
             Layout.topMargin: 23
@@ -94,6 +92,9 @@ PageType {
             mainText: qsTr('Continue')
 
             onClicked: {
+                public_request_id = telegramKey.text.trim()
+                ImportController.createDefaultAccountWithPublicId(public_request_id)
+                VPNNWebApi.updateDefaultAccountStatus()
                 PageController.goToPage(PageEnum.SotkaKeyBinding)
             }
         }

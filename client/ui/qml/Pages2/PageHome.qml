@@ -158,6 +158,7 @@ PageType {
         }
     }
 
+/* There is no possibility to change servers in the Sotka
     DrawerType2 {
         id: drawer
         objectName: "drawerProtocol"
@@ -448,4 +449,5 @@ PageType {
             }
         }
     }
+*/
 }

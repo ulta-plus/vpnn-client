@@ -29,6 +29,7 @@ public:
                               const std::shared_ptr<Settings> &settings, QObject *parent = nullptr);
 
 public slots:
+    void createDefaultAccountWithPublicId(QString public_request_id);
     void updateDefaultAccountConfig();
     bool extractDefaultAccountConfig(QString email, QString config, QString account_status);
     bool extractDefaultAccountDummyConfig(QString email, QString account_status);

@@ -232,7 +232,7 @@
         <translation>Переподключение...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="74"/>
+        <location filename="../ui/controllers/connectionController.h" line="76"/>
         <location filename="../ui/controllers/connectionController.cpp" line="98"/>
         <location filename="../ui/controllers/connectionController.cpp" line="113"/>
         <location filename="../ui/controllers/connectionController.cpp" line="119"/>
@@ -284,7 +284,7 @@
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="386"/>
+        <location filename="../core/controllers/coreController.cpp" line="388"/>
         <source>Your account blocked</source>
         <translation>Ваш аккаунт заблокирован</translation>
     </message>
@@ -369,9 +369,9 @@ Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="764"/>
-        <location filename="../ui/controllers/importController.cpp" line="781"/>
-        <location filename="../ui/controllers/importController.cpp" line="798"/>
+        <location filename="../ui/controllers/importController.cpp" line="773"/>
+        <location filename="../ui/controllers/importController.cpp" line="790"/>
+        <location filename="../ui/controllers/importController.cpp" line="807"/>
         <source>Default Key</source>
         <translation>Стандартный ключ</translation>
     </message>
@@ -547,29 +547,24 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="77"/>
         <source>Logging enabled</source>
-        <translation>Логирование включено</translation>
+        <translation type="vanished">Логирование включено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="105"/>
         <source>Subscription valid until</source>
-        <translation>Подписка действительна до</translation>
+        <translation type="vanished">Подписка действительна до</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="106"/>
         <source>Renew Subscription</source>
-        <translation>Продлить Подписку</translation>
+        <translation type="vanished">Продлить Подписку</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="372"/>
         <source>VPN protocol</source>
-        <translation>VPN-протокол</translation>
+        <translation type="vanished">VPN-протокол</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="425"/>
         <source>Keys</source>
-        <translation>Ключи</translation>
+        <translation type="vanished">Ключи</translation>
     </message>
 </context>
 <context>
@@ -4627,57 +4622,57 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="66"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="64"/>
         <source>Please, enter Telegram key</source>
         <translation>Введите ключ из Telegram-бота</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="78"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="76"/>
         <source>Telegram key</source>
         <translation>Введите ключ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="94"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="92"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="107"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="108"/>
         <source>Return back</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="193"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="194"/>
         <source>Cannot connect to Sever</source>
         <translation type="unfinished">Нет соединения с сервером</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="195"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="196"/>
         <source>UNKNOWN ERROR: </source>
         <translation type="unfinished">Неизвестная ошибка: </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="224"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="225"/>
         <source>Wrong Key File</source>
         <translation type="unfinished">Получен неправильный ключ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="241"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="242"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished">Введите код из e-mail</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="242"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="243"/>
         <source>Send</source>
         <translation type="unfinished">Отправить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="243"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="244"/>
         <source>code</source>
         <translation type="unfinished">код</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="269"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="270"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished">Неправильный формат пустого ключа</translation>
     </message>
@@ -4753,6 +4748,24 @@ Should it be bonded to this device?</source>
     <message>
         <source>Wrong Dummy Key File</source>
         <translation type="vanished">Неправильный формат пустого ключа</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaPageHome</name>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
+        <source>Logging enabled</source>
+        <translation type="unfinished">Логирование включено</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="105"/>
+        <source>Subscription valid until</source>
+        <translation type="unfinished">Подписка действительна до</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="106"/>
+        <source>Renew Subscription</source>
+        <translation type="unfinished">Продлить Подписку</translation>
     </message>
 </context>
 <context>
@@ -4902,12 +4915,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="201"/>
+        <location filename="../ui/qml/main2.qml" line="203"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="222"/>
+        <location filename="../ui/qml/main2.qml" line="224"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

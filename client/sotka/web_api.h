@@ -35,10 +35,17 @@ public:
     QJsonDocument downloadJsonFile(const QString &url) const;
 
 public slots:
+    /* Currently Sotka doesn't support smart routing and update ApiBase URL
     void updateApiBaseUrl(void) const;
     void updateSmartRouting(void) const;
+    */
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
+
+    QString getApiBaseUrl(void) const
+    {
+        return m_settings->getApiBaseUrl();
+    }
 
 private:
     SotkaWebApi();
@@ -49,16 +56,13 @@ private:
     QQmlApplicationEngine* m_engine;
     ImportController* m_importController;
 
-    const QString user_agent = "naruzhu-desktop/" APP_VERSION;
+    const QString user_agent = "sotka-desktop/" APP_VERSION;
+    /* Currently Sotka doesn't support smart routing
     const QString amnezia_config_url =
         "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json";
     const QString smart_routs_url =
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
-
-    QString getApiBaseUrl(void) const
-    {
-        return m_settings->apiBaseUrl();
-    }
+    */
 
     QString getPublicRequestId(void) const
     {

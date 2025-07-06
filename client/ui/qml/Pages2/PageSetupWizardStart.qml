@@ -24,7 +24,7 @@ PageType {
 
         Image {
             id: image
-            source: "qrc:/images/sotka_logo.png"
+            source: "qrc:/images/start_logo.png"
 
             Layout.alignment: Qt.AlignCenter
             Layout.topMargin: 135

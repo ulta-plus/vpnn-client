@@ -3,7 +3,7 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    readonly property string api_url: SettingsController.sotkaGetApiBaseUrl()
+    readonly property string api_url: VPNNWebApi.getApiBaseUrl()
     readonly property string user_agent: 'naruzhu-desktop/2.1.5.0'
 
     function createGetRequest(request) {

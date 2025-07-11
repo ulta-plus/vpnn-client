@@ -125,6 +125,11 @@ QJsonDocument SotkaWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
+QJsonDocument SotkaWebApi::getAccountStatusWithPublicId(QString public_id)
+{
+
+}
+
 /*  Currently Sotka doesn't support dynamic ApiBase URL
 void SotkaWebApi::updateApiBaseUrl(void) const
 {

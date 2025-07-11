@@ -14,6 +14,7 @@ PageType {
     id: root
 
     property string public_request_id: ''
+    property string telegram_key: ''
     property string error: ''
     property string account_status: ''
 
@@ -92,10 +93,12 @@ PageType {
             mainText: qsTr('Continue')
 
             onClicked: {
-                public_request_id = telegramKey.text.trim()
-                ImportController.createDefaultAccountWithPublicId(public_request_id)
-                VPNNWebApi.updateDefaultAccountStatus()
-                PageController.goToPage(PageEnum.SotkaKeyBinding)
+                telegram_key = telegramKey.text.trim()
+                public_request_id = ImportController.getPublicIdFromTelegramKey(telegram_key)
+                print(public_request_id)
+                //ImportController.createDefaultAccountWithPublicId(public_request_id)
+                //VPNNWebApi.updateDefaultAccountStatus()
+                //PageController.goToPage(PageEnum.SotkaKeyBinding)
             }
         }
 

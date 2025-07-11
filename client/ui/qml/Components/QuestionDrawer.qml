@@ -51,38 +51,35 @@ DrawerType2 {
             text: descriptionText
         }
 
-        BasicButtonType {
+        SotkaButton {
             id: yesButton
             Layout.fillWidth: true
             Layout.topMargin: 16
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            text: yesButtonText
+            defaultColor: Sotka.color.yellow
+            hoveredColor: Sotka.color.yellow
+            pressedColor: Sotka.color.yellow
 
-            clickedFunc: function() {
+            mainText: yesButtonText
+
+            onClicked: {
                 if (yesButtonFunction && typeof yesButtonFunction === "function") {
                     yesButtonFunction()
                 }
             }
         }
 
-        BasicButtonType {
+        SotkaButton {
             id: noButton
             Layout.fillWidth: true
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            defaultColor: AmneziaStyle.color.transparent
-            hoveredColor: AmneziaStyle.color.translucentWhite
-            pressedColor: AmneziaStyle.color.sheerWhite
-            disabledColor: AmneziaStyle.color.mutedGray
-            textColor: AmneziaStyle.color.paleGray
-            borderWidth: 1
+            mainText: noButtonText
 
-            text: noButtonText
-
-            clickedFunc: function() {
+            onClicked: {
                 if (noButtonFunction && typeof noButtonFunction === "function") {
                     noButtonFunction()
                 }

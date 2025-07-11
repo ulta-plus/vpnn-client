@@ -375,9 +375,9 @@ Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="773"/>
-        <location filename="../ui/controllers/importController.cpp" line="790"/>
-        <location filename="../ui/controllers/importController.cpp" line="807"/>
+        <location filename="../ui/controllers/importController.cpp" line="771"/>
+        <location filename="../ui/controllers/importController.cpp" line="788"/>
+        <location filename="../ui/controllers/importController.cpp" line="805"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -529,12 +529,12 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageDeinstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="63"/>
+        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="65"/>
         <source>Removing services from %1</source>
         <translation>سروسز کو %1 سے ہٹایا جا رہا ہے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="88"/>
+        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="90"/>
         <source>Usually it takes no more than 5 minutes</source>
         <translation>عام طور پر اس میں 5 منٹ سے زیادہ نہیں لگتا ہے</translation>
     </message>
@@ -2614,19 +2614,16 @@ Already installed containers were found on the server. All installed containers 
         <translation type="vanished">محفوظ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="131"/>
         <source>Protocols</source>
-        <translation>پروٹوکولات</translation>
+        <translation type="vanished">پروٹوکولات</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="142"/>
         <source>Services</source>
-        <translation>خدمات</translation>
+        <translation type="vanished">خدمات</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="151"/>
         <source>Management</source>
-        <translation>مینجمنٹ</translation>
+        <translation type="vanished">مینجمنٹ</translation>
     </message>
 </context>
 <context>
@@ -3077,38 +3074,38 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardInstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="22"/>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="71"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="24"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="73"/>
         <source>Usually it takes no more than 5 minutes</source>
         <translation>عموماً یہ 5 منٹ سے زیادہ نہیں لیتا</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="59"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="61"/>
         <source>The server has already been added to the application</source>
         <translation>سرور پہلے ہی ایپلیکیشن میں شامل کر دیا گیا ہے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
         <source>Amnezia has detected that your server is currently </source>
         <translation>ایمنیزیا نے دریافت کیا ہے کہ آپ کا سرور موجودہ </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="66"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="68"/>
         <source>busy installing other software. Amnezia installation </source>
         <translation>مصروف ہے اور دوسرے سافٹ ویئر کی انسٹالیشن کر رہا ہے </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="164"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="166"/>
         <source>Cancel installation</source>
         <translation>انسٹالیشن منسوخ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="69"/>
         <source>will pause until the server finishes installing other software</source>
         <translation>دوسرے سافٹ ویئر کی انسٹالیشن ختم ہونے تک انتظار کرے گا</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="125"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="127"/>
         <source>Installing</source>
         <translation>انسٹال ہو رہی ہے</translation>
     </message>
@@ -3526,39 +3523,12 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="187"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
-        <translation>لاگنگ کو 14 دنوں کے بعد غیر فعال کر دیا گیا، لاگ فائلوں کو حذف کر دیا گیا</translation>
+        <translation type="vanished">لاگنگ کو 14 دنوں کے بعد غیر فعال کر دیا گیا، لاگ فائلوں کو حذف کر دیا گیا</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="191"/>
         <source>Settings restored from backup file</source>
-        <translation type="unfinished">ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="197"/>
-        <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="415"/>
-        <source>Cannot sign out with an active connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="418"/>
-        <source>Sign out?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="419"/>
-        <source>Continue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="420"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
     </message>
 </context>
 <context>
@@ -4696,57 +4666,57 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="64"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="65"/>
         <source>Please, enter Telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="76"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="77"/>
         <source>Telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="93"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="108"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="194"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="197"/>
         <source>Cannot connect to Sever</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="196"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="199"/>
         <source>UNKNOWN ERROR: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="225"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="228"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="242"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="245"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="243"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="246"/>
         <source>Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="244"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="247"/>
         <source>code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="273"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4780,18 +4750,32 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
         <source>Logging enabled</source>
-        <translation type="unfinished">لاگنگ فعال ہے</translation>
+        <translation type="obsolete">لاگنگ فعال ہے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="105"/>
-        <source>Subscription valid until</source>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="65"/>
+        <source>Log Out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="106"/>
-        <source>Renew Subscription</source>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="80"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="83"/>
+        <source>Log out?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="84"/>
+        <source>Continue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="85"/>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4804,6 +4788,24 @@ Should it be bonded to this device?</source>
     <message>
         <source>Open key file</source>
         <translation type="obsolete">کنفیگ فائل کو کھولیں</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaPageStart</name>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="183"/>
+        <source>Logging was disabled after 14 days, log files were deleted</source>
+        <translation type="unfinished">لاگنگ کو 14 دنوں کے بعد غیر فعال کر دیا گیا، لاگ فائلوں کو حذف کر دیا گیا</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="187"/>
+        <source>Settings restored from backup file</source>
+        <translation type="unfinished">ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="193"/>
+        <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

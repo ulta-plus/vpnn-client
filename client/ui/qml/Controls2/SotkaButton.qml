@@ -7,6 +7,9 @@ Button {
     id: root
 
     property string mainText: ''
+    property bool isUpperCase: true
+    property int textWeight: 700
+
     property string disableColor: Sotka.color.buttonDisable
     property string hoveredColor: Sotka.color.buttonHovered
     property string defaultColor: Sotka.color.buttonDefault
@@ -30,9 +33,9 @@ Button {
 
         color: root.textColor
         font.pixelSize: 16
-        font.weight: 700
+        font.weight: root.textWeight
         font.family: Sotka.font
-        font.capitalization: Font.AllUppercase
+        font.capitalization: root.isUpperCase ? Font.AllUppercase : Font.MixedCase
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -58,5 +61,13 @@ Button {
         Behavior on color {
             PropertyAnimation { duration: 200 }
         }
+    }
+
+    MouseArea
+    {
+        id: mouseArea
+        anchors.fill: parent
+        enabled: false
+        cursorShape: Qt.PointingHandCursor
     }
 }

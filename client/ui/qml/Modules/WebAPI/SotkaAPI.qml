@@ -4,7 +4,7 @@ import QtQuick
 
 QtObject {
     readonly property string api_url: VPNNWebApi.getApiBaseUrl()
-    readonly property string user_agent: 'naruzhu-desktop/2.1.5.0'
+    readonly property string user_agent: VPNNWebApi.getUserAgent()
 
     function createGetRequest(request) {
         var http = new XMLHttpRequest()

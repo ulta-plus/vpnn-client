@@ -217,7 +217,6 @@
         <file>ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml</file>
         <file>ui/qml/Pages2/PageSettingsLogging.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerData.qml</file>
-        <file>ui/qml/Pages2/PageSettingsServerInfo.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerProtocol.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerServices.qml</file>
@@ -239,7 +238,7 @@
         <file>ui/qml/Pages2/PageSetupWizardViewConfig.qml</file>
         <file>ui/qml/Pages2/PageShare.qml</file>
         <file>ui/qml/Pages2/PageShareFullAccess.qml</file>
-        <file>ui/qml/Pages2/PageStart.qml</file>
+        <file>ui/qml/Pages2/SotkaPageStart.qml</file>
         <file>ui/qml/Components/RenameServerDrawer.qml</file>
         <file>ui/qml/Controls2/ListViewType.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiSupport.qml</file>

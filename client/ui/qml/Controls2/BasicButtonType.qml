@@ -17,8 +17,8 @@ Button {
 
     property string textColor: AmneziaStyle.color.midnightBlack
 
-    property string borderColor: AmneziaStyle.color.paleGray
-    property string borderFocusedColor: AmneziaStyle.color.paleGray
+    property string borderColor: Sotka.color.buttonBorder
+    property string borderFocusedColor: Sotka.color.buttonBorderFocused
     property int borderWidth: 0
     property int borderFocusedWidth: 1
 

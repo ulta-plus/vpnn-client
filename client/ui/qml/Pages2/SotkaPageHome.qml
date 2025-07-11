@@ -46,41 +46,52 @@ PageType {
             anchors.topMargin: 12
             anchors.bottomMargin: 16
 
-            AdLabel {
-                id: adLabel
+            RowLayout {
+                anchors.fill: parent
+                anchors.leftMargin: 16
+                anchors.rightMargin: 16
 
-                Layout.fillWidth: true
-                Layout.preferredHeight: adLabel.contentHeight
-                Layout.leftMargin: 16
-                Layout.rightMargin: 16
-                Layout.bottomMargin: 22
-            }
+                Image {
+                    id: logo
+                    source: "qrc:/images/start_logo.png"
 
-            BasicButtonType {
-                id: loggingButton
-                objectName: "loggingButton"
+                    Layout.alignment: Qt.AlignLeft
+                    Layout.preferredWidth: 102
+                    Layout.preferredHeight: 24
+                }
 
-                property bool isLoggingEnabled: SettingsController.isLoggingEnabled
+                SotkaButton {
+                    id: logOutButton
+                    mainText: qsTr("Log Out")
+                    textWeight: 500
+                    isUpperCase: false
 
-                Layout.alignment: Qt.AlignHCenter
+                    borderWidth: 0
+                    borderFocusedWidth: 0
+                    buttonWidth: 65
+                    buttonHeight: 24
 
-                implicitHeight: 36
+                    Layout.leftMargin: 175
+                    Layout.rightMargin: 16
+                    Layout.alignment: Qt.AlignRight
 
-                defaultColor: AmneziaStyle.color.transparent
-                hoveredColor: AmneziaStyle.color.translucentWhite
-                pressedColor: AmneziaStyle.color.sheerWhite
-                disabledColor: AmneziaStyle.color.mutedGray
-                textColor: AmneziaStyle.color.mutedGray
-                borderWidth: 0
-
-                visible: isLoggingEnabled ? true : false
-                text: qsTr("Logging enabled")
-
-                Keys.onEnterPressed: loggingButton.clicked()
-                Keys.onReturnPressed: loggingButton.clicked()
-
-                onClicked: {
-                    PageController.goToPage(PageEnum.PageSettingsLogging)
+                    onClicked: {
+                         if (ConnectionController.isConnected || ConnectionController.isConnectionInProgress) {
+                            notification.text = qsTr('Cannot sign out with an active connection')
+                            notification.visible = true
+                        } else {
+                            var headerText = qsTr('Log out?')
+                            var yesButtonText = qsTr("Continue")
+                            var noButtonText = qsTr("Cancel")
+                            var yesButtonFunction = function() {
+                                ServersModel.removeDefaultAccount()
+                                PageController.goToPageHome()
+                            }
+                            var noButtonFunction = function() {
+                            }
+                            showQuestionDrawer(headerText, '', yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+                        }
+                    }
                 }
             }
 
@@ -90,8 +101,6 @@ PageType {
 
                 Layout.fillHeight: true
                 Layout.alignment: Qt.AlignCenter
-
-                KeyNavigation.tab: drawer // issue_5 splitTunnelingButton
             }
 
         /*

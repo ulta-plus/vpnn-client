@@ -111,7 +111,7 @@ Window  {
         }
     }
 
-    PageStart {
+    SotkaPageStart {
         objectName: "pageStart"
 
         width: root.width

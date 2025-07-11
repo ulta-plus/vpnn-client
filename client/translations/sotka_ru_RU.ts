@@ -369,9 +369,9 @@ Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="773"/>
-        <location filename="../ui/controllers/importController.cpp" line="790"/>
-        <location filename="../ui/controllers/importController.cpp" line="807"/>
+        <location filename="../ui/controllers/importController.cpp" line="771"/>
+        <location filename="../ui/controllers/importController.cpp" line="788"/>
+        <location filename="../ui/controllers/importController.cpp" line="805"/>
         <source>Default Key</source>
         <translation>Стандартный ключ</translation>
     </message>
@@ -521,12 +521,12 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageDeinstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="63"/>
+        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="65"/>
         <source>Removing services from %1</source>
         <translation>Удаление сервисов c %1</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="88"/>
+        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="90"/>
         <source>Usually it takes no more than 5 minutes</source>
         <translation>Обычно это занимает не более 5 минут</translation>
     </message>
@@ -2601,19 +2601,16 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsServerInfo</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="131"/>
         <source>Protocols</source>
-        <translation>Протоколы</translation>
+        <translation type="vanished">Протоколы</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="142"/>
         <source>Services</source>
-        <translation>Сервисы</translation>
+        <translation type="vanished">Сервисы</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerInfo.qml" line="151"/>
         <source>Management</source>
-        <translation>Управление</translation>
+        <translation type="vanished">Управление</translation>
     </message>
 </context>
 <context>
@@ -3060,38 +3057,38 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardInstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="59"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="61"/>
         <source>The server has already been added to the application</source>
         <translation>Сервер уже был добавлен в приложение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
         <source>Amnezia has detected that your server is currently </source>
         <translation>Amnezia обнаружила, что ваш сервер в настоящее время </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="66"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="68"/>
         <source>busy installing other software. Amnezia installation </source>
         <translation>занят установкой других протоколов или сервисов. Установка Amnezia </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="69"/>
         <source>will pause until the server finishes installing other software</source>
         <translation>будет приостановлена до тех пор, пока сервер не завершит установку другого ПО</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="125"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="127"/>
         <source>Installing</source>
         <translation>Установка</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="164"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="166"/>
         <source>Cancel installation</source>
         <translation>Отменить установку</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="22"/>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="71"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="24"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="73"/>
         <source>Usually it takes no more than 5 minutes</source>
         <translation>Обычно это занимает не более 5 минут</translation>
     </message>
@@ -3501,39 +3498,28 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="187"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
-        <translation>Логирование было отключено по прошествии 14 дней, файлы логов были удалены.</translation>
+        <translation type="vanished">Логирование было отключено по прошествии 14 дней, файлы логов были удалены.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="191"/>
         <source>Settings restored from backup file</source>
-        <translation>Настройки восстановлены из бэкап файла</translation>
+        <translation type="vanished">Настройки восстановлены из бэкап файла</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="197"/>
-        <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="415"/>
         <source>Cannot sign out with an active connection</source>
-        <translation>Нельзя выйти при активном соединении</translation>
+        <translation type="vanished">Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="418"/>
         <source>Sign out?</source>
-        <translation>Выйти из акаунта?</translation>
+        <translation type="vanished">Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="419"/>
         <source>Continue</source>
-        <translation>Продолжить</translation>
+        <translation type="vanished">Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="420"/>
         <source>Cancel</source>
-        <translation>Отменить</translation>
+        <translation type="vanished">Отменить</translation>
     </message>
 </context>
 <context>
@@ -4075,6 +4061,27 @@ Already installed containers were found on the server. All installed containers 
         <translation>Создайте на сервере файловое хранилище для безопасного хранения и передачи файлов.</translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="215"/>
+        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
+It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="226"/>
+        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+
+* Available in the Sotka only on Windows
+* Low power consumption, on mobile devices
+* Minimal configuration
+* Recognised by DPI analysis systems
+* Works over UDP network protocol, ports 500 and 4500.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="238"/>
         <source>DNS Service</source>
         <translation>Сервис DNS</translation>
@@ -4138,6 +4145,26 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="169"/>
+        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against detection.
+
+OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
+
+Cloak protects OpenVPN from detection. 
+
+Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
+
+Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
+
+* Available in the Sotka across all platforms
+* High power consumption on mobile devices
+* Flexible settings
+* Not recognised by detection systems
+* Works over TCP network protocol, 443 port.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="186"/>
         <source>A relatively new popular VPN protocol with a simplified architecture.
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
@@ -4189,47 +4216,6 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 * Настраиваемый протокол шифрования
 * Распознается некоторыми системами DPI-анализа
 * Работает по сетевому протоколу TCP</translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="169"/>
-        <source>This is a combination of the OpenVPN protocol and the Cloak plugin designed specifically for protecting against detection.
-
-OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
-
-Cloak protects OpenVPN from detection. 
-
-Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
-
-Immediately after receiving the first data packet, Cloak authenticates the incoming connection. If authentication fails, the plugin masks the server as a fake website and your VPN becomes invisible to analysis systems.
-
-* Available in the Sotka across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by detection systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="215"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
-It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="226"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
-
-* Available in the Sotka only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="240"/>
@@ -4622,57 +4608,57 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="64"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="65"/>
         <source>Please, enter Telegram key</source>
         <translation>Введите ключ из Telegram-бота</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="76"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="77"/>
         <source>Telegram key</source>
         <translation>Введите ключ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="93"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="108"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
         <source>Return back</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="194"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="197"/>
         <source>Cannot connect to Sever</source>
         <translation type="unfinished">Нет соединения с сервером</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="196"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="199"/>
         <source>UNKNOWN ERROR: </source>
         <translation type="unfinished">Неизвестная ошибка: </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="225"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="228"/>
         <source>Wrong Key File</source>
         <translation type="unfinished">Получен неправильный ключ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="242"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="245"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished">Введите код из e-mail</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="243"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="246"/>
         <source>Send</source>
         <translation type="unfinished">Отправить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="244"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="247"/>
         <source>code</source>
         <translation type="unfinished">код</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="273"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished">Неправильный формат пустого ключа</translation>
     </message>
@@ -4753,19 +4739,29 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
-        <source>Logging enabled</source>
-        <translation type="unfinished">Логирование включено</translation>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="65"/>
+        <source>Log Out</source>
+        <translation type="unfinished">Выйти</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="105"/>
-        <source>Subscription valid until</source>
-        <translation type="unfinished">Подписка действительна до</translation>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="80"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation type="unfinished">Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="106"/>
-        <source>Renew Subscription</source>
-        <translation type="unfinished">Продлить Подписку</translation>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="83"/>
+        <source>Log out?</source>
+        <translation type="unfinished">Выйти?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="84"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продолжить</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="85"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Отменить</translation>
     </message>
 </context>
 <context>
@@ -4804,6 +4800,24 @@ Should it be bonded to this device?</source>
     <message>
         <source>Sign up with e-mail</source>
         <translation type="vanished">Регистрация по e-mail</translation>
+    </message>
+</context>
+<context>
+    <name>SotkaPageStart</name>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="183"/>
+        <source>Logging was disabled after 14 days, log files were deleted</source>
+        <translation type="unfinished">Логирование было отключено по прошествии 14 дней, файлы логов были удалены.</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="187"/>
+        <source>Settings restored from backup file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="193"/>
+        <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

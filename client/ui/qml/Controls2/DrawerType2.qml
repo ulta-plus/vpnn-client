@@ -18,8 +18,8 @@ Item {
     property Component collapsedStateContent
     property Component expandedStateContent
 
-    property string defaultColor: AmneziaStyle.color.onyxBlack
-    property string borderColor: AmneziaStyle.color.slateGray
+    property string defaultColor: Sotka.color.white
+    property string borderColor: Sotka.color.black
 
     property real expandedHeight
     property real collapsedHeight: 0
@@ -82,7 +82,7 @@ Item {
 
         function onClosed() {
             drawerContent.state = root.drawerCollapsedStateName
-            
+
             if (root.isCollapsedStateActive()) {
                 var initialPageNavigationBarColor = PageController.getInitialPageNavigationBarColor()
                 if (initialPageNavigationBarColor !== 0xFF1C1D21) {

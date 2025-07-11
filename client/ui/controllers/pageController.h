@@ -11,7 +11,7 @@ namespace PageLoader
 {
     Q_NAMESPACE
     enum class PageEnum {
-        PageStart = 0,
+        SotkaPageStart = 0,
         SotkaPageHome,
         PageShare,
         PageDeinstalling,
@@ -136,7 +136,9 @@ signals:
 
     void showBusyIndicator(bool visible);
     void disableControls(bool disabled);
+    /* Sotka has no tabBar
     void disableTabBar(bool disabled);
+    */
 
     void hideMainWindow();
     void raiseMainWindow();

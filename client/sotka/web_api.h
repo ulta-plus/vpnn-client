@@ -35,6 +35,7 @@ public:
     QJsonDocument downloadJsonFile(const QString &url) const;
 
 public slots:
+    QJsonDocument getAccountStatusWithPublicId(QString public_id);
     /* Currently Sotka doesn't support smart routing and update ApiBase URL
     void updateApiBaseUrl(void) const;
     void updateSmartRouting(void) const;
@@ -45,6 +46,11 @@ public slots:
     QString getApiBaseUrl(void) const
     {
         return m_settings->getApiBaseUrl();
+    }
+
+    QString getUserAgent(void) const
+    {
+        return user_agent;
     }
 
 private:

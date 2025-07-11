@@ -120,7 +120,7 @@ Button {
             }
 
             MouseArea {
-                anchors.fill: parent
+                anchors.fill: backgroundCircle
 
                 cursorShape: Qt.PointingHandCursor
                 enabled: false

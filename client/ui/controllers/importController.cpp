@@ -746,13 +746,11 @@ void ImportController::processAmneziaConfig(QJsonObject &config)
     }
 }
 
-void ImportController::createDefaultAccountWithPublicId(QString public_request_id)
+QString ImportController::getPublicIdFromTelegramKey(QString telegram_key)
 {
-    m_config = {};
-    m_config[config_key::is_default] = true;
-    m_config[config_key::public_request_id] = public_request_id;
-    m_serversModel->addServer(m_config);
-    m_config = {};
+    extractConfigFromData(telegram_key);
+    QString public_request_id = m_config[config_key::api_key].toString();
+    return public_request_id;
 }
 
 void ImportController::processDefaultAccountStatus(QString email, QString account_status)

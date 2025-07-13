@@ -810,3 +810,14 @@ void ImportController::updateDefaultAccountConfig()
     m_configFileName.clear();
     m_maliciousWarningText.clear();
 }
+
+/*
+void ImportController::createDefaultAccountWithPublicId(QString public_request_id)
+{
+    m_config = {};
+    m_config[config_key::is_default] = true;
+    m_config[config_key::public_request_id] = public_request_id;
+    m_serversModel->addServer(m_config);
+    m_config = {};
+}
+*/

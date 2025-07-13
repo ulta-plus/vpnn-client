@@ -37,7 +37,6 @@ PageType {
         objectName: "homeColumnItem"
 
         anchors.fill: parent
-        anchors.bottomMargin: drawer.collapsedHeight
 
         ColumnLayout {
             objectName: "homeColumnLayout"
@@ -47,9 +46,8 @@ PageType {
             anchors.bottomMargin: 16
 
             RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: 16
-                anchors.rightMargin: 16
+                Layout.leftMargin: 16
+                Layout.rightMargin: 16
 
                 Image {
                     id: logo

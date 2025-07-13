@@ -45,13 +45,18 @@ Rectangle {
         color: root.textColor
 
         font.pixelSize: root.textSize
-        font.weight: 400
-        font.family: 'PT Root UI VF'
+        font.weight: 600
+        font.family: Sotka.font
     }
 
     SotkaButton {
         implicitHeight: 30
         implicitWidth: (contentItem.implicitWidth > 80) ? contentItem.implicitWidth + 20 : 80
+
+        defaultColor: Sotka.color.white
+        disableColor: defaultColor
+        hoveredColor: defaultColor
+        pressedColor: defaultColor
 
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 10

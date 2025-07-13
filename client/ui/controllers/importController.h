@@ -29,6 +29,7 @@ public:
                               const std::shared_ptr<Settings> &settings, QObject *parent = nullptr);
 
 public slots:
+    //void createDefaultAccountWithPublicId(QString id);
     QString getPublicIdFromTelegramKey(QString telegram_key);
     void updateDefaultAccountConfig();
     bool extractDefaultAccountConfig(QString email, QString config, QString account_status);

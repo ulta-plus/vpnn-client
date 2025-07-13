@@ -55,8 +55,21 @@ Button {
             }
         }
 
-        border.color: root.hovered ? root.borderFocusedColor : root.borderColor
-        border.width: root.hovered ? root.borderFocusedWidth : root.borderWidth
+        border.color: {
+            if (root.enable) {
+                return root.hovered ? root.borderFocusedColor : root.borderColor
+            } else {
+                return root.borderColor
+            }
+        }
+
+        border.width: {
+            if (root.enable) {
+                return root.hovered ? root.borderFocusedWidth : root.borderWidth
+            } else {
+                return root.borderWidth
+            }
+        }
 
         Behavior on color {
             PropertyAnimation { duration: 200 }

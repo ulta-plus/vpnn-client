@@ -45,12 +45,11 @@ void SotkaWebApi::initRequest(QNetworkRequest &request,
     const QString &url) const
 {
     request.setTransferTimeout(10000);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    // For some reason Sotka server fails because of this line
+    //request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
-    qDebug() << "UUID: " << m_settings->getInstallationUuid(true).toUtf8();
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
-    qDebug() << "user_agent" << user_agent;
     request.setUrl(url);
 }
 
@@ -66,46 +65,75 @@ QNetworkReply* SotkaWebApi::replyGetRequest(const QNetworkRequest &request) cons
     return reply;
 }
 
-QJsonDocument SotkaWebApi::getDefaultAccountStatus(void) const
+QJsonDocument SotkaWebApi::getAccountStatus(QString public_request_id) const
 {
     QString url = getApiBaseUrl()
                 + "/client-api/v1/get-request?public_request_id="
-                + getPublicRequestId();
-    qDebug() << url;
+                + public_request_id;
 
     QNetworkRequest request;
     initRequest(request, url);
 
     QNetworkReply* reply = replyGetRequest(request);
-    return getJsonFromReply(reply, "getDefaultAccountStatus");
+    return getJsonFromReply(reply, "getAccountStatus");
+}
+
+QString SotkaWebApi::getAccountStatusStr(QString public_request_id) const
+{
+    QJsonDocument json_doc = getAccountStatus(public_request_id);
+    if (json_doc.isEmpty()) {
+        return QString();
+    } else {
+        return QString::fromUtf8(json_doc.toJson());
+    }
+}
+
+QJsonDocument SotkaWebApi::getDefaultAccountStatus(void) const
+{
+    return getAccountStatus(getDefaultPublicRequestId());
 }
 
 void SotkaWebApi::updateDefaultAccountStatus(void) const
 {
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return;
+    }
+
     QJsonDocument json_doc = getDefaultAccountStatus();
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot get default account status";
     } else {
         m_serversModel->updateDefaultAccountStatus(json_doc);
     }
+
+    if (json_doc[config_key::simplified_status].toString() == "Key limit exceeded") {
+        emit keyLimitExceeded();
+    }
 }
 
-QString SotkaWebApi::getDefaultAccountConfig(void) const
+QString SotkaWebApi::getDefaultAccountConfig(bool force_update_device) const
 {
     QString url = getApiBaseUrl()
-            + "/api/v1/wg_keys/download_mobile_request_key?public_request_id="
-            + getPublicRequestId();
+            + "/client-api/v1/download-awg-key?public_request_id="
+            + getDefaultPublicRequestId();
 
     QNetworkRequest request;
+    if (force_update_device) {
+        request.setRawHeader("force_update_device", "true");
+    }
     initRequest(request, url);
 
     QNetworkReply* reply = replyGetRequest(request);
     return getStringFromReply(reply, "getDefaultAccountConfig");
 }
 
-void SotkaWebApi::updateDefaultAccountConfig(void) const
+void SotkaWebApi::updateDefaultAccountConfig(bool force_update_device) const
 {
-    QString key = getDefaultAccountConfig();
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return;
+    }
+
+    QString key = getDefaultAccountConfig(force_update_device);
     if (key.isEmpty()) {
         qDebug() << "Cannot get default account config";
     } else {
@@ -123,11 +151,6 @@ QJsonDocument SotkaWebApi::downloadJsonFile(const QString &url) const
 
     QNetworkReply *reply = replyGetRequest(request);
     return getJsonFromReply(reply, "downloadJsonFile");
-}
-
-QJsonDocument SotkaWebApi::getAccountStatusWithPublicId(QString public_id)
-{
-
 }
 
 /*  Currently Sotka doesn't support dynamic ApiBase URL

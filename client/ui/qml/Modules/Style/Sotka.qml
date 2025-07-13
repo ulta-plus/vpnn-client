@@ -9,6 +9,7 @@ QtObject {
         readonly property color yellow: '#FFDA00'
         readonly property color red: '#FF0000'
         readonly property color text: '#000000'
+        readonly property color border: Sotka.color.black
         readonly property color mainBackGround: '#FFFFFF'
         readonly property color buttonText: '#000000'
         readonly property color buttonDefault: 'transparent'
@@ -17,9 +18,9 @@ QtObject {
         readonly property color buttonHovered: 'transparent'
         readonly property color buttonBorder: '#000000'
         readonly property color buttonBorderFocused: '#000000'
-        readonly property color notificationText: AmneziaStyle.color.paleGray
-        readonly property color notificationBorder: AmneziaStyle.color.slateGray
-        readonly property color notificationBackground: AmneziaStyle.color.onyxBlack
+        readonly property color notificationText: Sotka.color.text
+        readonly property color notificationBorder: Sotka.color.border
+        readonly property color notificationBackground: Sotka.color.yellow
         readonly property color textFieldText: '#000000'
         readonly property color textFieldBorder: '#000000'
         readonly property color textFieldBackgroundColor: 'transparent'

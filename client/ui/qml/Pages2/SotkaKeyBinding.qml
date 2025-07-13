@@ -77,6 +77,8 @@ PageType {
             mainText: qsTr('Use here')
 
             onClicked: {
+                VPNNWebApi.updateDefaultAccountConfig(true)
+                PageController.goToPageHome()
             }
         }
 

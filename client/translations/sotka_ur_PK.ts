@@ -179,7 +179,7 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>تشکیل کی تیاری کے دوران منقطع ہونا ممکن نہیں ہے</translation>
     </message>
@@ -4653,12 +4653,12 @@ Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="89"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="90"/>
         <source>Buy new key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="102"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="103"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4666,58 +4666,28 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="65"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="69"/>
         <source>Please, enter Telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="81"/>
         <source>Telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="93"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="97"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
-        <source>Return back</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="197"/>
-        <source>Cannot connect to Sever</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="199"/>
-        <source>UNKNOWN ERROR: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="228"/>
-        <source>Wrong Key File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="245"/>
-        <source>Enter a code from the e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="246"/>
-        <source>Send</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="247"/>
-        <source>code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="273"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="147"/>
         <source>Wrong Dummy Key File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="162"/>
+        <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4754,27 +4724,27 @@ Should it be bonded to this device?</source>
         <translation type="obsolete">لاگنگ فعال ہے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="65"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="63"/>
         <source>Log Out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="80"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="78"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="83"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="81"/>
         <source>Log out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="84"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="82"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="85"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="83"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4793,17 +4763,17 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaPageStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="183"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="178"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
         <translation type="unfinished">لاگنگ کو 14 دنوں کے بعد غیر فعال کر دیا گیا، لاگ فائلوں کو حذف کر دیا گیا</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="187"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="182"/>
         <source>Settings restored from backup file</source>
         <translation type="unfinished">ترتیبات بیک اپ فائل سے بحال کردی گئی ہیں</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="193"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="188"/>
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4937,12 +4907,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="203"/>
+        <location filename="../ui/qml/main2.qml" line="210"/>
         <source>Private key passphrase</source>
         <translation>نجی کلید پاس فریز</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="224"/>
+        <location filename="../ui/qml/main2.qml" line="231"/>
         <source>Save</source>
         <translation>محفوظ کریں</translation>
     </message>

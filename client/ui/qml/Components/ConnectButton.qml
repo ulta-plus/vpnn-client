@@ -7,7 +7,6 @@ import Qt5Compat.GraphicalEffects
 import ConnectionState 1.0
 import PageEnum 1.0
 import Style 1.0
-import WebAPI 1.0
 
 Button {
     id: root
@@ -54,6 +53,14 @@ Button {
 
         function onPreparingConfig() {
             PageController.showNotificationMessage(qsTr("Unable to disconnect during configuration preparation"))
+        }
+    }
+
+    Connections {
+        target: VPNNWebApi
+
+        function onKeyLimitExceeded() {
+            PageController.goToPage(PageEnum.SotkaKeyBinding)
         }
     }
 

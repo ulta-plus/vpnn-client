@@ -182,8 +182,6 @@
         <file>ui/qml/Controls2/WarningType.qml</file>
         <file>ui/qml/Filters/ContainersModelFilters.qml</file>
         <file>ui/qml/main2.qml</file>
-        <file>ui/qml/Modules/WebAPI/SotkaAPI.qml</file>
-        <file>ui/qml/Modules/WebAPI/qmldir</file>
         <file>ui/qml/Modules/Style/Sotka.qml</file>
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>
         <file>ui/qml/Modules/Style/qmldir</file>

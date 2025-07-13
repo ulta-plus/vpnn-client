@@ -6,7 +6,6 @@ import QtQuick.Dialogs
 
 import PageEnum 1.0
 import Style 1.0
-import WebAPI 1.0
 
 import "Config"
 import "Controls2"
@@ -29,6 +28,14 @@ Window  {
 
     onClosing: function() {
         PageController.closeWindow()
+    }
+
+    Connections {
+        target: VPNNWebApi
+
+        function onKeyLimitExceeded() {
+            PageController.goToPage(PageEnum.SotkaKeyBinding)
+        }
     }
 
     Item { // This item is needed for focus handling

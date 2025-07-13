@@ -30,18 +30,27 @@ public:
             m_engine->rootContext()->objectForName("ImportController");
     }
 
-    QString getDefaultAccountConfig(void) const;
+    // Return AWG Key
+    QString getDefaultAccountConfig(bool force_update_device = false) const;
+    // Return Account Status for the Account with public_request_id
+    QJsonDocument getAccountStatus(QString public_request_id) const;
+    // Return Account Status: blocked/active etc
     QJsonDocument getDefaultAccountStatus(void) const;
+    // Download JSON file from URL
     QJsonDocument downloadJsonFile(const QString &url) const;
 
+signals:
+    void keyLimitExceeded(void) const;
+
 public slots:
-    QJsonDocument getAccountStatusWithPublicId(QString public_id);
+    // Return Account Status for the Account with public_request_id
+    QString getAccountStatusStr(QString public_request_id) const;
     /* Currently Sotka doesn't support smart routing and update ApiBase URL
     void updateApiBaseUrl(void) const;
     void updateSmartRouting(void) const;
     */
     void updateDefaultAccountStatus(void) const;
-    void updateDefaultAccountConfig(void) const;
+    void updateDefaultAccountConfig(bool force_update_device = false) const;
 
     QString getApiBaseUrl(void) const
     {
@@ -70,7 +79,7 @@ private:
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
     */
 
-    QString getPublicRequestId(void) const
+    QString getDefaultPublicRequestId(void) const
     {
         auto defAccount = m_serversModel->getDefaultAccount();
         return defAccount.value(config_key::public_request_id).toString();

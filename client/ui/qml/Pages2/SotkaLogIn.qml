@@ -4,7 +4,6 @@ import QtQuick.Layouts
 
 import PageEnum 1.0
 import Style 1.0
-import WebAPI 1.0
 
 import './'
 import '../Controls2'
@@ -13,6 +12,7 @@ import '../Controls2/TextTypes'
 PageType {
     id: root
 
+    property string email: 'default@sotka.com'
     property string public_request_id: ''
     property string telegram_key: ''
     property string error: ''
@@ -28,7 +28,11 @@ PageType {
                 ServersModel.processedIndex = ServersModel.defaultIndex
             }
 
-            PageController.goToPageHome()
+            if (ServersModel.getDefaultAccount().simplified_status == 'Key limit exceeded') {
+                PageController.goToPage(PageEnum.SotkaKeyBinding)
+            } else {
+                PageController.goToPageHome()
+            }
         }
     }
 
@@ -93,12 +97,48 @@ PageType {
             mainText: qsTr('Continue')
 
             onClicked: {
-                telegram_key = telegramKey.text.trim()
-                public_request_id = ImportController.getPublicIdFromTelegramKey(telegram_key)
-                print(public_request_id)
-                //ImportController.createDefaultAccountWithPublicId(public_request_id)
-                //VPNNWebApi.updateDefaultAccountStatus()
-                //PageController.goToPage(PageEnum.SotkaKeyBinding)
+                root.disableAll()
+                waitingBox.visible = true
+
+                if (ServersModel.isThereDefaultAccount()) {
+                    ServersModel.removeDefaultAccount()
+                }
+
+                root.telegram_key = telegramKey.text.trim()
+                root.public_request_id = ImportController.getPublicIdFromTelegramKey(root.telegram_key)
+                root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
+                const cur_status = JSON.parse(root.account_status)
+
+                var simplified_status = ''
+                try {
+                    simplified_status = cur_status.data.request.simplified_status
+                } catch (e) {
+                    root.account_status = '{
+    "data": {
+        "request": {
+            "public_request_id": "' + root.public_request_id + '",
+            "simplified_status": "Key limit exceeded",
+            "paid_until": "",
+            "payment_link": ""
+        }
+    }
+}'
+                    root.error = cur_status.error.localized_message
+                }
+
+                waitingBox.visible = false
+
+                if (root.error == '' || root.error == 'Key limit exceeded') {
+                    if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
+                        enableAll()
+                        ImportController.importConfig()
+                    } else {
+                        showError(qsTr('Wrong Dummy Key File'))
+                    }
+                } else {
+                    // Other errors
+                    showError(root.error)
+                }
             }
         }
 
@@ -116,66 +156,14 @@ PageType {
         }
     }
 
-    /*SotkaButton {
-        id: continueButton
-        objectName: 'connectButton'
-
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.rightMargin: 16
-        anchors.leftMargin: 16
-        anchors.bottomMargin: 32
-
-        implicitHeight: 56
-
-        mainText: qsTr('Continue')
-
-        KeyNavigation.tab: backButton
-
-        onClicked: {
-            root.disableAll()
-            root.email = emailText.text.trim()
-
-            if (root.email == '') {
-                showError(qsTr('Please, provide an email'))
-                return
-            }
-
-            // Email verification RegExp
-            let re = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-            if (!re.test(root.email)) {
-                showError(qsTr('Invalid e-mail'))
-                return
-            }
-
-            var http = SotkaAPI.getEmailVerificationHTTPRequest(root.email)
-
-            http.onreadystatechange = function() {
-                if(http.readyState === XMLHttpRequest.DONE) {
-                    waitingBox.visible = false
-                    if (http.status == 200) {
-                        inputOTPCode.visible = true
-                    } else {
-                        root.showHTTPError(http)
-                    }
-                }
-            }
-
-            waitingBox.visible = true
-            http.send()
-        }
-    }
-    */
-
     function enableAll() {
-        emailText.enabled = true
+        telegramKey.enabled = true
         backButton.enabled = true
         continueButton.enabled = true
     }
 
     function disableAll() {
-        emailText.enabled = false
+        telegramKey.enabled = false
         backButton.enabled = false
         continueButton.enabled = false
     }
@@ -183,24 +171,6 @@ PageType {
     function showError(error) {
         root.error = error
         errorNotification.visible = true
-    }
-
-    function showHTTPError(http) {
-        error = ''
-        try {
-            const object = JSON.parse(http.responseText.toString())
-            error = object.error.localized_message
-        } catch (e) {
-            print(http.responseText)
-
-            if (http.status == 0) {
-                error = qsTr('Cannot connect to Sever')
-            } else {
-                error = qsTr('UNKNOWN ERROR: ') + http.status
-            }
-        }
-
-        showError(error)
     }
 
     SotkaNotification {
@@ -214,78 +184,5 @@ PageType {
         id: waitingBox
         anchors.centerIn: parent
         visible: false
-    }
-
-    function getKeyFile() {
-        var http = SotkaAPI.getRequestKeyHTTP(root.public_request_id)
-
-        http.onreadystatechange = function() {
-            if(http.readyState === XMLHttpRequest.DONE) {
-                if (http.status == 200) {
-                    if (ImportController.extractDefaultAccountConfig(root.email, http.responseText, root.account_status)) {
-                        ImportController.importConfig()
-                    } else {
-                        showError(qsTr('Wrong Key File'))
-                    }
-                } else {
-                    print('Cannot download file')
-                    print(http.responseText.toString())
-                    showHTTPError(http)
-                }
-            }
-        }
-
-        http.send()
-    }
-
-    SotkaNotificationWithInput {
-        id: inputOTPCode
-        withCloseButton: true
-        anchors.centerIn: parent
-        text: qsTr('Enter a code from the e-mail')
-        buttonYesText: qsTr('Send')
-        placeholderText: qsTr('code')
-
-        withYesButton: function() {
-            root.otpCode = inputOTPCode.getInput().trim()
-            if (root.otpCode == '') {
-                inputOTPCode.visible = true
-                return
-            }
-
-            var http = SotkaAPI.getOTPVerificationHTTPRequest()
-
-            http.onreadystatechange = function() {
-                if(http.readyState === XMLHttpRequest.DONE) {
-                    if (http.status == 200) {
-                        const json_obj = JSON.parse(http.responseText.toString())
-                        root.account_status = http.responseText.toString()
-                        root.public_request_id = json_obj.data.request.public_request_id
-
-                        var status = json_obj.data.request.simplified_status
-                        if (status == 'paid' || status == 'trial') {
-                            root.getKeyFile()
-                        } else {
-                            // 'blocked', 'new', 'else'
-                            if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
-                                ImportController.importConfig()
-                            } else {
-                                showError(qsTr('Wrong Dummy Key File'))
-                            }
-                        }
-                        root.enableAll()
-                    } else {
-                        showHTTPError(http)
-                    }
-                }
-            }
-
-            const body = '{ "email": "' + root.email +'", "otp_code": "' + root.otpCode + '" }'
-            http.send(body)
-        }
-
-        withNoButton: function() {
-            root.enableAll()
-        }
     }
 }

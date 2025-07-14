@@ -856,6 +856,15 @@ bool ServersModel::isAccountDefault(int index) const
     return s.value(config_key::is_default).toBool();
 }
 
+bool ServersModel::isDefaultAccountUnpaid(void) const
+{
+    QDateTime today = QDateTime::currentDateTimeUtc();
+    QJsonObject def = getDefaultAccount();
+    QString paid_until = def[config_key::paid_until].toString();
+    QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toUTC();
+    return (last_day < today);
+}
+
 int ServersModel::getDefaultAccountIndex() const
 {
     int i = 0;

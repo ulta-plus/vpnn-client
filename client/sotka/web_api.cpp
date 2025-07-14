@@ -109,6 +109,8 @@ void SotkaWebApi::updateDefaultAccountStatus(void) const
     if (json_doc[config_key::simplified_status].toString() == "Key limit exceeded") {
         emit keyLimitExceeded();
     }
+
+    emit defaultAccountStatusUpdated();
 }
 
 QString SotkaWebApi::getDefaultAccountConfig(bool force_update_device) const

@@ -195,7 +195,13 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="50"/>
+        <source>Renew
+Subscription</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
     </message>
@@ -4735,7 +4741,7 @@ Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="90"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="91"/>
         <source>Buy new key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4744,7 +4750,7 @@ Should it be bonded to this device?</source>
         <translation type="obsolete">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="103"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="105"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4772,7 +4778,7 @@ Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="162"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="166"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4817,29 +4823,39 @@ Should it be bonded to this device?</source>
         <translation type="obsolete">تم تمكين التسجيل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="63"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="57"/>
         <source>Log Out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="78"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="72"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="81"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="75"/>
         <source>Log out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="82"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="76"/>
         <source>Continue</source>
         <translation type="unfinished">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="83"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
         <source>Cancel</source>
         <translation type="unfinished">إلغاء</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="102"/>
+        <source>Personal Account</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="119"/>
+        <source>Renew Subscription</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

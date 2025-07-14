@@ -41,6 +41,7 @@ public:
 
 signals:
     void keyLimitExceeded(void) const;
+    void defaultAccountStatusUpdated(void) const;
 
 public slots:
     // Return Account Status for the Account with public_request_id

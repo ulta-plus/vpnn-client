@@ -91,6 +91,7 @@ PageType {
             mainText: qsTr('Buy new key')
 
             onClicked: {
+                Qt.openUrlExternally("https://t.me/sotka_install_bot")
             }
         }
 

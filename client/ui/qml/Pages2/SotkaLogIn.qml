@@ -97,6 +97,7 @@ PageType {
             mainText: qsTr('Continue')
 
             onClicked: {
+            try {
                 root.disableAll()
                 waitingBox.visible = true
 
@@ -139,6 +140,10 @@ PageType {
                     // Other errors
                     showError(root.error)
                 }
+            } catch (e) {
+                waitingBox.visible = false
+                enableAll()
+            }
             }
         }
 

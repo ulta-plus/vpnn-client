@@ -11,6 +11,7 @@ import Style 1.0
 Button {
     id: root
 
+    property bool isUnpaid: ServersModel.isDefaultAccountUnpaid()
     property string defaultButtonColor: Sotka.color.yellow
     property string progressButtonColor: Sotka.color.black
     property string connectedButtonColor: Sotka.color.black
@@ -46,7 +47,7 @@ Button {
     implicitWidth: 196
     implicitHeight: 196
 
-    text: qsTr(ConnectionController.connectionStateText)
+    text: isUnpaid ? qsTr('Renew\nSubscription') : qsTr(ConnectionController.connectionStateText)
 
     Connections {
         target: ConnectionController
@@ -99,7 +100,7 @@ Button {
                     } else if (ConnectionController.isConnectionFailed) {
                         return Sotka.color.black
                     } else {
-                        return Sotka.color.yellow
+                        return (isUnpaid ? Sotka.color.black : Sotka.color.yellow)
                     }
                 }
                 strokeColor: {
@@ -110,7 +111,7 @@ Button {
                     } else if (ConnectionController.isConnectionFailed) {
                         return Sotka.color.red
                     } else {
-                        return Sotka.color.black
+                        return (isUnpaid ? Sotka.color.red : Sotka.color.black)
                     }
                 }
                 strokeWidth: 10
@@ -187,11 +188,12 @@ Button {
             } else if (ConnectionController.isConnectionFailed) {
                 return Sotka.color.white
             } else {
-                return Sotka.color.text
+                return (isUnpaid ? Sotka.color.white : Sotka.color.text)
             }
         }
 
         text: root.text
+        font.capitalization: Font.AllUppercase
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter

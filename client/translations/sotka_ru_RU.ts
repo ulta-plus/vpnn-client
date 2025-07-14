@@ -2,21 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
-    <name></name>
-    <message>
-        <source>Do you already have a Telegram Key?</source>
-        <translation type="vanished">У вас уже есть ключ из Telegram-бота?</translation>
-    </message>
-    <message>
-        <source>Yes, I have key</source>
-        <translation type="vanished">Да, я получил (-а) ключ</translation>
-    </message>
-    <message>
-        <source>No, Recieve key</source>
-        <translation type="vanished">Нет, получить ключ</translation>
-    </message>
-</context>
-<context>
     <name>AdLabel</name>
     <message>
         <location filename="../ui/qml/Components/AdLabel.qml" line="57"/>
@@ -194,7 +179,14 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="55"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="50"/>
+        <source>Renew
+Subscription</source>
+        <translation>Тариф
+Закончился</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
@@ -329,7 +321,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -542,29 +534,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageDevMenu.qml" line="97"/>
         <source>Dev gateway environment</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PageHome</name>
-    <message>
-        <source>Logging enabled</source>
-        <translation type="vanished">Логирование включено</translation>
-    </message>
-    <message>
-        <source>Subscription valid until</source>
-        <translation type="vanished">Подписка действительна до</translation>
-    </message>
-    <message>
-        <source>Renew Subscription</source>
-        <translation type="vanished">Продлить Подписку</translation>
-    </message>
-    <message>
-        <source>VPN protocol</source>
-        <translation type="vanished">VPN-протокол</translation>
-    </message>
-    <message>
-        <source>Keys</source>
-        <translation type="vanished">Ключи</translation>
     </message>
 </context>
 <context>
@@ -2599,21 +2568,6 @@ Already installed containers were found on the server. All installed containers 
     </message>
 </context>
 <context>
-    <name>PageSettingsServerInfo</name>
-    <message>
-        <source>Protocols</source>
-        <translation type="vanished">Протоколы</translation>
-    </message>
-    <message>
-        <source>Services</source>
-        <translation type="vanished">Сервисы</translation>
-    </message>
-    <message>
-        <source>Management</source>
-        <translation type="vanished">Управление</translation>
-    </message>
-</context>
-<context>
     <name>PageSettingsServerProtocol</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="43"/>
@@ -3496,33 +3450,6 @@ Already installed containers were found on the server. All installed containers 
     </message>
 </context>
 <context>
-    <name>PageStart</name>
-    <message>
-        <source>Logging was disabled after 14 days, log files were deleted</source>
-        <translation type="vanished">Логирование было отключено по прошествии 14 дней, файлы логов были удалены.</translation>
-    </message>
-    <message>
-        <source>Settings restored from backup file</source>
-        <translation type="vanished">Настройки восстановлены из бэкап файла</translation>
-    </message>
-    <message>
-        <source>Cannot sign out with an active connection</source>
-        <translation type="vanished">Нельзя выйти при активном соединении</translation>
-    </message>
-    <message>
-        <source>Sign out?</source>
-        <translation type="vanished">Выйти из акаунта?</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продолжить</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">Отменить</translation>
-    </message>
-</context>
-<context>
     <name>PopupType</name>
     <message>
         <location filename="../ui/qml/Controls2/PopupType.qml" line="101"/>
@@ -4063,15 +3990,15 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../containers/containers_defs.cpp" line="215"/>
         <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
-It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data. 
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations. 
+It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data.
+This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
 Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="226"/>
         <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments. 
+One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
 * Available in the Sotka only on Windows
@@ -4150,7 +4077,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 
 OpenVPN provides a secure VPN connection by encrypting all internet traffic between the client and the server.
 
-Cloak protects OpenVPN from detection. 
+Cloak protects OpenVPN from detection.
 
 Cloak can modify packet metadata so that it completely masks VPN traffic as normal web traffic, and also protects the VPN from detection by Active Probing. This makes it very resistant to being detected
 
@@ -4595,12 +4522,12 @@ Should it be bonded to this device?</source>
         <translation>Использовать здесь</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="90"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="91"/>
         <source>Buy new key</source>
         <translation>Заказать новый ключ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="103"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="105"/>
         <source>Return back</source>
         <translation>Назад</translation>
     </message>
@@ -4623,7 +4550,7 @@ Should it be bonded to this device?</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="162"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="166"/>
         <source>Return back</source>
         <translation>Назад</translation>
     </message>
@@ -4684,116 +4611,41 @@ Should it be bonded to this device?</source>
     </message>
 </context>
 <context>
-    <name>SotkaPageEmailLogIn</name>
-    <message>
-        <source>Enter your e-mail</source>
-        <translation type="vanished">Введите свой e-mail</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продолжить</translation>
-    </message>
-    <message>
-        <source>Please, provide an email</source>
-        <translation type="vanished">Пожалуйста, введите email</translation>
-    </message>
-    <message>
-        <source>Invalid e-mail</source>
-        <translation type="vanished">Неправильный e-mail</translation>
-    </message>
-    <message>
-        <source>Cannot connect to Sever</source>
-        <translation type="vanished">Нет соединения с сервером</translation>
-    </message>
-    <message>
-        <source>UNKNOWN ERROR: </source>
-        <translation type="vanished">Неизвестная ошибка: </translation>
-    </message>
-    <message>
-        <source>Wrong Key File</source>
-        <translation type="vanished">Получен неправильный ключ</translation>
-    </message>
-    <message>
-        <source>Enter a code from the e-mail</source>
-        <translation type="vanished">Введите код из e-mail</translation>
-    </message>
-    <message>
-        <source>Send</source>
-        <translation type="vanished">Отправить</translation>
-    </message>
-    <message>
-        <source>code</source>
-        <translation type="vanished">код</translation>
-    </message>
-    <message>
-        <source>Wrong Dummy Key File</source>
-        <translation type="vanished">Неправильный формат пустого ключа</translation>
-    </message>
-</context>
-<context>
     <name>SotkaPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="63"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="57"/>
         <source>Log Out</source>
-        <translation type="unfinished">Выйти</translation>
+        <translation>Выйти</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="78"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="72"/>
         <source>Cannot sign out with an active connection</source>
-        <translation type="unfinished">Нельзя выйти при активном соединении</translation>
+        <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="81"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="75"/>
         <source>Log out?</source>
-        <translation type="unfinished">Выйти?</translation>
+        <translation>Выйти?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="82"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="76"/>
         <source>Continue</source>
-        <translation type="unfinished">Продолжить</translation>
+        <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="83"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
         <source>Cancel</source>
-        <translation type="unfinished">Отменить</translation>
-    </message>
-</context>
-<context>
-    <name>SotkaPageLogIn</name>
-    <message>
-        <source>Select login method</source>
-        <translation type="vanished">Выберите способ авторизации</translation>
+        <translation>Отменить</translation>
     </message>
     <message>
-        <source>Login with an e-mail</source>
-        <translation type="vanished">Авторизация по e-mail</translation>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="102"/>
+        <source>Personal Account</source>
+        <translation>Личный аккаунт</translation>
     </message>
     <message>
-        <source>Login with Telegram</source>
-        <translation type="vanished">Авторизация через Telegram</translation>
-    </message>
-    <message>
-        <source>Login with a key file</source>
-        <translation type="vanished">Авторизация по файлу с ключом</translation>
-    </message>
-    <message>
-        <source>Open key file</source>
-        <translation type="vanished">Открыть файл с ключём</translation>
-    </message>
-</context>
-<context>
-    <name>SotkaPageSignUp</name>
-    <message>
-        <source>Select sign up way</source>
-        <translation type="vanished">Выберите способ регистрации</translation>
-    </message>
-    <message>
-        <source>Sign up with Telegram</source>
-        <translation type="vanished">Регистрация через Telegram</translation>
-    </message>
-    <message>
-        <source>Sign up with e-mail</source>
-        <translation type="vanished">Регистрация по e-mail</translation>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="119"/>
+        <source>Renew Subscription</source>
+        <translation>Продлить Тариф</translation>
     </message>
 </context>
 <context>
@@ -4806,7 +4658,7 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="182"/>
         <source>Settings restored from backup file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки восстановлены из файла резервной копии</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="188"/>

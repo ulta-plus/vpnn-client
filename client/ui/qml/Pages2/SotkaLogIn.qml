@@ -108,6 +108,7 @@ PageType {
                 root.telegram_key = telegramKey.text.trim()
                 root.public_request_id = ImportController.getPublicIdFromTelegramKey(root.telegram_key)
                 root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
+                //print(root.account_status)
                 const cur_status = JSON.parse(root.account_status)
 
                 var simplified_status = ''

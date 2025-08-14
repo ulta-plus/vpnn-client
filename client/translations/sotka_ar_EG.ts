@@ -4773,12 +4773,12 @@ Should it be bonded to this device?</source>
         <translation type="unfinished">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="138"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="166"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="157"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>

@@ -152,7 +152,7 @@ public:
 
     QString getApiBaseUrl() const
     {
-        return value("Conf/apiBaseUrl", "https://api.ultvs.click").toString();
+        return value("Conf/apiBaseUrl", "https://api.stkv.space").toString();
     }
 
     void setApiBaseUrl(const QString &apiBaseUrl)

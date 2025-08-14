@@ -100,6 +100,7 @@ void SotkaWebApi::updateDefaultAccountStatus(void) const
     }
 
     QJsonDocument json_doc = getDefaultAccountStatus();
+    //qDebug() << json_doc;
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot get default account status";
     } else {
@@ -136,6 +137,7 @@ void SotkaWebApi::updateDefaultAccountConfig(bool force_update_device) const
     }
 
     QString key = getDefaultAccountConfig(force_update_device);
+    //qDebug() << key;
     if (key.isEmpty()) {
         qDebug() << "Cannot get default account config";
     } else {

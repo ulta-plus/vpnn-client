@@ -36,12 +36,14 @@ SystemTrayNotificationHandler::SystemTrayNotificationHandler(QObject* parent) :
     */
 
     m_trayActionVisitWebSite = m_menu.addAction(QIcon(":/images/tray/link.png"), tr("Visit Website"), [&](){
-        QDesktopServices::openUrl(QUrl("https://naruzhu.click/appam"));
+        QDesktopServices::openUrl(QUrl(websiteUrl));
     });
 
-    m_trayActionQuit = m_menu.addAction(QIcon(":/images/tray/cancel.png"), tr("Quit") + " " + APPLICATION_NAME, this, [&](){
-        qApp->quit();
-    });
+    // Quit action: disconnect VPN first on macOS NE, else quit directly
+    m_trayActionQuit = m_menu.addAction(QIcon(":/images/tray/cancel.png"),
+                                       tr("Quit") + " " + APPLICATION_NAME,
+                                       this,
+                                       [&](){ qApp->quit(); });
 
     m_systemTrayIcon.setContextMenu(&m_menu);
     setTrayState(Vpn::ConnectionState::Disconnected);
@@ -66,6 +68,11 @@ void SystemTrayNotificationHandler::onTranslationsUpdated()
     */
     m_trayActionVisitWebSite->setText(tr("Visit Website"));
     m_trayActionQuit->setText(tr("Quit")+ " " + APPLICATION_NAME);
+}
+
+void SystemTrayNotificationHandler::updateWebsiteUrl(const QString &newWebsiteUrl) {
+    qDebug() << "Updated website URL:" << newWebsiteUrl;
+    websiteUrl = newWebsiteUrl;
 }
 
 void SystemTrayNotificationHandler::setTrayIcon(const QString &iconPath)

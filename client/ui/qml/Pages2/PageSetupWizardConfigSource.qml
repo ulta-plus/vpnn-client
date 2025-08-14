@@ -37,20 +37,10 @@ PageType {
         }
     }
 
-    ListView {
+    ListViewType {
         id: listView
 
         anchors.fill: parent
-
-        property bool isFocusable: true
-
-        ScrollBar.vertical: ScrollBarType {}
-
-        model: variants
-
-        clip: true
-
-        reuseItems: true
 
         header: ColumnLayout {
             width: listView.width
@@ -125,11 +115,11 @@ PageType {
                             clickedFunction: function() {
                                 var fileName = ""
                                 if (GC.isMobile()) {
-                                    fileName = "AmneziaVPN.log"
+                                    fileName = "VPNNaruzhu.log"
                                 } else {
                                     fileName = SystemController.getFileName(qsTr("Save"),
                                                                             qsTr("Logs files (*.log)"),
-                                                                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu",
                                                                             true,
                                                                             ".log")
                                 }
@@ -239,6 +229,8 @@ PageType {
         */
         }
 
+        model: variants
+
         delegate: ColumnLayout {
             width: listView.width
 
@@ -257,6 +249,9 @@ PageType {
                 leftImageSource: imageSource
 
                 onClicked: { handler() }
+
+                Keys.onEnterPressed: this.clicked()
+                Keys.onReturnPressed: this.clicked()
             }
         }
 
@@ -293,7 +288,7 @@ PageType {
 
     property list<QtObject> variants: [
         /*
-        amneziaVpn,
+        VPNNaruzhu,
         selfHostVpn,
         backupRestore,
         fileOpen,
@@ -305,7 +300,7 @@ PageType {
     ]
 
     QtObject {
-        id: amneziaVpn
+        id: VPNNaruzhu
 
         property string title: qsTr("VPN by Amnezia")
         property string description: qsTr("Connect to classic paid and free VPN services from Amnezia")

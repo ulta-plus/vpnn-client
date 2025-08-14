@@ -31,6 +31,7 @@ public:
 public slots:
     bool addApp(const InstalledAppInfo &appInfo);
     void removeApp(QModelIndex index);
+    void clearAppsList();
 
     int getRouteMode();
     void setRouteMode(int routeMode);

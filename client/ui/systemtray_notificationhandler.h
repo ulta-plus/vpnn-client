@@ -21,6 +21,9 @@ public:
 
     void onTranslationsUpdated() override;
 
+public slots:
+    void updateWebsiteUrl(const QString &newWebsiteUrl);
+
 protected:
     virtual void notify(Message type, const QString& title,
                         const QString& message, int timerMsec) override;
@@ -50,6 +53,7 @@ private:
     const QString ConnectedTrayIconName = "active.png";
     const QString DisconnectedTrayIconName = "default.png";
     const QString ErrorTrayIconName = "error.png";
+    QString  websiteUrl = "https://naruzhu.click/appam";
 };
 
 #endif  // SYSTEMTRAY_NOTIFICATIONHANDLER_H

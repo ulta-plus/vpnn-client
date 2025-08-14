@@ -22,21 +22,24 @@ PageType {
         anchors.right: parent.right
         anchors.topMargin: 20
 
-        KeyNavigation.tab: dnsServersButton // issue_13: amneziaDnsSwitch
+        onActiveFocusChanged: {
+            if(backButton.enabled && backButton.activeFocus) {
+                listView.positionViewAtBeginning()
+            }
+        }
     }
 
-    FlickableType {
-        id: fl
+    ListViewType {
+        id: listView
+
         anchors.top: backButton.bottom
         anchors.bottom: parent.bottom
-        contentHeight: content.height
+        anchors.left: parent.left
+        anchors.right: parent.right
 
-        ColumnLayout {
-            id: content
+        header: ColumnLayout {
 
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
+            width: listView.width
 
             BaseHeaderType {
                 Layout.fillWidth: true
@@ -45,10 +48,18 @@ PageType {
 
                 headerText: qsTr("Connection")
             }
+        }
+
+        model: 1 // fake model to force the ListView to be created without a model
+
+        delegate: ColumnLayout { // TODO(CyAn84): add DelegateChooser when have migrated to 6.9
+
+            width: listView.width
 
         /* issue_13: amneziaDnsSwitch
             SwitcherType {
                 id: amneziaDnsSwitch
+
                 Layout.fillWidth: true
                 Layout.margins: 16
 
@@ -68,12 +79,11 @@ PageType {
 
             LabelWithButtonType {
                 id: dnsServersButton
+
                 Layout.fillWidth: true
 
                 text: qsTr("DNS servers")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                parentFlickable: fl
 
                 clickedFunction: function() {
                     PageController.goToPage(PageEnum.PageSettingsDns)
@@ -85,13 +95,12 @@ PageType {
 
             LabelWithButtonType {
                 id: splitTunnelingButton
+
                 Layout.fillWidth: true
 
                 text: qsTr("Site-based split tunneling")
                 descriptionText: qsTr("Allows you to select which sites you want to access through the VPN")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                parentFlickable: fl
 
                 clickedFunction: function() {
                     PageController.goToPage(PageEnum.PageSettingsSplitTunneling)
@@ -100,8 +109,15 @@ PageType {
 
             DividerType {}
 
+        }
+
+        footer: ColumnLayout { // TODO(CyAn84): move to delegate,add DelegateChooser when have migrated to 6.9
+
+            width: listView.width
+
             LabelWithButtonType {
                 id: splitTunnelingButton2
+
                 visible: root.isAppSplitTinnelingEnabled
 
                 Layout.fillWidth: true
@@ -109,8 +125,6 @@ PageType {
                 text: qsTr("App-based split tunneling")
                 descriptionText: qsTr("Allows you to use the VPN only for certain Apps")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                parentFlickable: fl
 
                 clickedFunction: function() {
                     PageController.goToPage(PageEnum.PageSettingsAppSplitTunneling)
@@ -129,8 +143,6 @@ PageType {
                 text: qsTr("KillSwitch")
                 descriptionText: qsTr("Blocks network connections without VPN")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                parentFlickable: fl
 
                 clickedFunction: function() {
                     PageController.goToPage(PageEnum.PageSettingsKillSwitch)

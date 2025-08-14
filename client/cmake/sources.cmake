@@ -44,7 +44,7 @@ set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.h
 )
 
-if(NOT IOS)
+if(NOT IOS AND NOT MACOS_NE)
     set(HEADERS ${HEADERS}
         ${CLIENT_ROOT_DIR}/platforms/ios/QRCodeReaderBase.h
     )
@@ -99,9 +99,23 @@ set(SOURCES ${SOURCES}
     ${CLIENT_ROOT_DIR}/mozilla/localsocketcontroller.cpp
 )
 
-if(NOT IOS)
+if(NOT IOS AND NOT MACOS_NE)
     set(SOURCES ${SOURCES}
         ${CLIENT_ROOT_DIR}/platforms/ios/QRCodeReaderBase.cpp
+    )
+endif()
+
+# Include native macOS platform helpers (dock/status-item)
+if(APPLE AND NOT IOS)
+    list(APPEND HEADERS
+        ${CLIENT_ROOT_DIR}/platforms/macos/macosutils.h
+        ${CLIENT_ROOT_DIR}/platforms/macos/macosstatusicon.h
+        ${CLIENT_ROOT_DIR}/ui/macos_util.h
+    )
+    list(APPEND SOURCES
+        ${CLIENT_ROOT_DIR}/platforms/macos/macosutils.mm
+        ${CLIENT_ROOT_DIR}/platforms/macos/macosstatusicon.mm
+        ${CLIENT_ROOT_DIR}/ui/macos_util.mm
     )
 endif()
 

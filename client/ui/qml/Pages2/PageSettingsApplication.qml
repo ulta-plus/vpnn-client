@@ -187,7 +187,7 @@ PageType {
                     selectLanguageDrawer.openTriggered()
                 }
             }
-
+        /* VPNNaruzhu doesn't support logging on client side.
             DividerType {}
 
             LabelWithButtonType {
@@ -203,12 +203,12 @@ PageType {
                     PageController.goToPage(PageEnum.PageSettingsLogging)
                 }
             }
-
+        */
             DividerType {}
 
             LabelWithButtonType {
                 id: labelWithButtonReset
-                
+
                 Layout.fillWidth: true
 
                 text: qsTr("Reset settings and remove all data from the application")

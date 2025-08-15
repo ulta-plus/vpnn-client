@@ -510,8 +510,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="756"/>
-        <source>Server &apos;%1&apos; was removed</source>
-        <translation>Сервер &apos;%1&apos; был удален</translation>
+        <source>Key &apos;%1&apos; was removed</source>
+        <translation>Ключ &apos;%1&apos; был удалён</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="767"/>
@@ -2866,7 +2866,7 @@ subscription key</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="159"/>
         <source>Do you want to remove the key from application?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы точно хотите удалить этот ключ из приложения?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="185"/>

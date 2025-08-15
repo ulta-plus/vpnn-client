@@ -403,10 +403,10 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
             QJsonObject config;
             Proto mainProto = ContainerProps::defaultProtocol(container);
             const auto &protocols = ContainerProps::protocolsForContainer(container);
-            
+
             for (const auto &protocol : protocols) {
                 QJsonObject containerConfig;
-                
+
                 // for Multiprotocols (OpenVPN over SS, OpenVPN over Cloak)
                 bool shouldProcessProtocol = false;
                 if (container == DockerContainer::ShadowSocks || container == DockerContainer::Cloak) {
@@ -414,7 +414,7 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
                 } else {
                     shouldProcessProtocol = (protocol == mainProto);
                 }
-                
+
                 if (shouldProcessProtocol) {
                     containerConfig.insert(config_key::port, port);
                     containerConfig.insert(config_key::transport_proto, transportProto);
@@ -596,7 +596,7 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
                         containerConfig[config_key::tls_auth] = tlsAuth;
 
                         bool blockOutsideDns = serverConfig.contains("block-outside-dns");
-                        
+
                         containerConfig[config_key::block_outside_dns] = blockOutsideDns;
 
                         QString cipher = serverConfigMap.value("cipher");
@@ -613,10 +613,10 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
                                                                                          "/opt/amnezia/cloak/ck-config.json", errorCode);
 
                         QJsonDocument doc = QJsonDocument::fromJson(cloakConfig.toUtf8());
-                        
+
                         if (!doc.isNull() && doc.isObject()) {
                             QJsonObject cloakConfigObj = doc.object();
-                            
+
                             QString site = cloakConfigObj.value("RedirAddr").toString();
                             if (!site.isEmpty()) {
                                 containerConfig[config_key::site] = site;
@@ -624,13 +624,13 @@ ErrorCode InstallController::getAlreadyInstalledContainers(const ServerCredentia
                         } else {
                             qDebug() << "Failed to parse main loop Cloak JSON config";
                         }
-                        
+
                     } else if (protocol == Proto::ShadowSocks) {
                         QString shadowsocksConfig = serverController->getTextFileFromContainer(container, credentials,
                                                                                                "/opt/amnezia/shadowsocks/ss-config.json", errorCode);
 
                         QJsonDocument doc = QJsonDocument::fromJson(shadowsocksConfig.toUtf8());
-                        
+
                         if (!doc.isNull() && doc.isObject()) {
                             QJsonObject ssConfigObj = doc.object();
                             QString cipher = ssConfigObj.value("method").toString();
@@ -753,7 +753,7 @@ void InstallController::removeProcessedServer()
     QString serverName = m_serversModel->data(serverIndex, ServersModel::Roles::NameRole).toString();
 
     m_serversModel->removeServer();
-    emit removeProcessedServerFinished(tr("Server '%1' was removed").arg(serverName));
+    emit removeProcessedServerFinished(tr("Key '%1' was removed").arg(serverName));
 }
 
 void InstallController::removeAllContainers()

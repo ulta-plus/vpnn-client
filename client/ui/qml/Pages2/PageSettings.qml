@@ -90,9 +90,9 @@ PageType {
         servers,
         connection,
         application,
-        backup,
+        //backup,
         about,
-        devConsole,
+        //devConsole,
         supportTelegramm,
         telegrammGroup
     ]
@@ -129,7 +129,7 @@ PageType {
             PageController.goToPage(PageEnum.PageSettingsApplication)
         }
     }
-
+/*
     QtObject {
         id: backup
 
@@ -140,7 +140,7 @@ PageType {
             PageController.goToPage(PageEnum.PageSettingsBackup)
         }
     }
-
+*/
     QtObject {
         id: about
 
@@ -151,7 +151,7 @@ PageType {
             Qt.openUrlExternally("https://naruzhu.click/appam")
         }
     }
-
+/*
     QtObject {
         id: devConsole
 
@@ -162,12 +162,13 @@ PageType {
             PageController.goToPage(PageEnum.PageDevMenu)
         }
     }
-
+*/
     QtObject {
         id: supportTelegramm
 
         property string title: qsTr("Support via Telegram")
         readonly property string leftImagePath: "qrc:/images/controls/telegramNaruzhu.svg"
+        property bool isVisible: true
         readonly property var clickedHandler: function() {
             GC.coppyUUIDToClipBoard()
             Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
@@ -179,6 +180,7 @@ PageType {
 
         property string title: qsTr("Telegram Group")
         readonly property string leftImagePath: "qrc:/images/controls/chat.svg"
+        property bool isVisible: true
         readonly property var clickedHandler: function() {
             Qt.openUrlExternally("https://t.me/vpn_naruzhu")
         }

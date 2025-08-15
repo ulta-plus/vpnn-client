@@ -528,8 +528,12 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="756"/>
+        <source>Key &apos;%1&apos; was removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Server &apos;%1&apos; was removed</source>
-        <translation>सर्वर &apos;%1&apos; रीबूट किया गया था</translation>
+        <translation type="vanished">सर्वर &apos;%1&apos; रीबूट किया गया था</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="767"/>

@@ -527,8 +527,12 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="756"/>
+        <source>Key &apos;%1&apos; was removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Server &apos;%1&apos; was removed</source>
-        <translation>سرور %1 ہٹا دیا گیا تھا</translation>
+        <translation type="vanished">سرور %1 ہٹا دیا گیا تھا</translation>
     </message>
     <message>
         <location filename="../ui/controllers/installController.cpp" line="767"/>

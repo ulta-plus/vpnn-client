@@ -78,6 +78,10 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
 
 void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
 {
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return;
+    }
+
     QJsonDocument json_doc = getDefaultAccountStatus();
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot get default account status";
@@ -101,6 +105,10 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
 
 void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
 {
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return;
+    }
+
     QString key = getDefaultAccountConfig();
     if (key.isEmpty()) {
         qDebug() << "Cannot get default account config";

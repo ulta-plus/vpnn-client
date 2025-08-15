@@ -1720,9 +1720,8 @@ Thank you for staying with us!</source>
         <translation>Застосунок</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="136"/>
         <source>Backup</source>
-        <translation>Резервне копіювання</translation>
+        <translation type="vanished">Резервне копіювання</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
@@ -1730,17 +1729,12 @@ Thank you for staying with us!</source>
         <translation>Про VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
-        <source>Dev console</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
         <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="180"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2448,19 +2442,16 @@ subscription key</source>
         <translation>Мова</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="198"/>
         <source>Logging</source>
-        <translation>Логування</translation>
+        <translation type="vanished">Логування</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Enabled</source>
-        <translation>Увімкнено</translation>
+        <translation type="vanished">Увімкнено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Disabled</source>
-        <translation>Вимкнено</translation>
+        <translation type="vanished">Вимкнено</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>

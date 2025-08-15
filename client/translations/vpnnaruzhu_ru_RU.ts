@@ -1643,9 +1643,8 @@ Thank you for staying with us!</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="136"/>
         <source>Backup</source>
-        <translation>Резервное копирование</translation>
+        <translation type="vanished">Резервное копирование</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
@@ -1653,17 +1652,12 @@ Thank you for staying with us!</source>
         <translation>О VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
-        <source>Dev console</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
         <source>Support via Telegram</source>
         <translation>Поддержка в Телеграм</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="180"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
         <source>Telegram Group</source>
         <translation>Группа в Телеграм</translation>
     </message>
@@ -2351,19 +2345,16 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="198"/>
         <source>Logging</source>
-        <translation>Логирование</translation>
+        <translation type="vanished">Логирование</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Enabled</source>
-        <translation>Включено</translation>
+        <translation type="vanished">Включено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Disabled</source>
-        <translation>Отключено</translation>
+        <translation type="vanished">Отключено</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>
@@ -2495,7 +2486,7 @@ subscription key</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="144"/>
         <source>Blocks network connections without VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Блокирует интернет-соединение без VPN</translation>
     </message>
 </context>
 <context>
@@ -2561,71 +2552,67 @@ subscription key</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="40"/>
         <source>KillSwitch</source>
-        <translation type="unfinished">KillSwitch</translation>
+        <translation>KillSwitch</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="41"/>
         <source>Enable to ensure network traffic goes through a secure VPN tunnel, preventing accidental exposure of your IP and DNS queries if the connection drops</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot change killSwitch settings during active connection</source>
-        <translation type="obsolete">Невозможно изменить настройки аварийного выключателя во время активного соединения</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="68"/>
-        <source>Soft KillSwitch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="92"/>
-        <source>Strict KillSwitch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="96"/>
-        <source>Just a little heads-up</source>
-        <translation type="unfinished"></translation>
+        <translation>Включите, чтобы весь сетевой трафик проходил только через безопасный VPN-туннель. Это предотвратит случайное раскрытие вашего IP-адреса и DNS-запросов при разрыве соединения</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="52"/>
         <source>KillSwitch settings cannot be changed during an active connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки KillSwitch нельзя изменить во время активного подключения</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="68"/>
+        <source>Soft KillSwitch</source>
+        <translation>Soft KillSwitch</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="69"/>
         <source>Internet access is blocked if the VPN disconnects unexpectedly</source>
-        <translation type="unfinished"></translation>
+        <translation>Доступ в интернет блокируется при разрыве VPN-соединения</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="92"/>
+        <source>Strict KillSwitch</source>
+        <translation>Strict KillSwitch</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="93"/>
         <source>Internet connection is blocked even when VPN is turned off manually or hasn&apos;t started</source>
-        <translation type="unfinished"></translation>
+        <translation>Доступ в интернет блокируется, даже если VPN отключен вручную или не был запущен</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="96"/>
+        <source>Just a little heads-up</source>
+        <translation>Небольшое предупреждение</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="97"/>
         <source>If the VPN disconnects or drops while Strict KillSwitch is enabled, internet access will be blocked. To restore access, reconnect VPN or disable/change the KillSwitch.</source>
-        <translation type="unfinished"></translation>
+        <translation>Если VPN отключится или соединение прервётся при включённом Strict KillSwitch, доступ в интернет будет заблокирован. Чтобы восстановить доступ, снова подключитесь к VPN или отключите (измените) режим KillSwitch.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="98"/>
         <source>Continue</source>
-        <translation type="unfinished">Продолжить</translation>
+        <translation>Продолжить</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="99"/>
         <source>Cancel</source>
-        <translation type="unfinished">Отменить</translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="123"/>
         <source>DNS Exceptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Исключения для DNS</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitch.qml" line="124"/>
         <source>DNS servers listed here will remain accessible when KillSwitch is active.</source>
-        <translation type="unfinished"></translation>
+        <translation>DNS-серверы из этого списка останутся доступными при активном KillSwitch.</translation>
     </message>
 </context>
 <context>
@@ -2633,80 +2620,80 @@ subscription key</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="45"/>
         <source>DNS Exceptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Исключения для DNS</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="46"/>
         <source>DNS servers listed here will remain accessible when KillSwitch is active</source>
-        <translation type="unfinished"></translation>
+        <translation>DNS-серверы из этого списка останутся доступными при активном KillSwitch</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="106"/>
         <source>Delete </source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="107"/>
         <source>Continue</source>
-        <translation type="unfinished">Продолжить</translation>
+        <translation>Продолжить</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="108"/>
         <source>Cancel</source>
-        <translation type="unfinished">Отменить</translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="138"/>
         <source>IPv4 address</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 адрес</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="168"/>
         <source>Import / Export addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт / Экспорт адресов</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="175"/>
         <source>Import</source>
-        <translation type="unfinished">Импорт</translation>
+        <translation>Импорт</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="188"/>
         <source>Save address list</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить список адресов</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="195"/>
         <source>Save addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить адреса</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="196"/>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="266"/>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="282"/>
         <source>Address files (*.json)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы адресов (*.json)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="255"/>
         <source>Import address list</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт списка адресов</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="262"/>
         <source>Replace address list</source>
-        <translation type="unfinished"></translation>
+        <translation>Заменить список адресов</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="265"/>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="281"/>
         <source>Open address file</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть файл адресов</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml" line="278"/>
         <source>Add imported addresses to existing ones</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить импортированные адреса к существующим</translation>
     </message>
 </context>
 <context>

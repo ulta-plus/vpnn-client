@@ -1702,9 +1702,8 @@ Thank you for staying with us!</source>
         <translation>تطبيق</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="136"/>
         <source>Backup</source>
-        <translation>نسخة احتياطية</translation>
+        <translation type="vanished">نسخة احتياطية</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
@@ -1712,9 +1711,8 @@ Thank you for staying with us!</source>
         <translation>عن VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
         <source>Dev console</source>
-        <translation>وحدة تحكم التطوير</translation>
+        <translation type="vanished">وحدة تحكم التطوير</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
@@ -1722,7 +1720,7 @@ Thank you for staying with us!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="180"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2430,19 +2428,16 @@ subscription key</source>
         <translation>اللغة</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="198"/>
         <source>Logging</source>
-        <translation>تسجيل</translation>
+        <translation type="vanished">تسجيل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Enabled</source>
-        <translation>مٌفعل</translation>
+        <translation type="vanished">مٌفعل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Disabled</source>
-        <translation>مٌعطل</translation>
+        <translation type="vanished">مٌعطل</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>

@@ -1710,9 +1710,8 @@ Thank you for staying with us!</source>
         <translation>အပလီကေးရှင်း</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="136"/>
         <source>Backup</source>
-        <translation>backup ယူမည်</translation>
+        <translation type="vanished">backup ယူမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
@@ -1720,9 +1719,8 @@ Thank you for staying with us!</source>
         <translation>VPNNaruzhu အကြောင်း</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
         <source>Dev console</source>
-        <translation>ဒက်ဗယ်လော်ပါ console</translation>
+        <translation type="vanished">ဒက်ဗယ်လော်ပါ console</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
@@ -1730,7 +1728,7 @@ Thank you for staying with us!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="180"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2442,19 +2440,16 @@ subscription key</source>
         <translation>ဘာသာစကား</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="198"/>
         <source>Logging</source>
-        <translation>Logging</translation>
+        <translation type="vanished">Logging</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Enabled</source>
-        <translation>ဖွင့်ထားပါသည်</translation>
+        <translation type="vanished">ဖွင့်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Disabled</source>
-        <translation>ပိတ်ထားပါသည်</translation>
+        <translation type="vanished">ပိတ်ထားပါသည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>

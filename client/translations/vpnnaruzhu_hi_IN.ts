@@ -1674,9 +1674,8 @@ Thank you for staying with us!</source>
         <translation>एप्लिकेशन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="136"/>
         <source>Backup</source>
-        <translation>बैकअप</translation>
+        <translation type="vanished">बैकअप</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
@@ -1684,17 +1683,12 @@ Thank you for staying with us!</source>
         <translation>VPNNaruzhu के बारे में</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
-        <source>Dev console</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
         <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="180"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2386,19 +2380,16 @@ subscription key</source>
         <translation>भाषा</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="198"/>
         <source>Logging</source>
-        <translation>लॉगिंग</translation>
+        <translation type="vanished">लॉगिंग</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Enabled</source>
-        <translation>सक्रिय किया</translation>
+        <translation type="vanished">सक्रिय किया</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Disabled</source>
-        <translation>अक्षम</translation>
+        <translation type="vanished">अक्षम</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>

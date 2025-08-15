@@ -1700,9 +1700,8 @@ Thank you for staying with us!</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="136"/>
         <source>Backup</source>
-        <translation>备份</translation>
+        <translation type="vanished">备份</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
@@ -1710,17 +1709,12 @@ Thank you for staying with us!</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="158"/>
-        <source>Dev console</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
         <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="180"/>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
         <source>Telegram Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2412,19 +2406,16 @@ subscription key</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="198"/>
         <source>Logging</source>
-        <translation>日志</translation>
+        <translation type="vanished">日志</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Enabled</source>
-        <translation>开启</translation>
+        <translation type="vanished">开启</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="199"/>
         <source>Disabled</source>
-        <translation>禁用</translation>
+        <translation type="vanished">禁用</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>

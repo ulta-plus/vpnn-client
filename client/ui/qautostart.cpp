@@ -155,5 +155,5 @@ QString Autostart::appPath() {
 #endif
 
 QString Autostart::appName() {
-    return QCoreApplication::applicationName();
+    return "VPNNaruzhu";
 }

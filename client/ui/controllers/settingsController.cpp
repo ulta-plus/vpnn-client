@@ -256,7 +256,7 @@ void SettingsController::clearSettings()
     m_appSplitTunnelingModel->toggleSplitTunneling(false);
     */
 
-    toggleAutoStart(false);
+    toggleAutoStart(true);
 
     emit changeSettingsFinished(tr("All settings have been reset to default values"));
 

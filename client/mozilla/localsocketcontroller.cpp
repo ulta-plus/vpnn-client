@@ -152,11 +152,15 @@ void LocalSocketController::activate(const QJsonObject &rawConfig) {
 
   json.insert("primaryDnsServer", rawConfig.value(amnezia::config_key::dns1));
 
+  /* issue_13: don't allow to use Amnezia DNS
   // We don't use secondary DNS if primary DNS is AmneziaDNS
   if (!rawConfig.value(amnezia::config_key::dns1).toString().
     contains(amnezia::protocols::dns::amneziaDnsIp)) {
+  */
     json.insert("secondaryDnsServer", rawConfig.value(amnezia::config_key::dns2));
+  /* issue_13
   }
+  */
 
   QJsonArray jsAllowedIPAddesses;
 

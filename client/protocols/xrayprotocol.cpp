@@ -100,11 +100,16 @@ ErrorCode XrayProtocol::startTun2Sock()
             QList<QHostAddress> dnsAddr;
 
             dnsAddr.push_back(QHostAddress(m_configData.value(config_key::dns1).toString()));
+            dnsAddr.push_back(QHostAddress(m_configData.value(config_key::dns2).toString()));
+            /* issue_13 don't allow to use Amnezia DNS
             // We don't use secondary DNS if primary DNS is AmneziaDNS
             if (!m_configData.value(amnezia::config_key::dns1).toString().
                  contains(amnezia::protocols::dns::amneziaDnsIp)) {
+            */
                 dnsAddr.push_back(QHostAddress(m_configData.value(config_key::dns2).toString()));
+            /* issue_13
             }
+            */
 #ifdef Q_OS_WIN
             QThread::msleep(8000);
 #endif

@@ -91,7 +91,7 @@ bool SettingsController::isLoggingEnabled()
 {
     return m_settings->isSaveLogs();
 }
-getPlatformName
+
 void SettingsController::toggleLogging(bool enable)
 {
     m_settings->setSaveLogs(enable);
@@ -172,6 +172,20 @@ void SettingsController::restoreAppConfigFromData(const QByteArray &data)
 {
     bool ok = m_settings->restoreAppConfig(data);
     if (ok) {
+        m_serversModel->resetModel();
+        m_languageModel->changeLanguage(
+                static_cast<LanguageSettings::AvailableLanguageEnum>(m_languageModel->getCurrentLanguageIndex()));
+        emit restoreBackupFinished();
+    } else {
+        emit changeSettingsErrorOccurred(tr("Backup file is corrupted"));
+    }
+}
+
+/* issue_5: VPNNaruzhu doesn't support different tunneling modes
+void SettingsController::restoreAppConfigFromData(const QByteArray &data)
+{
+    bool ok = m_settings->restoreAppConfig(data);
+    if (ok) {
         QJsonObject newConfigData = QJsonDocument::fromJson(data).object();
 
 #if defined(Q_OS_WINDOWS) || defined(Q_OS_LINUX) || defined(Q_OS_MACX)
@@ -221,6 +235,7 @@ void SettingsController::restoreAppConfigFromData(const QByteArray &data)
         emit changeSettingsErrorOccurred(tr("Backup file is corrupted"));
     }
 }
+*/
 
 QString SettingsController::getAppVersion()
 {

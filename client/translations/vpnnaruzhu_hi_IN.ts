@@ -3306,29 +3306,8 @@ subscription key</source>
         <translation type="obsolete">जारी रखना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="305"/>
-        <source>VPN by Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="306"/>
-        <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="322"/>
-        <source>Self-hosted VPN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="323"/>
-        <source>Configure Amnezia VPN on your own server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="334"/>
         <source>Restore from backup</source>
-        <translation type="unfinished">बैकअप से बहाल करना</translation>
+        <translation type="obsolete">बैकअप से बहाल करना</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="398"/>
@@ -3341,24 +3320,16 @@ subscription key</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
         <source>Open backup file</source>
-        <translation type="unfinished">बैकअप फ़ाइल खोलें</translation>
+        <translation type="obsolete">बैकअप फ़ाइल खोलें</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="340"/>
         <source>Backup files (*.backup)</source>
-        <translation type="unfinished">बैकअप फ़ाइलें (*.backup)</translation>
+        <translation type="obsolete">बैकअप फ़ाइलें (*.backup)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="371"/>
-        <source>QR code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="386"/>
         <source>I have nothing</source>
-        <translation type="unfinished">मेरे पास कुछ नहीं है</translation>
+        <translation type="obsolete">मेरे पास कुछ नहीं है</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="352"/>

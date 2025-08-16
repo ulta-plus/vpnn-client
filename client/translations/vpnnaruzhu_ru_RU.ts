@@ -3254,29 +3254,12 @@ subscription key</source>
         <translation>Ключ в виде текста</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="305"/>
         <source>VPN by Amnezia</source>
-        <translation type="unfinished">VPN от Amnezia</translation>
+        <translation type="obsolete">VPN от Amnezia</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="306"/>
-        <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="322"/>
-        <source>Self-hosted VPN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="323"/>
-        <source>Configure Amnezia VPN on your own server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="334"/>
         <source>Restore from backup</source>
-        <translation type="unfinished">Восстановить из резервной копии</translation>
+        <translation type="obsolete">Восстановить из резервной копии</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="300"/>
@@ -3284,24 +3267,12 @@ subscription key</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
         <source>Open backup file</source>
-        <translation type="unfinished">Открыть резервную копию</translation>
+        <translation type="obsolete">Открыть резервную копию</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="340"/>
         <source>Backup files (*.backup)</source>
-        <translation type="unfinished">Файлы резервных копий (*.backup)</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="371"/>
-        <source>QR code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="386"/>
-        <source>I have nothing</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Файлы резервных копий (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="352"/>

@@ -3362,29 +3362,12 @@ subscription key</source>
         <translation type="obsolete">وارد کردن</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="305"/>
         <source>VPN by Amnezia</source>
-        <translation type="unfinished">VPN توسط Amnezia</translation>
+        <translation type="obsolete">VPN توسط Amnezia</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="306"/>
-        <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="322"/>
-        <source>Self-hosted VPN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="323"/>
-        <source>Configure Amnezia VPN on your own server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="334"/>
         <source>Restore from backup</source>
-        <translation type="unfinished">بازیابی از پشتیبان</translation>
+        <translation type="obsolete">بازیابی از پشتیبان</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="398"/>
@@ -3397,24 +3380,16 @@ subscription key</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
         <source>Open backup file</source>
-        <translation type="unfinished">باز کردن فایل پشتیبان</translation>
+        <translation type="obsolete">باز کردن فایل پشتیبان</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="340"/>
         <source>Backup files (*.backup)</source>
-        <translation type="unfinished">Backup files (*.backup)</translation>
+        <translation type="obsolete">Backup files (*.backup)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="371"/>
-        <source>QR code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="386"/>
         <source>I have nothing</source>
-        <translation type="unfinished">من هیچی ندارم</translation>
+        <translation type="obsolete">من هیچی ندارم</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="352"/>

@@ -288,7 +288,7 @@ PageType {
 
     property list<QtObject> variants: [
         /*
-        VPNNaruzhu,
+        amneziaVpn,
         selfHostVpn,
         backupRestore,
         fileOpen,
@@ -298,9 +298,9 @@ PageType {
         fileOpen,
         textKey
     ]
-
+/*
     QtObject {
-        id: VPNNaruzhu
+        id: amneziaVpn
 
         property string title: qsTr("VPN by Amnezia")
         property string description: qsTr("Connect to classic paid and free VPN services from Amnezia")
@@ -345,7 +345,7 @@ PageType {
             }
         }
     }
-
+*/
     QtObject {
         id: fileOpen
 
@@ -364,7 +364,7 @@ PageType {
             }
         }
     }
-
+/*
     QtObject {
         id: qrScan
 
@@ -391,7 +391,7 @@ PageType {
             Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl())
         }
     }
-
+*/
     QtObject {
         id: textKey
 

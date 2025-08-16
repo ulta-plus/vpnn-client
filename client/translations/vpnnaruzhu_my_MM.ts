@@ -3362,29 +3362,12 @@ subscription key</source>
         <translation type="obsolete">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="305"/>
         <source>VPN by Amnezia</source>
-        <translation type="unfinished">Amnezia မှ VPN</translation>
+        <translation type="obsolete">Amnezia မှ VPN</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="306"/>
-        <source>Connect to classic paid and free VPN services from Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="322"/>
-        <source>Self-hosted VPN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="323"/>
-        <source>Configure Amnezia VPN on your own server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="334"/>
         <source>Restore from backup</source>
-        <translation type="unfinished">အရံဖိုင်မှ ပြန်လည်ရယူမည်</translation>
+        <translation type="obsolete">အရံဖိုင်မှ ပြန်လည်ရယူမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="398"/>
@@ -3397,24 +3380,16 @@ subscription key</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="339"/>
         <source>Open backup file</source>
-        <translation type="unfinished">အရံဖိုင်ကို ဖွင့်မည်</translation>
+        <translation type="obsolete">အရံဖိုင်ကို ဖွင့်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="340"/>
         <source>Backup files (*.backup)</source>
-        <translation type="unfinished">အရံဖိုင်များ (*.backup)</translation>
+        <translation type="obsolete">အရံဖိုင်များ (*.backup)</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="371"/>
-        <source>QR code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="386"/>
         <source>I have nothing</source>
-        <translation type="unfinished">ကျွန်ုပ်တွင်ဘာမှမရှိပါ</translation>
+        <translation type="obsolete">ကျွန်ုပ်တွင်ဘာမှမရှိပါ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="180"/>

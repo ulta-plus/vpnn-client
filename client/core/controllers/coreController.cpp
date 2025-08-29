@@ -380,7 +380,11 @@ void CoreController::initPrepareConfigHandler()
     connect(m_connectionController.get(), &ConnectionController::prepareConfig, this, [this]() {
         emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Preparing);
 
-        m_webApi->updateDefaultAccountStatus();
+        if (!m_webApi->updateDefaultAccountStatus()) {
+            emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Disconnected);
+            return;
+        }
+
         if (m_serversModel->getDefaultAccount()
                 [config_key::simplified_status].toString() == "blocked")
         {
@@ -391,7 +395,10 @@ void CoreController::initPrepareConfigHandler()
             return;
         }
 
-        m_webApi->updateDefaultAccountConfig();
+        if (!m_webApi->updateDefaultAccountConfig()) {
+            emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Disconnected);
+            return;
+        }
 
         if (!m_apiConfigsController->isConfigValid()) {
             emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Disconnected);

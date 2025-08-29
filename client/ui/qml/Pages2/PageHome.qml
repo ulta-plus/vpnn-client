@@ -109,6 +109,7 @@ PageType {
                     Qt.openUrlExternally(defaultConfig.payment_link)
                 }
             }
+
         /* issue_5 splitTunnelingButton
             BasicButtonType {
                 id: splitTunnelingButton

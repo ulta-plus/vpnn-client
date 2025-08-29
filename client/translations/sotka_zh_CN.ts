@@ -284,7 +284,7 @@ Subscription</source>
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="388"/>
+        <location filename="../core/controllers/coreController.cpp" line="392"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -544,14 +544,12 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageDeinstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="65"/>
         <source>Removing services from %1</source>
-        <translation>正从 %1 移除服务</translation>
+        <translation type="vanished">正从 %1 移除服务</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="90"/>
         <source>Usually it takes no more than 5 minutes</source>
-        <translation>大约5分钟之内完成</translation>
+        <translation type="vanished">大约5分钟之内完成</translation>
     </message>
 </context>
 <context>
@@ -2680,14 +2678,8 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsServerProtocol</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="43"/>
         <source> settings</source>
-        <translation>配置</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="175"/>
-        <source>Clear %1 profile?</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">配置</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="137"/>
@@ -2695,74 +2687,32 @@ Already installed containers were found on the server. All installed containers 
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="98"/>
-        <source> connection settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="110"/>
-        <source>Click the &quot;connect&quot; button to create a connection configuration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="130"/>
-        <source> server settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="172"/>
-        <source>Clear profile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="176"/>
-        <source>The connection configuration will be deleted for this device only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="182"/>
-        <source>Unable to clear %1 profile while there is an active connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="222"/>
         <source>Remove </source>
-        <translation>移除</translation>
+        <translation type="vanished">移除</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="227"/>
         <source>All users with whom you shared a connection will no longer be able to connect to it.</source>
-        <translation>与您共享连接的所有用户将无法再连接到该连接。</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="234"/>
-        <source>Cannot remove active container</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">与您共享连接的所有用户将无法再连接到该连接。</translation>
     </message>
     <message>
         <source> from server?</source>
         <translation type="obsolete"> 从服务器</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="226"/>
         <source>Remove %1 from server?</source>
-        <translation>从服务器移除 %1 ?</translation>
+        <translation type="vanished">从服务器移除 %1 ?</translation>
     </message>
     <message>
         <source>All users with whom you shared a connection will no longer be able to connect to it</source>
         <translation type="obsolete">与您共享连接的所有用户将无法再连接到此链接</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="177"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="228"/>
         <source>Continue</source>
-        <translation>继续</translation>
+        <translation type="vanished">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="178"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="229"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation type="vanished">取消</translation>
     </message>
 </context>
 <context>
@@ -3145,40 +3095,32 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardInstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="24"/>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="73"/>
         <source>Usually it takes no more than 5 minutes</source>
-        <translation>通常不超过5分钟</translation>
+        <translation type="vanished">通常不超过5分钟</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="61"/>
         <source>The server has already been added to the application</source>
-        <translation>服务器已添加到应用软件中</translation>
+        <translation type="vanished">服务器已添加到应用软件中</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
         <source>Amnezia has detected that your server is currently </source>
-        <translation>Amnezia 检测到您的服务器当前</translation>
+        <translation type="vanished">Amnezia 检测到您的服务器当前</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="68"/>
         <source>busy installing other software. Amnezia installation </source>
-        <translation>正安装其他软件。Amnezia安装</translation>
+        <translation type="vanished">正安装其他软件。Amnezia安装</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="166"/>
         <source>Cancel installation</source>
-        <translation>取消安装</translation>
+        <translation type="vanished">取消安装</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="69"/>
         <source>will pause until the server finishes installing other software</source>
-        <translation>将暂停，直到其他软件安装完成。</translation>
+        <translation type="vanished">将暂停，直到其他软件安装完成。</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="127"/>
         <source>Installing</source>
-        <translation>安装中</translation>
+        <translation type="vanished">安装中</translation>
     </message>
 </context>
 <context>
@@ -4766,18 +4708,18 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>SotkaKeyBinding</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="63"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="69"/>
         <source>Key is being used with another device.
 Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="83"/>
         <source>Use here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="99"/>
         <source>Buy new key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4786,7 +4728,7 @@ Should it be bonded to this device?</source>
         <translation type="obsolete">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="105"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="113"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4809,12 +4751,17 @@ Should it be bonded to this device?</source>
         <translation type="unfinished">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="138"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
+        <source>Please, enter your telegram key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="142"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="157"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4855,38 +4802,33 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="57"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="49"/>
         <source>Log Out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="72"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="64"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="75"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="67"/>
         <source>Log out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="76"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="68"/>
         <source>Continue</source>
         <translation type="unfinished">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="69"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="102"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="94"/>
         <source>Personal Account</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="119"/>
-        <source>Renew Subscription</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4904,17 +4846,17 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaPageStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="176"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="182"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="180"/>
         <source>Settings restored from backup file</source>
         <translation type="unfinished">从备份文件还原配置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="188"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="186"/>
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5052,12 +4994,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="210"/>
+        <location filename="../ui/qml/main2.qml" line="202"/>
         <source>Private key passphrase</source>
         <translation>私钥密码</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="231"/>
+        <location filename="../ui/qml/main2.qml" line="223"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>

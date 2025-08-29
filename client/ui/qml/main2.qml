@@ -30,14 +30,6 @@ Window  {
         PageController.closeWindow()
     }
 
-    Connections {
-        target: VPNNWebApi
-
-        function onKeyLimitExceeded() {
-            PageController.goToPage(PageEnum.SotkaKeyBinding)
-        }
-    }
-
     Item { // This item is needed for focus handling
         id: defaultFocusItem
         objectName: "defaultFocusItem"

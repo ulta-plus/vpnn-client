@@ -97,54 +97,58 @@ PageType {
             mainText: qsTr('Continue')
 
             onClicked: {
-            try {
-                root.disableAll()
-                waitingBox.visible = true
-
-                if (ServersModel.isThereDefaultAccount()) {
-                    ServersModel.removeDefaultAccount()
-                }
-
-                root.telegram_key = telegramKey.text.trim()
-                root.public_request_id = ImportController.getPublicIdFromTelegramKey(root.telegram_key)
-                root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
-                //print(root.account_status)
-                const cur_status = JSON.parse(root.account_status)
-
-                var simplified_status = ''
                 try {
-                    simplified_status = cur_status.data.request.simplified_status
-                } catch (e) {
-                    root.account_status = '{
-    "data": {
-        "request": {
-            "public_request_id": "' + root.public_request_id + '",
-            "simplified_status": "Key limit exceeded",
-            "paid_until": "",
-            "payment_link": ""
-        }
-    }
-}'
-                    root.error = cur_status.error.localized_message
-                }
+                    root.disableAll()
+                    waitingBox.visible = true
 
-                waitingBox.visible = false
-
-                if (root.error == '' || root.error == 'Key limit exceeded') {
-                    if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
-                        enableAll()
-                        ImportController.importConfig()
-                    } else {
-                        showError(qsTr('Wrong Dummy Key File'))
+                    if (ServersModel.isThereDefaultAccount()) {
+                        ServersModel.removeDefaultAccount()
                     }
-                } else {
-                    // Other errors
-                    showError(root.error)
-                }
-            } catch (e) {
-                waitingBox.visible = false
-                enableAll()
+
+                    root.telegram_key = telegramKey.text.trim()
+                    if (root.telegram_key == '') {
+                        waitingBox.visible = false
+                        showError(qsTr('Please, enter your telegram key'))
+                        return
+                    }
+                    root.public_request_id = ImportController.getPublicIdFromTelegramKey(root.telegram_key)
+                    root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
+                    const cur_status = JSON.parse(root.account_status)
+
+                    var simplified_status = ''
+                    try {
+                        simplified_status = cur_status.data.request.simplified_status
+                    } catch (e) {
+                        root.account_status = '{
+        "data": {
+            "request": {
+                "public_request_id": "' + root.public_request_id + '",
+                "simplified_status": "Key limit exceeded",
+                "paid_until": "",
+                "payment_link": ""
             }
+        }
+    }'
+                        root.error = cur_status.error.localized_message
+                    }
+
+                    waitingBox.visible = false
+
+                    if (root.error == '' || root.error == 'Key limit exceeded') {
+                        if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
+                            enableAll()
+                            ImportController.importConfig()
+                        } else {
+                            showError(qsTr('Wrong Dummy Key File'))
+                        }
+                    } else {
+                        // Other errors
+                        showError(root.error)
+                    }
+                } catch (e) {
+                    waitingBox.visible = false
+                    enableAll()
+                }
             }
         }
 

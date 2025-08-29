@@ -8,12 +8,12 @@
 
 static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comment)
 {
-    if (reply->error() == QNetworkReply::NoError) {
-        QByteArray r = reply->readAll();
-        reply->deleteLater();
+    QByteArray r = reply->readAll();
+    reply->deleteLater();
 
-        QJsonParseError json_error;
-        QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
+    QJsonParseError json_error;
+    QJsonDocument json_doc = QJsonDocument::fromJson(r, &json_error);
+    if (reply->error() == QNetworkReply::NoError) {
         if (json_error.error == QJsonParseError::NoError) {
             return json_doc;
         } else {
@@ -22,7 +22,10 @@ static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comme
         }
     } else {
         qDebug() << "Reply failed: " << comment;
-        qDebug() << reply->readAll();
+        qDebug() << r;
+        if (json_error.error == QJsonParseError::NoError) {
+            return json_doc;
+        }
     }
 
     return QJsonDocument();
@@ -30,12 +33,16 @@ static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comme
 
 static QString getStringFromReply(QNetworkReply* reply, const QString &comment)
 {
+    QString str = QString::fromUtf8(reply->readAll());
+    reply->deleteLater();
     if (reply->error() == QNetworkReply::NoError) {
-        QString str = QString::fromUtf8(reply->readAll());
-        reply->deleteLater();
         return str;
     } else {
         qDebug() << "Reply failed: " << comment;
+        if (!str.isEmpty()) {
+            qDebug() << "Reply string: " << str;
+            return str;
+        }
     }
 
     return QString();
@@ -93,25 +100,24 @@ QJsonDocument SotkaWebApi::getDefaultAccountStatus(void) const
     return getAccountStatus(getDefaultPublicRequestId());
 }
 
-void SotkaWebApi::updateDefaultAccountStatus(void) const
+bool SotkaWebApi::updateDefaultAccountStatus(void) const
 {
     if (!m_serversModel->isThereDefaultAccount()) {
-        return;
+        return true;
     }
 
     QJsonDocument json_doc = getDefaultAccountStatus();
-    //qDebug() << json_doc;
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot get default account status";
-    } else {
-        m_serversModel->updateDefaultAccountStatus(json_doc);
-    }
-
-    if (json_doc[config_key::simplified_status].toString() == "Key limit exceeded") {
+        return false;
+    } if (json_doc[config_key::error][config_key::localized_message].toString() == "Key limit exceeded") {
         emit keyLimitExceeded();
+        return false;
     }
 
+    m_serversModel->updateDefaultAccountStatus(json_doc);
     emit defaultAccountStatusUpdated();
+    return true;
 }
 
 QString SotkaWebApi::getDefaultAccountConfig(bool force_update_device) const
@@ -122,7 +128,7 @@ QString SotkaWebApi::getDefaultAccountConfig(bool force_update_device) const
 
     QNetworkRequest request;
     if (force_update_device) {
-        request.setRawHeader("force_update_device", "true");
+        url += "&force_update_device=true";
     }
     initRequest(request, url);
 
@@ -130,20 +136,27 @@ QString SotkaWebApi::getDefaultAccountConfig(bool force_update_device) const
     return getStringFromReply(reply, "getDefaultAccountConfig");
 }
 
-void SotkaWebApi::updateDefaultAccountConfig(bool force_update_device) const
+bool SotkaWebApi::updateDefaultAccountConfig(bool force_update_device) const
 {
     if (!m_serversModel->isThereDefaultAccount()) {
-        return;
+        return true;
     }
 
     QString key = getDefaultAccountConfig(force_update_device);
-    //qDebug() << key;
     if (key.isEmpty()) {
         qDebug() << "Cannot get default account config";
-    } else {
-        m_importController->extractConfigFromData(key);
-        m_importController->updateDefaultAccountConfig();
+        return false;
     }
+
+    if (force_update_device) {
+        if (!updateDefaultAccountStatus()) {
+            return false;
+        }
+    }
+
+    m_importController->extractConfigFromData(key);
+    m_importController->updateDefaultAccountConfig();
+    return true;
 }
 
 QJsonDocument SotkaWebApi::downloadJsonFile(const QString &url) const

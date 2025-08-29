@@ -305,7 +305,7 @@ Subscription</source>
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="388"/>
+        <location filename="../core/controllers/coreController.cpp" line="392"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -565,14 +565,12 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageDeinstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="65"/>
         <source>Removing services from %1</source>
-        <translation>Видалення сервісів з %1</translation>
+        <translation type="vanished">Видалення сервісів з %1</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageDeinstalling.qml" line="90"/>
         <source>Usually it takes no more than 5 minutes</source>
-        <translation>Зазвичай, це займає не більше 5 хвилин</translation>
+        <translation type="vanished">Зазвичай, це займає не більше 5 хвилин</translation>
     </message>
 </context>
 <context>
@@ -2708,28 +2706,24 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSettingsServerProtocol</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="43"/>
         <source> settings</source>
-        <translation> Налаштування</translation>
+        <translation type="vanished"> Налаштування</translation>
     </message>
     <message>
         <source>Clear %1 profile</source>
         <translation type="vanished">Очистити профіль %1</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="175"/>
         <source>Clear %1 profile?</source>
-        <translation>Очистити профіль %1?</translation>
+        <translation type="vanished">Очистити профіль %1?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="182"/>
         <source>Unable to clear %1 profile while there is an active connection</source>
-        <translation>Неможливо очистити профіль %1 під час активного підключення</translation>
+        <translation type="vanished">Неможливо очистити профіль %1 під час активного підключення</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="234"/>
         <source>Cannot remove active container</source>
-        <translation>Неможливо видалити активний контейнер</translation>
+        <translation type="vanished">Неможливо видалити активний контейнер</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="103"/>
@@ -2737,56 +2731,24 @@ Already installed containers were found on the server. All installed containers 
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="222"/>
         <source>Remove </source>
-        <translation>Видалити </translation>
+        <translation type="vanished">Видалити </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="226"/>
         <source>Remove %1 from server?</source>
-        <translation>Видалити %1 з сервера?</translation>
+        <translation type="vanished">Видалити %1 з сервера?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="227"/>
         <source>All users with whom you shared a connection will no longer be able to connect to it.</source>
-        <translation>Користувачі, з якими ви поділились цим протоколм, більше не зможуть до нього підключитись.</translation>
+        <translation type="vanished">Користувачі, з якими ви поділились цим протоколм, більше не зможуть до нього підключитись.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="177"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="228"/>
         <source>Continue</source>
-        <translation>Продовжити</translation>
+        <translation type="vanished">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="98"/>
-        <source> connection settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="110"/>
-        <source>Click the &quot;connect&quot; button to create a connection configuration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="130"/>
-        <source> server settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="172"/>
-        <source>Clear profile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="176"/>
-        <source>The connection configuration will be deleted for this device only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="178"/>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="229"/>
         <source>Cancel</source>
-        <translation>Відмінити</translation>
+        <translation type="vanished">Відмінити</translation>
     </message>
 </context>
 <context>
@@ -3161,40 +3123,32 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageSetupWizardInstalling</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="61"/>
         <source>The server has already been added to the application</source>
-        <translation>Сервер уже додано в застосунок</translation>
+        <translation type="vanished">Сервер уже додано в застосунок</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
         <source>Amnezia has detected that your server is currently </source>
-        <translation>Amnezia виявила, що сервер </translation>
+        <translation type="vanished">Amnezia виявила, що сервер </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="68"/>
         <source>busy installing other software. Amnezia installation </source>
-        <translation>зайнятий встановленням інших протоколів та сервісів. Встановлення Amnezia </translation>
+        <translation type="vanished">зайнятий встановленням інших протоколів та сервісів. Встановлення Amnezia </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="69"/>
         <source>will pause until the server finishes installing other software</source>
-        <translation>буде призупинено, поки сервер не завершить встановлення</translation>
+        <translation type="vanished">буде призупинено, поки сервер не завершить встановлення</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="127"/>
         <source>Installing</source>
-        <translation>Встановлення</translation>
+        <translation type="vanished">Встановлення</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="166"/>
         <source>Cancel installation</source>
-        <translation>Відмінити встановлення</translation>
+        <translation type="vanished">Відмінити встановлення</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="24"/>
-        <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="73"/>
         <source>Usually it takes no more than 5 minutes</source>
-        <translation>Зазвичай, займає не більше 5 хвилин</translation>
+        <translation type="vanished">Зазвичай, займає не більше 5 хвилин</translation>
     </message>
 </context>
 <context>
@@ -4773,18 +4727,18 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>SotkaKeyBinding</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="63"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="69"/>
         <source>Key is being used with another device.
 Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="83"/>
         <source>Use here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="99"/>
         <source>Buy new key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4793,7 +4747,7 @@ Should it be bonded to this device?</source>
         <translation type="obsolete">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="105"/>
+        <location filename="../ui/qml/Pages2/SotkaKeyBinding.qml" line="113"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4816,12 +4770,17 @@ Should it be bonded to this device?</source>
         <translation type="unfinished">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="138"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
+        <source>Please, enter your telegram key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="142"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="157"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4866,38 +4825,33 @@ Should it be bonded to this device?</source>
         <translation type="obsolete">Логування увімкнено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="57"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="49"/>
         <source>Log Out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="72"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="64"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="75"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="67"/>
         <source>Log out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="76"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="68"/>
         <source>Continue</source>
         <translation type="unfinished">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="77"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="69"/>
         <source>Cancel</source>
         <translation type="unfinished">Відмінити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="102"/>
+        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="94"/>
         <source>Personal Account</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="119"/>
-        <source>Renew Subscription</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4915,17 +4869,17 @@ Should it be bonded to this device?</source>
 <context>
     <name>SotkaPageStart</name>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="176"/>
         <source>Logging was disabled after 14 days, log files were deleted</source>
         <translation type="unfinished">Логування було вимкнене через 14 днів, файли журналів були видалені</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="182"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="180"/>
         <source>Settings restored from backup file</source>
         <translation type="unfinished">Відновлення налаштувань із бекап файлу</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="188"/>
+        <location filename="../ui/qml/Pages2/SotkaPageStart.qml" line="186"/>
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5063,12 +5017,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="210"/>
+        <location filename="../ui/qml/main2.qml" line="202"/>
         <source>Private key passphrase</source>
         <translation>Пароль для особистого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="231"/>
+        <location filename="../ui/qml/main2.qml" line="223"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>

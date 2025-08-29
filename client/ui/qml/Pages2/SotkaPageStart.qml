@@ -98,8 +98,6 @@ PageType {
 
             if (currentPageName === PageController.getPagePath(PageEnum.PageSetupWizardInstalling)) {
                 needCloseCurrentPage = true
-            } else if (currentPageName === PageController.getPagePath(PageEnum.PageDeinstalling)) {
-                needCloseCurrentPage = true
             }
             if (needCloseCurrentPage) {
                 PageController.closePage()
@@ -221,6 +219,21 @@ PageType {
         function onReloadServerFromApiFinished(message) {
             PageController.goToPageHome()
             PageController.showNotificationMessage(message)
+        }
+    }
+
+    Connections {
+        target: VPNNWebApi
+
+        function onDefaultAccountStatusUpdated() {
+            PageController.goToPageHome()
+        }
+
+        function onKeyLimitExceeded() {
+            if (tabBarStackView.depth >= 1) {
+                var prev_page = tabBarStackView.pop()
+            }
+            PageController.goToPage(PageEnum.SotkaKeyBinding)
         }
     }
 

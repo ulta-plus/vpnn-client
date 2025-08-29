@@ -50,8 +50,8 @@ public slots:
     void updateApiBaseUrl(void) const;
     void updateSmartRouting(void) const;
     */
-    void updateDefaultAccountStatus(void) const;
-    void updateDefaultAccountConfig(bool force_update_device = false) const;
+    bool updateDefaultAccountStatus(void) const;
+    bool updateDefaultAccountConfig(bool force_update_device = false) const;
 
     QString getApiBaseUrl(void) const
     {

@@ -57,14 +57,6 @@ Button {
         }
     }
 
-    Connections {
-        target: VPNNWebApi
-
-        function onKeyLimitExceeded() {
-            PageController.goToPage(PageEnum.SotkaKeyBinding)
-        }
-    }
-
 //    enabled: !ConnectionController.isConnectionInProgress
 
     background: Item {

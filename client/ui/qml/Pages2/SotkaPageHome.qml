@@ -23,14 +23,6 @@ PageType {
     property bool isUnpaid: ServersModel.isDefaultAccountUnpaid()
     property var defaultConfig: ServersModel.getDefaultAccount()
 
-    Connections {
-        target: VPNNWebApi
-
-        function onDefaultAccountStatusUpdated() {
-            PageController.goToPageHome()
-        }
-    }
-
     ColumnLayout {
         objectName: "homeColumnLayout"
 
@@ -114,6 +106,7 @@ PageType {
             }
         }
 
+    /* Currently Sotka supports only interactions in the telegram chanel
         SotkaButton {
             id: subscriptionButton
             mainText: qsTr('Renew Subscription')
@@ -136,5 +129,6 @@ PageType {
                 Qt.openUrlExternally(defaultConfig.payment_link)
             }
         }
+    */
     }
 }

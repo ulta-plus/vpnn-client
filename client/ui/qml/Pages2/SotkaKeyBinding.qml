@@ -30,6 +30,12 @@ PageType {
         }
     }
 
+    BusyIndicator {
+        id: waitingBox
+        anchors.centerIn: parent
+        visible: false
+    }
+
     ColumnLayout {
         anchors.top: parent.top
         anchors.left: parent.left
@@ -77,7 +83,9 @@ PageType {
             mainText: qsTr('Use here')
 
             onClicked: {
+                waitingBox.visible = true
                 VPNNWebApi.updateDefaultAccountConfig(true)
+                waitingBox.visible = false
                 PageController.goToPageHome()
             }
         }

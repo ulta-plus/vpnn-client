@@ -20,6 +20,7 @@ Logger logger("WgDaemonServer");
 LocalServer::LocalServer(QObject *parent) : QObject(parent),
     m_ipcServer(this)
 {
+    qDebug() << "LocalServer constructor start";
     // Create the server and listen outside of QtRO
     m_server = QSharedPointer<QLocalServer>(new QLocalServer(this));
     m_server->setSocketOptions(QLocalServer::WorldAccessOption);
@@ -40,6 +41,7 @@ LocalServer::LocalServer(QObject *parent) : QObject(parent),
         }
     });
 
+    qDebug() << "Before Server Init";
     // Init Mozilla Wireguard Daemon
     if (!server.initialize()) {
         logger.error() << "Failed to initialize the server";

@@ -42,6 +42,7 @@ ErrorCode WireguardProtocol::startMzImpl()
     m_rawConfig.insert(protocolName + "_config_data", vpnConfigData);
     m_rawConfig[config_key::hostName] = NetworkUtilities::getIPAddress(m_rawConfig[config_key::hostName].toString());
 
+    qDebug() << "m_impl->activate";
     m_impl->activate(m_rawConfig);
     return ErrorCode::NoError;
 }
@@ -55,6 +56,7 @@ ErrorCode WireguardProtocol::stopMzImpl()
 
 ErrorCode WireguardProtocol::start()
 {
+    qDebug() << "WireguardProtocol::start()";
     return startMzImpl();
 }
 

@@ -285,6 +285,7 @@ void VpnConnection::connectToVpn(int serverIndex, const ServerCredentials &crede
     }
 
     if (!m_IpcClient->isSocketConnected()) {
+        qDebug() << "Not Connected";
         if (!IpcClient::init(m_IpcClient)) {
             qWarning() << "Error occurred when init IPC client";
             emit serviceIsNotReady();
@@ -335,6 +336,7 @@ void VpnConnection::connectToVpn(int serverIndex, const ServerCredentials &crede
     ErrorCode errorCode = m_vpnProtocol.data()->start();
     if (errorCode != ErrorCode::NoError)
         emit connectionStateChanged(Vpn::ConnectionState::Error);
+    qDebug() << "finish connectToVpn";
 }
 
 void VpnConnection::createProtocolConnections()

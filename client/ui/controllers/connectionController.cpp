@@ -60,6 +60,7 @@ void ConnectionController::openConnection()
 
     auto vpnConfiguration = vpnConfigurationController.createVpnConfiguration(dns, serverConfig, containerConfig, container);
     emit connectToVpn(serverIndex, credentials, container, vpnConfiguration);
+    qDebug() << "finish openConnection()";
 }
 
 void ConnectionController::closeConnection()

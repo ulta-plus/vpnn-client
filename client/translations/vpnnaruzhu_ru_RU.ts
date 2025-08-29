@@ -293,45 +293,45 @@
 <context>
     <name>ConnectionController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="80"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="81"/>
         <source>Connecting...</source>
         <translation>Подключение...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="85"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="86"/>
         <source>Connected</source>
         <translation>Подключено</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="109"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="110"/>
         <source>Preparing...</source>
         <translation>Подготовка...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="131"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="132"/>
         <source>Settings updated successfully, reconnnection...</source>
         <translation>Настройки успешно обновлены, переподключение...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="134"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="135"/>
         <source>Settings updated successfully</source>
         <translation>Настройки успешно обновлены</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="94"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="95"/>
         <source>Reconnecting...</source>
         <translation>Переподключение...</translation>
     </message>
     <message>
         <location filename="../ui/controllers/connectionController.h" line="74"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="99"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="114"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="120"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="100"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="115"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="121"/>
         <source>Connect</source>
         <translation>Подключиться</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="104"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="105"/>
         <source>Disconnecting...</source>
         <translation>Отключение...</translation>
     </message>
@@ -5148,7 +5148,7 @@ For more detailed information, you can
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="498"/>
+        <location filename="../vpnconnection.cpp" line="500"/>
         <source>Mbps</source>
         <translation>Мбит/с</translation>
     </message>

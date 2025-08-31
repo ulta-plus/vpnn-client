@@ -106,13 +106,11 @@ PageType {
                     }
 
                     root.telegram_key = telegramKey.text.trim()
-                    print('input:', root.telegram_key)
                     if (root.telegram_key == '') {
                         waitingBox.visible = false
                         showError(qsTr('Please, enter your telegram key'))
                         return
                     } else if (!root.telegram_key.includes('vpn://')) {
-                        print('not vpn://')
                         waitingBox.visible = false
                         showError(qsTr('Key should contain "vpn://"'))
                         return
@@ -121,11 +119,11 @@ PageType {
                         showError(qsTr('Key shouldn\'t contain spaces'))
                         return
                     }
-                    print('input check passed')
 
                     root.public_request_id = ImportController.getPublicIdFromTelegramKey(root.telegram_key)
                     if (root.public_request_id == '') {
                         waitingBox.visible = false
+                        errorNotification.implicitHeight = 120
                         showError(qsTr('Wrong Telegram Key'))
                         return
                     }
@@ -200,11 +198,16 @@ PageType {
         errorNotification.visible = true
     }
 
+    function errorNotificationClose() {
+        errorNotification.implicitHeight = 100
+        root.enableAll()
+    }
+
     SotkaNotification {
         id: errorNotification
         anchors.centerIn: parent
         text: root.error
-        onClick: root.enableAll
+        onClick: root.errorNotificationClose
     }
 
     BusyIndicator {

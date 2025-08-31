@@ -4521,7 +4521,7 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="129"/>
         <source>Wrong Telegram Key</source>
-        <translation>Неправильный ключ</translation>
+        <translation>Ключ не найден, проверьте правильность введённого ключа.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="178"/>
@@ -4614,7 +4614,7 @@ Should it be bonded to this device?</source>
     <message>
         <location filename="../ui/qml/Pages2/SotkaPageHome.qml" line="94"/>
         <source>Personal Account</source>
-        <translation>Личный аккаунт</translation>
+        <translation>Личный кабинет</translation>
     </message>
     <message>
         <source>Renew Subscription</source>

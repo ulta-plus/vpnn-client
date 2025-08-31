@@ -206,7 +206,9 @@ bool ImportController::extractConfigFromData(QString data)
         break;
     }
     case ConfigTypes::Invalid: {
+        /* Sotka should explicitly process the case
         emit importErrorOccurred(ErrorCode::ImportInvalidConfigError, false);
+        */
         break;
     }
     }
@@ -748,7 +750,10 @@ void ImportController::processAmneziaConfig(QJsonObject &config)
 
 QString ImportController::getPublicIdFromTelegramKey(QString telegram_key)
 {
-    extractConfigFromData(telegram_key);
+    if (!extractConfigFromData(telegram_key)) {
+        return QString();
+    }
+
     QString public_request_id = m_config[config_key::api_key].toString();
     return public_request_id;
 }

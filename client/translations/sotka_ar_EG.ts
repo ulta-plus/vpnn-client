@@ -387,24 +387,24 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">ملف تكوين غير صحيح</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="710"/>
+        <location filename="../ui/controllers/importController.cpp" line="712"/>
         <source>This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious scripts, so only add it if you fully trust the provider of this config. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="714"/>
+        <location filename="../ui/controllers/importController.cpp" line="716"/>
         <source>&lt;br&gt;In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="771"/>
-        <location filename="../ui/controllers/importController.cpp" line="788"/>
-        <location filename="../ui/controllers/importController.cpp" line="805"/>
+        <location filename="../ui/controllers/importController.cpp" line="776"/>
+        <location filename="../ui/controllers/importController.cpp" line="793"/>
+        <location filename="../ui/controllers/importController.cpp" line="810"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="675"/>
+        <location filename="../ui/controllers/importController.cpp" line="677"/>
         <source>Scanned %1 of %2.</source>
         <translation>تم فحص%1 من %2.</translation>
     </message>
@@ -4727,17 +4727,32 @@ Should it be bonded to this device?</source>
         <translation type="unfinished">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="112"/>
         <source>Please, enter your telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="142"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="117"/>
+        <source>Key should contain &quot;vpn://&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="121"/>
+        <source>Key shouldn&apos;t contain spaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="129"/>
+        <source>Wrong Telegram Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="159"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="178"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>

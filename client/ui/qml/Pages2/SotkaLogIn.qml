@@ -106,12 +106,29 @@ PageType {
                     }
 
                     root.telegram_key = telegramKey.text.trim()
+                    print('input:', root.telegram_key)
                     if (root.telegram_key == '') {
                         waitingBox.visible = false
                         showError(qsTr('Please, enter your telegram key'))
                         return
+                    } else if (!root.telegram_key.includes('vpn://')) {
+                        print('not vpn://')
+                        waitingBox.visible = false
+                        showError(qsTr('Key should contain "vpn://"'))
+                        return
+                    } else if (root.telegram_key.includes(' ')) {
+                        waitingBox.visible = false
+                        showError(qsTr('Key shouldn\'t contain spaces'))
+                        return
                     }
+                    print('input check passed')
+
                     root.public_request_id = ImportController.getPublicIdFromTelegramKey(root.telegram_key)
+                    if (root.public_request_id == '') {
+                        waitingBox.visible = false
+                        showError(qsTr('Wrong Telegram Key'))
+                        return
+                    }
                     root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
                     const cur_status = JSON.parse(root.account_status)
 

@@ -106,7 +106,7 @@ PageType {
                     var noButtonText = qsTr("Cancel")
 
                     var yesButtonFunction = function() {
-                        SettingsController.primaryDns = "192.168.63.254"
+                        SettingsController.primaryDns = "172.16.0.1"
                         primaryDns.textField.text = SettingsController.primaryDns
                         SettingsController.secondaryDns = "8.8.8.8"
                         secondaryDns.textField.text = SettingsController.secondaryDns

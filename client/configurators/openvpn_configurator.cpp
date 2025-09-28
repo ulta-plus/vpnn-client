@@ -121,10 +121,8 @@ QString OpenVpnConfigurator::processConfigWithLocalSettings(const QPair<QString,
         /* issue_13: don't allow to use Amnezia DNS
         // We don't use secondary DNS if primary DNS is AmneziaDNS
         if (dns.first.contains(protocols::dns::amneziaDnsIp)) {
-        */
             QRegularExpression dnsRegex("dhcp-option DNS " + dns.second);
             config.replace(dnsRegex, "");
-        /* issue_13
         }
         */
 
@@ -177,10 +175,8 @@ QString OpenVpnConfigurator::processConfigWithExportSettings(const QPair<QString
     /* issue_13: don't allow to use Amnezia DNS
     // We don't use secondary DNS if primary DNS is AmneziaDNS
     if (dns.first.contains(protocols::dns::amneziaDnsIp)) {
-    */
         QRegularExpression dnsRegex("dhcp-option DNS " + dns.second);
         config.replace(dnsRegex, "");
-    /* issue_13
     }
     */
 

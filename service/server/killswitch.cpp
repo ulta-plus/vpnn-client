@@ -195,7 +195,7 @@ bool KillSwitch::enablePeerTraffic(const QJsonObject &configStr) {
 
     config.m_primaryDnsServer = configStr.value(amnezia::config_key::dns1).toString();
 
-    /* don't allow to use Amnezia DNS
+    /* issue_13: don't allow to use Amnezia DNS
     // We don't use secondary DNS if primary DNS is AmneziaDNS
     if (!config.m_primaryDnsServer.contains(amnezia::protocols::dns::amneziaDnsIp)) {
     */
@@ -321,10 +321,14 @@ bool KillSwitch::enableKillSwitch(const QJsonObject &configStr, int vpnAdapterIn
 
     dnsServers.append(configStr.value(amnezia::config_key::dns1).toString());
 
+    /* issue_13: don't allow to use Amnezia DNS
     // We don't use secondary DNS if primary DNS is AmneziaDNS
     if (!configStr.value(amnezia::config_key::dns1).toString().contains(amnezia::protocols::dns::amneziaDnsIp)) {
+    */
         dnsServers.append(configStr.value(amnezia::config_key::dns2).toString());
+    /* issue_13
     }
+    */
 
     dnsServers.append("127.0.0.1");
     dnsServers.append("127.0.0.53");
@@ -363,10 +367,14 @@ bool KillSwitch::enableKillSwitch(const QJsonObject &configStr, int vpnAdapterIn
     QStringList dnsServers;
     dnsServers.append(configStr.value(amnezia::config_key::dns1).toString());
 
+    /* issue_13: don't allow to use Amnezia DNS
     // We don't use secondary DNS if primary DNS is AmneziaDNS
     if (!configStr.value(amnezia::config_key::dns1).toString().contains(amnezia::protocols::dns::amneziaDnsIp)) {
+    */
         dnsServers.append(configStr.value(amnezia::config_key::dns2).toString());
+    /* issue_13
     }
+    */
 
     for (auto dns : configStr.value(amnezia::config_key::allowedDnsServers).toArray()) {
         if (!dns.isString()) {

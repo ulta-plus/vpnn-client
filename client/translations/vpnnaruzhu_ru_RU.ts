@@ -450,24 +450,24 @@ Can&apos;t be disabled for current server</source>
 <context>
     <name>ImportController</name>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="736"/>
+        <location filename="../ui/controllers/importController.cpp" line="741"/>
         <source>This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious scripts, so only add it if you fully trust the provider of this config. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="740"/>
+        <location filename="../ui/controllers/importController.cpp" line="745"/>
         <source>&lt;br&gt;In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="790"/>
-        <location filename="../ui/controllers/importController.cpp" line="807"/>
-        <location filename="../ui/controllers/importController.cpp" line="824"/>
+        <location filename="../ui/controllers/importController.cpp" line="795"/>
+        <location filename="../ui/controllers/importController.cpp" line="812"/>
+        <location filename="../ui/controllers/importController.cpp" line="829"/>
         <source>Default Key</source>
         <translation>Стандартный ключ</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="701"/>
+        <location filename="../ui/controllers/importController.cpp" line="706"/>
         <source>Scanned %1 of %2.</source>
         <translation>Отсканировано %1 из %2.</translation>
     </message>

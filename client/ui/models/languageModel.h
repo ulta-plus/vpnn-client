@@ -60,8 +60,10 @@ public slots:
     int getCurrentLanguageIndex();
     int getLineHeightAppend();
     QString getCurrentLanguageName();
+    /* VPNNaruzhu has another URLs
     QString getCurrentSiteUrl(const QString &path = "");
     QString getCurrentDocsUrl(const QString &path = "");
+    */
 
 signals:
     void updateTranslations(const QLocale &locale);

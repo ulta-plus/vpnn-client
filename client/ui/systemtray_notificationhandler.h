@@ -22,7 +22,9 @@ public:
     void onTranslationsUpdated() override;
 
 public slots:
+    /* VPNNaruzhu has another URLs
     void updateWebsiteUrl(const QString &newWebsiteUrl);
+    */
 
 protected:
     virtual void notify(Message type, const QString& title,

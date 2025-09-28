@@ -119,6 +119,7 @@ LanguageSettings::AvailableLanguageEnum LanguageModel::getSystemLanguageEnum()
     }
 }
 
+/* VPNNaruzhu has another URLs
 QString LanguageModel::getCurrentSiteUrl(const QString &path)
 {
     auto language = static_cast<LanguageSettings::AvailableLanguageEnum>(getCurrentLanguageIndex());
@@ -138,3 +139,4 @@ QString LanguageModel::getCurrentDocsUrl(const QString &path)
     default: return QString("https://docs.amnezia.org") + (path.isEmpty() ? "" : (QString("/%1").arg(path)));
     }
 }
+*/

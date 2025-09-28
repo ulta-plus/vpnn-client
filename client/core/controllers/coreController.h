@@ -67,7 +67,9 @@ public:
 
 signals:
     void translationsUpdated();
+    /* VPNNaruzhu has another URLs
     void websiteUrlChanged(const QString &newUrl);
+    */
 
     void toggleConnection();
 

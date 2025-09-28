@@ -97,7 +97,7 @@ echo "QT_BIN_DIR: $QT_BIN_DIR"
 echo "Building MAC Network Extension App..."
 mkdir -p build-macos
 
-$QT_MACOS_BIN/qt-cmake . -B build-macos -GXcode -DQT_HOST_PATH=$QT_MACOS_ROOT_DIR -DMACOS_NE=TRUE -DCMAKE_BUILD_TYPE=Release -DDEPLOY=ON
+$QT_MACOS_BIN/qt-cmake . -B build-macos -GXcode -DQT_HOST_PATH=$QT_MACOS_ROOT_DIR -DMACOS_NE=TRUE -DCMAKE_BUILD_TYPE=Release -DDEPLOY=ON -DVPNN_VERSION=$VPNN_VERSION
 
 # Build and run tests here
 

@@ -44,7 +44,6 @@ int runApplication(int argc, char** argv)
 
 int main(int argc, char **argv)
 {
-    qDebug() << "server main()";
     Utils::initializePath(Logger::systemLogDir());
 
     if (argc >= 2) {

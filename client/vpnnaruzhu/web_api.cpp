@@ -48,6 +48,7 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
+    request.setRawHeader("X-Supported-Awg-Version", awg_version.toUtf8());
     request.setUrl(url);
 }
 

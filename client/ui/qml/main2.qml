@@ -6,7 +6,6 @@ import QtQuick.Dialogs
 
 import PageEnum 1.0
 import Style 1.0
-import WebAPI 1.0
 
 import "Config"
 import "Controls2"
@@ -18,14 +17,14 @@ Window  {
     objectName: "mainWindow"
 
     visible: true
-    width: GC.screenWidth
-    height: GC.screenHeight
-    minimumWidth: GC.isDesktop() ? 360 : 0
-    minimumHeight: GC.isDesktop() ? 640 : 0
-    maximumWidth: 600
-    maximumHeight: 800
+    width: 375
+    height: 559
+    minimumWidth: 375
+    minimumHeight: 559
+    maximumWidth: 375
+    maximumHeight: 559
 
-    color: AmneziaStyle.color.midnightBlack
+    color: Sotka.color.mainBackGround
 
     onClosing: function() {
         PageController.closeWindow()
@@ -65,7 +64,9 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
+            /* Currently Sotka doesn't support
             VPNNWebApi.updateApiBaseUrl()
+            */
             VPNNWebApi.updateDefaultAccountStatus()
         }
 
@@ -109,7 +110,7 @@ Window  {
         }
     }
 
-    PageStart {
+    SotkaPageStart {
         objectName: "pageStart"
 
         width: root.width

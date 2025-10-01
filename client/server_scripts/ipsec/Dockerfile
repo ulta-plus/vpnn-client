@@ -1,4 +1,4 @@
-FROM vpnnaruzhu/ipsec-server:latest
+FROM sotka/ipsec-server:latest
 
 RUN mkdir -p /opt/amnezia
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"

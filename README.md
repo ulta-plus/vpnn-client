@@ -1,4 +1,4 @@
-# VPNNaruzhu
+# Sotka
 ## _Amnezia based VPN client_
 
 [![Build Status](https://github.com/vpn-naruzhu/vpnn-client/actions/workflows/deploy.yml/badge.svg?branch=dev)](https://github.com/vpn-naruzhu/vpnn-client/actions/workflows/deploy.yml?query=branch:dev)
@@ -13,9 +13,9 @@
 
 ### [Website](https://amnezia.org) | [Alt website link](https://storage.googleapis.com/amnezia/amnezia.org) | [Documentation](https://docs.amnezia.org) | [Troubleshooting](https://docs.amnezia.org/troubleshooting)
 
-<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/VPNNaruzhu_Windows_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/win.png" width="150" style="max-width: 100%;"></a>
-<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/VPNNaruzhu_MacOS_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/mac.png" width="150" style="max-width: 100%;"></a>
-<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/VPNNaruzhu_Linux_installer.tar.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/lin.png" width="150" style="max-width: 100%;"></a>
+<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/Sotka_Windows_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/win.png" width="150" style="max-width: 100%;"></a>
+<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/Sotka_MacOS_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/mac.png" width="150" style="max-width: 100%;"></a>
+<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/Sotka_Linux_installer.tar.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/lin.png" width="150" style="max-width: 100%;"></a>
 
 <br>
 
@@ -43,7 +43,7 @@
 
 ## Tech
 
-VPNNaruzhu uses several open-source projects to work:
+Sotka uses several open-source projects to work:
 
 - [OpenSSL](https://www.openssl.org/)
 - [OpenVPN](https://openvpn.net/)
@@ -69,7 +69,7 @@ Want to contribute? Welcome!
 Download the most actual translation files.
 
 Go to ["Actions" tab](https://github.com/ulta-plus/vpnn-client/actions?query=is%3Asuccess+branch%3Adev), click on the first line.
-Then scroll down to the "Artifacts" section and download "VPNNaruzhu_translations".
+Then scroll down to the "Artifacts" section and download "Sotka_translations".
 
 Unzip this file.
 Each *.ts file contains strings for one corresponding language.
@@ -151,10 +151,10 @@ export PATH=$(PATH):/path/to/GOPATH/bin
 If the build fails with the following error
 ```
 make: ***
-[$(PROJECTDIR)/client/build/VPNNaruzhu.build/Debug-iphoneos/wireguard-go-bridge/goroot/.prepared]
+[$(PROJECTDIR)/client/build/Sotka.build/Debug-iphoneos/wireguard-go-bridge/goroot/.prepared]
 Error 1
 ```
-Add a user-defined variable to both VPNNaruzhu and WireGuardNetworkExtension targets' build settings with
+Add a user-defined variable to both Sotka and WireGuardNetworkExtension targets' build settings with
 key `PATH` and value `${PATH}/path/to/bin/folder/with/go/executable`, e.g. `${PATH}:/usr/local/go/bin`.
 
 if the above error persists on your M1 Mac, then most probably you need to install arch based CMake

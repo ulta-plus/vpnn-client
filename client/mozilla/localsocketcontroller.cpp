@@ -38,7 +38,7 @@ LocalSocketController::LocalSocketController() {
   m_socket = new QLocalSocket(this);
   connect(m_socket, &QLocalSocket::connected, this,
           &LocalSocketController::daemonConnected);
-  connect(m_socket, &QLocalSocket::disconnected, this, 
+  connect(m_socket, &QLocalSocket::disconnected, this,
           [&] { errorOccurred(QLocalSocket::PeerClosedError); });
   connect(m_socket, &QLocalSocket::errorOccurred, this,
           &LocalSocketController::errorOccurred);
@@ -96,11 +96,11 @@ void LocalSocketController::initializeInternal() {
   m_daemonState = eInitializing;
 
 #ifdef MZ_WINDOWS
-  QString path = "\\\\.\\pipe\\vpnnaruzhu";
+  QString path = "\\\\.\\pipe\\sotka";
 #else
-  QString path = "/var/run/vpnnaruzhu/daemon.socket";
+  QString path = "/var/run/sotka/daemon.socket";
   if (!QFileInfo::exists(path)) {
-    path = "/tmp/vpnnaruzhu.socket";
+    path = "/tmp/sotka.socket";
   }
 #endif
 

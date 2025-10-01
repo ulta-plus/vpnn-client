@@ -39,9 +39,9 @@ set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/mozilla/localsocketcontroller.h
 )
 
-# VPNNaruzhu headers
+# Sotka headers
 set(HEADERS ${HEADERS}
-    ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.h
+    ${CLIENT_ROOT_DIR}/sotka/web_api.h
 )
 
 if(NOT IOS)
@@ -86,9 +86,9 @@ set(SOURCES ${SOURCES}
     ${CLIENT_ROOT_DIR}/core/api/apiUtils.cpp
 )
 
-# VPNNaruzhu sources
+# Sotka sources
 set(SOURCES ${SOURCES}
-    ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.cpp
+    ${CLIENT_ROOT_DIR}/sotka/web_api.cpp
 )
 
 # Mozilla sources

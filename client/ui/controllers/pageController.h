@@ -11,18 +11,15 @@ namespace PageLoader
 {
     Q_NAMESPACE
     enum class PageEnum {
-        PageStart = 0,
-        PageHome,
+        SotkaPageStart = 0,
+        SotkaPageHome,
         PageShare,
-        PageDeinstalling,
 
         PageSettingsServersList,
         PageSettings,
         PageSettingsServerData,
         PageSettingsServerInfo,
-        PageSettingsServerProtocols,
         PageSettingsServerServices,
-        PageSettingsServerProtocol,
         PageSettingsConnection,
         PageSettingsDns,
         PageSettingsApplication,
@@ -38,7 +35,7 @@ namespace PageLoader
         PageSettingsApiNativeConfigs,
         PageSettingsApiDevices,
         PageSettingsKillSwitchExceptions,
-        
+
         PageServiceSftpSettings,
         PageServiceTorWebsiteSettings,
         PageServiceDnsSettings,
@@ -71,9 +68,8 @@ namespace PageLoader
 
         PageShareFullAccess,
 
-        VPNNaruzhuPageLogIn,
-        VPNNaruzhuPageSignUp,
-        VPNNaruzhuPageEmailLogIn,
+        SotkaLogIn,
+        SotkaKeyBinding,
 
         PageDevMenu
     };
@@ -137,7 +133,9 @@ signals:
 
     void showBusyIndicator(bool visible);
     void disableControls(bool disabled);
+    /* Sotka has no tabBar
     void disableTabBar(bool disabled);
+    */
 
     void hideMainWindow();
     void raiseMainWindow();

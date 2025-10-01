@@ -27,14 +27,14 @@ DrawerType2 {
     property bool isSelfHostedConfig: true
 
     property string configExtension: ".vpn"
-    property string configCaption: qsTr("Save VPNNaruzhu config")
+    property string configCaption: qsTr("Save Sotka config")
     property string configFileName: "amnezia_config"
 
     expandedHeight: parent.height * 0.9
 
     onClosed: {
         configExtension = ".vpn"
-        configCaption = qsTr("Save VPNNaruzhu config")
+        configCaption = qsTr("Save Sotka config")
         configFileName = "amnezia_config"
     }
 

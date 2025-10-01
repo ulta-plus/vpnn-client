@@ -20,9 +20,9 @@ BUILD_DIR=$DEPLOY_DIR/build
 echo "Project dir: ${PROJECT_DIR}"
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=VPNNaruzhu
+APP_NAME=Sotka
 APP_FILENAME=$APP_NAME.app
-APP_DOMAIN=org.vpnnaruzhu.package
+APP_DOMAIN=org.sotka.package
 PLIST_NAME=$APP_NAME.plist
 
 OUT_APP_DIR=$BUILD_DIR/client
@@ -56,7 +56,7 @@ clang -v
 echo "Building App..."
 cd $BUILD_DIR
 
-$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -B $BUILD_DIR -DVPNN_VERSION=$VPNN_VERSION
+$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -B $BUILD_DIR -DSOTKA_VERSION=$SOTKA_VERSION
 cmake --build . --config release --target all
 
 # Build and run tests here
@@ -147,7 +147,7 @@ fi
 
 echo "Building DMG installer..."
 # Allow Terminal to make changes in Privacy & Security > App Management
-hdiutil create -size 256mb -volname VPNNaruzhu -srcfolder $BUILD_DIR/installer/$APP_NAME.app -ov -format UDZO $DMG_FILENAME
+hdiutil create -size 256mb -volname Sotka -srcfolder $BUILD_DIR/installer/$APP_NAME.app -ov -format UDZO $DMG_FILENAME
 
 if [ "${MAC_CERT_PW+x}" ]; then
   echo "Signing DMG installer..."

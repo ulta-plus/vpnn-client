@@ -15,8 +15,10 @@ import "../Config"
 PageType {
     id: root
 
+/* Sotka has no TabBar
     Component.onCompleted: PageController.disableTabBar(true)
     Component.onDestruction: PageController.disableTabBar(false)
+*/
 
     property bool isTimerRunning: true
     property string progressBarText: qsTr("Usually it takes no more than 5 minutes")
@@ -34,7 +36,7 @@ PageType {
             PageController.closePage() // close installing page
             PageController.closePage() // close protocol settings page
 
-            if (stackView.currentItem.objectName === PageController.getPagePath(PageEnum.PageHome)) {
+            if (stackView.currentItem.objectName === PageController.getPagePath(PageEnum.SotkaPageHome)) {
                 PageController.restorePageHomeState(true)
             }
 

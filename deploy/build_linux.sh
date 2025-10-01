@@ -23,9 +23,9 @@ mkdir -p $CQTDEPLOYER_DIR
 echo "Project dir: ${PROJECT_DIR}"
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=VPNNaruzhu
+APP_NAME=Sotka
 APP_FILENAME=$APP_NAME.app
-APP_DOMAIN=org.vpnnaruzhu.package
+APP_DOMAIN=org.sotka.package
 
 DEPLOY_DATA_DIR=$PROJECT_DIR/deploy/data/linux
 PREBUILT_DEPLOY_DATA_DIR=$PROJECT_DIR/client/3rd-prebuilt/deploy-prebuilt/linux/client/bin
@@ -59,7 +59,7 @@ gcc -v
 echo "Building App..."
 cd $BUILD_DIR
 
-$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -DVPNN_VERSION=$VPNN_VERSION
+$QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -DSOTKA_VERSION=$SOTKA_VERSION
 cmake --build . -j --config release
 
 # Build and run tests here
@@ -76,8 +76,8 @@ if [ ! -f $CQTDEPLOYER_DIR/cqtdeployer.sh ]; then
 fi
 
 
-$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/client/VPNNaruzhu -qmake $QT_BIN_DIR/qmake -qmlDir $PROJECT_DIR/client/ui/qml/ -targetDir $APP_DIR/client/
-$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/service/server/VPNNaruzhu-service -qmake $QT_BIN_DIR/qmake -targetDir $APP_DIR/service/
+$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/client/Sotka -qmake $QT_BIN_DIR/qmake -qmlDir $PROJECT_DIR/client/ui/qml/ -targetDir $APP_DIR/client/
+$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/service/server/Sotka-service -qmake $QT_BIN_DIR/qmake -targetDir $APP_DIR/service/
 
 rm -f $INSTALLER_DATA_DIR/data.7z
 
@@ -87,4 +87,4 @@ ldd $CQTDEPLOYER_DIR/bin/binarycreator
 
 cp -r $PROJECT_DIR/deploy/installer $BUILD_DIR
 
-$CQTDEPLOYER_DIR/binarycreator.sh --offline-only -v -c $BUILD_DIR/installer/config/linux.xml -p $BUILD_DIR/installer/packages -f $PROJECT_DIR/deploy/VPNNaruzhu_Linux_Installer.bin
+$CQTDEPLOYER_DIR/binarycreator.sh --offline-only -v -c $BUILD_DIR/installer/config/linux.xml -p $BUILD_DIR/installer/packages -f $PROJECT_DIR/deploy/Sotka_Linux_Installer.bin

@@ -30,7 +30,7 @@ PageType {
             } else {
                 tabBar.visible = true
                 tabBar.setCurrentIndex(0)
-                tabBarStackView.goToTabBarPage(PageEnum.PageHome)
+                tabBarStackView.goToTabBarPage(PageEnum.SotkaPageHome)
             }
         }
 
@@ -260,7 +260,7 @@ PageType {
                 pagePath = PageController.getPagePath(PageEnum.PageSetupWizardStart)
             } else {
                 tabBar.visible = true
-                pagePath = PageController.getPagePath(PageEnum.PageHome)
+                pagePath = PageController.getPagePath(PageEnum.SotkaPageHome)
                 ServersModel.processedIndex = ServersModel.defaultIndex
             }
 
@@ -333,7 +333,7 @@ PageType {
             isSelected: tabBar.currentIndex === 0
             image: "qrc:/images/controls/home.svg"
             clickedFunc: function () {
-                tabBarStackView.goToTabBarPage(PageEnum.PageHome)
+                tabBarStackView.goToTabBarPage(PageEnum.SotkaPageHome)
                 ServersModel.processedIndex = ServersModel.defaultIndex
                 tabBar.currentIndex = 0
             }
@@ -431,7 +431,7 @@ PageType {
         }
     }
 
-    VPNNaruzhuNotification {
+    SotkaNotification {
         id: notification
         objectName: "notification"
         anchors.centerIn: parent

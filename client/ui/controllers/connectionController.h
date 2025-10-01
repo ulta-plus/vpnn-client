@@ -54,7 +54,9 @@ signals:
     void preparingConfig();
     void prepareConfig();
 
+    /* Currently Sotka doesn't support smart routing
     void updateSmartRouting();
+    */
 
 private:
     Vpn::ConnectionState getCurrentConnectionState();

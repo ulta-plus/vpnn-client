@@ -206,7 +206,9 @@ bool ImportController::extractConfigFromData(QString data)
         break;
     }
     case ConfigTypes::Invalid: {
+        /* Sotka should explicitly process the case
         emit importErrorOccurred(ErrorCode::ImportInvalidConfigError, false);
+        */
         break;
     }
     }
@@ -746,6 +748,16 @@ void ImportController::processAmneziaConfig(QJsonObject &config)
     }
 }
 
+QString ImportController::getPublicIdFromTelegramKey(QString telegram_key)
+{
+    if (!extractConfigFromData(telegram_key)) {
+        return QString();
+    }
+
+    QString public_request_id = m_config[config_key::api_key].toString();
+    return public_request_id;
+}
+
 void ImportController::processDefaultAccountStatus(QString email, QString account_status)
 {
     auto doc = QJsonDocument::fromJson(account_status.toUtf8());
@@ -803,3 +815,14 @@ void ImportController::updateDefaultAccountConfig()
     m_configFileName.clear();
     m_maliciousWarningText.clear();
 }
+
+/*
+void ImportController::createDefaultAccountWithPublicId(QString public_request_id)
+{
+    m_config = {};
+    m_config[config_key::is_default] = true;
+    m_config[config_key::public_request_id] = public_request_id;
+    m_serversModel->addServer(m_config);
+    m_config = {};
+}
+*/

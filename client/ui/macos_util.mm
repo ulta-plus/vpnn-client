@@ -13,7 +13,7 @@
 //     QProcess process;
 //     process.start(
 //             "osascript",
-//             { "-e tell application \"System Events\" to get properties of (get application process \"VPNNaruzhu\")" });
+//             { "-e tell application \"System Events\" to get properties of (get application process \"Sotka\")" });
 //     process.waitForFinished(3000);
 //     const auto output = QString::fromLocal8Bit(process.readAllStandardOutput());
 

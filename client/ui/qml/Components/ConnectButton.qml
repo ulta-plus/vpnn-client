@@ -7,15 +7,15 @@ import Qt5Compat.GraphicalEffects
 import ConnectionState 1.0
 import PageEnum 1.0
 import Style 1.0
-import WebAPI 1.0
 
 Button {
     id: root
 
-    property string defaultButtonColor: "#F1F0EF"
-    property string progressButtonColor: "#FFDD51"
-    property string connectedButtonColor: "#33CC8C"
-    property string errorButtonColor: "#FF6969"
+    property bool isUnpaid: ServersModel.isDefaultAccountUnpaid()
+    property string defaultButtonColor: Sotka.color.yellow
+    property string progressButtonColor: Sotka.color.black
+    property string connectedButtonColor: Sotka.color.black
+    property string errorButtonColor: Sotka.color.black
     property bool buttonActiveFocus: activeFocus && (Qt.platform.os !== "android" || SettingsController.isOnTv())
 
     property bool isFocusable: true
@@ -44,10 +44,10 @@ Button {
         FocusController.nextKeyRightItem()
     }
 
-    implicitWidth: 190
-    implicitHeight: 190
+    implicitWidth: 196
+    implicitHeight: 196
 
-    text: qsTr(ConnectionController.connectionStateText)
+    text: isUnpaid ? qsTr('Renew\nSubscription') : qsTr(ConnectionController.connectionStateText)
 
     Connections {
         target: ConnectionController
@@ -84,49 +84,43 @@ Button {
             }
 
             ShapePath {
-                fillColor: AmneziaStyle.color.transparent
-                strokeColor: AmneziaStyle.color.paleGray
-                strokeWidth: root.buttonActiveFocus ? 1 : 0
-                capStyle: ShapePath.RoundCap
-
-                PathAngleArc {
-                    centerX: backgroundCircle.width / 2
-                    centerY: backgroundCircle.height / 2
-                    radiusX: 94
-                    radiusY: 94
-                    startAngle: 0
-                    sweepAngle: 360
-                }
-            }
-
-            ShapePath {
-                fillColor: AmneziaStyle.color.transparent
-                strokeColor: {
+                fillColor: {
                     if (ConnectionController.isConnectionInProgress) {
-                        return progressButtonColor
+                        return Sotka.color.black
                     } else if (ConnectionController.isConnected) {
-                        return connectedButtonColor
+                        return Sotka.color.black
                     } else if (ConnectionController.isConnectionFailed) {
-                        return errorButtonColor
+                        return Sotka.color.black
                     } else {
-                        return defaultButtonColor
+                        return (isUnpaid ? Sotka.color.black : Sotka.color.yellow)
                     }
                 }
-                strokeWidth: root.buttonActiveFocus ? 2 : 3
+                strokeColor: {
+                    if (ConnectionController.isConnectionInProgress) {
+                        return Sotka.color.yellow
+                    } else if (ConnectionController.isConnected) {
+                        return Sotka.color.yellow
+                    } else if (ConnectionController.isConnectionFailed) {
+                        return Sotka.color.red
+                    } else {
+                        return (isUnpaid ? Sotka.color.red : Sotka.color.black)
+                    }
+                }
+                strokeWidth: 10
                 capStyle: ShapePath.RoundCap
 
                 PathAngleArc {
                     centerX: backgroundCircle.width / 2
                     centerY: backgroundCircle.height / 2
-                    radiusX: 93 - (root.buttonActiveFocus ? 2 : 0)
-                    radiusY: 93 - (root.buttonActiveFocus ? 2 : 0)
+                    radiusX: 98
+                    radiusY: 98
                     startAngle: 0
                     sweepAngle: 360
                 }
             }
 
             MouseArea {
-                anchors.fill: parent
+                anchors.fill: backgroundCircle
 
                 cursorShape: Qt.PointingHandCursor
                 enabled: false
@@ -174,23 +168,24 @@ Button {
     contentItem: Text {
         height: 24
 
-        font.family: "PT Root UI VF"
+        font.family: Sotka.font
         font.weight: 700
         font.pixelSize: 20
 
         color: {
             if (ConnectionController.isConnectionInProgress) {
-                return progressButtonColor
+                return Sotka.color.white
             } else if (ConnectionController.isConnected) {
-                return connectedButtonColor
+                return Sotka.color.white
             } else if (ConnectionController.isConnectionFailed) {
-                return errorButtonColor
+                return Sotka.color.white
             } else {
-                return defaultButtonColor
+                return (isUnpaid ? Sotka.color.white : Sotka.color.text)
             }
         }
 
         text: root.text
+        font.capitalization: Font.AllUppercase
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter

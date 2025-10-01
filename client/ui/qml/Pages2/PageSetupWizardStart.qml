@@ -24,62 +24,58 @@ PageType {
 
         Image {
             id: image
-            source: "qrc:/images/naruzhu_logo.png"
+            source: "qrc:/images/start_logo.png"
 
             Layout.alignment: Qt.AlignCenter
-            Layout.topMargin: 32
-            Layout.leftMargin: 8
-            Layout.rightMargin: 8
-            Layout.preferredWidth: 344
-            Layout.preferredHeight: 279
+            Layout.topMargin: 135
+            Layout.leftMargin: 90
+            Layout.rightMargin: 90
+            Layout.preferredWidth: 196
+            Layout.preferredHeight: 48
         }
 
-        ParagraphTextType {
+        Text {
             Layout.fillWidth: true
-            Layout.topMargin: 18
+            Layout.topMargin: 27
             Layout.leftMargin: 16
             Layout.rightMargin: 16
             horizontalAlignment: Text.AlignHCenter
-            color: "#F1F0EF"
-            text: qsTr("Open foreign and Russian websites.")
+            color: Sotka.color.text
+            font.family: Sotka.font
+            font.pixelSize: 14
+            font.weight: 500
+            font.letterSpacing: -0.7
+            text: qsTr("Do you already have a Telegram Key?")
         }
 
-        BasicButtonType {
+        SotkaButton {
             id: logInButton
-            Layout.fillWidth: true
-            Layout.topMargin: 8
+            Layout.topMargin: 23
             Layout.leftMargin: 16
             Layout.rightMargin: 16
 
-            text: qsTr("Log in")
-            defaultColor: "transparent"
-            hoveredColor: "#FFDD51"
-            pressedColor: "#FFDD51"
-            disabledColor: "#878B91"
-            textColor: "#000000" // Set default text color to black
+            defaultColor: Sotka.color.yellow
+            disableColor: defaultColor
+            hoveredColor: defaultColor
+            pressedColor: defaultColor
 
-            // Button styling
-            background: Rectangle {
-                color: parent.hovered ? "#FFDD51" : "transparent"
-                border.color: parent.hovered ? "#191919" : "#FFDD51" // Set border color to corner color when hovered
-                radius: 10
+            mainText: qsTr("Yes, I have key")
+
+            onClicked: {
+                PageController.goToPage(PageEnum.SotkaLogIn)
             }
+        }
 
-            // Button text color
-            contentItem: Text {
-                text: parent.text
-                color: parent.hovered ? "#000000" : "#FFDD51" // Change text color when hovered
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 16
-            }
+        SotkaButton {
+            id: telegramButton
+            Layout.topMargin: 12
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
 
-            clickedFunc: function() {
-                /***
-                 * !TODO: currently there is only 1 log-in way.
-                 * PageController.goToPage(PageEnum.VPNNaruzhuPageLogIn)
-                 */
-                PageController.goToPage(PageEnum.VPNNaruzhuPageEmailLogIn)
+            mainText: qsTr("No, Recieve key")
+
+            onClicked: {
+                Qt.openUrlExternally("https://t.me/sotka_install_bot")
             }
         }
     }

@@ -1,5 +1,5 @@
 [Unit]
-Description=VPNNaruzhu Service
+Description=Sotka Service
 After=network.target
 StartLimitIntervalSec=0
 
@@ -7,8 +7,8 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-ExecStart=/opt/VPNNaruzhu/service/VPNNaruzhu-service.sh
-Environment=LD_LIBRARY_PATH=/opt/VPNNaruzhu/client/lib
+ExecStart=/opt/Sotka/service/Sotka-service.sh
+Environment=LD_LIBRARY_PATH=/opt/Sotka/client/lib
 
 [Install]
 WantedBy=multi-user.target

@@ -3,5 +3,5 @@
 @interface QIOSApplicationDelegate
 @end
 
-@interface QIOSApplicationDelegate (VPNNaruzhuDelegate)
+@interface QIOSApplicationDelegate (SotkaDelegate)
 @end

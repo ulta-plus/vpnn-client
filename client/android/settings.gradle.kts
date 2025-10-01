@@ -26,7 +26,7 @@ plugins {
     id("settings-property-delegate")
 }
 
-rootProject.name = "VPNNaruzhu"
+rootProject.name = "Sotka"
 rootProject.buildFileName = "build.gradle.kts"
 
 include(":qt")

@@ -39,7 +39,7 @@ Popup {
     background: Rectangle {
         anchors.fill: parent
 
-        color: "white"
+        color: Sotka.color.yellow
         radius: 4
     }
 

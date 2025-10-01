@@ -124,11 +124,11 @@ void Autostart::setAutostart(bool autostart) {
         if (file.open(QIODevice::ReadWrite)) {
             QTextStream stream(&file);
             stream << "[Desktop Entry]" << Qt::endl;
-            stream << "Exec=VPNNaruzhu" << Qt::endl;
+            stream << "Exec=Sotka" << Qt::endl;
             stream << "Type=Application" << Qt::endl;
-            stream << "Name=VPNNaruzhu" << Qt::endl;
+            stream << "Name=Sotka" << Qt::endl;
             stream << "Comment=Client of your self-hosted VPN" << Qt::endl;
-            stream << "Icon=/usr/share/pixmaps/VPNNaruzhu.png" << Qt::endl;
+            stream << "Icon=/usr/share/pixmaps/Sotka.png" << Qt::endl;
             stream << "Categories=Network;Qt;Security;" << Qt::endl;
             stream << "Terminal=false" << Qt::endl;
         }

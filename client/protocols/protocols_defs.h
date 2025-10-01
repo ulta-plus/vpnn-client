@@ -109,6 +109,9 @@ namespace amnezia
         constexpr char payment_link[] = "payment_link";
         constexpr char paid_until[] = "paid_until";
         constexpr char simplified_status[] = "simplified_status";
+        constexpr char api_key[] = "api_key";
+        constexpr char error[] = "error";
+        constexpr char localized_message[] = "localized_message";
 
     }
 

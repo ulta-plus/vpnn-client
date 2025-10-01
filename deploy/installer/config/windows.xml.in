@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>VPNNaruzhu</Name>
+    <Name>Sotka</Name>
     <Version>@CMAKE_PROJECT_VERSION@</Version>
-    <Title>VPNNaruzhu</Title>
-    <Publisher>VPNNaruzhu</Publisher>
-    <StartMenuDir>VPNNaruzhu</StartMenuDir>
+    <Title>Sotka</Title>
+    <Publisher>Sotka</Publisher>
+    <StartMenuDir>Sotka</StartMenuDir>
     <InstallerWindowIcon>installer_icon.png</InstallerWindowIcon>
     <InstallerApplicationIcon>installer_icon</InstallerApplicationIcon>
-    <TargetDir>@RootDir@/Program Files/VPNNaruzhu</TargetDir>
+    <TargetDir>@RootDir@/Program Files/Sotka</TargetDir>
     <WizardDefaultWidth>600</WizardDefaultWidth>
     <WizardDefaultHeight>380</WizardDefaultHeight>
     <WizardStyle>Modern</WizardStyle>

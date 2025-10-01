@@ -14,7 +14,7 @@ import org.json.JSONObject
 
 private const val TAG = "Protocol"
 
-const val VPN_SESSION_NAME = "VPNNaruzhu"
+const val VPN_SESSION_NAME = "Sotka"
 
 private const val SPLIT_TUNNEL_DISABLE = 0
 private const val SPLIT_TUNNEL_INCLUDE = 1

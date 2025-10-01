@@ -150,9 +150,9 @@ public:
     }
     */
 
-    QString apiBaseUrl() const
+    QString getApiBaseUrl() const
     {
-        return value("Conf/apiBaseUrl", "https://mobile.vvppnn.click").toString();
+        return value("Conf/apiBaseUrl", "https://api.stkv.space").toString();
     }
 
     void setApiBaseUrl(const QString &apiBaseUrl)

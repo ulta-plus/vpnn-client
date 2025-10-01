@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>VPNNaruzhu</Name>
+    <Name>Sotka</Name>
     <Version>@CMAKE_PROJECT_VERSION@</Version>
-    <Title>VPNNaruzhu</Title>
-    <Publisher>VPNNaruzhu</Publisher>
-    <StartMenuDir>VPNNaruzhu</StartMenuDir>
-    <TargetDir>@ApplicationsDir@/VPNNaruzhu</TargetDir>
+    <Title>Sotka</Title>
+    <Publisher>Sotka</Publisher>
+    <StartMenuDir>Sotka</StartMenuDir>
+    <TargetDir>@ApplicationsDir@/Sotka</TargetDir>
     <WizardDefaultWidth>600</WizardDefaultWidth>
     <WizardDefaultHeight>380</WizardDefaultHeight>
     <WizardStyle>Modern</WizardStyle>
@@ -19,9 +19,9 @@
     <DisableAuthorizationFallback>true</DisableAuthorizationFallback>
     <RemoteRepositories>
         <Repository>
-            <Url>https://vpnnaruzhu.org/updates/linux</Url>
+            <Url>https://sotka.org/updates/linux</Url>
             <Enabled>true</Enabled>
-            <DisplayName>VPNNaruzhu - repository for Linux</DisplayName>
+            <DisplayName>Sotka - repository for Linux</DisplayName>
         </Repository>
     </RemoteRepositories>
 </Installer>

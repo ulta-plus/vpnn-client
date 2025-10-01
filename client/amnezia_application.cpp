@@ -153,7 +153,10 @@ void AmneziaApplication::loadFonts()
 {
     QQuickStyle::setStyle("Basic");
 
-    QFontDatabase::addApplicationFont(":/fonts/pt-root-ui_vf.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Regular.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Medium.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Bold.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/IBMPlexMono-Thin.ttf");
 }
 
 bool AmneziaApplication::parseCommands()
@@ -182,7 +185,7 @@ bool AmneziaApplication::parseCommands()
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 void AmneziaApplication::startLocalServer()
 {
-    const QString serverName("VPNNaruzhuInstance");
+    const QString serverName("SotkaInstance");
     QLocalServer::removeServer(serverName);
 
     QLocalServer *server = new QLocalServer(this);

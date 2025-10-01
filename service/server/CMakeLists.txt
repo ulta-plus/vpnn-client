@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
-set(PROJECT VPNNaruzhu-service)
+set(PROJECT Sotka-service)
 project(${PROJECT})
 
 set(CMAKE_CXX_STANDARD 20)

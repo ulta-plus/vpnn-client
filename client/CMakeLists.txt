@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
-set(PROJECT VPNNaruzhu)
+set(PROJECT Sotka)
 project(${PROJECT})
 
 
@@ -62,23 +62,23 @@ qt6_add_resources(QRC ${QRC} ${CMAKE_CURRENT_LIST_DIR}/resources.qrc)
 # -- i18n begin
 set(CMAKE_AUTORCC ON)
 
-set(VPNNARUZHU_TS_FILES
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ru_RU.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_zh_CN.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_fa_IR.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ar_EG.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_my_MM.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_uk_UA.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ur_PK.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_hi_IN.ts
+set(SOTKA_TS_FILES
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_ru_RU.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_zh_CN.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_fa_IR.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_ar_EG.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_my_MM.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_uk_UA.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_ur_PK.ts
+    ${CMAKE_CURRENT_LIST_DIR}/translations/sotka_hi_IN.ts
 )
 
-file(GLOB_RECURSE VPNNARUZHU_TS_SOURCES *.qrc *.cpp *.h *.ui)
+file(GLOB_RECURSE SOTKA_TS_SOURCES *.qrc *.cpp *.h *.ui)
 
-qt_create_translation(VPNNARUZHU_QM_FILES ${VPNNARUZHU_TS_SOURCES} ${VPNNARUZHU_TS_FILES})
+qt_create_translation(SOTKA_QM_FILES ${SOTKA_TS_SOURCES} ${SOTKA_TS_FILES})
 
 set(QM_FILE_LIST "")
-foreach(FILE ${VPNNARUZHU_QM_FILES})
+foreach(FILE ${SOTKA_QM_FILES})
     get_filename_component(QM_FILE_NAME ${FILE} NAME)
     list(APPEND QM_FILE_LIST "<file>${QM_FILE_NAME}</file>")
 endforeach()
@@ -140,13 +140,13 @@ if(APPLE)
     cmake_policy(SET CMP0114 NEW)
 
     if(NOT BUILD_OSX_APP_IDENTIFIER)
-        set(BUILD_OSX_APP_IDENTIFIER org.amnezia.VPNNaruzhu CACHE STRING "OSX Application identifier")
+        set(BUILD_OSX_APP_IDENTIFIER org.amnezia.Sotka CACHE STRING "OSX Application identifier")
     endif()
     if(NOT BUILD_IOS_APP_IDENTIFIER)
-        set(BUILD_IOS_APP_IDENTIFIER org.amnezia.VPNNaruzhu CACHE STRING "iOS Application identifier")
+        set(BUILD_IOS_APP_IDENTIFIER org.amnezia.Sotka CACHE STRING "iOS Application identifier")
     endif()
     if(NOT BUILD_IOS_GROUP_IDENTIFIER)
-        set(BUILD_IOS_GROUP_IDENTIFIER group.org.amnezia.VPNNaruzhu CACHE STRING "iOS Group identifier")
+        set(BUILD_IOS_GROUP_IDENTIFIER group.org.amnezia.Sotka CACHE STRING "iOS Group identifier")
     endif()
     if(NOT BUILD_VPN_DEVELOPMENT_TEAM)
         set(BUILD_VPN_DEVELOPMENT_TEAM X7UJ388FXK CACHE STRING "VPN Naruzhu Development Team")

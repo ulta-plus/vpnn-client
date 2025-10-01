@@ -15,7 +15,7 @@ char** s_argv = nullptr;
 SystemService::SystemService(int argc, char **argv)
     : QtService<QCoreApplication>(argc, argv, SERVICE_NAME)
 {
-    setServiceDescription("Service for VPNNaruzhu");
+    setServiceDescription("Service for Sotka");
 
 #ifdef Q_OS_WIN
     if(argc > 2){

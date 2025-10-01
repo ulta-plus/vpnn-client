@@ -1,6 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>fonts/pt-root-ui_vf.ttf</file>
+        <file>fonts/IBMPlexMono-Regular.ttf</file>
+        <file>fonts/IBMPlexMono-Medium.ttf</file>
+        <file>fonts/IBMPlexMono-Bold.ttf</file>
+        <file>fonts/IBMPlexMono-Thin.ttf</file>
         <file>images/controls/alert-circle.svg</file>
         <file>images/controls/amnezia.svg</file>
         <file>images/controls/app.svg</file>
@@ -17,7 +20,6 @@
         <file>images/controls/delete.svg</file>
         <file>images/controls/download.svg</file>
         <file>images/controls/edit-3.svg</file>
-        <file>images/controls/eye-off.svg</file>
         <file>images/controls/eye.svg</file>
         <file>images/controls/external-link.svg</file>
         <file>images/controls/file-check-2.svg</file>
@@ -130,11 +132,11 @@
         <file>ui/qml/Components/AddSitePanel.qml</file>
         <file>ui/qml/Config/GlobalConfig.qml</file>
         <file>ui/qml/Config/qmldir</file>
-        <file>ui/qml/Controls2/VPNNaruzhuNotificationWithInput.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuNotification.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuTextField.qml</file>
-        <file>ui/qml/Controls2/VPNNaruzhuButton.qml</file>
+        <file>ui/qml/Controls2/SotkaNotificationWithInput.qml</file>
+        <file>ui/qml/Controls2/SotkaNotification.qml</file>
+        <file>ui/qml/Controls2/SotkaYesNoNotification.qml</file>
+        <file>ui/qml/Controls2/SotkaTextField.qml</file>
+        <file>ui/qml/Controls2/SotkaButton.qml</file>
         <file>ui/qml/Controls2/BackButtonType.qml</file>
         <file>ui/qml/Controls2/BasicButtonType.qml</file>
         <file>ui/qml/Controls2/BusyIndicatorType.qml</file>
@@ -180,18 +182,14 @@
         <file>ui/qml/Controls2/WarningType.qml</file>
         <file>ui/qml/Filters/ContainersModelFilters.qml</file>
         <file>ui/qml/main2.qml</file>
-        <file>ui/qml/Modules/WebAPI/VPNNaruzhuAPI.qml</file>
-        <file>ui/qml/Modules/WebAPI/qmldir</file>
-        <file>ui/qml/Modules/Style/VPNNaruzhuStyle.qml</file>
+        <file>ui/qml/Modules/Style/Sotka.qml</file>
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>
         <file>ui/qml/Modules/Style/qmldir</file>
         <file>ui/qml/Pages2/DummyKey.conf</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageSignUp.qml</file>
-        <file>ui/qml/Pages2/PageDeinstalling.qml</file>
+        <file>ui/qml/Pages2/SotkaLogIn.qml</file>
+        <file>ui/qml/Pages2/SotkaKeyBinding.qml</file>
         <file>ui/qml/Pages2/PageDevMenu.qml</file>
-        <file>ui/qml/Pages2/PageHome.qml</file>
+        <file>ui/qml/Pages2/SotkaPageHome.qml</file>
         <file>ui/qml/Pages2/PageProtocolAwgSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolCloakSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolOpenVpnSettings.qml</file>
@@ -216,9 +214,6 @@
         <file>ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml</file>
         <file>ui/qml/Pages2/PageSettingsLogging.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerData.qml</file>
-        <file>ui/qml/Pages2/PageSettingsServerInfo.qml</file>
-        <file>ui/qml/Pages2/PageSettingsServerProtocol.qml</file>
-        <file>ui/qml/Pages2/PageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerServices.qml</file>
         <file>ui/qml/Pages2/PageSettingsServersList.qml</file>
         <file>ui/qml/Pages2/PageSettingsSplitTunneling.qml</file>
@@ -229,7 +224,6 @@
         <file>ui/qml/Pages2/PageSetupWizardConfigSource.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardCredentials.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardEasy.qml</file>
-        <file>ui/qml/Pages2/PageSetupWizardInstalling.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardProtocols.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardProtocolSettings.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardQrReader.qml</file>
@@ -238,7 +232,7 @@
         <file>ui/qml/Pages2/PageSetupWizardViewConfig.qml</file>
         <file>ui/qml/Pages2/PageShare.qml</file>
         <file>ui/qml/Pages2/PageShareFullAccess.qml</file>
-        <file>ui/qml/Pages2/PageStart.qml</file>
+        <file>ui/qml/Pages2/SotkaPageStart.qml</file>
         <file>ui/qml/Components/RenameServerDrawer.qml</file>
         <file>ui/qml/Controls2/ListViewType.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiSupport.qml</file>
@@ -246,7 +240,7 @@
         <file>ui/qml/Pages2/PageSettingsApiNativeConfigs.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiDevices.qml</file>
         <file>images/controls/monitor.svg</file>
-        <file>images/naruzhu_logo.png</file>
+        <file>images/start_logo.png</file>
         <file>images/controls/email.svg</file>
         <file>images/controls/tabBarChat.svg</file>
         <file>images/controls/chat.svg</file>

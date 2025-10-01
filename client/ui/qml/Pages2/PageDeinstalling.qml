@@ -15,8 +15,10 @@ import "../Config"
 PageType {
     id: root
 
+/* Sotka has no TabBar
     Component.onCompleted: PageController.disableTabBar(true)
     Component.onDestruction: PageController.disableTabBar(false)
+*/
 
     SortFilterProxyModel {
         id: proxyServersModel

@@ -1,6 +1,6 @@
 FROM alpine:3.15
 
-LABEL maintainer="VPNNaruzhu"
+LABEL maintainer="Sotka"
 
 #Install required packages
 RUN apk add --no-cache curl openvpn easy-rsa bash netcat-openbsd dumb-init rng-tools

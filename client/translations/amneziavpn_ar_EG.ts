@@ -479,8 +479,8 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
-        <source>VPNNaruzhu</source>
-        <translation>VPNNaruzhu</translation>
+        <source>Sotka</source>
+        <translation>Sotka</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -494,8 +494,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
-        <source>VPNNaruzhu notification</source>
-        <translation>إشعار من VPNNaruzhu</translation>
+        <source>Sotka notification</source>
+        <translation>إشعار من Sotka</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -4177,7 +4177,7 @@ Cloak يحمي OpenVPN من ان يٌكتشف والحجب
 WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
 WireGuard is very susceptible to blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Low power consumption
 * Minimum number of settings
 * Easily recognised by DPI analysis systems, susceptible to blocking
@@ -4186,7 +4186,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 يوفر WireGuard اتصال VPN مستقر و اداء عالي علي جميع الاجهزة. يستعمل إعدادات تشفير معقدة. WireGuard مٌقارنة مع OpenVPN يتمتع بزمن وصول أقل وتحسين إنتاجية نقل البيانات.
 بسبب توقيعات الحزمة المميزة WireGuard عرضة جداُ للحجب. علي عكس باقي برتوكولات VPN التي تستعمل تقنيات تشويش. حزمة أنماط التوقيع المتسقة الخاصة ب WireGuard يمكن التعرف عليها بسهولة ولذلك تٌحجب بواسطة أنظمة الفحص العميق للحزم (DPI) المتقدمة وأدوات مراقبة الشبكة الأخرى.
 
-* مٌتاح في VPNNaruzhu عبر جميع المنصات
+* مٌتاح في Sotka عبر جميع المنصات
 * استهلاك قليل للطاقة
 * عدد قليل من الإعدادات
 سهل التعرف علية بواسطة انظمة تحليل DPI, عرضة للحجب
@@ -4277,7 +4277,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
 This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
 
-* Available in the VPNNaruzhu across all platforms
+* Available in the Sotka across all platforms
 * Low power consumption
 * Minimum number of settings
 * Not recognised by DPI analysis systems, resistant to blocking
@@ -4286,7 +4286,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 بينما WireGuard معروف بأدائة العالي. لدية مشاكل مع سهولة التعرف علية بسبب توقيعات الحزمة المميزة الخاصة بة. يٌصلح AmneziaWG هذه المشكلة عن طريق استخدام طرق تشويش افضل, يجعل حركة المرور تبقا مع حركة مرور انترنت عادية.
 هذا يعني ان AmneziaWG يبقا الاداء العالي الاساسي بينما يضيف طبقة من العزل, هذا يجعلة اختيار ممتاز لهولاء الذين يريدون اتصال VPN سريع و متخفي.
 
-* مٌتاح في VPNNaruzhu علي جميع المنصات
+* مٌتاح في Sotka علي جميع المنصات
 * استهلاك طاقة قليل
 * اقل عدد من الإعدادات
 * لا يٌكتشف من قبل انظمة تحليل DPI, مقاوم للحجب
@@ -4298,7 +4298,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
 While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
 
-* Available in the VPNNaruzhu only on Windows
+* Available in the Sotka only on Windows
 * Low power consumption, on mobile devices
 * Minimal configuration
 * Recognised by DPI analysis systems

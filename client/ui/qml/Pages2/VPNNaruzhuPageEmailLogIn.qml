@@ -207,6 +207,7 @@ PageType {
 
             http.onreadystatechange = function() {
                 if(http.readyState === XMLHttpRequest.DONE) {
+                    waitingBox.visible = false
                     if (http.status == 200) {
                         const json_obj = JSON.parse(http.responseText.toString())
                         root.account_status = http.responseText.toString()
@@ -231,6 +232,7 @@ PageType {
             }
 
             const body = '{ "email": "' + root.email +'", "otp_code": "' + root.otpCode + '" }'
+            waitingBox.visible = true
             http.send(body)
         }
 

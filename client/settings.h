@@ -189,7 +189,11 @@ public:
 
     QLocale getAppLanguage()
     {
-        QString localeStr = m_settings.value("Conf/appLanguage", "Russian").toString();
+        QString localeStr = m_settings.value("Conf/appLanguage", QLocale::system().name()).toString();
+        if (localeStr == "") {
+            localeStr = "ru_RU";
+        }
+
         return QLocale(localeStr);
     };
     void setAppLanguage(QLocale locale)

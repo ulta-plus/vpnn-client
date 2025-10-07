@@ -24,6 +24,14 @@ TextField {
     font.weight: 400
     font.family: 'PT Root UI VF'
 
+    function getBorderColor() {
+        return root.focus ? root.borderFocusedColor : root.borderColor
+    }
+
+    function getBackgroundColor() {
+        return root.enabled ? root.backgroundColor : root.backgroundDisabledColor
+    }
+
     background: Rectangle {
         radius: 16
         color: root.getBackgroundColor()
@@ -32,11 +40,15 @@ TextField {
         implicitHeight: 40
     }
 
-    function getBorderColor() {
-        return root.focus ? root.borderFocusedColor : root.borderColor
+    MouseArea {
+        anchors.fill: root
+        acceptedButtons: Qt.RightButton
+        onClicked: contextMenu.open()
+        enabled: true
     }
 
-    function getBackgroundColor() {
-        return root.enabled ? root.backgroundColor : root.backgroundDisabledColor
+    ContextMenuType {
+        id: contextMenu
+        textObj: root
     }
 }

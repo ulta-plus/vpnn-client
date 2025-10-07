@@ -189,11 +189,16 @@ public:
 
     QLocale getAppLanguage()
     {
-        return value("Conf/appLanguage", QLocale::Russian).toLocale();
+        QString localeStr = m_settings.value("Conf/appLanguage", QLocale::system().name()).toString();
+        if (localeStr == "") {
+            localeStr = "ru_RU";
+        }
+
+        return QLocale(localeStr);
     };
     void setAppLanguage(QLocale locale)
     {
-        setValue("Conf/appLanguage", locale);
+        setValue("Conf/appLanguage", locale.name());
     };
 
     bool isScreenshotsEnabled() const
@@ -243,6 +248,9 @@ public:
 
     bool isHomeAdLabelVisible();
     void disableHomeAdLabel();
+
+    bool isPremV1MigrationReminderActive();
+    void disablePremV1MigrationReminder();
 
     QStringList allowedDnsServers() const;
     void setAllowedDnsServers(const QStringList &servers);

@@ -40,6 +40,9 @@ public slots:
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
 
+    QString getUserAgent(void) const { return user_agent; }
+    QString getAwgVersion(void) const { return awg_version; }
+
 private:
     VpnNaruzhuWebApi();
 
@@ -49,6 +52,7 @@ private:
     QQmlApplicationEngine* m_engine;
     ImportController* m_importController;
 
+    const QString awg_version = "1.5";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
     const QString amnezia_config_url =
         "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json";

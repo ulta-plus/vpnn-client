@@ -118,16 +118,17 @@ QString OpenVpnConfigurator::processConfigWithLocalSettings(const QPair<QString,
         QRegularExpression regex("redirect-gateway.*");
         config.replace(regex, "");
 
+        /* issue_13: don't allow to use Amnezia DNS
+        // We don't use secondary DNS if primary DNS is AmneziaDNS
+        if (dns.first.contains(protocols::dns::amneziaDnsIp)) {
+            QRegularExpression dnsRegex("dhcp-option DNS " + dns.second);
+            config.replace(dnsRegex, "");
+        }
+        */
+
         /* issue_5
         if (!m_settings->isSitesSplitTunnelingEnabled()) {
             config.append("\nredirect-gateway def1 ipv6 bypass-dhcp\n");
-
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-            // Prevent ipv6 leak
-            if (NetworkUtilities::checkIpv6Enabled()) {
-                config.append("ifconfig-ipv6 fd15:53b6:dead::2/64  fd15:53b6:dead::1\n");
-            }
-#endif
             config.append("block-ipv6\n");
         } else
         */
@@ -135,10 +136,9 @@ QString OpenVpnConfigurator::processConfigWithLocalSettings(const QPair<QString,
 
                // no redirect-gateway
         } else if (m_settings->routeMode() == Settings::VpnAllExceptSites) {
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS) && !defined(MACOS_NE)
             config.append("\nredirect-gateway ipv6 !ipv4 bypass-dhcp\n");
             // Prevent ipv6 leak
-            config.append("ifconfig-ipv6 fd15:53b6:dead::2/64  fd15:53b6:dead::1\n");
 #endif
             config.append("block-ipv6\n");
         }
@@ -172,10 +172,17 @@ QString OpenVpnConfigurator::processConfigWithExportSettings(const QPair<QString
     QRegularExpression regex("redirect-gateway.*");
     config.replace(regex, "");
 
+    /* issue_13: don't allow to use Amnezia DNS
+    // We don't use secondary DNS if primary DNS is AmneziaDNS
+    if (dns.first.contains(protocols::dns::amneziaDnsIp)) {
+        QRegularExpression dnsRegex("dhcp-option DNS " + dns.second);
+        config.replace(dnsRegex, "");
+    }
+    */
+
     config.append("\nredirect-gateway def1 ipv6 bypass-dhcp\n");
 
     // Prevent ipv6 leak
-    config.append("ifconfig-ipv6 fd15:53b6:dead::2/64  fd15:53b6:dead::1\n");
     config.append("block-ipv6\n");
 
     // remove block-outside-dns for all exported configs

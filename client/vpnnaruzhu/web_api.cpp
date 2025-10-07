@@ -48,6 +48,7 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
+    request.setRawHeader("X-Supported-Awg-Version", awg_version.toUtf8());
     request.setUrl(url);
 }
 
@@ -78,6 +79,10 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
 
 void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
 {
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return;
+    }
+
     QJsonDocument json_doc = getDefaultAccountStatus();
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot get default account status";
@@ -101,6 +106,10 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
 
 void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
 {
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return;
+    }
+
     QString key = getDefaultAccountConfig();
     if (key.isEmpty()) {
         qDebug() << "Cannot get default account config";

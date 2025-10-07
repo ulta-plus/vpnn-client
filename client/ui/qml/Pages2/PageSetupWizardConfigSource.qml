@@ -37,20 +37,10 @@ PageType {
         }
     }
 
-    ListView {
+    ListViewType {
         id: listView
 
         anchors.fill: parent
-
-        property bool isFocusable: true
-
-        ScrollBar.vertical: ScrollBarType {}
-
-        model: variants
-
-        clip: true
-
-        reuseItems: true
 
         header: ColumnLayout {
             width: listView.width
@@ -125,11 +115,11 @@ PageType {
                             clickedFunction: function() {
                                 var fileName = ""
                                 if (GC.isMobile()) {
-                                    fileName = "AmneziaVPN.log"
+                                    fileName = "VPNNaruzhu.log"
                                 } else {
                                     fileName = SystemController.getFileName(qsTr("Save"),
                                                                             qsTr("Logs files (*.log)"),
-                                                                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/VPNNaruzhu",
                                                                             true,
                                                                             ".log")
                                 }
@@ -239,6 +229,8 @@ PageType {
         */
         }
 
+        model: variants
+
         delegate: ColumnLayout {
             width: listView.width
 
@@ -257,6 +249,9 @@ PageType {
                 leftImageSource: imageSource
 
                 onClicked: { handler() }
+
+                Keys.onEnterPressed: this.clicked()
+                Keys.onReturnPressed: this.clicked()
             }
         }
 
@@ -303,7 +298,7 @@ PageType {
         fileOpen,
         textKey
     ]
-
+/*
     QtObject {
         id: amneziaVpn
 
@@ -350,7 +345,7 @@ PageType {
             }
         }
     }
-
+*/
     QtObject {
         id: fileOpen
 
@@ -369,7 +364,7 @@ PageType {
             }
         }
     }
-
+/*
     QtObject {
         id: qrScan
 
@@ -396,7 +391,7 @@ PageType {
             Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl())
         }
     }
-
+*/
     QtObject {
         id: textKey
 

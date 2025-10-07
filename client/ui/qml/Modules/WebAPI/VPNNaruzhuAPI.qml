@@ -4,7 +4,8 @@ import QtQuick
 
 QtObject {
     readonly property string api_url: SettingsController.vpnNaruzhuGetApiBaseUrl()
-    readonly property string user_agent: 'naruzhu-desktop/2.1.5.0'
+    readonly property string user_agent: VPNNWebApi.getUserAgent()
+    readonly property string awg_version: VPNNWebApi.getAwgVersion()
 
     function createGetRequest(request) {
         var http = new XMLHttpRequest()
@@ -12,6 +13,7 @@ QtObject {
 
         const uuid = SettingsController.getInstallationUuid(true)
         http.setRequestHeader('X-Device-Id', uuid)
+        http.setRequestHeader('X-Supported-Awg-Version', awg_version)
         http.setRequestHeader('User-Agent', user_agent)
 
         return http
@@ -42,6 +44,7 @@ QtObject {
 
         const uuid = SettingsController.getInstallationUuid(true)
         http.setRequestHeader('X-Device-Id', uuid)
+        http.setRequestHeader('X-Supported-Awg-Version', awg_version)
         http.setRequestHeader('User-Agent', user_agent)
 
         return http

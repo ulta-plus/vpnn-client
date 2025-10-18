@@ -53,16 +53,7 @@ public slots:
     bool updateDefaultAccountStatus(void) const;
     bool updateDefaultAccountConfig(bool force_update_device = false) const;
 
-    QString getApiBaseUrl(void) const
-    {
-        return m_settings->getApiBaseUrl();
-    }
-
-    QString getUserAgent(void) const
-    {
-        return user_agent;
-    }
-
+    QString getApiBaseUrl(void) const { return m_settings->getApiBaseUrl(); }
     QString getUserAgent(void) const { return user_agent; }
     QString getAwgVersion(void) const { return awg_version; }
 

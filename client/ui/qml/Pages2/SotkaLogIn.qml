@@ -127,13 +127,20 @@ PageType {
                         showError(qsTr('Wrong Telegram Key'))
                         return
                     }
-                    root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
-                    const cur_status = JSON.parse(root.account_status)
 
-                    var simplified_status = ''
+                    root.account_status = VPNNWebApi.getAccountStatusStr(root.public_request_id)
+                    var cur_status
                     try {
-                        simplified_status = cur_status.data.request.simplified_status
+                        cur_status = JSON.parse(root.account_status)
+                    } catch(e) {
+                        print('Fail to parse JSON')
+                    }
+
+                    try {
+                        // if there is simplified_status, then status is valid
+                        const simplified_status = cur_status.data.request.simplified_status
                     } catch (e) {
+                        print('Fail to get simplified_status')
                         root.account_status = '{
         "data": {
             "request": {
@@ -144,7 +151,11 @@ PageType {
             }
         }
     }'
-                        root.error = cur_status.error.localized_message
+                        try {
+                            root.error = cur_status.error.localized_message
+                        } catch(e) {
+                            root.error = qsTr("Wrong Server's response")
+                        }
                     }
 
                     waitingBox.visible = false
@@ -201,6 +212,7 @@ PageType {
     function errorNotificationClose() {
         errorNotification.implicitHeight = 100
         root.enableAll()
+        root.error = ''
     }
 
     SotkaNotification {

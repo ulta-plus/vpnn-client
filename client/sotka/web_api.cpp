@@ -88,11 +88,7 @@ QJsonDocument SotkaWebApi::getAccountStatus(QString public_request_id) const
 
 QString SotkaWebApi::getAccountStatusStr(QString public_request_id) const
 {
-    if (!m_serversModel->isThereDefaultAccount()) {
-        return QString();
-    }
-
-    QJsonDocument json_doc = getDefaultAccountStatus();
+    QJsonDocument json_doc = getAccountStatus(public_request_id);
     if (json_doc.isEmpty()) {
         return QString();
     } else {

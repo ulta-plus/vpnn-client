@@ -296,9 +296,9 @@ Subscription</source>
     <name>ConnectionController</name>
     <message>
         <location filename="../ui/controllers/connectionController.h" line="76"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="98"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="113"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="119"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="99"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="114"/>
+        <location filename="../ui/controllers/connectionController.cpp" line="120"/>
         <source>Connect</source>
         <translation>कनेक्ट</translation>
     </message>
@@ -391,7 +391,7 @@ Subscription</source>
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="392"/>
+        <location filename="../core/controllers/coreController.cpp" line="406"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -436,7 +436,7 @@ Subscription</source>
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled
+        <source>Enabled 
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -474,24 +474,24 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">अमान्य कॉन्फ़िगरेशन फ़ाइल</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="712"/>
+        <location filename="../ui/controllers/importController.cpp" line="743"/>
         <source>This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious scripts, so only add it if you fully trust the provider of this config. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="716"/>
+        <location filename="../ui/controllers/importController.cpp" line="747"/>
         <source>&lt;br&gt;In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="776"/>
-        <location filename="../ui/controllers/importController.cpp" line="793"/>
-        <location filename="../ui/controllers/importController.cpp" line="810"/>
+        <location filename="../ui/controllers/importController.cpp" line="807"/>
+        <location filename="../ui/controllers/importController.cpp" line="824"/>
+        <location filename="../ui/controllers/importController.cpp" line="841"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="677"/>
+        <location filename="../ui/controllers/importController.cpp" line="708"/>
         <source>Scanned %1 of %2.</source>
         <translation>%2 में से %1 स्कैन किया गया.</translation>
     </message>
@@ -611,8 +611,8 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>NotificationHandler</name>
     <message>
-        <location filename="../ui/notificationhandler.cpp" line="63"/>
-        <location filename="../ui/notificationhandler.cpp" line="70"/>
+        <location filename="../ui/notificationhandler.cpp" line="57"/>
+        <location filename="../ui/notificationhandler.cpp" line="64"/>
         <source>Sotka</source>
         <translation>Sotka</translation>
     </message>
@@ -627,7 +627,7 @@ Already installed containers were found on the server. All installed containers 
         <translation>कनेक्ट</translation>
     </message>
     <message>
-        <location filename="../ui/notificationhandler.cpp" line="94"/>
+        <location filename="../ui/notificationhandler.cpp" line="88"/>
         <source>Sotka notification</source>
         <translation>Sotka अधिसूचना</translation>
     </message>
@@ -1645,13 +1645,17 @@ Already installed containers were found on the server. All installed containers 
         <translation>एप्लिकेशन</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
+        <source>About VPNNaruzhu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Backup</source>
         <translation type="vanished">बैकअप</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="107"/>
         <source>About Sotka</source>
-        <translation>Sotka के बारे में</translation>
+        <translation type="vanished">Sotka के बारे में</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
@@ -2373,7 +2377,7 @@ subscription key</source>
         <translation>सेटिंग्स रीसेट करें और एप्लिकेशन से सभी डेटा हटा दें?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="212"/>
+        <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="220"/>
         <source>All settings will be reset to default. All installed Sotka services will still remain on the server.</source>
         <translation>सभी सेटिंग्स डिफ़ॉल्ट पर रीसेट हो जाएंगी. सभी स्थापित Sotka सेवाएँ अभी भी सर्वर पर रहेंगी।.</translation>
     </message>
@@ -2411,7 +2415,7 @@ subscription key</source>
         <translation>अगली बार जब आप एप्लिकेशन इंस्टॉल करेंगे तो उन्हें पुनर्स्थापित करने के लिए आप अपनी सेटिंग्स को बैकअप फ़ाइल में सहेज सकते हैं.</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="74"/>
+        <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="90"/>
         <source>The backup will contain your passwords and private keys for all servers added to Sotka. Keep this information in a secure place.</source>
         <translation>बैकअप में Sotka में जोड़े गए सभी सर्वरों के लिए आपके पासवर्ड और निजी कुंजी शामिल होंगी। इस जानकारी को सुरक्षित स्थान पर रखें.</translation>
     </message>
@@ -2775,7 +2779,7 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="176"/>
+        <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="181"/>
         <source>Sotka logs</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2795,7 +2799,7 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="205"/>
+        <location filename="../ui/qml/Pages2/PageSettingsLogging.qml" line="210"/>
         <source>Sotka-service logs</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2884,7 +2888,7 @@ subscription key</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="185"/>
-        <source>Clear server from VPNNaruzhu software</source>
+        <source>Clear server from Sotka software</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2935,9 +2939,8 @@ subscription key</source>
         <translation>सक्रिय कनेक्शन के दौरान एपीआई कॉन्फिगरेशन को रीसेट नहीं किया जा सकता</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="153"/>
         <source>All installed Sotka services will still remain on the server.</source>
-        <translation>सभी स्थापित Sotka सेवाएँ अभी भी सर्वर पर रहेंगी.</translation>
+        <translation type="vanished">सभी स्थापित Sotka सेवाएँ अभी भी सर्वर पर रहेंगी.</translation>
     </message>
     <message>
         <source>Clear server from Amnezia software</source>
@@ -3579,7 +3582,7 @@ subscription key</source>
         <translation type="vanished">एक्सरे कॉन्फिगरेशन सहेजें</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageShare.qml" line="119"/>
+        <location filename="../ui/qml/Pages2/PageShare.qml" line="98"/>
         <source>For the Sotka app</source>
         <translation>Sotka ऐप के लिए</translation>
     </message>
@@ -4499,14 +4502,13 @@ subscription key</source>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="143"/>
-        <source>OpenVPN stands as one of the most popular and time-tested VPN protocols available.
-It employs its unique security protocol, leveraging the strength of SSL/TLS for encryption and key exchange. Furthermore, OpenVPN&apos;s support for a multitude of authentication methods makes it versatile and adaptable, catering to a wide range of devices and operating systems. Due to its open-source nature, OpenVPN benefits from extensive scrutiny by the global community, which continually reinforces its security. With a strong balance of performance, security, and compatibility, OpenVPN remains a top choice for privacy-conscious individuals and businesses alike.
+        <source>OpenVPN is one of the most popular and reliable VPN protocols. It uses SSL/TLS encryption, supports a wide variety of devices and operating systems, and is continuously improved by the community due to its open-source nature. It provides a good balance between speed and security but is easily recognized by DPI systems, making it susceptible to blocking.
 
-* Available in the Sotka across all platforms
-* Normal power consumption on mobile devices
-* Flexible customisation to suit user needs to work with different operating systems and devices
-* Recognised by DPI systems and therefore susceptible to blocking
-* Can operate over both TCP and UDP network protocols.</source>
+Features:
+* Available on all Sotka platforms
+* Normal battery consumption on mobile devices
+* Flexible customization for various devices and OS
+* Operates over both TCP and UDP protocols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4514,7 +4516,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <source>Shadowsocks is based on the SOCKS5 protocol and encrypts connections using AEAD cipher. Although designed to be discreet, it doesn&apos;t mimic a standard HTTPS connection and can be detected by some DPI systems. Due to limited support in Amnezia, we recommend using the AmneziaWG protocol.
 
 Features:
-* Available in VPNNaruzhu only on desktop platforms
+* Available in Sotka only on desktop platforms
 * Customizable encryption protocol
 * Detectable by some DPI systems
 * Operates over TCP protocol
@@ -4529,59 +4531,65 @@ OpenVPN securely encrypts all internet traffic between your device and the serve
 
 The Cloak plugin further protects the connection from DPI detection. It modifies traffic metadata to disguise VPN traffic as regular web traffic and prevents detection through active probing. If an incoming connection fails authentication, Cloak serves a fake website, making your VPN invisible to traffic analysis systems.
 
-* Available in the Sotka across all platforms
-* High power consumption on mobile devices
-* Flexible settings
-* Not recognised by detection systems
-* Works over TCP network protocol, 443 port.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="215"/>
-        <source>The REALITY protocol, a pioneering development by the creators of XRay, is designed to provide the highest level of protection against detection through its innovative approach to security and privacy.
-It uniquely identifies attackers during the TLS handshake phase, seamlessly operating as a proxy for legitimate clients while diverting attackers to genuine websites, thus presenting an authentic TLS certificate and data.
-This advanced capability differentiates REALITY from similar technologies by its ability to disguise web traffic as coming from random, legitimate sites without the need for specific configurations.
-Unlike older protocols such as VMess, VLESS, and the XTLS-Vision transport, REALITY&apos;s innovative &quot;friend or foe&quot; recognition at the TLS handshake enhances security. This makes REALITY a robust solution for maintaining internet freedom.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../containers/containers_defs.cpp" line="226"/>
-        <source>IKEv2, paired with the IPSec encryption layer, stands as a modern and stable VPN protocol.
-One of its distinguishing features is its ability to swiftly switch between networks and devices, making it particularly adaptive in dynamic network environments.
-While it offers a blend of security, stability, and speed, it&apos;s essential to note that IKEv2 can be easily detected and is susceptible to blocking.
+In regions with heavy internet censorship, we strongly recommend using OpenVPN with Cloak from your first connection.
 
-* Available in the Sotka only on Windows
-* Low power consumption, on mobile devices
-* Minimal configuration
-* Recognised by DPI analysis systems
-* Works over UDP network protocol, ports 500 and 4500.</source>
+Features:
+* Available on all Sotka platforms
+* High power consumption on mobile devices
+* Flexible configuration options
+* Undetectable by DPI systems
+* Operates over TCP protocol on port 443</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="176"/>
+        <source>WireGuard is a modern, streamlined VPN protocol offering stable connectivity and excellent performance across all devices. It uses fixed encryption settings, delivering lower latency and higher data transfer speeds compared to OpenVPN. However, WireGuard is easily identifiable by DPI systems due to its distinctive packet signatures, making it susceptible to blocking.
+
+Features:
+* Available on all Sotka platforms
+* Low power consumption on mobile devices
+* Minimal configuration required
+* Easily detected by DPI systems (susceptible to blocking)
+* Operates over UDP protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../containers/containers_defs.cpp" line="186"/>
-        <source>A relatively new popular VPN protocol with a simplified architecture.
-WireGuard provides stable VPN connection and high performance on all devices. It uses hard-coded encryption settings. WireGuard compared to OpenVPN has lower latency and better data transfer throughput.
-WireGuard is very susceptible to detection and blocking due to its distinct packet signatures. Unlike some other VPN protocols that employ obfuscation techniques, the consistent signature patterns of WireGuard packets can be more easily identified and thus blocked by advanced Deep Packet Inspection (DPI) systems and other network monitoring tools.
+        <source>AmneziaWG is a modern VPN protocol based on WireGuard, combining simplified architecture with high performance across all devices. It addresses WireGuard&apos;s main vulnerability (easy detection by DPI systems) through advanced obfuscation techniques, making VPN traffic indistinguishable from regular internet traffic.
 
-* Available in the Sotka across all platforms
-* Low power consumption
-* Minimum number of settings
-* Easily recognised by DPI analysis systems, susceptible to blocking
-* Works over UDP network protocol.</source>
+AmneziaWG is an excellent choice for those seeking a fast, stealthy VPN connection.
+
+Features:
+* Available on all Sotka platforms
+* Low battery consumption on mobile devices
+* Minimal settings required
+* Undetectable by traffic analysis systems (DPI)
+* Operates over UDP protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="199"/>
-        <source>A modern iteration of the popular VPN protocol, AmneziaWG builds upon the foundation set by WireGuard, retaining its simplified architecture and high-performance capabilities across devices.
-While WireGuard is known for its efficiency, it had issues with being easily detected due to its distinct packet signatures. AmneziaWG solves this problem by using better obfuscation methods, making its traffic blend in with regular internet traffic.
-This means that AmneziaWG keeps the fast performance of the original while adding an extra layer of stealth, making it a great choice for those wanting a fast and discreet VPN connection.
+        <location filename="../containers/containers_defs.cpp" line="198"/>
+        <source>REALITY is an innovative protocol developed by the creators of XRay, designed specifically to combat high levels of internet censorship. REALITY identifies censorship systems during the TLS handshake, redirecting suspicious traffic seamlessly to legitimate websites like google.com while providing genuine TLS certificates. This allows VPN traffic to blend indistinguishably with regular web traffic without special configuration.
+Unlike older protocols such as VMess, VLESS, and XTLS-Vision, REALITY incorporates an advanced built-in &quot;friend-or-foe&quot; detection mechanism, effectively protecting against DPI and other traffic analysis methods.
 
-* Available in the Sotka across all platforms
-* Low power consumption
-* Minimum number of settings
-* Not recognised by traffic analysis systems
-* Works over UDP network protocol.</source>
+Features:
+* Resistant to active probing and DPI detection
+* No special configuration required to disguise traffic
+* Highly effective in heavily censored regions
+* Minimal battery consumption on devices
+* Operates over TCP protocol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../containers/containers_defs.cpp" line="211"/>
+        <source>IKEv2, combined with IPSec encryption, is a modern and reliable VPN protocol. It reconnects quickly when switching networks or devices, making it ideal for dynamic network environments. While it provides good security and speed, it&apos;s easily recognized by DPI systems and susceptible to blocking.
+
+Features:
+* Available in Sotka only on Windows
+* Low battery consumption on mobile devices
+* Minimal configuration required
+* Detectable by DPI analysis systems(easily blocked)
+* Operates over UDP protocol(ports 500 and 4500)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4720,7 +4728,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 * यूडीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
     </message>
     <message>
-        <location filename="../containers/containers_defs.cpp" line="238"/>
+        <location filename="../containers/containers_defs.cpp" line="222"/>
         <source>DNS Service</source>
         <translation>DNS सेवाएँ</translation>
     </message>
@@ -4970,10 +4978,8 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>ShareConnectionDrawer</name>
     <message>
-        <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="30"/>
-        <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="37"/>
         <source>Save Sotka config</source>
-        <translation>Sotka कॉन्फ़िगरेशन सहेजें</translation>
+        <translation type="vanished">Sotka कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <source>Share</source>
@@ -5099,12 +5105,12 @@ Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="117"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="116"/>
         <source>Key should contain &quot;vpn://&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="121"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="120"/>
         <source>Key shouldn&apos;t contain spaces</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5114,12 +5120,17 @@ Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="159"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
+        <source>Wrong Server&apos;s response</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="171"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="190"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5240,7 +5251,7 @@ Should it be bonded to this device?</source>
     <name>SystemTrayNotificationHandler</name>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="27"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="62"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="64"/>
         <source>Show</source>
         <translation>दिखाओ</translation>
     </message>
@@ -5254,13 +5265,13 @@ Should it be bonded to this device?</source>
     </message>
     <message>
         <location filename="../ui/systemtray_notificationhandler.cpp" line="38"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="67"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="69"/>
         <source>Visit Website</source>
         <translation>बेवसाइट देखना</translation>
     </message>
     <message>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="42"/>
-        <location filename="../ui/systemtray_notificationhandler.cpp" line="68"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="44"/>
+        <location filename="../ui/systemtray_notificationhandler.cpp" line="70"/>
         <source>Quit</source>
         <translation>छोड़ना</translation>
     </message>
@@ -5268,7 +5279,7 @@ Should it be bonded to this device?</source>
 <context>
     <name>TextFieldWithHeaderType</name>
     <message>
-        <location filename="../ui/qml/Controls2/TextFieldWithHeaderType.qml" line="130"/>
+        <location filename="../ui/qml/Controls2/TextFieldWithHeaderType.qml" line="117"/>
         <source>The field can&apos;t be empty</source>
         <translation>फ़ील्ड खाली नहीं हो सकती</translation>
     </message>
@@ -5352,14 +5363,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="202"/>
-        <location filename="../ui/qml/main2.qml" line="202"/>
+        <location filename="../ui/qml/main2.qml" line="203"/>
         <source>Private key passphrase</source>
         <translation>निजी कुंजी पासफ़्रेज़</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="223"/>
-        <location filename="../ui/qml/main2.qml" line="223"/>
+        <location filename="../ui/qml/main2.qml" line="224"/>
         <source>Save</source>
         <translation>सहेजें</translation>
     </message>

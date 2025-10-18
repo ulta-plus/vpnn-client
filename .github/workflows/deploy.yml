@@ -7,7 +7,7 @@ on:
 
 env:
   QT_MIRROR: https://mirrors.ocf.berkeley.edu/qt/ # https://download.qt.io/static/mirrorlist/
-  SOTKA_VERSION: 1.0.0.3
+  SOTKA_VERSION: 1.0.1.0
 
 jobs:
   Build-Linux-Ubuntu:
@@ -21,6 +21,8 @@ jobs:
       DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
       DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
       DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
 
     steps:
     - name: 'Install Qt'
@@ -92,6 +94,8 @@ jobs:
       DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
       DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
       DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
 
     steps:
     - name: 'Get sources'
@@ -159,6 +163,8 @@ jobs:
       DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
       DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
       DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
 
     steps:
     - name: 'Setup xcode'
@@ -247,18 +253,33 @@ jobs:
 
 # ------------------------------------------------------
 
-  Build-MacOS:
+  Build-MacOS-old:
     runs-on: macos-latest
 
     env:
       # Keep compat with MacOS 10.15 aka Catalina by Qt 6.4
       QT_VERSION: 6.4.3
-      QIF_VERSION: 4.6
+
+      MAC_TEAM_ID: ${{ secrets.MAC_TEAM_ID }}
+
+      MAC_APP_CERT_CERT: ${{ secrets.MAC_APP_CERT_CERT }}
+      MAC_SIGNER_ID: ${{ secrets.MAC_SIGNER_ID }}
+      MAC_APP_CERT_PW: ${{ secrets.MAC_APP_CERT_PW }}
+
+      MAC_INSTALLER_SIGNER_CERT: ${{ secrets.MAC_INSTALLER_SIGNER_CERT }}
+      MAC_INSTALLER_SIGNER_ID: ${{ secrets.MAC_INSTALLER_SIGNER_ID }}
+      MAC_INSTALL_CERT_PW: ${{ secrets.MAC_INSTALL_CERT_PW }}
+
+      APPLE_DEV_EMAIL: ${{ secrets.APPLE_DEV_EMAIL }}
+      APPLE_DEV_PASSWORD: ${{ secrets.APPLE_DEV_PASSWORD }}
+
       PROD_AGW_PUBLIC_KEY: ${{ secrets.PROD_AGW_PUBLIC_KEY }}
       PROD_S3_ENDPOINT: ${{ secrets.PROD_S3_ENDPOINT }}
       DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
       DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
       DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
 
     steps:
     - name: 'Setup xcode'
@@ -279,11 +300,6 @@ jobs:
         set-env: 'true'
         extra: '--external 7z --base ${{ env.QT_MIRROR }}'
 
-    - name: 'Install Qt Installer Framework ${{ env.QIF_VERSION }}'
-      run: |
-        mkdir -pv ${{ runner.temp }}/Qt/Tools/QtInstallerFramework
-        wget https://qt.amzsvc.com/tools/ifw/${{ env.QIF_VERSION }}.zip
-        unzip ${{ env.QIF_VERSION }}.zip -d ${{ runner.temp }}/Qt/Tools/QtInstallerFramework/
 
     - name: 'Get sources'
       uses: actions/checkout@v4
@@ -297,16 +313,155 @@ jobs:
     - name: 'Build project'
       run: |
         export QT_BIN_DIR="${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/macos/bin"
-        export QIF_BIN_DIR="${{ runner.temp }}/Qt/Tools/QtInstallerFramework/${{ env.QIF_VERSION }}/bin"
         export SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
-        bash deploy/build_macos.sh
+        bash deploy/build_macos.sh -n
+
+    - name: 'Upload installer artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Sotka_MacOS_old_installer_${{ env.SOTKA_VERSION }}
+        path: deploy/build/pkg/Sotka.pkg
+        retention-days: 7
+
+    - name: 'Upload unpacked artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Sotka_MacOS_old_unpacked_${{ env.SOTKA_VERSION }}
+        path: deploy/build/client/Sotka.app
+        retention-days: 7
+
+# ------------------------------------------------------
+
+  Build-MacOS:
+    runs-on: macos-latest
+
+    env:
+      QT_VERSION: 6.8.0
+
+      MAC_TEAM_ID: ${{ secrets.MAC_TEAM_ID }}
+
+      MAC_APP_CERT_CERT: ${{ secrets.MAC_APP_CERT_CERT }}
+      MAC_SIGNER_ID: ${{ secrets.MAC_SIGNER_ID }}
+      MAC_APP_CERT_PW: ${{ secrets.MAC_APP_CERT_PW }}
+
+      MAC_INSTALLER_SIGNER_CERT: ${{ secrets.MAC_INSTALLER_SIGNER_CERT }}
+      MAC_INSTALLER_SIGNER_ID: ${{ secrets.MAC_INSTALLER_SIGNER_ID }}
+      MAC_INSTALL_CERT_PW: ${{ secrets.MAC_INSTALL_CERT_PW }}
+
+      APPLE_DEV_EMAIL: ${{ secrets.APPLE_DEV_EMAIL }}
+      APPLE_DEV_PASSWORD: ${{ secrets.APPLE_DEV_PASSWORD }}
+
+      PROD_AGW_PUBLIC_KEY: ${{ secrets.PROD_AGW_PUBLIC_KEY }}
+      PROD_S3_ENDPOINT: ${{ secrets.PROD_S3_ENDPOINT }}
+      DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
+      DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
+      DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
+
+    steps:
+    - name: 'Setup xcode'
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '16.2.0'
+
+    - name: 'Install Qt'
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: ${{ env.QT_VERSION }}
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
+        modules: 'qtremoteobjects qt5compat qtshadertools'
+        dir: ${{ runner.temp }}
+        setup-python: 'true'
+        set-env: 'true'
+        extra: '--external 7z --base ${{ env.QT_MIRROR }}'
+
+
+    - name: 'Get sources'
+      uses: actions/checkout@v4
+      with:
+        submodules: 'true'
+        fetch-depth: 10
+
+    - name: 'Setup ccache'
+      uses: hendrikmuhs/ccache-action@v1.2
+
+    - name: 'Build project'
+      run: |
+        export QT_BIN_DIR="${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/macos/bin"
+        export SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
+        bash deploy/build_macos.sh -n
 
     - name: 'Upload installer artifact'
       uses: actions/upload-artifact@v4
       with:
         name: Sotka_MacOS_installer_${{ env.SOTKA_VERSION }}
-        path: Sotka.dmg
+        path: deploy/build/pkg/Sotka.pkg
         retention-days: 7
+
+    - name: 'Upload unpacked artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: Sotka_MacOS_unpacked_${{ env.SOTKA_VERSION }}
+        path: deploy/build/client/Sotka.app
+        retention-days: 7
+
+  Build-MacOS-NE:
+    runs-on: macos-latest
+
+    env:
+      QT_VERSION: 6.8.3
+
+      MAC_TEAM_ID: ${{ secrets.MAC_TEAM_ID }}
+
+      MAC_APP_CERT_CERT: ${{ secrets.MAC_APP_CERT_CERT }}
+      MAC_SIGNER_ID: ${{ secrets.MAC_SIGNER_ID }}
+      MAC_APP_CERT_PW: ${{ secrets.MAC_APP_CERT_PW }}
+
+      PROD_AGW_PUBLIC_KEY: ${{ secrets.PROD_AGW_PUBLIC_KEY }}
+      PROD_S3_ENDPOINT: ${{ secrets.PROD_S3_ENDPOINT }}
+      DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
+      DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
+      DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
+
+    steps:
+    - name: 'Setup xcode'
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '16.2.0'
+
+    - name: 'Install Qt'
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: ${{ env.QT_VERSION }}
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
+        modules: 'qtremoteobjects qt5compat qtshadertools'
+        dir: ${{ runner.temp }}
+        setup-python: 'true'
+        set-env: 'true'
+        extra: '--external 7z --base ${{ env.QT_MIRROR }}'
+
+
+    - name: 'Get sources'
+      uses: actions/checkout@v4
+      with:
+        submodules: 'true'
+        fetch-depth: 10
+
+    - name: 'Setup ccache'
+      uses: hendrikmuhs/ccache-action@v1.2
+
+    - name: 'Build project'
+      run: |
+        export QT_BIN_DIR="${{ runner.temp }}/Qt/${{ env.QT_VERSION }}/macos/bin"
+        export SOTKA_VERSION="${{ env.SOTKA_VERSION }}"
+        bash deploy/build_macos_ne.sh
 
     - name: 'Upload unpacked artifact'
       uses: actions/upload-artifact@v4
@@ -329,6 +484,8 @@ jobs:
       DEV_AGW_PUBLIC_KEY: ${{ secrets.DEV_AGW_PUBLIC_KEY }}
       DEV_AGW_ENDPOINT: ${{ secrets.DEV_AGW_ENDPOINT }}
       DEV_S3_ENDPOINT: ${{ secrets.DEV_S3_ENDPOINT }}
+      FREE_V2_ENDPOINT: ${{ secrets.FREE_V2_ENDPOINT }}
+      PREM_V1_ENDPOINT: ${{ secrets.PREM_V1_ENDPOINT }}
 
     steps:
     - name: 'Install desktop Qt'

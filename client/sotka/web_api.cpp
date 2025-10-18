@@ -57,6 +57,7 @@ void SotkaWebApi::initRequest(QNetworkRequest &request,
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
+    request.setRawHeader("X-Supported-Awg-Version", awg_version.toUtf8());
     request.setUrl(url);
 }
 
@@ -87,7 +88,11 @@ QJsonDocument SotkaWebApi::getAccountStatus(QString public_request_id) const
 
 QString SotkaWebApi::getAccountStatusStr(QString public_request_id) const
 {
-    QJsonDocument json_doc = getAccountStatus(public_request_id);
+    if (!m_serversModel->isThereDefaultAccount()) {
+        return QString();
+    }
+
+    QJsonDocument json_doc = getDefaultAccountStatus();
     if (json_doc.isEmpty()) {
         return QString();
     } else {

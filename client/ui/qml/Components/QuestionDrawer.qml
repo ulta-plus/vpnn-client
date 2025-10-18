@@ -1,3 +1,5 @@
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -39,7 +41,7 @@ DrawerType2 {
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            text: headerText
+            text: root.headerText
         }
 
         ParagraphTextType {
@@ -48,7 +50,7 @@ DrawerType2 {
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            text: descriptionText
+            text: root.descriptionText
         }
 
         SotkaButton {
@@ -62,11 +64,11 @@ DrawerType2 {
             hoveredColor: Sotka.color.yellow
             pressedColor: Sotka.color.yellow
 
-            mainText: yesButtonText
+            mainText: root.yesButtonText
 
             onClicked: {
-                if (yesButtonFunction && typeof yesButtonFunction === "function") {
-                    yesButtonFunction()
+                if (root.yesButtonFunction && typeof root.yesButtonFunction === "function") {
+                    root.yesButtonFunction()
                 }
             }
         }
@@ -77,11 +79,13 @@ DrawerType2 {
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            mainText: noButtonText
+            visible: root.noButtonText !== ""
+
+            mainText: root.noButtonText
 
             onClicked: {
-                if (noButtonFunction && typeof noButtonFunction === "function") {
-                    noButtonFunction()
+                if (root.noButtonFunction && typeof root.noButtonFunction === "function") {
+                    root.noButtonFunction()
                 }
             }
         }

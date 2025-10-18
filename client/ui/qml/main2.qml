@@ -26,7 +26,8 @@ Window  {
 
     color: Sotka.color.mainBackGround
 
-    onClosing: function() {
+    onClosing: function(close) {
+        close.accepted = false
         PageController.closeWindow()
     }
 

@@ -7,15 +7,13 @@
 ### [English]([https://github.com/ulta-plus/vpnn-client/blob/dev/README_RU.md](https://github.com/ulta-plus/vpnn-client/tree/dev?tab=readme-ov-file#)) | [Русский](https://github.com/ulta-plus/vpnn-client/blob/dev/README_RU.md)
 
 
-[Amnezia](https://amnezia.org) is an open-source VPN client, with a key feature that enables you to deploy your own VPN server on your server.
+[Amnezia](https://amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en) is an open-source VPN client, with a key feature that enables you to deploy your own VPN server on your server.
 
 [![Image](https://github.com/ulta-plus/vpnn-client/blob/dev/metadata/img-readme/uipic4.png)](https://amnezia.org)
 
-### [Website](https://amnezia.org) | [Alt website link](https://storage.googleapis.com/amnezia/amnezia.org) | [Documentation](https://docs.amnezia.org) | [Troubleshooting](https://docs.amnezia.org/troubleshooting)
+### [Website](https://amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en) | [Alt website link](https://storage.googleapis.com/amnezia/amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en-mirror) | [Documentation](https://docs.amnezia.org) | [Troubleshooting](https://docs.amnezia.org/troubleshooting)
 
-<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/Sotka_Windows_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/win.png" width="150" style="max-width: 100%;"></a>
-<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/Sotka_MacOS_installer.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/mac.png" width="150" style="max-width: 100%;"></a>
-<a href="https://github.com/vpn-naruzhu/vpnn-client/releases/download/v2.0.1/Sotka_Linux_installer.tar.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/lin.png" width="150" style="max-width: 100%;"></a>
+<a href="https://github.com/ulta-plus/vpnn-client/releases/download/v1.0.1.0/Sotka_Windows_installer_1.0.1.0.zip"><img src="https://github.com/vpn-naruzhu/vpnn-client/blob/vpnn-dev/metadata/img-readme/win.png" width="150" style="max-width: 100%;"></a>
 
 <br>
 

@@ -57,6 +57,7 @@ void SotkaWebApi::initRequest(QNetworkRequest &request,
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
+    request.setRawHeader("X-Supported-Awg-Version", awg_version.toUtf8());
     request.setUrl(url);
 }
 

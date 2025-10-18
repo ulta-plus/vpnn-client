@@ -26,6 +26,10 @@ TextField {
     font.weight: 400
     font.family: Sotka.font
 
+    function getBorderWidht() {
+        return root.hovered || root.focus ? root.borderFocusedWidth : root.borderWidth
+    }
+
     background: Rectangle {
         radius: root.radius
         color: root.backgroundColor
@@ -34,7 +38,15 @@ TextField {
         implicitHeight: 45
     }
 
-    function getBorderWidht() {
-        return root.hovered || root.focus ? root.borderFocusedWidth : root.borderWidth
+    MouseArea {
+        anchors.fill: root
+        acceptedButtons: Qt.RightButton
+        onClicked: contextMenu.open()
+        enabled: true
+    }
+
+    ContextMenuType {
+        id: contextMenu
+        textObj: root
     }
 }

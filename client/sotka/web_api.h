@@ -53,15 +53,9 @@ public slots:
     bool updateDefaultAccountStatus(void) const;
     bool updateDefaultAccountConfig(bool force_update_device = false) const;
 
-    QString getApiBaseUrl(void) const
-    {
-        return m_settings->getApiBaseUrl();
-    }
-
-    QString getUserAgent(void) const
-    {
-        return user_agent;
-    }
+    QString getApiBaseUrl(void) const { return m_settings->getApiBaseUrl(); }
+    QString getUserAgent(void) const { return user_agent; }
+    QString getAwgVersion(void) const { return awg_version; }
 
 private:
     SotkaWebApi();
@@ -72,6 +66,7 @@ private:
     QQmlApplicationEngine* m_engine;
     ImportController* m_importController;
 
+    const QString awg_version = "1.5";
     const QString user_agent = "sotka-desktop/" APP_VERSION;
     /* Currently Sotka doesn't support smart routing
     const QString amnezia_config_url =

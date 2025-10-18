@@ -1,6 +1,6 @@
 Get your own self-hosted VPN!
 
-AmneziaVPN is a multi-protocol, open-source VPN client that offers the option to set up your own server. 
+AmneziaVPN is a multi-protocol, open-source VPN client that offers the option to set up your own server.
 
 Free open-source software to create a personal VPN on your server. Helps to access blocked content without revealing privacy even to VPN providers. Specify IP address, credentials for your server and Amnezia will configure it to connect via VPN automatically.
 

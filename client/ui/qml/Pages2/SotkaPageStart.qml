@@ -288,13 +288,4 @@ PageType {
             }
         }
     }
-
-    ConnectionTypeSelectionDrawer {
-        id: connectionTypeSelection
-
-        onAboutToHide: {
-            PageController.forceTabBarActiveFocus()
-            tabBar.setCurrentIndex(tabBar.previousIndex)
-        }
-    }
 }

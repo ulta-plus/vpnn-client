@@ -30,7 +30,17 @@ Rectangle {
     border.width: 1
     border.color: root.borderColor
 
+    onVisibleChanged: {
+        if (visible) {
+            root.implicitHeight = (notificationText.implicitHeight + 30 + notificationButton.implicitHeight > 100
+                            ? notificationText.implicitHeight + 30 + notificationButton.implicitHeight
+                            : 100)
+        }
+    }
+
     Text {
+        id: notificationText
+
         anchors.top: parent.top
         anchors.topMargin: 10
         anchors.left: parent.left
@@ -50,6 +60,8 @@ Rectangle {
     }
 
     SotkaButton {
+        id: notificationButton
+
         implicitHeight: 30
         implicitWidth: (contentItem.implicitWidth > 80) ? contentItem.implicitWidth + 20 : 80
 

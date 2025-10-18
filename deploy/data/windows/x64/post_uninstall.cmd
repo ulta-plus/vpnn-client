@@ -9,6 +9,6 @@ sc stop AmneziaWGTunnel$Sotka
 sc delete AmneziaWGTunnel$Sotka
 taskkill /IM "Sotka-service.exe" /F
 taskkill /IM "Sotka.exe" /F
-reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" /v Sotka /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Sotka /f
 
 exit /b 0

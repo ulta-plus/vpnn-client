@@ -194,7 +194,7 @@ void ServersModel::setDefaultServerIndex(const int index)
     emit defaultServerIndexChanged(m_defaultServerIndex);
 }
 
-const int ServersModel::getDefaultServerIndex()
+const int ServersModel::getDefaultServerIndex(void) const
 {
     return m_defaultServerIndex;
 }
@@ -615,7 +615,7 @@ bool ServersModel::isAmneziaDnsContainerInstalled(const int serverIndex) const
 }
 */
 
-QPair<QString, QString> ServersModel::getDnsPair(int serverIndex)
+QPair<QString, QString> ServersModel::getDnsPair(int serverIndex) const
 {
     QPair<QString, QString> dns;
 
@@ -645,6 +645,18 @@ QPair<QString, QString> ServersModel::getDnsPair(int serverIndex)
 
     qDebug() << "VpnConfigurator::getDnsForConfig" << dns.first << dns.second;
     return dns;
+}
+
+const QString ServersModel::getCurrentServerDns1(void) const
+{
+    QJsonObject key = getServerConfig(m_defaultServerIndex);
+    return key[config_key::dns1].toString();
+}
+
+const QString ServersModel::getCurrentServerDns2(void) const
+{
+    QJsonObject key = getServerConfig(m_defaultServerIndex);
+    return key[config_key::dns2].toString();
 }
 
 QStringList ServersModel::getAllInstalledServicesName(const int serverIndex)
@@ -938,4 +950,18 @@ void ServersModel::updateDefaultAccountConfig(const QJsonObject &new_config)
     }
 
     editServer(defaultConfig, i);
+}
+
+void ServersModel::updateCurrentKeyDnsConfig(const QString &dns1,
+    const QString &dns2)
+{
+    QJsonObject key = getServerConfig(m_defaultServerIndex);
+    if (dns1 != "") {
+        key[config_key::dns1] = dns1;
+    }
+    if (dns2 != "") {
+        key[config_key::dns2] = dns2;
+    }
+
+    editServer(key, m_defaultServerIndex);
 }

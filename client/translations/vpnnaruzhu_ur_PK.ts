@@ -467,24 +467,24 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">غلط کنفیگریشن فائل</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="741"/>
+        <location filename="../ui/controllers/importController.cpp" line="732"/>
         <source>This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious scripts, so only add it if you fully trust the provider of this config. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="745"/>
+        <location filename="../ui/controllers/importController.cpp" line="736"/>
         <source>&lt;br&gt;In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="795"/>
-        <location filename="../ui/controllers/importController.cpp" line="812"/>
-        <location filename="../ui/controllers/importController.cpp" line="829"/>
+        <location filename="../ui/controllers/importController.cpp" line="786"/>
+        <location filename="../ui/controllers/importController.cpp" line="803"/>
+        <location filename="../ui/controllers/importController.cpp" line="820"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="706"/>
+        <location filename="../ui/controllers/importController.cpp" line="697"/>
         <source>Scanned %1 of %2.</source>
         <translation>سکین%1 کی%2.</translation>
     </message>
@@ -2534,47 +2534,60 @@ subscription key</source>
         <translation>ڈی این ایس سرور</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
         <source>Primary DNS</source>
-        <translation>اولین DNS</translation>
+        <translation type="vanished">اولین DNS</translation>
+    </message>
+    <message>
+        <source>Secondary DNS</source>
+        <translation type="vanished">ثانوی DNS</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
+        <source>Default Primary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="101"/>
-        <source>Secondary DNS</source>
-        <translation>ثانوی DNS</translation>
+        <source>Default Secondary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <source>Current Key Primary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="131"/>
+        <source>Current Key Secondary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Restore default</source>
-        <translation>اصل حالت کو بحال کریں</translation>
+        <translation type="vanished">اصل حالت کو بحال کریں</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="127"/>
         <source>Restore default DNS settings?</source>
-        <translation>اصل DNS ترتیبات کو بحال کریں؟</translation>
+        <translation type="vanished">اصل DNS ترتیبات کو بحال کریں؟</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="128"/>
         <source>Continue</source>
-        <translation>براہ کرم جاری رکھیں</translation>
+        <translation type="vanished">براہ کرم جاری رکھیں</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="129"/>
         <source>Cancel</source>
-        <translation>منسوخ</translation>
+        <translation type="vanished">منسوخ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="136"/>
         <source>Settings have been reset</source>
-        <translation>ترتیبات کو دوبارہ ترتیب دیا گیا ہے</translation>
+        <translation type="vanished">ترتیبات کو دوبارہ ترتیب دیا گیا ہے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="151"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="182"/>
         <source>Save</source>
         <translation>محفوظ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="160"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="195"/>
         <source>Settings saved</source>
         <translation>ترتیبات محفوظ ہوگئیں</translation>
     </message>
@@ -5191,7 +5204,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="223"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="224"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>

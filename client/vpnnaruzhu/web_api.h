@@ -35,7 +35,7 @@ public:
     QJsonDocument downloadJsonFile(const QString &url) const;
 
 public slots:
-    void updateApiBaseUrl(void) const;
+    void updateExternalSettings(void) const;
     void updateSmartRouting(void) const;
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
@@ -55,7 +55,7 @@ private:
     const QString awg_version = "1.5";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
     const QString amnezia_config_url =
-        "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json";
+        "https://storage.googleapis.com/naruzhu/amnezia/config.json";
     const QString smart_routs_url =
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
 

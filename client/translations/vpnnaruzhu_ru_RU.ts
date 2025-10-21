@@ -390,7 +390,7 @@
     <message>
         <location filename="../ui/qml/Config/GlobalConfig.qml" line="45"/>
         <source>Please, share with support</source>
-        <translation>Пожалуйста, першлите службе поддерки</translation>
+        <translation>Пожалуйста, перешлите службе поддержки</translation>
     </message>
 </context>
 <context>
@@ -420,7 +420,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -662,7 +662,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="44"/>
-        <source>Old keys will no longer work. Please use your new subscription key to connect. 
+        <source>Old keys will no longer work. Please use your new subscription key to connect.
 Thank you for staying with us!</source>
         <translation type="unfinished"></translation>
     </message>

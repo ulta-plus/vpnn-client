@@ -467,24 +467,24 @@ Can&apos;t be disabled for current server</source>
         <translation type="vanished">غلط کنفیگریشن فائل</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="732"/>
+        <location filename="../ui/controllers/importController.cpp" line="741"/>
         <source>This configuration contains an OpenVPN setup. OpenVPN configurations can include malicious scripts, so only add it if you fully trust the provider of this config. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="736"/>
+        <location filename="../ui/controllers/importController.cpp" line="745"/>
         <source>&lt;br&gt;In the imported configuration, potentially dangerous lines were found:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="786"/>
-        <location filename="../ui/controllers/importController.cpp" line="803"/>
-        <location filename="../ui/controllers/importController.cpp" line="820"/>
+        <location filename="../ui/controllers/importController.cpp" line="795"/>
+        <location filename="../ui/controllers/importController.cpp" line="812"/>
+        <location filename="../ui/controllers/importController.cpp" line="829"/>
         <source>Default Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/controllers/importController.cpp" line="697"/>
+        <location filename="../ui/controllers/importController.cpp" line="706"/>
         <source>Scanned %1 of %2.</source>
         <translation>سکین%1 کی%2.</translation>
     </message>

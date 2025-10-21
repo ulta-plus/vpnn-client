@@ -535,6 +535,15 @@ QJsonObject ImportController::extractWireGuardConfig(const QString &data)
     if (dnsMatch.hasMatch()) {
         config[config_key::dns1] = dnsMatch.captured(1);
         config[config_key::dns2] = dnsMatch.captured(2);
+    } else {
+        // Could be only one DNS instead of two
+        const static QRegularExpression onceDnsRegExp(
+            "DNS = "
+            "(\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b)");
+        QRegularExpressionMatch onceDnsMatch = onceDnsRegExp.match(data);
+        if (onceDnsMatch.hasMatch()) {
+            config[config_key::dns2] = onceDnsMatch.captured(1);
+        }
     }
 
     config[config_key::hostName] = hostName;

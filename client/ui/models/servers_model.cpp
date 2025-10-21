@@ -650,13 +650,23 @@ QPair<QString, QString> ServersModel::getDnsPair(int serverIndex) const
 const QString ServersModel::getCurrentServerDns1(void) const
 {
     QJsonObject key = getServerConfig(m_defaultServerIndex);
-    return key[config_key::dns1].toString();
+    QString dns1 = key[config_key::dns1].toString();
+    if (dns1.isEmpty()) {
+        dns1 = m_settings->primaryDns();
+    }
+
+    return dns1;
 }
 
 const QString ServersModel::getCurrentServerDns2(void) const
 {
     QJsonObject key = getServerConfig(m_defaultServerIndex);
-    return key[config_key::dns2].toString();
+    QString dns2 = key[config_key::dns2].toString();
+    if (dns2.isEmpty()) {
+        dns2 = m_settings->secondaryDns();
+    }
+
+    return dns2;
 }
 
 QStringList ServersModel::getAllInstalledServicesName(const int serverIndex)
@@ -956,12 +966,8 @@ void ServersModel::updateCurrentKeyDnsConfig(const QString &dns1,
     const QString &dns2)
 {
     QJsonObject key = getServerConfig(m_defaultServerIndex);
-    if (dns1 != "") {
-        key[config_key::dns1] = dns1;
-    }
-    if (dns2 != "") {
-        key[config_key::dns2] = dns2;
-    }
+    key[config_key::dns1] = dns1;
+    key[config_key::dns2] = dns2;
 
     editServer(key, m_defaultServerIndex);
 }

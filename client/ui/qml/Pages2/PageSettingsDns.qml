@@ -83,7 +83,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                headerText: qsTr("Primary DNS")
+                headerText: qsTr("Default Primary DNS")
 
                 textField.text: SettingsController.primaryDns
                 textField.validator: RegularExpressionValidator {
@@ -98,7 +98,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                headerText: qsTr("Secondary DNS")
+                headerText: qsTr("Default Secondary DNS")
 
                 textField.text: SettingsController.secondaryDns
                 textField.validator: RegularExpressionValidator {
@@ -106,6 +106,36 @@ PageType {
                 }
             }
 
+            TextFieldWithHeaderType {
+                id: currentServerPrimaryDns
+
+                Layout.fillWidth: true
+                Layout.leftMargin: 16
+                Layout.rightMargin: 16
+
+                headerText: qsTr("Current Key Primary DNS")
+
+                textField.text: ServersModel.getCurrentServerDns1()
+                textField.validator: RegularExpressionValidator {
+                    regularExpression: InstallController.ipAddressRegExp()
+                }
+            }
+
+            TextFieldWithHeaderType {
+                id: currentServerSecondaryDns
+
+                Layout.fillWidth: true
+                Layout.leftMargin: 16
+                Layout.rightMargin: 16
+
+                headerText: qsTr("Current Key Secondary DNS")
+
+                textField.text: ServersModel.getCurrentServerDns2()
+                textField.validator: RegularExpressionValidator {
+                    regularExpression: InstallController.ipAddressRegExp()
+                }
+            }
+        /*
             BasicButtonType {
                 id: restoreDefaultButton
 
@@ -141,6 +171,7 @@ PageType {
                     showQuestionDrawer(headerText, "", yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
                 }
             }
+        */
 
             BasicButtonType {
                 id: saveButton
@@ -157,6 +188,10 @@ PageType {
                     if (secondaryDns.textField.text !== SettingsController.secondaryDns) {
                         SettingsController.secondaryDns = secondaryDns.textField.text
                     }
+                    ServersModel.updateCurrentKeyDnsConfig(
+                        currentServerPrimaryDns.textField.text,
+                        currentServerSecondaryDns.textField.text
+                    )
                     PageController.showNotificationMessage(qsTr("Settings saved"))
                 }
             }

@@ -317,15 +317,6 @@ void ImportController::importConfig()
     credentials.userName = m_config.value(config_key::userName).toString();
     credentials.secretData = m_config.value(config_key::password).toString();
 
-    QString dns1 = m_config.value(config_key::dns1).toString();
-    if (dns1 != "") {
-        m_settings->setPrimaryDns(dns1);
-    }
-    QString dns2 = m_config.value(config_key::dns2).toString();
-    if (dns2 != "") {
-        m_settings->setSecondaryDns(dns2);
-    }
-
     if (credentials.isValid() || m_config.contains(config_key::containers)) {
         m_serversModel->addServer(m_config);
         emit siteNeedsAddition(credentials.hostName);
@@ -544,6 +535,15 @@ QJsonObject ImportController::extractWireGuardConfig(const QString &data)
     if (dnsMatch.hasMatch()) {
         config[config_key::dns1] = dnsMatch.captured(1);
         config[config_key::dns2] = dnsMatch.captured(2);
+    } else {
+        // Could be only one DNS instead of two
+        const static QRegularExpression onceDnsRegExp(
+            "DNS = "
+            "(\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b)");
+        QRegularExpressionMatch onceDnsMatch = onceDnsRegExp.match(data);
+        if (onceDnsMatch.hasMatch()) {
+            config[config_key::dns2] = onceDnsMatch.captured(1);
+        }
     }
 
     config[config_key::hostName] = hostName;

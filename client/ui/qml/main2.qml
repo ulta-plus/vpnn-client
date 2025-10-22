@@ -66,7 +66,7 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
-            VPNNWebApi.updateApiBaseUrl()
+            VPNNWebApi.updateExternalSettings()
             VPNNWebApi.updateDefaultAccountStatus()
         }
 

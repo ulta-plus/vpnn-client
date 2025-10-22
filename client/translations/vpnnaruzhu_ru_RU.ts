@@ -390,7 +390,7 @@
     <message>
         <location filename="../ui/qml/Config/GlobalConfig.qml" line="45"/>
         <source>Please, share with support</source>
-        <translation>Пожалуйста, першлите службе поддерки</translation>
+        <translation>Пожалуйста, перешлите службе поддержки</translation>
     </message>
 </context>
 <context>
@@ -420,7 +420,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -662,7 +662,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageHome.qml" line="44"/>
-        <source>Old keys will no longer work. Please use your new subscription key to connect. 
+        <source>Old keys will no longer work. Please use your new subscription key to connect.
 Thank you for staying with us!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2503,46 +2503,51 @@ subscription key</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
-        <source>Primary DNS</source>
-        <translation>Первичный DNS</translation>
+        <source>Default Primary DNS</source>
+        <translation>Дефолтный основной DNS</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="101"/>
-        <source>Secondary DNS</source>
-        <translation>Вторичный DNS</translation>
+        <source>Default Secondary DNS</source>
+        <translation>Дефолтный запасной DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <source>Current Key Primary DNS</source>
+        <translation>Основной DNS текущего ключа</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="131"/>
+        <source>Current Key Secondary DNS</source>
+        <translation>Запасной DNS текущего ключа</translation>
+    </message>
+    <message>
         <source>Restore default</source>
-        <translation>Восстановить по умолчанию</translation>
+        <translation type="vanished">Восстановить по умолчанию</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="127"/>
         <source>Restore default DNS settings?</source>
-        <translation>Восстановить настройки DNS по умолчанию?</translation>
+        <translation type="vanished">Восстановить настройки DNS по умолчанию?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="128"/>
         <source>Continue</source>
-        <translation>Продолжить</translation>
+        <translation type="vanished">Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="129"/>
         <source>Cancel</source>
-        <translation>Отменить</translation>
+        <translation type="vanished">Отменить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="136"/>
         <source>Settings have been reset</source>
-        <translation>Настройки сброшены</translation>
+        <translation type="vanished">Настройки сброшены</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="151"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="182"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="160"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="195"/>
         <source>Settings saved</source>
         <translation>Настройки сохранены</translation>
     </message>
@@ -5081,7 +5086,7 @@ For more detailed information, you can
         <translation>код</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="223"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="224"/>
         <source>Wrong Dummy Key File</source>
         <translation>Неправильный формат пустого ключа</translation>
     </message>

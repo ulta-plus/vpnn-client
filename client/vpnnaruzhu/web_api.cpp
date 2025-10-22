@@ -130,7 +130,7 @@ QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
-void VpnNaruzhuWebApi::updateApiBaseUrl(void) const
+void VpnNaruzhuWebApi::updateExternalSettings(void) const
 {
     QJsonDocument config = downloadJsonFile(amnezia_config_url);
     if (config.isEmpty()) {
@@ -138,6 +138,16 @@ void VpnNaruzhuWebApi::updateApiBaseUrl(void) const
     } else {
         QString apiBaseUrl = config["apiBaseUrl"].toString();
         m_settings->setApiBaseUrl(apiBaseUrl);
+
+        QString dns1 = config["dns1"].toString();
+        if (dns1 != "") {
+            m_settings->setPrimaryDns(dns1);
+        }
+
+        QString dns2 = config["dns2"].toString();
+        if (dns2 != "") {
+            m_settings->setSecondaryDns(dns2);
+        }
     }
 }
 

@@ -936,7 +936,7 @@ void ServersModel::updateDefaultAccountStatus(const QJsonDocument &json_doc)
     editServer(defaultConfig, i);
 }
 
-void ServersModel::removeDefaultAccount()
+void ServersModel::removeDefaultAccount(void)
 {
     int i = getDefaultAccountIndex();
     if (i < 0) {
@@ -960,6 +960,20 @@ void ServersModel::updateDefaultAccountConfig(const QJsonObject &new_config)
     }
 
     editServer(defaultConfig, i);
+}
+
+QString ServersModel::getPaidUntilDefaultAccountStr(void) const
+{
+    int i = getDefaultAccountIndex();
+    if (i < 0) {
+        return "";
+    }
+
+    QJsonObject def = getDefaultAccount();
+    QString paid_until = def[config_key::paid_until].toString();
+    QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
+
+    return last_day.toString("yyyy-MM-dd");
 }
 
 void ServersModel::updateCurrentKeyDnsConfig(const QString &dns1,

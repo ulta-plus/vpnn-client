@@ -136,13 +136,15 @@ public slots:
     bool isApiKeyExpired(const int serverIndex);
     void removeApiConfig(const int serverIndex);
 
-    QJsonObject getDefaultAccount() const;
-    bool isThereDefaultAccount() const;
+    QJsonObject getDefaultAccount(void) const;
+    bool isThereDefaultAccount(void) const;
     bool isAccountDefault(int index) const;
-    int getDefaultAccountIndex() const;
+    int getDefaultAccountIndex(void) const;
     void updateDefaultAccountStatus(const QJsonDocument &json_doc);
-    void removeDefaultAccount();
+    void removeDefaultAccount(void);
     void updateDefaultAccountConfig(const QJsonObject &new_config);
+    QString getPaidUntilDefaultAccountStr(void) const;
+
     void updateCurrentKeyDnsConfig(const QString &dns1, const QString &dns2);
 
 protected:

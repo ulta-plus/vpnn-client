@@ -73,7 +73,7 @@ public:
 
 public slots:
     void setDefaultServerIndex(const int index);
-    const int getDefaultServerIndex();
+    const int getDefaultServerIndex(void) const;
     const QString getDefaultServerName();
     const QString getDefaultServerDescriptionCollapsed();
     const QString getDefaultServerImagePathCollapsed();
@@ -118,7 +118,9 @@ public slots:
     /* issue_13: don't allow to use Amnezia DNS
     void toggleAmneziaDns(bool enabled);
     */
-    QPair<QString, QString> getDnsPair(const int serverIndex);
+    QPair<QString, QString> getDnsPair(const int serverIndex) const;
+    const QString getCurrentServerDns1(void) const;
+    const QString getCurrentServerDns2(void) const;
 
     bool isServerFromApiAlreadyExists(const quint16 crc);
     bool isServerFromApiAlreadyExists(const QString &userCountryCode, const QString &serviceType, const QString &serviceProtocol);
@@ -142,6 +144,9 @@ public slots:
     void updateDefaultAccountStatus(const QJsonDocument &json_doc);
     void removeDefaultAccount(void);
     void updateDefaultAccountConfig(const QJsonObject &new_config);
+    QString getPaidUntilDefaultAccountStr(void) const;
+
+    void updateCurrentKeyDnsConfig(const QString &dns1, const QString &dns2);
 
 protected:
     QHash<int, QByteArray> roleNames() const override;

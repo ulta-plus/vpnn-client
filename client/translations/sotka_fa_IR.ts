@@ -439,52 +439,6 @@ Subscription</source>
     </message>
 </context>
 <context>
-    <name>HomeSplitTunnelingDrawer</name>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="34"/>
-        <source>Split tunneling</source>
-        <translation>جداسازی ترافیک</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="35"/>
-        <source>Allows you to connect to some sites or applications through a VPN connection and bypass others</source>
-        <translation>اجازه می‌دهد به شما که از طریق اتصال VPN به برخی از وب‌سایت‌ها یا برنامه‌ها وصل شوید و از دیگران عبور کنید</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="45"/>
-        <source>Split tunneling on the server</source>
-        <translation>تقسیم تونل‌ها در سرور</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
-Can&apos;t be disabled for current server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="64"/>
-        <source>Site-based split tunneling</source>
-        <translation>جداسازی ترافیک بر اساس سایت</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
-        <source>Enabled</source>
-        <translation>فعال</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
-        <source>Disabled</source>
-        <translation>غیر فعال</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="83"/>
-        <source>App-based split tunneling</source>
-        <translation>جداسازی ترافیک بر اساس نرم‎افزار</translation>
-    </message>
-</context>
-<context>
     <name>ImportController</name>
     <message>
         <source>Unable to open file</source>
@@ -2296,64 +2250,6 @@ subscription key</source>
     </message>
 </context>
 <context>
-    <name>PageSettingsAppSplitTunneling</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="28"/>
-        <source>Cannot change split tunneling settings during active connection</source>
-        <translation>نمی توان تنظیمات تونل تقسیم را در طول اتصال فعال تغییر دادنمی‌توان تنظیمات تقسیم تونلینگ را در حین اتصال فعال تغییر داد.</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="50"/>
-        <source>Only the apps from the list should have access via VPN</source>
-        <translation>فقط برنامه‌های موجود در لیست باید از طریق VPN دسترسی داشته باشند.</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="57"/>
-        <source>Apps from the list should not have access via VPN</source>
-        <translation>برنامه‌های موجود در لیست نباید از طریق VPN دسترسی داشته باشند.</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="88"/>
-        <source>App split tunneling</source>
-        <translation>تقسیم تونلینگ برنامه‌ها</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="113"/>
-        <source>Mode</source>
-        <translation>حالت</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="185"/>
-        <source>Remove </source>
-        <translation>حذف </translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="186"/>
-        <source>Continue</source>
-        <translation>ادامه دهید</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="187"/>
-        <source>Cancel</source>
-        <translation>کنسل</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="228"/>
-        <source>application name</source>
-        <translation>نام برنامه</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="238"/>
-        <source>Open executable file</source>
-        <translation>فایل اجرایی را باز کنید</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="239"/>
-        <source>Executable files (*.*)</source>
-        <translation>فایل‌های اجرایی (*.*)</translation>
-    </message>
-</context>
-<context>
     <name>PageSettingsApplication</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="48"/>
@@ -2580,47 +2476,60 @@ subscription key</source>
         <translation>سرورهای DNS</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
         <source>Primary DNS</source>
-        <translation>DNS اصلی</translation>
+        <translation type="vanished">DNS اصلی</translation>
+    </message>
+    <message>
+        <source>Secondary DNS</source>
+        <translation type="vanished">DNS ثانویه</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
+        <source>Default Primary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="101"/>
-        <source>Secondary DNS</source>
-        <translation>DNS ثانویه</translation>
+        <source>Default Secondary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <source>Current Key Primary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="131"/>
+        <source>Current Key Secondary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Restore default</source>
-        <translation>بازگشت به پیش‎فرض</translation>
+        <translation type="vanished">بازگشت به پیش‎فرض</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="127"/>
         <source>Restore default DNS settings?</source>
-        <translation>بازگشت به تنظیمات پیش‎فرض DNS؟</translation>
+        <translation type="vanished">بازگشت به تنظیمات پیش‎فرض DNS؟</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="128"/>
         <source>Continue</source>
-        <translation>ادامه</translation>
+        <translation type="vanished">ادامه</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="129"/>
         <source>Cancel</source>
-        <translation>کنسل</translation>
+        <translation type="vanished">کنسل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="136"/>
         <source>Settings have been reset</source>
-        <translation>تنظیمات ریست شد</translation>
+        <translation type="vanished">تنظیمات ریست شد</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="151"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="182"/>
         <source>Save</source>
         <translation>ذخیره</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="160"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="195"/>
         <source>Settings saved</source>
         <translation>ذخیره تنظیمات</translation>
     </message>
@@ -3088,128 +2997,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsSplitTunneling</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="33"/>
-        <source>Default server does not support split tunneling function</source>
-        <translation>سرور پیش‌فرض از عملکرد تونل‌سازی تقسیم شده پشتیبانی نمی‌کند</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="71"/>
-        <source>Addresses from the list should not be accessed via VPN</source>
-        <translation>دسترسی به آدرس‎های لیست بدون وی‎پی‎ان</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="102"/>
-        <source>Split tunneling</source>
-        <translation>جداسازی ترافیک</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="129"/>
-        <source>Mode</source>
-        <translation>حالت</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="207"/>
-        <source>Remove </source>
-        <translation>حذف </translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="208"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="356"/>
-        <source>Continue</source>
-        <translation>ادامه</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="209"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="357"/>
-        <source>Cancel</source>
-        <translation>کنسل</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="30"/>
-        <source>Cannot change split tunneling settings during active connection</source>
-        <translation>نمی توان تنظیمات تونل تقسیم را در طول اتصال فعال تغییر داد</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="66"/>
-        <source>Only the sites listed here will be accessed through the VPN</source>
-        <translation>تنها سایت‌های موجود در اینجا از طریق VPN دسترسی داده خواهند شد</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="257"/>
-        <source>website or IP</source>
-        <translation>وب‌سایت یا آدرس IP</translation>
-    </message>
-    <message>
-        <source>Import / Export Sites</source>
-        <translation type="vanished">وارد کردن / صادر کردن وب‌سایت‌ها</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="302"/>
-        <source>Additional options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="309"/>
-        <source>Import</source>
-        <translation>بارگذاری</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="322"/>
-        <source>Save site list</source>
-        <translation>ذخیره لیست سایت‎ها</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="329"/>
-        <source>Save sites</source>
-        <translation>ذخیره سایت‎ها</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="330"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="457"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="470"/>
-        <source>Sites files (*.json)</source>
-        <translation>Sites files (*.json)</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="350"/>
-        <source>Clear site list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="354"/>
-        <source>Clear site list?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="355"/>
-        <source>All sites will be removed from list.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="419"/>
-        <source>Import a list of sites</source>
-        <translation>بارگذاری لیست سایت‎ها</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="454"/>
-        <source>Replace site list</source>
-        <translation>جایگزین کردن لیست سایت</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="456"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="469"/>
-        <source>Open sites file</source>
-        <translation>باز کردن فایل سایت‎ها</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="467"/>
-        <source>Add imported sites to existing ones</source>
-        <translation>اضافه کردن سایت‎های بارگذاری شده به سایت‎های موجود</translation>
     </message>
 </context>
 <context>
@@ -5150,37 +4937,37 @@ Should it be bonded to this device?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
         <source>Please, enter your telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="115"/>
         <source>Key should contain &quot;vpn://&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="120"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="119"/>
         <source>Key shouldn&apos;t contain spaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="129"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="127"/>
         <source>Wrong Telegram Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="157"/>
         <source>Wrong Server&apos;s response</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="171"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="168"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="190"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="187"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5410,12 +5197,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="203"/>
+        <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
         <translation>عبارت کلید خصوصی</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="224"/>
+        <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
         <translation>ذخیره</translation>
     </message>

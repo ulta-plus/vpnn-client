@@ -438,52 +438,6 @@ Subscription</source>
     </message>
 </context>
 <context>
-    <name>HomeSplitTunnelingDrawer</name>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="34"/>
-        <source>Split tunneling</source>
-        <translation>Split tunneling</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="35"/>
-        <source>Allows you to connect to some sites or applications through a VPN connection and bypass others</source>
-        <translation>VPN ချိတ်ဆက်မှုကြားခံ၍ အချို့သောဆိုက်များ သို့မဟုတ် အပလီကေးရှင်းများသို့ ချိတ်ဆက်ဖို့ရန်နှင့် အခြားအရာများကို ကျော်ဖြတ်ရန် လုပ်ဆောင်ပေးသည်။</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="45"/>
-        <source>Split tunneling on the server</source>
-        <translation>ဆာဗာပေါ်တွင် split tunneling အသုံးပြုထားပါသည်။</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
-Can&apos;t be disabled for current server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="64"/>
-        <source>Site-based split tunneling</source>
-        <translation>ဝက်ဆိုဒ်အခြေပြု split tunneling</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
-        <source>Enabled</source>
-        <translation>ဖွင့်ထားပါသည်။</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
-        <source>Disabled</source>
-        <translation>ပိတ်ထားပါသည်။</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="83"/>
-        <source>App-based split tunneling</source>
-        <translation>App အခြေပြု split tunneling</translation>
-    </message>
-</context>
-<context>
     <name>ImportController</name>
     <message>
         <source>Unable to open file</source>
@@ -2296,64 +2250,6 @@ subscription key</source>
     </message>
 </context>
 <context>
-    <name>PageSettingsAppSplitTunneling</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="28"/>
-        <source>Cannot change split tunneling settings during active connection</source>
-        <translation>လက်ရှိချိတ်ဆက်မှုတစ်ခုရှိနေချိန်တွင် split tunneling ဆက်တင်များကို ပြောင်းလဲ၍မရပါ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="50"/>
-        <source>Only the apps from the list should have access via VPN</source>
-        <translation>စာရင်းတွင်းပါဝင်သောအက်ပ်များသာလျှင် VPN မှတစ်ဆင့် ဝင်ရောက်ခွင့်ရှိလိမ့်မည်ဖြစ်သည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="57"/>
-        <source>Apps from the list should not have access via VPN</source>
-        <translation>စာရင်းတွင်းပါဝင်သောအက်ပ်များကို VPN မှတစ်ဆင့် ဝင်ရောက်ခွင့်ရရှိလိမ့်မည်မဟုတ်ပေ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="88"/>
-        <source>App split tunneling</source>
-        <translation>App split tunneling</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="113"/>
-        <source>Mode</source>
-        <translation>Mode</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="185"/>
-        <source>Remove </source>
-        <translation>ဖယ်ရှားမည် </translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="186"/>
-        <source>Continue</source>
-        <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="187"/>
-        <source>Cancel</source>
-        <translation>ပယ်ဖျက်မည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="228"/>
-        <source>application name</source>
-        <translation>အပလီကေးရှင်းအမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="238"/>
-        <source>Open executable file</source>
-        <translation>စီမံလုပ်ဆောင်နိုင်မှုဖိုင်ကိုဖွင့်မည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="239"/>
-        <source>Executable files (*.*)</source>
-        <translation>စီမံလုပ်ဆောင်နိုင်မှုဖိုင်များ (*.*)</translation>
-    </message>
-</context>
-<context>
     <name>PageSettingsApplication</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="48"/>
@@ -2580,47 +2476,60 @@ subscription key</source>
         <translation>DNS ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
         <source>Primary DNS</source>
-        <translation>Primary DNS</translation>
+        <translation type="vanished">Primary DNS</translation>
+    </message>
+    <message>
+        <source>Secondary DNS</source>
+        <translation type="vanished">Secondary DNS</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
+        <source>Default Primary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="101"/>
-        <source>Secondary DNS</source>
-        <translation>Secondary DNS</translation>
+        <source>Default Secondary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <source>Current Key Primary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="131"/>
+        <source>Current Key Secondary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Restore default</source>
-        <translation>မူရင်းအတိုင်းပြန်လည်ထားရှိမည်</translation>
+        <translation type="vanished">မူရင်းအတိုင်းပြန်လည်ထားရှိမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="127"/>
         <source>Restore default DNS settings?</source>
-        <translation>မူရင်း DNS ဆက်တင်များကို ပြန်လည်ရယူလိုပါသလား?</translation>
+        <translation type="vanished">မူရင်း DNS ဆက်တင်များကို ပြန်လည်ရယူလိုပါသလား?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="128"/>
         <source>Continue</source>
-        <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
+        <translation type="vanished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="129"/>
         <source>Cancel</source>
-        <translation>ပယ်ဖျက်မည်</translation>
+        <translation type="vanished">ပယ်ဖျက်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="136"/>
         <source>Settings have been reset</source>
-        <translation>ဆက်တင်များကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ</translation>
+        <translation type="vanished">ဆက်တင်များကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="151"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="182"/>
         <source>Save</source>
         <translation>သိမ်းဆည်းမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="160"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="195"/>
         <source>Settings saved</source>
         <translation>ဆက်တင်များကို သိမ်းဆည်းပြီးပြီ</translation>
     </message>
@@ -3089,128 +2998,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsSplitTunneling</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="33"/>
-        <source>Default server does not support split tunneling function</source>
-        <translation>မူရင်းဆာဗာသည် split tunneling လုပ်ဆောင်ချက်ကို အထောက်အပံ့မပေးပါ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="71"/>
-        <source>Addresses from the list should not be accessed via VPN</source>
-        <translation>စာရင်းတွင်ဖော်ပြထားသောလိပ်စာများကို VPN ဖြင့် ဝင်ရောက်ခြင်းပြုနိုင်လိမ့်မည် မဟုတ်ပေ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="102"/>
-        <source>Split tunneling</source>
-        <translation>Split tunneling</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="129"/>
-        <source>Mode</source>
-        <translation>Mode</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="207"/>
-        <source>Remove </source>
-        <translation>ဖယ်ရှားမည် </translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="208"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="356"/>
-        <source>Continue</source>
-        <translation>ဆက်လက်လုပ်ဆောင်မည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="209"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="357"/>
-        <source>Cancel</source>
-        <translation>ပယ်ဖျက်မည်</translation>
-    </message>
-    <message>
-        <source>Import / Export Sites</source>
-        <translation type="vanished">ဆိုက်များ သွင်း/ထုတ်မည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="66"/>
-        <source>Only the sites listed here will be accessed through the VPN</source>
-        <translation>ဤနေရာတွင်ဖော်ပြထားသောဆိုက်များကိုသာ VPN မှတဆင့်ဝင်ရောက်ပါမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="30"/>
-        <source>Cannot change split tunneling settings during active connection</source>
-        <translation>လက်ရှိချိတ်ဆက်မှုတစ်ခုရှိနေချိန်တွင် split tunneling ဆက်တင်များကို ပြောင်းလဲ၍မရပါ</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="257"/>
-        <source>website or IP</source>
-        <translation>ဝဘ်ဆိုက် သို့မဟုတ် IP</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="302"/>
-        <source>Additional options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="309"/>
-        <source>Import</source>
-        <translation>တင်သွင်းမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="322"/>
-        <source>Save site list</source>
-        <translation>ဆိုက်စာရင်းကို သိမ်းဆည်းမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="329"/>
-        <source>Save sites</source>
-        <translation>ဆိုက်များသိမ်းဆည်းမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="330"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="457"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="470"/>
-        <source>Sites files (*.json)</source>
-        <translation>ဆိုက်ဖိုင်များ (*.json)</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="350"/>
-        <source>Clear site list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="354"/>
-        <source>Clear site list?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="355"/>
-        <source>All sites will be removed from list.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="419"/>
-        <source>Import a list of sites</source>
-        <translation>ဆိုက်စာရင်းတစ်ခု တင်သွင်းမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="454"/>
-        <source>Replace site list</source>
-        <translation>ဆိုက်စာရင်းကို အစားထိုးမည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="456"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="469"/>
-        <source>Open sites file</source>
-        <translation>ဆိုက်ဖိုင်များ ဖွင့်မည်</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="467"/>
-        <source>Add imported sites to existing ones</source>
-        <translation>တင်သွင်းထားသော ဆိုက်များကို ရှိပြီးသားဆိုက်များထဲသို့ ထည့်မည်</translation>
     </message>
 </context>
 <context>
@@ -5165,37 +4952,37 @@ Should it be bonded to this device?</source>
         <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
         <source>Please, enter your telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="115"/>
         <source>Key should contain &quot;vpn://&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="120"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="119"/>
         <source>Key shouldn&apos;t contain spaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="129"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="127"/>
         <source>Wrong Telegram Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="157"/>
         <source>Wrong Server&apos;s response</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="171"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="168"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="190"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="187"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5432,12 +5219,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="203"/>
+        <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
         <translation>ကိုယ်ပိုင် key စကားဝှက်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="224"/>
+        <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
         <translation>သိမ်းဆည်းမည်</translation>
     </message>

@@ -413,52 +413,6 @@ Subscription</source>
     </message>
 </context>
 <context>
-    <name>HomeSplitTunnelingDrawer</name>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="34"/>
-        <source>Split tunneling</source>
-        <translation>隧道分离</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="35"/>
-        <source>Allows you to connect to some sites or applications through a VPN connection and bypass others</source>
-        <translation>允许您通过 VPN 连接连接到某些站点或应用程序，并绕过其他站点或应用程序</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="45"/>
-        <source>Split tunneling on the server</source>
-        <translation>服务器上的分割隧道</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
-Can&apos;t be disabled for current server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="64"/>
-        <source>Site-based split tunneling</source>
-        <translation>基于网站的隧道分离</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
-        <source>Enabled</source>
-        <translation>开启</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="65"/>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="84"/>
-        <source>Disabled</source>
-        <translation>禁用</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="83"/>
-        <source>App-based split tunneling</source>
-        <translation>基于应用的隧道分离</translation>
-    </message>
-</context>
-<context>
     <name>ImportController</name>
     <message>
         <location filename="../ui/controllers/importController.cpp" line="743"/>
@@ -2250,64 +2204,6 @@ subscription key</source>
     </message>
 </context>
 <context>
-    <name>PageSettingsAppSplitTunneling</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="28"/>
-        <source>Cannot change split tunneling settings during active connection</source>
-        <translation type="unfinished">无法在活动连接期间更改分割隧道设置</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="50"/>
-        <source>Only the apps from the list should have access via VPN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="57"/>
-        <source>Apps from the list should not have access via VPN</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="88"/>
-        <source>App split tunneling</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="113"/>
-        <source>Mode</source>
-        <translation type="unfinished">规则</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="185"/>
-        <source>Remove </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="186"/>
-        <source>Continue</source>
-        <translation type="unfinished">继续</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="187"/>
-        <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="228"/>
-        <source>application name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="238"/>
-        <source>Open executable file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAppSplitTunneling.qml" line="239"/>
-        <source>Executable files (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>PageSettingsApplication</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="48"/>
@@ -2554,47 +2450,60 @@ subscription key</source>
         <translation>DNS服务器</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
         <source>Primary DNS</source>
-        <translation>首选 DNS</translation>
+        <translation type="vanished">首选 DNS</translation>
+    </message>
+    <message>
+        <source>Secondary DNS</source>
+        <translation type="vanished">备用 DNS</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="86"/>
+        <source>Default Primary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="101"/>
-        <source>Secondary DNS</source>
-        <translation>备用 DNS</translation>
+        <source>Default Secondary DNS</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="124"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="116"/>
+        <source>Current Key Primary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="131"/>
+        <source>Current Key Secondary DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Restore default</source>
-        <translation>恢复默认配置</translation>
+        <translation type="vanished">恢复默认配置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="127"/>
         <source>Restore default DNS settings?</source>
-        <translation>是否恢复默认DNS配置？</translation>
+        <translation type="vanished">是否恢复默认DNS配置？</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="128"/>
         <source>Continue</source>
-        <translation>继续</translation>
+        <translation type="vanished">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="129"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation type="vanished">取消</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="136"/>
         <source>Settings have been reset</source>
-        <translation>已重置</translation>
+        <translation type="vanished">已重置</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="151"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="182"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="160"/>
+        <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="195"/>
         <source>Settings saved</source>
         <translation>配置已保存</translation>
     </message>
@@ -3046,140 +2955,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsServersList.qml" line="39"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsSplitTunneling</name>
-    <message>
-        <source>Only the addresses in the list must be opened via VPN</source>
-        <translation type="obsolete">仅列表中的地址须通过VPN访问</translation>
-    </message>
-    <message>
-        <source>Addresses from the list should never be opened via VPN</source>
-        <translation type="obsolete">勿通过VPN访问列表中的地址</translation>
-    </message>
-    <message>
-        <source>Split site tunneling</source>
-        <translation type="obsolete">网站级VPN分流</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="33"/>
-        <source>Default server does not support split tunneling function</source>
-        <translation>默认服务器不支持分离隧道功能</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="71"/>
-        <source>Addresses from the list should not be accessed via VPN</source>
-        <translation>不使用VPN访问</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="102"/>
-        <source>Split tunneling</source>
-        <translation>隧道分离</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="129"/>
-        <source>Mode</source>
-        <translation>规则</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="207"/>
-        <source>Remove </source>
-        <translation>移除 </translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="208"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="356"/>
-        <source>Continue</source>
-        <translation>继续</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="209"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="357"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="30"/>
-        <source>Cannot change split tunneling settings during active connection</source>
-        <translation>无法在活动连接期间更改分割隧道设置</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="66"/>
-        <source>Only the sites listed here will be accessed through the VPN</source>
-        <translation>只有这里列出的网站将通过VPN访问</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="257"/>
-        <source>website or IP</source>
-        <translation>网站或IP</translation>
-    </message>
-    <message>
-        <source>Import / Export Sites</source>
-        <translation type="vanished">导入/导出网站</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="302"/>
-        <source>Additional options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="309"/>
-        <source>Import</source>
-        <translation>导入</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="322"/>
-        <source>Save site list</source>
-        <translation>保存网址</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="329"/>
-        <source>Save sites</source>
-        <translation>保存网址</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="330"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="457"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="470"/>
-        <source>Sites files (*.json)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="350"/>
-        <source>Clear site list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="354"/>
-        <source>Clear site list?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="355"/>
-        <source>All sites will be removed from list.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="419"/>
-        <source>Import a list of sites</source>
-        <translation>导入网址列表</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="454"/>
-        <source>Replace site list</source>
-        <translation>替换网址列表</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="456"/>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="469"/>
-        <source>Open sites file</source>
-        <translation>打开网址文件</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="467"/>
-        <source>Add imported sites to existing ones</source>
-        <translation>将导入的网址添加到现有网址中</translation>
     </message>
 </context>
 <context>
@@ -5121,37 +4896,37 @@ Should it be bonded to this device?</source>
         <translation type="unfinished">继续</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="111"/>
         <source>Please, enter your telegram key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="116"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="115"/>
         <source>Key should contain &quot;vpn://&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="120"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="119"/>
         <source>Key shouldn&apos;t contain spaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="129"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="127"/>
         <source>Wrong Telegram Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="161"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="157"/>
         <source>Wrong Server&apos;s response</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="171"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="168"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="190"/>
+        <location filename="../ui/qml/Pages2/SotkaLogIn.qml" line="187"/>
         <source>Return back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5384,12 +5159,12 @@ Should it be bonded to this device?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="203"/>
+        <location filename="../ui/qml/main2.qml" line="201"/>
         <source>Private key passphrase</source>
         <translation>私钥密码</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="224"/>
+        <location filename="../ui/qml/main2.qml" line="222"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>

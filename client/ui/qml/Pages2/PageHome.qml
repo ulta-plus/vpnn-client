@@ -127,7 +127,8 @@ PageType {
 
                 property var defaultConfig: ServersModel.getDefaultAccount()
 
-                text: qsTr('Subscription valid until') + ':\n' + defaultConfig.paid_until.substring(0, 10)
+                text: qsTr('Subscription valid until') + ':\n' +
+                      ServersModel.getPaidUntilDefaultAccountStr()
                 buttonText: qsTr('Renew Subscription')
 
                 onClick: function() {

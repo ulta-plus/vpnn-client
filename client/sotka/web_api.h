@@ -46,8 +46,9 @@ signals:
 public slots:
     // Return Account Status for the Account with public_request_id
     QString getAccountStatusStr(QString public_request_id) const;
-    /* Currently Sotka doesn't support smart routing and update ApiBase URL
-    void updateApiBaseUrl(void) const;
+
+    void updateExternalSettings(void) const;
+    /* Currently Sotka doesn't support smart routing
     void updateSmartRouting(void) const;
     */
     bool updateDefaultAccountStatus(void) const;
@@ -68,9 +69,9 @@ private:
 
     const QString awg_version = "1.5";
     const QString user_agent = "sotka-desktop/" APP_VERSION;
+    const QString sotka_config_url =
+        "https://storage.googleapis.com/sotka/desktop/config.json";
     /* Currently Sotka doesn't support smart routing
-    const QString amnezia_config_url =
-        "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json";
     const QString smart_routs_url =
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
     */

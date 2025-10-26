@@ -171,18 +171,26 @@ QJsonDocument SotkaWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
-/*  Currently Sotka doesn't support dynamic ApiBase URL
-void SotkaWebApi::updateApiBaseUrl(void) const
+void SotkaWebApi::updateExternalSettings(void) const
 {
-    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    QJsonDocument config = downloadJsonFile(sotka_config_url);
     if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+        qDebug() << "Cannot download amnezia config: " << sotka_config_url;
     } else {
         QString apiBaseUrl = config["apiBaseUrl"].toString();
         m_settings->setApiBaseUrl(apiBaseUrl);
+
+        QString dns1 = config["dns1"].toString();
+        if (dns1 != "") {
+            m_settings->setPrimaryDns(dns1);
+        }
+
+        QString dns2 = config["dns2"].toString();
+        if (dns2 != "") {
+            m_settings->setSecondaryDns(dns2);
+        }
     }
 }
-*/
 
 /* Currently Sotka doesn't support smart routing
 void SotkaWebApi::updateSmartRouting(void) const

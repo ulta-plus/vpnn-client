@@ -20,10 +20,10 @@ Window  {
     visible: true
     width: GC.screenWidth
     height: GC.screenHeight
-    minimumWidth: GC.isDesktop() ? 360 : 0
-    minimumHeight: GC.isDesktop() ? 640 : 0
-    maximumWidth: 600
-    maximumHeight: 800
+    minimumWidth: 375
+    minimumHeight: 727
+    maximumWidth: 375
+    maximumHeight: 727
 
     color: AmneziaStyle.color.midnightBlack
 

@@ -257,7 +257,7 @@ PageType {
             var pagePath
             if (PageController.isStartPageVisible()) {
                 tabBar.visible = false
-                pagePath = PageController.getPagePath(PageEnum.PageSetupWizardStart)
+                pagePath = PageController.getPagePath(PageEnum.VPNNaruzhuPageWelcome)
             } else {
                 tabBar.visible = true
                 pagePath = PageController.getPagePath(PageEnum.PageHome)

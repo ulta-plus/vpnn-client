@@ -178,7 +178,7 @@ void AmneziaApplication::loadFonts()
 {
     QQuickStyle::setStyle("Basic");
 
-    QFontDatabase::addApplicationFont(":/fonts/pt-root-ui_vf.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Inter-VariableFont.ttf");
 }
 
 bool AmneziaApplication::parseCommands()

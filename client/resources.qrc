@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>fonts/pt-root-ui_vf.ttf</file>
+        <file>fonts/Inter-VariableFont.ttf</file>
         <file>images/controls/alert-circle.svg</file>
         <file>images/controls/amnezia.svg</file>
         <file>images/controls/app.svg</file>
@@ -175,6 +175,7 @@
         <file>ui/qml/Controls2/TextTypes/ListItemTitleType.qml</file>
         <file>ui/qml/Controls2/TextTypes/ParagraphTextType.qml</file>
         <file>ui/qml/Controls2/TextTypes/SmallTextType.qml</file>
+        <file>ui/qml/Controls2/TextTypes/VPNNaruzhuHeader.qml</file>
         <file>ui/qml/Controls2/TopCloseButtonType.qml</file>
         <file>ui/qml/Controls2/VerticalRadioButton.qml</file>
         <file>ui/qml/Controls2/WarningType.qml</file>
@@ -186,6 +187,7 @@
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>
         <file>ui/qml/Modules/Style/qmldir</file>
         <file>ui/qml/Pages2/DummyKey.conf</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageWelcome.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageLogIn.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageSignUp.qml</file>
@@ -233,7 +235,6 @@
         <file>ui/qml/Pages2/PageSetupWizardProtocols.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardProtocolSettings.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardQrReader.qml</file>
-        <file>ui/qml/Pages2/PageSetupWizardStart.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardTextKey.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardViewConfig.qml</file>
         <file>ui/qml/Pages2/PageShare.qml</file>
@@ -247,7 +248,7 @@
         <file>ui/qml/Pages2/PageSettingsApiNativeConfigs.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiDevices.qml</file>
         <file>images/controls/monitor.svg</file>
-        <file>images/naruzhu_logo.png</file>
+        <file>images/welcome_logo.svg</file>
         <file>images/controls/email.svg</file>
         <file>images/controls/tabBarChat.svg</file>
         <file>images/controls/chat.svg</file>

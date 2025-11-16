@@ -25,7 +25,7 @@ Window  {
     maximumWidth: 375
     maximumHeight: 727
 
-    color: AmneziaStyle.color.midnightBlack
+    color: VPNNaruzhuStyle.color.backGround
 
     onClosing: function(close) {
         close.accepted = false

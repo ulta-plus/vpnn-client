@@ -39,13 +39,12 @@ namespace PageLoader
         PageSettingsApiDevices,
         PageSettingsApiSubscriptionKey,
         PageSettingsKillSwitchExceptions,
-        
+
         PageServiceSftpSettings,
         PageServiceTorWebsiteSettings,
         PageServiceDnsSettings,
         PageServiceSocksProxySettings,
 
-        PageSetupWizardStart,
         PageSetupWizardCredentials,
         PageSetupWizardProtocols,
         PageSetupWizardEasy,
@@ -73,6 +72,7 @@ namespace PageLoader
         PageShareFullAccess,
         PageShareConnection,
 
+        VPNNaruzhuPageWelcome,
         VPNNaruzhuPageLogIn,
         VPNNaruzhuPageSignUp,
         VPNNaruzhuPageEmailLogIn,

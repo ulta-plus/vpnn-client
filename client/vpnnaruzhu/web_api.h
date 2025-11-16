@@ -43,6 +43,8 @@ public slots:
     QString getUserAgent(void) const { return user_agent; }
     QString getAwgVersion(void) const { return awg_version; }
 
+    QString getAppVersion(void) const { return APP_VERSION; }
+
 private:
     VpnNaruzhuWebApi();
 

@@ -29,8 +29,8 @@ Button {
 
     contentItem: Item {
         anchors.fill: buttonBorder
-        implicitWidth: root.implicitWidth
-        implicitHeight: root.implicitHeight
+        implicitWidth: buttonBorder.implicitWidth
+        implicitHeight: buttonBorder.implicitHeight
 
         RowLayout {
             id: content
@@ -62,7 +62,15 @@ Button {
     background: Rectangle {
         id: buttonBorder
         radius: root.radius
-        opacity: hovered ? root.hoveredOpacity : 1.0
+        opacity: {
+            if (root.enabled) {
+                if (hovered) {
+                    return root.hoveredOpacity
+                }
+            }
+
+            return 1.0
+        }
 
         color: {
             if (root.enabled) {

@@ -18,6 +18,13 @@ PageType {
     property string public_request_id: ''
     property string error: ''
     property string account_status: ''
+    property string pleaseInputEmail: qsTr('Enter your e-mail')
+    property string pleaseInputOtp: qsTr('Enter a code from the e-mail')
+    property string placeholderEmail: 'e-mail'
+    property string placeholderOtpCode: 'otp code'
+
+    enum PageStatus { InputEmail = 0, InputOTP = 1 }
+    property var pageStatus: VPNNaruzhuPageEmailLogIn.PageStatus.InputEmail
 
     Connections {
         target: ImportController
@@ -29,6 +36,7 @@ PageType {
                 ServersModel.processedIndex = ServersModel.defaultIndex
             }
 
+            waitingBox.visible = false
             PageController.goToPageHome()
         }
     }
@@ -43,89 +51,206 @@ PageType {
         BackButtonType {
             id: backButton
             Layout.topMargin: 20
-            KeyNavigation.tab: emailText
+            KeyNavigation.tab: input
+            backButtonFunction: function () {
+                if (root.pageStatus == VPNNaruzhuPageEmailLogIn.PageStatus.InputOTP) {
+                    switchPageStatusToInputEmail()
+                } else {
+                    PageController.closePage()
+                }
+            }
         }
 
-        Header2TextType {
+        VPNNaruzhuHeader {
+            id: header
             Layout.topMargin: 20
             Layout.bottomMargin: 20
-            Layout.leftMargin: 16
-            text: qsTr('Enter your e-mail')
+            Layout.leftMargin: 24
+            text: root.pleaseInputEmail
         }
 
         VPNNaruzhuTextField {
-            id: emailText
-            objectName: 'emailText'
+            id: input
+            objectName: 'input'
 
-            Layout.fillWidth: true
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.alignment: Qt.AlignHCenter
 
-            placeholderText: 'e-mail'
+            implicitHeight: 41
+            implicitWidth: 327
+            radius: 4
+
+            placeholderText: root.placeholderEmail
 
             KeyNavigation.tab: continueButton
         }
+
+        VPNNaruzhuButton {
+            id: continueButton
+            objectName: 'connectButton'
+
+            Layout.topMargin: 10
+            Layout.alignment: Qt.AlignHCenter
+
+            implicitHeight: 41
+            implicitWidth: 327
+            radius: 4
+
+            mainText: qsTr('Continue')
+            capitalization: Font.AllUppercase
+
+            hoveredOpacity: 0.5
+
+            KeyNavigation.tab: backButton
+
+            onClicked: {
+                root.disableAll()
+
+                if (root.pageStatus == VPNNaruzhuPageEmailLogIn.PageStatus.InputEmail) {
+                    root.email = input.text.trim()
+
+                    if (root.email == '') {
+                        showError(qsTr('Please, provide an email'))
+                        return
+                    }
+
+                    // Email verification RegExp
+                    let re = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+                    if (!re.test(root.email)) {
+                        showError(qsTr('Invalid e-mail'))
+                        return
+                    }
+
+                    var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
+
+                    http.onreadystatechange = function() {
+                        if(http.readyState === XMLHttpRequest.DONE) {
+                            waitingBox.visible = false
+                            if (http.status == 200) {
+                                switchPageStatusToInputOtp()
+                            } else {
+                                root.showHTTPError(http)
+                            }
+                        }
+                    }
+
+                    waitingBox.visible = true
+                    http.send()
+                } else {
+                    root.otpCode = input.text.trim()
+                    if (root.otpCode == '') {
+                        showError(qsTr('Please, provide OTP code'))
+                        return
+                    }
+
+                    var http = VPNNaruzhuAPI.getOTPVerificationHTTPRequest()
+
+                    http.onreadystatechange = function() {
+                        if(http.readyState === XMLHttpRequest.DONE) {
+                            if (http.status == 200) {
+                                const json_obj = JSON.parse(http.responseText.toString())
+                                root.account_status = http.responseText.toString()
+                                root.public_request_id = json_obj.data.request.public_request_id
+
+                                var status = json_obj.data.request.simplified_status
+                                if (status == 'paid' || status == 'trial') {
+                                    root.getKeyFile()
+                                } else {
+                                    // 'blocked', 'new', 'else'
+                                    if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
+                                        ImportController.importConfig()
+                                    } else {
+                                        waitingBox.visible = false
+                                        showError(qsTr('Wrong Dummy Key File'))
+                                    }
+                                }
+                                root.enableAll()
+                            } else {
+                                waitingBox.visible = false
+                                showHTTPError(http)
+                            }
+                        }
+                    }
+
+                    const body = '{ "email": "' + root.email +'", "otp_code": "' + root.otpCode + '" }'
+                    waitingBox.visible = true
+                    http.send(body)
+                }
+            }
+        }
     }
 
-    VPNNaruzhuButton {
-        id: continueButton
-        objectName: 'connectButton'
-
+    RowLayout {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.rightMargin: 16
         anchors.leftMargin: 16
-        anchors.bottomMargin: 32
+        anchors.bottomMargin: 24
 
-        implicitHeight: 56
+        Text {
+            text: 'v' + VPNNWebApi.getAppVersion()
+            color: VPNNaruzhuStyle.color.footnotes
+            opacity: 0.56
+            font.pixelSize: 12
+            font.weight: Font.Medium
+            font.family: VPNNaruzhuStyle.font
 
-        mainText: qsTr('Continue')
+            Layout.alignment: Qt.AlignVCente | Qt.AlignLeft
+        }
 
-        KeyNavigation.tab: backButton
+        VPNNaruzhuButton {
+            id: telegramButton
 
-        onClicked: {
-            root.disableAll()
-            root.email = emailText.text.trim()
+            Layout.alignment: Qt.AlignRight
 
-            if (root.email == '') {
-                showError(qsTr('Please, provide an email'))
-                return
+            implicitHeight: 38
+            implicitWidth: 144
+            radius: 3
+
+            borderWidth: 1
+            borderFocusedWidth: 1
+
+            defaultColor: 'transparent'
+            pressedColor: 'transparent'
+            hoveredColor: 'transparent'
+
+            leftIcon: 'qrc:/images/controls/telegram.svg'
+
+            textColor: '#FFFFFF'
+            textSize: 14
+            letterSpacing: textSize * (-0.05)
+            mainText: qsTr('Telegram')
+
+            onClicked: {
+                Qt.openUrlExternally("https://t.me/vpn_naruzhu")
             }
-
-            // Email verification RegExp
-            let re = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-            if (!re.test(root.email)) {
-                showError(qsTr('Invalid e-mail'))
-                return
-            }
-
-            var http = VPNNaruzhuAPI.getEmailVerificationHTTPRequest(root.email)
-
-            http.onreadystatechange = function() {
-                if(http.readyState === XMLHttpRequest.DONE) {
-                    waitingBox.visible = false
-                    if (http.status == 200) {
-                        inputOTPCode.visible = true
-                    } else {
-                        root.showHTTPError(http)
-                    }
-                }
-            }
-
-            waitingBox.visible = true
-            http.send()
         }
     }
 
+    function switchPageStatusToInputOtp() {
+        root.pageStatus = VPNNaruzhuPageEmailLogIn.PageStatus.InputOTP
+        header.text = root.pleaseInputOtp
+        input.text = ''
+        input.placeholderText = root.placeholderOtpCode
+        root.enableAll()
+    }
+
+    function switchPageStatusToInputEmail() {
+        root.pageStatus = VPNNaruzhuPageEmailLogIn.PageStatus.InputEmail
+        header.text = root.pleaseInputEmail
+        input.text = root.email
+        input.placeholderText = root.placeholderEmail
+        root.enableAll()
+    }
+
     function enableAll() {
-        emailText.enabled = true
+        input.enabled = true
         backButton.enabled = true
         continueButton.enabled = true
     }
 
     function disableAll() {
-        emailText.enabled = false
+        input.enabled = false
         backButton.enabled = false
         continueButton.enabled = false
     }
@@ -175,9 +300,11 @@ PageType {
                     if (ImportController.extractDefaultAccountConfig(root.email, http.responseText, root.account_status)) {
                         ImportController.importConfig()
                     } else {
+                        waitingBox.visible = false
                         showError(qsTr('Wrong Key File'))
                     }
                 } else {
+                    waitingBox.visible = false
                     print('Cannot download file')
                     print(http.responseText.toString())
                     showHTTPError(http)
@@ -186,58 +313,5 @@ PageType {
         }
 
         http.send()
-    }
-
-    VPNNaruzhuNotificationWithInput {
-        id: inputOTPCode
-        withCloseButton: true
-        anchors.centerIn: parent
-        text: qsTr('Enter a code from the e-mail')
-        buttonYesText: qsTr('Send')
-        placeholderText: qsTr('code')
-
-        withYesButton: function() {
-            root.otpCode = inputOTPCode.getInput().trim()
-            if (root.otpCode == '') {
-                inputOTPCode.visible = true
-                return
-            }
-
-            var http = VPNNaruzhuAPI.getOTPVerificationHTTPRequest()
-
-            http.onreadystatechange = function() {
-                if(http.readyState === XMLHttpRequest.DONE) {
-                    waitingBox.visible = false
-                    if (http.status == 200) {
-                        const json_obj = JSON.parse(http.responseText.toString())
-                        root.account_status = http.responseText.toString()
-                        root.public_request_id = json_obj.data.request.public_request_id
-
-                        var status = json_obj.data.request.simplified_status
-                        if (status == 'paid' || status == 'trial') {
-                            root.getKeyFile()
-                        } else {
-                            // 'blocked', 'new', 'else'
-                            if (ImportController.extractDefaultAccountDummyConfig(root.email, root.account_status)) {
-                                ImportController.importConfig()
-                            } else {
-                                showError(qsTr('Wrong Dummy Key File'))
-                            }
-                        }
-                        root.enableAll()
-                    } else {
-                        showHTTPError(http)
-                    }
-                }
-            }
-
-            const body = '{ "email": "' + root.email +'", "otp_code": "' + root.otpCode + '" }'
-            waitingBox.visible = true
-            http.send(body)
-        }
-
-        withNoButton: function() {
-            root.enableAll()
-        }
     }
 }

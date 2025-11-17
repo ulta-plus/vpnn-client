@@ -11,7 +11,7 @@ Rectangle {
     implicitHeight: 100
     implicitWidth: 240
 
-    radius: 10
+    radius: 4
     visible: false
 
     property int textSize: 16
@@ -46,12 +46,13 @@ Rectangle {
 
         font.pixelSize: root.textSize
         font.weight: 400
-        font.family: 'PT Root UI VF'
+        font.family: VPNNaruzhuStyle.font
     }
 
     VPNNaruzhuButton {
         implicitHeight: 30
         implicitWidth: (contentItem.implicitWidth > 80) ? contentItem.implicitWidth + 20 : 80
+        radius: 3
 
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 10

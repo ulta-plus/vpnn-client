@@ -128,8 +128,9 @@ PageType {
                         Layout.alignment: Qt.AlignRight
                         mainText: qsTr('Smart Mode')
 
-                        defaultColor: modePannel.activeButtonColor
-                        hoveredColor: modePannel.activeButtonColor
+                        defaultColor: VPNNWebApi.isSmartRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
+                        hoveredColor: VPNNWebApi.isSmartRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
+                        textColor: VPNNWebApi.isSmartRouteMode() ? modePannel.activeTextColor : modePannel.inactiveTextColor
                         onClicked: {
                             smartMode.defaultColor = modePannel.activeButtonColor
                             smartMode.hoveredColor = smartMode.defaultColor
@@ -137,6 +138,8 @@ PageType {
                             directMode.defaultColor = modePannel.inactiveButtonColor
                             directMode.textColor = modePannel.inactiveTextColor
                             directMode.hoveredColor = directMode.defaultColor
+
+                            VPNNWebApi.setSmartRouteMode()
                         }
                     }
 
@@ -150,8 +153,9 @@ PageType {
                         Layout.alignment: Qt.AlignLeft
                         mainText: qsTr('Direct Mode')
 
-                        defaultColor: modePannel.activeButtonColor
-                        hoveredColor: modePannel.activeButtonColor
+                        defaultColor: VPNNWebApi.isDirectRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
+                        hoveredColor: VPNNWebApi.isDirectRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
+                        textColor: VPNNWebApi.isDirectRouteMode() ? modePannel.activeTextColor : modePannel.inactiveTextColor
                         onClicked: {
                             smartMode.defaultColor = modePannel.inactiveButtonColor
                             smartMode.hoveredColor = smartMode.defaultColor
@@ -159,6 +163,8 @@ PageType {
                             directMode.defaultColor = modePannel.activeButtonColor
                             directMode.textColor = modePannel.activeTextColor
                             directMode.hoveredColor = directMode.defaultColor
+
+                            VPNNWebApi.setDirectRouteMode()
                         }
                     }
                 }

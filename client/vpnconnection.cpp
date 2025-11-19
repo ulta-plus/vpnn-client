@@ -11,6 +11,7 @@
 #include <configurators/openvpn_configurator.h>
 #include <configurators/shadowsocks_configurator.h>
 #include <configurators/wireguard_configurator.h>
+#include "vpnnaruzhu/web_api.h"
 
 #ifdef AMNEZIA_DESKTOP
     #include "core/ipcclient.h"
@@ -427,8 +428,14 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(site);
             }
 
-            for (const auto &r: excludedRoutes) {
-                sitesJsonArray.append(r);
+            auto vpnnRouteMode = static_cast<VpnNaruzhuWebApi::VPNNRouteMode>(
+                m_settings->getVPNNRouteMode());
+            qDebug() << "Route mode " << vpnnRouteMode;
+            if (vpnnRouteMode == VpnNaruzhuWebApi::VPNNRouteMode::SMART) {
+                for (const auto &r: excludedRoutes) {
+                    sitesJsonArray.append(r);
+                }
+                qDebug() << sitesJsonArray;
             }
 
             if (sitesJsonArray.isEmpty()) {

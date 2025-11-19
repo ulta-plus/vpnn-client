@@ -5212,52 +5212,52 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="151"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="154"/>
         <source>Direct Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="255"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="261"/>
         <source>Need help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="362"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="368"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="365"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="371"/>
         <source>Sign out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="366"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="372"/>
         <source>Continue</source>
         <translation type="unfinished">जारी रखना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="367"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="373"/>
         <source>Cancel</source>
         <translation type="unfinished">रद्द करना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="389"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="395"/>
         <source>Left </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="389"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="395"/>
         <source> days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="400"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="406"/>
         <source>Active until </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="421"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="427"/>
         <source>Get more</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5369,7 +5369,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="498"/>
+        <location filename="../vpnconnection.cpp" line="505"/>
         <source>Mbps</source>
         <translation></translation>
     </message>

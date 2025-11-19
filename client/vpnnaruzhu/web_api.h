@@ -19,6 +19,8 @@ class VpnNaruzhuWebApi: public QObject
     Q_OBJECT
 
 public:
+    enum VPNNRouteMode { SMART = 0, DIRECT = 1 };
+
     VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
         const QSharedPointer<ServersModel> &sm,
         const QSharedPointer<VpnConnection> &vpnc,
@@ -44,6 +46,12 @@ public slots:
     QString getAwgVersion(void) const { return awg_version; }
 
     QString getAppVersion(void) const { return APP_VERSION; }
+
+    void setSmartRouteMode(void) const { m_settings->setVPNNRouteMode(VPNNRouteMode::SMART); }
+    void setDirectRouteMode(void) const { m_settings->setVPNNRouteMode(VPNNRouteMode::DIRECT); }
+    VPNNRouteMode getRouteMode(void) const { return static_cast<VPNNRouteMode>(m_settings->getVPNNRouteMode()); }
+    bool isSmartRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::SMART);};
+    bool isDirectRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::DIRECT);};
 
 private:
     VpnNaruzhuWebApi();

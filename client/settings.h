@@ -160,6 +160,9 @@ public:
         setValue("Conf/apiBaseUrl", apiBaseUrl);
     }
 
+    void setVPNNRouteMode(int mode) { setValue("Conf/VPNNRouteMode", mode); }
+    int getVPNNRouteMode(void) const { return value("Conf/VPNNRouteMode", 0).toInt(); }
+
     QString primaryDns() const;
     QString secondaryDns() const;
 

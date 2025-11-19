@@ -306,9 +306,8 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation>در هنگام آماده‌سازی پیکربندی، نمی‌توان از اتصال خارج شد.</translation>
+        <translation type="vanished">در هنگام آماده‌سازی پیکربندی، نمی‌توان از اتصال خارج شد.</translation>
     </message>
 </context>
 <context>

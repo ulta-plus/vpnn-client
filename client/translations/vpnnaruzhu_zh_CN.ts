@@ -284,14 +284,6 @@
     </message>
 </context>
 <context>
-    <name>ConnectButton</name>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
-        <source>Unable to disconnect during configuration preparation</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>ConnectionController</name>
     <message>
         <location filename="../ui/controllers/connectionController.h" line="74"/>

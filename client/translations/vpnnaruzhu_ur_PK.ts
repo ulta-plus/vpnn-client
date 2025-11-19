@@ -286,9 +286,8 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation>تشکیل کی تیاری کے دوران منقطع ہونا ممکن نہیں ہے</translation>
+        <translation type="vanished">تشکیل کی تیاری کے دوران منقطع ہونا ممکن نہیں ہے</translation>
     </message>
 </context>
 <context>

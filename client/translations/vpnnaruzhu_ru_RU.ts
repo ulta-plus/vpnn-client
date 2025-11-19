@@ -290,9 +290,8 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation>Невозможно отключиться во время подготовки конфигурации</translation>
+        <translation type="vanished">Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
 </context>
 <context>

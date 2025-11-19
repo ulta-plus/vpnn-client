@@ -252,6 +252,9 @@
         <file>images/controls/chat.svg</file>
         <file>images/controls/telegramNaruzhu.svg</file>
         <file>images/controls/sign-out.svg</file>
+        <file>images/connect button/default.svg</file>
+        <file>images/connect button/connected.svg</file>
+        <file>images/connect button/progress.svg</file>
         <file>ui/qml/Components/ApiPremV1MigrationDrawer.qml</file>
         <file>ui/qml/Components/ApiPremV1SubListDrawer.qml</file>
         <file>ui/qml/Components/OtpCodeDrawer.qml</file>

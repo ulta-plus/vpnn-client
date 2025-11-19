@@ -306,9 +306,8 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation>غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
+        <translation type="vanished">غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
     </message>
 </context>
 <context>

@@ -306,8 +306,9 @@
 <context>
     <name>ConnectButton</name>
     <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation type="vanished">Configuration ပြင်ဆင်ခြင်းလုပ်ဆောင်နေချိန်အတွင်း ချိတ်ဆက်မှုဖြတ်တောက်၍မရပါ</translation>
+        <translation>Configuration ပြင်ဆင်ခြင်းလုပ်ဆောင်နေချိန်အတွင်း ချိတ်ဆက်မှုဖြတ်တောက်၍မရပါ</translation>
     </message>
 </context>
 <context>
@@ -5271,52 +5272,57 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="128"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="129"/>
         <source>Smart Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="150"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="151"/>
         <source>Direct Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="255"/>
+        <source>Need help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="362"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="267"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="365"/>
         <source>Sign out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="268"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="366"/>
         <source>Continue</source>
         <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="269"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="367"/>
         <source>Cancel</source>
         <translation type="unfinished">ပယ်ဖျက်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="389"/>
         <source>Left </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="389"/>
         <source> days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="302"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="400"/>
         <source>Active until </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="323"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="421"/>
         <source>Get more</source>
         <translation type="unfinished"></translation>
     </message>

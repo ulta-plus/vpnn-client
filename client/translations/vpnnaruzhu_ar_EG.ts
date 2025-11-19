@@ -306,8 +306,9 @@
 <context>
     <name>ConnectButton</name>
     <message>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
         <source>Unable to disconnect during configuration preparation</source>
-        <translation type="vanished">غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
+        <translation>غير قادر علي قطع الاتصال اثناء إعداد التكوين</translation>
     </message>
 </context>
 <context>
@@ -5216,52 +5217,57 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="128"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="129"/>
         <source>Smart Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="150"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="151"/>
         <source>Direct Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="255"/>
+        <source>Need help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="362"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="267"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="365"/>
         <source>Sign out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="268"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="366"/>
         <source>Continue</source>
         <translation type="unfinished">واصل</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="269"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="367"/>
         <source>Cancel</source>
         <translation type="unfinished">إلغاء</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="389"/>
         <source>Left </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="389"/>
         <source> days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="302"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="400"/>
         <source>Active until </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="323"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="421"/>
         <source>Get more</source>
         <translation type="unfinished"></translation>
     </message>

@@ -45,6 +45,7 @@ PageType {
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
+            anchors.bottom: parent.bottom
 
             RowLayout {
                 Layout.topMargin: 24
@@ -97,7 +98,7 @@ PageType {
             }
 
             Rectangle {
-                Layout.topMargin: 24
+                Layout.topMargin: 23
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
                 Layout.alignment: Qt.AlignTop
@@ -162,41 +163,138 @@ PageType {
                     }
                 }
             }
-        }
 
-        ColumnLayout {
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
+            ComboBox {
+                id: countryBox
+                Layout.topMargin: 22
+                Layout.preferredHeight: 41
+                Layout.preferredWidth: 216
+                Layout.alignment: Qt.AlignHCenter
+
+                wheelEnabled: true
+
+                model: ListModel {
+                    id: country
+                    ListElement { text: "Banana" }
+                    ListElement { text: "Apple" }
+                    ListElement { text: "Coconut" }
+                }
+
+                background: Rectangle {
+                    color: 'transparent'
+                    border.width: 1
+                    border.color: '#3C3C3C'
+                    radius: 4
+                }
+
+                popup: Popup {
+                    y: countryBox.height
+                    width: countryBox.width
+                    implicitHeight: contentItem.implicitHeight
+
+                    background: Rectangle {
+                        radius: 4
+                        color: '#151515'
+                        border.color: '#3C3C3C'
+                        border.width: 1
+                    }
+
+                    contentItem: ListView {
+                        implicitHeight: contentHeight
+                        model: countryBox.delegateModel
+                        spacing: 8
+                        clip: true
+
+                        currentIndex: countryBox.highlightedIndex
+
+                        ScrollBar.vertical: ScrollBar {
+                            policy: ScrollBar.AlwaysOn
+                            active: ScrollBar.AlwaysOn
+                        }
+                    }
+                }
+
+                delegate: ItemDelegate {
+                    id: delegateItem
+                    width: 168
+
+                    background: Rectangle {
+                        implicitHeight: 32
+                        color: {
+                            if (countryBox.currentIndex === index) {
+                                return '#FFD600'
+                            } else if (delegateItem.hovered) {
+                                return '#FFD600'
+                            } else {
+                                return 'transparent'
+                            }
+                        }
+                        opacity: (delegateItem.hovered) ? '0.5' : 1
+                        radius: 4
+                    }
+
+                    topPadding: 8
+                    bottomPadding: 8
+
+                    text: modelData
+                }
+            }
 
             ConnectButton {
                 id: connectButton
                 objectName: "connectButton"
 
-                //Layout.fillHeight: true
-                Layout.alignment: Qt.AlignCenter
+                Layout.alignment: Qt.AlignHCenter
+                Layout.topMargin: 17
             }
-        }
 
-        ColumnLayout {
-            id: bottomBackground
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
+            RowLayout {
+                Layout.alignment: Qt.AlignHCenter
+                Layout.topMargin: 14
+                Text {
+                    text: qsTr('Need help')
+                    color: '#FFFFFF'
+                    font.pixelSize: 14
+                    font.weight: Font.DemiBold
+                    font.family: VPNNaruzhuStyle.font
+                    font.letterSpacing: 14 * (-0.04)
+                }
+
+                VPNNaruzhuButton {
+                    id: helpButton
+
+                    Layout.alignment: Qt.AlignRight
+
+                    defaultColor: 'transparent'
+                    pressedColor: 'transparent'
+                    hoveredColor: 'transparent'
+
+                    implicitHeight: 20
+                    implicitWidth: 20
+
+                    leftIcon: 'qrc:/images/controls/question.svg'
+                    leftIconColor: '#FFFFFF'
+
+                    onClicked: {
+                        GC.coppyUUIDToClipBoard()
+                        Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
+                    }
+                }
+            }
 
             Rectangle {
+                id: bottomBackground
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                Layout.topMargin: 17
                 implicitWidth: parent.width
                 implicitHeight: 139
 
-                color: '#000000'
-                opacity: 0.2
+                //color: '#000000'
+                //opacity: 1.0
 
                 gradient: Gradient {
-                    GradientStop { position: 0.0; color: '#FFD600' }
-                    GradientStop { position: 1.0; color: '#000000' }
+                    GradientStop { position: 0.0; color: Qt.rgba(255,214,0, 0.075) } //'#FFD600'
+                    GradientStop { position: 1.0; color: Qt.rgba(0,0,0, 1) } //'#000000'
                 }
 
                 border.color: '#DADADA'

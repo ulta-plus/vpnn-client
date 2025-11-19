@@ -973,7 +973,28 @@ QString ServersModel::getPaidUntilDefaultAccountStr(void) const
     QString paid_until = def[config_key::paid_until].toString();
     QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
 
-    return last_day.toString("yyyy-MM-dd");
+    QLocale locale = m_settings->getAppLanguage();
+    qDebug() << locale;
+    return locale.toString(last_day, "d MMMM yyyy, h:m");
+}
+
+qint64 ServersModel::getNumberOfActiveDays(void) const
+{
+    int i = getDefaultAccountIndex();
+    if (i < 0) {
+        return 0;
+    }
+
+    QJsonObject def = getDefaultAccount();
+    QString paid_until = def[config_key::paid_until].toString();
+    QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
+    QDateTime today = QDateTime::currentDateTime();
+    quint64 diff_days = today.daysTo(last_day);
+    if (diff_days < 0) {
+        diff_days = 0;
+    }
+
+    return diff_days;
 }
 
 void ServersModel::updateCurrentKeyDnsConfig(const QString &dns1,

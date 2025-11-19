@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 
 import Style 1.0
 
@@ -24,6 +25,7 @@ Button {
     property var capitalization: Font.MixedCase
     property var hoveredOpacity: 1.0
     property var letterSpacing: 0.0
+    property var leftIconColor: ''
 
     property string leftIcon: ''
 
@@ -40,6 +42,12 @@ Button {
                 id: leftIcon
                 source: root.leftIcon
                 visible: root.leftIcon === '' ? false : true
+                layer {
+                    enabled: leftIconColor !== '' ? true : false
+                    effect: ColorOverlay {
+                        color: leftIconColor
+                    }
+                }
             }
 
             Text {
@@ -55,6 +63,8 @@ Button {
 
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+
+                visible: root.mainText === '' ? false : true
             }
         }
     }

@@ -256,6 +256,11 @@
         <translation>%1 днів</translation>
     </message>
     <message>
+        <location filename="../ui/models/api/apiServicesModel.cpp" line="111"/>
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/models/api/apiServicesModel.cpp" line="113"/>
         <source>VPN will open only popular sites blocked in your region, such as Instagram, Facebook, Twitter and others. Other sites will be opened from your real IP address, &lt;a href=&quot;%1&quot; style=&quot;color: #FBB26A;&quot;&gt;more details on the website.&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
@@ -713,45 +718,16 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="43"/>
-        <source>You&apos;ve successfully switched to the new Amnezia Premium subscription!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="44"/>
-        <source>Old keys will no longer work. Please use your new subscription key to connect. 
-Thank you for staying with us!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="45"/>
         <source>Continue</source>
-        <translation type="unfinished">Продовжити</translation>
+        <translation type="obsolete">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="102"/>
         <source>Logging enabled</source>
-        <translation>Логування увімкнено</translation>
+        <translation type="vanished">Логування увімкнено</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="130"/>
-        <source>Subscription valid until</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="131"/>
-        <source>Renew Subscription</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="400"/>
         <source>VPN protocol</source>
-        <translation>VPN протокол</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="453"/>
-        <source>Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">VPN протокол</translation>
     </message>
     <message>
         <source>Servers</source>
@@ -1696,52 +1672,32 @@ Thank you for staying with us!</source>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="33"/>
         <source>Settings</source>
-        <translation>Налаштування</translation>
+        <translation type="vanished">Налаштування</translation>
     </message>
     <message>
         <source>Servers</source>
         <translation type="vanished">Сервери</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="103"/>
-        <source>Keys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="114"/>
         <source>Connection</source>
-        <translation>Підключення</translation>
+        <translation type="vanished">Підключення</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="125"/>
         <source>Application</source>
-        <translation>Застосунок</translation>
+        <translation type="vanished">Застосунок</translation>
     </message>
     <message>
         <source>Backup</source>
         <translation type="vanished">Резервне копіювання</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
         <source>About VPNNaruzhu</source>
-        <translation>Про VPNNaruzhu</translation>
+        <translation type="vanished">Про VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
-        <source>Support via Telegram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
-        <source>Telegram Group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="70"/>
         <source>Close application</source>
-        <translation>Закрити застосунок</translation>
+        <translation type="vanished">Закрити застосунок</translation>
     </message>
 </context>
 <context>
@@ -2922,11 +2878,6 @@ subscription key</source>
         <translation>Нові встановлені протоколи і сервіси не виявлені</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="92"/>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="131"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="161"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="190"/>
@@ -3102,11 +3053,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="205"/>
         <source>Cannot remove active container</source>
         <translation>Неможливо видалити активний контейнер</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="103"/>
-        <source></source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="193"/>
@@ -3394,7 +3340,8 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="300"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="353"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="399"/>
         <source></source>
         <translation></translation>
     </message>
@@ -3626,16 +3573,6 @@ subscription key</source>
 </context>
 <context>
     <name>PageSetupWizardStart</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="44"/>
-        <source>Open foreign and Russian websites.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="54"/>
-        <source>Log in</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>I have the data to connect</source>
         <translation type="vanished">У мене є дані для підключення</translation>
@@ -4033,24 +3970,12 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="415"/>
-        <source>Cannot sign out with an active connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="418"/>
-        <source>Sign out?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="419"/>
         <source>Continue</source>
-        <translation type="unfinished">Продовжити</translation>
+        <translation type="obsolete">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="420"/>
         <source>Cancel</source>
-        <translation type="unfinished">Відмінити</translation>
+        <translation type="obsolete">Відмінити</translation>
     </message>
 </context>
 <context>
@@ -4697,6 +4622,11 @@ WireGuard дуже чутливий до блокувань через свої 
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="136"/>
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="143"/>
         <source>OpenVPN is one of the most popular and reliable VPN protocols. It uses SSL/TLS encryption, supports a wide variety of devices and operating systems, and is continuously improved by the community due to its open-source nature. It provides a good balance between speed and security but is easily recognized by DPI systems, making it susceptible to blocking.
 
@@ -5283,59 +5213,120 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>VPNNaruzhuPageEmailLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="53"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="21"/>
         <source>Enter your e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="83"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="98"/>
         <source>Continue</source>
         <translation type="unfinished">Продовжити</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="112"/>
         <source>Please, provide an email</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="99"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="119"/>
         <source>Invalid e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="141"/>
+        <source>Please, provide OTP code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="223"/>
+        <source>Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="273"/>
         <source>Cannot connect to Sever</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="149"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="275"/>
         <source>UNKNOWN ERROR: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="305"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="195"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="22"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="196"/>
-        <source>Send</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="197"/>
-        <source>code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="224"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="163"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageHome</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="128"/>
+        <source>Smart Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="150"/>
+        <source>Direct Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="267"/>
+        <source>Sign out?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="268"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продовжити</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="269"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Відмінити</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <source>Left </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <source> days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="302"/>
+        <source>Active until </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="323"/>
+        <source>Get more</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging enabled</source>
+        <translation type="obsolete">Логування увімкнено</translation>
+    </message>
+    <message>
+        <source>VPN protocol</source>
+        <translation type="obsolete">VPN протокол</translation>
     </message>
 </context>
 <context>
@@ -5345,46 +5336,79 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="obsolete">Ключ як файл</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="34"/>
-        <source>Select login method</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="63"/>
-        <source>Login with an e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="45"/>
-        <source>Login with Telegram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="81"/>
-        <source>Login with a key file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="88"/>
         <source>Open key file</source>
-        <translation type="unfinished">Відкрити файл із ключем</translation>
+        <translation type="obsolete">Відкрити файл із ключем</translation>
     </message>
 </context>
 <context>
-    <name>VPNNaruzhuPageSignUp</name>
+    <name>VPNNaruzhuPageSettings</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="34"/>
-        <source>Select sign up way</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="41"/>
+        <source>Settings</source>
+        <translation type="unfinished">Налаштування</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="78"/>
+        <source>Close application</source>
+        <translation type="unfinished">Закрити застосунок</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="109"/>
+        <source>Keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="45"/>
-        <source>Sign up with Telegram</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="119"/>
+        <source>Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
-        <source>Sign up with e-mail</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="129"/>
+        <source>Application</source>
+        <translation type="unfinished">Застосунок</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="139"/>
+        <source>About VPNNaruzhu</source>
+        <translation type="unfinished">Про VPNNaruzhu</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="149"/>
+        <source>Support via Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="160"/>
+        <source>Telegram Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageWelcome</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="42"/>
+        <source>Smart VPN opens everything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="56"/>
+        <source>  •  Hish Speed up to 300 Mb/s
+  •  Up to 10 devices simultaneously
+  •  36 countries to choose
+  •  Guaranteed results
+  •  Responsive support
+  •  Private and secure traffic
+  •  Unlimited</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="75"/>
+        <source>Continue</source>
+        <translation type="unfinished">Продовжити</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="127"/>
+        <source>Telegram</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

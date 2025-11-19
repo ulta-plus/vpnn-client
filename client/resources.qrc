@@ -189,11 +189,10 @@
         <file>ui/qml/Pages2/DummyKey.conf</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageWelcome.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageSignUp.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageSettings.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageHome.qml</file>
         <file>ui/qml/Pages2/PageDeinstalling.qml</file>
         <file>ui/qml/Pages2/PageDevMenu.qml</file>
-        <file>ui/qml/Pages2/PageHome.qml</file>
         <file>ui/qml/Pages2/PageProtocolAwgSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolCloakSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolOpenVpnSettings.qml</file>
@@ -205,7 +204,6 @@
         <file>ui/qml/Pages2/PageServiceSftpSettings.qml</file>
         <file>ui/qml/Pages2/PageServiceSocksProxySettings.qml</file>
         <file>ui/qml/Pages2/PageServiceTorWebsiteSettings.qml</file>
-        <file>ui/qml/Pages2/PageSettings.qml</file>
         <file>ui/qml/Pages2/PageSettingsAbout.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiAvailableCountries.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiServerInfo.qml</file>

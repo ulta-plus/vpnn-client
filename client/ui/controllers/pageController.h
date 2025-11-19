@@ -12,12 +12,12 @@ namespace PageLoader
     Q_NAMESPACE
     enum class PageEnum {
         PageStart = 0,
-        PageHome,
+        VPNNaruzhuPageHome,
         PageShare,
         PageDeinstalling,
 
         PageSettingsServersList,
-        PageSettings,
+        VPNNaruzhuPageSettings,
         PageSettingsServerData,
         PageSettingsServerInfo,
         PageSettingsServerProtocols,
@@ -73,8 +73,6 @@ namespace PageLoader
         PageShareConnection,
 
         VPNNaruzhuPageWelcome,
-        VPNNaruzhuPageLogIn,
-        VPNNaruzhuPageSignUp,
         VPNNaruzhuPageEmailLogIn,
 
         PageDevMenu

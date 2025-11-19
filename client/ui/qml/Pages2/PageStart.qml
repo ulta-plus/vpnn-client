@@ -25,17 +25,17 @@ PageType {
 
         function onGoToPageHome() {
             if (PageController.isStartPageVisible()) {
-                tabBar.visible = false
+                //tabBar.visible = false
                 tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardStart)
             } else {
-                tabBar.visible = true
-                tabBar.setCurrentIndex(0)
-                tabBarStackView.goToTabBarPage(PageEnum.PageHome)
+                //tabBar.visible = true
+                //tabBar.setCurrentIndex(0)
+                tabBarStackView.goToTabBarPage(PageEnum.VPNNaruzhuPageHome)
             }
         }
 
         function onGoToPageSettings() {
-            tabBar.setCurrentIndex(2)
+            //tabBar.setCurrentIndex(2)
             tabBarStackView.goToTabBarPage(PageEnum.PageSettings)
         }
 
@@ -240,10 +240,10 @@ PageType {
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.left: parent.left
-        anchors.bottom: tabBar.top
+        anchors.bottom: parent.bottom //tabBar.top
 
         width: parent.width
-        height: root.height - tabBar.height
+        height: root.height // - tabBar.height
 
         enabled: !root.isControlsDisabled
 
@@ -256,11 +256,11 @@ PageType {
         Component.onCompleted: {
             var pagePath
             if (PageController.isStartPageVisible()) {
-                tabBar.visible = false
+                //tabBar.visible = false
                 pagePath = PageController.getPagePath(PageEnum.VPNNaruzhuPageWelcome)
             } else {
-                tabBar.visible = true
-                pagePath = PageController.getPagePath(PageEnum.PageHome)
+                //tabBar.visible = true
+                pagePath = PageController.getPagePath(PageEnum.VPNNaruzhuPageHome)
                 ServersModel.processedIndex = ServersModel.defaultIndex
             }
 
@@ -286,7 +286,7 @@ PageType {
             }
         }
     }
-
+/*
     TabBar {
         id: tabBar
         objectName: "tabBar"
@@ -312,6 +312,7 @@ PageType {
             height: parent.height
 
             ShapePath {
+                id: p
                 startX: 0
                 startY: 0
 
@@ -333,7 +334,7 @@ PageType {
             isSelected: tabBar.currentIndex === 0
             image: "qrc:/images/controls/home.svg"
             clickedFunc: function () {
-                tabBarStackView.goToTabBarPage(PageEnum.PageHome)
+                tabBarStackView.goToTabBarPage(PageEnum.VPNNaruzhuPageHome)
                 ServersModel.processedIndex = ServersModel.defaultIndex
                 tabBar.currentIndex = 0
             }
@@ -430,6 +431,7 @@ PageType {
             }
         }
     }
+*/
 
     VPNNaruzhuNotification {
         id: notification
@@ -437,6 +439,7 @@ PageType {
         anchors.centerIn: parent
     }
 
+/*
     ConnectionTypeSelectionDrawer {
         id: connectionTypeSelection
 
@@ -445,4 +448,5 @@ PageType {
             tabBar.setCurrentIndex(tabBar.previousIndex)
         }
     }
+*/
 }

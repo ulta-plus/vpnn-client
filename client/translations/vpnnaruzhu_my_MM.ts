@@ -256,6 +256,11 @@
         <translation>%1 ရက်</translation>
     </message>
     <message>
+        <location filename="../ui/models/api/apiServicesModel.cpp" line="111"/>
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/models/api/apiServicesModel.cpp" line="113"/>
         <source>VPN will open only popular sites blocked in your region, such as Instagram, Facebook, Twitter and others. Other sites will be opened from your real IP address, &lt;a href=&quot;%1&quot; style=&quot;color: #FBB26A;&quot;&gt;more details on the website.&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
@@ -714,45 +719,16 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="43"/>
-        <source>You&apos;ve successfully switched to the new Amnezia Premium subscription!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="44"/>
-        <source>Old keys will no longer work. Please use your new subscription key to connect. 
-Thank you for staying with us!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="45"/>
         <source>Continue</source>
-        <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
+        <translation type="obsolete">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="102"/>
         <source>Logging enabled</source>
-        <translation>Logging ဖွင့်ထားပါသည်</translation>
+        <translation type="vanished">Logging ဖွင့်ထားပါသည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="130"/>
-        <source>Subscription valid until</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="131"/>
-        <source>Renew Subscription</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="400"/>
         <source>VPN protocol</source>
-        <translation>VPN ပရိုတိုကော</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageHome.qml" line="453"/>
-        <source>Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">VPN ပရိုတိုကော</translation>
     </message>
     <message>
         <source>Servers</source>
@@ -1686,56 +1662,36 @@ Thank you for staying with us!</source>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="33"/>
         <source>Settings</source>
-        <translation>ဆက်တင်များ</translation>
+        <translation type="vanished">ဆက်တင်များ</translation>
     </message>
     <message>
         <source>Servers</source>
         <translation type="vanished">ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="103"/>
-        <source>Keys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="114"/>
         <source>Connection</source>
-        <translation>ချိတ်ဆက်မှု</translation>
+        <translation type="vanished">ချိတ်ဆက်မှု</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="125"/>
         <source>Application</source>
-        <translation>အပလီကေးရှင်း</translation>
+        <translation type="vanished">အပလီကေးရှင်း</translation>
     </message>
     <message>
         <source>Backup</source>
         <translation type="vanished">backup ယူမည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="147"/>
         <source>About VPNNaruzhu</source>
-        <translation>VPNNaruzhu အကြောင်း</translation>
+        <translation type="vanished">VPNNaruzhu အကြောင်း</translation>
     </message>
     <message>
         <source>Dev console</source>
         <translation type="vanished">ဒက်ဗယ်လော်ပါ console</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="169"/>
-        <source>Support via Telegram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="181"/>
-        <source>Telegram Group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettings.qml" line="70"/>
         <source>Close application</source>
-        <translation>အပလီကေးရှင်းကို ပိတ်မည်</translation>
+        <translation type="vanished">အပလီကေးရှင်းကို ပိတ်မည်</translation>
     </message>
 </context>
 <context>
@@ -2921,11 +2877,6 @@ subscription key</source>
         <translation>အသစ်ထည့်သွင်းထားသော ကွန်တိန်နာများ မတွေ့ရှိပါ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="92"/>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="131"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="161"/>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="190"/>
@@ -3087,11 +3038,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="152"/>
         <source>Clear %1 profile?</source>
         <translation>%1 ပရိုဖိုင်ကို ရှင်းလင်းမည်လား?</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="137"/>
-        <source></source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerProtocol.qml" line="159"/>
@@ -3388,7 +3334,8 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="300"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="353"/>
+        <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="399"/>
         <source></source>
         <translation></translation>
     </message>
@@ -3625,16 +3572,6 @@ subscription key</source>
 </context>
 <context>
     <name>PageSetupWizardStart</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="44"/>
-        <source>Open foreign and Russian websites.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSetupWizardStart.qml" line="54"/>
-        <source>Log in</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>I have the data to connect</source>
         <translation type="vanished">ကျွန်ုပ်တွင်ချိတ်ဆက်ဖို့အတွက်ဒေတာရှိသည်</translation>
@@ -4029,24 +3966,12 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="415"/>
-        <source>Cannot sign out with an active connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="418"/>
-        <source>Sign out?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="419"/>
         <source>Continue</source>
-        <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
+        <translation type="obsolete">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageStart.qml" line="420"/>
         <source>Cancel</source>
-        <translation type="unfinished">ပယ်ဖျက်မည်</translation>
+        <translation type="obsolete">ပယ်ဖျက်မည်</translation>
     </message>
 </context>
 <context>
@@ -4700,6 +4625,11 @@ WireGuard သည် ၎င်း၏ ကွဲပြားသော packet လက
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../containers/containers_defs.cpp" line="136"/>
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../containers/containers_defs.cpp" line="143"/>
         <source>OpenVPN is one of the most popular and reliable VPN protocols. It uses SSL/TLS encryption, supports a wide variety of devices and operating systems, and is continuously improved by the community due to its open-source nature. It provides a good balance between speed and security but is easily recognized by DPI systems, making it susceptible to blocking.
 
@@ -5284,59 +5214,120 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageEmailLogIn</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="53"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="21"/>
         <source>Enter your e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="83"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="98"/>
         <source>Continue</source>
         <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="112"/>
         <source>Please, provide an email</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="99"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="119"/>
         <source>Invalid e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="147"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="141"/>
+        <source>Please, provide OTP code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="223"/>
+        <source>Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="273"/>
         <source>Cannot connect to Sever</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="149"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="275"/>
         <source>UNKNOWN ERROR: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="178"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="305"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="195"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="22"/>
         <source>Enter a code from the e-mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="196"/>
-        <source>Send</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="197"/>
-        <source>code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="224"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="163"/>
         <source>Wrong Dummy Key File</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageHome</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="128"/>
+        <source>Smart Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="150"/>
+        <source>Direct Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
+        <source>Cannot sign out with an active connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="267"/>
+        <source>Sign out?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="268"/>
+        <source>Continue</source>
+        <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="269"/>
+        <source>Cancel</source>
+        <translation type="unfinished">ပယ်ဖျက်မည်</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <source>Left </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <source> days</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="302"/>
+        <source>Active until </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="323"/>
+        <source>Get more</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging enabled</source>
+        <translation type="obsolete">Logging ဖွင့်ထားပါသည်</translation>
+    </message>
+    <message>
+        <source>VPN protocol</source>
+        <translation type="obsolete">VPN ပရိုတိုကော</translation>
     </message>
 </context>
 <context>
@@ -5346,46 +5337,79 @@ For more detailed information, you can
         <translation type="obsolete">ချိတ်ဆက်မှုဆက်တင်များပါဝင်သောဖိုင်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="34"/>
-        <source>Select login method</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="63"/>
-        <source>Login with an e-mail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="45"/>
-        <source>Login with Telegram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="81"/>
-        <source>Login with a key file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageLogIn.qml" line="88"/>
         <source>Open key file</source>
-        <translation type="unfinished">config ဖိုင်ကိုဖွင့်မည်</translation>
+        <translation type="obsolete">config ဖိုင်ကိုဖွင့်မည်</translation>
     </message>
 </context>
 <context>
-    <name>VPNNaruzhuPageSignUp</name>
+    <name>VPNNaruzhuPageSettings</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="34"/>
-        <source>Select sign up way</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="41"/>
+        <source>Settings</source>
+        <translation type="unfinished">ဆက်တင်များ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="78"/>
+        <source>Close application</source>
+        <translation type="unfinished">အပလီကေးရှင်းကို ပိတ်မည်</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="109"/>
+        <source>Keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="45"/>
-        <source>Sign up with Telegram</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="119"/>
+        <source>Connection</source>
+        <translation type="unfinished">ချိတ်ဆက်မှု</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="129"/>
+        <source>Application</source>
+        <translation type="unfinished">အပလီကေးရှင်း</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="139"/>
+        <source>About VPNNaruzhu</source>
+        <translation type="unfinished">VPNNaruzhu အကြောင်း</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="149"/>
+        <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSignUp.qml" line="63"/>
-        <source>Sign up with e-mail</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="160"/>
+        <source>Telegram Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageWelcome</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="42"/>
+        <source>Smart VPN opens everything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="56"/>
+        <source>  •  Hish Speed up to 300 Mb/s
+  •  Up to 10 devices simultaneously
+  •  36 countries to choose
+  •  Guaranteed results
+  •  Responsive support
+  •  Private and secure traffic
+  •  Unlimited</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="75"/>
+        <source>Continue</source>
+        <translation type="unfinished">ဆက်လက်လုပ်ဆောင်မည်</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="127"/>
+        <source>Telegram</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

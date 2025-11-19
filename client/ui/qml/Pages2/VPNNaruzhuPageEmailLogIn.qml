@@ -215,6 +215,7 @@ PageType {
             hoveredColor: 'transparent'
 
             leftIcon: 'qrc:/images/controls/telegram.svg'
+            leftIconColor: '#FFFFFF'
 
             textColor: '#FFFFFF'
             textSize: 14

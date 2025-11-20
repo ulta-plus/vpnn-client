@@ -306,11 +306,12 @@ PageType {
                 border.color: '#DADADA'
                 border.width: 1
 
-                radius: 0
-                topLeftRadius: 10
-                topRightRadius: 10
-                bottomLeftRadius: 0
-                bottomRightRadius: 0
+                radius: 10
+                // radius for the different ange supported from Qt6.7
+                //topLeftRadius: 10
+                //topRightRadius: 10
+                //bottomLeftRadius: 0
+                //bottomRightRadius: 0
             }
         }
 

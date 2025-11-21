@@ -430,7 +430,6 @@ void VpnConnection::appendSplitTunnelingConfig()
 
             auto vpnnRouteMode = static_cast<VpnNaruzhuWebApi::VPNNRouteMode>(
                 m_settings->getVPNNRouteMode());
-            qDebug() << "Route mode " << vpnnRouteMode;
             if (vpnnRouteMode == VpnNaruzhuWebApi::VPNNRouteMode::SMART) {
                 for (const auto &r: excludedRoutes) {
                     sitesJsonArray.append(r);

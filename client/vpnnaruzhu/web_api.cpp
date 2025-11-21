@@ -40,6 +40,14 @@ static QString getStringFromReply(QNetworkReply* reply, const QString &comment)
     return QString();
 }
 
+void VpnNaruzhuWebApi::initSimpleRequest(QNetworkRequest &request,
+    const QString &url) const
+{
+    request.setTransferTimeout(10000);
+    request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
+    request.setUrl(url);
+}
+
 void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     const QString &url) const
 {
@@ -174,4 +182,16 @@ void VpnNaruzhuWebApi::updateSmartRouting(void) const
             }
         }
     }
+}
+
+QString VpnNaruzhuWebApi::getListOfCounties(void) const
+{
+    QString url = getApiBaseUrl()
+            + "/client-api/v1/countries";
+
+    QNetworkRequest request;
+    initSimpleRequest(request, url);
+
+    QNetworkReply* reply = replyGetRequest(request);
+    return getStringFromReply(reply, "getListOfCounties");
 }

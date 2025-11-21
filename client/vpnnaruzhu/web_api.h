@@ -53,6 +53,8 @@ public slots:
     bool isSmartRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::SMART);};
     bool isDirectRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::DIRECT);};
 
+    QString getListOfCounties(void) const;
+
 private:
     VpnNaruzhuWebApi();
 
@@ -80,6 +82,7 @@ private:
         return defAccount.value(config_key::public_request_id).toString();
     }
 
+    void initSimpleRequest(QNetworkRequest &request, const QString &url) const;
     void initRequest(QNetworkRequest &request, const QString &url) const;
     QNetworkReply* replyGetRequest(const QNetworkRequest &request) const;
 };

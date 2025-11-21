@@ -5275,47 +5275,47 @@ For more detailed information, you can
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="261"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="195"/>
         <source>Need help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="368"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="303"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="371"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="306"/>
         <source>Sign out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="372"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="307"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="373"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="308"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="395"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="330"/>
         <source>Left </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="395"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="330"/>
         <source> days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="406"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="341"/>
         <source>Active until </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="427"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="362"/>
         <source>Get more</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5419,7 +5419,7 @@ For more detailed information, you can
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="505"/>
+        <location filename="../vpnconnection.cpp" line="504"/>
         <source>Mbps</source>
         <translation>Mbps</translation>
     </message>

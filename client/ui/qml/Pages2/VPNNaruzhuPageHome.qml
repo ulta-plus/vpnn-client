@@ -170,80 +170,14 @@ PageType {
                 }
             }
 
-            ComboBox {
-                id: countryBox
+            VPNNaruzhuCountryList {
                 Layout.topMargin: 22
                 Layout.preferredHeight: 41
                 Layout.preferredWidth: 216
                 Layout.alignment: Qt.AlignHCenter
 
-                wheelEnabled: true
-
-                model: ListModel {
-                    id: country
-                    ListElement { text: "Banana" }
-                    ListElement { text: "Apple" }
-                    ListElement { text: "Coconut" }
-                }
-
-                background: Rectangle {
-                    color: 'transparent'
-                    border.width: 1
-                    border.color: '#3C3C3C'
-                    radius: 4
-                }
-
-                popup: Popup {
-                    y: countryBox.height
-                    width: countryBox.width
-                    implicitHeight: contentItem.implicitHeight
-
-                    background: Rectangle {
-                        radius: 4
-                        color: '#151515'
-                        border.color: '#3C3C3C'
-                        border.width: 1
-                    }
-
-                    contentItem: ListView {
-                        implicitHeight: contentHeight
-                        model: countryBox.delegateModel
-                        spacing: 8
-                        clip: true
-
-                        currentIndex: countryBox.highlightedIndex
-
-                        ScrollBar.vertical: ScrollBar {
-                            policy: ScrollBar.AlwaysOn
-                            active: ScrollBar.AlwaysOn
-                        }
-                    }
-                }
-
-                delegate: ItemDelegate {
-                    id: delegateItem
-                    width: 168
-
-                    background: Rectangle {
-                        implicitHeight: 32
-                        color: {
-                            if (countryBox.currentIndex === index) {
-                                return '#FFD600'
-                            } else if (delegateItem.hovered) {
-                                return '#FFD600'
-                            } else {
-                                return 'transparent'
-                            }
-                        }
-                        opacity: (delegateItem.hovered) ? '0.5' : 1
-                        radius: 4
-                    }
-
-                    topPadding: 8
-                    bottomPadding: 8
-
-                    text: modelData
-                }
+                height: 41
+                width: 216
             }
 
             ConnectButton {

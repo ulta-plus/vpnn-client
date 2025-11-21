@@ -116,6 +116,7 @@
         <file>server_scripts/xray/start.sh</file>
         <file>server_scripts/xray/template.json</file>
         <file>ui/qml/Components/AdLabel.qml</file>
+        <file>ui/qml/Components/VPNNaruzhuCountryList.qml</file>
         <file>ui/qml/Components/ConnectButton.qml</file>
         <file>ui/qml/Components/ConnectionTypeSelectionDrawer.qml</file>
         <file>ui/qml/Components/HomeContainersListView.qml</file>
@@ -125,7 +126,6 @@
         <file>ui/qml/Components/SelectLanguageDrawer.qml</file>
         <file>ui/qml/Components/ServersListView.qml</file>
         <file>ui/qml/Components/SettingsContainersListView.qml</file>
-
         <file>ui/qml/Components/TransportProtoSelector.qml</file>
         <file>ui/qml/Components/AddSitePanel.qml</file>
         <file>ui/qml/Config/GlobalConfig.qml</file>
@@ -253,6 +253,7 @@
         <file>images/controls/telegramNaruzhu.svg</file>
         <file>images/controls/sign-out.svg</file>
         <file>images/controls/question.svg</file>
+        <file>images/controls/drop-list.svg</file>
         <file>images/connect button/default.svg</file>
         <file>images/connect button/connected.svg</file>
         <file>images/connect button/progress.svg</file>

@@ -184,7 +184,7 @@ void VpnNaruzhuWebApi::updateSmartRouting(void) const
     }
 }
 
-QString VpnNaruzhuWebApi::getListOfCounties(void) const
+QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
 {
     QString url = getApiBaseUrl()
             + "/client-api/v1/countries";
@@ -193,5 +193,5 @@ QString VpnNaruzhuWebApi::getListOfCounties(void) const
     initSimpleRequest(request, url);
 
     QNetworkReply* reply = replyGetRequest(request);
-    return getStringFromReply(reply, "getListOfCounties");
+    return getJsonFromReply(reply, "getListOfCounties");
 }

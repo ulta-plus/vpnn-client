@@ -9,12 +9,7 @@ ComboBox {
 
     wheelEnabled: true
 
-    model: ListModel {
-        id: country
-        ListElement { text: "Banana"; icon: 'qrc:/images/controls/question.svg' }
-        ListElement { text: "Apple"; icon: 'qrc:/images/controls/question.svg' }
-        ListElement { text: "Coconut"; icon: 'qrc:/images/controls/question.svg' }
-    }
+    model: VPNNCountriesModel
 
     indicator: Image {
         anchors.right: parent.right
@@ -52,8 +47,9 @@ ComboBox {
                 Layout.leftMargin: 10
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                text: root.model.get(root.currentIndex).text
+                text: root.model.get(root.currentIndex).name
                 color: '#FFFFFF'
+                font.family: VPNNaruzhuStyle.fontEmoji
 
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignLeft
@@ -64,7 +60,7 @@ ComboBox {
     popup: Popup {
         y: root.height
         width: root.width
-        implicitHeight: contentItem.implicitHeight
+        implicitHeight: 360
 
         background: Rectangle {
             radius: 4
@@ -124,7 +120,7 @@ ComboBox {
             }
 
             Text {
-                text: model.text
+                text: model.name
                 color: {
                     if (root.currentIndex === index) {
                         return '#121212'
@@ -132,6 +128,8 @@ ComboBox {
                         return '#BDBDBD'
                     }
                 }
+                font.family: VPNNaruzhuStyle.fontEmoji
+
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }

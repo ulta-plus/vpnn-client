@@ -380,7 +380,7 @@
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="400"/>
+        <location filename="../core/controllers/coreController.cpp" line="402"/>
         <source>Your account blocked</source>
         <translation>Ваш аккаунт заблокирован</translation>
     </message>

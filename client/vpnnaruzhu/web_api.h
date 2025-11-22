@@ -35,6 +35,7 @@ public:
     QString getDefaultAccountConfig(void) const;
     QJsonDocument getDefaultAccountStatus(void) const;
     QJsonDocument downloadJsonFile(const QString &url) const;
+    QJsonDocument getListOfCounties(void) const;
 
 public slots:
     void updateExternalSettings(void) const;
@@ -52,8 +53,6 @@ public slots:
     VPNNRouteMode getRouteMode(void) const { return static_cast<VPNNRouteMode>(m_settings->getVPNNRouteMode()); }
     bool isSmartRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::SMART);};
     bool isDirectRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::DIRECT);};
-
-    QString getListOfCounties(void) const;
 
 private:
     VpnNaruzhuWebApi();

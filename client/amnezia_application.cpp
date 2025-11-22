@@ -179,6 +179,7 @@ void AmneziaApplication::loadFonts()
     QQuickStyle::setStyle("Basic");
 
     QFontDatabase::addApplicationFont(":/fonts/Inter-VariableFont.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/NotoColorEmoji.ttf");
 }
 
 bool AmneziaApplication::parseCommands()

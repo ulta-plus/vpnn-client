@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>fonts/Inter-VariableFont.ttf</file>
+        <file>fonts/NotoColorEmoji.ttf</file>
         <file>images/controls/alert-circle.svg</file>
         <file>images/controls/amnezia.svg</file>
         <file>images/controls/app.svg</file>

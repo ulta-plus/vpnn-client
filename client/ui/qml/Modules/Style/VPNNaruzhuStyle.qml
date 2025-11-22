@@ -26,4 +26,5 @@ QtObject {
     }
 
     readonly property string font: 'Inter'
+    readonly property string fontEmoji: 'Noto Color Emoji'
 }

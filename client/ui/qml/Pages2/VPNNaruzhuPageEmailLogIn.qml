@@ -133,8 +133,9 @@ PageType {
                         }
                     }
 
+                    const body = '{ "email": "' + root.email +'", "reason": "mobile_request" }'
                     waitingBox.visible = true
-                    http.send()
+                    http.send(body)
                 } else {
                     root.otpCode = input.text.trim()
                     if (root.otpCode == '') {

@@ -27,14 +27,6 @@ QtObject {
         return http
     }
 
-    function getEmailVerificationHTTPRequest(email) {
-        const check_email_api = '/api/v1/auth/request_email_verification?reason=mobile_request&email='
-        const request = check_email_api + email
-
-        var http = createGetRequest(request)
-        return http
-    }
-
     function createPostRequest(request) {
         var http = new XMLHttpRequest()
         http.open('POST', api_url + request)
@@ -47,6 +39,12 @@ QtObject {
         http.setRequestHeader('X-Supported-Awg-Version', awg_version)
         http.setRequestHeader('User-Agent', user_agent)
 
+        return http
+    }
+
+    function getEmailVerificationHTTPRequest() {
+        const check_email_api = '/client-api/v1/request-email-verification'
+        var http = createPostRequest(check_email_api)
         return http
     }
 

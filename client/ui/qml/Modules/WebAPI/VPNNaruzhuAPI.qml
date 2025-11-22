@@ -49,7 +49,7 @@ QtObject {
     }
 
     function getOTPVerificationHTTPRequest() {
-        const verify_otp_api = '/api/v1/mobile_request'
+        const verify_otp_api = '/client-api/v1/check-email-otp'
         var http = createPostRequest(verify_otp_api)
         return http
     }

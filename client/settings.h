@@ -154,14 +154,23 @@ public:
     {
         return value("Conf/apiBaseUrl", "https://mobile.vvppnn.click").toString();
     }
-
     void setApiBaseUrl(const QString &apiBaseUrl)
     {
         setValue("Conf/apiBaseUrl", apiBaseUrl);
     }
-
     void setVPNNRouteMode(int mode) { setValue("Conf/VPNNRouteMode", mode); }
-    int getVPNNRouteMode(void) const { return value("Conf/VPNNRouteMode", 0).toInt(); }
+    int getVPNNRouteMode(void) const
+    {
+        return value("Conf/VPNNRouteMode", 0).toInt();
+    }
+    void setVPNCountry(QString iso_code)
+    {
+        setValue("Conf/VPNCountry", iso_code);
+    }
+    QString getVPNCountry(void) const
+    {
+        return value("Conf/VPNCountry", "ANY").toString();
+    }
 
     QString primaryDns() const;
     QString secondaryDns() const;

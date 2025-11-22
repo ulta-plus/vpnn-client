@@ -15,7 +15,8 @@ public:
     };
 
     explicit VPNNCountriesModel(QObject *parent = nullptr,
-        const QSharedPointer<VpnNaruzhuWebApi> &web_api = nullptr);
+        const QSharedPointer<VpnNaruzhuWebApi> &web_api = nullptr,
+        const std::shared_ptr<Settings> &s = nullptr);
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_PROPERTY(int currentIndex READ getCurrentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
@@ -23,11 +24,7 @@ public:
 
 public slots:
     int getCurrentIndex(void) const { return currentIndex; }
-    void setCurrentIndex(const int i)
-    {
-        currentIndex = i;
-        emit currentIndexChanged(currentIndex);
-    }
+    void setCurrentIndex(int i);
 
 signals:
     void currentIndexChanged(const int index);
@@ -46,6 +43,7 @@ private:
     QVector<CountryEntry> countriesList;
     QVector<QVariantMap> countriesMap;
     QSharedPointer<VpnNaruzhuWebApi> webApi;
+    std::shared_ptr<Settings> settings;
 };
 
 #endif /* _VPNN_COUNTRIES_MODEL_H */

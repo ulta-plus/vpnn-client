@@ -1,34 +1,32 @@
 #include "countriesModel.h"
 
-static QString
-flagFromISO(QString &iso_code)
-{
-    QString code = iso_code.toUpper();
-    if (code.length() != 2)
-            return QString();
-
-    const char16_t base = 0x1F1E6;
-    const char16_t flag[2] = {
-        base + (code[0].unicode() - 'A'),
-        base + (code[1].unicode() - 'A')
-    };
-
-    return QString::fromRawData(flag, std::size(flag));
-}
-
 VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
-        const QSharedPointer<VpnNaruzhuWebApi> &web_api)
-    : QAbstractListModel(parent), webApi(web_api)
+        const QSharedPointer<VpnNaruzhuWebApi> &web_api,
+        const std::shared_ptr<Settings> &s)
+    : QAbstractListModel(parent), webApi(web_api), settings(s)
 {
     QJsonDocument json_doc = webApi->getListOfCounties();
     QJsonArray countriesArray = json_doc["data"]["countries"].toArray();
+
+    CountryEntry entry;
+    entry.name = "Любая страна";
+    entry.iso = "ANY";
+    entry.icon = "qrc:/countriesFlags/images/flagKit/" + entry.iso +".svg";
+    countriesList.push_back(entry);
+    QVariantMap map;
+    map.insert("name", entry.name);
+    map.insert("icon", entry.icon);
+    countriesMap.push_back(map);
+
+    QString cachedVPNCountry = settings->getVPNCountry();
     for (const auto &elem: countriesArray) {
         QJsonObject country = elem.toObject();
-        CountryEntry entry;
-        entry.name = country["country_label"].toString();
-        entry.icon = "qrc:/images/controls/question.svg";
+        entry.name = country["country_label"].toString().split(" ")[1];
         entry.iso = country["iso_country_code"].toString();
-        entry.name = entry.iso + " " +  entry.name;
+        if (entry.iso == cachedVPNCountry) {
+            currentIndex = countriesMap.size();
+        }
+        entry.icon = "qrc:/countriesFlags/images/flagKit/" + entry.iso +".svg";
         countriesList.push_back(entry);
         QVariantMap map;
         map.insert("name", entry.name);
@@ -74,4 +72,13 @@ VPNNCountriesModel::roleNames() const
     roles[NameRole] = "name";
     roles[IconRole] = "icon";
     return roles;
+}
+
+void
+VPNNCountriesModel::setCurrentIndex(int i)
+{
+    currentIndex = i;
+    QString iso_name = countriesList[i].iso;
+    settings->setVPNCountry(iso_name);
+    emit currentIndexChanged(currentIndex);
 }

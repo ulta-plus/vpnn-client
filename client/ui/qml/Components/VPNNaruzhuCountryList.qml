@@ -11,6 +11,11 @@ ComboBox {
 
     model: VPNNCountriesModel
 
+    currentIndex: model.currentIndex
+    onActivated: {
+        model.currentIndex = root.currentIndex
+    }
+
     indicator: Image {
         anchors.right: parent.right
         anchors.rightMargin : 12.5
@@ -39,7 +44,8 @@ ComboBox {
             Image {
                 Layout.leftMargin: 12
                 Layout.alignment: Qt.AlignLeft
-                Layout.fillWidth: false
+                width: 20
+                height: 20
                 source: root.model.get(root.currentIndex).icon
             }
 
@@ -49,7 +55,10 @@ ComboBox {
                 Layout.fillHeight: true
                 text: root.model.get(root.currentIndex).name
                 color: '#FFFFFF'
-                font.family: VPNNaruzhuStyle.fontEmoji
+                font.family: VPNNaruzhuStyle.font
+                font.weight: Font.Bold
+                font.letterSpacing: 14 * (-0.05)
+                font.pixelSize: 14
 
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignLeft
@@ -128,7 +137,9 @@ ComboBox {
                         return '#BDBDBD'
                     }
                 }
-                font.family: VPNNaruzhuStyle.fontEmoji
+                font.family: VPNNaruzhuStyle.font
+                font.weight: Font.Medium
+                font.pixelSize: 16
 
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter

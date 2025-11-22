@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>fonts/Inter-VariableFont.ttf</file>
-        <file>fonts/NotoColorEmoji.ttf</file>
         <file>images/controls/alert-circle.svg</file>
         <file>images/controls/amnezia.svg</file>
         <file>images/controls/app.svg</file>
@@ -265,6 +264,7 @@
         <file>ui/qml/Pages2/PageSettingsApiSubscriptionKey.qml</file>
     </qresource>
     <qresource prefix="/countriesFlags">
+        <file>images/flagKit/ANY.svg</file>
         <file>images/flagKit/ZW.svg</file>
         <file>images/flagKit/ZM.svg</file>
         <file>images/flagKit/ZA.svg</file>

@@ -20,7 +20,7 @@ QtObject {
     }
 
     function getRequestKeyHTTP(public_request_id) {
-        const request_key_api = '/api/v1/wg_keys/download_mobile_request_key?public_request_id='
+        const request_key_api = '/client-api/v1/download-awg-key?public_request_id='
         const request = request_key_api + public_request_id
 
         var http = createGetRequest(request)

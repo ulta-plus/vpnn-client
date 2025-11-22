@@ -102,7 +102,7 @@ void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
 QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
 {
     QString url = getApiBaseUrl()
-            + "/api/v1/wg_keys/download_mobile_request_key?public_request_id="
+            + "/client-api/v1/download-awg-key?public_request_id="
             + getPublicRequestId();
 
     QNetworkRequest request;

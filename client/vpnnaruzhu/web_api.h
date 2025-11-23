@@ -82,7 +82,8 @@ private:
     }
 
     void initSimpleRequest(QNetworkRequest &request, const QString &url) const;
-    void initRequest(QNetworkRequest &request, const QString &url) const;
+    void initRequest(QNetworkRequest &request, const QString &url,
+        bool with_content_type = true) const;
     QNetworkReply* replyGetRequest(const QNetworkRequest &request) const;
 };
 

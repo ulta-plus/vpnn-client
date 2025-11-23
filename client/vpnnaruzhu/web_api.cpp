@@ -22,6 +22,8 @@ static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comme
         }
     } else {
         qDebug() << "Reply failed: " << comment;
+        qDebug() << reply->readAll();
+        reply->deleteLater();
     }
 
     return QJsonDocument();
@@ -49,10 +51,12 @@ void VpnNaruzhuWebApi::initSimpleRequest(QNetworkRequest &request,
 }
 
 void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
-    const QString &url) const
+    const QString &url, bool with_content_type) const
 {
     request.setTransferTimeout(10000);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    if (with_content_type) {
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    }
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
@@ -75,11 +79,11 @@ QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(const QNetworkRequest &request)
 QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
 {
     QString url = getApiBaseUrl()
-                + "/api/v1/mobile_request?public_request_id="
+                + "/client-api/v1/get-request?public_request_id="
                 + getPublicRequestId();
 
     QNetworkRequest request;
-    initRequest(request, url);
+    initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
     return getJsonFromReply(reply, "getDefaultAccountStatus");

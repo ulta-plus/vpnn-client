@@ -434,7 +434,6 @@ void VpnConnection::appendSplitTunnelingConfig()
                 for (const auto &r: excludedRoutes) {
                     sitesJsonArray.append(r);
                 }
-                qDebug() << sitesJsonArray;
             }
 
             if (sitesJsonArray.isEmpty()) {

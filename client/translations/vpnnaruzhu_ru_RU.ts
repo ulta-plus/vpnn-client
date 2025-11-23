@@ -5136,7 +5136,7 @@ For more detailed information, you can
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="504"/>
+        <location filename="../vpnconnection.cpp" line="503"/>
         <source>Mbps</source>
         <translation>Мбит/с</translation>
     </message>

@@ -5292,7 +5292,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 <context>
     <name>VpnConnection</name>
     <message>
-        <location filename="../vpnconnection.cpp" line="504"/>
+        <location filename="../vpnconnection.cpp" line="503"/>
         <source>Mbps</source>
         <translation>ایم بی پی ایس</translation>
     </message>

@@ -5289,38 +5289,37 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished">समायोजन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="78"/>
         <source>Close application</source>
-        <translation type="unfinished">एप्लिकेशन बंद करो</translation>
+        <translation type="obsolete">एप्लिकेशन बंद करो</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="109"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="82"/>
         <source>Keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="119"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="92"/>
         <source>Connection</source>
         <translation type="unfinished">कनेक्शन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="129"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="102"/>
         <source>Application</source>
         <translation type="unfinished">एप्लिकेशन</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="139"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="112"/>
         <source>About VPNNaruzhu</source>
         <translation type="unfinished">VPNNaruzhu के बारे में</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="149"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
         <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="160"/>
-        <source>Telegram Group</source>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="133"/>
+        <source>Telegram Channel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

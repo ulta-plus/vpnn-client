@@ -65,33 +65,6 @@ PageType {
                 visible: isVisible
             }
         }
-
-        footer: ColumnLayout {
-            width: listView.width
-
-            LabelWithButtonType {
-                id: close
-
-                visible: GC.isDesktop()
-                Layout.fillWidth: true
-
-                text: qsTr("Close application")
-                leftImageSource: "qrc:/images/controls/x-circle.svg"
-                isLeftImageHoverEnabled: false
-
-                clickedFunction: function() {
-                    PageController.closeApplication()
-                }
-            }
-
-            DividerType {
-                Layout.fillWidth: true
-                Layout.leftMargin: 16
-                Layout.rightMargin: 16
-
-                visible: GC.isDesktop()
-            }
-        }
     }
 
     property list<QtObject> settingsEntries: [
@@ -157,11 +130,11 @@ PageType {
     QtObject {
         id: telegrammGroup
 
-        property string title: qsTr("Telegram Group")
+        property string title: qsTr("Telegram Channel")
         readonly property string leftImagePath: "qrc:/images/controls/chat.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
-            Qt.openUrlExternally("https://t.me/vpn_naruzhu")
+            Qt.openUrlExternally("https://t.me/vpnnaruzhu")
         }
     }
 }

@@ -294,26 +294,12 @@ PageType {
     }
 
     function getKeyFile() {
-        var http = VPNNaruzhuAPI.getRequestKeyHTTP(root.public_request_id)
-
-        http.onreadystatechange = function() {
-            if(http.readyState === XMLHttpRequest.DONE) {
-                if (http.status == 200) {
-                    if (ImportController.extractDefaultAccountConfig(root.email, http.responseText, root.account_status)) {
-                        ImportController.importConfig()
-                    } else {
-                        waitingBox.visible = false
-                        showError(qsTr('Wrong Key File'))
-                    }
-                } else {
-                    waitingBox.visible = false
-                    print('Cannot download file')
-                    print(http.responseText.toString())
-                    showHTTPError(http)
-                }
-            }
+        var key = VPNNWebApi.getDefaultAccountConfig(root.public_request_id)
+        if (ImportController.extractDefaultAccountConfig(root.email, key, root.account_status)) {
+            ImportController.importConfig()
+        } else {
+            waitingBox.visible = false
+            showError(qsTr('Wrong Key File'))
         }
-
-        http.send()
     }
 }

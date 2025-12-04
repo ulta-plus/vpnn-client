@@ -4969,7 +4969,7 @@ For more detailed information, you can
         <translation>Неизвестная ошибка: </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="306"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="325"/>
         <source>Wrong Key File</source>
         <translation>Получен неправильный ключ</translation>
     </message>

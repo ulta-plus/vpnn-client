@@ -6,7 +6,8 @@
 #include <QJsonDocument>
 #include <QNetworkRequest>
 
-static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comment)
+static QJsonDocument getJsonFromReply(QNetworkReply* reply,
+    const QString &comment)
 {
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray r = reply->readAll();
@@ -37,6 +38,8 @@ static QString getStringFromReply(QNetworkReply* reply, const QString &comment)
         return str;
     } else {
         qDebug() << "Reply failed: " << comment;
+        qDebug() << reply->readAll();
+        reply->deleteLater();
     }
 
     return QString();
@@ -51,11 +54,12 @@ void VpnNaruzhuWebApi::initSimpleRequest(QNetworkRequest &request,
 }
 
 void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
-    const QString &url, bool with_content_type) const
+    const QString &url, bool is_json) const
 {
     request.setTransferTimeout(10000);
-    if (with_content_type) {
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    if (is_json) {
+        request.setHeader(QNetworkRequest::ContentTypeHeader,
+            "application/json");
     }
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
@@ -64,7 +68,8 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     request.setUrl(url);
 }
 
-QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(const QNetworkRequest &request) const
+QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(
+    const QNetworkRequest &request) const
 {
     QNetworkReply *reply;
     reply = amnApp->networkManager()->get(request);
@@ -103,14 +108,24 @@ void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
     }
 }
 
-QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
+QString VpnNaruzhuWebApi::getDefaultAccountConfig(
+    QString public_request_id) const
 {
     QString url = getApiBaseUrl()
-            + "/client-api/v1/download-awg-key?public_request_id="
-            + getPublicRequestId();
+            + "/client-api/v1/download-awg-key?public_request_id=";
+    if (public_request_id.isEmpty()) {
+        url += getPublicRequestId();
+    } else {
+        url += public_request_id;
+    }
+
+    QString iso = m_settings->getVPNCountry();
+    if (iso != "ANY") {
+        url += "&iso_country_code=" + iso;
+    }
 
     QNetworkRequest request;
-    initRequest(request, url);
+    initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
     return getStringFromReply(reply, "getDefaultAccountConfig");

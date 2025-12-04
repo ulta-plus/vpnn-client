@@ -32,7 +32,6 @@ public:
             m_engine->rootContext()->objectForName("ImportController");
     }
 
-    QString getDefaultAccountConfig(void) const;
     QJsonDocument getDefaultAccountStatus(void) const;
     QJsonDocument downloadJsonFile(const QString &url) const;
     QJsonDocument getListOfCounties(void) const;
@@ -45,8 +44,8 @@ public slots:
 
     QString getUserAgent(void) const { return user_agent; }
     QString getAwgVersion(void) const { return awg_version; }
-
     QString getAppVersion(void) const { return APP_VERSION; }
+    QString getDefaultAccountConfig(QString public_request_id = QString()) const;
 
     void setSmartRouteMode(void) const { m_settings->setVPNNRouteMode(VPNNRouteMode::SMART); }
     void setDirectRouteMode(void) const { m_settings->setVPNNRouteMode(VPNNRouteMode::DIRECT); }
@@ -83,7 +82,7 @@ private:
 
     void initSimpleRequest(QNetworkRequest &request, const QString &url) const;
     void initRequest(QNetworkRequest &request, const QString &url,
-        bool with_content_type = true) const;
+        bool is_json = true) const;
     QNetworkReply* replyGetRequest(const QNetworkRequest &request) const;
 };
 

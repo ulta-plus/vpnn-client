@@ -74,21 +74,6 @@ PageType {
             DividerType {}
 
             LabelWithButtonType {
-                id: dnsServersButton
-
-                Layout.fillWidth: true
-
-                text: qsTr("DNS servers")
-                rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsDns)
-                }
-            }
-
-            DividerType {}
-
-            LabelWithButtonType {
                 id: killSwitchButton
                 visible: !GC.isMobile()
 

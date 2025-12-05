@@ -5245,17 +5245,16 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
         <source>DNS servers</source>
-        <translation type="unfinished">ڈی این ایس سرور</translation>
+        <translation type="obsolete">ڈی این ایس سرور</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="82"/>
         <source>KillSwitch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="83"/>
         <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
     </message>

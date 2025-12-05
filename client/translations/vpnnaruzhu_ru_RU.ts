@@ -5068,17 +5068,12 @@ For more detailed information, you can
         <translation>Параметры</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
-        <source>DNS servers</source>
-        <translation>DNS-серверы</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="82"/>
         <source>KillSwitch</source>
         <translation>KillSwitch</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="83"/>
         <source>Blocks network connections without VPN</source>
         <translation>Блокирует интернет-соединение без VPN</translation>
     </message>

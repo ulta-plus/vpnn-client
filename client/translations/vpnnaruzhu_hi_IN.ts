@@ -5326,17 +5326,16 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
         <source>DNS servers</source>
-        <translation type="unfinished">DNS सर्वर</translation>
+        <translation type="obsolete">DNS सर्वर</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="82"/>
         <source>KillSwitch</source>
         <translation type="unfinished">स्विच बन्द कर दो</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="83"/>
         <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
     </message>

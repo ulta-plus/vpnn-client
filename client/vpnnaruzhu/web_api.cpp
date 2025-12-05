@@ -183,6 +183,12 @@ void VpnNaruzhuWebApi::updateExternalSettings(void) const
             m_settings->setSecondaryDns(dns2);
         }
 
+        QString support_link = config["supportLink"].toString();
+        qDebug() << support_link;
+        if (support_link != "") {
+            m_settings->setSupportLink(support_link);
+        }
+
         QJsonDocument connections_config = QJsonDocument(
             config["connections"].toArray());
         connectionMode->updateConfig(connections_config);

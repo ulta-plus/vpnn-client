@@ -151,7 +151,7 @@ PageType {
 
                     onClicked: {
                         GC.coppyUUIDToClipBoard()
-                        Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
+                        Qt.openUrlExternally(VPNNWebApi.getSupportLink())
                     }
                 }
             }

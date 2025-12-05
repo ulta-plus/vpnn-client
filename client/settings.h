@@ -158,18 +158,29 @@ public:
     {
         setValue("Conf/apiBaseUrl", apiBaseUrl);
     }
-    void setVPNNRouteMode(int mode) { setValue("Conf/VPNNRouteMode", mode); }
+    void setVPNNRouteMode(int mode)
+    {
+        setValue("Conf/VPNNRouteMode", mode);
+    }
     int getVPNNRouteMode(void) const
     {
         return value("Conf/VPNNRouteMode", 0).toInt();
     }
-    void setVPNCountry(QString iso_code)
+    void setVPNCountry(const QString &iso_code)
     {
         setValue("Conf/VPNCountry", iso_code);
     }
     QString getVPNCountry(void) const
     {
         return value("Conf/VPNCountry", "ANY").toString();
+    }
+    void setSupportLink(const QString &support_link)
+    {
+        setValue("Conf/VpnnSupportLink", support_link);
+    }
+    QString getSupportLink(void) const
+    {
+        return value("Conf/VpnnSupportLink", "https://t.me/vpn_naruzhu_support_bot").toString();
     }
 
     QString primaryDns() const;

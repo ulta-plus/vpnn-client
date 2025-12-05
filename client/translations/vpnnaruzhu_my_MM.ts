@@ -5391,17 +5391,16 @@ For more detailed information, you can
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
         <source>DNS servers</source>
-        <translation type="unfinished">DNS ဆာဗာများ</translation>
+        <translation type="obsolete">DNS ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="82"/>
         <source>KillSwitch</source>
         <translation type="unfinished">KillSwitch</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="83"/>
         <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
     </message>

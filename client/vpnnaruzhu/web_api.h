@@ -54,6 +54,7 @@ public slots:
     QString getAwgVersion(void) const { return awg_version; }
     QString getAppVersion(void) const { return APP_VERSION; }
     QString getDefaultAccountConfig(QString public_request_id = QString()) const;
+    QString getSupportLink(void) const { return m_settings->getSupportLink(); }
 
 private:
     VpnNaruzhuWebApi();

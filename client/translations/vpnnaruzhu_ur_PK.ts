@@ -2453,24 +2453,12 @@ subscription key</source>
 <context>
     <name>PageSettingsConnection</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="49"/>
         <source>Connection</source>
-        <translation>کنکشن</translation>
+        <translation type="vanished">کنکشن</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="85"/>
         <source>DNS servers</source>
-        <translation>ڈی این ایس سرور</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="143"/>
-        <source>KillSwitch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="144"/>
-        <source>Blocks network connections without VPN</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">ڈی این ایس سرور</translation>
     </message>
 </context>
 <context>
@@ -5219,33 +5207,56 @@ This means that AmneziaWG keeps the fast performance of the original while addin
         <translation type="obsolete">براہ کرم ایپلیکیشن بند کریں</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="82"/>
-        <source>Keys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="81"/>
         <source>Connection</source>
         <translation type="unfinished">کنکشن</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="102"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="91"/>
         <source>Application</source>
         <translation type="unfinished">ایپلیکیشن</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="101"/>
         <source>About VPNNaruzhu</source>
         <translation type="unfinished">VPNNaruzhu کے بارے میں</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="111"/>
         <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="133"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
         <source>Telegram Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageSettingsConnection</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="49"/>
+        <source>Connection</source>
+        <translation type="unfinished">کنکشن</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="66"/>
+        <source>Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
+        <source>DNS servers</source>
+        <translation type="unfinished">ڈی این ایس سرور</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <source>KillSwitch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

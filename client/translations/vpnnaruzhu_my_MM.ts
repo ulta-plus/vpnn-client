@@ -2520,24 +2520,16 @@ subscription key</source>
 <context>
     <name>PageSettingsConnection</name>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="49"/>
         <source>Connection</source>
-        <translation>ချိတ်ဆက်မှု</translation>
+        <translation type="vanished">ချိတ်ဆက်မှု</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="85"/>
         <source>DNS servers</source>
-        <translation>DNS ဆာဗာများ</translation>
+        <translation type="vanished">DNS ဆာဗာများ</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="143"/>
         <source>KillSwitch</source>
-        <translation>KillSwitch</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="144"/>
-        <source>Blocks network connections without VPN</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">KillSwitch</translation>
     </message>
     <message>
         <source>Disables your internet if your encrypted VPN connection drops out for any reason.</source>
@@ -5361,33 +5353,56 @@ For more detailed information, you can
         <translation type="obsolete">အပလီကေးရှင်းကို ပိတ်မည်</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="82"/>
-        <source>Keys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="81"/>
         <source>Connection</source>
         <translation type="unfinished">ချိတ်ဆက်မှု</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="102"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="91"/>
         <source>Application</source>
         <translation type="unfinished">အပလီကေးရှင်း</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="101"/>
         <source>About VPNNaruzhu</source>
         <translation type="unfinished">VPNNaruzhu အကြောင်း</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="111"/>
         <source>Support via Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="133"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
         <source>Telegram Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageSettingsConnection</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="49"/>
+        <source>Connection</source>
+        <translation type="unfinished">ချိတ်ဆက်မှု</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="66"/>
+        <source>Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
+        <source>DNS servers</source>
+        <translation type="unfinished">DNS ဆာဗာများ</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <source>KillSwitch</source>
+        <translation type="unfinished">KillSwitch</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <source>Blocks network connections without VPN</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

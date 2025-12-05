@@ -56,24 +56,6 @@ PageType {
 
             width: listView.width
 
-        /* issue_13: amneziaDnsSwitch
-            SwitcherType {
-                id: amneziaDnsSwitch
-
-                Layout.fillWidth: true
-                Layout.margins: 16
-
-                text: qsTr("Use AmneziaDNS")
-                descriptionText: qsTr("If AmneziaDNS is installed on the server")
-
-                checked: SettingsController.isAmneziaDnsEnabled()
-                onCheckedChanged: {
-                    if (checked !== SettingsController.isAmneziaDnsEnabled()) {
-                        SettingsController.toggleAmneziaDns(checked)
-                    }
-                }
-            }
-        */
             DividerType {}
 
             LabelWithButtonType {
@@ -81,11 +63,11 @@ PageType {
 
                 Layout.fillWidth: true
 
-                text: qsTr("Connection parameters")
+                text: qsTr("Parameters")
                 rightImageSource: "qrc:/images/controls/chevron-right.svg"
 
                 clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsServerProtocols)
+                    PageController.goToPage(PageEnum.VPNNaruzhuPageSettingsServerProtocols)
                 }
             }
 
@@ -103,48 +85,6 @@ PageType {
                     PageController.goToPage(PageEnum.PageSettingsDns)
                 }
             }
-
-        /*
-            DividerType {}
-
-            LabelWithButtonType {
-                id: splitTunnelingButton
-
-                Layout.fillWidth: true
-
-                text: qsTr("Site-based split tunneling")
-                descriptionText: qsTr("Allows you to select which sites you want to access through the VPN")
-                rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsSplitTunneling)
-                }
-            }
-
-            DividerType {}
-
-        }
-
-        footer: ColumnLayout { // TODO(CyAn84): move to delegate,add DelegateChooser when have migrated to 6.9
-
-            width: listView.width
-
-            LabelWithButtonType {
-                id: splitTunnelingButton2
-
-                visible: root.isAppSplitTinnelingEnabled
-
-                Layout.fillWidth: true
-
-                text: qsTr("App-based split tunneling")
-                descriptionText: qsTr("Allows you to use the VPN only for certain Apps")
-                rightImageSource: "qrc:/images/controls/chevron-right.svg"
-
-                clickedFunction: function() {
-                    PageController.goToPage(PageEnum.PageSettingsAppSplitTunneling)
-                }
-            }
-        */
 
             DividerType {}
 

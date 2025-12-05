@@ -68,7 +68,6 @@ PageType {
     }
 
     property list<QtObject> settingsEntries: [
-        servers,
         connection,
         application,
         about,
@@ -77,23 +76,13 @@ PageType {
     ]
 
     QtObject {
-        id: servers
-
-        property string title: qsTr("Keys")
-        readonly property string leftImagePath: "qrc:/images/controls/server.svg"
-        property bool isVisible: true
-        readonly property var clickedHandler: function() {
-            PageController.goToPage(PageEnum.PageSettingsServersList)
-        }
-    }
-    QtObject {
         id: connection
 
         property string title: qsTr("Connection")
         readonly property string leftImagePath: "qrc:/images/controls/radio.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
-            PageController.goToPage(PageEnum.PageSettingsConnection)
+            PageController.goToPage(PageEnum.VPNNaruzhuPageSettingsConnection)
         }
     }
     QtObject {

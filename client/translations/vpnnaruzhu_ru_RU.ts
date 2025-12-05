@@ -2381,29 +2381,6 @@ subscription key</source>
     </message>
 </context>
 <context>
-    <name>PageSettingsConnection</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="49"/>
-        <source>Connection</source>
-        <translation>Соединение</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="85"/>
-        <source>DNS servers</source>
-        <translation>DNS-серверы</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="143"/>
-        <source>KillSwitch</source>
-        <translation>KillSwitch</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsConnection.qml" line="144"/>
-        <source>Blocks network connections without VPN</source>
-        <translation>Блокирует интернет-соединение без VPN</translation>
-    </message>
-</context>
-<context>
     <name>PageSettingsDns</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="46"/>
@@ -5005,14 +4982,6 @@ For more detailed information, you can
         <translation>Продолжить</translation>
     </message>
     <message>
-        <source>Smart Mode</source>
-        <translation type="vanished">Умный режим</translation>
-    </message>
-    <message>
-        <source>Direct Mode</source>
-        <translation type="vanished">Напрямую</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="129"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
@@ -5061,34 +5030,57 @@ For more detailed information, you can
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="82"/>
-        <source>Keys</source>
-        <translation>Ключи</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="92"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="81"/>
         <source>Connection</source>
         <translation>Соединение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="102"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="91"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="112"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="101"/>
         <source>About VPNNaruzhu</source>
         <translation>О VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="111"/>
         <source>Support via Telegram</source>
         <translation>Поддержка в Телеграм</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="133"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
         <source>Telegram Channel</source>
         <translation>Телеграм Канал</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNaruzhuPageSettingsConnection</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="49"/>
+        <source>Connection</source>
+        <translation>Соединение</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="66"/>
+        <source>Parameters</source>
+        <translation>Параметры</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="81"/>
+        <source>DNS servers</source>
+        <translation>DNS-серверы</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="97"/>
+        <source>KillSwitch</source>
+        <translation>KillSwitch</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml" line="98"/>
+        <source>Blocks network connections without VPN</source>
+        <translation>Блокирует интернет-соединение без VPN</translation>
     </message>
 </context>
 <context>

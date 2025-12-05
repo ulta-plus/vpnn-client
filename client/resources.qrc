@@ -192,6 +192,8 @@
         <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageSettings.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageHome.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageDeinstalling.qml</file>
         <file>ui/qml/Pages2/PageDevMenu.qml</file>
         <file>ui/qml/Pages2/PageProtocolAwgSettings.qml</file>
@@ -211,7 +213,6 @@
         <file>ui/qml/Pages2/PageSettingsApplication.qml</file>
         <file>ui/qml/Pages2/PageSettingsAppSplitTunneling.qml</file>
         <file>ui/qml/Pages2/PageSettingsBackup.qml</file>
-        <file>ui/qml/Pages2/PageSettingsConnection.qml</file>
         <file>ui/qml/Pages2/PageSettingsDns.qml</file>
         <file>ui/qml/Pages2/PageSettingsKillSwitch.qml</file>
         <file>ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml</file>
@@ -219,7 +220,6 @@
         <file>ui/qml/Pages2/PageSettingsServerData.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerInfo.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerProtocol.qml</file>
-        <file>ui/qml/Pages2/PageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerServices.qml</file>
         <file>ui/qml/Pages2/PageSettingsServersList.qml</file>
         <file>ui/qml/Pages2/PageSettingsSplitTunneling.qml</file>

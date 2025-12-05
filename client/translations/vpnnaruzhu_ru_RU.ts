@@ -380,7 +380,7 @@
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="402"/>
+        <location filename="../core/controllers/coreController.cpp" line="408"/>
         <source>Your account blocked</source>
         <translation>Ваш аккаунт заблокирован</translation>
     </message>
@@ -4901,6 +4901,19 @@ For more detailed information, you can
     </message>
 </context>
 <context>
+    <name>VPNNConnectionMode</name>
+    <message>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="48"/>
+        <source>Smart Mode</source>
+        <translation>Умный режим</translation>
+    </message>
+    <message>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="67"/>
+        <source>Direct Mode</source>
+        <translation>Напрямую</translation>
+    </message>
+</context>
+<context>
     <name>VPNNaruzhuNotification</name>
     <message>
         <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
@@ -4969,7 +4982,7 @@ For more detailed information, you can
         <translation>Неизвестная ошибка: </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="325"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="302"/>
         <source>Wrong Key File</source>
         <translation>Получен неправильный ключ</translation>
     </message>
@@ -4987,57 +5000,55 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="307"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="241"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="129"/>
         <source>Smart Mode</source>
-        <translation>Умный режим</translation>
+        <translation type="vanished">Умный режим</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="154"/>
         <source>Direct Mode</source>
-        <translation>Напрямую</translation>
+        <translation type="vanished">Напрямую</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="195"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="129"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="303"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="237"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="306"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="240"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="308"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="242"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="330"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
         <source>Left </source>
         <translation>Осталось </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="330"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
         <source> days</source>
         <translation> дней</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="275"/>
         <source>Active until </source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="362"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="296"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>

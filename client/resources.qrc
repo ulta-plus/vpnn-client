@@ -117,6 +117,7 @@
         <file>server_scripts/xray/template.json</file>
         <file>ui/qml/Components/AdLabel.qml</file>
         <file>ui/qml/Components/VPNNaruzhuCountryList.qml</file>
+        <file>ui/qml/Components/VPNNaruzhuConnectionModeSwitcher.qml</file>
         <file>ui/qml/Components/ConnectButton.qml</file>
         <file>ui/qml/Components/ConnectionTypeSelectionDrawer.qml</file>
         <file>ui/qml/Components/HomeContainersListView.qml</file>

@@ -175,6 +175,16 @@ void VpnNaruzhuWebApi::updateExternalSettings(void) const
         if (dns2 != "") {
             m_settings->setSecondaryDns(dns2);
         }
+
+        QJsonDocument connections_config = QJsonDocument(
+            config["connections"].toArray());
+        connectionMode->updateConfig(connections_config);
+        uint64_t numbeOfModes = connectionMode->getNumberOfModes();
+        if (numbeOfModes == 1) {
+            // if new config contains only 1 Mode, needs to update settings
+            VPNNRouteMode mode = connectionMode->getActiveRouteMode();
+            connectionMode->setRouteMode(mode);
+        }
     }
 }
 

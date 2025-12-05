@@ -411,7 +411,7 @@
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="402"/>
+        <location filename="../core/controllers/coreController.cpp" line="408"/>
         <source>Your account blocked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5171,6 +5171,19 @@ For more detailed information, you can
     </message>
 </context>
 <context>
+    <name>VPNNConnectionMode</name>
+    <message>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="48"/>
+        <source>Smart Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="67"/>
+        <source>Direct Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>VPNNaruzhuNotification</name>
     <message>
         <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
@@ -5249,7 +5262,7 @@ For more detailed information, you can
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="325"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml" line="302"/>
         <source>Wrong Key File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5266,56 +5279,46 @@ For more detailed information, you can
     </message>
     <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="129"/>
-        <source>Smart Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="154"/>
-        <source>Direct Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="195"/>
         <source>Need help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="303"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="237"/>
         <source>Cannot sign out with an active connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="306"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="240"/>
         <source>Sign out?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="307"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="241"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="308"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="242"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="330"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
         <source>Left </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="330"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="264"/>
         <source> days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="341"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="275"/>
         <source>Active until </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="362"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="296"/>
         <source>Get more</source>
         <translation type="unfinished"></translation>
     </message>

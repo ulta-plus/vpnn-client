@@ -11,6 +11,8 @@
 #include "version.h"
 #include "settings.h"
 #include "vpnconnection.h"
+#include "connectionMode.h"
+#include "ui/models/languageModel.h"
 #include "ui/models/servers_model.h"
 #include "ui/controllers/importController.h"
 
@@ -19,17 +21,23 @@ class VpnNaruzhuWebApi: public QObject
     Q_OBJECT
 
 public:
-    enum VPNNRouteMode { SMART = 0, DIRECT = 1 };
-
     VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
         const QSharedPointer<ServersModel> &sm,
         const QSharedPointer<VpnConnection> &vpnc,
-        QQmlApplicationEngine* engine)
+        QQmlApplicationEngine* engine,
+        QSharedPointer<LanguageModel> &lm)
             : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
-                m_engine(engine)
+                m_engine(engine), m_languageModel(lm)
     {
         m_importController = (ImportController*)
             m_engine->rootContext()->objectForName("ImportController");
+
+        connectionMode.reset(new VPNNConnectionMode(s, s->getAppLanguage()));
+        m_engine->rootContext()->setContextProperty("VPNNConnectionMode",
+            connectionMode.get());
+        connect(m_languageModel.get(), &LanguageModel::updateTranslations,
+            connectionMode.get(), &VPNNConnectionMode::setLocale);
+        updateExternalSettings();
     }
 
     QJsonDocument getDefaultAccountStatus(void) const;
@@ -47,12 +55,6 @@ public slots:
     QString getAppVersion(void) const { return APP_VERSION; }
     QString getDefaultAccountConfig(QString public_request_id = QString()) const;
 
-    void setSmartRouteMode(void) const { m_settings->setVPNNRouteMode(VPNNRouteMode::SMART); }
-    void setDirectRouteMode(void) const { m_settings->setVPNNRouteMode(VPNNRouteMode::DIRECT); }
-    VPNNRouteMode getRouteMode(void) const { return static_cast<VPNNRouteMode>(m_settings->getVPNNRouteMode()); }
-    bool isSmartRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::SMART);};
-    bool isDirectRouteMode(void) const { return (getRouteMode() == VPNNRouteMode::DIRECT);};
-
 private:
     VpnNaruzhuWebApi();
 
@@ -61,6 +63,8 @@ private:
     QSharedPointer<VpnConnection> m_vpnConnection;
     QQmlApplicationEngine* m_engine;
     ImportController* m_importController;
+    QSharedPointer<LanguageModel> m_languageModel;
+    QSharedPointer<VPNNConnectionMode> connectionMode;
 
     const QString awg_version = "1.5";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;

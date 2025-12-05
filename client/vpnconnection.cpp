@@ -428,9 +428,9 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(site);
             }
 
-            auto vpnnRouteMode = static_cast<VpnNaruzhuWebApi::VPNNRouteMode>(
+            auto vpnnRouteMode = static_cast<VPNNRouteMode>(
                 m_settings->getVPNNRouteMode());
-            if (vpnnRouteMode == VpnNaruzhuWebApi::VPNNRouteMode::SMART) {
+            if (vpnnRouteMode == VPNNRouteMode::SMART) {
                 for (const auto &r: excludedRoutes) {
                     sitesJsonArray.append(r);
                 }

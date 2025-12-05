@@ -43,6 +43,7 @@ set(HEADERS ${HEADERS}
 set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/countriesModel.h
+    ${CLIENT_ROOT_DIR}/vpnnaruzhu/connectionMode.h
 )
 
 if(NOT IOS AND NOT MACOS_NE)
@@ -91,6 +92,7 @@ set(SOURCES ${SOURCES}
 set(SOURCES ${SOURCES}
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.cpp
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/countriesModel.cpp
+    ${CLIENT_ROOT_DIR}/vpnnaruzhu/connectionMode.cpp
 )
 
 # Mozilla sources

@@ -97,77 +97,11 @@ PageType {
                 Layout.leftMargin: 16
             }
 
-            Rectangle {
+            VPNNaruzhuConnectionModeSwitcher {
                 Layout.topMargin: 23
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
                 Layout.alignment: Qt.AlignTop
-                implicitWidth: 343
-                implicitHeight: 49
-
-                radius: 6
-                color: 'transparent'
-                border.width: 1
-                border.color: '#242424'
-
-                RowLayout {
-                    id: modePannel
-                    anchors.centerIn: parent
-                    property var activeButtonColor: '#FFFFFF'
-                    property var activeTextColor: '#000000'
-                    property var inactiveButtonColor: 'transparent'
-                    property var inactiveTextColor: '#BDBDBD'
-
-                    VPNNaruzhuButton {
-                        id: smartMode
-
-                        radius: 4
-                        implicitWidth: 165.5
-                        implicitHeight: 41
-
-                        Layout.alignment: Qt.AlignRight
-                        mainText: qsTr('Smart Mode')
-
-                        defaultColor: VPNNWebApi.isSmartRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
-                        hoveredColor: VPNNWebApi.isSmartRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
-                        textColor: VPNNWebApi.isSmartRouteMode() ? modePannel.activeTextColor : modePannel.inactiveTextColor
-                        onClicked: {
-                            smartMode.defaultColor = modePannel.activeButtonColor
-                            smartMode.hoveredColor = smartMode.defaultColor
-                            smartMode.textColor = modePannel.activeTextColor
-                            directMode.defaultColor = modePannel.inactiveButtonColor
-                            directMode.textColor = modePannel.inactiveTextColor
-                            directMode.hoveredColor = directMode.defaultColor
-
-                            VPNNWebApi.setSmartRouteMode()
-                        }
-                    }
-
-                    VPNNaruzhuButton {
-                        id: directMode
-
-                        radius: 4
-                        implicitWidth: 165.5
-                        implicitHeight: 41
-
-                        Layout.alignment: Qt.AlignLeft
-                        mainText: qsTr('Direct Mode')
-
-                        defaultColor: VPNNWebApi.isDirectRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
-                        hoveredColor: VPNNWebApi.isDirectRouteMode() ? modePannel.activeButtonColor : modePannel.inactiveButtonColor
-                        textColor: VPNNWebApi.isDirectRouteMode() ? modePannel.activeTextColor : modePannel.inactiveTextColor
-                        onClicked: {
-                            smartMode.defaultColor = modePannel.inactiveButtonColor
-                            smartMode.hoveredColor = smartMode.defaultColor
-                            smartMode.textColor = modePannel.inactiveTextColor
-                            directMode.defaultColor = modePannel.activeButtonColor
-                            directMode.textColor = modePannel.activeTextColor
-                            directMode.hoveredColor = directMode.defaultColor
-
-                            VPNNWebApi.setDirectRouteMode()
-                        }
-                    }
-                }
             }
 
             VPNNaruzhuCountryList {

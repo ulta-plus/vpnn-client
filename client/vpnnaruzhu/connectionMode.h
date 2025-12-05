@@ -18,13 +18,12 @@ public:
         ,const QLocale &l) : m_settings(s), locale(l.name()) {}
     void updateConfig(const QJsonDocument &new_config) { config = new_config; }
     VPNNRouteMode getActiveRouteMode(void) const;
+    QString getActiveRouteModeRelativePath(void) const;
 
 public slots:
     uint64_t getNumberOfModes(void) const;
     QString getSmartModeTitle(void) const;
-    QString getSmartModeRelativePath(void) const;
     QString getDirectModeTitle(void) const;
-    QString getDirectModeRelativePath(void) const;
 
     void setLocale(const QLocale &l) { locale = l.name(); }
 
@@ -39,6 +38,9 @@ private:
 
     std::shared_ptr<Settings> m_settings;
     QString locale;
+
+    QString getSmartModeRelativePath(void) const;
+    QString getDirectModeRelativePath(void) const;
 };
 
 #endif /* _VPNNARUZHU_CONNECTION_MODE_H */

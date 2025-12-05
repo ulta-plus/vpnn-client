@@ -23,6 +23,18 @@ VPNNRouteMode VPNNConnectionMode::getActiveRouteMode(void) const
     }
 }
 
+QString VPNNConnectionMode::getActiveRouteModeRelativePath(void) const
+{
+    switch (static_cast<VPNNRouteMode>(m_settings->getVPNNRouteMode())) {
+    case VPNNRouteMode::SMART:
+        return getSmartModeRelativePath();
+    case VPNNRouteMode::DIRECT:
+        return getDirectModeRelativePath();
+    default:
+        return "/client-api/v1/download-awg-key";
+    }
+}
+
 static QJsonObject getConnectionDescriptor(const QJsonDocument &json_doc,
     const QString &type)
 {

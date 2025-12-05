@@ -5173,12 +5173,12 @@ For more detailed information, you can
 <context>
     <name>VPNNConnectionMode</name>
     <message>
-        <location filename="../vpnnaruzhu/connectionMode.cpp" line="48"/>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="60"/>
         <source>Smart Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../vpnnaruzhu/connectionMode.cpp" line="67"/>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="79"/>
         <source>Direct Mode</source>
         <translation type="unfinished"></translation>
     </message>

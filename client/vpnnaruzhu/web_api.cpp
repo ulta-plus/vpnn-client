@@ -112,7 +112,14 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(
     QString public_request_id) const
 {
     QString url = getApiBaseUrl()
-            + "/client-api/v1/download-awg-key?public_request_id=";
+            + "/"
+            + connectionMode->getActiveRouteModeRelativePath();
+    if (url.contains('?')) {
+        url += "&";
+    } else {
+        url += "?";
+    }
+    url += "public_request_id=";
     if (public_request_id.isEmpty()) {
         url += getPublicRequestId();
     } else {

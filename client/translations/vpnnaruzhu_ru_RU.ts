@@ -250,10 +250,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>VPN will open only popular sites blocked in your region, such as Instagram, Facebook, Twitter and others. Other sites will be opened from your real IP address, &lt;a href=&quot;%1/free&quot; style=&quot;color: #FBB26A;&quot;&gt;more details on the website.&lt;/a&gt;</source>
-        <translation type="vanished">Через VPN  будут открываться только популярные сайты, заблокированные в вашем регионе, такие как Instagram, Facebook, Twitter и другие. Остальные сайты будут открываться с вашего реального IP-адреса, &lt;a href=&quot;%1/free&quot; style=&quot;color: #FBB26A;&quot;&gt;подробности на сайте.&lt;/a&gt;</translation>
-    </message>
-    <message>
         <location filename="../ui/models/api/apiServicesModel.cpp" line="121"/>
         <source>Free</source>
         <translation>Бесплатно</translation>
@@ -916,10 +912,6 @@ Already installed containers were found on the server. All installed containers 
 <context>
     <name>PageProtocolOpenVpnSettings</name>
     <message>
-        <source>OpenVPN settings</source>
-        <translation type="vanished">Настройки OpenVPN</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageProtocolOpenVpnSettings.qml" line="55"/>
         <source>OpenVPN Settings</source>
         <translation type="unfinished"></translation>
@@ -1146,10 +1138,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>Все пользователи, с которыми вы поделились конфигурацией вашего VPN, больше не смогут к нему подключаться.</translation>
     </message>
     <message>
-        <source>All users who you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="obsolete">Все пользователи, с которыми вы поделились этим VPN-протоколом, больше не смогут к нему подключаться.</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageProtocolRaw.qml" line="184"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
@@ -1356,13 +1344,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageProtocolXraySettings.qml" line="137"/>
         <source>Unable change settings while there is an active connection</source>
         <translation>Невозможно изменить настройки во время активного соединения</translation>
-    </message>
-</context>
-<context>
-    <name>PageServerContainers</name>
-    <message>
-        <source>Continue</source>
-        <translation type="obsolete">Продолжить</translation>
     </message>
 </context>
 <context>
@@ -1579,98 +1560,6 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageServiceTorWebsiteSettings.qml" line="124"/>
         <source>When configuring WordPress set the this onion address as domain.</source>
         <translation>При настройке WordPress укажите этот onion-адрес в качестве домена.</translation>
-    </message>
-</context>
-<context>
-    <name>PageSettingsAbout</name>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="189"/>
-        <source>Telegram group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="190"/>
-        <source>To discuss features</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/amnezia_vpn_en</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
-        <source>support@amnezia.org</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="201"/>
-        <source>For reviews and bug reports</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copied</source>
-        <translation type="obsolete">Скопировано</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
-        <source>mailto:support@amnezia.org</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="211"/>
-        <source>GitHub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="212"/>
-        <source>Discover the source code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="215"/>
-        <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="222"/>
-        <source>Website</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="223"/>
-        <source>Visit official website</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="61"/>
-        <source>Support Amnezia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="76"/>
-        <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="86"/>
-        <source>Contacts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="119"/>
-        <source>Software version: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="149"/>
-        <source>Check for updates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="170"/>
-        <source>Privacy Policy</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2235,10 +2124,6 @@ subscription key</source>
         <translation>Запускать в свернутом виде</translation>
     </message>
     <message>
-        <source>Launch application minimized</source>
-        <translation type="vanished">Запускать приложение в свернутом виде</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="182"/>
         <source>Language</source>
         <translation>Язык</translation>
@@ -2257,18 +2142,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="155"/>
         <source>Launch application minimized (works with autostart option turned on)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Logging</source>
-        <translation type="vanished">Логирование</translation>
-    </message>
-    <message>
-        <source>Enabled</source>
-        <translation type="vanished">Включено</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation type="vanished">Отключено</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="214"/>
@@ -2411,26 +2284,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="131"/>
         <source>Current Key Secondary DNS</source>
         <translation>Запасной DNS текущего ключа</translation>
-    </message>
-    <message>
-        <source>Restore default</source>
-        <translation type="vanished">Восстановить по умолчанию</translation>
-    </message>
-    <message>
-        <source>Restore default DNS settings?</source>
-        <translation type="vanished">Восстановить настройки DNS по умолчанию?</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продолжить</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">Отменить</translation>
-    </message>
-    <message>
-        <source>Settings have been reset</source>
-        <translation type="vanished">Настройки сброшены</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsDns.qml" line="182"/>
@@ -2767,25 +2620,9 @@ subscription key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Do you want to remove the server from application?</source>
-        <translation type="vanished">Вы уверены, что хотите удалить сервер из приложения?</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="166"/>
         <source>Cannot remove server during active connection</source>
         <translation>Невозможно удалить сервер во время активного соединения</translation>
-    </message>
-    <message>
-        <source>Do you want to clear server from Amnezia software?</source>
-        <translation type="vanished">Вы хотите очистить сервер от всех сервисов Amnezia?</translation>
-    </message>
-    <message>
-        <source>All users whom you shared a connection with will no longer be able to connect to it.</source>
-        <translation type="vanished">Все пользователи, с которыми вы поделились конфигурацией вашего VPN, больше не смогут к нему подключаться.</translation>
-    </message>
-    <message>
-        <source>Cannot clear server from Amnezia software during active connection</source>
-        <translation type="vanished">Невозможно очистить сервер от сервисов Amnezia во время активного соединения</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="213"/>
@@ -2806,14 +2643,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="155"/>
         <source>Remove server from application</source>
         <translation>Удалить сервер из приложения</translation>
-    </message>
-    <message>
-        <source>All installed VPNNaruzhu services will still remain on the server.</source>
-        <translation type="vanished">Все установленные сервисы и протоколы Amnezia всё ещё останутся на сервере.</translation>
-    </message>
-    <message>
-        <source>Clear server from Amnezia software</source>
-        <translation type="vanished">Очистить сервер от протоколов и сервисов Amnezia</translation>
     </message>
 </context>
 <context>
@@ -2957,10 +2786,6 @@ subscription key</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <source>Import / Export Sites</source>
-        <translation type="vanished">Импорт/экспорт сайтов</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSettingsSplitTunneling.qml" line="66"/>
         <source>Only the sites listed here will be accessed through the VPN</source>
         <translation>Только адреса из списка должны открываться через VPN</translation>
@@ -3093,41 +2918,9 @@ subscription key</source>
         <translation>Выберите что у вас есть</translation>
     </message>
     <message>
-        <source>Settings</source>
-        <translation type="obsolete">Настройки</translation>
-    </message>
-    <message>
-        <source>Connection</source>
-        <translation type="obsolete">Соединение</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="168"/>
         <source>Add new key</source>
         <translation>Добавить новый ключ</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">Сохранить</translation>
-    </message>
-    <message>
-        <source>Logs files (*.log)</source>
-        <translation type="obsolete">Файлы логов (*.log)</translation>
-    </message>
-    <message>
-        <source>Logs file saved</source>
-        <translation type="obsolete">Файл с логами сохранен</translation>
-    </message>
-    <message>
-        <source>Copied</source>
-        <translation type="obsolete">Скопировано</translation>
-    </message>
-    <message>
-        <source>Insert</source>
-        <translation type="obsolete">Вставить</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="obsolete">Продолжить</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="359"/>
@@ -3140,26 +2933,10 @@ subscription key</source>
         <translation>Ключ в виде текста</translation>
     </message>
     <message>
-        <source>VPN by Amnezia</source>
-        <translation type="obsolete">VPN от Amnezia</translation>
-    </message>
-    <message>
-        <source>Restore from backup</source>
-        <translation type="obsolete">Восстановить из резервной копии</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="353"/>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="399"/>
         <source></source>
         <translation></translation>
-    </message>
-    <message>
-        <source>Open backup file</source>
-        <translation type="obsolete">Открыть резервную копию</translation>
-    </message>
-    <message>
-        <source>Backup files (*.backup)</source>
-        <translation type="obsolete">Файлы резервных копий (*.backup)</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardConfigSource.qml" line="352"/>
@@ -3446,38 +3223,6 @@ subscription key</source>
         <translation>Конфигурация отозвана</translation>
     </message>
     <message>
-        <source>Connection to </source>
-        <translation type="vanished">Подключение к </translation>
-    </message>
-    <message>
-        <source>File with connection settings to </source>
-        <translation type="vanished">Файл с настройками подключения к </translation>
-    </message>
-    <message>
-        <source>Save OpenVPN config</source>
-        <translation type="vanished">Сохранить конфигурацию OpenVPN</translation>
-    </message>
-    <message>
-        <source>Save WireGuard config</source>
-        <translation type="vanished">Сохранить конфигурацию WireGuard</translation>
-    </message>
-    <message>
-        <source>Save AmneziaWG config</source>
-        <translation type="vanished">Сохранить конфигурацию AmneziaWG</translation>
-    </message>
-    <message>
-        <source>Save Shadowsocks config</source>
-        <translation type="vanished">Сохранить конфигурацию Shadowsocks</translation>
-    </message>
-    <message>
-        <source>Save Cloak config</source>
-        <translation type="vanished">Сохранить конфигурацию Cloak</translation>
-    </message>
-    <message>
-        <source>Save XRay config</source>
-        <translation type="vanished">Сохранить конфигурацию XRay</translation>
-    </message>
-    <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="98"/>
         <source>For the VPNNaruzhu app</source>
         <translation>Для VPNNaruzhu</translation>
@@ -3719,14 +3464,6 @@ subscription key</source>
         <source>Access error!</source>
         <translation type="unfinished">Ошибка доступа!</translation>
     </message>
-    <message>
-        <source>Connection to </source>
-        <translation type="vanished">Подключение к </translation>
-    </message>
-    <message>
-        <source>File with connection settings to </source>
-        <translation type="vanished">Файл с настройками подключения к </translation>
-    </message>
 </context>
 <context>
     <name>PageStart</name>
@@ -3744,22 +3481,6 @@ subscription key</source>
         <location filename="../ui/qml/Pages2/PageStart.qml" line="197"/>
         <source>Logging is enabled. Note that logs will be automaticallydisabled after 14 days, and all log files will be deleted.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot sign out with an active connection</source>
-        <translation type="vanished">Нельзя выйти при активном соединении</translation>
-    </message>
-    <message>
-        <source>Sign out?</source>
-        <translation type="vanished">Выйти из акаунта?</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation type="vanished">Продолжить</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="vanished">Отменить</translation>
     </message>
 </context>
 <context>
@@ -4474,22 +4195,6 @@ Features:
         <translation>Замените текущий DNS-сервер на свой собственный. Это повысит уровень вашей конфиденциальности.</translation>
     </message>
     <message>
-        <source>Shadowsocks, inspired by the SOCKS5 protocol, safeguards the connection using the AEAD cipher. Although Shadowsocks is designed to be discreet and challenging to identify, it isn&apos;t identical to a standard HTTPS connection.However, certain traffic analysis systems might still detect a Shadowsocks connection. Due to limited support in Amnezia, it&apos;s recommended to use AmneziaWG protocol.
-
-* Available in the VPNNaruzhu only on desktop platforms
-* Normal power consumption on mobile devices
-
-* Configurable encryption protocol
-* Detectable by some DPI systems
-* Works over TCP network protocol.</source>
-        <translation type="vanished">Shadowsocks создан на основе протокола SOCKS5, защищает соединение с помощью шифра AEAD. Несмотря на то, что протокол Shadowsocks разработан таким образом, чтобы быть незаметным и сложным для идентификации, он не идентичен стандартному HTTPS-соединению. Поэтому некоторые системы анализа трафика всё же могут обнаружить соединение Shadowsocks. В связи с ограниченной поддержкой в Amnezia рекомендуется использовать протокол AmneziaWG.
-
-* Доступен в VPNNaruzhu только для ПК и ноутбуков
-* Настраиваемый протокол шифрования
-* Распознается некоторыми системами DPI-анализа
-* Работает по сетевому протоколу TCP</translation>
-    </message>
-    <message>
         <location filename="../containers/containers_defs.cpp" line="224"/>
         <source>After installation, Amnezia will create a
 
@@ -4767,37 +4472,6 @@ For more detailed information, you can
         <location filename="../ui/controllers/settingsController.cpp" line="180"/>
         <source>Backup file is corrupted</source>
         <translation>Файл резервной копии поврежден</translation>
-    </message>
-</context>
-<context>
-    <name>ShareConnectionDrawer</name>
-    <message>
-        <source>Save VPNNaruzhu config</source>
-        <translation type="vanished">Сохранить config VPNNaruzhu</translation>
-    </message>
-    <message>
-        <source>Share</source>
-        <translation type="vanished">Поделиться</translation>
-    </message>
-    <message>
-        <source>Copy</source>
-        <translation type="vanished">Скопировать</translation>
-    </message>
-    <message>
-        <source>Copied</source>
-        <translation type="vanished">Скопировано</translation>
-    </message>
-    <message>
-        <source>Copy config string</source>
-        <translation type="vanished">Скопировать строку конфигурации</translation>
-    </message>
-    <message>
-        <source>Show connection settings</source>
-        <translation type="vanished">Показать настройки подключения</translation>
-    </message>
-    <message>
-        <source>To read the QR code in the Amnezia app, select &quot;Add server&quot; → &quot;I have data to connect&quot; → &quot;QR code, key or settings file&quot;</source>
-        <translation type="vanished">Для считывания QR-кода в приложении Amnezia выберите &quot;Добавить сервер&quot; → &quot;У меня есть данные для подключения&quot; → &quot;Открыть файл конфигурации, ключ или QR-код&quot;</translation>
     </message>
 </context>
 <context>

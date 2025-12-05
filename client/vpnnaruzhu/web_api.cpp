@@ -184,7 +184,6 @@ void VpnNaruzhuWebApi::updateExternalSettings(void) const
         }
 
         QString support_link = config["supportLink"].toString();
-        qDebug() << support_link;
         if (support_link != "") {
             m_settings->setSupportLink(support_link);
         }

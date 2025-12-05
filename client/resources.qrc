@@ -207,7 +207,6 @@
         <file>ui/qml/Pages2/PageServiceSftpSettings.qml</file>
         <file>ui/qml/Pages2/PageServiceSocksProxySettings.qml</file>
         <file>ui/qml/Pages2/PageServiceTorWebsiteSettings.qml</file>
-        <file>ui/qml/Pages2/PageSettingsAbout.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiAvailableCountries.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiServerInfo.qml</file>
         <file>ui/qml/Pages2/PageSettingsApplication.qml</file>

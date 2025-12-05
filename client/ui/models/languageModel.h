@@ -12,6 +12,7 @@ namespace LanguageSettings
     enum class AvailableLanguageEnum {
         Russian,
         English,
+    /* Naruzhu supports only: Russian, English
         China_cn,
         Ukrainian,
         Persian,
@@ -19,6 +20,7 @@ namespace LanguageSettings
         Burmese,
         Urdu,
         Hindi
+    */
     };
     Q_ENUM_NS(AvailableLanguageEnum)
 

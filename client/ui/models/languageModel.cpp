@@ -41,6 +41,7 @@ QString LanguageModel::getLocalLanguageName(const LanguageSettings::AvailableLan
     switch (language) {
     case LanguageSettings::AvailableLanguageEnum::English: strLanguage = "English"; break;
     case LanguageSettings::AvailableLanguageEnum::Russian: strLanguage = "Русский"; break;
+    /* Naruzhu supports only: Russian, English
     case LanguageSettings::AvailableLanguageEnum::Ukrainian: strLanguage = "Українська"; break;
     case LanguageSettings::AvailableLanguageEnum::China_cn: strLanguage = "\347\256\200\344\275\223\344\270\255\346\226\207"; break;
     case LanguageSettings::AvailableLanguageEnum::Persian: strLanguage = "فارسی"; break;
@@ -48,6 +49,7 @@ QString LanguageModel::getLocalLanguageName(const LanguageSettings::AvailableLan
     case LanguageSettings::AvailableLanguageEnum::Burmese: strLanguage = "မြန်မာဘာသာ"; break;
     case LanguageSettings::AvailableLanguageEnum::Urdu: strLanguage = "اُرْدُوْ"; break;
     case LanguageSettings::AvailableLanguageEnum::Hindi: strLanguage = "हिन्दी"; break;
+    */
     default: break;
     }
 
@@ -59,6 +61,7 @@ void LanguageModel::changeLanguage(const LanguageSettings::AvailableLanguageEnum
     switch (language) {
     case LanguageSettings::AvailableLanguageEnum::English: emit updateTranslations(QLocale::English); break;
     case LanguageSettings::AvailableLanguageEnum::Russian: emit updateTranslations(QLocale::Russian); break;
+    /* Naruzhu supports only: Russian, English
     case LanguageSettings::AvailableLanguageEnum::China_cn: emit updateTranslations(QLocale::Chinese); break;
     case LanguageSettings::AvailableLanguageEnum::Ukrainian: emit updateTranslations(QLocale::Ukrainian); break;
     case LanguageSettings::AvailableLanguageEnum::Persian: emit updateTranslations(QLocale::Persian); break;
@@ -66,6 +69,7 @@ void LanguageModel::changeLanguage(const LanguageSettings::AvailableLanguageEnum
     case LanguageSettings::AvailableLanguageEnum::Burmese: emit updateTranslations(QLocale::Burmese); break;
     case LanguageSettings::AvailableLanguageEnum::Urdu: emit updateTranslations(QLocale::Urdu); break;
     case LanguageSettings::AvailableLanguageEnum::Hindi: emit updateTranslations(QLocale::Hindi); break;
+    */
     default: emit updateTranslations(QLocale::Russian); break;
     }
 }
@@ -77,6 +81,7 @@ int LanguageModel::getCurrentLanguageIndex()
     case QLocale::UnitedStates:
     case QLocale::English: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::English); break;
     case QLocale::Russian: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Russian); break;
+    /* Naruzhu supports only: Russian, English
     case QLocale::Chinese: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::China_cn); break;
     case QLocale::Ukrainian: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Ukrainian); break;
     case QLocale::Persian: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Persian); break;
@@ -84,6 +89,7 @@ int LanguageModel::getCurrentLanguageIndex()
     case QLocale::Burmese: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Burmese); break;
     case QLocale::Urdu: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Urdu); break;
     case QLocale::Hindi: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Hindi); break;
+    */
     default: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Russian); break;
     }
 }
@@ -92,7 +98,9 @@ int LanguageModel::getLineHeightAppend()
 {
     auto language = static_cast<LanguageSettings::AvailableLanguageEnum>(getCurrentLanguageIndex());
     switch (language) {
+    /* Naruzhu supports only: Russian, English
     case LanguageSettings::AvailableLanguageEnum::Burmese: return 10; break;
+    */
     default: return 0; break;
     }
 }
@@ -107,6 +115,7 @@ LanguageSettings::AvailableLanguageEnum LanguageModel::getSystemLanguageEnum()
     QLocale locale = QLocale::system();
     switch (locale.language()) {
     case QLocale::Russian: return LanguageSettings::AvailableLanguageEnum::Russian;
+    /* Naruzhu supports only: Russian, English
     case QLocale::Chinese: return LanguageSettings::AvailableLanguageEnum::China_cn;
     case QLocale::Ukrainian: return LanguageSettings::AvailableLanguageEnum::Ukrainian;
     case QLocale::Persian: return LanguageSettings::AvailableLanguageEnum::Persian;
@@ -114,6 +123,7 @@ LanguageSettings::AvailableLanguageEnum LanguageModel::getSystemLanguageEnum()
     case QLocale::Burmese: return LanguageSettings::AvailableLanguageEnum::Burmese;
     case QLocale::Urdu: return LanguageSettings::AvailableLanguageEnum::Urdu;
     case QLocale::Hindi: return LanguageSettings::AvailableLanguageEnum::Hindi;
+    */
     case QLocale::English: return LanguageSettings::AvailableLanguageEnum::English;
     default: return LanguageSettings::AvailableLanguageEnum::English;
     }

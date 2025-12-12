@@ -6,6 +6,8 @@
 #include <QJsonDocument>
 #include <QNetworkRequest>
 
+#include <filesystem>
+
 static QJsonDocument getJsonFromReply(QNetworkReply* reply,
     const QString &comment)
 {
@@ -153,6 +155,20 @@ void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
     }
 }
 
+void VpnNaruzhuWebApi::downloadFile(const QString &url, QFile &file) const
+{
+    QNetworkRequest request;
+    request.setTransferTimeout(10000);
+    request.setUrl(url);
+
+    QNetworkReply *reply = replyGetRequest(request);
+    file.open(QFile::WriteOnly);
+    file.write(reply->readAll());
+    file.flush();
+    file.close();
+    reply->deleteLater();
+}
+
 QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
 {
     QNetworkRequest request;
@@ -235,4 +251,56 @@ QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
 
     QNetworkReply* reply = replyGetRequest(request);
     return getJsonFromReply(reply, "getListOfCounties");
+}
+
+bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
+{
+    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    if (config.isEmpty()) {
+        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+    } else {
+        QString external_version = config["updateInfo"]["availableVersion"].toString();
+        QVersionNumber new_version = QVersionNumber::fromString(external_version);
+        QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
+        if (new_version > cur_version) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+QString VpnNaruzhuWebApi::downloadNewApp(void) const
+{
+    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    std::filesystem::path new_path;
+    if (config.isEmpty()) {
+        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+    } else {
+        QTemporaryFile temp_file;
+        temp_file.setAutoRemove(false);
+        if (temp_file.open()) {
+            new_path = std::filesystem::path(temp_file.fileName().toStdString());
+            new_path.replace_filename(new_path.filename().string() + ".exe");
+            temp_file.rename(new_path.string().c_str());
+        }
+
+        QString link = config["updateInfo"]["downloadUrl"].toString();
+        downloadFile(link, temp_file);
+        temp_file.flush();
+        temp_file.close();
+    }
+
+    return new_path.string().c_str();
+}
+
+void VpnNaruzhuWebApi::downloadAndInstallNewApp(void) const
+{
+    QString path = downloadNewApp();
+    installNewApp(path);
+}
+
+void VpnNaruzhuWebApi::installNewApp(QString &path) const
+{
+    QProcess::startDetached(path);
 }

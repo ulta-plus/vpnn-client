@@ -44,17 +44,22 @@ public:
     QJsonDocument downloadJsonFile(const QString &url) const;
     QJsonDocument getListOfCounties(void) const;
 
+    void downloadFile(const QString &url, QFile &file) const;
+
 public slots:
     void updateExternalSettings(void) const;
     void updateSmartRouting(void) const;
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
+    void downloadAndInstallNewApp(void) const;
 
     QString getUserAgent(void) const { return user_agent; }
     QString getAwgVersion(void) const { return awg_version; }
     QString getAppVersion(void) const { return APP_VERSION; }
     QString getDefaultAccountConfig(QString public_request_id = QString()) const;
     QString getSupportLink(void) const { return m_settings->getSupportLink(); }
+
+    bool isNewVersionAvailable(void) const;
 
 private:
     VpnNaruzhuWebApi();
@@ -89,6 +94,9 @@ private:
     void initRequest(QNetworkRequest &request, const QString &url,
         bool is_json = true) const;
     QNetworkReply* replyGetRequest(const QNetworkRequest &request) const;
+
+    QString downloadNewApp(void) const;
+    void installNewApp(QString &path) const;
 };
 
 #endif /* _VPNNARUZHU_WEB_API_H */

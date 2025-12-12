@@ -4554,12 +4554,12 @@ For more detailed information, you can
 <context>
     <name>VPNNConnectionMode</name>
     <message>
-        <location filename="../vpnnaruzhu/connectionMode.cpp" line="60"/>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="64"/>
         <source>Smart Mode</source>
         <translation>Умный режим</translation>
     </message>
     <message>
-        <location filename="../vpnnaruzhu/connectionMode.cpp" line="79"/>
+        <location filename="../vpnnaruzhu/connectionMode.cpp" line="87"/>
         <source>Direct Mode</source>
         <translation>Напрямую</translation>
     </message>
@@ -4867,12 +4867,32 @@ For more detailed information, you can
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="202"/>
+        <location filename="../ui/qml/main2.qml" line="71"/>
+        <source>Do you want to update VPNNaruzhu?</source>
+        <translation>Хотите обновить приложение?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="72"/>
+        <source>There is a new VPNNaruzhu version</source>
+        <translation>Есть новая верия VPNNaruzhu</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="73"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="74"/>
+        <source>No</source>
+        <translation>Нет</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/main2.qml" line="214"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="223"/>
+        <location filename="../ui/qml/main2.qml" line="235"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

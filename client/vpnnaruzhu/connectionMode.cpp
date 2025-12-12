@@ -53,6 +53,10 @@ static QJsonObject getConnectionDescriptor(const QJsonDocument &json_doc,
 QString VPNNConnectionMode::getSmartModeTitle(void) const
 {
     QJsonObject desc = getConnectionDescriptor(config, "smart");
+    if (desc.isEmpty()) {
+        return "";
+    }
+
     QString title = desc["localizedTitle"][locale.left(2)].toString();
     if (title.isEmpty()) {
         title = desc["title"].toString();
@@ -72,6 +76,10 @@ QString VPNNConnectionMode::getSmartModeRelativePath(void) const
 QString VPNNConnectionMode::getDirectModeTitle(void) const
 {
     QJsonObject desc = getConnectionDescriptor(config, "direct");
+    if (desc.isEmpty()) {
+        return "";
+    }
+
     QString title = desc["localizedTitle"][locale.left(2)].toString();
     if (title.isEmpty()) {
         title = desc["title"].toString();

@@ -67,6 +67,18 @@ Window  {
             root.raise()
             root.requestActivate()
             VPNNWebApi.updateExternalSettings()
+            if (VPNNWebApi.isNewVersionAvailable()) {
+                var headerText = qsTr('Do you want to update VPNNaruzhu?')
+                var deacription = qsTr('There is a new VPNNaruzhu version')
+                var yesButtonText = qsTr("Yes")
+                var noButtonText = qsTr("No")
+                var yesButtonFunction = function() {
+                    VPNNWebApi.downloadAndInstallNewApp()
+                }
+                var noButtonFunction = function() {
+                }
+                showQuestionDrawer(headerText, deacription, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+            }
             VPNNWebApi.updateDefaultAccountStatus()
         }
 

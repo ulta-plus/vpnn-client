@@ -74,10 +74,14 @@ private:
 
     const QString awg_version = "1.5";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
-    const QString amnezia_config_url =
+    const QString external_config_url =
         "https://storage.googleapis.com/naruzhu/amnezia/config.json";
+    const QString external_config_test_url =
+        "https://storage.googleapis.com/naruzhu/amnezia/test-config.json";
     const QString smart_routs_url =
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
+    const QString smart_routs_test_url =
+        "https://storage.googleapis.com/naruzhu/amnezia/test-local.json";
 
     QString getApiBaseUrl(void) const
     {
@@ -97,6 +101,9 @@ private:
 
     QString downloadNewApp(void) const;
     void installNewApp(QString &path) const;
+
+    QString getExternalConfigUrl(void) const;
+    QString getSmartRoutesListUrl(void) const;
 };
 
 #endif /* _VPNNARUZHU_WEB_API_H */

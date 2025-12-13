@@ -5,6 +5,7 @@
 #include <QNetworkReply>
 #include <QJsonDocument>
 #include <QNetworkRequest>
+#include <QtEnvironmentVariables>
 
 #include <filesystem>
 
@@ -180,11 +181,36 @@ QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
+static bool is_test_run(void)
+{
+    QString test_env = qgetenv("VPNNARUZHU_TEST");
+    return !test_env.isEmpty();
+}
+
+QString VpnNaruzhuWebApi::getExternalConfigUrl(void) const
+{
+    if (is_test_run()) {
+        return external_config_test_url;
+    } else {
+        return external_config_url;
+    }
+}
+
+QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
+{
+    if (is_test_run()) {
+        return smart_routs_test_url;
+    } else {
+        return smart_routs_url;
+    }
+}
+
 void VpnNaruzhuWebApi::updateExternalSettings(void) const
 {
-    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    QString config_url = getExternalConfigUrl();
+    QJsonDocument config = downloadJsonFile(config_url);
     if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+        qDebug() << "Cannot download amnezia config: " << config_url;
     } else {
         QString apiBaseUrl = config["apiBaseUrl"].toString();
         m_settings->setApiBaseUrl(apiBaseUrl);
@@ -218,9 +244,10 @@ void VpnNaruzhuWebApi::updateExternalSettings(void) const
 
 void VpnNaruzhuWebApi::updateSmartRouting(void) const
 {
-    QJsonDocument json_doc = downloadJsonFile(smart_routs_url);
+    QString url = getSmartRoutesListUrl();
+    QJsonDocument json_doc = downloadJsonFile(url);
     if (json_doc.isEmpty()) {
-        qDebug() << "Cannot download smart routs: " << smart_routs_url;
+        qDebug() << "Cannot download smart routs: " << url;
     } else {
         m_vpnConnection->clearExcludeRouteList();
         QJsonArray json_array = json_doc.array();
@@ -255,9 +282,10 @@ QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
 
 bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
 {
-    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    QString config_url = getExternalConfigUrl();
+    QJsonDocument config = downloadJsonFile(config_url);
     if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+        qDebug() << "Cannot download amnezia config: " << config_url;
     } else {
         QString external_version = config["updateInfo"]["availableVersion"].toString();
         QVersionNumber new_version = QVersionNumber::fromString(external_version);
@@ -272,10 +300,11 @@ bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
 
 QString VpnNaruzhuWebApi::downloadNewApp(void) const
 {
-    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    QString config_url = getExternalConfigUrl();
+    QJsonDocument config = downloadJsonFile(config_url);
     std::filesystem::path new_path;
     if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+        qDebug() << "Cannot download amnezia config: " << config_url;
     } else {
         QTemporaryFile temp_file;
         temp_file.setAutoRemove(false);

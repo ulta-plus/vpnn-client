@@ -1,0 +1,31 @@
+{
+  "version": 4,
+  "configurePresets": [
+    {
+      "name": "dev-debug",
+      "displayName": "Development Debug Build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.6.2/msvc2019_64"
+      },
+      "environment": {
+        "VPNN_VERSION": "2.2.0.5",
+        "PROD_AGW_PUBLIC_KEY": "your_prod_key_here",
+        "PROD_S3_ENDPOINT": "https://...",
+        "DEV_AGW_PUBLIC_KEY": "your_dev_key_here",
+        "DEV_AGW_ENDPOINT": "https://...",
+        "DEV_S3_ENDPOINT": "https://...",
+        "FREE_V2_ENDPOINT": "https://...",
+        "PREM_V1_ENDPOINT": "https://..."
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "dev-debug",
+      "configurePreset": "dev-debug"
+    }
+  ]
+}

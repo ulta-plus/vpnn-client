@@ -78,7 +78,19 @@ export ANDROID_NDK_ROOT="/path/to/ndk"
 ```
 
 ### Development Builds
-For debugging with CMake directly:
+
+**Recommended: Using CMake Presets**
+```bash
+# First-time setup: Copy and customize the preset template
+cp CMakeUserPresets.json.template CMakeUserPresets.json
+# Edit CMakeUserPresets.json with your Qt path and API endpoints
+
+# Then use the preset
+cmake --preset dev-debug
+cmake --build build-debug
+```
+
+**Alternative: Direct CMake**
 ```bash
 mkdir build-debug
 cd build-debug
@@ -227,15 +239,29 @@ Located in `client/3rd/` and `client/3rd-prebuilt/`:
   - Android: Android Studio with logcat
 
 ### Environment Variables
-Build scripts require:
+
+**Development Setup (CMakeUserPresets.json)**
+
+The recommended way to configure environment variables for development is using `CMakeUserPresets.json`:
+
+1. Copy the template: `cp CMakeUserPresets.json.template CMakeUserPresets.json`
+2. Edit `CMakeUserPresets.json` to set:
+   - `CMAKE_PREFIX_PATH` - Path to Qt installation (e.g., "C:/Qt/6.6.2/msvc2019_64")
+   - `VPNN_VERSION` - Version string (e.g., "2.2.0.5")
+   - API endpoint variables (7 required):
+     - `PROD_AGW_PUBLIC_KEY`, `PROD_S3_ENDPOINT`
+     - `DEV_AGW_PUBLIC_KEY`, `DEV_AGW_ENDPOINT`, `DEV_S3_ENDPOINT`
+     - `FREE_V2_ENDPOINT`, `PREM_V1_ENDPOINT`
+
+**Note:** `CMakeUserPresets.json` is in `.gitignore` to keep secrets out of version control.
+
+**Deployment Scripts**
+
+Build scripts in `deploy/` require:
 - `VPNN_VERSION` - Version string (e.g., "2.2.0.5")
 - `QT_BIN_DIR` - Path to Qt binaries
-- `QIF_BIN_DIR` - Path to Qt Installer Framework (Windows installer build)
-
-API endpoints configured via environment variables at build time:
-- `PROD_AGW_PUBLIC_KEY`, `PROD_S3_ENDPOINT`
-- `DEV_AGW_PUBLIC_KEY`, `DEV_AGW_ENDPOINT`, `DEV_S3_ENDPOINT`
-- `FREE_V2_ENDPOINT`, `PREM_V1_ENDPOINT`
+- `QIF_BIN_DIR` - Path to Qt Installer Framework (Windows/Linux installer builds)
+- API endpoint variables (same 7 as above)
 
 ### Translation Files
 - Source: `client/translations/*.ts` (Qt Linguist format)

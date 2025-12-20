@@ -259,7 +259,34 @@ git submodule update --init --recursive
 
 ### Step 7: Set Up Environment Variables
 
-**Option A: Set Permanently (Recommended)**
+**Option A: CMakeUserPresets.json (Recommended - Modern & Clean)**
+
+The project includes a `CMakeUserPresets.json.template` file that you can copy and customize:
+
+```bash
+# Copy the template
+cp CMakeUserPresets.json.template CMakeUserPresets.json
+
+# Edit CMakeUserPresets.json with your actual values
+```
+
+Edit the file to configure:
+1. **CMAKE_PREFIX_PATH** - Point to your Qt installation (e.g., `C:/Qt/6.6.2/msvc2019_64`)
+2. **VPNN_VERSION** - Set your development version (e.g., `2.2.0.5-dev`)
+3. **API Endpoints** - Fill in the 7 API endpoint environment variables with actual values:
+   - `PROD_AGW_PUBLIC_KEY`, `PROD_S3_ENDPOINT`
+   - `DEV_AGW_PUBLIC_KEY`, `DEV_AGW_ENDPOINT`, `DEV_S3_ENDPOINT`
+   - `FREE_V2_ENDPOINT`, `PREM_V1_ENDPOINT`
+
+**Note:** `CMakeUserPresets.json` is in `.gitignore` so your secrets won't be committed.
+
+**Benefits:**
+- ✅ All configuration in one file
+- ✅ No need to set system environment variables
+- ✅ Works with CMake presets workflow
+- ✅ Easy to switch between configurations
+
+**Option B: Set Permanently (Traditional Method)**
 
 Using PowerShell (Run as Administrator):
 ```powershell
@@ -271,9 +298,14 @@ Using PowerShell (Run as Administrator):
 
 # Set build architecture
 [System.Environment]::SetEnvironmentVariable('BUILD_ARCH', '64', 'User')
+
+# API endpoints (required at build time)
+[System.Environment]::SetEnvironmentVariable('PROD_AGW_PUBLIC_KEY', 'your_key_here', 'User')
+[System.Environment]::SetEnvironmentVariable('PROD_S3_ENDPOINT', 'https://...', 'User')
+# ... set remaining 5 endpoint variables
 ```
 
-**Option B: Set Per-Session**
+**Option C: Set Per-Session**
 
 Create a batch file `setup_env.bat` in project root:
 ```batch
@@ -281,6 +313,9 @@ Create a batch file `setup_env.bat` in project root:
 set QT_BIN_DIR=C:\Qt\6.6.2\msvc2019_64\bin
 set VPNN_VERSION=2.2.0.5-dev
 set BUILD_ARCH=64
+set PROD_AGW_PUBLIC_KEY=your_key_here
+set PROD_S3_ENDPOINT=https://...
+REM ... set remaining endpoint variables
 set PATH=%QT_BIN_DIR%;%PATH%
 echo Environment configured for VPNNaruzhu development
 ```
@@ -291,7 +326,24 @@ Run before each build session: `setup_env.bat`
 
 ### Step 8: Configure Build (CMake)
 
-**Option A: Using WSL:**
+**Option A: Using CMake Presets (Recommended if you set up CMakeUserPresets.json)**
+
+```bash
+# Navigate to project root
+cd /mnt/c/Users/YourUsername/Projects/vpnn-client  # WSL
+# or
+cd C:\Users\YourUsername\Projects\vpnn-client      # PowerShell
+
+# Configure using preset
+cmake --preset dev-debug
+
+# Build
+cmake --build build-debug --config Debug
+```
+
+**Benefits:** All environment variables and paths are already configured in the preset file.
+
+**Option B: Using WSL (Manual Configuration):**
 
 ```bash
 # Navigate to project root (Windows path via WSL)
@@ -310,7 +362,7 @@ cmake.exe .. -G "Visual Studio 17 2022" -A x64 \
 
 **Note:** Use `cmake.exe` (not `cmake`) to call Windows CMake from WSL.
 
-**Option B: Using PowerShell:**
+**Option C: Using PowerShell (Manual Configuration):**
 
 ```powershell
 # Navigate to project root

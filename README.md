@@ -61,6 +61,7 @@ git submodule update --init --recursive
 ## Development
 
 Want to contribute? Welcome!
+Read `AGENTS.md` for the contributor workflow, build/test commands, and review expectations before opening a pull request.
 
 ### Help with translations
 

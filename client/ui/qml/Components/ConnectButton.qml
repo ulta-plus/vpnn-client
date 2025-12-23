@@ -89,7 +89,6 @@ Button {
                 }
             }
 
-
             ShapePath {
                 fillColor: {
                     if (ConnectionController.isConnectionInProgress) {
@@ -116,6 +115,7 @@ Button {
                 }
             }
 
+        /*
             ShapePath {
                 fillColor: AmneziaStyle.color.transparent
                 strokeColor: {
@@ -142,6 +142,7 @@ Button {
                     sweepAngle: 360
                 }
             }
+        */
 
             MouseArea {
                 anchors.fill: parent

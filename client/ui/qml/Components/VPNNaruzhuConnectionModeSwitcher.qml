@@ -49,9 +49,11 @@ Rectangle {
             textColor: VPNNConnectionMode.isSmartRouteMode() ? root.activeTextColor : root.inactiveTextColor
             onClicked: {
                 smartMode.defaultColor = root.activeButtonColor
+                smartMode.disableColor = smartMode.defaultColor
                 smartMode.hoveredColor = smartMode.defaultColor
                 smartMode.textColor = root.activeTextColor
                 directMode.defaultColor = root.inactiveButtonColor
+                directMode.disableColor = directMode.defaultColor
                 directMode.textColor = root.inactiveTextColor
                 directMode.hoveredColor = directMode.defaultColor
 
@@ -75,9 +77,11 @@ Rectangle {
             textColor: VPNNConnectionMode.isDirectRouteMode() ? root.activeTextColor : root.inactiveTextColor
             onClicked: {
                 smartMode.defaultColor = root.inactiveButtonColor
+                smartMode.disableColor = smartMode.defaultColor
                 smartMode.hoveredColor = smartMode.defaultColor
                 smartMode.textColor = root.inactiveTextColor
                 directMode.defaultColor = root.activeButtonColor
+                directMode.disableColor = directMode.defaultColor
                 directMode.textColor = root.activeTextColor
                 directMode.hoveredColor = directMode.defaultColor
 

@@ -16,6 +16,7 @@ VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
     QVariantMap map;
     map.insert("name", entry.name);
     map.insert("icon", entry.icon);
+    currentIndex = 0;
     countriesMap.push_back(map);
 
     QString cachedVPNCountry = settings->getVPNCountry();

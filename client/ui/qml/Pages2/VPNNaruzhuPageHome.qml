@@ -246,6 +246,8 @@ PageType {
                                 var noButtonText = qsTr("Cancel")
                                 var yesButtonFunction = function() {
                                     ServersModel.removeDefaultAccount()
+                                    SettingsController.clearSettings()
+                                    VPNNCountriesModel.setCurrentIndex(0);
                                     PageController.goToPageHome()
                                 }
                                 var noButtonFunction = function() {

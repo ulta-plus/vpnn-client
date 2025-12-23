@@ -30,6 +30,12 @@ ComboBox {
         radius: 4
     }
 
+    MouseArea {
+        anchors.fill: root.background
+        enabled: false
+        cursorShape: Qt.PointingHandCursor
+    }
+
     contentItem: Item {
         anchors.fill: root
         implicitWidth: root.width

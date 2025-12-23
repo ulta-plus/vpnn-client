@@ -102,6 +102,8 @@ PageType {
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
                 Layout.alignment: Qt.AlignTop
+
+                enabled: !(ConnectionController.isConnectionInProgress || ConnectionController.isConnected)
             }
 
             VPNNaruzhuCountryList {
@@ -112,6 +114,8 @@ PageType {
 
                 height: 41
                 width: 216
+
+                enabled: !(ConnectionController.isConnectionInProgress || ConnectionController.isConnected)
             }
 
             ConnectButton {

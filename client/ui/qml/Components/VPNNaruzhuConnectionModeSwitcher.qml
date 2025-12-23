@@ -44,6 +44,7 @@ Rectangle {
             mainText: root.smartModeTitle
 
             defaultColor: VPNNConnectionMode.isSmartRouteMode() ? root.activeButtonColor : root.inactiveButtonColor
+            disableColor: VPNNConnectionMode.isSmartRouteMode() ? root.activeButtonColor : root.inactiveButtonColor
             hoveredColor: VPNNConnectionMode.isSmartRouteMode() ? root.activeButtonColor : root.inactiveButtonColor
             textColor: VPNNConnectionMode.isSmartRouteMode() ? root.activeTextColor : root.inactiveTextColor
             onClicked: {
@@ -69,6 +70,7 @@ Rectangle {
             mainText: root.deirectModeTitle
 
             defaultColor: VPNNConnectionMode.isDirectRouteMode() ? root.activeButtonColor : root.inactiveButtonColor
+            disableColor: VPNNConnectionMode.isDirectRouteMode() ? root.activeButtonColor : root.inactiveButtonColor
             hoveredColor: VPNNConnectionMode.isDirectRouteMode() ? root.activeButtonColor : root.inactiveButtonColor
             textColor: VPNNConnectionMode.isDirectRouteMode() ? root.activeTextColor : root.inactiveTextColor
             onClicked: {

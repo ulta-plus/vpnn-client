@@ -35,6 +35,40 @@ PageType {
         }
     }
 
+    Connections {
+        target: ConnectionController
+
+        function onConnectionStateChanged() {
+            if (ConnectionController.isConnected || !ConnectionController.isConnectionInProgress) {
+                refreshAccountStatusDisplay()
+            }
+        }
+    }
+
+    function getNumberOfActiveDaysText() {
+        print('getNumberOfActiveDaysText')
+        var numberOfActiveDays = ServersModel.getNumberOfActiveDays()
+        if (numberOfActiveDays < 0) {
+            numberOfActiveDays = 0
+        }
+        return qsTr('Left ') + numberOfActiveDays + qsTr(' days')
+    }
+
+    function getSubscriptionStatusText() {
+        print('getSubscriptionStatusText')
+        var numberOfActiveDays = ServersModel.getNumberOfActiveDays()
+        if (numberOfActiveDays < 0) {
+            return qsTr('Subscription ended')
+        } else {
+            return qsTr('Active until ') + ServersModel.getPaidUntilDefaultAccountStr()
+        }
+    }
+
+    function refreshAccountStatusDisplay() {
+        numberOfActiveDaysText.text = getNumberOfActiveDaysText()
+        subscriptionStatusText.text = getSubscriptionStatusText()
+    }
+
     Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
@@ -267,7 +301,8 @@ PageType {
                     ColumnLayout {
                         Layout.alignment: Qt.AlignTop
                         Text {
-                            text: qsTr('Left ') + ServersModel.getNumberOfActiveDays() + qsTr(' days')
+                            id: numberOfActiveDaysText
+                            text: getNumberOfActiveDaysText()
                             color: '#FFFFFF'
                             font.pixelSize: 16
                             lineHeight: 1.2
@@ -278,7 +313,8 @@ PageType {
                         }
 
                         Text {
-                            text: qsTr('Active until ') + ServersModel.getPaidUntilDefaultAccountStr()
+                            id: subscriptionStatusText
+                            text: getSubscriptionStatusText()
                             color: '#FFFFFF'
                             font.pixelSize: 12
                             font.weight: Font.Medium

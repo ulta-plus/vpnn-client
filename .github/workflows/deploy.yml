@@ -86,7 +86,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      QT_VERSION: 6.10.0
+      QT_VERSION: 6.10.1
       QIF_VERSION: 4.7
       BUILD_ARCH: 64
       PROD_AGW_PUBLIC_KEY: ${{ secrets.PROD_AGW_PUBLIC_KEY }}
@@ -119,7 +119,9 @@ jobs:
         setup-python: 'true'
         tools: 'tools_ifw'
         set-env: 'true'
-        extra: '--external 7z --base ${{ env.QT_MIRROR }}'
+        aqtversion: '==3.3.0'
+        py7zrversion: '==0.22.*'
+        extra: '--base ${{ env.QT_MIRROR }}'
 
     - name: 'Setup mvsc'
       uses: ilammy/msvc-dev-cmd@v1

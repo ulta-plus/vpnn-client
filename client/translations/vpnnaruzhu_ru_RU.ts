@@ -286,7 +286,7 @@
 <context>
     <name>ConnectButton</name>
     <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="56"/>
+        <location filename="../ui/qml/Components/ConnectButton.qml" line="57"/>
         <source>Unable to disconnect during configuration preparation</source>
         <translation>Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
@@ -4651,47 +4651,52 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="245"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="276"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="133"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="164"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="241"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="60"/>
+        <source>Subscription ended</source>
+        <translation>Подписка закончилась</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="272"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="244"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="275"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="246"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="277"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="53"/>
         <source>Left </source>
         <translation>Осталось </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="53"/>
         <source> days</source>
         <translation> дней</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="281"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="58"/>
         <source>Active until </source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="302"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="335"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>

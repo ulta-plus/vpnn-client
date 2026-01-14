@@ -401,8 +401,8 @@ void CoreController::initPrepareConfigHandler()
         emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Preparing);
 
         m_webApi->updateDefaultAccountStatus();
-        if (m_serversModel->getDefaultAccount()
-                [config_key::simplified_status].toString() == "blocked")
+        bool is_not_active = !m_serversModel->isDefaultAccountActive();
+        if (is_not_active)
         {
             m_pageController->showNotificationMessage(
                 tr("Your account blocked"));

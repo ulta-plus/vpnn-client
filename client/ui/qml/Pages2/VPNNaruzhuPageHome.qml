@@ -46,21 +46,18 @@ PageType {
     }
 
     function getNumberOfActiveDaysText() {
-        print('getNumberOfActiveDaysText')
         var numberOfActiveDays = ServersModel.getNumberOfActiveDays()
-        if (numberOfActiveDays < 0) {
+        if (!ServersModel.isDefaultAccountActive()) {
             numberOfActiveDays = 0
         }
         return qsTr('Left ') + numberOfActiveDays + qsTr(' days')
     }
 
     function getSubscriptionStatusText() {
-        print('getSubscriptionStatusText')
-        var numberOfActiveDays = ServersModel.getNumberOfActiveDays()
-        if (numberOfActiveDays < 0) {
-            return qsTr('Subscription ended')
-        } else {
+        if (ServersModel.isDefaultAccountActive()) {
             return qsTr('Active until ') + ServersModel.getPaidUntilDefaultAccountStr()
+        } else {
+            return qsTr('Subscription ended')
         }
     }
 

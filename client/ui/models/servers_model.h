@@ -145,6 +145,7 @@ public slots:
     void updateDefaultAccountConfig(const QJsonObject &new_config);
     QString getPaidUntilDefaultAccountStr(void) const;
     qint64 getNumberOfActiveDays(void) const;
+    bool isDefaultAccountActive(void) const;
 
     void updateCurrentKeyDnsConfig(const QString &dns1, const QString &dns2);
 

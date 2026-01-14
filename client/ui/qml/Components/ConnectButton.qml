@@ -13,6 +13,7 @@ Button {
     id: root
 
     property string defaultButtonColor: "#F1F0EF"
+    property string blockedColor: "#3C3C3C"
     property string progressButtonColor: "#FFDD51"
     property string connectedButtonColor: "#33CC8C"
     property string errorButtonColor: "#FF6969"
@@ -91,6 +92,9 @@ Button {
 
             ShapePath {
                 fillColor: {
+                    if (!ServersModel.isDefaultAccountActive()) {
+                        return root.blockedColor
+                    }
                     if (ConnectionController.isConnectionInProgress) {
                         return '#FFFFFF'
                     } else if (ConnectionController.isConnected) {

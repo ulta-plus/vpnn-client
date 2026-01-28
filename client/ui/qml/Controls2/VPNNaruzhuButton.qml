@@ -21,13 +21,16 @@ Button {
     property int borderFocusedWidth: 0
     property int radius: 10
     property int textSize: 16
+    property int textWeight: 600
 
     property var capitalization: Font.MixedCase
     property var hoveredOpacity: 1.0
     property var letterSpacing: 0.0
     property var leftIconColor: ''
+    property var rightIconColor: ''
 
     property string leftIcon: ''
+    property string rightIcon: ''
 
     contentItem: Item {
         anchors.fill: buttonBorder
@@ -56,7 +59,7 @@ Button {
 
                 color: root.textColor
                 font.pixelSize: root.textSize
-                font.weight: 600
+                font.weight: root.textWeight
                 font.family: VPNNaruzhuStyle.font
                 font.capitalization: root.capitalization
                 font.letterSpacing: root.letterSpacing
@@ -65,6 +68,18 @@ Button {
                 verticalAlignment: Text.AlignVCenter
 
                 visible: root.mainText === '' ? false : true
+            }
+
+            Image {
+                id: rightIcon
+                source: root.rightIcon
+                visible: root.rightIcon === '' ? false : true
+                layer {
+                    enabled: rightIconColor !== '' ? true : false
+                    effect: ColorOverlay {
+                        color: rightIconColor
+                    }
+                }
             }
         }
     }

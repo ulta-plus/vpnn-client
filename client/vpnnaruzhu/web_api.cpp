@@ -205,7 +205,7 @@ QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
     }
 }
 
-void VpnNaruzhuWebApi::updateExternalSettings(void) const
+void VpnNaruzhuWebApi::updateExternalSettings(void)
 {
     QString config_url = getExternalConfigUrl();
     QJsonDocument config = downloadJsonFile(config_url);
@@ -228,6 +228,11 @@ void VpnNaruzhuWebApi::updateExternalSettings(void) const
         QString support_link = config["supportLink"].toString();
         if (support_link != "") {
             m_settings->setSupportLink(support_link);
+        }
+
+        QString newAboutLink = config["aboutLink"].toString();
+        if (newAboutLink != "") {
+            aboutLink = newAboutLink;
         }
 
         QJsonDocument connections_config = QJsonDocument(
@@ -332,4 +337,10 @@ void VpnNaruzhuWebApi::downloadAndInstallNewApp(void) const
 void VpnNaruzhuWebApi::installNewApp(QString &path) const
 {
     QProcess::startDetached(path);
+}
+
+QString VpnNaruzhuWebApi::getUUIDLastSymbols(void) const
+{
+    QString uuid = m_settings->getInstallationUuid(true);
+    return uuid.right(4);
 }

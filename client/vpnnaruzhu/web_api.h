@@ -47,7 +47,7 @@ public:
     void downloadFile(const QString &url, QFile &file) const;
 
 public slots:
-    void updateExternalSettings(void) const;
+    void updateExternalSettings(void);
     void updateSmartRouting(void) const;
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
@@ -58,6 +58,8 @@ public slots:
     QString getAppVersion(void) const { return APP_VERSION; }
     QString getDefaultAccountConfig(QString public_request_id = QString()) const;
     QString getSupportLink(void) const { return m_settings->getSupportLink(); }
+    QString getAboutLink(void) const { return aboutLink; }
+    QString getUUIDLastSymbols(void) const;
 
     bool isNewVersionAvailable(void) const;
 
@@ -82,6 +84,8 @@ private:
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
     const QString smart_routs_test_url =
         "https://storage.googleapis.com/naruzhu/amnezia/test-local.json";
+
+    QString aboutLink = "https://nrz.monster/profil";
 
     QString getApiBaseUrl(void) const
     {

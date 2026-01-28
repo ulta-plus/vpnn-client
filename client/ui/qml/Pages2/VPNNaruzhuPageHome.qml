@@ -116,7 +116,7 @@ PageType {
             }
 
             Text {
-                text: 'v' + VPNNWebApi.getAppVersion()
+                text: 'v' + VPNNWebApi.getAppVersion() + '   d: ' + VPNNWebApi.getUUIDLastSymbols()
                 color: VPNNaruzhuStyle.color.footnotes
                 opacity: 0.56
                 font.pixelSize: 12
@@ -160,14 +160,6 @@ PageType {
             RowLayout {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 14
-                Text {
-                    text: qsTr('Need help')
-                    color: '#FFFFFF'
-                    font.pixelSize: 14
-                    font.weight: Font.DemiBold
-                    font.family: VPNNaruzhuStyle.font
-                    font.letterSpacing: 14 * (-0.04)
-                }
 
                 VPNNaruzhuButton {
                     id: helpButton
@@ -178,15 +170,21 @@ PageType {
                     pressedColor: 'transparent'
                     hoveredColor: 'transparent'
 
-                    implicitHeight: 20
-                    implicitWidth: 20
+                    mainText: qsTr('Need help')
+                    textColor: '#FFFFFF'
+                    textSize: 14
+                    letterSpacing: 14 * (-0.04)
+                    textWeight: Font.DemiBold
 
-                    leftIcon: 'qrc:/images/controls/question.svg'
-                    leftIconColor: '#FFFFFF'
+                    implicitHeight: 20
+                    implicitWidth: 200
+
+                    rightIcon: 'qrc:/images/controls/question.svg'
+                    rightIconColor: '#FFFFFF'
 
                     onClicked: {
                         GC.coppyUUIDToClipBoard()
-                        Qt.openUrlExternally(VPNNWebApi.getSupportLink())
+                        Qt.openUrlExternally(VPNNWebApi.getAboutLink())
                     }
                 }
             }

@@ -4651,12 +4651,12 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="276"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="274"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="164"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="173"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
@@ -4666,17 +4666,17 @@ For more detailed information, you can
         <translation>Подписка закончилась</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="272"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="270"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="275"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="273"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="277"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="275"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
@@ -4696,7 +4696,7 @@ For more detailed information, you can
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="335"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="333"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>
@@ -4872,32 +4872,32 @@ For more detailed information, you can
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="71"/>
+        <location filename="../ui/qml/main2.qml" line="38"/>
         <source>Do you want to update VPNNaruzhu?</source>
         <translation>Хотите обновить приложение?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="72"/>
+        <location filename="../ui/qml/main2.qml" line="39"/>
         <source>There is a new VPNNaruzhu version</source>
         <translation>Есть новая верия VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="73"/>
+        <location filename="../ui/qml/main2.qml" line="40"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="74"/>
+        <location filename="../ui/qml/main2.qml" line="41"/>
         <source>No</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="214"/>
+        <location filename="../ui/qml/main2.qml" line="221"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="235"/>
+        <location filename="../ui/qml/main2.qml" line="242"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

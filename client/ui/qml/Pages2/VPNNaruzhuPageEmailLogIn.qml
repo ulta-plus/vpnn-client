@@ -189,7 +189,7 @@ PageType {
         anchors.bottomMargin: 24
 
         Text {
-            text: 'v' + VPNNWebApi.getAppVersion()
+            text: 'v' + VPNNWebApi.getAppVersion() + '   d: ' + VPNNWebApi.getUUIDLastSymbols()
             color: VPNNaruzhuStyle.color.footnotes
             opacity: 0.56
             font.pixelSize: 12

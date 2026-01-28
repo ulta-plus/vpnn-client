@@ -65,7 +65,7 @@ PageType {
         VPNNaruzhuButton {
             id: continueButton
 
-            Layout.topMargin: 36
+            Layout.topMargin: 28
             Layout.alignment: Qt.AlignHCenter
 
             implicitHeight: 41
@@ -92,7 +92,7 @@ PageType {
         anchors.bottomMargin: 24
 
         Text {
-            text: 'v' + VPNNWebApi.getAppVersion()
+            text: 'v' + VPNNWebApi.getAppVersion() + '   d: ' + VPNNWebApi.getUUIDLastSymbols()
             color: VPNNaruzhuStyle.color.footnotes
             opacity: 0.56
             font.pixelSize: 12

@@ -184,7 +184,7 @@ PageType {
 
                     onClicked: {
                         GC.coppyUUIDToClipBoard()
-                        Qt.openUrlExternally(VPNNWebApi.getAboutLink())
+                        Qt.openUrlExternally(VPNNWebApi.getSupportLink())
                     }
                 }
             }

@@ -102,7 +102,7 @@ PageType {
         readonly property string leftImagePath: "qrc:/images/controls/external-link.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
-            Qt.openUrlExternally("https://naruzhu.click/appam")
+            Qt.openUrlExternally(VPNNWebApi.getAboutLink())
         }
     }
     QtObject {

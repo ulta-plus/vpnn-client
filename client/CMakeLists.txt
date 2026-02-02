@@ -69,13 +69,6 @@ set(CMAKE_AUTORCC ON)
 
 set(VPNNARUZHU_TS_FILES
     ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ru_RU.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_zh_CN.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_fa_IR.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ar_EG.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_my_MM.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_uk_UA.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_ur_PK.ts
-    ${CMAKE_CURRENT_LIST_DIR}/translations/vpnnaruzhu_hi_IN.ts
 )
 
 file(GLOB_RECURSE VPNNARUZHU_TS_SOURCES *.qrc *.cpp *.h *.ui)

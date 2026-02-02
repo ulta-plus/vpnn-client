@@ -74,6 +74,20 @@ PageType {
                 }
             }
         */
+            DividerType {}
+
+            LabelWithButtonType {
+                id: connectionParameters
+
+                Layout.fillWidth: true
+
+                text: qsTr("Connection parameters")
+                rightImageSource: "qrc:/images/controls/chevron-right.svg"
+
+                clickedFunction: function() {
+                    PageController.goToPage(PageEnum.PageSettingsServerProtocols)
+                }
+            }
 
             DividerType {}
 

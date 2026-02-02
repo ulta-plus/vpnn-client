@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>fonts/pt-root-ui_vf.ttf</file>
+        <file>fonts/Inter-VariableFont.ttf</file>
         <file>images/controls/alert-circle.svg</file>
         <file>images/controls/amnezia.svg</file>
         <file>images/controls/app.svg</file>
@@ -116,6 +116,8 @@
         <file>server_scripts/xray/start.sh</file>
         <file>server_scripts/xray/template.json</file>
         <file>ui/qml/Components/AdLabel.qml</file>
+        <file>ui/qml/Components/VPNNaruzhuCountryList.qml</file>
+        <file>ui/qml/Components/VPNNaruzhuConnectionModeSwitcher.qml</file>
         <file>ui/qml/Components/ConnectButton.qml</file>
         <file>ui/qml/Components/ConnectionTypeSelectionDrawer.qml</file>
         <file>ui/qml/Components/HomeContainersListView.qml</file>
@@ -125,7 +127,6 @@
         <file>ui/qml/Components/SelectLanguageDrawer.qml</file>
         <file>ui/qml/Components/ServersListView.qml</file>
         <file>ui/qml/Components/SettingsContainersListView.qml</file>
-
         <file>ui/qml/Components/TransportProtoSelector.qml</file>
         <file>ui/qml/Components/AddSitePanel.qml</file>
         <file>ui/qml/Config/GlobalConfig.qml</file>
@@ -175,6 +176,7 @@
         <file>ui/qml/Controls2/TextTypes/ListItemTitleType.qml</file>
         <file>ui/qml/Controls2/TextTypes/ParagraphTextType.qml</file>
         <file>ui/qml/Controls2/TextTypes/SmallTextType.qml</file>
+        <file>ui/qml/Controls2/TextTypes/VPNNaruzhuHeader.qml</file>
         <file>ui/qml/Controls2/TopCloseButtonType.qml</file>
         <file>ui/qml/Controls2/VerticalRadioButton.qml</file>
         <file>ui/qml/Controls2/WarningType.qml</file>
@@ -186,12 +188,14 @@
         <file>ui/qml/Modules/Style/AmneziaStyle.qml</file>
         <file>ui/qml/Modules/Style/qmldir</file>
         <file>ui/qml/Pages2/DummyKey.conf</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageWelcome.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageLogIn.qml</file>
-        <file>ui/qml/Pages2/VPNNaruzhuPageSignUp.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageSettings.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageHome.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageDeinstalling.qml</file>
         <file>ui/qml/Pages2/PageDevMenu.qml</file>
-        <file>ui/qml/Pages2/PageHome.qml</file>
         <file>ui/qml/Pages2/PageProtocolAwgSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolCloakSettings.qml</file>
         <file>ui/qml/Pages2/PageProtocolOpenVpnSettings.qml</file>
@@ -203,14 +207,11 @@
         <file>ui/qml/Pages2/PageServiceSftpSettings.qml</file>
         <file>ui/qml/Pages2/PageServiceSocksProxySettings.qml</file>
         <file>ui/qml/Pages2/PageServiceTorWebsiteSettings.qml</file>
-        <file>ui/qml/Pages2/PageSettings.qml</file>
-        <file>ui/qml/Pages2/PageSettingsAbout.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiAvailableCountries.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiServerInfo.qml</file>
         <file>ui/qml/Pages2/PageSettingsApplication.qml</file>
         <file>ui/qml/Pages2/PageSettingsAppSplitTunneling.qml</file>
         <file>ui/qml/Pages2/PageSettingsBackup.qml</file>
-        <file>ui/qml/Pages2/PageSettingsConnection.qml</file>
         <file>ui/qml/Pages2/PageSettingsDns.qml</file>
         <file>ui/qml/Pages2/PageSettingsKillSwitch.qml</file>
         <file>ui/qml/Pages2/PageSettingsKillSwitchExceptions.qml</file>
@@ -218,7 +219,6 @@
         <file>ui/qml/Pages2/PageSettingsServerData.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerInfo.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerProtocol.qml</file>
-        <file>ui/qml/Pages2/PageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageSettingsServerServices.qml</file>
         <file>ui/qml/Pages2/PageSettingsServersList.qml</file>
         <file>ui/qml/Pages2/PageSettingsSplitTunneling.qml</file>
@@ -233,7 +233,6 @@
         <file>ui/qml/Pages2/PageSetupWizardProtocols.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardProtocolSettings.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardQrReader.qml</file>
-        <file>ui/qml/Pages2/PageSetupWizardStart.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardTextKey.qml</file>
         <file>ui/qml/Pages2/PageSetupWizardViewConfig.qml</file>
         <file>ui/qml/Pages2/PageShare.qml</file>
@@ -247,12 +246,17 @@
         <file>ui/qml/Pages2/PageSettingsApiNativeConfigs.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiDevices.qml</file>
         <file>images/controls/monitor.svg</file>
-        <file>images/naruzhu_logo.png</file>
+        <file>images/welcome_logo.svg</file>
         <file>images/controls/email.svg</file>
         <file>images/controls/tabBarChat.svg</file>
         <file>images/controls/chat.svg</file>
         <file>images/controls/telegramNaruzhu.svg</file>
         <file>images/controls/sign-out.svg</file>
+        <file>images/controls/question.svg</file>
+        <file>images/controls/drop-list.svg</file>
+        <file>images/connect button/default.svg</file>
+        <file>images/connect button/connected.svg</file>
+        <file>images/connect button/progress.svg</file>
         <file>ui/qml/Components/ApiPremV1MigrationDrawer.qml</file>
         <file>ui/qml/Components/ApiPremV1SubListDrawer.qml</file>
         <file>ui/qml/Components/OtpCodeDrawer.qml</file>
@@ -260,6 +264,7 @@
         <file>ui/qml/Pages2/PageSettingsApiSubscriptionKey.qml</file>
     </qresource>
     <qresource prefix="/countriesFlags">
+        <file>images/flagKit/ANY.svg</file>
         <file>images/flagKit/ZW.svg</file>
         <file>images/flagKit/ZM.svg</file>
         <file>images/flagKit/ZA.svg</file>

@@ -159,8 +159,16 @@ void CoreController::initControllers()
 
 void CoreController::initVPNNaruzhuExtension()
 {
-    m_webApi.reset(new VpnNaruzhuWebApi(m_settings, m_serversModel, m_vpnConnection, m_engine));
+    m_webApi.reset(new VpnNaruzhuWebApi( m_settings
+                                       , m_serversModel
+                                       , m_vpnConnection
+                                       , m_engine
+                                       , m_languageModel
+                                       )
+                  );
     m_engine->rootContext()->setContextProperty("VPNNWebApi", m_webApi.get());
+    m_countriesModel.reset(new VPNNCountriesModel(this, m_webApi, m_settings));
+    m_engine->rootContext()->setContextProperty("VPNNCountriesModel", m_countriesModel.get());
 
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
         m_sitesController.get(), &SitesController::addSite);
@@ -393,8 +401,8 @@ void CoreController::initPrepareConfigHandler()
         emit m_vpnConnection->connectionStateChanged(Vpn::ConnectionState::Preparing);
 
         m_webApi->updateDefaultAccountStatus();
-        if (m_serversModel->getDefaultAccount()
-                [config_key::simplified_status].toString() == "blocked")
+        bool is_not_active = !m_serversModel->isDefaultAccountActive();
+        if (is_not_active)
         {
             m_pageController->showNotificationMessage(
                 tr("Your account blocked"));

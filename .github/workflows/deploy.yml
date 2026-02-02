@@ -7,7 +7,7 @@ on:
 
 env:
   QT_MIRROR: https://mirrors.ocf.berkeley.edu/qt/ # https://download.qt.io/static/mirrorlist/
-  VPNN_VERSION: 2.1.7.1
+  VPNN_VERSION: 2.2.0.9
 
 jobs:
   Build-Linux-Ubuntu:
@@ -86,7 +86,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      QT_VERSION: 6.6.2
+      QT_VERSION: 6.10.1
       QIF_VERSION: 4.7
       BUILD_ARCH: 64
       PROD_AGW_PUBLIC_KEY: ${{ secrets.PROD_AGW_PUBLIC_KEY }}
@@ -108,18 +108,20 @@ jobs:
       uses: hendrikmuhs/ccache-action@v1.2
 
     - name: 'Install Qt'
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         version: ${{ env.QT_VERSION }}
         host: 'windows'
         target: 'desktop'
-        arch: 'win64_msvc2019_64'
+        arch: 'win64_msvc2022_64'
         modules: 'qtremoteobjects qt5compat qtshadertools'
         dir: ${{ runner.temp }}
         setup-python: 'true'
         tools: 'tools_ifw'
         set-env: 'true'
-        extra: '--external 7z --base ${{ env.QT_MIRROR }}'
+        aqtversion: '==3.3.0'
+        py7zrversion: '==0.22.*'
+        extra: '--base ${{ env.QT_MIRROR }}'
 
     - name: 'Setup mvsc'
       uses: ilammy/msvc-dev-cmd@v1
@@ -130,7 +132,7 @@ jobs:
       shell: cmd
       run: |
         set BUILD_ARCH=${{ env.BUILD_ARCH }}
-        set QT_BIN_DIR="${{ runner.temp }}\\Qt\\${{ env.QT_VERSION }}\\msvc2019_64\\bin"
+        set QT_BIN_DIR="${{ runner.temp }}\\Qt\\${{ env.QT_VERSION }}\\msvc2022_64\\bin"
         set QIF_BIN_DIR="${{ runner.temp }}\\Qt\\Tools\\QtInstallerFramework\\${{ env.QIF_VERSION }}\\bin"
         set VPNN_VERSION="${{ env.VPNN_VERSION }}"
         call deploy\\build_windows.bat

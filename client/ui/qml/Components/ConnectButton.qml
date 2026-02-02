@@ -13,6 +13,7 @@ Button {
     id: root
 
     property string defaultButtonColor: "#F1F0EF"
+    property string blockedColor: "#3C3C3C"
     property string progressButtonColor: "#FFDD51"
     property string connectedButtonColor: "#33CC8C"
     property string errorButtonColor: "#FF6969"
@@ -44,8 +45,8 @@ Button {
         FocusController.nextKeyRightItem()
     }
 
-    implicitWidth: 190
-    implicitHeight: 190
+    implicitWidth: 284
+    implicitHeight: 284
 
     text: qsTr(ConnectionController.connectionStateText)
 
@@ -73,18 +74,37 @@ Button {
             layer.enabled: true
             layer.samples: 4
             layer.smooth: true
-            layer.effect: DropShadow {
+            layer.effect: InnerShadow {
                 anchors.fill: backgroundCircle
-                horizontalOffset: 0
-                verticalOffset: 0
-                radius: 10
-                samples: 25
-                color: root.activeFocus ? "#D7D8DB" : "#F1F0EF"
+                radius: 50
+                samples: 32
+                verticalOffset: 10
                 source: backgroundCircle
+                spread: 0.0
+                color: {
+                    if (ConnectionController.isConnected) {
+                        return '#FFD600'
+                    } else {
+                        'transparent'
+                    }
+                }
             }
 
             ShapePath {
-                fillColor: AmneziaStyle.color.transparent
+                fillColor: {
+                    if (!ServersModel.isDefaultAccountActive()) {
+                        return root.blockedColor
+                    }
+                    if (ConnectionController.isConnectionInProgress) {
+                        return '#FFFFFF'
+                    } else if (ConnectionController.isConnected) {
+                        return '#151515'
+                    } else if (ConnectionController.isConnectionFailed) {
+                        return '#FFD600'
+                    } else {
+                        return '#FFD600'
+                    }
+                }
                 strokeColor: AmneziaStyle.color.paleGray
                 strokeWidth: root.buttonActiveFocus ? 1 : 0
                 capStyle: ShapePath.RoundCap
@@ -92,38 +112,41 @@ Button {
                 PathAngleArc {
                     centerX: backgroundCircle.width / 2
                     centerY: backgroundCircle.height / 2
-                    radiusX: 94
-                    radiusY: 94
+                    radiusX: 141
+                    radiusY: 141
                     startAngle: 0
                     sweepAngle: 360
                 }
             }
 
+        /*
             ShapePath {
                 fillColor: AmneziaStyle.color.transparent
                 strokeColor: {
                     if (ConnectionController.isConnectionInProgress) {
-                        return progressButtonColor
+                        return '#FFFFFF'
                     } else if (ConnectionController.isConnected) {
-                        return connectedButtonColor
+                        return '#FFD600'
                     } else if (ConnectionController.isConnectionFailed) {
                         return errorButtonColor
                     } else {
-                        return defaultButtonColor
+                        return '#FFD600'
                     }
                 }
+
                 strokeWidth: root.buttonActiveFocus ? 2 : 3
                 capStyle: ShapePath.RoundCap
 
                 PathAngleArc {
                     centerX: backgroundCircle.width / 2
                     centerY: backgroundCircle.height / 2
-                    radiusX: 93 - (root.buttonActiveFocus ? 2 : 0)
-                    radiusY: 93 - (root.buttonActiveFocus ? 2 : 0)
+                    radiusX: 140 - (root.buttonActiveFocus ? 2 : 0)
+                    radiusY: 140 - (root.buttonActiveFocus ? 2 : 0)
                     startAngle: 0
                     sweepAngle: 360
                 }
             }
+        */
 
             MouseArea {
                 anchors.fill: parent
@@ -153,8 +176,8 @@ Button {
                 PathAngleArc {
                     centerX: shape.width / 2
                     centerY: shape.height / 2
-                    radiusX: 93
-                    radiusY: 93
+                    radiusX: 140
+                    radiusY: 140
                     startAngle: 245
                     sweepAngle: -180
                 }
@@ -171,29 +194,74 @@ Button {
         }
     }
 
-    contentItem: Text {
-        height: 24
+    contentItem: Item {
+            ColumnLayout {
+                anchors.centerIn: parent
+                Image {
+                    id: image
+                    width: 95
+                    height: 95
+                    Layout.preferredWidth: 95
+                    Layout.preferredHeight: 95
+                    Layout.alignment: Qt.AlignCenter
 
-        font.family: "PT Root UI VF"
-        font.weight: 700
-        font.pixelSize: 20
+                    source: {
+                        if (ConnectionController.isConnectionInProgress) {
+                            return 'qrc:/images/connect button/progress.svg'
+                        } else if (ConnectionController.isConnected) {
+                            return 'qrc:/images/connect button/connected.svg'
+                        } else if (ConnectionController.isConnectionFailed) {
+                            return 'qrc:/images/connect button/default.svg'
+                        } else {
+                            return 'qrc:/images/connect button/default.svg'
+                        }
+                    }
 
-        color: {
-            if (ConnectionController.isConnectionInProgress) {
-                return progressButtonColor
-            } else if (ConnectionController.isConnected) {
-                return connectedButtonColor
-            } else if (ConnectionController.isConnectionFailed) {
-                return errorButtonColor
-            } else {
-                return defaultButtonColor
-            }
+                    layer {
+                        enabled: true
+                        effect: ColorOverlay {
+                            color: {
+                                if (ConnectionController.isConnectionInProgress) {
+                                    return '#000000'
+                                } else if (ConnectionController.isConnected) {
+                                    return '#FFD600'
+                                } else if (ConnectionController.isConnectionFailed) {
+                                    return errorButtonColor
+                                } else {
+                                    return '#000000'
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Text {
+                    height: 24
+
+                    font.family: VPNNaruzhuStyle.font
+                    font.weight: Font.DemiBold
+                    font.pixelSize: 16
+                    font.capitalization: Font.AllUppercase
+                    font.letterSpacing: 16 * (-0.04)
+
+                    color: {
+                        if (ConnectionController.isConnectionInProgress) {
+                            return '#000000'
+                        } else if (ConnectionController.isConnected) {
+                            return '#FFD600'
+                        } else if (ConnectionController.isConnectionFailed) {
+                            return errorButtonColor
+                        } else {
+                            return '#000000'
+                        }
+                    }
+
+                    text: root.text
+
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
         }
-
-        text: root.text
-
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
     }
 
     onClicked: {

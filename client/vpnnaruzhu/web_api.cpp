@@ -5,8 +5,12 @@
 #include <QNetworkReply>
 #include <QJsonDocument>
 #include <QNetworkRequest>
+#include <QtEnvironmentVariables>
 
-static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comment)
+#include <filesystem>
+
+static QJsonDocument getJsonFromReply(QNetworkReply* reply,
+    const QString &comment)
 {
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray r = reply->readAll();
@@ -22,6 +26,8 @@ static QJsonDocument getJsonFromReply(QNetworkReply* reply, const QString &comme
         }
     } else {
         qDebug() << "Reply failed: " << comment;
+        qDebug() << reply->readAll();
+        reply->deleteLater();
     }
 
     return QJsonDocument();
@@ -35,16 +41,29 @@ static QString getStringFromReply(QNetworkReply* reply, const QString &comment)
         return str;
     } else {
         qDebug() << "Reply failed: " << comment;
+        qDebug() << reply->readAll();
+        reply->deleteLater();
     }
 
     return QString();
 }
 
-void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
+void VpnNaruzhuWebApi::initSimpleRequest(QNetworkRequest &request,
     const QString &url) const
 {
     request.setTransferTimeout(10000);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
+    request.setUrl(url);
+}
+
+void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
+    const QString &url, bool is_json) const
+{
+    request.setTransferTimeout(10000);
+    if (is_json) {
+        request.setHeader(QNetworkRequest::ContentTypeHeader,
+            "application/json");
+    }
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
@@ -52,7 +71,8 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     request.setUrl(url);
 }
 
-QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(const QNetworkRequest &request) const
+QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(
+    const QNetworkRequest &request) const
 {
     QNetworkReply *reply;
     reply = amnApp->networkManager()->get(request);
@@ -67,11 +87,11 @@ QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(const QNetworkRequest &request)
 QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
 {
     QString url = getApiBaseUrl()
-                + "/api/v1/mobile_request?public_request_id="
+                + "/client-api/v1/get-request?public_request_id="
                 + getPublicRequestId();
 
     QNetworkRequest request;
-    initRequest(request, url);
+    initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
     return getJsonFromReply(reply, "getDefaultAccountStatus");
@@ -91,14 +111,31 @@ void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
     }
 }
 
-QString VpnNaruzhuWebApi::getDefaultAccountConfig(void) const
+QString VpnNaruzhuWebApi::getDefaultAccountConfig(
+    QString public_request_id) const
 {
     QString url = getApiBaseUrl()
-            + "/api/v1/wg_keys/download_mobile_request_key?public_request_id="
-            + getPublicRequestId();
+            + "/"
+            + connectionMode->getActiveRouteModeRelativePath();
+    if (url.contains('?')) {
+        url += "&";
+    } else {
+        url += "?";
+    }
+    url += "public_request_id=";
+    if (public_request_id.isEmpty()) {
+        url += getPublicRequestId();
+    } else {
+        url += public_request_id;
+    }
+
+    QString iso = m_settings->getVPNCountry();
+    if (iso != "ANY") {
+        url += "&iso_country_code=" + iso;
+    }
 
     QNetworkRequest request;
-    initRequest(request, url);
+    initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
     return getStringFromReply(reply, "getDefaultAccountConfig");
@@ -119,6 +156,20 @@ void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
     }
 }
 
+void VpnNaruzhuWebApi::downloadFile(const QString &url, QFile &file) const
+{
+    QNetworkRequest request;
+    request.setTransferTimeout(10000);
+    request.setUrl(url);
+
+    QNetworkReply *reply = replyGetRequest(request);
+    file.open(QFile::WriteOnly);
+    file.write(reply->readAll());
+    file.flush();
+    file.close();
+    reply->deleteLater();
+}
+
 QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
 {
     QNetworkRequest request;
@@ -130,11 +181,36 @@ QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
-void VpnNaruzhuWebApi::updateExternalSettings(void) const
+static bool is_test_run(void)
 {
-    QJsonDocument config = downloadJsonFile(amnezia_config_url);
+    QString test_env = qgetenv("VPNNARUZHU_TEST");
+    return !test_env.isEmpty();
+}
+
+QString VpnNaruzhuWebApi::getExternalConfigUrl(void) const
+{
+    if (is_test_run()) {
+        return external_config_test_url;
+    } else {
+        return external_config_url;
+    }
+}
+
+QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
+{
+    if (is_test_run()) {
+        return smart_routs_test_url;
+    } else {
+        return smart_routs_url;
+    }
+}
+
+void VpnNaruzhuWebApi::updateExternalSettings(void)
+{
+    QString config_url = getExternalConfigUrl();
+    QJsonDocument config = downloadJsonFile(config_url);
     if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << amnezia_config_url;
+        qDebug() << "Cannot download amnezia config: " << config_url;
     } else {
         QString apiBaseUrl = config["apiBaseUrl"].toString();
         m_settings->setApiBaseUrl(apiBaseUrl);
@@ -148,14 +224,35 @@ void VpnNaruzhuWebApi::updateExternalSettings(void) const
         if (dns2 != "") {
             m_settings->setSecondaryDns(dns2);
         }
+
+        QString support_link = config["supportLink"].toString();
+        if (support_link != "") {
+            m_settings->setSupportLink(support_link);
+        }
+
+        QString newAboutLink = config["aboutLink"].toString();
+        if (newAboutLink != "") {
+            aboutLink = newAboutLink;
+        }
+
+        QJsonDocument connections_config = QJsonDocument(
+            config["connections"].toArray());
+        connectionMode->updateConfig(connections_config);
+        uint64_t numbeOfModes = connectionMode->getNumberOfModes();
+        if (numbeOfModes == 1) {
+            // if new config contains only 1 Mode, needs to update settings
+            VPNNRouteMode mode = connectionMode->getActiveRouteMode();
+            connectionMode->setRouteMode(mode);
+        }
     }
 }
 
 void VpnNaruzhuWebApi::updateSmartRouting(void) const
 {
-    QJsonDocument json_doc = downloadJsonFile(smart_routs_url);
+    QString url = getSmartRoutesListUrl();
+    QJsonDocument json_doc = downloadJsonFile(url);
     if (json_doc.isEmpty()) {
-        qDebug() << "Cannot download smart routs: " << smart_routs_url;
+        qDebug() << "Cannot download smart routs: " << url;
     } else {
         m_vpnConnection->clearExcludeRouteList();
         QJsonArray json_array = json_doc.array();
@@ -174,4 +271,76 @@ void VpnNaruzhuWebApi::updateSmartRouting(void) const
             }
         }
     }
+}
+
+QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
+{
+    QString url = getApiBaseUrl()
+            + "/client-api/v1/countries";
+
+    QNetworkRequest request;
+    initSimpleRequest(request, url);
+
+    QNetworkReply* reply = replyGetRequest(request);
+    return getJsonFromReply(reply, "getListOfCounties");
+}
+
+bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
+{
+    QString config_url = getExternalConfigUrl();
+    QJsonDocument config = downloadJsonFile(config_url);
+    if (config.isEmpty()) {
+        qDebug() << "Cannot download amnezia config: " << config_url;
+    } else {
+        QString external_version = config["updateInfo"]["availableVersion"].toString();
+        QVersionNumber new_version = QVersionNumber::fromString(external_version);
+        QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
+        if (new_version > cur_version) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+QString VpnNaruzhuWebApi::downloadNewApp(void) const
+{
+    QString config_url = getExternalConfigUrl();
+    QJsonDocument config = downloadJsonFile(config_url);
+    std::filesystem::path new_path;
+    if (config.isEmpty()) {
+        qDebug() << "Cannot download amnezia config: " << config_url;
+    } else {
+        QTemporaryFile temp_file;
+        temp_file.setAutoRemove(false);
+        if (temp_file.open()) {
+            new_path = std::filesystem::path(temp_file.fileName().toStdString());
+            new_path.replace_filename(new_path.filename().string() + ".exe");
+            temp_file.rename(new_path.string().c_str());
+        }
+
+        QString link = config["updateInfo"]["downloadUrl"].toString();
+        downloadFile(link, temp_file);
+        temp_file.flush();
+        temp_file.close();
+    }
+
+    return new_path.string().c_str();
+}
+
+void VpnNaruzhuWebApi::downloadAndInstallNewApp(void) const
+{
+    QString path = downloadNewApp();
+    installNewApp(path);
+}
+
+void VpnNaruzhuWebApi::installNewApp(QString &path) const
+{
+    QProcess::startDetached(path);
+}
+
+QString VpnNaruzhuWebApi::getUUIDLastSymbols(void) const
+{
+    QString uuid = m_settings->getInstallationUuid(true);
+    return uuid.right(4);
 }

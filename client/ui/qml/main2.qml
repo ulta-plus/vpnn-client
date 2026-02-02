@@ -20,16 +20,37 @@ Window  {
     visible: true
     width: GC.screenWidth
     height: GC.screenHeight
-    minimumWidth: GC.isDesktop() ? 360 : 0
-    minimumHeight: GC.isDesktop() ? 640 : 0
-    maximumWidth: 600
-    maximumHeight: 800
+    minimumWidth: 375
+    minimumHeight: 727
+    maximumWidth: 375
+    maximumHeight: 727
 
-    color: AmneziaStyle.color.midnightBlack
+    color: VPNNaruzhuStyle.color.backGround
 
     onClosing: function(close) {
         close.accepted = false
         PageController.closeWindow()
+    }
+
+    onActiveChanged: {
+        VPNNWebApi.updateExternalSettings()
+        if (active && VPNNWebApi.isNewVersionAvailable()) {
+            var headerText = qsTr('Do you want to update VPNNaruzhu?')
+            var deacription = qsTr('There is a new VPNNaruzhu version')
+            var yesButtonText = qsTr("Yes")
+            var noButtonText = qsTr("No")
+            var yesButtonFunction = function() {
+                VPNNWebApi.downloadAndInstallNewApp()
+            }
+            var noButtonFunction = function() {
+            }
+            showQuestionDrawer(headerText, deacription, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+        }
+
+        VPNNWebApi.updateDefaultAccountStatus()
+        if (!ServersModel.isDefaultAccountActive() && ConnectionController.isConnected) {
+            ConnectionController.closeConnection()
+        }
     }
 
     Item { // This item is needed for focus handling
@@ -66,8 +87,6 @@ Window  {
             root.show()
             root.raise()
             root.requestActivate()
-            VPNNWebApi.updateExternalSettings()
-            VPNNWebApi.updateDefaultAccountStatus()
         }
 
         function onHideMainWindow() {

@@ -9,6 +9,7 @@ TextField {
     id: root
 
     property int textSize: 16
+    property int radius : 16
     property string textColor: VPNNaruzhuStyle.color.textFieldText
     property string borderColor: VPNNaruzhuStyle.color.textFieldBorder
     property string backgroundColor: VPNNaruzhuStyle.color.textFieldBackgroundColor
@@ -33,7 +34,7 @@ TextField {
     }
 
     background: Rectangle {
-        radius: 16
+        radius: root.radius
         color: root.getBackgroundColor()
         border.color: root.getBorderColor()
         border.width: 1

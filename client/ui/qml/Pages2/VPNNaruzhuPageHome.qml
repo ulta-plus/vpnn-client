@@ -36,12 +36,10 @@ PageType {
     }
 
     Connections {
-        target: ConnectionController
+        target: VPNNWebApi
 
-        function onConnectionStateChanged() {
-            if (ConnectionController.isConnected || !ConnectionController.isConnectionInProgress) {
-                refreshAccountStatusDisplay()
-            }
+        function onDefaultAccountStatusUpdated() {
+            refreshAccountStatusDisplay()
         }
     }
 

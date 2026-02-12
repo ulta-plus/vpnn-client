@@ -109,6 +109,8 @@ void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
     } else {
         m_serversModel->updateDefaultAccountStatus(json_doc);
     }
+
+    emit defaultAccountStatusUpdated();
 }
 
 QString VpnNaruzhuWebApi::getDefaultAccountConfig(
@@ -187,15 +189,6 @@ static bool is_test_run(void)
     return !test_env.isEmpty();
 }
 
-QString VpnNaruzhuWebApi::getExternalConfigUrl(void) const
-{
-    if (is_test_run()) {
-        return external_config_test_url;
-    } else {
-        return external_config_url;
-    }
-}
-
 QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
 {
     if (is_test_run()) {
@@ -205,38 +198,57 @@ QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
     }
 }
 
-void VpnNaruzhuWebApi::updateExternalSettings(void)
+QJsonDocument VpnNaruzhuWebApi::getTestConfig(void) const
 {
-    QString config_url = getExternalConfigUrl();
-    QJsonDocument config = downloadJsonFile(config_url);
+    QJsonDocument config = downloadJsonFile(external_config_test_url);
     if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << config_url;
+        qDebug() << "Cannot download test external config"
+                 << external_config_test_url;
+    }
+
+    return config;
+}
+
+QJsonDocument VpnNaruzhuWebApi::getExternalConfig(void) const
+{
+    for (const auto &url: external_config_urls) {
+        QJsonDocument config = downloadJsonFile(url);
+        if (!config.isEmpty()) {
+            return config;
+        } else {
+            qDebug() << "Cannot download test external config" << url;
+        }
+    }
+
+    return QJsonDocument();
+}
+
+QJsonDocument VpnNaruzhuWebApi::getConfig(void) const
+{
+    if (is_test_run()) {
+        return getTestConfig();
     } else {
-        QString apiBaseUrl = config["apiBaseUrl"].toString();
-        m_settings->setApiBaseUrl(apiBaseUrl);
+        return getExternalConfig();
+    }
 
-        QString dns1 = config["dns1"].toString();
-        if (dns1 != "") {
-            m_settings->setPrimaryDns(dns1);
-        }
+    return QJsonDocument();
+}
 
-        QString dns2 = config["dns2"].toString();
-        if (dns2 != "") {
-            m_settings->setSecondaryDns(dns2);
-        }
+void VpnNaruzhuWebApi::initSettings(void)
+{
+    QString dns1 = external_config["dns1"].toString();
+    if (dns1 != "") {
+        m_settings->setPrimaryDns(dns1);
+    }
 
-        QString support_link = config["supportLink"].toString();
-        if (support_link != "") {
-            m_settings->setSupportLink(support_link);
-        }
+    QString dns2 = external_config["dns2"].toString();
+    if (dns2 != "") {
+        m_settings->setSecondaryDns(dns2);
+    }
 
-        QString newAboutLink = config["aboutLink"].toString();
-        if (newAboutLink != "") {
-            aboutLink = newAboutLink;
-        }
-
-        QJsonDocument connections_config = QJsonDocument(
-            config["connections"].toArray());
+    QJsonDocument connections_config = QJsonDocument(
+        external_config["connections"].toArray());
+    if (!connections_config.isEmpty()) {
         connectionMode->updateConfig(connections_config);
         uint64_t numbeOfModes = connectionMode->getNumberOfModes();
         if (numbeOfModes == 1) {
@@ -244,6 +256,15 @@ void VpnNaruzhuWebApi::updateExternalSettings(void)
             VPNNRouteMode mode = connectionMode->getActiveRouteMode();
             connectionMode->setRouteMode(mode);
         }
+    }
+}
+
+void VpnNaruzhuWebApi::updateExternalSettings(void)
+{
+    QJsonDocument new_config = getConfig();
+    if (!new_config.isEmpty()) {
+        external_config = new_config;
+        initSettings();
     }
 }
 
@@ -287,17 +308,11 @@ QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
 
 bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
 {
-    QString config_url = getExternalConfigUrl();
-    QJsonDocument config = downloadJsonFile(config_url);
-    if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << config_url;
-    } else {
-        QString external_version = config["updateInfo"]["availableVersion"].toString();
-        QVersionNumber new_version = QVersionNumber::fromString(external_version);
-        QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
-        if (new_version > cur_version) {
-            return true;
-        }
+    QString external_version = external_config["updateInfo"]["availableVersion"].toString();
+    QVersionNumber new_version = QVersionNumber::fromString(external_version);
+    QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
+    if (new_version > cur_version) {
+        return true;
     }
 
     return false;
@@ -305,25 +320,19 @@ bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
 
 QString VpnNaruzhuWebApi::downloadNewApp(void) const
 {
-    QString config_url = getExternalConfigUrl();
-    QJsonDocument config = downloadJsonFile(config_url);
     std::filesystem::path new_path;
-    if (config.isEmpty()) {
-        qDebug() << "Cannot download amnezia config: " << config_url;
-    } else {
-        QTemporaryFile temp_file;
-        temp_file.setAutoRemove(false);
-        if (temp_file.open()) {
-            new_path = std::filesystem::path(temp_file.fileName().toStdString());
-            new_path.replace_filename(new_path.filename().string() + ".exe");
-            temp_file.rename(new_path.string().c_str());
-        }
-
-        QString link = config["updateInfo"]["downloadUrl"].toString();
-        downloadFile(link, temp_file);
-        temp_file.flush();
-        temp_file.close();
+    QTemporaryFile temp_file;
+    temp_file.setAutoRemove(false);
+    if (temp_file.open()) {
+        new_path = std::filesystem::path(temp_file.fileName().toStdString());
+        new_path.replace_filename(new_path.filename().string() + ".exe");
+        temp_file.rename(new_path.string().c_str());
     }
+
+    QString link = external_config["updateInfo"]["downloadUrl"].toString();
+    downloadFile(link, temp_file);
+    temp_file.flush();
+    temp_file.close();
 
     return new_path.string().c_str();
 }

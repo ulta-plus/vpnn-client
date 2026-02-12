@@ -150,14 +150,6 @@ public:
     }
     */
 
-    QString apiBaseUrl() const
-    {
-        return value("Conf/apiBaseUrl", "https://mobile.vvppnn.click").toString();
-    }
-    void setApiBaseUrl(const QString &apiBaseUrl)
-    {
-        setValue("Conf/apiBaseUrl", apiBaseUrl);
-    }
     void setVPNNRouteMode(int mode)
     {
         setValue("Conf/VPNNRouteMode", mode);
@@ -173,14 +165,6 @@ public:
     QString getVPNCountry(void) const
     {
         return value("Conf/VPNCountry", "ANY").toString();
-    }
-    void setSupportLink(const QString &support_link)
-    {
-        setValue("Conf/VpnnSupportLink", support_link);
-    }
-    QString getSupportLink(void) const
-    {
-        return value("Conf/VpnnSupportLink", "https://t.me/vpn_naruzhu_support_bot").toString();
     }
 
     QString primaryDns() const;

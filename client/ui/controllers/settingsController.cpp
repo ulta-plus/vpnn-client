@@ -440,8 +440,3 @@ void SettingsController::disableHomeAdLabel()
     m_settings->disableHomeAdLabel();
     emit isHomeAdLabelVisibleChanged(false);
 }
-
-QString SettingsController::vpnNaruzhuGetApiBaseUrl() const
-{
-    return m_settings->apiBaseUrl();
-}

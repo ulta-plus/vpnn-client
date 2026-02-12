@@ -4651,52 +4651,52 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="274"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="273"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="173"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="172"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="60"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="59"/>
         <source>Subscription ended</source>
         <translation>Подписка закончилась</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="270"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="269"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="273"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="272"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="275"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="274"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="53"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="52"/>
         <source>Left </source>
         <translation>Осталось </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="53"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="52"/>
         <source> days</source>
         <translation> дней</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="58"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="57"/>
         <source>Active until </source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="333"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="332"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>

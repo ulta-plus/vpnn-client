@@ -136,6 +136,7 @@
         <file>ui/qml/Controls2/VPNNaruzhuYesNoNotification.qml</file>
         <file>ui/qml/Controls2/VPNNaruzhuTextField.qml</file>
         <file>ui/qml/Controls2/VPNNaruzhuButton.qml</file>
+        <file>ui/qml/Controls2/VPNNDownloaderWindow.qml</file>
         <file>ui/qml/Controls2/BackButtonType.qml</file>
         <file>ui/qml/Controls2/BasicButtonType.qml</file>
         <file>ui/qml/Controls2/BusyIndicatorType.qml</file>
@@ -262,7 +263,7 @@
         <file>ui/qml/Components/OtpCodeDrawer.qml</file>
         <file>ui/qml/Components/AwgTextField.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiSubscriptionKey.qml</file>
-        <file>vpnnaruzhu/default_config.json</file>
+        <file>vpnnaruzhu/default_app_config.json</file>
     </qresource>
     <qresource prefix="/countriesFlags">
         <file>images/flagKit/ANY.svg</file>

@@ -376,7 +376,7 @@
 <context>
     <name>CoreController</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="408"/>
+        <location filename="../core/controllers/coreController.cpp" line="407"/>
         <source>Your account blocked</source>
         <translation>Ваш аккаунт заблокирован</translation>
     </message>
@@ -1791,7 +1791,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiNativeConfigs.qml" line="228"/>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузка</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApiNativeConfigs.qml" line="228"/>
@@ -4565,6 +4565,14 @@ For more detailed information, you can
     </message>
 </context>
 <context>
+    <name>VPNNDownloaderWindow</name>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNDownloaderWindow.qml" line="14"/>
+        <source>Downloading</source>
+        <translation>Загрузка</translation>
+    </message>
+</context>
+<context>
     <name>VPNNaruzhuNotification</name>
     <message>
         <location filename="../ui/qml/Controls2/VPNNaruzhuNotification.qml" line="20"/>
@@ -4651,52 +4659,52 @@ For more detailed information, you can
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="273"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="272"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="172"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="171"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="59"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="58"/>
         <source>Subscription ended</source>
         <translation>Подписка закончилась</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="269"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="268"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="272"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="271"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="274"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="273"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="52"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="51"/>
         <source>Left </source>
         <translation>Осталось </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="52"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="51"/>
         <source> days</source>
         <translation> дней</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="57"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="56"/>
         <source>Active until </source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="332"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="331"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>
@@ -4872,32 +4880,32 @@ For more detailed information, you can
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="38"/>
+        <location filename="../ui/qml/main2.qml" line="42"/>
         <source>Do you want to update VPNNaruzhu?</source>
         <translation>Хотите обновить приложение?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="39"/>
+        <location filename="../ui/qml/main2.qml" line="43"/>
         <source>There is a new VPNNaruzhu version</source>
         <translation>Есть новая верия VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="40"/>
+        <location filename="../ui/qml/main2.qml" line="44"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="41"/>
+        <location filename="../ui/qml/main2.qml" line="45"/>
         <source>No</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="221"/>
+        <location filename="../ui/qml/main2.qml" line="226"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="242"/>
+        <location filename="../ui/qml/main2.qml" line="247"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

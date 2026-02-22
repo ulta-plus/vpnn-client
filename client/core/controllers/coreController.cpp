@@ -159,16 +159,15 @@ void CoreController::initControllers()
 
 void CoreController::initVPNNaruzhuExtension()
 {
-    m_webApi.reset(new VpnNaruzhuWebApi( m_settings
-                                       , m_serversModel
-                                       , m_vpnConnection
-                                       , m_engine
-                                       , m_languageModel
-                                       )
-                  );
-    m_engine->rootContext()->setContextProperty("VPNNWebApi", m_webApi.get());
-    m_countriesModel.reset(new VPNNCountriesModel(this, m_webApi, m_settings));
-    m_engine->rootContext()->setContextProperty("VPNNCountriesModel", m_countriesModel.get());
+    m_vpnnApp.reset(new VpnNaruzhuApp( m_settings
+                                     , m_serversModel
+                                     , m_vpnConnection
+                                     , m_engine
+                                     , m_languageModel
+                                     )
+                    );
+    m_engine->rootContext()->setContextProperty("VPNNApp", m_vpnnApp.get());
+    m_webApi = m_vpnnApp->getWebApi();
 
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
         m_sitesController.get(), &SitesController::addSite);

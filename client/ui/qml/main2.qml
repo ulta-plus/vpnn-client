@@ -27,6 +27,10 @@ Window  {
 
     color: VPNNaruzhuStyle.color.backGround
 
+    VPNNDownloaderWindow {
+        id: downloaderWindow
+    }
+
     onClosing: function(close) {
         close.accepted = false
         PageController.closeWindow()
@@ -34,12 +38,13 @@ Window  {
 
     onActiveChanged: {
         VPNNWebApi.updateExternalSettings()
-        if (active && VPNNWebApi.isNewVersionAvailable()) {
+        if (active && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloader.inProgress()) {
             var headerText = qsTr('Do you want to update VPNNaruzhu?')
             var deacription = qsTr('There is a new VPNNaruzhu version')
             var yesButtonText = qsTr("Yes")
             var noButtonText = qsTr("No")
             var yesButtonFunction = function() {
+                downloaderWindow.show()
                 VPNNWebApi.downloadAndInstallNewApp()
             }
             var noButtonFunction = function() {

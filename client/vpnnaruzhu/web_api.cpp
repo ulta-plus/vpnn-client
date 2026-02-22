@@ -9,6 +9,35 @@
 
 #include <filesystem>
 
+VpnNaruzhuWebApi::VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
+    const QSharedPointer<ServersModel> &sm,
+    const QSharedPointer<VpnConnection> &vpnc,
+    QQmlApplicationEngine* engine,
+    QSharedPointer<LanguageModel> &lm,
+    QSharedPointer<VpnNaruzhuDownloader> &d)
+        : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
+            m_engine(engine), m_languageModel(lm), vpnn_downloader(d)
+{
+    m_importController = (ImportController*)
+        m_engine->rootContext()->objectForName("ImportController");
+
+    if (default_app_config.open(QIODevice::ReadOnly)) {
+        external_app_config = QJsonDocument::fromJson(
+            default_app_config.readAll());
+        default_app_config.close();
+    } else {
+        qDebug() << "Cannot open " << default_app_config.fileName();
+    }
+
+    connectionMode.reset(new VPNNConnectionMode(s, s->getAppLanguage()));
+    m_engine->rootContext()->setContextProperty("VPNNConnectionMode",
+        connectionMode.get());
+    connect(m_languageModel.get(), &LanguageModel::updateTranslations,
+        connectionMode.get(), &VPNNConnectionMode::setLocale);
+
+    initSettings();
+}
+
 static QJsonDocument getJsonFromReply(QNetworkReply* reply,
     const QString &comment)
 {
@@ -51,7 +80,7 @@ static QString getStringFromReply(QNetworkReply* reply, const QString &comment)
 void VpnNaruzhuWebApi::initSimpleRequest(QNetworkRequest &request,
     const QString &url) const
 {
-    request.setTransferTimeout(10000);
+    request.setTransferTimeout(TIMEOUT);
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setUrl(url);
 }
@@ -59,7 +88,7 @@ void VpnNaruzhuWebApi::initSimpleRequest(QNetworkRequest &request,
 void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     const QString &url, bool is_json) const
 {
-    request.setTransferTimeout(10000);
+    request.setTransferTimeout(TIMEOUT);
     if (is_json) {
         request.setHeader(QNetworkRequest::ContentTypeHeader,
             "application/json");
@@ -161,7 +190,7 @@ void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
 void VpnNaruzhuWebApi::downloadFile(const QString &url, QFile &file) const
 {
     QNetworkRequest request;
-    request.setTransferTimeout(10000);
+    request.setTransferTimeout(TIMEOUT);
     request.setUrl(url);
 
     QNetworkReply *reply = replyGetRequest(request);
@@ -175,7 +204,7 @@ void VpnNaruzhuWebApi::downloadFile(const QString &url, QFile &file) const
 QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
 {
     QNetworkRequest request;
-    request.setTransferTimeout(10000);
+    request.setTransferTimeout(TIMEOUT);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setUrl(url);
 
@@ -198,20 +227,20 @@ QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
     }
 }
 
-QJsonDocument VpnNaruzhuWebApi::getTestConfig(void) const
+QJsonDocument VpnNaruzhuWebApi::getAppTestConfig(void) const
 {
-    QJsonDocument config = downloadJsonFile(external_config_test_url);
+    QJsonDocument config = downloadJsonFile(external_app_config_test_url);
     if (config.isEmpty()) {
         qDebug() << "Cannot download test external config"
-                 << external_config_test_url;
+                 << external_app_config_test_url;
     }
 
     return config;
 }
 
-QJsonDocument VpnNaruzhuWebApi::getExternalConfig(void) const
+QJsonDocument VpnNaruzhuWebApi::getAppExternalConfig(void) const
 {
-    for (const auto &url: external_config_urls) {
+    for (const auto &url: external_app_config_urls) {
         QJsonDocument config = downloadJsonFile(url);
         if (!config.isEmpty()) {
             return config;
@@ -223,12 +252,12 @@ QJsonDocument VpnNaruzhuWebApi::getExternalConfig(void) const
     return QJsonDocument();
 }
 
-QJsonDocument VpnNaruzhuWebApi::getConfig(void) const
+QJsonDocument VpnNaruzhuWebApi::getAppConfig(void) const
 {
     if (is_test_run()) {
-        return getTestConfig();
+        return getAppTestConfig();
     } else {
-        return getExternalConfig();
+        return getAppExternalConfig();
     }
 
     return QJsonDocument();
@@ -236,18 +265,18 @@ QJsonDocument VpnNaruzhuWebApi::getConfig(void) const
 
 void VpnNaruzhuWebApi::initSettings(void)
 {
-    QString dns1 = external_config["dns1"].toString();
+    QString dns1 = external_app_config["dns1"].toString();
     if (dns1 != "") {
         m_settings->setPrimaryDns(dns1);
     }
 
-    QString dns2 = external_config["dns2"].toString();
+    QString dns2 = external_app_config["dns2"].toString();
     if (dns2 != "") {
         m_settings->setSecondaryDns(dns2);
     }
 
     QJsonDocument connections_config = QJsonDocument(
-        external_config["connections"].toArray());
+        external_app_config["connections"].toArray());
     if (!connections_config.isEmpty()) {
         connectionMode->updateConfig(connections_config);
         uint64_t numbeOfModes = connectionMode->getNumberOfModes();
@@ -261,9 +290,9 @@ void VpnNaruzhuWebApi::initSettings(void)
 
 void VpnNaruzhuWebApi::updateExternalSettings(void)
 {
-    QJsonDocument new_config = getConfig();
-    if (!new_config.isEmpty()) {
-        external_config = new_config;
+    QJsonDocument new_app_config = getAppConfig();
+    if (!new_app_config.isEmpty()) {
+        external_app_config = new_app_config;
         initSettings();
     }
 }
@@ -308,7 +337,7 @@ QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
 
 bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
 {
-    QString external_version = external_config["updateInfo"]["availableVersion"].toString();
+    QString external_version = external_app_config["updateInfo"]["availableVersion"].toString();
     QVersionNumber new_version = QVersionNumber::fromString(external_version);
     QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
     if (new_version > cur_version) {
@@ -329,8 +358,8 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
         temp_file.rename(new_path.string().c_str());
     }
 
-    QString link = external_config["updateInfo"]["downloadUrl"].toString();
-    downloadFile(link, temp_file);
+    QString link = external_app_config["updateInfo"]["downloadUrl"].toString();
+    vpnn_downloader->download(link, temp_file);
     temp_file.flush();
     temp_file.close();
 

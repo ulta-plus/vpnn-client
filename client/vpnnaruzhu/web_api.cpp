@@ -1,7 +1,9 @@
 #include "web_api.h"
+#include "vpnnApp.h"
 #include "amnezia_application.h"
 
 #include <QByteArray>
+#include <QApplication>
 #include <QNetworkReply>
 #include <QJsonDocument>
 #include <QNetworkRequest>
@@ -212,15 +214,9 @@ QJsonDocument VpnNaruzhuWebApi::downloadJsonFile(const QString &url) const
     return getJsonFromReply(reply, "downloadJsonFile");
 }
 
-static bool is_test_run(void)
-{
-    QString test_env = qgetenv("VPNNARUZHU_TEST");
-    return !test_env.isEmpty();
-}
-
 QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
 {
-    if (is_test_run()) {
+    if (vpnn_is_test_run()) {
         return smart_routs_test_url;
     } else {
         return smart_routs_url;
@@ -229,10 +225,23 @@ QString VpnNaruzhuWebApi::getSmartRoutesListUrl(void) const
 
 QJsonDocument VpnNaruzhuWebApi::getAppTestConfig(void) const
 {
-    QJsonDocument config = downloadJsonFile(external_app_config_test_url);
-    if (config.isEmpty()) {
-        qDebug() << "Cannot download test external config"
-                 << external_app_config_test_url;
+    QJsonDocument config;
+    QString local_test_config_path = vpnn_get_path_to_test_config();
+    QFileInfo check_local_config(local_test_config_path);
+    if (check_local_config.exists() && check_local_config.isFile()) {
+        QFile local_test_config = QFile(local_test_config_path);
+        if (local_test_config.open(QIODevice::ReadOnly)) {
+            config = QJsonDocument::fromJson(local_test_config.readAll());
+            local_test_config.close();
+        } else {
+            qDebug() << "Cannot open " << local_test_config.fileName();
+        }
+    } else {
+        config = downloadJsonFile(external_app_config_test_url);
+        if (config.isEmpty()) {
+            qDebug() << "Cannot download test external config"
+                    << external_app_config_test_url;
+        }
     }
 
     return config;
@@ -254,7 +263,7 @@ QJsonDocument VpnNaruzhuWebApi::getAppExternalConfig(void) const
 
 QJsonDocument VpnNaruzhuWebApi::getAppConfig(void) const
 {
-    if (is_test_run()) {
+    if (vpnn_is_test_run()) {
         return getAppTestConfig();
     } else {
         return getAppExternalConfig();

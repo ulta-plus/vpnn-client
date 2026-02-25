@@ -4567,7 +4567,7 @@ For more detailed information, you can
 <context>
     <name>VPNNDownloaderWindow</name>
     <message>
-        <location filename="../ui/qml/Controls2/VPNNDownloaderWindow.qml" line="14"/>
+        <location filename="../ui/qml/Controls2/VPNNDownloaderWindow.qml" line="16"/>
         <source>Downloading</source>
         <translation>Загрузка</translation>
     </message>

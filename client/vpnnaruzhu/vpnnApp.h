@@ -39,4 +39,17 @@ private:
     QSharedPointer<VpnNaruzhuDownloader> vpnn_downloader;
 };
 
+static inline
+bool vpnn_is_test_run(void)
+{
+    QString test_env = qgetenv("VPNNARUZHU_TEST_CONFIG");
+    return !test_env.isEmpty();
+}
+
+static inline
+QString vpnn_get_path_to_test_config(void)
+{
+    return  qgetenv("VPNNARUZHU_TEST_CONFIG");
+}
+
 #endif /* _VPNNARUZHU_APP_H */

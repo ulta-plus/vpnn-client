@@ -25,12 +25,13 @@ public:
 public slots:
     int getCurrentIndex(void) const { return currentIndex; }
     void setCurrentIndex(int i);
+    void refresh(void);
 
 signals:
     void currentIndexChanged(const int index);
 
 protected:
-    QHash<int, QByteArray> roleNames() const override;
+    QHash<int, QByteArray> roleNames(void) const override;
 
 private:
     struct CountryEntry {

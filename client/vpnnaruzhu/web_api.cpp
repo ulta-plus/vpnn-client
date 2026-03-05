@@ -254,7 +254,7 @@ QJsonDocument VpnNaruzhuWebApi::getAppExternalConfig(void) const
         if (!config.isEmpty()) {
             return config;
         } else {
-            qDebug() << "Cannot download test external config" << url;
+            qDebug() << "Cannot download external config" << url;
         }
     }
 

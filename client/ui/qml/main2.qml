@@ -38,26 +38,28 @@ Window  {
 
     property bool is_first_launch: true
     onActiveChanged: {
-        VPNNWebApi.updateExternalSettings()
-        if (is_first_launch && active && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloader.inProgress()) {
-            var headerText = qsTr('Do you want to update VPNNaruzhu?')
-            var deacription = qsTr('There is a new VPNNaruzhu version')
-            var yesButtonText = qsTr("Yes")
-            var noButtonText = qsTr("No")
-            var yesButtonFunction = function() {
-                downloaderWindow.show()
-                VPNNWebApi.downloadAndInstallNewApp()
-            }
-            var noButtonFunction = function() {
+        if (active) {
+            VPNNWebApi.updateExternalSettings()
+            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloader.inProgress()) {
+                var headerText = qsTr('Do you want to update VPNNaruzhu?')
+                var deacription = qsTr('There is a new VPNNaruzhu version')
+                var yesButtonText = qsTr("Yes")
+                var noButtonText = qsTr("No")
+                var yesButtonFunction = function() {
+                    downloaderWindow.show()
+                    VPNNWebApi.downloadAndInstallNewApp()
+                }
+                var noButtonFunction = function() {
+                }
+
+                is_first_launch = false
+                showQuestionDrawer(headerText, deacription, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
             }
 
-            is_first_launch = false
-            showQuestionDrawer(headerText, deacription, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
-        }
-
-        VPNNWebApi.updateDefaultAccountStatus()
-        if (!ServersModel.isDefaultAccountActive() && ConnectionController.isConnected) {
-            ConnectionController.closeConnection()
+            VPNNWebApi.updateDefaultAccountStatus()
+            if (!ServersModel.isDefaultAccountActive() && ConnectionController.isConnected) {
+                ConnectionController.closeConnection()
+            }
         }
     }
 

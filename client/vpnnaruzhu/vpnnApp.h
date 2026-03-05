@@ -21,7 +21,14 @@ public:
     QSharedPointer<VpnNaruzhuWebApi> getWebApi(void) const
         { return vpnn_web_api; };
 
+    Q_PROPERTY(bool isAccountBlocked READ isAccountBlocked NOTIFY accoundStatusChanged)
+    bool isAccountBlocked(void) const;
+
 public slots:
+    void updateAccountStatus(void);
+
+signals:
+    void accoundStatusChanged(void) const;
 
 private:
     VpnNaruzhuApp();
@@ -37,6 +44,8 @@ private:
     QSharedPointer<VpnNaruzhuWebApi> vpnn_web_api;
     QSharedPointer<VPNNCountriesModel> vpnn_countries_model;
     QSharedPointer<VpnNaruzhuDownloader> vpnn_downloader;
+
+    bool vpnn_account_blocked = false;
 };
 
 static inline

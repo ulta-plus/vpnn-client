@@ -35,7 +35,9 @@ void VpnNaruzhuDownloader::download(const QString &url,  QFile &file)
         file.close();
 
         if (reply->error() != QNetworkReply::NoError) {
-            qDebug() << reply->errorString();
+            QString error = reply->errorString();
+            qDebug() << error;
+            emit errorOccurred(error);
         } else {
             emit finished();
         }

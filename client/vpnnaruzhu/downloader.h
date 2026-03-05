@@ -19,6 +19,7 @@ public slots:
     bool inProgress() { return in_progress; }
 signals:
     void progressChanged();
+    void errorOccurred(QString error);
     void finished();
 
 private:

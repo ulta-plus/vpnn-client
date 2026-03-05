@@ -4880,32 +4880,32 @@ For more detailed information, you can
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="42"/>
+        <location filename="../ui/qml/main2.qml" line="43"/>
         <source>Do you want to update VPNNaruzhu?</source>
         <translation>Хотите обновить приложение?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="43"/>
+        <location filename="../ui/qml/main2.qml" line="44"/>
         <source>There is a new VPNNaruzhu version</source>
         <translation>Есть новая верия VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="44"/>
+        <location filename="../ui/qml/main2.qml" line="45"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="45"/>
+        <location filename="../ui/qml/main2.qml" line="46"/>
         <source>No</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="226"/>
+        <location filename="../ui/qml/main2.qml" line="229"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="247"/>
+        <location filename="../ui/qml/main2.qml" line="250"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

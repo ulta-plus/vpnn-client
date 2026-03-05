@@ -21,6 +21,10 @@ Window {
         function onFinished() {
             visible = false
         }
+
+        function onErrorOccurred(error) {
+
+        }
     }
 
     ProgressBar {

@@ -79,8 +79,8 @@ private:
 
     QFile default_app_config = QFile(":/vpnnaruzhu/default_app_config.json");
     const QString external_app_config_urls[3] = {
-        "https://storage.googleapis.com/naruzhu/amnezia/config.json",
         "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json",
+        "https://storage.googleapis.com/naruzhu/amnezia/config.json",
         "https://storage.yandexcloud.net/vpnn-web-configs/naruzhu/amnezia/config.json"
     };
     const QString external_app_config_test_url =

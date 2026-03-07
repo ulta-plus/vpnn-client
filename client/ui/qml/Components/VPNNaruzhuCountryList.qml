@@ -17,8 +17,6 @@ ComboBox {
         function onDefaultAccountStatusUpdated() {
             VPNNCountriesModel.refresh()
             root.currentIndex = model.currentIndex
-            selectedCountryImage.source = root.model.get(root.currentIndex).icon
-            selectedCountryName.text = root.model.get(root.currentIndex).name
         }
     }
 
@@ -60,7 +58,6 @@ ComboBox {
             spacing: 0
 
             Image {
-                id: selectedCountryImage
                 Layout.leftMargin: 12
                 Layout.alignment: Qt.AlignLeft
                 width: 20
@@ -69,7 +66,6 @@ ComboBox {
             }
 
             Text {
-                id: selectedCountryName
                 Layout.leftMargin: 10
                 Layout.fillWidth: true
                 Layout.fillHeight: true

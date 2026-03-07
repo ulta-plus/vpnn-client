@@ -73,6 +73,7 @@ private:
     QSharedPointer<VPNNConnectionMode> connectionMode;
     QSharedPointer<VpnNaruzhuDownloader> vpnn_downloader;
 
+    QSharedPointer<QNetworkAccessManager> m_manager;
     const quint64 TIMEOUT = 10000; // milliseconds
     const QString awg_version = "1.5";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;

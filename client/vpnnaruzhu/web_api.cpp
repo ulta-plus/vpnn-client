@@ -1,6 +1,5 @@
 #include "web_api.h"
 #include "vpnnApp.h"
-#include "amnezia_application.h"
 
 #include <QByteArray>
 #include <QApplication>
@@ -20,6 +19,7 @@ VpnNaruzhuWebApi::VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
         : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
             m_engine(engine), m_languageModel(lm), vpnn_downloader(d)
 {
+    m_manager.reset(new QNetworkAccessManager());
     m_importController = (ImportController*)
         m_engine->rootContext()->objectForName("ImportController");
 
@@ -106,7 +106,7 @@ QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(
     const QNetworkRequest &request) const
 {
     QNetworkReply *reply;
-    reply = amnApp->networkManager()->get(request);
+    reply = m_manager->get(request);
 
     QEventLoop wait;
     QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);
@@ -120,6 +120,7 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
     QString url = getApiBaseUrl()
                 + "/client-api/v1/get-request?public_request_id="
                 + getPublicRequestId();
+    qDebug() << "getDefaultAccountStatus: " << url;
 
     QNetworkRequest request;
     initRequest(request, url, false);
@@ -166,6 +167,7 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(
     if (iso != "ANY") {
         url += "&iso_country_code=" + iso;
     }
+    qDebug() << "getDefaultAccountConfig: " << url;
 
     QNetworkRequest request;
     initRequest(request, url, false);

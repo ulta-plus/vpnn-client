@@ -4579,6 +4579,13 @@ For more detailed information, you can
         <source>Downloading</source>
         <translation>Загрузка</translation>
     </message>
+    <message>
+        <location filename="../ui/qml/Controls2/VPNNDownloaderWindow.qml" line="56"/>
+        <source>Download Error.
+Do you want to retry?</source>
+        <translation>Ошибка во время загрузки.
+Хотите попробовать обновить снова?</translation>
+    </message>
 </context>
 <context>
     <name>VPNNaruzhuNotification</name>

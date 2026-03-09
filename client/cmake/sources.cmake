@@ -46,6 +46,7 @@ set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/downloader.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/countriesModel.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/connectionMode.h
+    ${CLIENT_ROOT_DIR}/vpnnaruzhu/downloadController.h
 )
 
 if(NOT IOS AND NOT MACOS_NE)

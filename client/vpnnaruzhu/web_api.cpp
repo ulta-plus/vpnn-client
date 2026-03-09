@@ -15,9 +15,9 @@ VpnNaruzhuWebApi::VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
     const QSharedPointer<VpnConnection> &vpnc,
     QQmlApplicationEngine* engine,
     QSharedPointer<LanguageModel> &lm,
-    QSharedPointer<VpnNaruzhuDownloader> &d)
+    QSharedPointer<VpnnDownloadController> &d)
         : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
-            m_engine(engine), m_languageModel(lm), vpnn_downloader(d)
+            m_engine(engine), m_languageModel(lm), vpnn_downloadController(d)
 {
     m_manager.reset(new QNetworkAccessManager());
     m_importController = (ImportController*)
@@ -370,7 +370,12 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
     }
 
     QString link = external_app_config["updateInfo"]["downloadUrl"].toString();
-    vpnn_downloader->download(link, temp_file);
+
+    QEventLoop wait;
+    QObject::connect(vpnn_downloadController.get(), &VpnnDownloadController::finished, &wait, &QEventLoop::quit);
+    vpnn_downloadController->download(link, new_path.string().c_str());
+    wait.exec();
+
     temp_file.flush();
     temp_file.close();
 

@@ -10,9 +10,9 @@
 
 #include "version.h"
 #include "settings.h"
-#include "downloader.h"
 #include "vpnconnection.h"
 #include "connectionMode.h"
+#include "downloadController.h"
 #include "ui/models/languageModel.h"
 #include "ui/models/servers_model.h"
 #include "ui/controllers/importController.h"
@@ -27,7 +27,7 @@ public:
         const QSharedPointer<VpnConnection> &vpnc,
         QQmlApplicationEngine* engine,
         QSharedPointer<LanguageModel> &lm,
-        QSharedPointer<VpnNaruzhuDownloader> &d);
+        QSharedPointer<VpnnDownloadController> &d);
 
     QJsonDocument getDefaultAccountStatus(void) const;
     QJsonDocument downloadJsonFile(const QString &url) const;
@@ -71,7 +71,7 @@ private:
 
     // VPNN properties
     QSharedPointer<VPNNConnectionMode> connectionMode;
-    QSharedPointer<VpnNaruzhuDownloader> vpnn_downloader;
+    QSharedPointer<VpnnDownloadController> vpnn_downloadController;
 
     QSharedPointer<QNetworkAccessManager> m_manager;
     const quint64 TIMEOUT = 10000; // milliseconds

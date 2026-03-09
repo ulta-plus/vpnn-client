@@ -3,10 +3,12 @@
 #include <QFile>
 #include <QEventLoop>
 #include <QNetworkReply>
+#include <QThread>
 
-void VpnNaruzhuDownloader::download(const QString &url,  QFile &file)
+void VpnNaruzhuDownloader::download(const QString &url, const QString &savePath)
 {
     in_progress = true;
+    QFile file(savePath);
     if (!file.open(QIODevice::WriteOnly)) {
         qDebug() << "Cannot open file for writing " << file.fileName();
         return;
@@ -16,7 +18,7 @@ void VpnNaruzhuDownloader::download(const QString &url,  QFile &file)
     request.setTransferTimeout(TIMEOUT);
     request.setUrl(url);
 
-    QNetworkReply *reply = m_manager.get(request);
+    QNetworkReply *reply = m_manager->get(request);
 
     connect(reply, &QNetworkReply::readyRead, this, [&]() {
         file.write(reply->readAll());
@@ -27,7 +29,7 @@ void VpnNaruzhuDownloader::download(const QString &url,  QFile &file)
 
         if (total > 0) {
             m_progress = qreal(received) / total;
-            emit progressChanged();
+            emit progressChanged(m_progress);
         }
     });
 
@@ -36,8 +38,8 @@ void VpnNaruzhuDownloader::download(const QString &url,  QFile &file)
 
         if (reply->error() != QNetworkReply::NoError) {
             QString error = reply->errorString();
-            qDebug() << error;
-            emit errorOccurred(error);
+            qDebug() << "download(): " << error;
+            emit errorOccurred();
         } else {
             emit finished();
         }

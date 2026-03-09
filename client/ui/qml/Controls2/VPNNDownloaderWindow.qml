@@ -14,29 +14,53 @@ Window {
 
     visible: false
     title: qsTr("Downloading")
+    color: VPNNaruzhuStyle.color.backGround
 
     Connections {
-        target: VPNNDownloader
+        target: VPNNDownloadController
 
         function onFinished() {
             visible = false
         }
 
-        function onErrorOccurred(error) {
-
+        function onErrorOccurred() {
+            retryDownload.visible = true
         }
     }
 
     ProgressBar {
+        id: progreeBar
         anchors.centerIn: parent
         width: parent.width - 40
-        value: VPNNDownloader.progress
+        value: VPNNDownloadController.progress
     }
 
     Text {
+        id: info
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.topMargin: 20
-        text: Math.round(VPNNDownloader.progress * 100) + "%"
+        color: VPNNaruzhuStyle.color.notificationText
+        font.family: VPNNaruzhuStyle.font
+        text: Math.round(VPNNDownloadController.progress * 100) + "%"
+    }
+
+    VPNNaruzhuYesNoNotification {
+        id: retryDownload
+        visible: false
+
+        radius: 0
+        implicitHeight: 120
+        implicitWidth: 300
+
+        text: qsTr('Download Error.\nDo you want to retry?')
+
+        withYesClick: function() {
+            retryDownload.visible = false
+            VPNNWebApi.downloadAndInstallNewApp()
+        }
+        withNoClick: function() {
+            root.visible = false
+        }
     }
 }

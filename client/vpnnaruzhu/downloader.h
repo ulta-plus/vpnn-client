@@ -11,19 +11,28 @@ class VpnNaruzhuDownloader: public QObject
     Q_PROPERTY(qreal progress READ getProgress NOTIFY progressChanged)
 
 public:
-    explicit VpnNaruzhuDownloader() {}
-    Q_INVOKABLE void download(const QString &url, QFile &file);
-    qreal getProgress() const { return m_progress; }
+    explicit VpnNaruzhuDownloader(QObject* parent = nullptr) : QObject(parent)
+    {
+        m_manager = new QNetworkAccessManager(this);
+    }
+
+    ~VpnNaruzhuDownloader()
+    {
+        delete m_manager;
+    }
 
 public slots:
-    bool inProgress() { return in_progress; }
+    Q_INVOKABLE void download(const QString &url, const QString &savePath);
+    Q_INVOKABLE bool inProgress() { return in_progress; }
+    Q_INVOKABLE qreal getProgress() const { return m_progress; }
+
 signals:
-    void progressChanged();
-    void errorOccurred(QString error);
-    void finished();
+    void progressChanged(qreal p);
+    void errorOccurred(void);
+    void finished(void);
 
 private:
-    QNetworkAccessManager m_manager;
+    QNetworkAccessManager* m_manager = nullptr;
     qreal m_progress = 0.0;
     bool in_progress = false;
 

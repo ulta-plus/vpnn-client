@@ -10,15 +10,16 @@ VpnNaruzhuApp::VpnNaruzhuApp(const std::shared_ptr<Settings> &s,
             amnezia_languageModel(lm)
 {
     vpnn_downloader.reset(new VpnNaruzhuDownloader());
-    amnezia_engine->rootContext()->setContextProperty("VPNNDownloader",
-        vpnn_downloader.get());
+    vpnn_downloadController.reset(new VpnnDownloadController(vpnn_downloader));
+    amnezia_engine->rootContext()->setContextProperty("VPNNDownloadController",
+        vpnn_downloadController.get());
 
     vpnn_web_api.reset(new VpnNaruzhuWebApi( amnezia_settings
                                            , amnezia_serversModel
                                            , amnezia_vpnConnection
                                            , amnezia_engine
                                            , amnezia_languageModel
-                                           , vpnn_downloader
+                                           , vpnn_downloadController
                                            )
                       );
     amnezia_engine->rootContext()->setContextProperty("VPNNWebApi",

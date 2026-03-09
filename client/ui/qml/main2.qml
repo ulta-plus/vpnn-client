@@ -40,7 +40,7 @@ Window  {
     onActiveChanged: {
         if (active) {
             VPNNWebApi.updateExternalSettings()
-            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloader.inProgress()) {
+            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloadController.inProgress()) {
                 var headerText = qsTr('Do you want to update VPNNaruzhu?')
                 var deacription = qsTr('There is a new VPNNaruzhu version')
                 var yesButtonText = qsTr("Yes")

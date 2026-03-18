@@ -51,6 +51,7 @@ public slots:
     QString getDefaultAccountConfig(QString public_request_id = QString()) const;
     QString getApiBaseUrl(void) const { return external_app_config["apiBaseUrl"].toString(); }
     QString getSupportLink(void) const { return external_app_config["supportLink"].toString(); }
+    QString getTgChannelLink(void) const { return external_app_config["tgChannelLink"].toString(); }
     QString getAboutLink(void) const { return external_app_config["aboutLink"].toString(); }
     QString getUUIDLastSymbols(void) const;
 

@@ -45,6 +45,8 @@ private:
     QVector<QVariantMap> countriesMap;
     QSharedPointer<VpnNaruzhuWebApi> webApi;
     std::shared_ptr<Settings> settings;
+
+    QFile default_country_list = QFile(":/vpnnaruzhu/default_country_list.json");
 };
 
 #endif /* _VPNN_COUNTRIES_MODEL_H */

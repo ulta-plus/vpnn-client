@@ -4567,7 +4567,7 @@ For more detailed information, you can
 <context>
     <name>VPNNCountriesModel</name>
     <message>
-        <location filename="../vpnnaruzhu/countriesModel.cpp" line="18"/>
+        <location filename="../vpnnaruzhu/countriesModel.cpp" line="29"/>
         <source>Любая страна</source>
         <translation type="unfinished"></translation>
     </message>

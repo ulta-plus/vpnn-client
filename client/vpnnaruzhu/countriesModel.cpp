@@ -4,9 +4,20 @@ void
 VPNNCountriesModel::refresh(void)
 {
     QJsonDocument json_doc = webApi->getListOfCounties();
-    if (json_doc.isEmpty() && !countriesList.isEmpty()) {
-        qDebug() << "Cannot download new country list, keep old.";
-        return;
+    if (json_doc.isEmpty()) {
+        qDebug() << "Cannot download new country list.";
+        if (!countriesList.isEmpty()) {
+            qDebug() << "Keep old country list.";
+            return;
+        }
+
+        if (default_country_list.open(QIODevice::ReadOnly)) {
+            qDebug() << "Use default country list.";
+            json_doc = QJsonDocument::fromJson(default_country_list.readAll());
+            default_country_list.close();
+        } else {
+            qDebug() << "Cannot open " << default_country_list.fileName();
+        }
     }
 
     beginResetModel();

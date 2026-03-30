@@ -21,6 +21,7 @@ PageType {
     id: root
 
     property var defaultConfig: ServersModel.getDefaultAccount()
+    property var defaultEmail: defaultConfig.email
 
     Connections {
         objectName: "pageControllerConnections"
@@ -36,12 +37,10 @@ PageType {
     }
 
     Connections {
-        target: ConnectionController
+        target: VPNNWebApi
 
-        function onConnectionStateChanged() {
-            if (ConnectionController.isConnected || !ConnectionController.isConnectionInProgress) {
-                refreshAccountStatusDisplay()
-            }
+        function onDefaultAccountStatusUpdated() {
+            refreshAccountStatusDisplay()
         }
     }
 
@@ -240,7 +239,14 @@ PageType {
                     Layout.preferredHeight: 18
 
                     Text {
-                        text: defaultConfig.email
+                        text: {
+                            if (defaultEmail.length > 45) {
+                                return defaultEmail.slice(0, 41) + ' ...'
+                            } else {
+                                defaultEmail
+                            }
+                        }
+
                         color: '#FFFFFF'
                         font.pixelSize: 14
                         font.weight: Font.DemiBold

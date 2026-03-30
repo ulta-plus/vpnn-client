@@ -1,0 +1,33 @@
+{
+    "apiBaseUrl": "https://mobile.vvppnn.click",
+    "dns1": "192.168.63.254",
+    "dns2": "8.8.8.8",
+    "supportLink": "https://t.me/vpn_naruzhu_support_bot",
+    "tgChannelLink": "https://t.me/vpnnaruzhu",
+    "aboutLink": "https://nrz.monster/profile",
+    "websiteLink": "https://nrz.monster",
+    "updateInfo": {
+        "availableVersion": "2.2.0.9",
+        "downloadUrl": "https://storage.uubb.website/VPNNaruzhu_x64_2.2.0.9.exe"
+    },
+    "connections": [
+        {
+            "title": "Умный режим",
+            "localizedTitle" : {
+                "en" : "Smart Mode",
+                "ru" : "Умный режим"
+            },
+            "relativePath": "client-api/v1/download-awg-key?key_type=smart",
+            "keyType": "smart"
+        },
+        {
+            "title": "Напрямую",
+            "localizedTitle" : {
+                "en" : "Direct Mode",
+                "ru" : "Напрямую"
+            },
+            "relativePath": "client-api/v1/download-awg-key?key_type=direct",
+            "keyType": "direct"
+        }
+    ]
+}

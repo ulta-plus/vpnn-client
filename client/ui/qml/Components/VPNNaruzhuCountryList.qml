@@ -11,6 +11,15 @@ ComboBox {
 
     model: VPNNCountriesModel
 
+    Connections {
+        target: VPNNWebApi
+
+        function onDefaultAccountStatusUpdated() {
+            VPNNCountriesModel.refresh()
+            root.currentIndex = model.currentIndex
+        }
+    }
+
     currentIndex: model.currentIndex
     onActivated: {
         model.currentIndex = root.currentIndex
@@ -37,6 +46,7 @@ ComboBox {
     }
 
     contentItem: Item {
+        id: selectedCountry
         anchors.fill: root
         implicitWidth: root.width
         implicitHeight: root.height

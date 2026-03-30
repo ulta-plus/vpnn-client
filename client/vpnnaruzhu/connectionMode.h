@@ -16,9 +16,15 @@ class VPNNConnectionMode: public QObject
 public:
     VPNNConnectionMode(const std::shared_ptr<Settings> &s
         ,const QLocale &l) : m_settings(s), locale(l.name()) {}
-    void updateConfig(const QJsonDocument &new_config) { config = new_config; }
+    void updateConfig(const QJsonDocument &new_config) {
+        config = new_config;
+        emit configUpdated();
+    }
     VPNNRouteMode getActiveRouteMode(void) const;
     QString getActiveRouteModeRelativePath(void) const;
+
+signals:
+    void configUpdated(void) const;
 
 public slots:
     uint64_t getNumberOfModes(void) const;

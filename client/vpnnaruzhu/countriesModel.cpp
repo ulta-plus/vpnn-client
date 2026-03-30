@@ -1,23 +1,40 @@
 #include "countriesModel.h"
 
-VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
-        const QSharedPointer<VpnNaruzhuWebApi> &web_api,
-        const std::shared_ptr<Settings> &s)
-    : QAbstractListModel(parent), webApi(web_api), settings(s)
+void
+VPNNCountriesModel::refresh(void)
 {
     QJsonDocument json_doc = webApi->getListOfCounties();
+    if (json_doc.isEmpty()) {
+        qDebug() << "Cannot download new country list.";
+        if (!countriesList.isEmpty()) {
+            qDebug() << "Keep old country list.";
+            return;
+        }
+
+        if (default_country_list.open(QIODevice::ReadOnly)) {
+            qDebug() << "Use default country list.";
+            json_doc = QJsonDocument::fromJson(default_country_list.readAll());
+            default_country_list.close();
+        } else {
+            qDebug() << "Cannot open " << default_country_list.fileName();
+        }
+    }
+
+    beginResetModel();
     QJsonArray countriesArray = json_doc["data"]["countries"].toArray();
+    QVector<CountryEntry> newCountriesList;
+    QVector<QVariantMap> newCountriesMap;
 
     CountryEntry entry;
-    entry.name = "Любая страна";
+    entry.name = tr("Любая страна");
     entry.iso = "ANY";
     entry.icon = "qrc:/countriesFlags/images/flagKit/" + entry.iso +".svg";
-    countriesList.push_back(entry);
+    newCountriesList.push_back(entry);
     QVariantMap map;
     map.insert("name", entry.name);
     map.insert("icon", entry.icon);
     currentIndex = 0;
-    countriesMap.push_back(map);
+    newCountriesMap.push_back(map);
 
     QString cachedVPNCountry = settings->getVPNCountry();
     for (const auto &elem: countriesArray) {
@@ -25,15 +42,27 @@ VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
         entry.name = country["country_label"].toString().split(" ")[1];
         entry.iso = country["iso_country_code"].toString();
         if (entry.iso == cachedVPNCountry) {
-            currentIndex = countriesMap.size();
+            currentIndex = newCountriesMap.size();
         }
         entry.icon = "qrc:/countriesFlags/images/flagKit/" + entry.iso +".svg";
-        countriesList.push_back(entry);
+        newCountriesList.push_back(entry);
         QVariantMap map;
         map.insert("name", entry.name);
         map.insert("icon", entry.icon);
-        countriesMap.push_back(map);
+        newCountriesMap.push_back(map);
     }
+
+    countriesList = std::move(newCountriesList);
+    countriesMap = std::move(newCountriesMap);
+    endResetModel();
+}
+
+VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
+        const QSharedPointer<VpnNaruzhuWebApi> &web_api,
+        const std::shared_ptr<Settings> &s)
+    : QAbstractListModel(parent), webApi(web_api), settings(s)
+{
+    refresh();
 }
 
 int
@@ -67,7 +96,7 @@ VPNNCountriesModel::get(int i) const
 }
 
 QHash<int, QByteArray>
-VPNNCountriesModel::roleNames() const
+VPNNCountriesModel::roleNames(void) const
 {
     QHash<int, QByteArray> roles;
     roles[NameRole] = "name";

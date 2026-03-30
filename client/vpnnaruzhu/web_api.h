@@ -12,6 +12,7 @@
 #include "settings.h"
 #include "vpnconnection.h"
 #include "connectionMode.h"
+#include "downloadController.h"
 #include "ui/models/languageModel.h"
 #include "ui/models/servers_model.h"
 #include "ui/controllers/importController.h"
@@ -25,26 +26,17 @@ public:
         const QSharedPointer<ServersModel> &sm,
         const QSharedPointer<VpnConnection> &vpnc,
         QQmlApplicationEngine* engine,
-        QSharedPointer<LanguageModel> &lm)
-            : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
-                m_engine(engine), m_languageModel(lm)
-    {
-        m_importController = (ImportController*)
-            m_engine->rootContext()->objectForName("ImportController");
-
-        connectionMode.reset(new VPNNConnectionMode(s, s->getAppLanguage()));
-        m_engine->rootContext()->setContextProperty("VPNNConnectionMode",
-            connectionMode.get());
-        connect(m_languageModel.get(), &LanguageModel::updateTranslations,
-            connectionMode.get(), &VPNNConnectionMode::setLocale);
-        updateExternalSettings();
-    }
+        QSharedPointer<LanguageModel> &lm,
+        QSharedPointer<VpnnDownloadController> &d);
 
     QJsonDocument getDefaultAccountStatus(void) const;
     QJsonDocument downloadJsonFile(const QString &url) const;
     QJsonDocument getListOfCounties(void) const;
 
     void downloadFile(const QString &url, QFile &file) const;
+
+signals:
+    void defaultAccountStatusUpdated(void) const;
 
 public slots:
     void updateExternalSettings(void);
@@ -57,8 +49,10 @@ public slots:
     QString getAwgVersion(void) const { return awg_version; }
     QString getAppVersion(void) const { return APP_VERSION; }
     QString getDefaultAccountConfig(QString public_request_id = QString()) const;
-    QString getSupportLink(void) const { return m_settings->getSupportLink(); }
-    QString getAboutLink(void) const { return aboutLink; }
+    QString getApiBaseUrl(void) const { return external_app_config["apiBaseUrl"].toString(); }
+    QString getSupportLink(void) const { return external_app_config["supportLink"].toString(); }
+    QString getTgChannelLink(void) const { return external_app_config["tgChannelLink"].toString(); }
+    QString getAboutLink(void) const { return external_app_config["aboutLink"].toString(); }
     QString getUUIDLastSymbols(void) const;
 
     bool isNewVersionAvailable(void) const;
@@ -66,31 +60,37 @@ public slots:
 private:
     VpnNaruzhuWebApi();
 
+    QJsonDocument external_app_config;
+    void initSettings(void);
+
     std::shared_ptr<Settings> m_settings;
     QSharedPointer<ServersModel> m_serversModel;
     QSharedPointer<VpnConnection> m_vpnConnection;
     QQmlApplicationEngine* m_engine;
     ImportController* m_importController;
     QSharedPointer<LanguageModel> m_languageModel;
-    QSharedPointer<VPNNConnectionMode> connectionMode;
 
+    // VPNN properties
+    QSharedPointer<VPNNConnectionMode> connectionMode;
+    QSharedPointer<VpnnDownloadController> vpnn_downloadController;
+
+    QSharedPointer<QNetworkAccessManager> m_manager;
+    const quint64 TIMEOUT = 10000; // milliseconds
     const QString awg_version = "1.5";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
-    const QString external_config_url =
-        "https://storage.googleapis.com/naruzhu/amnezia/config.json";
-    const QString external_config_test_url =
+
+    QFile default_app_config = QFile(":/vpnnaruzhu/default_app_config.json");
+    const QString external_app_config_urls[3] = {
+        "https://raw.githubusercontent.com/ulta-plus/public/refs/heads/main/naruzhu/amnezia/config.json",
+        "https://storage.googleapis.com/naruzhu/amnezia/config.json",
+        "https://storage.yandexcloud.net/vpnn-web-configs/naruzhu/amnezia/config.json"
+    };
+    const QString external_app_config_test_url =
         "https://storage.googleapis.com/naruzhu/amnezia/test-config.json";
     const QString smart_routs_url =
         "https://storage.googleapis.com/naruzhu/amnezia/local.json";
     const QString smart_routs_test_url =
         "https://storage.googleapis.com/naruzhu/amnezia/test-local.json";
-
-    QString aboutLink = "https://nrz.monster/profil";
-
-    QString getApiBaseUrl(void) const
-    {
-        return m_settings->apiBaseUrl();
-    }
 
     QString getPublicRequestId(void) const
     {
@@ -106,8 +106,10 @@ private:
     QString downloadNewApp(void) const;
     void installNewApp(QString &path) const;
 
-    QString getExternalConfigUrl(void) const;
     QString getSmartRoutesListUrl(void) const;
+    QJsonDocument getAppConfig(void) const;
+    QJsonDocument getAppTestConfig(void) const;
+    QJsonDocument getAppExternalConfig(void) const;
 };
 
 #endif /* _VPNNARUZHU_WEB_API_H */

@@ -224,7 +224,7 @@ PageType {
             mainText: qsTr('Telegram')
 
             onClicked: {
-                Qt.openUrlExternally("https://t.me/vpn_naruzhu")
+                Qt.openUrlExternally(VPNNWebApi.getTgChannelLink())
             }
         }
     }

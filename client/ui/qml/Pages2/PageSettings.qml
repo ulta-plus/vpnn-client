@@ -171,7 +171,7 @@ PageType {
         property bool isVisible: true
         readonly property var clickedHandler: function() {
             GC.coppyUUIDToClipBoard()
-            Qt.openUrlExternally("https://t.me/vpn_naruzhu_support_bot")
+            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
         }
     }
 
@@ -182,7 +182,7 @@ PageType {
         readonly property string leftImagePath: "qrc:/images/controls/chat.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
-            Qt.openUrlExternally("https://t.me/vpn_naruzhu")
+            Qt.openUrlExternally(VPNNWebApi.getTgChannelLink())
         }
     }
 }

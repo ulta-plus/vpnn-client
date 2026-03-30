@@ -49,7 +49,7 @@ Rectangle {
 
         font.pixelSize: root.textSize
         font.weight: 400
-        font.family: 'PT Root UI VF'
+        font.family: VPNNaruzhuStyle.font
     }
 
     RowLayout {

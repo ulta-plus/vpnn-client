@@ -27,29 +27,39 @@ Window  {
 
     color: VPNNaruzhuStyle.color.backGround
 
+    VPNNDownloaderWindow {
+        id: downloaderWindow
+    }
+
     onClosing: function(close) {
         close.accepted = false
         PageController.closeWindow()
     }
 
+    property bool is_first_launch: true
     onActiveChanged: {
-        VPNNWebApi.updateExternalSettings()
-        if (active && VPNNWebApi.isNewVersionAvailable()) {
-            var headerText = qsTr('Do you want to update VPNNaruzhu?')
-            var deacription = qsTr('There is a new VPNNaruzhu version')
-            var yesButtonText = qsTr("Yes")
-            var noButtonText = qsTr("No")
-            var yesButtonFunction = function() {
-                VPNNWebApi.downloadAndInstallNewApp()
-            }
-            var noButtonFunction = function() {
-            }
-            showQuestionDrawer(headerText, deacription, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
-        }
+        if (active) {
+            VPNNWebApi.updateExternalSettings()
+            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloadController.inProgress()) {
+                var headerText = qsTr('Do you want to update VPNNaruzhu?')
+                var deacription = qsTr('There is a new VPNNaruzhu version')
+                var yesButtonText = qsTr("Yes")
+                var noButtonText = qsTr("No")
+                var yesButtonFunction = function() {
+                    downloaderWindow.show()
+                    VPNNWebApi.downloadAndInstallNewApp()
+                }
+                var noButtonFunction = function() {
+                }
 
-        VPNNWebApi.updateDefaultAccountStatus()
-        if (!ServersModel.isDefaultAccountActive() && ConnectionController.isConnected) {
-            ConnectionController.closeConnection()
+                is_first_launch = false
+                showQuestionDrawer(headerText, deacription, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+            }
+
+            VPNNWebApi.updateDefaultAccountStatus()
+            if (!ServersModel.isDefaultAccountActive() && ConnectionController.isConnected) {
+                ConnectionController.closeConnection()
+            }
         }
     }
 

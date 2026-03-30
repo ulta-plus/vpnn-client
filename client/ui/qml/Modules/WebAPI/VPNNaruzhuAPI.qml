@@ -3,7 +3,7 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    readonly property string api_url: SettingsController.vpnNaruzhuGetApiBaseUrl()
+    readonly property string api_url: VPNNWebApi.getApiBaseUrl()
     readonly property string user_agent: VPNNWebApi.getUserAgent()
     readonly property string awg_version: VPNNWebApi.getAwgVersion()
 

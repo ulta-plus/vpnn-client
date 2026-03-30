@@ -974,7 +974,7 @@ QString ServersModel::getPaidUntilDefaultAccountStr(void) const
     QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
 
     QLocale locale = m_settings->getAppLanguage();
-    return locale.toString(last_day, "d MMMM yyyy, h:m");
+    return locale.toString(last_day, "d MMMM yyyy, h:mm");
 }
 
 qint64 ServersModel::getNumberOfActiveDays(void) const

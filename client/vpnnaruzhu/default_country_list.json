@@ -1,0 +1,147 @@
+{
+    "data": {
+        "countries": [
+            {
+                "country_label": "🇦🇪 ОАЭ",
+                "iso_country_code": "AE"
+            },
+            {
+                "country_label": "🇦🇲 Армения",
+                "iso_country_code": "AM"
+            },
+            {
+                "country_label": "🇦🇹 Австрия",
+                "iso_country_code": "AT"
+            },
+            {
+                "country_label": "🇦🇺 Австралия",
+                "iso_country_code": "AU"
+            },
+            {
+                "country_label": "🇧🇪 Бельгия",
+                "iso_country_code": "BE"
+            },
+            {
+                "country_label": "🇧🇬 Болгария",
+                "iso_country_code": "BG"
+            },
+            {
+                "country_label": "🇧🇷 Бразилия",
+                "iso_country_code": "BR"
+            },
+            {
+                "country_label": "🇨🇦 Канада",
+                "iso_country_code": "CA"
+            },
+            {
+                "country_label": "🇨🇭 Швейцария",
+                "iso_country_code": "CH"
+            },
+            {
+                "country_label": "🇨🇿 Чехия",
+                "iso_country_code": "CZ"
+            },
+            {
+                "country_label": "🇩🇪 Германия",
+                "iso_country_code": "DE"
+            },
+            {
+                "country_label": "🇩🇰 Дания",
+                "iso_country_code": "DK"
+            },
+            {
+                "country_label": "🇪🇪 Эстония",
+                "iso_country_code": "EE"
+            },
+            {
+                "country_label": "🇪🇸 Испания",
+                "iso_country_code": "ES"
+            },
+            {
+                "country_label": "🇫🇮 Финляндия",
+                "iso_country_code": "FI"
+            },
+            {
+                "country_label": "🇫🇷 Франция",
+                "iso_country_code": "FR"
+            },
+            {
+                "country_label": "🇬🇧 Великобритания",
+                "iso_country_code": "GB"
+            },
+            {
+                "country_label": "🇬🇪 Грузия",
+                "iso_country_code": "GE"
+            },
+            {
+                "country_label": "🇭🇰 Гонконг",
+                "iso_country_code": "HK"
+            },
+            {
+                "country_label": "🇭🇺 Венгрия",
+                "iso_country_code": "HU"
+            },
+            {
+                "country_label": "🇮🇪 Ирландия",
+                "iso_country_code": "IE"
+            },
+            {
+                "country_label": "🇮🇱 Израиль",
+                "iso_country_code": "IL"
+            },
+            {
+                "country_label": "🇮🇹 Италия",
+                "iso_country_code": "IT"
+            },
+            {
+                "country_label": "🇯🇵 Япония",
+                "iso_country_code": "JP"
+            },
+            {
+                "country_label": "🇰🇿 Казахстан",
+                "iso_country_code": "KZ"
+            },
+            {
+                "country_label": "🇱🇻 Латвия",
+                "iso_country_code": "LV"
+            },
+            {
+                "country_label": "🇳🇱 Нидерланды",
+                "iso_country_code": "NL"
+            },
+            {
+                "country_label": "🇳🇴 Норвегия",
+                "iso_country_code": "NO"
+            },
+            {
+                "country_label": "🇵🇱 Польша",
+                "iso_country_code": "PL"
+            },
+            {
+                "country_label": "🇷🇴 Румыния",
+                "iso_country_code": "RO"
+            },
+            {
+                "country_label": "🇷🇸 Сербия",
+                "iso_country_code": "RS"
+            },
+            {
+                "country_label": "🇸🇬 Сингапур",
+                "iso_country_code": "SG"
+            },
+            {
+                "country_label": "🇹🇷 Турция",
+                "iso_country_code": "TR"
+            },
+            {
+                "country_label": "🇺🇦 Украина",
+                "iso_country_code": "UA"
+            },
+            {
+                "country_label": "🇺🇸 США",
+                "iso_country_code": "US"
+            }
+        ]
+    },
+    "error": null
+}

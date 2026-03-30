@@ -12,10 +12,10 @@ import WebAPI 1.0
 Button {
     id: root
 
-    property string defaultButtonColor: "#F1F0EF"
+    property string defaultButtonColor: '#FFD600'
     property string blockedColor: "#3C3C3C"
     property string progressButtonColor: "#FFDD51"
-    property string connectedButtonColor: "#33CC8C"
+    property string connectedButtonColor: '#FFD600'
     property string errorButtonColor: "#FF6969"
     property bool buttonActiveFocus: activeFocus && (Qt.platform.os !== "android" || SettingsController.isOnTv())
 
@@ -92,17 +92,14 @@ Button {
 
             ShapePath {
                 fillColor: {
-                    if (!ServersModel.isDefaultAccountActive()) {
-                        return root.blockedColor
-                    }
                     if (ConnectionController.isConnectionInProgress) {
                         return '#FFFFFF'
                     } else if (ConnectionController.isConnected) {
                         return '#151515'
-                    } else if (ConnectionController.isConnectionFailed) {
-                        return '#FFD600'
+                    } else if (VPNNApp.isAccountBlocked) {
+                        return root.blockedColor
                     } else {
-                        return '#FFD600'
+                        return root.defaultButtonColor
                     }
                 }
                 strokeColor: AmneziaStyle.color.paleGray
@@ -127,8 +124,6 @@ Button {
                         return '#FFFFFF'
                     } else if (ConnectionController.isConnected) {
                         return '#FFD600'
-                    } else if (ConnectionController.isConnectionFailed) {
-                        return errorButtonColor
                     } else {
                         return '#FFD600'
                     }
@@ -210,8 +205,6 @@ Button {
                             return 'qrc:/images/connect button/progress.svg'
                         } else if (ConnectionController.isConnected) {
                             return 'qrc:/images/connect button/connected.svg'
-                        } else if (ConnectionController.isConnectionFailed) {
-                            return 'qrc:/images/connect button/default.svg'
                         } else {
                             return 'qrc:/images/connect button/default.svg'
                         }
@@ -225,8 +218,6 @@ Button {
                                     return '#000000'
                                 } else if (ConnectionController.isConnected) {
                                     return '#FFD600'
-                                } else if (ConnectionController.isConnectionFailed) {
-                                    return errorButtonColor
                                 } else {
                                     return '#000000'
                                 }
@@ -249,8 +240,6 @@ Button {
                             return '#000000'
                         } else if (ConnectionController.isConnected) {
                             return '#FFD600'
-                        } else if (ConnectionController.isConnectionFailed) {
-                            return errorButtonColor
                         } else {
                             return '#000000'
                         }

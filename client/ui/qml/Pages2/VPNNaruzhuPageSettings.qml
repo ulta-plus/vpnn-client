@@ -123,7 +123,7 @@ PageType {
         readonly property string leftImagePath: "qrc:/images/controls/chat.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
-            Qt.openUrlExternally("https://t.me/vpnnaruzhu")
+            Qt.openUrlExternally(VPNNWebApi.getTgChannelLink())
         }
     }
 }

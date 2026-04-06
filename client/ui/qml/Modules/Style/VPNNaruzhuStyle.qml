@@ -4,6 +4,7 @@ import QtQuick
 
 QtObject {
     property QtObject color: QtObject {
+        readonly property color transparent: 'transparent'
         readonly property color backGround: '#151515'
         readonly property color headerText: '#FFFFFF'
         readonly property color footnotes: '#BDBDBD'
@@ -23,6 +24,7 @@ QtObject {
         readonly property color textFieldBorderFocusedColor: AmneziaStyle.color.paleGray
         readonly property color textFieldBackgroundTextColor: AmneziaStyle.color.charcoalGray
         readonly property color textFieldBackgroundDisabledColor: AmneziaStyle.color.transparent
+        readonly property color questionDrawerBorder: '#DADADA'
     }
 
     readonly property string font: 'Inter'

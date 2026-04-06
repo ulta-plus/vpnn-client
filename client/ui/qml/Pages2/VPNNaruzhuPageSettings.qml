@@ -71,6 +71,7 @@ PageType {
         connection,
         application,
         about,
+        supportEmail,
         supportTelegramm,
         telegrammGroup
     ]
@@ -103,6 +104,17 @@ PageType {
         property bool isVisible: true
         readonly property var clickedHandler: function() {
             Qt.openUrlExternally(VPNNWebApi.getAboutLink())
+        }
+    }
+    QtObject {
+        id: supportEmail
+
+        property string title: qsTr("Support via e-mail")
+        readonly property string leftImagePath: "qrc:/images/controls/email.svg"
+        property bool isVisible: true
+        readonly property var clickedHandler: function() {
+            GC.coppyUUIDToClipBoard()
+            Qt.openUrlExternally('mailto:help@vpn-naruzhu.com')
         }
     }
     QtObject {

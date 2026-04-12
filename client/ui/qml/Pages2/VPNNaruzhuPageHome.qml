@@ -182,8 +182,19 @@ PageType {
                     rightIconColor: '#FFFFFF'
 
                     onClicked: {
-                        GC.coppyUUIDToClipBoard()
-                        Qt.openUrlExternally(VPNNWebApi.getSupportLink())
+                        var headerText = qsTr('Do you need help?')
+                        var descriptionText = qsTr('Use help@vpn-naruzhu.com or telegram to contact with support')
+                        var yesButtonText = qsTr("Telegram")
+                        var noButtonText = qsTr("E-mail")
+                        var yesButtonFunction = function() {
+                            GC.coppyUUIDToClipBoard()
+                            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
+                        }
+                        var noButtonFunction = function() {
+                            GC.coppyUUIDToClipBoard()
+                            Qt.openUrlExternally("mailto:help@vpn-naruzhu.com")
+                        }
+                        showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
                     }
                 }
             }

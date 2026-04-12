@@ -4674,7 +4674,7 @@ Do you want to retry?</source>
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="280"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
@@ -4689,17 +4689,37 @@ Do you want to retry?</source>
         <translation>Подписка закончилась</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="276"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="185"/>
+        <source>Do you need help?</source>
+        <translation>Вам нужна помощь?</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="186"/>
+        <source>Use help@vpn-naruzhu.com or telegram to contact with support</source>
+        <translation>Обратитесь к службе поддержки через help@vpn-naruzhu.com или telegram</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="187"/>
+        <source>Telegram</source>
+        <translation>Telegram</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="188"/>
+        <source>E-mail</source>
+        <translation>E-mail</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="287"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="279"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="290"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="281"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="292"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
@@ -4719,7 +4739,7 @@ Do you want to retry?</source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="339"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="350"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>
@@ -4732,27 +4752,32 @@ Do you want to retry?</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="81"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="82"/>
         <source>Connection</source>
         <translation>Соединение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="91"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="92"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="101"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="102"/>
         <source>About VPNNaruzhu</source>
         <translation>О VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="111"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="112"/>
+        <source>Support via e-mail</source>
+        <translation>Поддержка через email</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="123"/>
         <source>Support via Telegram</source>
         <translation>Поддержка в Телеграм</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="122"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageSettings.qml" line="134"/>
         <source>Telegram Channel</source>
         <translation>Телеграм Канал</translation>
     </message>

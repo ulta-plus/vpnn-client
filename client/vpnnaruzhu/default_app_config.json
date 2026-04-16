@@ -7,8 +7,9 @@
     "aboutLink": "https://nrz.monster/profile",
     "websiteLink": "https://nrz.monster",
     "updateInfo": {
-        "availableVersion": "2.2.0.9",
-        "downloadUrl": "https://storage.uubb.website/VPNNaruzhu_x64_2.2.0.9.exe"
+        "availableVersion": "2.2.1.4",
+        "downloadUrl": "https://storage.uubb.website/VPNNaruzhu_x64_2.2.1.4.exe",
+        "requiredVersion": "2.2.1.4"
     },
     "connections": [
         {

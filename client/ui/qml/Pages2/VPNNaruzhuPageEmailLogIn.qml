@@ -86,7 +86,7 @@ PageType {
 
         VPNNaruzhuButton {
             id: continueButton
-            objectName: 'connectButton'
+            objectName: 'continueButton'
 
             Layout.topMargin: 10
             Layout.alignment: Qt.AlignHCenter

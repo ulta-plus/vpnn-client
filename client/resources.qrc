@@ -193,6 +193,7 @@
         <file>ui/qml/Pages2/VPNNaruzhuPageEmailLogIn.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageSettings.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageHome.qml</file>
+        <file>ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageSettingsConnection.qml</file>
         <file>ui/qml/Pages2/VPNNaruzhuPageSettingsServerProtocols.qml</file>
         <file>ui/qml/Pages2/PageDeinstalling.qml</file>

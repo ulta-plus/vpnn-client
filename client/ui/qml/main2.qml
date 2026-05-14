@@ -40,7 +40,25 @@ Window  {
     onActiveChanged: {
         if (active) {
             VPNNWebApi.updateExternalSettings()
-            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloadController.inProgress()) {
+            if (is_first_launch && VPNNWebApi.shouldForceUpdateApp()) {
+                is_first_launch = false
+                PageController.goToPage(PageEnum.VPNNaruzhuPageForceUpdate)
+                /*
+                var headerText = qsTr('Required update')
+                var deacription = qsTr('Application should be updated before using')
+                var yesButtonText = qsTr("Start update")
+                //var noButtonText = qsTr("Quit")
+                var yesButtonFunction = function() {
+                    downloaderWindow.show()
+                    VPNNWebApi.downloadAndInstallNewApp()
+                }
+                var noButtonFunction = function() {
+                }
+                showQuestionDrawer(headerText, deacription, yesButtonText, '', yesButtonFunction, noButtonFunction)
+                */
+            }
+
+            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloadController.isDownloadInProgress()) {
                 var headerText = qsTr('Do you want to update VPNNaruzhu?')
                 var deacription = qsTr('There is a new VPNNaruzhu version')
                 var yesButtonText = qsTr("Yes")

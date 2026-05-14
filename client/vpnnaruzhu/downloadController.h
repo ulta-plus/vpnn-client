@@ -10,6 +10,7 @@ class VpnnDownloadController: public QObject
 {
     Q_OBJECT
     Q_PROPERTY(qreal progress READ getProgress NOTIFY progressChanged)
+    Q_PROPERTY(qreal inProgress READ isDownloadInProgress NOTIFY inProgressChanged)
 
 public:
     explicit VpnnDownloadController(QSharedPointer<VpnNaruzhuDownloader> &d,
@@ -38,6 +39,7 @@ public:
     Q_INVOKABLE void download(const QString &url, const QString &savePath)
     {
         in_progress = true;
+        emit inProgressChanged();
         m_progress = 0.0;
         emit startDownload(url, savePath);
     }
@@ -47,11 +49,12 @@ public:
 signals:
     void startDownload(const QString &url, const QString &savePath);
     void progressChanged(qreal p);
+    void inProgressChanged(void);
     void errorOccurred(void);
     void finished(void);
 
 public slots:
-    Q_INVOKABLE bool inProgress() { return in_progress; }
+    Q_INVOKABLE bool isDownloadInProgress() { return in_progress; }
 
     void onProgressChanged(qreal p) {
         m_progress = p;
@@ -61,6 +64,7 @@ public slots:
     void onErrorOccurred()
     {
         in_progress = false;
+        emit inProgressChanged();
         m_progress = 0.0;
         emit errorOccurred();
     }
@@ -68,6 +72,7 @@ public slots:
     void onFinished()
     {
         in_progress = false;
+        emit inProgressChanged();
         m_progress = 0.0;
         emit finished();
     }

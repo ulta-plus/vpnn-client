@@ -4672,6 +4672,36 @@ Do you want to retry?</source>
     </message>
 </context>
 <context>
+    <name>VPNNaruzhuPageForceUpdate</name>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="18"/>
+        <source>Updating...</source>
+        <translation>Обновление...</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="32"/>
+        <source>Required update</source>
+        <translation>Необходимо обновление</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="44"/>
+        <source>Sorry for the inconvinients. Application
+should be updated before using.</source>
+        <translation>Приносим извинения за неудобства.
+Приложение необходимо обновить.</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="114"/>
+        <source>Telegram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="17"/>
+        <source>Start update</source>
+        <translation>Начать обновление</translation>
+    </message>
+</context>
+<context>
     <name>VPNNaruzhuPageHome</name>
     <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
@@ -4920,32 +4950,32 @@ Do you want to retry?</source>
 <context>
     <name>main2</name>
     <message>
-        <location filename="../ui/qml/main2.qml" line="44"/>
+        <location filename="../ui/qml/main2.qml" line="62"/>
         <source>Do you want to update VPNNaruzhu?</source>
         <translation>Хотите обновить приложение?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="45"/>
+        <location filename="../ui/qml/main2.qml" line="63"/>
         <source>There is a new VPNNaruzhu version</source>
         <translation>Есть новая верия VPNNaruzhu</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="46"/>
+        <location filename="../ui/qml/main2.qml" line="64"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="47"/>
+        <location filename="../ui/qml/main2.qml" line="65"/>
         <source>No</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="231"/>
+        <location filename="../ui/qml/main2.qml" line="249"/>
         <source>Private key passphrase</source>
         <translation>Парольная фраза для закрытого ключа</translation>
     </message>
     <message>
-        <location filename="../ui/qml/main2.qml" line="252"/>
+        <location filename="../ui/qml/main2.qml" line="270"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>

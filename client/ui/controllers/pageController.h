@@ -74,6 +74,7 @@ namespace PageLoader
 
         VPNNaruzhuPageWelcome,
         VPNNaruzhuPageEmailLogIn,
+        VPNNaruzhuPageForceUpdate,
 
         PageDevMenu
     };

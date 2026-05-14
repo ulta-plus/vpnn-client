@@ -56,6 +56,7 @@ public slots:
     QString getUUIDLastSymbols(void) const;
 
     bool isNewVersionAvailable(void) const;
+    bool shouldForceUpdateApp(void) const;
 
 private:
     VpnNaruzhuWebApi();

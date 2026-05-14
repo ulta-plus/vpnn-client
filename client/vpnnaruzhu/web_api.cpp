@@ -358,6 +358,18 @@ bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
     return false;
 }
 
+bool VpnNaruzhuWebApi::shouldForceUpdateApp(void) const
+{
+    QString required_version = external_app_config["updateInfo"]["requiredVersion"].toString();
+    QVersionNumber new_version = QVersionNumber::fromString(required_version);
+    QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
+    if (new_version > cur_version) {
+        return true;
+    }
+
+    return false;
+}
+
 QString VpnNaruzhuWebApi::downloadNewApp(void) const
 {
     std::filesystem::path new_path;

@@ -61,6 +61,11 @@ Window {
         }
         withNoClick: function() {
             root.visible = false
+            retryDownload.visible = false
         }
+    }
+
+    function refresh() {
+        retryDownload.visible = false
     }
 }

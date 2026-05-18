@@ -86,6 +86,9 @@ void CoreController::initModels()
     m_xrayConfigModel = new XrayConfigModel(this);
     setQmlContextProperty("XrayConfigModel", m_xrayConfigModel);
 
+    m_xrayConfigSnapshotsModel = new XrayConfigSnapshotsModel(m_appSettingsRepository, m_xrayConfigModel, this);
+    setQmlContextProperty("XrayConfigSnapshotsModel", m_xrayConfigSnapshotsModel);
+
     m_torConfigModel = new TorConfigModel(this);
     setQmlContextProperty("TorConfigModel", m_torConfigModel);
 

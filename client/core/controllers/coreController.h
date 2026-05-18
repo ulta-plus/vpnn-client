@@ -65,6 +65,7 @@
 #include "ui/models/protocols/openvpnConfigModel.h"
 #include "ui/models/protocols/wireguardConfigModel.h"
 #include "ui/models/protocols/xrayConfigModel.h"
+#include "ui/models/protocols/xrayConfigSnapshotsModel.h"
 #include "ui/models/protocolsModel.h"
 #include "ui/models/services/torConfigModel.h"
 #include "ui/models/serversModel.h"
@@ -205,6 +206,7 @@ private:
 
     OpenVpnConfigModel* m_openVpnConfigModel;
     XrayConfigModel* m_xrayConfigModel;
+    XrayConfigSnapshotsModel* m_xrayConfigSnapshotsModel;
     TorConfigModel* m_torConfigModel;
     WireGuardConfigModel* m_wireGuardConfigModel;
     AwgConfigModel* m_awgConfigModel;

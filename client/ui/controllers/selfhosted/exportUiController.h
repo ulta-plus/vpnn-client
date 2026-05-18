@@ -32,6 +32,7 @@ public slots:
     QList<QString> getQrCodes();
 
     void exportConfig(const QString &fileName);
+    void setConfigFromString(const QString &config, const QString &fileName);
 
     void updateClientManagementModel(const QString &serverId, int containerIndex);
 

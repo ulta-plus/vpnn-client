@@ -50,9 +50,11 @@ jobs:
         done
 
     - name: 'Authorize in remote'
+      if: github.ref == 'refs/heads/dev'
       run: conan remote login amnezia "${{ secrets.CONAN_USER }}" -p "${{ secrets.CONAN_PASSWORD }}"
 
     - name: 'Upload baked prebuilts'
+      if: github.ref == 'refs/heads/dev'
       run: conan upload -r amnezia "*" -c
 
 # ------------------------------------------------------
@@ -155,9 +157,11 @@ jobs:
       run: cmake -S . -B build -G "Visual Studio 17 2022" -DPREBUILTS_ONLY=1
     
     - name: 'Authorize in remote'
+      if: github.ref == 'refs/heads/dev'
       run: conan remote login amnezia "${{ secrets.CONAN_USER }}" -p "${{ secrets.CONAN_PASSWORD }}"
 
     - name: 'Upload baked prebuilts'
+      if: github.ref == 'refs/heads/dev'
       run: conan upload -r amnezia "*" -c
 
 # ------------------------------------------------------
@@ -262,7 +266,7 @@ jobs:
 
     strategy:
       matrix:
-        xcode-version: [26.0]
+        xcode-version: [26.0, 26.4]
 
     steps:
     - uses: actions/checkout@v4
@@ -285,9 +289,11 @@ jobs:
       run: cmake -S . -B build -G Xcode -DPREBUILTS_ONLY=1 -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos
     
     - name: 'Authorize in remote'
+      if: github.ref == 'refs/heads/dev'
       run: conan remote login amnezia "${{ secrets.CONAN_USER }}" -p "${{ secrets.CONAN_PASSWORD }}"
 
     - name: 'Upload baked prebuilts'
+      if: github.ref == 'refs/heads/dev'
       run: conan upload -r amnezia "*" -c
 
 # ------------------------------------------------------
@@ -344,7 +350,7 @@ jobs:
     - name: 'Setup xcode'
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '26.1'
+        xcode-version: '26.4'
 
     - name: 'Install desktop Qt'
       uses: jurplel/install-qt-action@v3
@@ -401,7 +407,7 @@ jobs:
 
     strategy:
       matrix:
-        xcode-version: [16.2, 16.4]
+        xcode-version: [16.2, 16.4, 26.4]
 
     steps:
     - uses: actions/checkout@v4
@@ -424,9 +430,11 @@ jobs:
       run: cmake -S . -B build -G Xcode -DPREBUILTS_ONLY=1
     
     - name: 'Authorize in remote'
+      if: github.ref == 'refs/heads/dev'
       run: conan remote login amnezia "${{ secrets.CONAN_USER }}" -p "${{ secrets.CONAN_PASSWORD }}"
 
     - name: 'Upload baked prebuilts'
+      if: github.ref == 'refs/heads/dev'
       run: conan upload -r amnezia "*" -c
 
 # ------------------------------------------------------
@@ -554,9 +562,11 @@ jobs:
       run: cmake -S . -B build -G Xcode -DPREBUILTS_ONLY=1 -DMACOS_NE=TRUE
     
     - name: 'Authorize in remote'
+      if: github.ref == 'refs/heads/dev'
       run: conan remote login amnezia "${{ secrets.CONAN_USER }}" -p "${{ secrets.CONAN_PASSWORD }}"
 
     - name: 'Upload baked prebuilts'
+      if: github.ref == 'refs/heads/dev'
       run: conan upload -r amnezia "*" -c
 
 # ------------------------------------------------------
@@ -696,9 +706,11 @@ jobs:
         done
 
     - name: 'Authorize in remote'
+      if: github.ref == 'refs/heads/dev'
       run: conan remote login amnezia "${{ secrets.CONAN_USER }}" -p "${{ secrets.CONAN_PASSWORD }}"
 
     - name: 'Upload baked prebuilts'
+      if: github.ref == 'refs/heads/dev'
       run: conan upload -r amnezia "*" -c
 
 # ------------------------------------------------------

@@ -118,7 +118,7 @@
         <file>ui/qml/Components/AdLabel.qml</file>
         <file>ui/qml/Components/VPNNaruzhuCountryList.qml</file>
         <file>ui/qml/Components/VPNNaruzhuConnectionModeSwitcher.qml</file>
-        <file>ui/qml/Components/ConnectButton.qml</file>
+        <file>ui/qml/Components/VPNNConnectButton.qml</file>
         <file>ui/qml/Components/ConnectionTypeSelectionDrawer.qml</file>
         <file>ui/qml/Components/HomeContainersListView.qml</file>
         <file>ui/qml/Components/HomeSplitTunnelingDrawer.qml</file>
@@ -248,6 +248,7 @@
         <file>ui/qml/Pages2/PageSettingsApiNativeConfigs.qml</file>
         <file>ui/qml/Pages2/PageSettingsApiDevices.qml</file>
         <file>images/controls/monitor.svg</file>
+        <file>images/connect_button_animation.json</file>
         <file>images/welcome_logo.svg</file>
         <file>images/controls/email.svg</file>
         <file>images/controls/tabBarChat.svg</file>

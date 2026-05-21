@@ -284,14 +284,6 @@
     </message>
 </context>
 <context>
-    <name>ConnectButton</name>
-    <message>
-        <location filename="../ui/qml/Components/ConnectButton.qml" line="57"/>
-        <source>Unable to disconnect during configuration preparation</source>
-        <translation>Невозможно отключиться во время подготовки конфигурации</translation>
-    </message>
-</context>
-<context>
     <name>ConnectionController</name>
     <message>
         <location filename="../ui/controllers/connectionController.cpp" line="80"/>
@@ -421,7 +413,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4549,6 +4541,14 @@ For more detailed information, you can
         <location filename="../ui/qml/Controls2/TextFieldWithHeaderType.qml" line="117"/>
         <source>The field can&apos;t be empty</source>
         <translation>Поле не может быть пустым</translation>
+    </message>
+</context>
+<context>
+    <name>VPNNConnectButton</name>
+    <message>
+        <location filename="../ui/qml/Components/VPNNConnectButton.qml" line="55"/>
+        <source>Unable to disconnect during configuration preparation</source>
+        <translation>Невозможно отключиться во время подготовки конфигурации</translation>
     </message>
 </context>
 <context>

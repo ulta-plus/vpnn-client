@@ -148,7 +148,7 @@ PageType {
                 enabled: !(ConnectionController.isConnectionInProgress || ConnectionController.isConnected)
             }
 
-            ConnectButton {
+            VPNNConnectButton {
                 id: connectButton
                 objectName: "connectButton"
 

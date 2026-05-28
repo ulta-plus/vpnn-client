@@ -358,7 +358,7 @@ void InstallController::addEmptyServer(const ServerCredentials &credentials)
     serverConfig.userName = credentials.userName;
     serverConfig.password = credentials.secretData;
     serverConfig.port = credentials.port;
-    serverConfig.description = m_appSettingsRepository->nextAvailableServerName();
+    serverConfig.description = m_serversRepository->nextAvailableServerName();
     serverConfig.displayName = serverConfig.description.isEmpty() ? serverConfig.hostName : serverConfig.description;
     serverConfig.defaultContainer = DockerContainer::None;
 
@@ -1170,7 +1170,7 @@ ErrorCode InstallController::installServer(const ServerCredentials &credentials,
     serverConfig.userName = credentials.userName;
     serverConfig.password = credentials.secretData;
     serverConfig.port = credentials.port;
-    serverConfig.description = m_appSettingsRepository->nextAvailableServerName();
+    serverConfig.description = m_serversRepository->nextAvailableServerName();
 
     for (auto iterator = preparedContainers.begin(); iterator != preparedContainers.end(); iterator++) {
         serverConfig.containers.insert(iterator.key(), iterator.value());
@@ -1240,28 +1240,26 @@ ErrorCode InstallController::installContainer(const QString &serverId, DockerCon
     return ErrorCode::NoError;
 }
 
-ErrorCode InstallController::checkSshConnection(const ServerCredentials &credentials, QString &output,
+ErrorCode InstallController::checkSshConnection(ServerCredentials &credentials, QString &output,
                                                 std::function<QString()> passphraseCallback)
 {
     SshSession sshSession(this);
     ErrorCode errorCode = ErrorCode::NoError;
 
-    ServerCredentials processedCredentials = credentials;
-
-    if (processedCredentials.secretData.contains("BEGIN") && processedCredentials.secretData.contains("PRIVATE KEY")) {
+    if (credentials.secretData.contains("BEGIN") && credentials.secretData.contains("PRIVATE KEY")) {
         if (!passphraseCallback) {
             return ErrorCode::SshPrivateKeyError;
         }
 
         QString decryptedPrivateKey;
-        errorCode = sshSession.getDecryptedPrivateKey(processedCredentials, decryptedPrivateKey, passphraseCallback);
+        errorCode = sshSession.getDecryptedPrivateKey(credentials, decryptedPrivateKey, passphraseCallback);
         if (errorCode != ErrorCode::NoError) {
             return errorCode;
         }
-        processedCredentials.secretData = decryptedPrivateKey;
+        credentials.secretData = decryptedPrivateKey;
     }
 
-    output = sshSession.checkSshConnection(processedCredentials, errorCode);
+    output = sshSession.checkSshConnection(credentials, errorCode);
     return errorCode;
 }
 

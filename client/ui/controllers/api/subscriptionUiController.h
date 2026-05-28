@@ -58,6 +58,10 @@ public slots:
     void setCurrentProtocol(const QString &serverId, const QString &protocolName);
     bool isVlessProtocol(const QString &serverId);
 
+    bool isCaptchaAwaitingUser() const;
+    void onCaptchaSolved(const QString &captchaId, const QString &solution);
+    void onRefreshCaptchaRequested();
+
     void removeApiConfig(const QString &serverId);
 
     void removeServer(const QString &serverId);
@@ -85,8 +89,22 @@ signals:
     void apiServerRemoved(const QString &message);
 
     void vpnKeyExportReady();
+    void captchaRequired(const QString &captchaId, const QString &captchaImageBase64, const QString &hint);
+    void captchaFlowDismissRequested();
 
     void unsupportedConnectDrawerRequested();
+
+private:
+    struct CaptchaState {
+        QString userCountryCode;
+        QString serviceType;
+        QString serviceProtocol;
+        QString openvpnPrivKey;
+        QString wireguardClientPrivKey;
+        QString wireguardClientPubKey;
+        QString xrayUuid;
+        bool isPending = false;
+    } m_captchaState;
 
 private:
     QList<QString> getQrCodes();

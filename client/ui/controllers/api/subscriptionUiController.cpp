@@ -102,6 +102,11 @@ SubscriptionUiController::SubscriptionUiController(ServersController* serversCon
     });
 }
 
+bool SubscriptionUiController::isCaptchaAwaitingUser() const
+{
+    return m_captchaState.isPending;
+}
+
 bool SubscriptionUiController::exportVpnKey(const QString &serverId, const QString &fileName)
 {
     if (fileName.isEmpty()) {
@@ -288,15 +293,102 @@ bool SubscriptionUiController::importFreeFromGateway()
     }
 
     SubscriptionController::ProtocolData protocolData = m_subscriptionController->generateProtocolData(serviceProtocol);
+    SubscriptionController::CaptchaInfo captchaInfo;
+
     ErrorCode errorCode = m_subscriptionController->importServiceFromGateway(userCountryCode, serviceType,
-                                                                             serviceProtocol, protocolData);
+                                                                             serviceProtocol, protocolData,
+                                                                             captchaInfo);
 
     if (errorCode == ErrorCode::NoError) {
         emit installServerFromApiFinished(tr("%1 installed successfully.").arg(m_apiServicesModel->getSelectedServiceName()));
         return true;
+    } else if (errorCode == ErrorCode::ApiCaptchaRequiredError && captchaInfo.isRequired) {
+        m_captchaState.userCountryCode = userCountryCode;
+        m_captchaState.serviceType = serviceType;
+        m_captchaState.serviceProtocol = serviceProtocol;
+        m_captchaState.openvpnPrivKey = protocolData.certPrivKey;
+        m_captchaState.wireguardClientPrivKey = protocolData.wireGuardClientPrivKey;
+        m_captchaState.wireguardClientPubKey = protocolData.wireGuardClientPubKey;
+        m_captchaState.xrayUuid = protocolData.xrayUuid;
+        m_captchaState.isPending = true;
+
+        emit captchaRequired(captchaInfo.captchaId, captchaInfo.captchaImageBase64,
+                             captchaInfo.hint.isEmpty() ? tr("Enter the digits from the image to continue") : captchaInfo.hint);
+        return false;
     } else {
         emit errorOccurred(errorCode);
         return false;
+    }
+}
+
+void SubscriptionUiController::onCaptchaSolved(const QString &captchaId, const QString &solution)
+{
+    if (!m_captchaState.isPending) {
+        return;
+    }
+
+    SubscriptionController::ProtocolData protocolData;
+    protocolData.certPrivKey = m_captchaState.openvpnPrivKey;
+    protocolData.wireGuardClientPrivKey = m_captchaState.wireguardClientPrivKey;
+    protocolData.wireGuardClientPubKey = m_captchaState.wireguardClientPubKey;
+    protocolData.xrayUuid = m_captchaState.xrayUuid;
+
+    SubscriptionController::CaptchaInfo retryCaptcha;
+    ErrorCode errorCode = m_subscriptionController->resolveImportServiceCaptcha(
+            m_captchaState.userCountryCode,
+            m_captchaState.serviceType,
+            m_captchaState.serviceProtocol,
+            protocolData,
+            captchaId,
+            solution,
+            &retryCaptcha);
+
+    if (errorCode == ErrorCode::NoError) {
+        m_captchaState.isPending = false;
+        emit captchaFlowDismissRequested();
+        emit installServerFromApiFinished(tr("%1 installed successfully.").arg(m_apiServicesModel->getSelectedServiceName()));
+        return;
+    }
+
+    if ((errorCode == ErrorCode::ApiCaptchaInvalidError || errorCode == ErrorCode::ApiCaptchaRefreshError
+         || errorCode == ErrorCode::ApiCaptchaRequiredError)
+        && retryCaptcha.isRequired) {
+        emit captchaRequired(retryCaptcha.captchaId, retryCaptcha.captchaImageBase64,
+                             retryCaptcha.hint.isEmpty() ? tr("Enter the digits from the image to continue") : retryCaptcha.hint);
+        return;
+    }
+
+    m_captchaState.isPending = false;
+    emit errorOccurred(errorCode);
+}
+
+void SubscriptionUiController::onRefreshCaptchaRequested()
+{
+    if (!m_captchaState.isPending) {
+        return;
+    }
+
+    SubscriptionController::ProtocolData protocolData;
+    protocolData.certPrivKey = m_captchaState.openvpnPrivKey;
+    protocolData.wireGuardClientPrivKey = m_captchaState.wireguardClientPrivKey;
+    protocolData.wireGuardClientPubKey = m_captchaState.wireguardClientPubKey;
+    protocolData.xrayUuid = m_captchaState.xrayUuid;
+
+    SubscriptionController::CaptchaInfo captchaInfo;
+
+    ErrorCode errorCode = m_subscriptionController->importServiceFromGateway(
+            m_captchaState.userCountryCode,
+            m_captchaState.serviceType,
+            m_captchaState.serviceProtocol,
+            protocolData,
+            captchaInfo);
+
+    if (errorCode == ErrorCode::ApiCaptchaRequiredError && captchaInfo.isRequired) {
+        emit captchaRequired(captchaInfo.captchaId, captchaInfo.captchaImageBase64,
+                             captchaInfo.hint.isEmpty() ? tr("Enter the digits from the image to continue") : captchaInfo.hint);
+    } else if (errorCode != ErrorCode::NoError) {
+        m_captchaState.isPending = false;
+        emit errorOccurred(errorCode);
     }
 }
 

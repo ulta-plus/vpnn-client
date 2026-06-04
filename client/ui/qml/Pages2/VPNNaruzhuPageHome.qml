@@ -194,7 +194,7 @@ PageType {
                             GC.coppyUUIDToClipBoard()
                             Qt.openUrlExternally("mailto:help@vpn-naruzhu.com")
                         }
-                        showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+                        showVpnnDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
                     }
                 }
             }

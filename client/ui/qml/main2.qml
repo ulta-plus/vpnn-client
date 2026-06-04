@@ -323,6 +323,39 @@ Window  {
         questionDrawer.openTriggered()
     }
 
+    Item {
+        objectName: "vpnnDrawerItem"
+
+        anchors.fill: parent
+
+        VPNNDrawer {
+            id: vpnnQuestionDrawer
+
+            anchors.fill: parent
+        }
+    }
+
+    function showVpnnDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction) {
+        vpnnQuestionDrawer.headerText = headerText
+        vpnnQuestionDrawer.descriptionText = descriptionText
+        vpnnQuestionDrawer.yesButtonText = yesButtonText
+        vpnnQuestionDrawer.noButtonText = noButtonText
+
+        vpnnQuestionDrawer.yesButtonFunction = function() {
+            vpnnQuestionDrawer.closeTriggered()
+            if (yesButtonFunction && typeof yesButtonFunction === "function") {
+                yesButtonFunction()
+            }
+        }
+        vpnnQuestionDrawer.noButtonFunction = function() {
+            vpnnQuestionDrawer.closeTriggered()
+            if (noButtonFunction && typeof noButtonFunction === "function") {
+                noButtonFunction()
+            }
+        }
+        vpnnQuestionDrawer.openTriggered()
+    }
+
     FileDialog {
         id: mainFileDialog
         objectName: "mainFileDialog"

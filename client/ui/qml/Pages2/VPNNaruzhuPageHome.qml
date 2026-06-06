@@ -65,6 +65,14 @@ PageType {
         subscriptionStatusText.text = getSubscriptionStatusText()
     }
 
+    function showNotification(msg) {
+        notification.text = msg
+        notification.visible = true
+        notification.onClick = function() {
+            notification.implicitHeight = 100
+        }
+    }
+
     Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
@@ -128,6 +136,8 @@ PageType {
             }
 
             VPNNaruzhuConnectionModeSwitcher {
+                id: connectionModeSwitcher
+
                 Layout.topMargin: 23
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
@@ -137,6 +147,8 @@ PageType {
             }
 
             VPNNaruzhuCountryList {
+                id: countryList
+
                 Layout.topMargin: 22
                 Layout.preferredHeight: 41
                 Layout.preferredWidth: 216
@@ -154,6 +166,8 @@ PageType {
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 17
+
+                enabled: !notification.visible
             }
 
             RowLayout {
@@ -189,7 +203,15 @@ PageType {
                         var button1Text = qsTr('Telegram')
                         var button2Text = qsTr('E-mail')
                         var button0Function = function() {
-                            VPNNWebApi.changeServer()
+                            var success = VPNNWebApi.changeServer()
+                            var msg = ''
+                            if (success) {
+                                msg = qsTr('Server successfully changed!')
+                            } else {
+                                notification.implicitHeight = 120
+                                msg = qsTr('Server change failed, please contact support.')
+                            }
+                            root.showNotification(msg)
                         }
                         var button1Function = function() {
                             GC.coppyUUIDToClipBoard()
@@ -289,8 +311,8 @@ PageType {
 
                         onClicked: {
                             if (ConnectionController.isConnected || ConnectionController.isConnectionInProgress) {
-                                notification.text = qsTr('Cannot sign out with an active connection')
-                                notification.visible = true
+                                var msg = qsTr('Cannot sign out with an active connection')
+                                root.showNotification(msg)
                             } else {
                                 var headerText = qsTr('Sign out?')
                                 var yesButtonText = qsTr("Continue")

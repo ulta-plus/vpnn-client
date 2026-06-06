@@ -421,7 +421,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4704,12 +4704,12 @@ should be updated before using.</source>
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="316"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="172"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="184"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
@@ -4719,37 +4719,52 @@ should be updated before using.</source>
         <translation>Подписка закончилась</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="197"/>
         <source>Do you need help?</source>
         <translation>Вам нужна помощь?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="186"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="198"/>
         <source>Use help@vpn-naruzhu.com or telegram to contact with support</source>
         <translation>Обратитесь к службе поддержки через help@vpn-naruzhu.com или telegram</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="187"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="201"/>
         <source>Telegram</source>
         <translation>Telegram</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="188"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="202"/>
         <source>E-mail</source>
         <translation>E-mail</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="287"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="200"/>
+        <source>Switch server</source>
+        <translation>Сменить сервер</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="207"/>
+        <source>Server successfully changed!</source>
+        <translation>Вы успешно сменили сервер!</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="211"/>
+        <source>Server change failed, please contact support.</source>
+        <translation>Смена серевера провалилась, обратитесь пожалуйста в поддержку.</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="312"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="290"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="315"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="292"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="317"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
@@ -4769,7 +4784,7 @@ should be updated before using.</source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="350"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="375"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>

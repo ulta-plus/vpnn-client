@@ -16,11 +16,13 @@ DrawerType2 {
 
     property string headerText
     property string descriptionText
-    property string yesButtonText
-    property string noButtonText
+    property string button0Text
+    property string button1Text
+    property string button2Text
 
-    property var yesButtonFunction
-    property var noButtonFunction
+    property var button0Function
+    property var button1Function
+    property var button2Function
 
     expandedStateContent: ColumnLayout {
         id: content
@@ -63,23 +65,25 @@ DrawerType2 {
         }
 
         BasicButtonType {
-            id: yesButton
+            id: button0
             Layout.fillWidth: true
             Layout.topMargin: 16
             Layout.rightMargin: 16
             Layout.leftMargin: 16
 
-            text: root.yesButtonText
+            visible: root.button0Text !== ""
+
+            text: root.button0Text
 
             clickedFunc: function() {
-                if (root.yesButtonFunction && typeof root.yesButtonFunction === "function") {
-                    root.yesButtonFunction()
+                if (root.button0Function && typeof root.button0Function === "function") {
+                    root.button0Function()
                 }
             }
         }
 
         BasicButtonType {
-            id: noButton
+            id: button1
             Layout.fillWidth: true
             Layout.rightMargin: 16
             Layout.leftMargin: 16
@@ -91,13 +95,37 @@ DrawerType2 {
             textColor: AmneziaStyle.color.paleGray
             borderWidth: 1
 
-            visible: root.noButtonText !== ""
+            visible: root.button1Text !== ""
 
-            text: root.noButtonText
+            text: root.button1Text
 
             clickedFunc: function() {
-                if (root.noButtonFunction && typeof root.noButtonFunction === "function") {
-                    root.noButtonFunction()
+                if (root.button1Function && typeof root.button1Function === "function") {
+                    root.button1Function()
+                }
+            }
+        }
+
+        BasicButtonType {
+            id: button2
+            Layout.fillWidth: true
+            Layout.rightMargin: 16
+            Layout.leftMargin: 16
+
+            defaultColor: AmneziaStyle.color.transparent
+            hoveredColor: AmneziaStyle.color.translucentWhite
+            pressedColor: AmneziaStyle.color.sheerWhite
+            disabledColor: AmneziaStyle.color.mutedGray
+            textColor: AmneziaStyle.color.paleGray
+            borderWidth: 1
+
+            visible: root.button2Text !== ""
+
+            text: root.button2Text
+
+            clickedFunc: function() {
+                if (root.button2Function && typeof root.button2Function === "function") {
+                    root.button2Function()
                 }
             }
         }

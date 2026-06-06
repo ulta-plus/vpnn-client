@@ -98,7 +98,9 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
         m_settings->getInstallationUuid(true).toUtf8());
+    //qDebug() << "X-Device-Id: " << m_settings->getInstallationUuid(true).toUtf8();
     request.setRawHeader("X-Supported-Awg-Version", awg_version.toUtf8());
+    //qDebug() << "X-Supported-Awg-Version: " << awg_version.toUtf8();
     request.setUrl(url);
 }
 
@@ -107,6 +109,19 @@ QNetworkReply* VpnNaruzhuWebApi::replyGetRequest(
 {
     QNetworkReply *reply;
     reply = m_manager->get(request);
+
+    QEventLoop wait;
+    QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);
+    wait.exec();
+
+    return reply;
+}
+
+QNetworkReply* VpnNaruzhuWebApi::replyPostRequest(
+    const QNetworkRequest &request, const QString &data) const
+{
+    QNetworkReply *reply;
+    reply = m_manager->post(request, data.toUtf8());
 
     QEventLoop wait;
     QObject::connect(reply, &QNetworkReply::finished, &wait, &QEventLoop::quit);
@@ -409,4 +424,70 @@ QString VpnNaruzhuWebApi::getUUIDLastSymbols(void) const
 {
     QString uuid = m_settings->getInstallationUuid(true);
     return uuid.right(4);
+}
+
+bool VpnNaruzhuWebApi::isChangeServerPossible(void) const
+{
+    QString url = getApiBaseUrl()
+            + "/client-api/v1/check-change-server?public_request_id="
+            + getPublicRequestId();
+
+    switch (connectionMode->getActiveRouteMode()) {
+    case VPNNRouteMode::SMART:
+        url += "&key_type=smart";
+        break;
+    case VPNNRouteMode::DIRECT:
+        url += "&key_type=direct";
+        break;
+    default:
+        break;
+    }
+
+    QString iso = m_settings->getVPNCountry();
+    if (iso != "ANY") {
+        url += "&iso_country_code=" + iso;
+    }
+
+    qDebug() << "isChangeServerPossible: " << url;
+
+    QNetworkRequest request;
+    initRequest(request, url, false);
+
+    QNetworkReply* reply = replyGetRequest(request);
+    QJsonDocument json = getJsonFromReply(reply, "isChangeServerPossible");
+    return json["data"]["is_change_server_available"].toBool();
+}
+
+bool VpnNaruzhuWebApi::changeServer(void) const
+{
+    QString url = getApiBaseUrl() + "/client-api/v1/change-server";
+
+    QString data = "{\n\"public_request_id\": \"" + getPublicRequestId() + "\",";
+
+    switch (connectionMode->getActiveRouteMode()) {
+    case VPNNRouteMode::SMART:
+        data += "\n\"key_type\": \"smart\",";
+        break;
+    case VPNNRouteMode::DIRECT:
+        data += "\n\"key_type\": \"direct\",";
+        break;
+    default:
+        break;
+    }
+
+    QString iso = m_settings->getVPNCountry();
+    if (iso != "ANY") {
+        data += "\n\"iso_country_code\": \"" + iso + "\"";
+    }
+
+    data += "\n}";
+    qDebug() << "changeServer: " << url << ", with data:";
+    qDebug() << data;
+
+    QNetworkRequest request;
+    initRequest(request, url);
+
+    QNetworkReply* reply = replyPostRequest(request, data);
+    QJsonDocument json = getJsonFromReply(reply, "changeServer");
+    return json["data"]["success"].toBool();
 }

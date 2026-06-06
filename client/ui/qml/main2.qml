@@ -335,22 +335,29 @@ Window  {
         }
     }
 
-    function showVpnnDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction) {
+    function showVpnnDrawer(headerText, descriptionText, button0Text, button1Text, button2Text, button0Function, button1Function, button2Function) {
         vpnnQuestionDrawer.headerText = headerText
         vpnnQuestionDrawer.descriptionText = descriptionText
-        vpnnQuestionDrawer.yesButtonText = yesButtonText
-        vpnnQuestionDrawer.noButtonText = noButtonText
+        vpnnQuestionDrawer.button0Text = button0Text
+        vpnnQuestionDrawer.button1Text = button1Text
+        vpnnQuestionDrawer.button2Text = button2Text
 
-        vpnnQuestionDrawer.yesButtonFunction = function() {
+        vpnnQuestionDrawer.button0Function = function() {
             vpnnQuestionDrawer.closeTriggered()
-            if (yesButtonFunction && typeof yesButtonFunction === "function") {
-                yesButtonFunction()
+            if (button0Function && typeof button0Function === "function") {
+                button0Function()
             }
         }
-        vpnnQuestionDrawer.noButtonFunction = function() {
+        vpnnQuestionDrawer.button1Function = function() {
             vpnnQuestionDrawer.closeTriggered()
-            if (noButtonFunction && typeof noButtonFunction === "function") {
-                noButtonFunction()
+            if (button1Function && typeof button1Function === "function") {
+                button1Function()
+            }
+        }
+        vpnnQuestionDrawer.button2Function = function() {
+            vpnnQuestionDrawer.closeTriggered()
+            if (button2Function && typeof button2Function === "function") {
+                button2Function()
             }
         }
         vpnnQuestionDrawer.openTriggered()

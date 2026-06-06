@@ -184,17 +184,22 @@ PageType {
                     onClicked: {
                         var headerText = qsTr('Do you need help?')
                         var descriptionText = qsTr('Use help@vpn-naruzhu.com or telegram to contact with support')
-                        var yesButtonText = qsTr("Telegram")
-                        var noButtonText = qsTr("E-mail")
-                        var yesButtonFunction = function() {
+                        var isPossible = VPNNWebApi.isChangeServerPossible()
+                        var button0Text = isPossible ? qsTr('Switch server') : ''
+                        var button1Text = qsTr('Telegram')
+                        var button2Text = qsTr('E-mail')
+                        var button0Function = function() {
+                            VPNNWebApi.changeServer()
+                        }
+                        var button1Function = function() {
                             GC.coppyUUIDToClipBoard()
                             Qt.openUrlExternally(VPNNWebApi.getSupportLink())
                         }
-                        var noButtonFunction = function() {
+                        var button2Function = function() {
                             GC.coppyUUIDToClipBoard()
                             Qt.openUrlExternally("mailto:help@vpn-naruzhu.com")
                         }
-                        showVpnnDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+                        showVpnnDrawer(headerText, descriptionText, button0Text, button1Text, button2Text, button0Function, button1Function, button2Function)
                     }
                 }
             }

@@ -537,6 +537,7 @@ void VpnConnection::disconnectFromVpn()
 #endif
 
     if (!m_vpnProtocol.data()) {
+        emit connectionEnded();
         emit connectionStateChanged(Vpn::ConnectionState::Disconnected);
         return;
     }
@@ -547,6 +548,7 @@ void VpnConnection::disconnectFromVpn()
     }
     m_vpnProtocol = nullptr;
 #endif
+    emit connectionEnded();
 }
 
 Vpn::ConnectionState VpnConnection::connectionState()

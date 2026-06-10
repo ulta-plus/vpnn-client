@@ -460,8 +460,11 @@ bool VpnNaruzhuWebApi::isChangeServerPossible(void) const
 
 bool VpnNaruzhuWebApi::changeServer(void) const
 {
+    QEventLoop wait;
+    QObject::connect(m_vpnConnection.get(), &VpnConnection::connectionEnded, &wait, &QEventLoop::quit);
     QMetaObject::invokeMethod(m_vpnConnection.get(), "disconnectFromVpn", Qt::QueuedConnection);
-    QThread::msleep(100);
+    wait.exec();
+
     QString url = getApiBaseUrl() + "/client-api/v1/change-server";
 
     QString data = "{\n\"public_request_id\": \"" + getPublicRequestId() + "\",";

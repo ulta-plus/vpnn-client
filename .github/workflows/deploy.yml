@@ -7,7 +7,7 @@ on:
 
 env:
   QT_MIRROR: https://mirrors.ocf.berkeley.edu/qt/ # https://download.qt.io/static/mirrorlist/
-  VPNN_VERSION: 2.2.2.3
+  VPNN_VERSION: 2.2.2.4
 
 jobs:
   Build-Linux-Ubuntu:

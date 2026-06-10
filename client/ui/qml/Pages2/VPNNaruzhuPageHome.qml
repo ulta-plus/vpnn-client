@@ -210,6 +210,7 @@ PageType {
                         var button1Text = qsTr('E-mail')
                         var button2Text = qsTr('Telegram')
                         var button0Function = function() {
+                            waitingBox.visible = true
                             var success = VPNNWebApi.changeServer()
                             var msg = ''
                             if (success) {
@@ -218,6 +219,8 @@ PageType {
                                 notification.implicitHeight = 120
                                 msg = qsTr('Server change failed, please contact support')
                             }
+
+                            waitingBox.visible = false
                             root.showNotification(msg)
                         }
                         var button1Function = function() {
@@ -396,6 +399,12 @@ PageType {
             id: notification
             objectName: "notification"
             anchors.centerIn: parent
+        }
+
+        BusyIndicator {
+            id: waitingBox
+            anchors.centerIn: parent
+            visible: false
         }
     }
 }

@@ -460,16 +460,18 @@ bool VpnNaruzhuWebApi::isChangeServerPossible(void) const
 
 bool VpnNaruzhuWebApi::changeServer(void) const
 {
+    QMetaObject::invokeMethod(m_vpnConnection.get(), "disconnectFromVpn", Qt::QueuedConnection);
+    QThread::msleep(100);
     QString url = getApiBaseUrl() + "/client-api/v1/change-server";
 
     QString data = "{\n\"public_request_id\": \"" + getPublicRequestId() + "\",";
 
     switch (connectionMode->getActiveRouteMode()) {
     case VPNNRouteMode::SMART:
-        data += "\n\"key_type\": \"smart\",";
+        data += "\n\"key_type\": \"smart\"";
         break;
     case VPNNRouteMode::DIRECT:
-        data += "\n\"key_type\": \"direct\",";
+        data += "\n\"key_type\": \"direct\"";
         break;
     default:
         break;
@@ -477,7 +479,7 @@ bool VpnNaruzhuWebApi::changeServer(void) const
 
     QString iso = m_settings->getVPNCountry();
     if (iso != "ANY") {
-        data += "\n\"iso_country_code\": \"" + iso + "\"";
+        data += ",\n\"iso_country_code\": \"" + iso + "\"";
     }
 
     data += "\n}";
@@ -489,5 +491,6 @@ bool VpnNaruzhuWebApi::changeServer(void) const
 
     QNetworkReply* reply = replyPostRequest(request, data);
     QJsonDocument json = getJsonFromReply(reply, "changeServer");
+    qDebug() << json;
     return json["data"]["success"].toBool();
 }

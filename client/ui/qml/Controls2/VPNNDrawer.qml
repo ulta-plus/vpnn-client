@@ -40,42 +40,46 @@ DrawerType2 {
         Header2TextType {
             Layout.fillWidth: true
             Layout.topMargin: 16
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.rightMargin: 15
+            Layout.leftMargin: 15
 
             text: root.headerText
+            font.pixelSize: 26
+            color: VPNNaruzhuStyle.color.headerText
         }
 
         TextEdit {
             Layout.fillWidth: true
             Layout.topMargin: 8
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.rightMargin: 15
+            Layout.leftMargin: 15
 
             text: root.descriptionText
 
             readOnly: true
             selectByMouse: true
-            color: AmneziaStyle.color.paleGray
+            color: VPNNaruzhuStyle.color.drawerDescription
             font.pixelSize: 16
-            font.weight: Font.DemiBold
+            font.weight: 400
             font.family: VPNNaruzhuStyle.font
 
             wrapMode: Text.WordWrap
         }
 
-        BasicButtonType {
+        VPNNaruzhuButton {
             id: button0
             Layout.fillWidth: true
             Layout.topMargin: 16
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.rightMargin: 15
+            Layout.leftMargin: 15
+
+            implicitHeight: 50
 
             visible: root.button0Text !== ""
 
-            text: root.button0Text
+            mainText: root.button0Text
 
-            clickedFunc: function() {
+            onClicked: function() {
                 if (root.button0Function && typeof root.button0Function === "function") {
                     root.button0Function()
                 }
@@ -85,8 +89,11 @@ DrawerType2 {
         BasicButtonType {
             id: button1
             Layout.fillWidth: true
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.topMargin: (root.button0Text == "") ? 16 : 0
+            Layout.rightMargin: 15
+            Layout.leftMargin: 15
+
+            implicitHeight: 50
 
             defaultColor: AmneziaStyle.color.transparent
             hoveredColor: AmneziaStyle.color.translucentWhite
@@ -109,8 +116,10 @@ DrawerType2 {
         BasicButtonType {
             id: button2
             Layout.fillWidth: true
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.rightMargin: 15
+            Layout.leftMargin: 15
+
+            implicitHeight: 50
 
             defaultColor: AmneziaStyle.color.transparent
             hoveredColor: AmneziaStyle.color.translucentWhite

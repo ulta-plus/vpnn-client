@@ -197,29 +197,36 @@ PageType {
 
                     onClicked: {
                         var headerText = qsTr('Do you need help?')
-                        var descriptionText = qsTr('Use help@vpn-naruzhu.com or telegram to contact with support')
-                        var isPossible = VPNNWebApi.isChangeServerPossible()
-                        var button0Text = isPossible ? qsTr('Switch server') : ''
-                        var button1Text = qsTr('Telegram')
-                        var button2Text = qsTr('E-mail')
+                        var isPossibleToChangeServer = VPNNWebApi.isChangeServerPossible()
+                        var descriptionText = ''
+                        var button0Text = ''
+                        if (isPossibleToChangeServer) {
+                            descriptionText = qsTr("Most issues can be resolved by switching servers. You can switch servers once a day. We will disconnect the VPN before doing so.\n\nIf switching servers doesn't help, please contact support: help@vpn-naruzhu.com.")
+                            button0Text = qsTr('Switch server')
+                        } else {
+                            descriptionText = qsTr('Contact with support via help@vpn-naruzhu.com or telegram.')
+                        }
+
+                        var button1Text = qsTr('E-mail')
+                        var button2Text = qsTr('Telegram')
                         var button0Function = function() {
                             var success = VPNNWebApi.changeServer()
                             var msg = ''
                             if (success) {
-                                msg = qsTr('Server successfully changed!')
+                                msg = qsTr('Server successfully changed')
                             } else {
                                 notification.implicitHeight = 120
-                                msg = qsTr('Server change failed, please contact support.')
+                                msg = qsTr('Server change failed, please contact support')
                             }
                             root.showNotification(msg)
                         }
                         var button1Function = function() {
                             GC.coppyUUIDToClipBoard()
-                            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
+                            Qt.openUrlExternally("mailto:help@vpn-naruzhu.com")
                         }
                         var button2Function = function() {
                             GC.coppyUUIDToClipBoard()
-                            Qt.openUrlExternally("mailto:help@vpn-naruzhu.com")
+                            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
                         }
                         showVpnnDrawer(headerText, descriptionText, button0Text, button1Text, button2Text, button0Function, button1Function, button2Function)
                     }

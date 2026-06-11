@@ -65,6 +65,14 @@ PageType {
         subscriptionStatusText.text = getSubscriptionStatusText()
     }
 
+    function showNotification(msg) {
+        notification.text = msg
+        notification.visible = true
+        notification.onClick = function() {
+            notification.implicitHeight = 100
+        }
+    }
+
     Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
@@ -128,6 +136,8 @@ PageType {
             }
 
             VPNNaruzhuConnectionModeSwitcher {
+                id: connectionModeSwitcher
+
                 Layout.topMargin: 23
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
@@ -137,6 +147,8 @@ PageType {
             }
 
             VPNNaruzhuCountryList {
+                id: countryList
+
                 Layout.topMargin: 22
                 Layout.preferredHeight: 41
                 Layout.preferredWidth: 216
@@ -154,6 +166,8 @@ PageType {
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 17
+
+                enabled: !notification.visible
             }
 
             RowLayout {
@@ -183,18 +197,41 @@ PageType {
 
                     onClicked: {
                         var headerText = qsTr('Do you need help?')
-                        var descriptionText = qsTr('Use help@vpn-naruzhu.com or telegram to contact with support')
-                        var yesButtonText = qsTr("Telegram")
-                        var noButtonText = qsTr("E-mail")
-                        var yesButtonFunction = function() {
-                            GC.coppyUUIDToClipBoard()
-                            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
+                        var isPossibleToChangeServer = VPNNWebApi.isChangeServerPossible()
+                        var descriptionText = ''
+                        var button0Text = ''
+                        if (isPossibleToChangeServer) {
+                            descriptionText = qsTr("Most issues can be resolved by switching servers. You can switch servers once a day. We will disconnect the VPN before doing so.\n\nIf switching servers doesn't help, please contact support: help@vpn-naruzhu.com.")
+                            button0Text = qsTr('Switch server')
+                        } else {
+                            descriptionText = qsTr('Contact with support via help@vpn-naruzhu.com or telegram.')
                         }
-                        var noButtonFunction = function() {
+
+                        var button1Text = qsTr('E-mail')
+                        var button2Text = qsTr('Telegram')
+                        var button0Function = function() {
+                            waitingBox.visible = true
+                            var success = VPNNWebApi.changeServer()
+                            var msg = ''
+                            if (success) {
+                                msg = qsTr('Server successfully changed')
+                            } else {
+                                notification.implicitHeight = 120
+                                msg = qsTr('Server change failed, please contact support')
+                            }
+
+                            waitingBox.visible = false
+                            root.showNotification(msg)
+                        }
+                        var button1Function = function() {
                             GC.coppyUUIDToClipBoard()
                             Qt.openUrlExternally("mailto:help@vpn-naruzhu.com")
                         }
-                        showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
+                        var button2Function = function() {
+                            GC.coppyUUIDToClipBoard()
+                            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
+                        }
+                        showVpnnDrawer(headerText, descriptionText, button0Text, button1Text, button2Text, button0Function, button1Function, button2Function)
                     }
                 }
             }
@@ -284,8 +321,8 @@ PageType {
 
                         onClicked: {
                             if (ConnectionController.isConnected || ConnectionController.isConnectionInProgress) {
-                                notification.text = qsTr('Cannot sign out with an active connection')
-                                notification.visible = true
+                                var msg = qsTr('Cannot sign out with an active connection')
+                                root.showNotification(msg)
                             } else {
                                 var headerText = qsTr('Sign out?')
                                 var yesButtonText = qsTr("Continue")
@@ -362,6 +399,12 @@ PageType {
             id: notification
             objectName: "notification"
             anchors.centerIn: parent
+        }
+
+        BusyIndicator {
+            id: waitingBox
+            anchors.centerIn: parent
+            visible: false
         }
     }
 }

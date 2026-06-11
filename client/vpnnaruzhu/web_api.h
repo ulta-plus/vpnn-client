@@ -57,6 +57,8 @@ public slots:
 
     bool isNewVersionAvailable(void) const;
     bool shouldForceUpdateApp(void) const;
+    bool isChangeServerPossible(void) const;
+    bool changeServer(void) const;
 
 private:
     VpnNaruzhuWebApi();
@@ -103,6 +105,8 @@ private:
     void initRequest(QNetworkRequest &request, const QString &url,
         bool is_json = true) const;
     QNetworkReply* replyGetRequest(const QNetworkRequest &request) const;
+    QNetworkReply* replyPostRequest(const QNetworkRequest &request,
+        const QString &data) const;
 
     QString downloadNewApp(void) const;
     void installNewApp(QString &path) const;

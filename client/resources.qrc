@@ -137,6 +137,7 @@
         <file>ui/qml/Controls2/VPNNaruzhuTextField.qml</file>
         <file>ui/qml/Controls2/VPNNaruzhuButton.qml</file>
         <file>ui/qml/Controls2/VPNNDownloaderWindow.qml</file>
+        <file>ui/qml/Controls2/VPNNDrawer.qml</file>
         <file>ui/qml/Controls2/BackButtonType.qml</file>
         <file>ui/qml/Controls2/BasicButtonType.qml</file>
         <file>ui/qml/Controls2/BusyIndicatorType.qml</file>

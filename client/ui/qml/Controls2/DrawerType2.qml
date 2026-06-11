@@ -18,7 +18,7 @@ Item {
     property Component collapsedStateContent
     property Component expandedStateContent
 
-    property string defaultColor: VPNNaruzhuStyle.color.backGround
+    property string defaultColor: VPNNaruzhuStyle.color.drawerBackground
     property string borderColor: VPNNaruzhuStyle.color.questionDrawerBorder
 
     property real expandedHeight

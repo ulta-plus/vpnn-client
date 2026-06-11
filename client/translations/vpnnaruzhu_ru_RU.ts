@@ -4704,12 +4704,12 @@ should be updated before using.</source>
 <context>
     <name>VPNNaruzhuPageHome</name>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="291"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="325"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="172"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="186"/>
         <source>Need help</source>
         <translation>Нужна помощь</translation>
     </message>
@@ -4719,37 +4719,52 @@ should be updated before using.</source>
         <translation>Подписка закончилась</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="185"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="199"/>
         <source>Do you need help?</source>
         <translation>Вам нужна помощь?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="186"/>
-        <source>Use help@vpn-naruzhu.com or telegram to contact with support</source>
-        <translation>Обратитесь к службе поддержки через help@vpn-naruzhu.com или telegram</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="187"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="211"/>
         <source>Telegram</source>
         <translation>Telegram</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="188"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="210"/>
         <source>E-mail</source>
         <translation>E-mail</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="287"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="205"/>
+        <source>Switch server</source>
+        <translation>Сменить сервер</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="207"/>
+        <source>Contact with support via help@vpn-naruzhu.com or telegram.</source>
+        <translation>Свяжитесь с поддержкой через help@vpn-naruzhu.com или telegram</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="216"/>
+        <source>Server successfully changed</source>
+        <translation>Сервер успешно изменён</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="219"/>
+        <source>Server change failed, please contact support</source>
+        <translation>При смене сервера произошла ошибка, обратитесь в поддержку</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="321"/>
         <source>Cannot sign out with an active connection</source>
         <translation>Нельзя выйти при активном соединении</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="290"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="324"/>
         <source>Sign out?</source>
         <translation>Выйти из акаунта?</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="292"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="326"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
@@ -4769,7 +4784,16 @@ should be updated before using.</source>
         <translation>Доступно до </translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="350"/>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="204"/>
+        <source>Most issues can be resolved by switching servers. You can switch servers once a day. We will disconnect the VPN before doing so.
+
+If switching servers doesn&apos;t help, please contact support: help@vpn-naruzhu.com.</source>
+        <translation>Большинство неполадок решаются сменой сервера. Менять сервер можно раз в день — перед этим мы отключим VPN.
+
+Если смена сервера не поможет, напишите в поддержку: help@vpn-naruzhu.com</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageHome.qml" line="384"/>
         <source>Get more</source>
         <translation>Продлить</translation>
     </message>

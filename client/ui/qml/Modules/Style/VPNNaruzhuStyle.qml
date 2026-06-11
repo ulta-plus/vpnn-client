@@ -7,6 +7,8 @@ QtObject {
         readonly property color transparent: 'transparent'
         readonly property color backGround: '#151515'
         readonly property color headerText: '#FFFFFF'
+        readonly property color drawerBackground: '#121212'
+        readonly property color drawerDescription: '#BBBBBB'
         readonly property color footnotes: '#BDBDBD'
         readonly property color buttonText: AmneziaStyle.color.midnightBlack
         readonly property color buttonDefault: '#FFD600'

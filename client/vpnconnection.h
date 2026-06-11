@@ -84,6 +84,8 @@ signals:
     void restartConnection();
     void toggleConnection();
 
+    void connectionEnded(void);
+
 protected slots:
     void onBytesChanged(quint64 receivedBytes, quint64 sentBytes);
     void onConnectionStateChanged(Vpn::ConnectionState state);

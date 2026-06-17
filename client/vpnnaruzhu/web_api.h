@@ -79,7 +79,7 @@ private:
 
     QSharedPointer<QNetworkAccessManager> m_manager;
     const quint64 TIMEOUT = 10000; // milliseconds
-    const QString awg_version = "1.5";
+    const QString awg_version = "2.0";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
 
     QFile default_app_config = QFile(":/vpnnaruzhu/default_app_config.json");

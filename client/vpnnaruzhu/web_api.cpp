@@ -188,7 +188,9 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(
     initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
-    return getStringFromReply(reply, "getDefaultAccountConfig");
+    QString str = getStringFromReply(reply, "getDefaultAccountConfig");
+    qDebug() << str;
+    return str;
 }
 
 void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const

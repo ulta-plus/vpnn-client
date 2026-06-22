@@ -3,66 +3,40 @@ cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 set(PROJECT VPNNaruzhu-service)
 project(${PROJECT} VERSION "${VPNN_VERSION}")
 
+if (APPLE)
+    # CMAKE_INSTALL_BINDIR must be called before find_package(Qt6) for
+    # Qt to configure prefixes properly
+    # FIXME: make Amnezia-service a bundle and remove this hack completely
+    set(CMAKE_INSTALL_BINDIR "AmneziaVPN.app/Contents/MacOS")
+endif()
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS DBus Core Network Widgets RemoteObjects Core5Compat)
+find_package(Qt6 REQUIRED COMPONENTS DBus Core Network Widgets RemoteObjects Core5Compat Concurrent)
 qt_standard_project_setup()
-
 
 configure_file(${CMAKE_SOURCE_DIR}/version.h.in ${CMAKE_CURRENT_BINARY_DIR}/version.h)
 
 set(QSIMPLECRYPTO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../client/3rd/QSimpleCrypto/src)
 
-
-set(OPENSSL_ROOT_DIR "${CMAKE_CURRENT_LIST_DIR}/../../client/3rd-prebuilt/3rd-prebuilt/openssl/")
-set(OPENSSL_LIBRARIES_DIR "${OPENSSL_ROOT_DIR}/lib")
-
-set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/windows/include")
-if("${CMAKE_SIZEOF_VOID_P}" STREQUAL "8")
-    set(OPENSSL_LIB_SSL_PATH "${OPENSSL_ROOT_DIR}/windows/win64/libssl.lib")
-    set(OPENSSL_LIB_CRYPTO_PATH "${OPENSSL_ROOT_DIR}/windows/win64/libcrypto.lib")
-else()
-    set(OPENSSL_LIB_SSL_PATH "${OPENSSL_ROOT_DIR}/windows/win32/libssl.lib")
-    set(OPENSSL_LIB_CRYPTO_PATH "${OPENSSL_ROOT_DIR}/windows/win32/libcrypto.lib")
-endif()
-
-
-if(WIN32)
-    set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/windows/include")
-    if("${CMAKE_SIZEOF_VOID_P}" STREQUAL "8")
-        set(OPENSSL_LIB_CRYPTO_PATH "${OPENSSL_ROOT_DIR}/windows/win64/libcrypto.lib")
-    else()
-        set(OPENSSL_LIB_CRYPTO_PATH "${OPENSSL_ROOT_DIR}/windows/win32/libcrypto.lib")
-    endif()
-elseif(APPLE AND NOT IOS)
-    set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/macos/include")
-    set(OPENSSL_LIB_CRYPTO_PATH "${OPENSSL_ROOT_DIR}/macos/lib/libcrypto.a")
-elseif(LINUX)
-    set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/linux/include")
-    set(OPENSSL_LIB_CRYPTO_PATH "${OPENSSL_ROOT_DIR}/linux/x86_64/libcrypto.a")
-endif()
-
-set(OPENSSL_USE_STATIC_LIBS TRUE)
-
 include_directories(
-    ${OPENSSL_INCLUDE_DIR}
     ${QSIMPLECRYPTO_DIR}
 )
 
 set(HEADERS
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/utilities.h
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/secure_qsettings.h
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/core/networkUtilities.h
+    ${CMAKE_CURRENT_LIST_DIR}/../../client/core/utils/utilities.h
+    ${CMAKE_CURRENT_LIST_DIR}/../../client/secureQSettings.h
+    ${CMAKE_CURRENT_LIST_DIR}/../../client/core/utils/networkUtilities.h
     ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipc.h
     ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipcserver.h
     ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipcserverprocess.h
-    ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipctun2socksprocess.h
     ${CMAKE_CURRENT_LIST_DIR}/localserver.h
     ${CMAKE_CURRENT_LIST_DIR}/../../common/logger/logger.h
     ${CMAKE_CURRENT_LIST_DIR}/router.h
     ${CMAKE_CURRENT_LIST_DIR}/killswitch.h
     ${CMAKE_CURRENT_LIST_DIR}/systemservice.h
+    ${CMAKE_CURRENT_LIST_DIR}/xray.h
     ${CMAKE_CURRENT_BINARY_DIR}/version.h
     ${QSIMPLECRYPTO_DIR}/include/QAead.h
     ${QSIMPLECRYPTO_DIR}/include/QBlockCipher.h
@@ -73,18 +47,18 @@ set(HEADERS
 )
 
 set(SOURCES
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/utilities.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/secure_qsettings.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/core/networkUtilities.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../../client/core/utils/utilities.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../../client/secureQSettings.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../../client/core/utils/networkUtilities.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipcserver.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipcserverprocess.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipctun2socksprocess.cpp
     ${CMAKE_CURRENT_LIST_DIR}/localserver.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../../common/logger/logger.cpp
     ${CMAKE_CURRENT_LIST_DIR}/main.cpp
     ${CMAKE_CURRENT_LIST_DIR}/router.cpp
     ${CMAKE_CURRENT_LIST_DIR}/killswitch.cpp
     ${CMAKE_CURRENT_LIST_DIR}/systemservice.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/xray.cpp
     ${QSIMPLECRYPTO_DIR}/sources/QAead.cpp
     ${QSIMPLECRYPTO_DIR}/sources/QBlockCipher.cpp
     ${QSIMPLECRYPTO_DIR}/sources/QRsa.cpp
@@ -109,7 +83,6 @@ set(HEADERS ${HEADERS}
 
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/controllerimpl.h
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/dnspingsender.h
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/localsocketcontroller.h
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/networkwatcher.h
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/networkwatcherimpl.h
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/pinghelper.h
@@ -133,7 +106,6 @@ set(SOURCES ${SOURCES}
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/shared/leakdetector.cpp
 
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/dnspingsender.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/localsocketcontroller.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/networkwatcher.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/pinghelper.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../../client/mozilla/pingsender.cpp
@@ -224,7 +196,6 @@ if(WIN32)
         gdi32
         Advapi32
         Kernel32
-        ${OPENSSL_LIB_CRYPTO_PATH}
         qt6keychain
     )
 
@@ -271,7 +242,10 @@ if(APPLE)
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/macos/daemon/macosfirewall.cpp
     )
 
-    set(LIBS ${OPENSSL_LIB_CRYPTO_PATH} qt6keychain)
+    set(LIBS
+        resolv
+        qt6keychain
+    )
 
 endif()
 
@@ -282,6 +256,7 @@ if(LINUX)
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxnetworkwatcher.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxnetworkwatcherworker.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxdependencies.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxpingsender.h 
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/iputilslinux.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/dbustypeslinux.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/linuxdaemon.h
@@ -296,6 +271,7 @@ if(LINUX)
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxnetworkwatcher.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxnetworkwatcherworker.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxdependencies.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/linuxpingsender.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/dnsutilslinux.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/iputilslinux.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/linuxdaemon.cpp
@@ -304,7 +280,13 @@ if(LINUX)
         ${CMAKE_CURRENT_SOURCE_DIR}/../../client/platforms/linux/daemon/linuxfirewall.cpp
     )
 
-    set(LIBS ${OPENSSL_LIB_CRYPTO_PATH} qt6keychain -static-libstdc++ -static-libgcc -ldl)
+    set(LIBS
+        ${OPENSSL_LIB_CRYPTO_PATH}
+        qt6keychain
+        -static-libstdc++
+        -static-libgcc
+        -ldl
+    )
 
 endif()
 
@@ -320,20 +302,23 @@ include_directories(
 
 
 add_executable(${PROJECT} ${SOURCES} ${HEADERS} ${RESOURCES})
-target_link_libraries(${PROJECT} PRIVATE Qt6::Core Qt6::Widgets Qt6::Network Qt6::RemoteObjects Qt6::Core5Compat Qt6::DBus ${LIBS})
+target_link_libraries(${PROJECT} PRIVATE Qt6::Core Qt6::Widgets Qt6::Network Qt6::RemoteObjects Qt6::Core5Compat Qt6::DBus Qt6::Concurrent ${LIBS})
 target_compile_definitions(${PROJECT} PRIVATE "MZ_$<UPPER_CASE:${MZ_PLATFORM_NAME}>")
+
+find_package(amnezia-xray-bindings REQUIRED)
+target_link_libraries(${PROJECT} PRIVATE amnezia::xray-bindings)
+
+find_package(OpenSSL REQUIRED)
+target_link_libraries(${PROJECT} PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(${PROJECT} PRIVATE "MZ_DEBUG")
 endif()
 
 if(APPLE)
-    if(NOT CMAKE_BUILD_TYPE STREQUAL "Debug")
-        set_target_properties(${PROJECT} PROPERTIES
-            INSTALL_RPATH "@executable_path/../Frameworks"
-            BUILD_WITH_INSTALL_RPATH TRUE
-        )
-    endif()
+    set_target_properties(${PROJECT} PROPERTIES
+        INSTALL_RPATH "@executable_path/../Frameworks"
+    )
 
     find_library(FW_COREFOUNDATION CoreFoundation)
     find_library(FW_SYSTEMCONFIG SystemConfiguration)
@@ -356,32 +341,123 @@ endif()
 
 qt_add_repc_sources(${PROJECT} ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipc_interface.rep)
 qt_add_repc_sources(${PROJECT} ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipc_process_interface.rep)
-qt_add_repc_sources(${PROJECT} ${CMAKE_CURRENT_LIST_DIR}/../../ipc/ipc_process_tun2socks.rep)
 
-# copy deploy artifacts required to run the application to the debug build folder
-if(WIN32)
-    if("${CMAKE_SIZEOF_VOID_P}" STREQUAL "8")
-        set(DEPLOY_PLATFORM_PATH "windows/x64")
-    else()
-        set(DEPLOY_PLATFORM_PATH "windows/x32")
-    endif()
-elseif(LINUX)
-    set(DEPLOY_PLATFORM_PATH "linux/client")
-elseif(APPLE AND NOT IOS)
-    set(DEPLOY_PLATFORM_PATH "macos")
+if(APPLE)
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/deploy/data/macos/pf
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        COMPONENT AmneziaVPN
+    )
 endif()
 
-add_custom_command(
-    TARGET ${PROJECT} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E $<IF:$<CONFIG:Debug>,copy_directory,true>
-    ${CMAKE_SOURCE_DIR}/deploy/data/${DEPLOY_PLATFORM_PATH}
-    $<TARGET_FILE_DIR:${PROJECT}>
-    COMMAND_EXPAND_LISTS
+# install non-linked dependencies
+if(WIN32)
+    find_package(awg-windows REQUIRED)
+    list(APPEND CONAN_EXECS $<TARGET_FILE:amnezia::awg-windows>)
+
+    find_package(wintun REQUIRED)
+    list(APPEND CONAN_BINS $<TARGET_FILE:zx2c4::wintun>)
+else()
+    find_package(awg-go REQUIRED)
+    list(APPEND CONAN_EXECS $<TARGET_FILE:amnezia::awg-go>)
+endif()
+
+find_package(openvpn REQUIRED)
+list(APPEND CONAN_EXECS $<TARGET_FILE:openvpn::openvpn>)
+
+find_package(tun2socks REQUIRED)
+list(APPEND CONAN_EXECS $<TARGET_FILE:xjasonlyu::tun2socks>)
+
+find_package(v2ray-rules-dat REQUIRED)
+list(APPEND CONAN_BINS ${GEOSITE_DAT_PATH} ${GEOIP_DAT_PATH})
+
+add_custom_command(TARGET ${PROJECT} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${CONAN_EXECS} ${CONAN_BINS}
+        "$<TARGET_FILE_DIR:${PROJECT}>"
 )
-add_custom_command(
-    TARGET ${PROJECT} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E $<IF:$<CONFIG:Debug>,copy_directory,true>
-    ${CMAKE_SOURCE_DIR}/client/3rd-prebuilt/deploy-prebuilt/${DEPLOY_PLATFORM_PATH}
-    $<TARGET_FILE_DIR:${PROJECT}>
-    COMMAND_EXPAND_LISTS
+if(WIN32)
+    # using PERMISSIONS on Windows appends read-only flag
+    # to the files so just omit it for it
+    install(FILES ${CONAN_EXECS}
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        COMPONENT AmneziaVPN
+    )
+else()
+    install(FILES ${CONAN_EXECS}
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        COMPONENT AmneziaVPN
+        PERMISSIONS
+            OWNER_READ OWNER_EXECUTE
+            GROUP_READ GROUP_EXECUTE
+            WORLD_READ WORLD_EXECUTE
+    )
+endif()
+install(FILES ${CONAN_BINS}
+    DESTINATION ${CMAKE_INSTALL_BINDIR}
+    COMPONENT AmneziaVPN
+)
+
+# install drivers
+if (WIN32)
+    find_package(tap-windows6 REQUIRED)
+    add_custom_command(TARGET ${PROJECT} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${TAP_WINDOWS6_BIN}"
+            "$<TARGET_FILE_DIR:${PROJECT}>/tap"
+    )
+    install(DIRECTORY "${TAP_WINDOWS6_BIN}/"
+        DESTINATION "${CMAKE_INSTALL_BINDIR}/tap"
+        COMPONENT AmneziaVPN
+    )
+
+    find_package(win-split-tunnel REQUIRED)
+    add_custom_command(TARGET ${PROJECT} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${WIN_SPLIT_TUNNEL_BIN}"
+            "$<TARGET_FILE_DIR:${PROJECT}>"
+    )
+    install(DIRECTORY "${WIN_SPLIT_TUNNEL_BIN}/"
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        COMPONENT AmneziaVPN
+    )
+endif()
+
+# install target
+install(TARGETS ${PROJECT}
+    DESTINATION ${CMAKE_INSTALL_BINDIR}
+    RUNTIME_DEPENDENCY_SET service_deps
+    COMPONENT AmneziaVPN
+)
+
+if(APPLE)
+    set(RUNTIME_DEPS_DIR ${CMAKE_INSTALL_BINDIR}/../Frameworks)
+else()
+    set(RUNTIME_DEPS_DIR ${CMAKE_INSTALL_BINDIR})
+endif()
+
+install(RUNTIME_DEPENDENCY_SET service_deps
+    PRE_EXCLUDE_REGEXES
+        [[api-ms-win-.*]]
+        [[ext-ms-.*]]
+        [[kernel32\.dll]]
+        [[hvsifiletrust\.dll]]
+        [[libc\.so\..*]] [[libgcc_s\.so\..*]] [[libm\.so\..*]] [[libstdc\+\+\.so\..*]]
+        [[.*\.framework]]
+        [[^[Qq]t.*]]
+    POST_EXCLUDE_REGEXES
+        [[^.*[\\/]system32[\\/].*\.dll$]]
+        [[^/lib.*]]
+        [[^/usr/lib.*]]
+    DIRECTORIES ${CONAN_RUNTIME_LIB_DIRS}
+    COMPONENT AmneziaVPN
+    DESTINATION "${RUNTIME_DEPS_DIR}"
+)
+
+qt_generate_deploy_app_script(
+    TARGET ${PROJECT}
+    OUTPUT_SCRIPT QT_DEPLOY_SCRIPT
+    NO_UNSUPPORTED_PLATFORM_ERROR
+)
+install(SCRIPT ${QT_DEPLOY_SCRIPT}
+    COMPONENT AmneziaVPN
 )

@@ -14,6 +14,21 @@ import "../Config"
 PageType {
     id: root
 
+    Connections {
+        target: ApiNewsController
+        function onFetchNewsFinished() {
+            PageController.showBusyIndicator(false)
+        }
+
+        function onErrorOccurred(errorCode, showError) {
+            if (showError) {
+                PageController.showErrorMessage(errorCode)
+                PageController.closePage()
+                PageController.showBusyIndicator(false)
+            }
+        }
+    }
+
     ListViewType {
         id: listView
 
@@ -25,7 +40,7 @@ PageType {
             BaseHeaderType {
                 id: header
                 Layout.fillWidth: true
-                Layout.topMargin: 24
+                Layout.topMargin: 24 + PageController.safeAreaTopMargin
                 Layout.bottomMargin: 16
                 Layout.rightMargin: 16
                 Layout.leftMargin: 16
@@ -90,17 +105,16 @@ PageType {
         servers,
         connection,
         application,
-        //backup,
+        news,
+        backup,
         about,
-        //devConsole,
-        supportTelegramm,
-        telegrammGroup
+        devConsole
     ]
 
     QtObject {
         id: servers
 
-        property string title: qsTr("Keys")
+        property string title: qsTr("Servers")
         readonly property string leftImagePath: "qrc:/images/controls/server.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
@@ -129,7 +143,23 @@ PageType {
             PageController.goToPage(PageEnum.PageSettingsApplication)
         }
     }
-/*
+
+    QtObject {
+        id: news
+
+        property string title: qsTr("News & Notifications")
+        readonly property string leftImagePath: NewsModel.hasUnread && SettingsController.isNewsNotificationsEnabled() ? "qrc:/images/controls/news-unread.svg" : "qrc:/images/controls/news.svg"
+        property bool isVisible: ServersUiController.hasServersFromGatewayApi
+        readonly property var clickedHandler: function() {
+            if (!ServersUiController.hasServersFromGatewayApi) {
+                return;
+            }
+            PageController.showBusyIndicator(true)
+            ApiNewsController.fetchNews(true)
+            PageController.goToPage(PageEnum.PageSettingsNewsNotifications)
+        }
+    }
+
     QtObject {
         id: backup
 
@@ -140,18 +170,18 @@ PageType {
             PageController.goToPage(PageEnum.PageSettingsBackup)
         }
     }
-*/
+
     QtObject {
         id: about
 
-        property string title: qsTr("About VPNNaruzhu")
-        readonly property string leftImagePath: "qrc:/images/controls/external-link.svg"
+        property string title: qsTr("About AmneziaVPN")
+        readonly property string leftImagePath: "qrc:/images/controls/amnezia.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {
-            Qt.openUrlExternally("https://naruzhu.click/appam")
+            PageController.goToPage(PageEnum.PageSettingsAbout)
         }
     }
-/*
+
     QtObject {
         id: devConsole
 
@@ -160,29 +190,6 @@ PageType {
         property bool isVisible: SettingsController.isDevModeEnabled
         readonly property var clickedHandler: function() {
             PageController.goToPage(PageEnum.PageDevMenu)
-        }
-    }
-*/
-    QtObject {
-        id: supportTelegramm
-
-        property string title: qsTr("Support via Telegram")
-        readonly property string leftImagePath: "qrc:/images/controls/telegramNaruzhu.svg"
-        property bool isVisible: true
-        readonly property var clickedHandler: function() {
-            GC.coppyUUIDToClipBoard()
-            Qt.openUrlExternally(VPNNWebApi.getSupportLink())
-        }
-    }
-
-    QtObject {
-        id: telegrammGroup
-
-        property string title: qsTr("Telegram Group")
-        readonly property string leftImagePath: "qrc:/images/controls/chat.svg"
-        property bool isVisible: true
-        readonly property var clickedHandler: function() {
-            Qt.openUrlExternally(VPNNWebApi.getTgChannelLink())
         }
     }
 }

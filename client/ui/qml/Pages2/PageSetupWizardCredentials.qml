@@ -19,7 +19,7 @@ PageType {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         onFocusChanged: {
             if (this.activeFocus) {
@@ -71,6 +71,7 @@ PageType {
 
                 clickedFunc: function () {
                     clickedHandler()
+                    buttonImageSource = textField.text !== "" ? imageSource : ""
                 }
 
                 textField.onFocusChanged: {
@@ -78,10 +79,22 @@ PageType {
                 }
 
                 textField.onTextChanged: {
-                    if (hideContent) {
-                        buttonImageSource = textField.text !== "" ? (hideContent ? "qrc:/images/controls/eye.svg" : "qrc:/images/controls/eye-off.svg") : ""
+                    if (headerText === qsTr("Password or SSH private key")) {
+                        buttonImageSource = textField.text !== "" ? imageSource : ""
                     }
                 }
+            }
+
+            WarningType {
+                Layout.fillWidth: true
+                Layout.leftMargin: 16
+                Layout.rightMargin: 16
+                Layout.topMargin: 8
+
+                visible: title === qsTr("Password or SSH private key")
+                backGroundColor: AmneziaStyle.color.translucentWhite
+                iconPath: "qrc:/images/controls/alert-circle.svg"
+                textString: qsTr("SSH key requirements: supported key types are ED25519 and RSA in PEM format. Paste the private key, including the BEGIN/END lines. If your key doesn’t work, generate a compatible one")
             }
         }
 
@@ -103,12 +116,12 @@ PageType {
                         return
                     }
 
-                    InstallController.setShouldCreateServer(true)
                     var _hostname = listView.itemAtIndex(vars.hostnameIndex).children[0].textField.text
                     var _username = listView.itemAtIndex(vars.usernameIndex).children[0].textField.text
                     var _secretData = listView.itemAtIndex(vars.secretDataIndex).children[0].textField.text
 
                     InstallController.setProcessedServerCredentials(_hostname, _username, _secretData)
+                    ServersUiController.setProcessedServerId("")
 
                     PageController.showBusyIndicator(true)
                     var isConnectionOpened = InstallController.checkSshConnection()
@@ -146,7 +159,7 @@ PageType {
                 leftImageSource: "qrc:/images/controls/help-circle.svg"
 
                 onClicked: {
-                    Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl("starter-guide"))
+                    Qt.openUrlExternally(LanguageUiController.getCurrentSiteUrl("starter-guide"))
                 }
 
                 Keys.onEnterPressed: this.clicked()
@@ -211,8 +224,10 @@ PageType {
         property string title: qsTr("Password or SSH private key")
         readonly property string placeholderContent: ""
         property bool hideContent: true
+        property string imageSource: "qrc:/images/controls/eye.svg"
         readonly property var clickedHandler: function() {
             hideContent = !hideContent
+            imageSource = hideContent ? "qrc:/images/controls/eye.svg" : "qrc:/images/controls/eye-off.svg"
         }
     }
 

@@ -29,10 +29,13 @@ public:
     bool clearSavedRoutes();
     bool routeDelete(const QString &ip, const QString &gw);
     bool routeDeleteList(const QString &gw, const QStringList &ips);
-    void flushDns();
+    bool flushDns();
     bool createTun(const QString &dev, const QString &subnet);
     bool deleteTun(const QString &dev);
     bool updateResolvers(const QString& ifname, const QList<QHostAddress>& resolvers);
+    bool restoreResolvers();
+    bool routeAddXray(const QString& ifname, const QString& gateway);
+    bool routeDeleteXray(const QString& ifname, const QString& gateway);
     
 public slots:
 
@@ -46,4 +49,3 @@ private:
 };
 
 #endif // ROUTERMAC_H
-

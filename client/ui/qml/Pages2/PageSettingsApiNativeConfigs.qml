@@ -28,7 +28,7 @@ PageType {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         onActiveFocusChanged: {
             if(backButton.enabled && backButton.activeFocus) {
@@ -71,7 +71,7 @@ PageType {
 
                 text: countryName
                 descriptionText: isWorkerExpired ? qsTr("The configuration needs to be reissued") : ""
-                hideDescription: isWorkerExpired ? true : false
+                hideDescription: isWorkerExpired ? false : true
                 descriptionColor: AmneziaStyle.color.vibrantRed
 
                 leftImageSource: "qrc:/countriesFlags/images/flagKit/" + countryImageCode + ".svg"
@@ -191,10 +191,7 @@ PageType {
         }
         if (fileName !== "") {
             PageController.showBusyIndicator(true)
-            let result = ApiConfigsController.exportNativeConfig(countryCode, fileName)
-            if (result) {
-                ApiSettingsController.getAccountInfo(true)
-            }
+            let result = SubscriptionUiController.exportNativeConfig(ServersUiController.processedServerId, countryCode, fileName)
 
             PageController.showBusyIndicator(false)
             if (result) {
@@ -205,9 +202,9 @@ PageType {
 
     function revokeConfig(countryCode) {
         PageController.showBusyIndicator(true)
-        let result = ApiConfigsController.revokeNativeConfig(countryCode)
+        let result = SubscriptionUiController.revokeNativeConfig(ServersUiController.processedServerId, countryCode)
         if (result) {
-            ApiSettingsController.getAccountInfo(true)
+            SubscriptionUiController.getAccountInfo(ServersUiController.processedServerId, true)
         }
         PageController.showBusyIndicator(false)
 

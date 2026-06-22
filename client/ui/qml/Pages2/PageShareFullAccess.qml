@@ -25,7 +25,7 @@ PageType {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         onFocusChanged: {
             if (this.activeFocus) {
@@ -36,6 +36,9 @@ PageType {
 
     ListViewType {
         id: listView
+
+        property string headerText: ""
+        property string configContentHeaderText: ""
 
         anchors.top: backButton.bottom
         anchors.bottom: parent.bottom
@@ -104,24 +107,25 @@ PageType {
                     clickedFunction: function() {
                         handler()
 
-                        if (serverSelector.currentIndex !== serverSelectorListView.currentIndex) {
-                            serverSelector.currentIndex = serverSelectorListView.currentIndex
+                        if (serverSelector.currentIndex !== serverSelectorListView.selectedIndex) {
+                            serverSelector.currentIndex = serverSelectorListView.selectedIndex
+                            serverSelector.severSelectorIndexChanged()
                         }
 
-                        shareConnectionPage.headerText = qsTr("Accessing ") + serverSelector.text
-                        shareConnectionPage.configContentHeaderText = qsTr("File with accessing settings to ") + serverSelector.text
+                        listView.headerText = qsTr("Accessing ") + serverSelector.text
+                        listView.configContentHeaderText = qsTr("File with accessing settings to ") + serverSelector.text
                         serverSelector.closeTriggered()
                     }
 
                     Component.onCompleted: {
-                        serverSelectorListView.currentIndex = ServersModel.isDefaultServerHasWriteAccess() ?
-                                    proxyServersModel.mapFromSource(ServersModel.defaultIndex) : 0
+                        serverSelectorListView.currentIndex = ServersUiController.isServerHasWriteAccess(ServersUiController.defaultServerId) ?
+                                    proxyServersModel.mapFromSource(ServersUiController.getServerIndexById(ServersUiController.defaultServerId)) : 0
                         serverSelectorListView.triggerCurrentItem()
                     }
 
                     function handler() {
                         serverSelector.text = selectedText
-                        ServersModel.processedIndex = proxyServersModel.mapToSource(currentIndex)
+                        ServersUiController.setProcessedServerId(ServersUiController.getServerId(proxyServersModel.mapToSource(selectedIndex)))
                     }
                 }
             }
@@ -151,12 +155,12 @@ PageType {
                         ExportController.exportErrorOccurred(qsTr("Access error!"))
                         return
                     } else {
-                        ExportController.generateFullAccessConfig()
+                        ExportController.generateFullAccessConfig(ServersUiController.processedServerId)
                     }
 
                     PageController.showBusyIndicator(false)
                     
-                    PageController.goToPage(PageEnum.PageShareConnection)
+                    PageController.goToShareConnectionPage(listView.headerText, listView.configContentHeaderText, "", ".vpn", "amnezia_config")
                 }
             }
         }

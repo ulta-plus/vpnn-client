@@ -8,7 +8,6 @@ import QtCore
 import SortFilterProxyModel 0.2
 
 import PageEnum 1.0
-import ProtocolEnum 1.0
 import ContainerProps 1.0
 import Style 1.0
 
@@ -59,7 +58,7 @@ PageType {
     }
 
     function getRouteModesModelIndex() {
-        var currentRouteMode = AppSplitTunnelingModel.routeMode
+        var currentRouteMode = AppSplitTunnelingController.routeMode
         if ((routeMode.onlyForwardApps === currentRouteMode) || (routeMode.allApps === currentRouteMode)) {
             return 0
         } else if (routeMode.allExceptApps === currentRouteMode) {
@@ -74,7 +73,7 @@ PageType {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         BackButtonType {
             id: backButton
@@ -90,11 +89,11 @@ PageType {
             enabled: root.pageEnabled
             showSwitcher: true
             switcher {
-                checked: AppSplitTunnelingModel.isTunnelingEnabled
+                checked: AppSplitTunnelingController.isSplitTunnelingEnabled
                 enabled: root.pageEnabled
             }
             switcherFunction: function(checked) {
-                AppSplitTunnelingModel.toggleSplitTunneling(checked)
+                AppSplitTunnelingController.toggleSplitTunneling(checked)
                 selector.text = root.routeModesModel[getRouteModesModelIndex()].name
             }
         }
@@ -124,13 +123,13 @@ PageType {
                 clickedFunction: function() {
                     selector.text = selectedText
                     selector.closeTriggered()
-                    if (AppSplitTunnelingModel.routeMode !== root.routeModesModel[selectedIndex].type) {
-                        AppSplitTunnelingModel.routeMode = root.routeModesModel[selectedIndex].type
+                    if (AppSplitTunnelingController.routeMode !== root.routeModesModel[selectedIndex].type) {
+                        AppSplitTunnelingController.routeMode = root.routeModesModel[selectedIndex].type
                     }
                 }
 
                 Component.onCompleted: {
-                    if (root.routeModesModel[selectedIndex].type === AppSplitTunnelingModel.routeMode) {
+                    if (root.routeModesModel[selectedIndex].type === AppSplitTunnelingController.routeMode) {
                         selector.text = selectedText
                     } else {
                         selector.text = root.routeModesModel[0].name
@@ -138,22 +137,38 @@ PageType {
                 }
 
                 Connections {
-                    target: AppSplitTunnelingModel
+                    target: AppSplitTunnelingController
                     function onRouteModeChanged() {
                         selectedIndex = getRouteModesModelIndex()
                     }
                 }
             }
         }
+
+        WarningType {
+            Layout.fillWidth: true
+            Layout.topMargin: 8
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+
+            textString: qsTr("Only \"Apps from the list should not have access via VPN\" mode is available on Windows")
+            iconPath: "qrc:/images/controls/alert-circle.svg"
+
+            visible: (Qt.platform.os === "windows") && root.pageEnabled
+        }
     }
 
     ListViewType {
         id: listView
 
+        ScrollBar.vertical: ScrollBarType { policy: ScrollBar.AlwaysOn }
+
         anchors.top: header.bottom
-        anchors.bottom: addAppButton.top
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: addAppButton.implicitHeight + 48 + PageController.safeAreaBottomMargin + (searchField.textField.activeFocus ? 0 : PageController.imeHeight)
         anchors.left: parent.left
         anchors.right: parent.right
+        clip: true
 
         model: SortFilterProxyModel {
             id: proxyAppSplitTunnelingModel
@@ -201,50 +216,53 @@ PageType {
     }
 
     Rectangle {
-        anchors.fill: addAppButton
-        anchors.bottomMargin: -24
-        color: AmneziaStyle.color.midnightBlack
-        opacity: 0.8
-    }
-
-    RowLayout {
-        id: addAppButton
-
-        enabled: root.pageEnabled
-
-        anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 24
-        anchors.rightMargin: 16
-        anchors.leftMargin: 16
-        anchors.bottomMargin: 24
+        anchors.bottom: parent.bottom
+        
+        height: addAppButton.implicitHeight + 48 + PageController.safeAreaBottomMargin
+        
+        color: AmneziaStyle.color.midnightBlack
+        
+        RowLayout {
+            id: addAppButton
 
-        TextFieldWithHeaderType {
-            id: searchField
+            enabled: root.pageEnabled
 
-            Layout.fillWidth: true
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.topMargin: 24
+            anchors.rightMargin: 16
+            anchors.leftMargin: 16
+            anchors.bottomMargin: 24 + PageController.safeAreaBottomMargin
 
-            textField.placeholderText: qsTr("application name")
-            buttonImageSource: "qrc:/images/controls/plus.svg"
+            TextFieldWithHeaderType {
+                id: searchField
 
-            rightButtonClickedOnEnter: true
+                Layout.fillWidth: true
 
-            clickedFunc: function() {
-                searchField.focus = false
-                PageController.showBusyIndicator(true)
+                textField.placeholderText: qsTr("application name")
+                buttonImageSource: "qrc:/images/controls/plus.svg"
 
-                if (Qt.platform.os === "windows") {
-                    var fileName = SystemController.getFileName(qsTr("Open executable file"),
-                                                                qsTr("Executable files (*.*)"))
-                    if (fileName !== "") {
-                        AppSplitTunnelingController.addApp(fileName)
+                rightButtonClickedOnEnter: true
+
+                clickedFunc: function() {
+                    searchField.focus = false
+                    PageController.showBusyIndicator(true)
+
+                    if (Qt.platform.os === "windows") {
+                        var fileName = SystemController.getFileName(qsTr("Open executable file"),
+                                                                    qsTr("Executable files (*.*)"))
+                        if (fileName !== "") {
+                            AppSplitTunnelingController.addApp(fileName)
+                        }
+                    } else if (Qt.platform.os === "android"){
+                        installedAppDrawer.openTriggered()
                     }
-                } else if (Qt.platform.os === "android"){
-                    installedAppDrawer.openTriggered()
-                }
 
-                PageController.showBusyIndicator(false)
+                    PageController.showBusyIndicator(false)
+                }
             }
         }
     }

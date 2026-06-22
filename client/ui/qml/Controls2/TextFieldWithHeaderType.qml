@@ -10,6 +10,7 @@ Item {
     id: root
 
     property string headerText
+    property string subtitleText // optional line under header (e.g. default value hint)
     property string headerTextDisabledColor: AmneziaStyle.color.charcoalGray
     property string headerTextColor: AmneziaStyle.color.mutedGray
 
@@ -36,6 +37,22 @@ Item {
 
     implicitWidth: content.implicitWidth
     implicitHeight: content.implicitHeight
+
+    Keys.onTabPressed: {
+        FocusController.nextKeyTabItem()
+    }
+
+    Keys.onBacktabPressed: {
+        FocusController.previousKeyTabItem()
+    }
+
+    Keys.onUpPressed: {
+        FocusController.nextKeyUpItem()
+    }
+
+    Keys.onDownPressed: {
+        FocusController.nextKeyDownItem()
+    }
 
     ColumnLayout {
         id: content
@@ -66,6 +83,15 @@ Item {
                         visible: text !== ""
 
                         Layout.fillWidth: true
+                    }
+
+                    SmallTextType {
+                        text: root.subtitleText
+                        visible: root.subtitleText !== ""
+                        color: AmneziaStyle.color.charcoalGray
+                        font.pixelSize: 13
+                        Layout.fillWidth: true
+                        Layout.topMargin: visible ? 2 : 0
                     }
 
                     TextField {
@@ -105,7 +131,7 @@ Item {
 
                         background: Rectangle {
                             anchors.fill: parent
-                            color: root.enabled ? root.backgroundColor : root.backgroundDisabledColor
+                            color: root.backgroundDisabledColor
                         }
 
                         onTextChanged: {
@@ -118,14 +144,7 @@ Item {
                             }
                         }
 
-                        MouseArea {
-                            anchors.fill: parent
-                            acceptedButtons: Qt.RightButton
-                            onClicked: contextMenu.open()
-                            enabled: true
-                        }
-
-                        ContextMenuType {
+                        ContextMenu.menu: ContextMenuType {
                             id: contextMenu
                             textObj: textField
                         }
@@ -151,7 +170,7 @@ Item {
 
     MouseArea {
         anchors.fill: root
-        cursorShape: Qt.IBeamCursor
+        cursorShape: contextMenu.opened ? Qt.ArrowCursor : Qt.IBeamCursor
 
         hoverEnabled: true
 

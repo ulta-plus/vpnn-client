@@ -6,7 +6,6 @@ import Qt5Compat.GraphicalEffects
 import SortFilterProxyModel 0.2
 
 import PageEnum 1.0
-import ProtocolEnum 1.0
 import ContainerProps 1.0
 import ContainersModelFilters 1.0
 import Style 1.0
@@ -20,6 +19,23 @@ import "../Components"
 PageType {
     id: root
 
+    property var containersDropDownRef: null
+
+    Connections {
+        target: Qt.application
+
+        function onStateChanged() {
+            if (Qt.application.state !== Qt.ApplicationActive) {
+                if (drawer.isOpened) {
+                    drawer.closeTriggered()
+                }
+                if (homeSplitTunnelingDrawer.isOpened) {
+                    homeSplitTunnelingDrawer.closeTriggered()
+                }
+            }
+        }
+    }
+
     Connections {
         objectName: "pageControllerConnections"
 
@@ -27,36 +43,12 @@ PageType {
 
         function onRestorePageHomeState(isContainerInstalled) {
             drawer.openTriggered()
-            if (isContainerInstalled) {
-                containersDropDown.rootButtonClickedFunction()
+            if (isContainerInstalled && root.containersDropDownRef) {
+                root.containersDropDownRef.rootButtonClickedFunction()
             }
         }
     }
 
-    Connections {
-
-        target: ApiPremV1MigrationController
-
-        function onMigrationFinished() {
-            apiPremV1MigrationDrawer.closeTriggered()
-
-            var headerText = qsTr("You've successfully switched to the new Amnezia Premium subscription!")
-            var descriptionText = qsTr("Old keys will no longer work. Please use your new subscription key to connect. \nThank you for staying with us!")
-            var yesButtonText = qsTr("Continue")
-            var noButtonText = ""
-
-            var yesButtonFunction = function() {
-            }
-            var noButtonFunction = function() {
-            }
-
-            showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
-        }
-
-        function onShowMigrationDrawer() {
-            apiPremV1MigrationDrawer.openTriggered()
-        }
-    }
 
     Item {
         objectName: "homeColumnItem"
@@ -68,18 +60,8 @@ PageType {
             objectName: "homeColumnLayout"
 
             anchors.fill: parent
-            anchors.topMargin: 12
+            anchors.topMargin: 12 + PageController.safeAreaTopMargin
             anchors.bottomMargin: 16
-
-            AdLabel {
-                id: adLabel
-
-                Layout.fillWidth: true
-                Layout.preferredHeight: adLabel.contentHeight
-                Layout.leftMargin: 16
-                Layout.rightMargin: 16
-                Layout.bottomMargin: 22
-            }
 
             BasicButtonType {
                 id: loggingButton
@@ -109,33 +91,42 @@ PageType {
                 }
             }
 
+            BasicButtonType {
+                id: devGatewayButton
+                objectName: "devGatewayButton"
+
+                property bool isDevGatewayEnabled: SettingsController.isDevGatewayEnv
+
+                Layout.alignment: Qt.AlignHCenter
+
+                implicitHeight: 36
+
+                defaultColor: AmneziaStyle.color.transparent
+                hoveredColor: AmneziaStyle.color.translucentWhite
+                pressedColor: AmneziaStyle.color.sheerWhite
+                disabledColor: AmneziaStyle.color.mutedGray
+                textColor: AmneziaStyle.color.mutedGray
+                borderWidth: 0
+
+                visible: SettingsController.isDevModeEnabled && isDevGatewayEnabled
+                text: qsTr("Dev gateway enabled")
+
+                Keys.onEnterPressed: this.clicked()
+                Keys.onReturnPressed: this.clicked()
+
+                onClicked: {
+                    PageController.goToPage(PageEnum.PageDevMenu)
+                }
+            }
+
             ConnectButton {
                 id: connectButton
                 objectName: "connectButton"
 
                 Layout.fillHeight: true
                 Layout.alignment: Qt.AlignCenter
-
-                KeyNavigation.tab: drawer // issue_5 splitTunnelingButton
             }
 
-            VPNNaruzhuNotification {
-                pop_up: false
-                visible: true
-
-                Layout.alignment: Qt.AlignCenter
-
-                property var defaultConfig: ServersModel.getDefaultAccount()
-
-                text: qsTr('Subscription valid until') + ':\n' +
-                      ServersModel.getPaidUntilDefaultAccountStr()
-                buttonText: qsTr('Renew Subscription')
-
-                onClick: function() {
-                    Qt.openUrlExternally(defaultConfig.payment_link)
-                }
-            }
-        /* issue_5 splitTunnelingButton
             BasicButtonType {
                 id: splitTunnelingButton
                 objectName: "splitTunnelingButton"
@@ -157,8 +148,8 @@ PageType {
                 buttonTextLabel.font.pixelSize: 14
                 buttonTextLabel.font.weight: 500
 
-                property bool isSplitTunnelingEnabled: SitesModel.isTunnelingEnabled || AppSplitTunnelingModel.isTunnelingEnabled ||
-                                                       ServersModel.isDefaultServerDefaultContainerHasSplitTunneling
+                property bool isSplitTunnelingEnabled: IpSplitTunnelingController.isSplitTunnelingEnabled || AppSplitTunnelingController.isSplitTunnelingEnabled ||
+                                                       ServersUiController.isDefaultServerDefaultContainerHasSplitTunneling
 
                 text: isSplitTunnelingEnabled ? qsTr("Split tunneling enabled") : qsTr("Split tunneling disabled")
 
@@ -180,7 +171,16 @@ PageType {
                     parent: root
                 }
             }
-        */
+
+            AdLabel {
+                id: adLabel
+
+                Layout.fillWidth: true
+                Layout.preferredHeight: adLabel.contentHeight
+                Layout.leftMargin: 16
+                Layout.rightMargin: 16
+                Layout.topMargin: 22
+            }
         }
     }
 
@@ -269,7 +269,7 @@ PageType {
                         maximumLineCount: 2
                         elide: Qt.ElideRight
 
-                        text: ServersModel.defaultServerName
+                        text: ServersUiController.defaultServerName
                         horizontalAlignment: Qt.AlignHCenter
 
                         Behavior on opacity {
@@ -311,11 +311,11 @@ PageType {
                     objectName: "rowLayoutLabel"
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                     Layout.topMargin: 8
-                    Layout.bottomMargin: drawer.isCollapsedStateActive ? 44 : ServersModel.isDefaultServerFromApi ? 61 : 16
+                    Layout.bottomMargin: drawer.isCollapsedStateActive ? 44 : ServersUiController.isDefaultServerFromApi ? 61 : 16
                     spacing: 0
 
                     BasicButtonType {
-                        enabled: (ServersModel.defaultServerImagePathCollapsed !== "") && drawer.isCollapsedStateActive
+                        enabled: (ServersUiController.defaultServerImagePathCollapsed !== "") && drawer.isCollapsedStateActive
                         hoverEnabled: enabled
 
                         implicitHeight: 36
@@ -333,8 +333,8 @@ PageType {
                         buttonTextLabel.font.pixelSize: 13
                         buttonTextLabel.font.weight: 400
 
-                        text: drawer.isCollapsedStateActive ? ServersModel.defaultServerDescriptionCollapsed : ServersModel.defaultServerDescriptionExpanded
-                        leftImageSource: ServersModel.defaultServerImagePathCollapsed
+                        text: drawer.isCollapsedStateActive ? ServersUiController.defaultServerDescriptionCollapsed : ServersUiController.defaultServerDescriptionExpanded
+                        leftImageSource: ServersUiController.defaultServerImagePathCollapsed
                         leftImageColor: ""
                         changeLeftImageSize: false
 
@@ -344,14 +344,14 @@ PageType {
                         Keys.onReturnPressed: this.clicked()
 
                         onClicked: {
-                            ServersModel.processedIndex = ServersModel.defaultIndex
+                            ServersUiController.setProcessedServerId(ServersUiController.defaultServerId)
 
-                            if (ServersModel.getProcessedServerData("isServerFromGatewayApi")) {
-                                if (ServersModel.getProcessedServerData("isCountrySelectionAvailable")) {
+                            if (ServersUiController.isServerFromApi(ServersUiController.processedServerId)) {
+                                if (ServersUiController.isServerCountrySelectionAvailable(ServersUiController.processedServerId)) {
                                     PageController.goToPage(PageEnum.PageSettingsApiAvailableCountries)
                                 } else {
                                     PageController.showBusyIndicator(true)
-                                    let result = ApiSettingsController.getAccountInfo(false)
+                                    let result = SubscriptionUiController.getAccountInfo(ServersUiController.processedServerId, false)
                                     PageController.showBusyIndicator(false)
                                     if (!result) {
                                         return
@@ -379,11 +379,13 @@ PageType {
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                     spacing: 8
 
-                    visible: false
+                    visible: !ServersUiController.isDefaultServerFromApi
 
                     DropDownType {
                         id: containersDropDown
                         objectName: "containersDropDown"
+
+                        Component.onCompleted: root.containersDropDownRef = containersDropDown
 
                         rootButtonImageColor: AmneziaStyle.color.midnightBlack
                         rootButtonBackgroundColor: AmneziaStyle.color.paleGray
@@ -396,7 +398,7 @@ PageType {
 
                         enabled: drawer.isOpened
 
-                        text: ServersModel.defaultServerDefaultContainerName
+                        text: ServersUiController.defaultServerDefaultContainerName
                         textColor: AmneziaStyle.color.midnightBlack
                         headerText: qsTr("VPN protocol")
                         headerBackButtonImage: "qrc:/images/controls/arrow-left.svg"
@@ -416,15 +418,15 @@ PageType {
                             Connections {
                                 objectName: "rowLayoutConnections"
 
-                                target: ServersModel
+                                target: ServersUiController
 
-                                function onDefaultServerIndexChanged() {
+                                function onDefaultServerIdChanged() {
                                     updateContainersModelFilters()
                                 }
                             }
 
                             function updateContainersModelFilters() {
-                                if (ServersModel.isDefaultServerHasWriteAccess()) {
+                                if (ServersUiController.isServerHasWriteAccess(ServersUiController.defaultServerId)) {
                                     proxyDefaultServerContainersModel.filters = ContainersModelFilters.getWriteAccessProtocolsListFilters()
                                 } else {
                                     proxyDefaultServerContainersModel.filters = ContainersModelFilters.getReadAccessProtocolsListFilters()
@@ -451,7 +453,7 @@ PageType {
                     Layout.leftMargin: 16
                     Layout.rightMargin: 16
 
-                    headerText: qsTr("Keys")
+                    headerText: qsTr("Servers")
                 }
             }
 
@@ -476,10 +478,5 @@ PageType {
                 }
             }
         }
-    }
-
-    ApiPremV1MigrationDrawer {
-        id: apiPremV1MigrationDrawer
-        anchors.fill: parent
     }
 }

@@ -24,7 +24,7 @@ Rectangle {
     MouseArea {
         id: parentMouse
         anchors.fill: parent
-        cursorShape: Qt.IBeamCursor
+        cursorShape: contextMenu.opened ? Qt.ArrowCursor : Qt.IBeamCursor
         onClicked: textArea.forceActiveFocus()
         hoverEnabled: true
 
@@ -93,24 +93,13 @@ Rectangle {
 
                 wrapMode: Text.Wrap
 
-                MouseArea {
-                    id: textAreaMouse
-                    anchors.fill: parent
-                    acceptedButtons: Qt.RightButton
-                    hoverEnabled: true
-                    onClicked: {
-                        fl.interactive = true
-                        contextMenu.open()
-                    }
+                ContextMenu.menu: ContextMenuType {
+                    id: contextMenu
+                    textObj: textArea
                 }
 
                 onFocusChanged: {
                     root.border.color = getBorderColor(borderNormalColor)
-                }
-
-                ContextMenuType {
-                    id: contextMenu
-                    textObj: textArea
                 }
             }
         }

@@ -8,7 +8,6 @@ import QtCore
 import SortFilterProxyModel 0.2
 
 import PageEnum 1.0
-import ProtocolEnum 1.0
 import ContainerProps 1.0
 import Style 1.0
 
@@ -21,7 +20,7 @@ import "../Components"
 PageType {
     id: root
 
-    property var isServerFromTelegramApi: ServersModel.getDefaultServerData("isServerFromTelegramApi")
+    property var isServerFromTelegramApi: ServersUiController.isServerFromApi(ServersUiController.defaultServerId)
     
     property bool pageEnabled
 
@@ -29,7 +28,7 @@ PageType {
         if (ConnectionController.isConnected) {
             PageController.showNotificationMessage(qsTr("Cannot change split tunneling settings during active connection"))
             root.pageEnabled = false
-        } else if (ServersModel.isDefaultServerDefaultContainerHasSplitTunneling) {
+        } else if (ServersUiController.isDefaultServerDefaultContainerHasSplitTunneling) {
             PageController.showNotificationMessage(qsTr("Default server does not support split tunneling function"))
             root.pageEnabled = false
         } else {
@@ -38,7 +37,7 @@ PageType {
     }
 
     Connections {
-        target: SitesController
+        target: IpSplitTunnelingController
 
         function onFinished(message) {
             PageController.showNotificationMessage(message)
@@ -73,7 +72,7 @@ PageType {
     }
 
     function getRouteModesModelIndex() {
-        var currentRouteMode = SitesModel.routeMode
+        var currentRouteMode = IpSplitTunnelingController.routeMode
         if ((routeMode.onlyForwardSites === currentRouteMode) || (routeMode.allSites === currentRouteMode)) {
             return 0
         } else if (routeMode.allExceptSites === currentRouteMode) {
@@ -88,7 +87,7 @@ PageType {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         BackButtonType {
             id: backButton
@@ -104,11 +103,11 @@ PageType {
             enabled: root.pageEnabled
             showSwitcher: true
             switcher {
-                checked: SitesModel.isTunnelingEnabled
+                checked: IpSplitTunnelingController.isSplitTunnelingEnabled
                 enabled: root.pageEnabled
             }
             switcherFunction: function(checked) {
-                SitesModel.toggleSplitTunneling(checked)
+                IpSplitTunnelingController.toggleSplitTunneling(checked)
                 selector.text = root.routeModesModel[getRouteModesModelIndex()].name
             }
         }
@@ -138,13 +137,13 @@ PageType {
                 clickedFunction: function() {
                     selector.text = selectedText
                     selector.closeTriggered()
-                    if (SitesModel.routeMode !== root.routeModesModel[selectedIndex].type) {
-                        SitesModel.routeMode = root.routeModesModel[selectedIndex].type
+                    if (IpSplitTunnelingController.routeMode !== root.routeModesModel[selectedIndex].type) {
+                        IpSplitTunnelingController.routeMode = root.routeModesModel[selectedIndex].type
                     }
                 }
 
                 Component.onCompleted: {
-                    if (root.routeModesModel[selectedIndex].type === SitesModel.routeMode) {
+                    if (root.routeModesModel[selectedIndex].type === IpSplitTunnelingController.routeMode) {
                         selector.text = selectedText
                     } else {
                         selector.text = root.routeModesModel[0].name
@@ -152,7 +151,7 @@ PageType {
                 }
 
                 Connections {
-                    target: SitesModel
+                    target: IpSplitTunnelingController
                     function onRouteModeChanged() {
                         selectedIndex = getRouteModesModelIndex()
                     }
@@ -164,17 +163,21 @@ PageType {
     ListViewType {
         id: listView
 
+        ScrollBar.vertical: ScrollBarType { policy: ScrollBar.AlwaysOn }
+
         anchors.top: header.bottom
         anchors.topMargin: 16
-        anchors.bottom: addSiteButton.top
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: addSiteButton.implicitHeight + 48 + (searchField.textField.activeFocus ? 0 : PageController.imeHeight)
 
         width: parent.width
 
         enabled: root.pageEnabled
+        clip: true
 
         model: SortFilterProxyModel {
-            id: proxySitesModel
-            sourceModel: SitesModel
+            id: proxyIpSplitTunnelingModel
+            sourceModel: IpSplitTunnelingModel
             filters: [
                 AnyOf {
                     RegExpFilter {
@@ -209,7 +212,7 @@ PageType {
                     var noButtonText = qsTr("Cancel")
 
                     var yesButtonFunction = function() {
-                        SitesController.removeSite(proxySitesModel.mapToSource(index))
+                        IpSplitTunnelingController.removeSite(proxyIpSplitTunnelingModel.mapToSource(index))
                         if (!GC.isMobile()) {
                             site.rightButton.forceActiveFocus()
                         }
@@ -229,56 +232,59 @@ PageType {
     }
 
     Rectangle {
-        anchors.fill: addSiteButton
-        anchors.bottomMargin: -24
-        color: AmneziaStyle.color.midnightBlack
-        opacity: 0.8
-    }
-
-    RowLayout {
-        id: addSiteButton
-
-        enabled: root.pageEnabled
-
-        anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 24
-        anchors.rightMargin: 16
-        anchors.leftMargin: 16
-        anchors.bottomMargin: 24
+        anchors.bottom: parent.bottom
+        
+        height: addSiteButton.implicitHeight + 48
+        
+        color: AmneziaStyle.color.midnightBlack
+        
+        RowLayout {
+            id: addSiteButton
 
-        TextFieldWithHeaderType {
-            id: searchField
+            enabled: root.pageEnabled
 
-            Layout.fillWidth: true
-            rightButtonClickedOnEnter: true
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.topMargin: 24
+            anchors.rightMargin: 16
+            anchors.leftMargin: 16
+            anchors.bottomMargin: 24
 
-            textField.placeholderText: qsTr("website or IP")
-            buttonImageSource: "qrc:/images/controls/plus.svg"
+            TextFieldWithHeaderType {
+                id: searchField
 
-            clickedFunc: function() {
-                PageController.showBusyIndicator(true)
-                SitesController.addSite(textField.text)
-                textField.text = ""
-                PageController.showBusyIndicator(false)
+                Layout.fillWidth: true
+                rightButtonClickedOnEnter: true
+
+                textField.placeholderText: qsTr("website or IP")
+                buttonImageSource: "qrc:/images/controls/plus.svg"
+
+                clickedFunc: function() {
+                    PageController.showBusyIndicator(true)
+                    IpSplitTunnelingController.addSite(textField.text)
+                    textField.text = ""
+                    PageController.showBusyIndicator(false)
+                }
             }
-        }
 
-        ImageButtonType {
-            id: addSiteButtonImage
-            implicitWidth: 56
-            implicitHeight: 56
+            ImageButtonType {
+                id: addSiteButtonImage
+                implicitWidth: 56
+                implicitHeight: 56
 
-            image: "qrc:/images/controls/more-vertical.svg"
-            imageColor: AmneziaStyle.color.paleGray
+                image: "qrc:/images/controls/more-vertical.svg"
+                imageColor: AmneziaStyle.color.paleGray
 
-            onClicked: function () {
-                moreActionsDrawer.openTriggered()
+                onClicked: function () {
+                    moreActionsDrawer.openTriggered()
+                }
+
+                Keys.onReturnPressed: addSiteButtonImage.clicked()
+                Keys.onEnterPressed: addSiteButtonImage.clicked()
             }
-
-            Keys.onReturnPressed: addSiteButtonImage.clicked()
-            Keys.onEnterPressed: addSiteButtonImage.clicked()
         }
     }
 
@@ -334,7 +340,7 @@ PageType {
                     }
                     if (fileName !== "") {
                         PageController.showBusyIndicator(true)
-                        SitesController.exportSites(fileName)
+                        IpSplitTunnelingController.exportSites(fileName)
                         moreActionsDrawer.closeTriggered()
                         PageController.showBusyIndicator(false)
                     }
@@ -348,7 +354,6 @@ PageType {
                 Layout.fillWidth: true
 
                 text: qsTr("Clear site list")
-                rightImageSource: "qrc:/images/controls/trash.svg"
 
                 clickedFunction: function() {
                     var headerText = qsTr("Clear site list?")
@@ -358,7 +363,7 @@ PageType {
 
                     var yesButtonFunction = function() {
                         PageController.showBusyIndicator(true)
-                        SitesController.removeSites()
+                        IpSplitTunnelingController.removeSites()
                         PageController.showBusyIndicator(false)
                     }
                     var noButtonFunction = function() {
@@ -476,7 +481,7 @@ PageType {
 
     function importSites(fileName, replaceExistingSites) {
         PageController.showBusyIndicator(true)
-        SitesController.importSites(fileName, replaceExistingSites)
+        IpSplitTunnelingController.importSites(fileName, replaceExistingSites)
         PageController.showBusyIndicator(false)
         importSitesDrawer.closeTriggered()
         moreActionsDrawer.closeTriggered()

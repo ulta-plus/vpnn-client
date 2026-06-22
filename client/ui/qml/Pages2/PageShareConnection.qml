@@ -21,12 +21,6 @@ PageType {
     id: pageShareConnection
 
     property string headerText
-
-    Component.onCompleted: {
-        var serverName = ServersModel.getProcessedServerData("name") || ServersModel.getProcessedServerData("hostName") || "Server"
-        headerText = qsTr("Connection to ") + serverName
-        configContentHeaderText = qsTr("File with connection settings to ") + serverName
-    }
     property string configContentHeaderText
     property string shareButtonText: qsTr("Share")
     property string copyButtonText: qsTr("Copy")
@@ -36,24 +30,24 @@ PageType {
     property string configCaption: qsTr("Save VPNNaruzhu config")
     property string configFileName: "amnezia_config"
 
-    onVisibleChanged: {
-        configExtension = ".vpn"
-        configCaption = qsTr("Save VPNNaruzhu config")
-        configFileName = "amnezia_config"
+    // onVisibleChanged: {
+    //     configExtension = ".vpn"
+    //     configCaption = qsTr("Save VPNNaruzhu config")
+    //     configFileName = "amnezia_config"
 
-        if (visible) {
-            var serverName = ServersModel.getProcessedServerData("name") || ServersModel.getProcessedServerData("hostName") || "Server"
-            headerText = qsTr("Connection to ") + serverName
-            configContentHeaderText = qsTr("File with connection settings to ") + serverName
-        }
-    }
+    //     if (visible) {
+    //         var serverName = ServersModel.getProcessedServerData("name") || ServersModel.getProcessedServerData("hostName") || "Server"
+    //         headerText = qsTr("Connection to ") + serverName
+    //         configContentHeaderText = qsTr("File with connection settings to ") + serverName
+    //     }
+    // }
 
     BackButtonType {
         id: backButton
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
     }
 
     Text {
@@ -61,7 +55,7 @@ PageType {
         anchors.top: backButton.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
         anchors.leftMargin: 16
         anchors.rightMargin: 16
 
@@ -181,7 +175,7 @@ PageType {
                 id: configContentDrawer
                 parent: pageShareConnection.parent
                 anchors.fill: parent
-                expandedHeight: parent.height * 0.9
+                expandedHeight: (parent ? parent.height : pageShareConnection.height) * 0.9
                 expandedStateContent: Item {
                     id: configContentContainer
                     implicitHeight: configContentDrawer.expandedHeight
@@ -203,7 +197,7 @@ PageType {
                             configText.copy()
                             configText.select(0, 0)
                             PageController.showNotificationMessage(qsTr("Copied"))
-                            header.forceActiveFocus()
+                            shareHeader.forceActiveFocus()
                         }
                     }
 
@@ -271,12 +265,13 @@ PageType {
 
         delegate: ColumnLayout {
             width: listView.width
-            property bool isQrCodeVisible: pageShareConnection.isSelfHostedConfig ? ExportController.qrCodesCount > 0 : ApiConfigsController.qrCodesCount > 0
+            property bool isQrCodeVisible: pageShareConnection.isSelfHostedConfig ? ExportController.qrCodesCount > 0 : SubscriptionUiController.qrCodesCount > 0
 
             Rectangle {
                 id: qrCodeContainer
-                Layout.fillWidth: true
-                Layout.preferredHeight: width
+                Layout.preferredWidth: Math.min(Math.min(listView.width - (Layout.leftMargin + Layout.rightMargin), pageShareConnection.height * 0.5), 360)
+                Layout.preferredHeight: Layout.preferredWidth
+                Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 20
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
@@ -286,7 +281,10 @@ PageType {
                 Image {
                     anchors.fill: parent
                     smooth: false
-                    source: pageShareConnection.isSelfHostedConfig ? (isQrCodeVisible ? ExportController.qrCodes[0] : "") : (isQrCodeVisible ? ApiConfigsController.qrCodes[0] : "")
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: parent.width
+                    sourceSize.height: parent.height
+                    source: pageShareConnection.isSelfHostedConfig ? (isQrCodeVisible ? ExportController.qrCodes[0] : "") : (isQrCodeVisible ? SubscriptionUiController.qrCodes[0] : "")
                     property bool isFocusable: true
                     Keys.onTabPressed: FocusController.nextKeyTabItem()
                     Keys.onBacktabPressed: FocusController.previousKeyTabItem()
@@ -303,9 +301,9 @@ PageType {
                         onTriggered: {
                             if (isQrCodeVisible) {
                                 index++
-                                let qrCodesCount = pageShareConnection.isSelfHostedConfig ? ExportController.qrCodesCount : ApiConfigsController.qrCodesCount
+                                let qrCodesCount = pageShareConnection.isSelfHostedConfig ? ExportController.qrCodesCount : SubscriptionUiController.qrCodesCount
                                 if (index >= qrCodesCount) index = 0
-                                parent.source = pageShareConnection.isSelfHostedConfig ? ExportController.qrCodes[index] : ApiConfigsController.qrCodes[index]
+                                parent.source = pageShareConnection.isSelfHostedConfig ? ExportController.qrCodes[index] : SubscriptionUiController.qrCodes[index]
                             }
                         }
                     }

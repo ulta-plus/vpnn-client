@@ -9,6 +9,7 @@
 #include <QJsonObject>
 #include <QJsonValue>
 #include <QMetaEnum>
+#include <QRandomGenerator>
 
 QJsonObject InterfaceConfig::toJson() const {
   QJsonObject json;
@@ -181,4 +182,40 @@ QString InterfaceConfig::toWgConf(const QMap<QString, QString>& extra) const {
   out << "AllowedIPs = " << ranges.join(", ") << "\n";
 
   return content;
+}
+
+// Helper function to parse range values (e.g., "1000-2000") and select random value
+// For AmneziaWG 2.0, H1-H4 parameters can be ranges
+// Format: "min-max" or single value
+QString InterfaceConfig::parseRangeValue(const QString& value) {
+  if (value.isEmpty()) {
+    return value;
+  }
+
+  // Check if value contains range separator
+  int dashIndex = value.lastIndexOf('-');
+  if (dashIndex <= 0 || dashIndex == value.length() - 1) {
+    // Not a valid range format, return as-is
+    return value;
+  }
+
+  // Try to parse as range
+  QString minStr = value.left(dashIndex);
+  QString maxStr = value.mid(dashIndex + 1);
+
+  bool minOk = false, maxOk = false;
+  uint minVal = minStr.toUInt(&minOk);
+  uint maxVal = maxStr.toUInt(&maxOk);
+
+  if (!minOk || !maxOk || minVal >= maxVal) {
+    // Invalid range, return as-is
+    return value;
+  }
+
+  // Generate random value within range [minVal, maxVal]
+  uint range = maxVal - minVal;
+  uint randomOffset = QRandomGenerator::global()->bounded(range + 1);
+  uint selectedValue = minVal + randomOffset;
+
+  return QString::number(selectedValue);
 }

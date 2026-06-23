@@ -63,6 +63,10 @@ class InterfaceConfig {
   QJsonObject toJson() const;
   QString toWgConf(
       const QMap<QString, QString>& extra = QMap<QString, QString>()) const;
+
+  // Helper function to parse range values (e.g., "1000-2000") and select random value
+  // Returns the value itself if not a range format
+  static QString parseRangeValue(const QString& value);
 };
 
 #endif  // INTERFACECONFIG_H

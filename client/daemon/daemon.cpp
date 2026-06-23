@@ -413,16 +413,16 @@ bool Daemon::parseConfig(const QJsonObject& obj, InterfaceConfig& config) {
   }
 
   if (!obj.value("H1").isNull()) {
-    config.m_initPacketMagicHeader = obj.value("H1").toString();
+    config.m_initPacketMagicHeader = InterfaceConfig::parseRangeValue(obj.value("H1").toString());
   }
   if (!obj.value("H2").isNull()) {
-    config.m_responsePacketMagicHeader = obj.value("H2").toString();
+    config.m_responsePacketMagicHeader = InterfaceConfig::parseRangeValue(obj.value("H2").toString());
   }
   if (!obj.value("H3").isNull()) {
-    config.m_underloadPacketMagicHeader = obj.value("H3").toString();
+    config.m_underloadPacketMagicHeader = InterfaceConfig::parseRangeValue(obj.value("H3").toString());
   }
   if (!obj.value("H4").isNull()) {
-    config.m_transportPacketMagicHeader = obj.value("H4").toString();
+    config.m_transportPacketMagicHeader = InterfaceConfig::parseRangeValue(obj.value("H4").toString());
   }
 
   if (!obj.value("I1").isNull()) {

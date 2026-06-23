@@ -31,6 +31,11 @@ struct SelfHostedAdminServerConfig {
     QString password;
     int port = 0;
 
+    bool isNaruzhuDefaultConfig = false;
+    QString email;
+    QString paid_until;
+    QString simplified_status;
+
     bool hasCredentials() const;
     bool isReadOnly() const;
     ServerCredentials credentials() const;

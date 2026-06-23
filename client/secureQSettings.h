@@ -55,7 +55,7 @@ private:
 
     bool m_encryptionEnabled;
 
-    mutable QMutex m_mutex;
+    mutable QMutex mutex;
 };
 
 #endif // SECUREQSETTINGS_H

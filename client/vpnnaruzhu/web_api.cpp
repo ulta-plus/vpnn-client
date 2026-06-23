@@ -10,18 +10,22 @@
 
 #include <filesystem>
 
-VpnNaruzhuWebApi::VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
-    const QSharedPointer<ServersModel> &sm,
-    const QSharedPointer<VpnConnection> &vpnc,
+VpnNaruzhuWebApi::VpnNaruzhuWebApi(
+    SecureAppSettingsRepository *settings_repository,
+    SecureServersRepository *servers_repository,
+    QSharedPointer<VpnConnection> vpnc,
     QQmlApplicationEngine* engine,
-    QSharedPointer<LanguageModel> &lm,
+    LanguageUiController *lc,
+    ImportController *ic,
     QSharedPointer<VpnnDownloadController> &d)
-        : m_settings(s), m_serversModel(sm), m_vpnConnection(vpnc),
-            m_engine(engine), m_languageModel(lm), vpnn_downloadController(d)
+        : m_settingsRepository(settings_repository),
+            m_serversRepository(servers_repository), m_vpnConnection(vpnc),
+            m_engine(engine), m_languageController(lc), m_importController(ic),
+            vpnn_downloadController(d)
 {
     m_manager.reset(new QNetworkAccessManager());
-    m_importController = (ImportController*)
-        m_engine->rootContext()->objectForName("ImportController");
+    //m_importController = (ImportController*)
+    //    m_engine->rootContext()->objectForName("ImportController");
 
     if (default_app_config.open(QIODevice::ReadOnly)) {
         external_app_config = QJsonDocument::fromJson(
@@ -31,10 +35,11 @@ VpnNaruzhuWebApi::VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
         qDebug() << "Cannot open " << default_app_config.fileName();
     }
 
-    connectionMode.reset(new VPNNConnectionMode(s, s->getAppLanguage()));
+    connectionMode.reset(new VPNNConnectionMode(m_settingsRepository,
+        m_settingsRepository->getAppLanguage()));
     m_engine->rootContext()->setContextProperty("VPNNConnectionMode",
         connectionMode.get());
-    connect(m_languageModel.get(), &LanguageModel::updateTranslations,
+    connect(m_languageController, &LanguageUiController::updateTranslations,
         connectionMode.get(), &VPNNConnectionMode::setLocale);
 
     initSettings();
@@ -97,7 +102,7 @@ void VpnNaruzhuWebApi::initRequest(QNetworkRequest &request,
     }
     request.setHeader(QNetworkRequest::UserAgentHeader, user_agent);
     request.setRawHeader("X-Device-Id",
-        m_settings->getInstallationUuid(true).toUtf8());
+        m_settingsRepository->getInstallationUuid(true).toUtf8());
     //qDebug() << "X-Device-Id: " << m_settings->getInstallationUuid(true).toUtf8();
     request.setRawHeader("X-Supported-Awg-Version", awg_version.toUtf8());
     //qDebug() << "X-Supported-Awg-Version: " << awg_version.toUtf8();
@@ -146,7 +151,7 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
 
 void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
 {
-    if (!m_serversModel->isThereDefaultAccount()) {
+    if (!m_serversRepository->naruzhuIsThereDefaultAccount()) {
         return;
     }
 
@@ -154,7 +159,7 @@ void VpnNaruzhuWebApi::updateDefaultAccountStatus(void) const
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot get default account status";
     } else {
-        m_serversModel->updateDefaultAccountStatus(json_doc);
+        m_serversRepository->naruzhuUpdateDefaultAccountStatus(json_doc);
     }
 
     emit defaultAccountStatusUpdated();
@@ -178,7 +183,7 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(
         url += public_request_id;
     }
 
-    QString iso = m_settings->getVPNCountry();
+    QString iso = m_settingsRepository->naruzhuGetVPNCountry();
     if (iso != "ANY") {
         url += "&iso_country_code=" + iso;
     }
@@ -193,7 +198,7 @@ QString VpnNaruzhuWebApi::getDefaultAccountConfig(
 
 void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
 {
-    if (!m_serversModel->isThereDefaultAccount()) {
+    if (!m_serversRepository->naruzhuIsThereDefaultAccount()) {
         return;
     }
 
@@ -201,8 +206,7 @@ void VpnNaruzhuWebApi::updateDefaultAccountConfig(void) const
     if (key.isEmpty()) {
         qDebug() << "Cannot get default account config";
     } else {
-        m_importController->extractConfigFromData(key);
-        m_importController->updateDefaultAccountConfig();
+        m_importController->naruzhuUpdateDefaultAccountConfig(key);
     }
 }
 
@@ -293,12 +297,12 @@ void VpnNaruzhuWebApi::initSettings(void)
 {
     QString dns1 = external_app_config["dns1"].toString();
     if (dns1 != "") {
-        m_settings->setPrimaryDns(dns1);
+        m_settingsRepository->setPrimaryDns(dns1);
     }
 
     QString dns2 = external_app_config["dns2"].toString();
     if (dns2 != "") {
-        m_settings->setSecondaryDns(dns2);
+        m_settingsRepository->setSecondaryDns(dns2);
     }
 
     QJsonDocument connections_config = QJsonDocument(
@@ -422,7 +426,7 @@ void VpnNaruzhuWebApi::installNewApp(QString &path) const
 
 QString VpnNaruzhuWebApi::getUUIDLastSymbols(void) const
 {
-    QString uuid = m_settings->getInstallationUuid(true);
+    QString uuid = m_settingsRepository->getInstallationUuid(true);
     return uuid.right(4);
 }
 
@@ -443,7 +447,7 @@ bool VpnNaruzhuWebApi::isChangeServerPossible(void) const
         break;
     }
 
-    QString iso = m_settings->getVPNCountry();
+    QString iso = m_settingsRepository->naruzhuGetVPNCountry();
     if (iso != "ANY") {
         url += "&iso_country_code=" + iso;
     }
@@ -461,8 +465,10 @@ bool VpnNaruzhuWebApi::isChangeServerPossible(void) const
 bool VpnNaruzhuWebApi::changeServer(void) const
 {
     QEventLoop wait;
-    QObject::connect(m_vpnConnection.get(), &VpnConnection::connectionEnded, &wait, &QEventLoop::quit);
-    QMetaObject::invokeMethod(m_vpnConnection.get(), "disconnectFromVpn", Qt::QueuedConnection);
+    QObject::connect(m_vpnConnection.get(), &VpnConnection::connectionEnded, &wait,
+        &QEventLoop::quit);
+    QMetaObject::invokeMethod(m_vpnConnection.get(), "disconnectFromVpn",
+        Qt::QueuedConnection);
     wait.exec();
 
     QString url = getApiBaseUrl() + "/client-api/v1/change-server";
@@ -480,7 +486,7 @@ bool VpnNaruzhuWebApi::changeServer(void) const
         break;
     }
 
-    QString iso = m_settings->getVPNCountry();
+    QString iso = m_settingsRepository->naruzhuGetVPNCountry();
     if (iso != "ANY") {
         data += ",\n\"iso_country_code\": \"" + iso + "\"";
     }

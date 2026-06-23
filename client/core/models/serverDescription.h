@@ -23,6 +23,13 @@ struct ServerDescription
     QString baseDescription;
     QString hostName;
 
+    bool isNaruzhuDefaultConfig = false;
+    QString email;
+    QString dns1;
+    QString dns2;
+    QString paid_until;
+    QString simplified_status;
+
     int configVersion = 0;
 
     ServerCredentials selfHostedSshCredentials;

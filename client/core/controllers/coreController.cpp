@@ -235,26 +235,28 @@ void CoreController::initControllers()
 
 void CoreController::initVPNNaruzhuExtension()
 {
-    m_vpnnApp.reset(new VpnNaruzhuApp( m_settings
-                                     , m_serversModel
+    m_vpnnApp.reset(new VpnNaruzhuApp( m_appSettingsRepository
+                                     , m_serversRepository
                                      , m_vpnConnection
                                      , m_engine
-                                     , m_languageModel
+                                     , m_languageUiController
+                                     , m_importCoreController
+                                     , m_serversUiController
                                      )
                     );
     m_engine->rootContext()->setContextProperty("VPNNApp", m_vpnnApp.get());
     m_webApi = m_vpnnApp->getWebApi();
 
     connect(m_vpnConnection.get(), &VpnConnection::newRoute,
-        m_sitesController.get(), &SitesController::addSite);
+        m_ipSplitTunnelingController, &IpSplitTunnelingController::addSite);
     connect(m_vpnConnection.get(), &VpnConnection::restartConnection,
         this, &CoreController::restartConnection);
-    connect(m_importController.get(), &ImportController::siteNeedsAddition,
-        m_sitesController.get(), &SitesController::addSite);
-    connect(this, &CoreController::toggleConnection, m_connectionController.get(),
-        &ConnectionController::toggleConnection, Qt::QueuedConnection);
-    connect( m_connectionController.get()
-           , &ConnectionController::updateSmartRouting
+    connect(m_importCoreController, &ImportController::siteNeedsAddition,
+        m_ipSplitTunnelingController, &IpSplitTunnelingController::addSite);
+    connect(this, &CoreController::toggleConnection, m_connectionUiController,
+        &ConnectionUiController::toggleConnection, Qt::QueuedConnection);
+    connect( m_connectionUiController
+           , &ConnectionUiController::updateSmartRouting
            , m_webApi.get()
            , &VpnNaruzhuWebApi::updateSmartRouting
            );
@@ -338,7 +340,7 @@ void CoreController::updateTranslator(const QLocale &locale)
     if (m_translator->load(strFileName)) {
         QCoreApplication::installTranslator(m_translator);
     } else {
-        if (m_translator->load(QString(":/translations/vpnnaruzhu_en.qm"))) {
+        if (m_translator->load(QString(":/translations/vpnnaruzhu_ru_RU.qm"))) {
             QCoreApplication::installTranslator(m_translator);
         }
     }

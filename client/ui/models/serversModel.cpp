@@ -60,8 +60,8 @@ QVariant ServersModel::data(const QModelIndex &index, int role) const
     case NameRole:
         return row.serverName;
     case ServerDescriptionRole: {
-        if (isConfigDefault(index.row())) {
-            return server.value(config_key::email).toString();
+        if (row.isNaruzhuDefaultConfig) {
+            return row.email;
         }
         return configVersion ? row.baseDescription : (row.baseDescription + row.hostName);
     }
@@ -124,10 +124,12 @@ void ServersModel::setDefaultServerId(const QString &serverId)
     }
 }
 
+/* !TODO:[Naruzhu]
 const int ServersModel::getDefaultServerIndex(void) const
 {
     return m_defaultServerId;
 }
+*/
 
 QHash<int, QByteArray> ServersModel::roleNames() const
 {

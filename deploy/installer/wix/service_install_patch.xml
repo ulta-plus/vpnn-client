@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CPackWiXPatch>
-    <CPackWiXFragment Id="CM_CP_AmneziaVPN.AmneziaVPN_service.exe">
+    <CPackWiXFragment Id="CM_CP_VPNNaruzhu.VPNNaruzhu_service.exe">
         <ServiceInstall
-                Id="AmneziaServiceInstall"
-                Name="AmneziaVPN-service"
-                DisplayName="AmneziaVPN Service"
-                Description="Service for AmneziaVPN"
+                Id="VPNNaruzhuServiceInstall"
+                Name="VPNNaruzhu-service"
+                DisplayName="VPNNaruzhu Service"
+                Description="Service for VPNNaruzhu"
                 Start="auto"
                 Type="ownProcess"
                 ErrorControl="normal"
@@ -14,8 +14,8 @@
             <ServiceDependency Id="nsi" />
         </ServiceInstall>
         <ServiceControl
-                Id="AmneziaServiceControl"
-                Name="AmneziaVPN-service"
+                Id="VPNNaruzhuServiceControl"
+                Name="VPNNaruzhu-service"
                 Start="install"
                 Stop="both"
                 Remove="uninstall"

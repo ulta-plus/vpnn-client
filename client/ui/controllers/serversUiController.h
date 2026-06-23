@@ -107,6 +107,15 @@ public slots:
     int getServersCount() const;
     QStringList getAllInstalledServicesName(int serverIndex) const;
 
+    QJsonObject naruzhuGetDefaultAccount(void) const;
+    void naruzhuRemoveDefaultAccount(void) const;
+    const QString naruzhuGetCurrentServerDns1(void) const;
+    const QString naruzhuGetCurrentServerDns2(void) const;
+    const QString naruzhuGetDefaultAccountIndex(void) const;
+    QString naruzhuGetPaidUntilDefaultAccountStr(void) const;
+    qint64 naruzhuGetNumberOfActiveDays(void) const;
+    bool naruzhuIsDefaultAccountActive(void) const;
+
 signals:
     void errorOccurred(const QString &errorMessage);
     void finished(const QString &message);

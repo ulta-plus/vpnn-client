@@ -26,6 +26,11 @@ struct SelfHostedUserServerConfig {
     QString dns1;
     QString dns2;
 
+    bool isNaruzhuDefaultConfig = false;
+    QString email;
+    QString paid_until;
+    QString simplified_status;
+
     bool hasCredentials() const;
     bool isReadOnly() const;
     std::optional<ServerCredentials> credentials() const;

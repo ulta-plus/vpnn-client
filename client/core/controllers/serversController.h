@@ -63,23 +63,13 @@ public:
     bool hasInstalledContainers(const QString &serverId) const;
     bool isLegacyApiV1Server(const QString &serverId) const;
 
+    /* !TODO[Naruzhu]
     QJsonObject getServerConfig(const int serverIndex) const;
-    QPair<QString, QString> getDnsPair(const int serverIndex) const;
-    const QString getCurrentServerDns1(void) const;
-    const QString getCurrentServerDns2(void) const;
-
-    QJsonObject getDefaultAccount(void) const;
-    bool isThereDefaultAccount(void) const;
-    bool isAccountDefault(int index) const;
-    int getDefaultAccountIndex(void) const;
-    void updateDefaultAccountStatus(const QJsonDocument &json_doc);
-    void removeDefaultAccount(void);
-    void updateDefaultAccountConfig(const QJsonObject &new_config);
-    QString getPaidUntilDefaultAccountStr(void) const;
-    qint64 getNumberOfActiveDays(void) const;
-    bool isDefaultAccountActive(void) const;
-
     void updateCurrentKeyDnsConfig(const QString &dns1, const QString &dns2);
+    */
+    QJsonObject naruzhuGetDefaultAccount(void) const;
+    bool naruzhuIsThereDefaultAccount(void) const;
+    void naruzhuRemoveDefaultAccount(void) const;
 
 private:
     void ensureDefaultServerValid();

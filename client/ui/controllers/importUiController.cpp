@@ -38,26 +38,26 @@ bool ImportUiController::extractConfigFromFile(const QString &fileName)
         emit importErrorOccurred(ErrorCode::ImportOpenConfigError, false);
         return false;
     }
-    
+
     QString configFileName = QFileInfo(QFile(fileName).fileName()).fileName();
 #ifdef Q_OS_ANDROID
     if (configFileName.isEmpty()) {
         configFileName = AndroidController::instance()->getFileName(fileName);
     }
 #endif
-    
+
     auto result = m_importController->extractConfigFromData(data, configFileName);
-    
+
     if (result.errorCode != ErrorCode::NoError) {
         emit importErrorOccurred(result.errorCode, false);
         return false;
     }
-    
+
     m_config = result.config;
     m_configFileName = result.configFileName;
     m_maliciousWarningText = result.maliciousWarningText;
     m_isNativeWireGuardConfig = result.isNativeWireGuardConfig;
-    
+
     emit importConfigChanged();
     return true;
 }
@@ -65,17 +65,17 @@ bool ImportUiController::extractConfigFromFile(const QString &fileName)
 bool ImportUiController::extractConfigFromData(QString data)
 {
     auto result = m_importController->extractConfigFromData(data);
-    
+
     if (result.errorCode != ErrorCode::NoError) {
         emit importErrorOccurred(result.errorCode, false);
         return false;
     }
-    
+
     m_config = result.config;
     m_configFileName = result.configFileName;
     m_maliciousWarningText = result.maliciousWarningText;
     m_isNativeWireGuardConfig = result.isNativeWireGuardConfig;
-    
+
     emit importConfigChanged();
     return true;
 }
@@ -83,17 +83,17 @@ bool ImportUiController::extractConfigFromData(QString data)
 bool ImportUiController::extractConfigFromQr(const QByteArray &data)
 {
     auto result = m_importController->extractConfigFromQr(data);
-    
+
     if (result.errorCode != ErrorCode::NoError) {
         emit importErrorOccurred(result.errorCode, false);
         return false;
     }
-    
+
     m_config = result.config;
     m_configFileName = result.configFileName;
     m_maliciousWarningText = result.maliciousWarningText;
     m_isNativeWireGuardConfig = result.isNativeWireGuardConfig;
-    
+
     emit importConfigChanged();
     return true;
 }
@@ -127,12 +127,12 @@ void ImportUiController::processNativeWireGuardConfig()
 void ImportUiController::importConfig()
 {
     m_importController->importConfig(m_config);
-    
+
     m_config = {};
     m_configFileName.clear();
     m_maliciousWarningText.clear();
     m_isNativeWireGuardConfig = false;
-    
+
     emit importConfigChanged();
 }
 
@@ -210,3 +210,53 @@ QString ImportUiController::readTextFile(const QString &fileName)
     }
     return QString::fromUtf8(file.readAll());
 }
+
+void ImportUiController::processDefaultAccountStatus(QString email, QString account_status)
+{
+    auto doc = QJsonDocument::fromJson(account_status.toUtf8());
+    auto request = doc["data"]["request"];
+    m_config[configKey::is_default] = true;
+    m_config[configKey::email] = email;
+    m_config[configKey::public_request_id] = request[configKey::public_request_id].toString();
+    m_config[configKey::payment_link] = request[configKey::payment_link].toString();
+    m_config[configKey::paid_until] = request[configKey::paid_until].toString();
+    m_config[configKey::simplified_status] = request[configKey::simplified_status].toString();
+}
+
+bool ImportUiController::extractDefaultAccountConfig(QString email, QString config, QString account_status)
+{
+    m_configFileName = tr("Default Key");
+    bool extractResult = extractConfigFromData(config);
+    if (extractResult) {
+        processDefaultAccountStatus(email, account_status);
+    }
+    return extractResult;
+}
+
+bool ImportUiController::extractDefaultAccountDummyConfig(QString email, QString account_status)
+{
+    QString config;
+    if (!SystemController::readFile(":/ui/qml/Pages2/DummyKey.conf", config)) {
+        emit importErrorOccurred(ErrorCode::ImportOpenConfigError, false);
+        return false;
+    }
+    m_configFileName = tr("Default Key");
+    bool extractResult = extractConfigFromData(config);
+    if (extractResult) {
+        processDefaultAccountStatus(email, account_status);
+    }
+    return extractResult;
+}
+
+/*
+void ImportUiController::naruzhuUpdateDefaultAccountConfig(void)
+{
+    m_config[configKey::description] = tr("Default Key");
+    m_importController->naruzhuUpdateDefaultAccountConfig(m_config);
+
+    m_config = {};
+    m_configFileName.clear();
+    m_maliciousWarningText.clear();
+    m_isNativeWireGuardConfig = false;
+}
+*/

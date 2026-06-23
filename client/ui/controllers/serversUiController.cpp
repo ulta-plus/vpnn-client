@@ -137,7 +137,8 @@ void ServersUiController::onDefaultServerChanged(const QString &defaultServerId)
 void ServersUiController::updateModel()
 {
     QVector<ServerDescription> descriptions =
-        m_serversController->buildServerDescriptions(m_settingsController->isAmneziaDnsEnabled());
+        //m_serversController->buildServerDescriptions(m_settingsController->isAmneziaDnsEnabled());
+        m_serversController->buildServerDescriptions(false);
 
     const QString defaultServerId = m_serversController->getDefaultServerId();
     const bool hadServersFromGatewayBefore = descriptionsHaveGatewayServers(m_orderedServerDescriptions);
@@ -199,10 +200,11 @@ QString ServersUiController::getDefaultServerDefaultContainerName() const
 
 QString ServersUiController::getDefaultServerDescriptionCollapsed() const
 {
-    if (isAccountDefault(m_defaultServerIndex)) {
-        return server.value(config_key::email).toString();
+    const auto &description = serverDescriptionById(getDefaultServerId());
+    if (description.isNaruzhuDefaultConfig) {
+        return description.email;
     }
-    return serverDescriptionById(getDefaultServerId()).collapsedServerDescription;
+    return description.collapsedServerDescription;
 }
 
 QString ServersUiController::getDefaultServerImagePathCollapsed() const
@@ -216,11 +218,13 @@ QString ServersUiController::getDefaultServerImagePathCollapsed() const
 
 QString ServersUiController::getDefaultServerDescriptionExpanded() const
 {
-    if (isAccountDefault(m_defaultServerIndex)) {
-        return server.value(config_key::email).toString();
+    const auto &description = serverDescriptionById(getDefaultServerId());
+    if (description.isNaruzhuDefaultConfig) {
+        return description.email;
     }
     return serverDescriptionById(getDefaultServerId()).expandedServerDescription;
 }
+
 
 bool ServersUiController::isDefaultServerDefaultContainerHasSplitTunneling() const
 {
@@ -537,3 +541,87 @@ bool ServersUiController::listHasServersFromGatewayApi() const
     return descriptionsHaveGatewayServers(m_orderedServerDescriptions);
 }
 
+QJsonObject ServersUiController::naruzhuGetDefaultAccount(void) const
+{
+    return m_serversController->naruzhuGetDefaultAccount();
+}
+
+void ServersUiController::naruzhuRemoveDefaultAccount(void) const
+{
+    return m_serversController->naruzhuRemoveDefaultAccount();
+}
+
+const QString ServersUiController::naruzhuGetCurrentServerDns1(void) const
+{
+    return serverDescriptionById(m_processedServerId).dns1;
+}
+
+const QString ServersUiController::naruzhuGetCurrentServerDns2(void) const
+{
+    return serverDescriptionById(m_processedServerId).dns2;
+}
+
+const QString ServersUiController::naruzhuGetDefaultAccountIndex(void) const
+{
+    for (const auto &description : m_orderedServerDescriptions) {
+        if (description.isNaruzhuDefaultConfig) {
+            return description.serverId;
+        }
+    }
+
+    return QString();
+}
+
+QString ServersUiController::naruzhuGetPaidUntilDefaultAccountStr(void) const
+{
+    QString i = naruzhuGetDefaultAccountIndex();
+    if (i.isEmpty()) {
+        return "";
+    }
+
+    QString paid_until = serverDescriptionById(m_processedServerId).paid_until;
+    QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
+
+    QLocale locale = m_settingsController->getAppLanguage();
+    return locale.toString(last_day, "d MMMM yyyy, h:mm");
+}
+
+qint64 ServersUiController::naruzhuGetNumberOfActiveDays(void) const
+{
+    QString i = naruzhuGetDefaultAccountIndex();
+    if (i.isEmpty()) {
+        return 0;
+    }
+
+    QString paid_until = serverDescriptionById(m_processedServerId).paid_until;
+    QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
+    QDateTime today = QDateTime::currentDateTime();
+    quint64 diff_days = today.daysTo(last_day);
+
+    return diff_days;
+}
+
+bool ServersUiController::naruzhuIsDefaultAccountActive(void) const
+{
+    QString i = naruzhuGetDefaultAccountIndex();
+    if (i.isEmpty()) {
+        return false;
+    }
+
+    QString status = serverDescriptionById(m_processedServerId).simplified_status;
+    bool is_blocked = (status == "blocked");
+    if (is_blocked) {
+        return false;
+    }
+
+    QString paid_until = serverDescriptionById(m_processedServerId).paid_until;
+    QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
+    QDateTime today = QDateTime::currentDateTime();
+
+    bool is_outdated = (today.secsTo(last_day) < 0);
+    if (is_outdated) {
+        return false;
+    }
+
+    return true;
+}

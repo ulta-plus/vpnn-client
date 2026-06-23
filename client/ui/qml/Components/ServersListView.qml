@@ -105,7 +105,7 @@ ListViewType {
 
                     z: 1
 
-                    visible: !ServersModel.isAccountDefault(index);
+                    visible: !ServersModel.isAccountDefault(ServersUiController.processedServerId);
 
                     onClicked: function() {
                         ServersUiController.setProcessedServerId(serverId)

@@ -36,7 +36,7 @@ int LanguageUiController::getCurrentLanguageIndex() const
     case QLocale::Urdu: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Urdu); break;
     case QLocale::Hindi: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Hindi); break;
     */
-    default: emit updateTranslations(LanguageSettings::AvailableLanguageEnum::Russian); break;
+    default: return static_cast<int>(LanguageSettings::AvailableLanguageEnum::Russian); break;
     }
 }
 

@@ -19,13 +19,13 @@ VPNNRouteMode VPNNConnectionMode::getActiveRouteMode(void) const
             return VPNNRouteMode::DIRECT;
         }
     default:
-        return static_cast<VPNNRouteMode>(m_settings->getVPNNRouteMode());
+        return static_cast<VPNNRouteMode>(m_appSettingsRepository->getVPNNRouteMode());
     }
 }
 
 QString VPNNConnectionMode::getActiveRouteModeRelativePath(void) const
 {
-    switch (static_cast<VPNNRouteMode>(m_settings->getVPNNRouteMode())) {
+    switch (static_cast<VPNNRouteMode>(m_appSettingsRepository->getVPNNRouteMode())) {
     case VPNNRouteMode::SMART:
         return getSmartModeRelativePath();
     case VPNNRouteMode::DIRECT:

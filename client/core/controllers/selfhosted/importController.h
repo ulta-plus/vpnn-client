@@ -63,12 +63,10 @@ public:
     int qrChunksReceived() const;
     int qrChunksTotal() const;
 
-    void updateDefaultAccountConfig();
-    bool extractDefaultAccountConfig(QString email, QString config, QString account_status);
-    bool extractDefaultAccountDummyConfig(QString email, QString account_status);
-
     void importConfig(const QJsonObject &config);
     QJsonObject processNativeWireGuardConfig(const QJsonObject &config);
+
+    void naruzhuUpdateDefaultAccountConfig(const QString &key);
 
 signals:
     void importFinished();
@@ -77,9 +75,6 @@ signals:
     void siteNeedsAddition(const QString& hostname);
 
 private:
-    QString getNewServerName();
-    void processDefaultAccountStatus(QString email, QString configStatus);
-
     ConfigTypes checkConfigFormat(const QString &config) const;
     QJsonObject extractOpenVpnConfig(const QString &data) const;
     QJsonObject extractWireGuardConfig(const QString &data, ConfigTypes &configType) const;
@@ -94,6 +89,9 @@ private:
     bool m_isQrCodeProcessed = false;
     int m_totalQrCodeChunksCount = 0;
     int m_receivedQrCodeChunksCount = 0;
+
+    QString getNewServerName(void) const;
+    QString m_configFileName; // Needs for the getNewServerName()
 };
 
 #endif // IMPORTCONTROLLER_H

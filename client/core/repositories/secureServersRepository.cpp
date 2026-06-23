@@ -432,3 +432,81 @@ void SecureServersRepository::setDefaultServer(const QString &serverId)
     persistDefaultServerFields();
     emit defaultServerChanged(m_defaultServerId);
 }
+
+QJsonObject SecureServersRepository::naruzhuGetDefaultAccount(void) const
+{
+    for (auto&& [index, config] : m_serverJsonById.asKeyValueRange()) {
+        if (config.value(configKey::is_default).toBool()) {
+            return config;
+        }
+    }
+
+    return QJsonObject();
+}
+
+QString SecureServersRepository::naruzhuGetDefaultAccountIndex(void) const
+{
+    for (auto&& [index, config] : m_serverJsonById.asKeyValueRange()) {
+        if (config.value(configKey::is_default).toBool()) {
+            return index;
+        }
+    }
+
+    return QString();
+}
+
+bool SecureServersRepository::naruzhuIsThereDefaultAccount(void) const
+{
+    for (auto&& [index, config] : m_serverJsonById.asKeyValueRange()) {
+        if (config.value(configKey::is_default).toBool()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void SecureServersRepository::naruzhuRemoveDefaultAccount(void)
+{
+    QString i = naruzhuGetDefaultAccountIndex();
+    if (i.isEmpty()) {
+        return;
+    }
+
+    removeServer(i);
+}
+
+void SecureServersRepository::naruzhuUpdateDefaultAccountStatus(const QJsonDocument &json_doc)
+{
+    QString i = naruzhuGetDefaultAccountIndex();
+    if (i.isEmpty()) {
+        return;
+    }
+
+    QJsonObject default_config = m_serverJsonById.value(i);
+    auto request = json_doc["data"]["request"];
+
+    default_config[configKey::public_request_id] = request[configKey::public_request_id].toString();
+    default_config[configKey::payment_link] = request[configKey::payment_link].toString();
+    default_config[configKey::paid_until] = request[configKey::paid_until].toString();
+    default_config[configKey::simplified_status] = request[configKey::simplified_status].toString();
+
+    editServer(i, default_config, serverKind(i));
+}
+
+void SecureServersRepository::naruzhuUpdateDefaultAccountConfig(const QJsonObject &new_config)
+{
+    QString i = naruzhuGetDefaultAccountIndex();
+    qDebug() << "Default account index: " << i;
+    if (i.isEmpty()) {
+        return;
+    }
+
+    QJsonObject default_config = m_serverJsonById.value(i);
+    for (const auto &key: new_config.keys()) {
+        default_config[key] = new_config[key];
+    }
+
+    editServer(i, default_config, serverKind(i));
+}
+

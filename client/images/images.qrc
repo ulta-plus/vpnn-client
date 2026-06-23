@@ -1,10 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file>../fonts/pt-root-ui_vf.ttf</file>
+        <file>../fonts/Inter-VariableFont.ttf</file>
+        <file>../vpnnaruzhu/default_app_config.json</file>
+        <file>../vpnnaruzhu/default_country_list.json</file>
     </qresource>
     <qresource prefix="/images">
-        <file>amneziaBigLogo.png</file>
-        <file>AmneziaVPN.png</file>
         <file>controls/alert-circle.svg</file>
         <file>controls/amnezia.svg</file>
         <file>controls/app.svg</file>

@@ -26,6 +26,13 @@ LegacyApiServerConfig LegacyApiServerConfig::fromJson(const QJsonObject &json)
     config.description = json.value(configKey::description).toString();
     config.hostName = json.value(configKey::hostName).toString();
 
+    config.isNaruzhuDefaultConfig = json.value(configKey::is_default).toBool();
+    config.email = json.value(configKey::email).toString();
+    config.dns1 = json.value(configKey::dns1).toString();
+    config.dns2 = json.value(configKey::dns2).toString();
+    config.paid_until = json.value(configKey::paid_until).toString();
+    config.simplified_status = json.value(configKey::simplified_status).toString();
+
     config.crc = json.value(configKey::crc).toInt(0);
 
     config.configVersion = json.value(configKey::configVersion).toInt(1);

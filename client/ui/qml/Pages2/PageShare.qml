@@ -48,7 +48,7 @@ PageType {
             switch (type) {
             case PageShare.ConfigType.AmneziaConnection: {
                 ExportController.generateConnectionConfig(serverId, containerIndex, clientNameTextField.textField.text);
-                configCaption = qsTr("Save AmneziaVPN config")
+                configCaption = qsTr("Save VPNNaruzhu config")
                 configExtension = ".vpn"
                 configFileName = "amnezia_config"
                 break;
@@ -84,7 +84,7 @@ PageType {
             }
 
             PageController.showBusyIndicator(false)
-            
+
             var headerText = qsTr("Connection to ") + serverSelector.text
             var configContentHeaderText = qsTr("File with connection settings to ") + serverSelector.text
             PageController.goToShareConnectionPage(headerText, configContentHeaderText, configCaption, configExtension, configFileName)

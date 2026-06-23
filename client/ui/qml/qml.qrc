@@ -1,10 +1,7 @@
 <RCC>
-    <qresource prefix="/">
-        <file>fonts/Inter-VariableFont.ttf</file>
-        <file>vpnnaruzhu/default_app_config.json</file>
-        <file>vpnnaruzhu/default_country_list.json</file>
-    </qresource>
     <qresource prefix="/ui/qml">
+        <file>Components/VPNNaruzhuConnectionModeSwitcher.qml</file>
+        <file>Components/VPNNaruzhuCountryList.qml</file>
         <file>Components/AdLabel.qml</file>
         <file>Components/ConnectButton.qml</file>
         <file>Components/ConnectionTypeSelectionDrawer.qml</file>

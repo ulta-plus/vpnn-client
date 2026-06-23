@@ -116,7 +116,8 @@ QByteArray SettingsController::backupAppConfig() const
     config["Conf/autoStart"] = isAutoStartEnabled();
     config["Conf/killSwitchEnabled"] = isKillSwitchEnabled();
     config["Conf/strictKillSwitchEnabled"] = isStrictKillSwitchEnabled();
-    config["Conf/useAmneziaDns"] = isAmneziaDnsEnabled();
+    //config["Conf/useAmneziaDns"] = isAmneziaDnsEnabled();
+    config["Conf/useAmneziaDns"] = false;
 
     return QJsonDocument(config).toJson();
 }

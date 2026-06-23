@@ -112,7 +112,7 @@ Window  {
             }
 
             VPNNWebApi.updateDefaultAccountStatus()
-            if (!ServersModel.isDefaultAccountActive() && ConnectionController.isConnected) {
+            if (!ServersUiController.naruzhuIsDefaultAccountActive() && ConnectionController.isConnected) {
                 ConnectionController.closeConnection()
             }
         }

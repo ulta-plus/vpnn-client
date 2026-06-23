@@ -108,6 +108,7 @@ void CoreSignalHandlers::initSettingsSplitTunnelingHandler()
     connect(m_coreController->m_settingsController, &SettingsController::siteSplitTunnelingRouteModeChanged, this, [this](RouteMode mode) {
         m_coreController->m_ipSplitTunnelingController->setRouteMode(mode);
     });
+    /*
     connect(m_coreController->m_settingsController, &SettingsController::siteSplitTunnelingToggled, this, [this](bool enabled) {
         m_coreController->m_ipSplitTunnelingController->toggleSplitTunneling(enabled);
     });
@@ -117,6 +118,7 @@ void CoreSignalHandlers::initSettingsSplitTunnelingHandler()
     connect(m_coreController->m_settingsController, &SettingsController::appSplitTunnelingToggled, this, [this](bool enabled) {
         m_coreController->m_appSplitTunnelingController->toggleSplitTunneling(enabled);
     });
+    */
     connect(m_coreController->m_settingsController, &SettingsController::appSplitTunnelingClearAppsList, this, [this]() {
         m_coreController->m_appSplitTunnelingController->clearAppsList();
     });
@@ -315,6 +317,19 @@ void CoreSignalHandlers::initPrepareConfigHandler()
     connect(m_coreController->m_connectionUiController, &ConnectionUiController::prepareConfig, this, [this]() {
         m_coreController->m_connectionController->setConnectionState(Vpn::ConnectionState::Preparing);
 
+        m_coreController->m_webApi->updateDefaultAccountStatus();
+        bool is_not_active = !m_coreController->m_serversUiController
+            ->naruzhuIsDefaultAccountActive();
+        if (is_not_active)
+        {
+            m_coreController->m_pageController->showNotificationMessage(
+                tr("Your account blocked"));
+            m_coreController->m_connectionController
+                ->setConnectionState(Vpn::ConnectionState::Disconnected);
+            return;
+        }
+        m_coreController->m_webApi->updateDefaultAccountConfig();
+
         const QString serverId = m_coreController->m_serversController->getDefaultServerId();
         if (serverId.isEmpty()) {
             m_coreController->m_connectionController->setConnectionState(Vpn::ConnectionState::Disconnected);
@@ -435,6 +450,8 @@ void CoreSignalHandlers::initNotificationHandler()
     auto* trayHandler = qobject_cast<SystemTrayNotificationHandler*>(m_coreController->m_notificationHandler);
     connect(m_coreController, &CoreController::websiteUrlChanged, trayHandler, &SystemTrayNotificationHandler::updateWebsiteUrl);
     */
+
+    m_coreController->m_engine->rootContext()->setContextProperty("NotificationHandler", m_coreController->m_notificationHandler);
 #endif
 }
 

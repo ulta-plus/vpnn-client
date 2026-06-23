@@ -51,14 +51,14 @@ QPair<QString, QString> NativeServerConfig::getDnsPair(const QString &primaryDns
 QJsonObject NativeServerConfig::toJson() const
 {
     QJsonObject obj;
-    
+
     if (!description.isEmpty()) {
         obj[configKey::description] = this->description;
     }
     if (!hostName.isEmpty()) {
         obj[configKey::hostName] = hostName;
     }
-    
+
     QJsonArray containersArray;
     for (auto it = containers.begin(); it != containers.end(); ++it) {
         QJsonObject containerObj = it.value().toJson();
@@ -67,49 +67,54 @@ QJsonObject NativeServerConfig::toJson() const
     if (!containersArray.isEmpty()) {
         obj[configKey::containers] = containersArray;
     }
-    
+
     if (defaultContainer != DockerContainer::None) {
         obj[configKey::defaultContainer] = ContainerUtils::containerToString(defaultContainer);
     }
-    
+
     if (!dns1.isEmpty()) {
         obj[configKey::dns1] = dns1;
     }
     if (!dns2.isEmpty()) {
         obj[configKey::dns2] = dns2;
     }
-    
+
     return obj;
 }
 
 NativeServerConfig NativeServerConfig::fromJson(const QJsonObject& json)
 {
     NativeServerConfig config;
-    
+
     config.description = json.value(configKey::description).toString();
     config.hostName = json.value(configKey::hostName).toString();
-    
+
+    config.isNaruzhuDefaultConfig = json.value(configKey::is_default).toBool();
+    config.email = json.value(configKey::email).toString();
+    config.paid_until = json.value(configKey::paid_until).toString();
+    config.simplified_status = json.value(configKey::simplified_status).toString();
+
     QJsonArray containersArray = json.value(configKey::containers).toArray();
     for (const QJsonValue& val : containersArray) {
         QJsonObject containerObj = val.toObject();
         ContainerConfig containerConfig = ContainerConfig::fromJson(containerObj);
-        
+
         QString containerStr = containerObj.value(configKey::container).toString();
         DockerContainer container = ContainerUtils::containerFromString(containerStr);
-        
+
         config.containers.insert(container, containerConfig);
     }
-    
+
     QString defaultContainerStr = json.value(configKey::defaultContainer).toString();
     config.defaultContainer = ContainerUtils::containerFromString(defaultContainerStr);
-    
+
     config.dns1 = json.value(configKey::dns1).toString();
     config.dns2 = json.value(configKey::dns2).toString();
-    
+
     if (config.displayName.isEmpty()) {
         config.displayName = config.description.isEmpty() ? config.hostName : config.description;
     }
-    
+
     return config;
 }
 

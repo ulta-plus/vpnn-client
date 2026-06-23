@@ -81,14 +81,15 @@ ExportController::ExportResult ExportController::generateConnectionConfig(const 
         }
 
         containerConfig.protocolConfig = newProtocolConfig;
-        
+
         QString clientId = newProtocolConfig.clientId();
         if (!clientId.isEmpty()) {
             emit appendClientRequested(serverId, clientId, clientName, container);
         }
     }
 
-    const QPair<QString, QString> dns = adminConfig->getDnsPair(m_appSettingsRepository->useAmneziaDns(),
+    const QPair<QString, QString> dns = adminConfig->getDnsPair(/*m_appSettingsRepository->useAmneziaDns(),*/
+                                                               false,
                                                                m_appSettingsRepository->primaryDns(),
                                                                m_appSettingsRepository->secondaryDns());
 
@@ -133,7 +134,8 @@ ExportController::NativeConfigResult ExportController::generateNativeConfig(cons
         result.errorCode = ErrorCode::InternalError;
         return result;
     }
-    const QPair<QString, QString> dns = adminConfig->getDnsPair(m_appSettingsRepository->useAmneziaDns(),
+    const QPair<QString, QString> dns = adminConfig->getDnsPair(/*m_appSettingsRepository->useAmneziaDns(),*/
+                                                                false,
                                                                 m_appSettingsRepository->primaryDns(),
                                                                 m_appSettingsRepository->secondaryDns());
 
@@ -337,7 +339,7 @@ ExportController::ExportResult ExportController::generateXrayConfig(const QStrin
         // VlessServerObject doesn't have alpn field, so we embed in serverName if needed
     }
 
-    result.nativeConfigString = amnezia::serialization::vless::Serialize(vlessServer, "AmneziaVPN");
+    result.nativeConfigString = amnezia::serialization::vless::Serialize(vlessServer, "VPNNaruzhu");
 
     return result;
 }

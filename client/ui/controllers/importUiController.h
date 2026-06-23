@@ -18,6 +18,12 @@ public:
     explicit ImportUiController(ImportController* importController, QObject *parent = nullptr);
 
 public slots:
+    /*
+    void naruzhuUpdateDefaultAccountConfig(void);
+    */
+    bool extractDefaultAccountConfig(QString email, QString config, QString account_status);
+    bool extractDefaultAccountDummyConfig(QString email, QString account_status);
+
     void importConfig();
     void clearConfigFileName();
     bool extractConfigFromFile(const QString &fileName);
@@ -53,6 +59,8 @@ private:
 #if defined Q_OS_ANDROID || defined Q_OS_IOS
     void stopDecodingQr();
 #endif
+
+    void processDefaultAccountStatus(QString email, QString configStatus);
 
     ImportController* m_importController;
 

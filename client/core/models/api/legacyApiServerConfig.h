@@ -22,6 +22,11 @@ struct LegacyApiServerConfig {
     QString dns1;
     QString dns2;
 
+    bool isNaruzhuDefaultConfig = false;
+    QString email;
+    QString paid_until;
+    QString simplified_status;
+
     QString name;
     int crc = 0;
 

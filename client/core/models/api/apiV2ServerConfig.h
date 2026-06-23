@@ -28,14 +28,19 @@ struct ApiV2ServerConfig {
     DockerContainer defaultContainer;
     QString dns1;
     QString dns2;
-    
+
+    bool isNaruzhuDefaultConfig = false;
+    QString email;
+    QString paid_until;
+    QString simplified_status;
+
     QString name;
     bool nameOverriddenByUser = false;
     int crc;
     int configVersion;
     ApiConfig apiConfig;
     AuthData authData;
-    
+
     QString vpnKey() const;
     QString serviceType() const;
     QString serviceProtocol() const;

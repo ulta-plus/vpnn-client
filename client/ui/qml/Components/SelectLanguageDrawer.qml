@@ -111,9 +111,9 @@ DrawerType2 {
                         indicator: Rectangle {
                             width: parent.width - 1
                             height: parent.height
-                            color: radioButton.hovered ? AmneziaStyle.color.slateGray : AmneziaStyle.color.onyxBlack
-                            border.color: radioButton.focus ? AmneziaStyle.color.paleGray : AmneziaStyle.color.transparent
-                            border.width: radioButton.focus ? 1 : 0
+                            color: radioButton.hovered ? AmneziaStyle.color.slateGray : VPNNaruzhuStyle.color.backGround
+                            border.color: AmneziaStyle.color.transparent
+                            border.width: 0
 
                             Behavior on color {
                                 PropertyAnimation { duration: 200 }

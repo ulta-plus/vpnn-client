@@ -239,6 +239,8 @@ private:
 
     QSharedPointer<VpnNaruzhuApp> m_vpnnApp;
     QSharedPointer<VpnNaruzhuWebApi> m_webApi;
+public slots:
+    void restartConnection();
 };
 
 #endif // CORECONTROLLER_H

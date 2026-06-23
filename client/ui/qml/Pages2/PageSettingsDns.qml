@@ -115,7 +115,7 @@ PageType {
 
                 headerText: qsTr("Current Key Primary DNS")
 
-                textField.text: ServersModel.getCurrentServerDns1()
+                textField.text: ServersModel.naruzhuGetCurrentServerDns1()
                 textField.validator: RegularExpressionValidator {
                     regularExpression: InstallController.ipAddressRegExp()
                 }
@@ -130,7 +130,7 @@ PageType {
 
                 headerText: qsTr("Current Key Secondary DNS")
 
-                textField.text: ServersModel.getCurrentServerDns2()
+                textField.text: ServersModel.naruzhuGetCurrentServerDns2()
                 textField.validator: RegularExpressionValidator {
                     regularExpression: InstallController.ipAddressRegExp()
                 }

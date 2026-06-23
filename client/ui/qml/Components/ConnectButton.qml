@@ -190,66 +190,69 @@ Button {
     }
 
     contentItem: Item {
-            ColumnLayout {
-                anchors.centerIn: parent
-                Image {
-                    id: image
-                    width: 95
-                    height: 95
-                    Layout.preferredWidth: 95
-                    Layout.preferredHeight: 95
-                    Layout.alignment: Qt.AlignCenter
+        ColumnLayout {
+            anchors.centerIn: parent
+            Image {
+                id: image
+                width: 95
+                height: 95
+                Layout.preferredWidth: 95
+                Layout.preferredHeight: 95
 
-                    source: {
-                        if (ConnectionController.isConnectionInProgress) {
-                            return 'qrc:/images/connect button/progress.svg'
-                        } else if (ConnectionController.isConnected) {
-                            return 'qrc:/images/connect button/connected.svg'
-                        } else {
-                            return 'qrc:/images/connect button/default.svg'
-                        }
+                Layout.topMargin: 15
+                Layout.alignment: Qt.AlignCenter
+
+                source: {
+                    if (ConnectionController.isConnectionInProgress) {
+                        return 'qrc:/images/connect button/progress.svg'
+                    } else if (ConnectionController.isConnected) {
+                        return 'qrc:/images/connect button/connected.svg'
+                    } else {
+                        return 'qrc:/images/connect button/default.svg'
                     }
+                }
 
-                    layer {
-                        enabled: true
-                        effect: ColorOverlay {
-                            color: {
-                                if (ConnectionController.isConnectionInProgress) {
-                                    return '#000000'
-                                } else if (ConnectionController.isConnected) {
-                                    return '#FFD600'
-                                } else {
-                                    return '#000000'
-                                }
+                layer {
+                    enabled: true
+                    effect: ColorOverlay {
+                        color: {
+                            if (ConnectionController.isConnectionInProgress) {
+                                return '#000000'
+                            } else if (ConnectionController.isConnected) {
+                                return '#FFD600'
+                            } else {
+                                return '#000000'
                             }
                         }
                     }
                 }
+            }
 
-                Text {
-                    height: 24
+            Text {
+                height: 24
+                Layout.alignment: Qt.AlignHCenter
 
-                    font.family: VPNNaruzhuStyle.font
-                    font.weight: Font.DemiBold
-                    font.pixelSize: 16
-                    font.capitalization: Font.AllUppercase
-                    font.letterSpacing: 16 * (-0.04)
+                font.family: VPNNaruzhuStyle.font
+                font.weight: Font.DemiBold
+                font.pixelSize: 16
+                font.capitalization: Font.AllUppercase
+                font.letterSpacing: 16 * (-0.04)
 
-                    color: {
-                        if (ConnectionController.isConnectionInProgress) {
-                            return '#000000'
-                        } else if (ConnectionController.isConnected) {
-                            return '#FFD600'
-                        } else {
-                            return '#000000'
-                        }
+                color: {
+                    if (ConnectionController.isConnectionInProgress) {
+                        return '#000000'
+                    } else if (ConnectionController.isConnected) {
+                        return '#FFD600'
+                    } else {
+                        return '#000000'
                     }
-
-                    text: root.text
-
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
                 }
+
+                text: root.text
+
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
         }
     }
 

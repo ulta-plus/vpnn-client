@@ -60,7 +60,7 @@ bool PageController::isStartPageVisible()
     return m_serversController->getServersCount() == 0;
     */
 
-    return !m_serversModel->isThereDefaultAccount();
+    return !m_serversController->naruzhuIsThereDefaultAccount();
 }
 
 QString PageController::getPagePath(PageLoader::PageEnum page)

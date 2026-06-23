@@ -11,6 +11,7 @@
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
 #include <QUrl>
+#include <QFileInfo>
 #include <algorithm>
 
 #include "core/utils/containerEnum.h"
@@ -85,6 +86,7 @@ ImportController::ImportResult ImportController::extractConfigFromData(const QSt
 {
     ImportResult result;
     result.configFileName = configFileName;
+    m_configFileName = configFileName;
     result.maliciousWarningText.clear();
 
     QString config = data;
@@ -420,24 +422,6 @@ void ImportController::importConfig(const QJsonObject &config)
     }
 }
 
-QString ImportController::getNewServerName()
-{
-    QFileInfo s(m_configFileName);
-    QString name = s.baseName();
-    bool isServerNameExist = false;
-    for (const QJsonValue &server : m_settings->serversArray()) {
-        if (server.toObject().value(config_key::description).toString() == name) {
-            isServerNameExist = true;
-            break;
-        }
-    }
-    if (isServerNameExist) {
-        return m_settings->nextAvailableServerName();
-    } else {
-        return name;
-    }
-}
-
 QJsonObject ImportController::processNativeWireGuardConfig(const QJsonObject &config)
 {
     QJsonObject result = config;
@@ -681,7 +665,7 @@ QJsonObject ImportController::extractWireGuardConfig(const QString &data, Config
             "(\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b)");
         QRegularExpressionMatch onceDnsMatch = onceDnsRegExp.match(data);
         if (onceDnsMatch.hasMatch()) {
-            config[config_key::dns2] = onceDnsMatch.captured(1);
+            config[configKey::dns2] = onceDnsMatch.captured(1);
         }
     }
 
@@ -805,51 +789,39 @@ void ImportController::processAmneziaConfig(QJsonObject &config) const
     }
 }
 
-void ImportController::processDefaultAccountStatus(QString email, QString account_status)
+QString ImportController::getNewServerName(void) const
 {
-    auto doc = QJsonDocument::fromJson(account_status.toUtf8());
-    auto request = doc["data"]["request"];
-    m_config[configKey::is_default] = true;
-    m_config[configKey::email] = email;
-    m_config[configKey::public_request_id] = request[configKey::public_request_id].toString();
-    m_config[configKey::payment_link] = request[configKey::payment_link].toString();
-    m_config[configKey::paid_until] = request[configKey::paid_until].toString();
-    m_config[configKey::simplified_status] = request[configKey::simplified_status].toString();
-}
-bool ImportController::extractDefaultAccountConfig(QString email, QString config, QString account_status)
-{
-    m_configFileName = tr("Default Key");
-    bool extractResult = extractConfigFromData(config);
-    if (extractResult) {
-        processDefaultAccountStatus(email, account_status);
+    QFileInfo s(m_configFileName);
+    QString name = s.baseName();
+    bool isServerNameExist = false;
+    for (const QJsonValue &server : m_serversRepository->serversArray()) {
+        if (server.toObject().value(configKey::description).toString() == name) {
+            isServerNameExist = true;
+            break;
+        }
     }
-    return extractResult;
-}
-bool ImportController::extractDefaultAccountDummyConfig(QString email, QString account_status)
-{
-    QString config;
-    if (!SystemController::readFile(":/ui/qml/Pages2/DummyKey.conf", config)) {
-        emit importErrorOccurred(ErrorCode::ImportOpenConfigError, false);
-        return false;
+    if (isServerNameExist) {
+        return m_serversRepository->nextAvailableServerName();
+    } else {
+        return name;
     }
-    m_configFileName = tr("Default Key");
-    bool extractResult = extractConfigFromData(config);
-    if (extractResult) {
-        processDefaultAccountStatus(email, account_status);
-    }
-    return extractResult;
 }
-void ImportController::updateDefaultAccountConfig()
+
+void ImportController::naruzhuUpdateDefaultAccountConfig(const QString &key)
 {
+    ImportController::ImportResult res = extractConfigFromData(key);
+    if (res.errorCode != ErrorCode::NoError) {
+        emit importErrorOccurred(res.errorCode, false);
+        return;
+    }
+
     ServerCredentials credentials;
-    credentials.hostName = m_config.value(configKey::hostName).toString();
-    credentials.port = m_config.value(configKey::port).toInt();
-    credentials.userName = m_config.value(configKey::userName).toString();
-    credentials.secretData = m_config.value(configKey::password).toString();
-    m_config[configKey::description] = tr("Default Key");
-    m_serversModel->updateDefaultAccountConfig(m_config);
+    credentials.hostName = res.config.value(configKey::hostName).toString();
+    credentials.port = res.config.value(configKey::port).toInt();
+    credentials.userName = res.config.value(configKey::userName).toString();
+    credentials.secretData = res.config.value(configKey::password).toString();
+    res.config[configKey::description] = tr("Default Key");
+
+    m_serversRepository->naruzhuUpdateDefaultAccountConfig(res.config);
     emit siteNeedsAddition(credentials.hostName);
-    m_config = {};
-    m_configFileName.clear();
-    m_maliciousWarningText.clear();
 }

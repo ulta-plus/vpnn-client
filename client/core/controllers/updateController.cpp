@@ -20,14 +20,14 @@ namespace
     Logger logger("UpdateController");
 
 #if defined(Q_OS_WINDOWS)
-    const QLatin1String kInstallerRemoteFileNamePattern("AmneziaVPN_%1_windows_x64.exe");
-    const QString kInstallerLocalPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/AmneziaVPN_installer.exe";
+    const QLatin1String kInstallerRemoteFileNamePattern("VPNNaruzhu_%1_windows_x64.exe");
+    const QString kInstallerLocalPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/VPNNaruzhu_installer.exe";
 #elif defined(Q_OS_MACOS) && !defined(MACOS_NE)
-    const QLatin1String kInstallerRemoteFileNamePattern("AmneziaVPN_%1_macos_x64.pkg");
-    const QString kInstallerLocalPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/AmneziaVPN.pkg";
+    const QLatin1String kInstallerRemoteFileNamePattern("VPNNaruzhu_%1_macos_x64.pkg");
+    const QString kInstallerLocalPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/VPNNaruzhu.pkg";
 #elif defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
-    const QLatin1String kInstallerRemoteFileNamePattern("AmneziaVPN_%1_linux_x64.run");
-    const QString kInstallerLocalPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/AmneziaVPN.run";
+    const QLatin1String kInstallerRemoteFileNamePattern("VPNNaruzhu_%1_linux_x64.run");
+    const QString kInstallerLocalPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/VPNNaruzhu.run";
 #endif
 }
 
@@ -69,7 +69,7 @@ void UpdateController::finishUpdateCheck()
 void UpdateController::doGetAsync(const QString &endpoint, std::function<void(bool, QByteArray)> onDone)
 {
     QString fullUrl = m_baseUrl + endpoint;
-    
+
     QNetworkRequest req;
     req.setTransferTimeout(7000);
     req.setUrl(QUrl(fullUrl));
@@ -134,7 +134,7 @@ void UpdateController::fetchVersionInfo()
             return;
         }
         m_version = QString::fromUtf8(data).trimmed();
-        
+
         if (!isNewVersionAvailable()) {
             finishUpdateCheck();
             return;

@@ -23,7 +23,12 @@ struct NativeServerConfig {
     DockerContainer defaultContainer;
     QString dns1;
     QString dns2;
-    
+
+    bool isNaruzhuDefaultConfig = false;
+    QString email;
+    QString paid_until;
+    QString simplified_status;
+
     bool hasContainers() const;
     ContainerConfig containerConfig(DockerContainer container) const;
 

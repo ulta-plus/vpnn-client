@@ -55,8 +55,10 @@ public:
     void setAppsRouteMode(AppsRouteMode mode);
     void setVpnApps(AppsRouteMode mode, const QVector<InstalledAppInfo> &apps);
     QVector<InstalledAppInfo> vpnApps(AppsRouteMode mode) const;
+    /*
     bool isAppsSplitTunnelingEnabled() const;
     void setAppsSplitTunnelingEnabled(bool enabled);
+    */
 
     QString getGatewayEndpoint(bool isTestPurchase = false) const;
     void setGatewayEndpoint(const QString &endpoint);
@@ -97,6 +99,23 @@ public:
 
     QByteArray xraySavedConfigs() const;
     void setXraySavedConfigs(const QByteArray &data);
+
+    void setVPNNRouteMode(int mode)
+    {
+        setValue("Conf/VPNNRouteMode", mode);
+    }
+    int getVPNNRouteMode(void) const
+    {
+        return value("Conf/VPNNRouteMode", 0).toInt();
+    }
+    void naruzhuSetVPNCountry(const QString &iso_code)
+    {
+        setValue("Conf/VPNCountry", iso_code);
+    }
+    QString naruzhuGetVPNCountry(void) const
+    {
+        return value("Conf/VPNCountry", "ANY").toString();
+    }
 
 signals:
     void appLanguageChanged(QLocale locale);

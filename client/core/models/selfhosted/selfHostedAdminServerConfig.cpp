@@ -72,7 +72,10 @@ QPair<QString, QString> SelfHostedAdminServerConfig::getDnsPair(bool isAmneziaDn
     const bool dnsOnServer = containers.contains(DockerContainer::Dns);
 
     if (d1.isEmpty() || !NetworkUtilities::checkIPv4Format(d1)) {
+        /* Naruzhu doesn't use AmneziaDNS
         d1 = (isAmneziaDnsEnabled && dnsOnServer) ? protocols::dns::amneziaDnsIp : primaryDns;
+        */
+        d1 = primaryDns;
     }
     if (d2.isEmpty() || !NetworkUtilities::checkIPv4Format(d2)) {
         d2 = secondaryDns;
@@ -130,6 +133,11 @@ SelfHostedAdminServerConfig SelfHostedAdminServerConfig::fromJson(const QJsonObj
 
     config.description = json.value(configKey::description).toString();
     config.hostName = json.value(configKey::hostName).toString();
+
+    config.isNaruzhuDefaultConfig = json.value(configKey::is_default).toBool();
+    config.email = json.value(configKey::email).toString();
+    config.paid_until = json.value(configKey::paid_until).toString();
+    config.simplified_status = json.value(configKey::simplified_status).toString();
 
     QJsonArray containersArray = json.value(configKey::containers).toArray();
     for (const QJsonValue &val : containersArray) {

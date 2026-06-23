@@ -104,6 +104,11 @@ SelfHostedUserServerConfig SelfHostedUserServerConfig::fromJson(const QJsonObjec
     config.description = json.value(configKey::description).toString();
     config.hostName = json.value(configKey::hostName).toString();
 
+    config.isNaruzhuDefaultConfig = json.value(configKey::is_default).toBool();
+    config.email = json.value(configKey::email).toString();
+    config.paid_until = json.value(configKey::paid_until).toString();
+    config.simplified_status = json.value(configKey::simplified_status).toString();
+
     QJsonArray containersArray = json.value(configKey::containers).toArray();
     for (const QJsonValue &val : containersArray) {
         QJsonObject containerObj = val.toObject();

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_NAME=VPNNaruzhu
-ORG_NAME=AmneziaVPN.ORG
+ORG_NAME=VPNNaruzhu.ORG
 LOG_FOLDER=/var/log/$APP_NAME
 LOG_FILE="$LOG_FOLDER/post-uninstall.log"
 APP_PATH=/opt/$APP_NAME
@@ -66,8 +66,8 @@ if test -f /usr/share/pixmaps/$APP_NAME.png; then
 fi
 
 ### Remove the service log file (keep post-uninstall.log)
-if test -f "$LOG_FOLDER/AmneziaVPN-service.log"; then
-    sudo rm -f "$LOG_FOLDER/AmneziaVPN-service.log" >> $LOG_FILE 2>&1
+if test -f "$LOG_FOLDER/VPNNaruzhu-service.log"; then
+    sudo rm -f "$LOG_FOLDER/VPNNaruzhu-service.log" >> $LOG_FILE 2>&1
 fi
 
 ### Remove user logs for current user only

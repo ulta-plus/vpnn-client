@@ -40,7 +40,7 @@ SecureQSettings::SecureQSettings(const QString &organization, const QString &app
 
 QVariant SecureQSettings::value(const QString &key, const QVariant &defaultValue) const
 {
-    QMutexLocker locker(&m_mutex);
+    QMutexLocker locker(&mutex);
 
     if (m_cache.contains(key)) {
         return m_cache.value(key);
@@ -117,7 +117,7 @@ void SecureQSettings::setValue(const QString &key, const QVariant &value)
 
 void SecureQSettings::remove(const QString &key)
 {
-    QMutexLocker locker(&m_mutex);
+    QMutexLocker locker(&mutex);
 
     m_settings.remove(key);
     m_cache.remove(key);
@@ -125,7 +125,7 @@ void SecureQSettings::remove(const QString &key)
 
 QByteArray SecureQSettings::backupAppConfig() const
 {
-    QMutexLocker locker(&m_mutex);
+    QMutexLocker locker(&mutex);
 
     QJsonObject cfg;
 
@@ -161,7 +161,7 @@ QByteArray SecureQSettings::backupAppConfig() const
 
 bool SecureQSettings::restoreAppConfig(const QByteArray &json)
 {
-    QMutexLocker locker(&m_mutex);
+    QMutexLocker locker(&mutex);
 
     QJsonObject cfg = QJsonDocument::fromJson(json).object();
     if (cfg.isEmpty())
@@ -180,7 +180,7 @@ bool SecureQSettings::restoreAppConfig(const QByteArray &json)
 
 void SecureQSettings::clearSettings()
 {
-    QMutexLocker locker(&m_mutex);
+    QMutexLocker locker(&mutex);
     m_settings.clear();
     m_cache.clear();
 }

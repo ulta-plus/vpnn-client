@@ -112,7 +112,7 @@ namespace {
 
 RouteMode SecureAppSettingsRepository::routeMode() const
 {
-    return static_cast<RouteMode>(value("Conf/routeMode", VpnAllExceptSites).toInt());
+    return static_cast<RouteMode>(value("Conf/routeMode", RouteMode::VpnAllExceptSites).toInt());
 }
 
 void SecureAppSettingsRepository::setRouteMode(RouteMode mode)
@@ -177,9 +177,9 @@ void SecureAppSettingsRepository::removeAllVpnSites(RouteMode mode)
     emit sitesChanged(mode);
 }
 
-bool Settings::isVpnSiteInSettings(const QString &site)
+bool SecureAppSettingsRepository::isVpnSiteInSettings(const QString &site)
 {
-    QVariantMap sites = vpnSites(VpnAllExceptSites);
+    QVariantMap sites = vpnSites(RouteMode::VpnAllExceptSites);
     return sites.contains(site);
 }
 
@@ -247,6 +247,7 @@ void SecureAppSettingsRepository::setVpnApps(AppsRouteMode mode, const QVector<I
     emit appsChanged(mode);
 }
 
+/*
 bool SecureAppSettingsRepository::isAppsSplitTunnelingEnabled() const
 {
     return value("Conf/appsSplitTunnelingEnabled", false).toBool();
@@ -257,6 +258,7 @@ void SecureAppSettingsRepository::setAppsSplitTunnelingEnabled(bool enabled)
     setValue("Conf/appsSplitTunnelingEnabled", enabled);
     emit appsSplitTunnelingEnabledChanged(enabled);
 }
+*/
 
 QString SecureAppSettingsRepository::getGatewayEndpoint(bool isTestPurchase) const
 {

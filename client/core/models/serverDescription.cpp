@@ -33,7 +33,7 @@ ServerDescription buildBaseDescription(const T &server)
     ServerDescription row;
     row.hostName = server.hostName;
     row.defaultContainer = server.defaultContainer;
-    row.primaryDnsIsAmnezia = (server.dns1 == protocols::dns::amneziaDnsIp);
+    row.primaryDnsIsAmnezia = false /*(server.dns1 == protocols::dns::amneziaDnsIp)*/;
     row.hasInstalledVpnContainers = computeHasInstalledVpnContainers(server.containers);
     return row;
 }
@@ -88,6 +88,13 @@ ServerDescription buildServerDescription(const SelfHostedAdminServerConfig &serv
     row.selfHostedSshCredentials.secretData = server.password;
     row.selfHostedSshCredentials.port = server.port > 0 ? server.port : 22;
 
+    row.isNaruzhuDefaultConfig = server.isNaruzhuDefaultConfig;
+    row.email = server.email;
+    row.dns1 = server.dns1;
+    row.dns2 = server.dns2;
+    row.paid_until = server.paid_until;
+    row.simplified_status = server.simplified_status;
+
     row.hasWriteAccess = !row.selfHostedSshCredentials.userName.isEmpty()
                          && !row.selfHostedSshCredentials.secretData.isEmpty();
 
@@ -107,6 +114,13 @@ ServerDescription buildServerDescription(const SelfHostedUserServerConfig &serve
     row.selfHostedSshCredentials.port = 22;
     row.hasWriteAccess = false;
 
+    row.isNaruzhuDefaultConfig = server.isNaruzhuDefaultConfig;
+    row.email = server.email;
+    row.dns1 = server.dns1;
+    row.dns2 = server.dns2;
+    row.paid_until = server.paid_until;
+    row.simplified_status = server.simplified_status;
+
     row.serverName = server.displayName;
     row.baseDescription = getBaseDescription(server.containers, isAmneziaDnsEnabled, row.hasWriteAccess, row.primaryDnsIsAmnezia);
 
@@ -120,6 +134,13 @@ ServerDescription buildServerDescription(const NativeServerConfig &server, bool 
 {
     ServerDescription row = buildBaseDescription(server);
     row.hasWriteAccess = false;
+
+    row.isNaruzhuDefaultConfig = server.isNaruzhuDefaultConfig;
+    row.email = server.email;
+    row.dns1 = server.dns1;
+    row.dns2 = server.dns2;
+    row.paid_until = server.paid_until;
+    row.simplified_status = server.simplified_status;
 
     row.serverName = server.displayName;
     row.baseDescription = getBaseDescription(server.containers, isAmneziaDnsEnabled, row.hasWriteAccess, row.primaryDnsIsAmnezia);
@@ -138,6 +159,13 @@ ServerDescription buildServerDescription(const LegacyApiServerConfig &server, bo
     row.isServerFromGatewayApi = false;
     row.hasWriteAccess = false;
 
+    row.isNaruzhuDefaultConfig = server.isNaruzhuDefaultConfig;
+    row.email = server.email;
+    row.dns1 = server.dns1;
+    row.dns2 = server.dns2;
+    row.paid_until = server.paid_until;
+    row.simplified_status = server.simplified_status;
+
     row.serverName = server.displayName;
     row.baseDescription = server.description;
 
@@ -155,6 +183,13 @@ ServerDescription buildServerDescription(const ApiV2ServerConfig &server, bool /
     row.isServerFromGatewayApi = true;
     row.isPremium = server.isPremium() || server.isExternalPremium();
     row.hasWriteAccess = false;
+
+    row.isNaruzhuDefaultConfig = server.isNaruzhuDefaultConfig;
+    row.email = server.email;
+    row.dns1 = server.dns1;
+    row.dns2 = server.dns2;
+    row.paid_until = server.paid_until;
+    row.simplified_status = server.simplified_status;
 
     row.serverName = server.displayName;
     row.baseDescription = server.apiConfig.serverCountryCode.isEmpty() ? server.description : server.apiConfig.serverCountryName;

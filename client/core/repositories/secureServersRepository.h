@@ -52,6 +52,18 @@ public:
 
     void invalidateCache();
 
+    QJsonArray serversArray() const
+    {
+        return QJsonDocument::fromJson(value(QStringLiteral("Servers/serversList"), QByteArray()).toByteArray()).array();
+    }
+
+    QJsonObject naruzhuGetDefaultAccount(void) const;
+    QString naruzhuGetDefaultAccountIndex(void) const;
+    bool naruzhuIsThereDefaultAccount(void) const;
+    void naruzhuRemoveDefaultAccount(void);
+    void naruzhuUpdateDefaultAccountStatus(const QJsonDocument &json_doc);
+    void naruzhuUpdateDefaultAccountConfig(const QJsonObject &new_config);
+
 signals:
     void serverAdded(const QString &serverId);
     void serverEdited(const QString &serverId);

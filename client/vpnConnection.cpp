@@ -13,6 +13,7 @@
 
 #include <core/configurators/openVpnConfigurator.h>
 #include <core/configurators/wireguardConfigurator.h>
+#include "vpnnaruzhu/web_api.h"
 
 #ifdef AMNEZIA_DESKTOP
     #include "core/utils/ipcClient.h"
@@ -132,14 +133,17 @@ void VpnConnection::onConnectionStateChanged(Vpn::ConnectionState state)
                     QString dns2 = m_vpnConfiguration.value(configKey::dns2).toString();
 
 #ifdef Q_OS_MACOS
+                    /* issue_5
                     if (!m_appSettingsRepository->isSitesSplitTunnelingEnabled() || m_appSettingsRepository->routeMode() != amnezia::RouteMode::VpnAllExceptSites) {
                         iface->routeAddList(m_vpnProtocol->vpnGateway(), QStringList() << dns1 << dns2);
                     }
+                    */
 #else
                     iface->routeAddList(m_vpnProtocol->vpnGateway(), QStringList() << dns1 << dns2);
 #endif
-
+                    /* issue_5
                     if (m_appSettingsRepository->isSitesSplitTunnelingEnabled()) {
+                    */
                         iface->routeDeleteList(m_vpnProtocol->vpnGateway(), QStringList() << "0.0.0.0");
                         RouteMode routeMode = m_appSettingsRepository->routeMode();
                         if (routeMode == amnezia::RouteMode::VpnOnlyForwardSites) {
@@ -155,7 +159,9 @@ void VpnConnection::onConnectionStateChanged(Vpn::ConnectionState state)
 #endif
                             addSitesRoutes(m_vpnProtocol->routeGateway(), routeMode);
                         }
+                    /* issue_5
                     }
+                    */
                 }
             } break;
             case Vpn::ConnectionState::Disconnected:
@@ -261,6 +267,32 @@ QSharedPointer<VpnProtocol> VpnConnection::vpnProtocol() const
     return m_vpnProtocol;
 }
 
+void VpnConnection::addRoute(const QString& ip)
+{
+    if (m_appSettingsRepository->isVpnSiteInSettings(ip))
+        return;
+    needToRestartConnection = true;
+    emit newRoute(ip);
+}
+void VpnConnection::waitForVpnConnectionFinished(int msecs)
+{
+    m_vpnProtocol->waitForDisconected(msecs);
+}
+void VpnConnection::addNewDns(const QString& dnsAddr)
+{
+    if (  m_vpnConfiguration.value(configKey::dns1).toString() != dnsAddr
+       && m_vpnConfiguration.value(configKey::dns2).toString() != dnsAddr)
+    {
+        m_appSettingsRepository->setPrimaryDns(dnsAddr);
+        needToRestartConnection = true;
+    }
+}
+void VpnConnection::finishReceivingSettings()
+{
+    if (needToRestartConnection)
+        emit restartConnection();
+}
+
 void VpnConnection::disconnectSlots()
 {
     if (m_vpnProtocol) {
@@ -288,6 +320,7 @@ Vpn::ConnectionState VpnConnection::connectionState() const
 
 void VpnConnection::connectToVpn(const QString &serverId, DockerContainer container, const QJsonObject &vpnConfiguration)
 {
+    needToRestartConnection = false;
     if (!m_appSettingsRepository || !m_serversRepository) {
         qCritical() << "VpnConnection::connectToVpn: repositories not initialized";
         setConnectionState(Vpn::ConnectionState::Error);
@@ -347,6 +380,9 @@ void VpnConnection::createProtocolConnections()
     connect(m_vpnProtocol.data(), &VpnProtocol::protocolError, this, &VpnConnection::vpnProtocolError);
     connect(m_vpnProtocol.data(), &VpnProtocol::connectionStateChanged, this, &VpnConnection::setConnectionState);
     connect(m_vpnProtocol.data(), SIGNAL(bytesChanged(quint64, quint64)), this, SLOT(onBytesChanged(quint64, quint64)));
+    connect(m_vpnProtocol.data(), &VpnProtocol::newRoute, this, &VpnConnection::addRoute);
+    connect(m_vpnProtocol.data(), &VpnProtocol::newDns, this, &VpnConnection::addNewDns);
+    connect(m_vpnProtocol.data(), &VpnProtocol::finishReceivingSettings, this, &VpnConnection::finishReceivingSettings);
 
 #ifdef AMNEZIA_DESKTOP
     IpcClient::withInterface([this](QSharedPointer<IpcInterfaceReplica> rep) {
@@ -374,12 +410,16 @@ void VpnConnection::appendSplitTunnelingConfig()
         return;
     }
 
+    /* issue_42
     bool allowSiteBasedSplitTunneling = true;
+    */
 
     // this block is for old native configs and for old self-hosted configs
     auto protocolName = m_vpnConfiguration.value(configKey::vpnProto).toString();
     if (protocolName == ProtocolUtils::protoToString(Proto::Awg) || protocolName == ProtocolUtils::protoToString(Proto::WireGuard)) {
+        /* issue_42
         allowSiteBasedSplitTunneling = false;
+        */
         auto configData = m_vpnConfiguration.value(protocolName + "_config_data").toObject();
         if (configData.value(configKey::allowedIps).isString()) {
             QJsonArray allowedIpsJsonArray = QJsonArray::fromStringList(configData.value(configKey::allowedIps).toString().split(", "));
@@ -418,18 +458,24 @@ void VpnConnection::appendSplitTunnelingConfig()
             }
         }
 
+        /*
         QJsonArray allowedIpsJsonArray = configData.value(configKey::allowedIps).toArray();
         if (allowedIpsJsonArray.contains("0.0.0.0/0") && allowedIpsJsonArray.contains("::/0")) {
             allowSiteBasedSplitTunneling = true;
         }
+        */
     }
 
     amnezia::RouteMode routeMode = amnezia::RouteMode::VpnAllSites;
     QJsonArray sitesJsonArray;
+    /* issue_5
     if (m_appSettingsRepository->isSitesSplitTunnelingEnabled()) {
+    */
         routeMode = m_appSettingsRepository->routeMode();
 
+        /* issue_42
         if (allowSiteBasedSplitTunneling) {
+        */
             QStringList sites;
             const QVariantMap &m = m_appSettingsRepository->vpnSites(routeMode);
             for (auto i = m.constBegin(); i != m.constEnd(); ++i) {
@@ -444,6 +490,14 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(site);
             }
 
+            auto vpnnRouteMode = static_cast<VPNNRouteMode>(
+                m_appSettingsRepository->getVPNNRouteMode());
+            if (vpnnRouteMode == VPNNRouteMode::SMART) {
+                for (const auto &r: excludedRoutes) {
+                    sitesJsonArray.append(r);
+                }
+            }
+
             if (sitesJsonArray.isEmpty()) {
                 routeMode = amnezia::RouteMode::VpnAllSites;
             } else if (routeMode == amnezia::RouteMode::VpnOnlyForwardSites) {
@@ -451,14 +505,20 @@ void VpnConnection::appendSplitTunnelingConfig()
                 sitesJsonArray.append(m_vpnConfiguration.value(configKey::dns1).toString());
                 sitesJsonArray.append(m_vpnConfiguration.value(configKey::dns2).toString());
             }
+        /* issue_42
         }
+        */
+    /* issue_5
     }
+    */
 
     m_vpnConfiguration.insert(configKey::splitTunnelType, routeMode);
     m_vpnConfiguration.insert(configKey::splitTunnelSites, sitesJsonArray);
 
+
     amnezia::AppsRouteMode appsRouteMode = amnezia::AppsRouteMode::VpnAllApps;
     QJsonArray appsJsonArray;
+    /* disable app split tunneling
     if (m_appSettingsRepository->isAppsSplitTunnelingEnabled()) {
         appsRouteMode = m_appSettingsRepository->appsRouteMode();
 
@@ -471,15 +531,16 @@ void VpnConnection::appendSplitTunnelingConfig()
             appsRouteMode = amnezia::AppsRouteMode::VpnAllApps;
         }
     }
+    */
 
     m_vpnConfiguration.insert(configKey::appSplitTunnelType, appsRouteMode);
     m_vpnConfiguration.insert(configKey::splitTunnelApps, appsJsonArray);
 
     qDebug() << QString("Site split tunneling is %1, route mode is %2")
-                        .arg(m_appSettingsRepository->isSitesSplitTunnelingEnabled() ? "enabled" : "disabled")
+                        .arg("enabled")
                         .arg(routeMode);
     qDebug() << QString("App split tunneling is %1, route mode is %2")
-                        .arg(m_appSettingsRepository->isAppsSplitTunnelingEnabled() ? "enabled" : "disabled")
+                        .arg("disabled")
                         .arg(appsRouteMode);
 }
 
@@ -544,6 +605,7 @@ void VpnConnection::disconnectFromVpn()
 #endif
 
     if (m_vpnProtocol.isNull()) {
+        emit connectionEnded();
         setConnectionState(Vpn::ConnectionState::Disconnected);
         return;
     }
@@ -556,6 +618,7 @@ void VpnConnection::disconnectFromVpn()
                           [this, connection](AndroidController::ConnectionState state) {
                               if (state == AndroidController::ConnectionState::DISCONNECTED) {
                                   setConnectionState(Vpn::ConnectionState::Disconnected);
+                                  emit connectionEnded();
                                   disconnect(*connection);
                                   delete connection;
                               }
@@ -569,6 +632,7 @@ void VpnConnection::disconnectFromVpn()
 #endif
 
     m_vpnProtocol = nullptr;
+    emit connectionEnded();
 }
 
 void VpnConnection::setConnectionState(Vpn::ConnectionState state) {

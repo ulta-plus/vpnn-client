@@ -6,6 +6,8 @@ import Qt.labs.platform 1.1
 
 import QtCore
 
+import SortFilterProxyModel 0.2
+
 import PageEnum 1.0
 import Style 1.0
 
@@ -17,9 +19,44 @@ import "../Components"
 PageType {
     id: root
 
+    property var processedServer
+
+    Connections {
+        target: ServersUiController
+
+        function onProcessedServerIdChanged() {
+            root.processedServer = proxyServersModel.get(0)
+        }
+    }
+
+    Connections {
+        target: ServersModel
+
+        function onModelReset() {
+            root.processedServer = proxyServersModel.get(0)
+        }
+    }
+
+    SortFilterProxyModel {
+        id: proxyServersModel
+        objectName: "proxyServersModel"
+
+        sourceModel: ServersModel
+        filters: [
+            ValueFilter {
+                roleName: "serverId"
+                value: ServersUiController.processedServerId
+            }
+        ]
+
+        Component.onCompleted: {
+            root.processedServer = proxyServersModel.get(0)
+        }
+    }
+
     Component.onCompleted: {
         PageController.showBusyIndicator(true)
-        ApiConfigsController.prepareVpnKeyExport()
+        SubscriptionUiController.prepareVpnKeyExport(ServersUiController.processedServerId)
         PageController.showBusyIndicator(false)
     }
 
@@ -32,7 +69,7 @@ PageType {
             width: root.width
 
             BackButtonType {
-                Layout.topMargin: 20
+                Layout.topMargin: 20 + PageController.safeAreaTopMargin
             }
 
             Label {
@@ -40,7 +77,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
                 Layout.topMargin: 16
-                text: qsTr("Amnezia Premium\nsubscription key")
+                text: qsTr(root.processedServer.name + "\nsubscription key")
                 font.pixelSize: 32
                 font.bold: true
                 color: AmneziaStyle.color.paleGray
@@ -53,19 +90,11 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                defaultColor: AmneziaStyle.color.paleGray
-                hoveredColor: AmneziaStyle.color.sheerWhite
-                pressedColor: AmneziaStyle.color.translucentWhite
-                disabledColor: AmneziaStyle.color.mutedGray
-                textColor: AmneziaStyle.color.black
-                leftImageColor: "black"
-                borderWidth: 1
-
                 text: qsTr("Copy key")
                 leftImageSource: "qrc:/images/controls/copy.svg"
 
-                onClicked: {
-                    ApiConfigsController.copyVpnKeyToClipboard()
+                clickedFunc: function() {
+                    SubscriptionUiController.copyVpnKeyToClipboard()
                     PageController.showNotificationMessage(qsTr("Copied"))
                 }
             }
@@ -85,21 +114,24 @@ PageType {
                 text: qsTr("Save key as a file")
                 leftImageSource: "qrc:/images/controls/share-2.svg"
 
-                onClicked: {
+                clickedFunc: function() {
                     var fileName = GC.isMobile()
-                        ? "amnezia_vpn_key.vpn"
+                        ? root.processedServer.name.toLowerCase().replace(/\s+/g, "_") + "_key.vpn"
                         : SystemController.getFileName(
                             qsTr("Save VPNNaruzhu config"),
                             qsTr("Config files (*.vpn)"),
-                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/amnezia_vpn_key",
+                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/" + root.processedServer.name.toLowerCase().replace(/\s+/g, "_") + "_key",
                             true,
                             ".vpn"
                         )
 
                     if (fileName !== "") {
                         PageController.showBusyIndicator(true)
-                        ExportController.exportConfig(fileName)
+                        let ok = SubscriptionUiController.exportVpnKey(ServersUiController.processedServerId, fileName)
                         PageController.showBusyIndicator(false)
+                        if (ok) {
+                            PageController.showNotificationMessage(qsTr("Config file saved"))
+                        }
                     }
                 }
             }
@@ -118,29 +150,33 @@ PageType {
                 text: qsTr("Show key text")
                 leftImageSource: "qrc:/images/controls/eye.svg"
 
-                onClicked: {
+                clickedFunc: function() {
                     PageController.showBusyIndicator(true)
-                    ApiConfigsController.prepareVpnKeyExport()
+                    SubscriptionUiController.prepareVpnKeyExport(ServersUiController.processedServerId)
                     PageController.showBusyIndicator(false)
                     vpnKeyDrawer.openTriggered()
                 }
             }
 
             Rectangle {
-                Layout.fillWidth: true
-                Layout.preferredHeight: width
+                Layout.preferredWidth: Math.min(Math.min(root.width - (Layout.leftMargin + Layout.rightMargin), root.height * 0.5), 360)
+                Layout.preferredHeight: Layout.preferredWidth
+                Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 20
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                visible: ApiConfigsController.qrCodesCount > 0
+                visible: SubscriptionUiController.qrCodesCount > 0
                 color: "white"
                 radius: 12
 
                 Image {
                     anchors.fill: parent
                     smooth: false
-                    source: ApiConfigsController.qrCodesCount > 0 && ApiConfigsController.qrCodes[0] ? ApiConfigsController.qrCodes[0] : ""
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: parent.width
+                    sourceSize.height: parent.height
+                    source: SubscriptionUiController.qrCodesCount > 0 && SubscriptionUiController.qrCodes[0] ? SubscriptionUiController.qrCodes[0] : ""
                 }
             }
 
@@ -150,7 +186,7 @@ PageType {
                 Layout.bottomMargin: 16
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
-                visible: ApiConfigsController.qrCodesCount > 0
+                visible: SubscriptionUiController.qrCodesCount > 0
                 horizontalAlignment: Text.AlignHCenter
                 text: qsTr("To read the QR code in the Amnezia app, tap + in the main menu → 'QR code'")
             }
@@ -181,7 +217,7 @@ PageType {
 
                 Header2Type {
                     Layout.fillWidth: true
-                    headerText: qsTr("Amnezia Premium Subscription key")
+                    headerText: qsTr(root.processedServer.name + " Subscription key")
                 }
 
                 TextArea {
@@ -194,7 +230,7 @@ PageType {
                     font.pixelSize: 16
                     font.weight: Font.Medium
                     font.family: "PT Root UI VF"
-                    text: ApiConfigsController.vpnKey //|| ""
+                    text: SubscriptionUiController.vpnKey
                     wrapMode: Text.Wrap
                     background: Rectangle { color: AmneziaStyle.color.transparent }
                 }

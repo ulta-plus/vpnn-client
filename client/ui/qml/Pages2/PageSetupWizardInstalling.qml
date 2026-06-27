@@ -15,22 +15,21 @@ import "../Config"
 PageType {
     id: root
 
-    Component.onCompleted: PageController.disableTabBar(true)
+    Component.onCompleted: {
+        root.installingContainerIndex = ServersUiController.processedContainerIndex
+        PageController.disableTabBar(true)
+    }
     Component.onDestruction: PageController.disableTabBar(false)
 
     property bool isTimerRunning: true
     property string progressBarText: qsTr("Usually it takes no more than 5 minutes")
     property bool isCancelButtonVisible: false
+    property int installingContainerIndex: -1
 
     Connections {
         target: InstallController
 
         function onInstallContainerFinished(finishedMessage, isServiceInstall) {
-            var containerIndex = ContainersModel.getProcessedContainerIndex()
-            if (!ConnectionController.isConnected && !ContainersModel.isServiceContainer(containerIndex)) {
-                ServersModel.setDefaultContainer(ServersModel.processedIndex, containerIndex)
-            }
-
             PageController.closePage() // close installing page
             PageController.closePage() // close protocol settings page
 
@@ -38,22 +37,21 @@ PageType {
                 PageController.restorePageHomeState(true)
             }
 
+            if (stackView.currentItem.objectName === PageController.getPagePath(PageEnum.PageSetupWizardProtocols)) {
+                PageController.goToPage(PageEnum.PageHome)
+            }
+
             PageController.showNotificationMessage(finishedMessage)
         }
 
         function onInstallServerFinished(finishedMessage) {
-            if (!ConnectionController.isConnected) {
-                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
-                ServersModel.processedIndex = ServersModel.defaultIndex
-            }
-
             PageController.goToPageHome()
             PageController.showNotificationMessage(finishedMessage)
         }
 
         function onServerAlreadyExists(serverIndex) {
             PageController.goToStartPage()
-            ServersModel.processedIndex = serverIndex
+            ServersUiController.setProcessedServerId(ServersUiController.getServerId(serverIndex))
             PageController.goToPage(PageEnum.PageSettingsServerInfo, false)
 
             PageController.showErrorMessage(qsTr("The server has already been added to the application"))
@@ -79,8 +77,8 @@ PageType {
         sourceModel: ContainersModel
         filters: [
             ValueFilter {
-                roleName: "isCurrentlyProcessed"
-                value: true
+                roleName: "dockerContainer"
+                value: root.installingContainerIndex
             }
         ]
     }
@@ -99,7 +97,7 @@ PageType {
 
             BaseHeaderType {
                 Layout.fillWidth: true
-                Layout.topMargin: 20
+                Layout.topMargin: 20 + PageController.safeAreaTopMargin
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
@@ -143,6 +141,7 @@ PageType {
 
                 Layout.fillWidth: true
                 Layout.topMargin: 24
+                Layout.bottomMargin: 24 + PageController.safeAreaBottomMargin
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 

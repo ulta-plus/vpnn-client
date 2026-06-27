@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CPackWiXPatch>
+    <CPackWiXFragment Id="CM_CP_VPNNaruzhu.VPNNaruzhu_service.exe">
+        <ServiceInstall
+                Id="VPNNaruzhuServiceInstall"
+                Name="VPNNaruzhu-service"
+                DisplayName="VPNNaruzhu Service"
+                Description="Service for VPNNaruzhu"
+                Start="auto"
+                Type="ownProcess"
+                ErrorControl="normal"
+                Vital="no">
+            <ServiceDependency Id="BFE" />
+            <ServiceDependency Id="nsi" />
+        </ServiceInstall>
+        <ServiceControl
+                Id="VPNNaruzhuServiceControl"
+                Name="VPNNaruzhu-service"
+                Start="install"
+                Stop="both"
+                Remove="uninstall"
+                Wait="yes" />
+    </CPackWiXFragment>
+</CPackWiXPatch>

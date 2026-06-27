@@ -5,7 +5,6 @@ import QtQuick.Layouts
 import SortFilterProxyModel 0.2
 
 import PageEnum 1.0
-import ProtocolEnum 1.0
 import ContainerProps 1.0
 import ContainersModelFilters 1.0
 import Style 1.0
@@ -36,20 +35,20 @@ PageType {
 
     SettingsContainersListView {
         id: settingsContainersListView
-
-        anchors.fill: parent
         anchors.topMargin: 60
 
-        Connections {
-            target: ServersModel
+        anchors.fill: parent
 
-            function onProcessedServerIndexChanged() {
+        Connections {
+            target: ServersUiController
+
+            function onProcessedServerIdChanged() {
                 settingsContainersListView.updateContainersModelFilters()
             }
         }
 
         function updateContainersModelFilters() {
-            if (ServersModel.isProcessedServerHasWriteAccess()) {
+            if (ServersUiController.isProcessedServerHasWriteAccess()) {
                 proxyContainersModel.filters = ContainersModelFilters.getWriteAccessProtocolsListFilters()
             } else {
                 proxyContainersModel.filters = ContainersModelFilters.getReadAccessProtocolsListFilters()

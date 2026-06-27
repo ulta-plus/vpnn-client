@@ -1,17 +1,33 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set(PROJECT VPNNaruzhu)
+
+set(QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP ON CACHE BOOL "" FORCE)
+set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES
+    ${CMAKE_SOURCE_DIR}/cmake/platform_settings.cmake
+    ${CMAKE_SOURCE_DIR}/cmake/recipes_bootstrap.cmake
+    ${CMAKE_SOURCE_DIR}/cmake/conan_provider.cmake
+    CACHE STRING "" FORCE)
 
 project(${PROJECT} VERSION "${VPNN_VERSION}"
     DESCRIPTION "VPNNaruzhu"
     HOMEPAGE_URL "https://naruzhu.click/appam"
 )
 
+# trigger conan to kick off `conan install` globally
+find_package(OpenSSL REQUIRED)
+if (PREBUILTS_ONLY)
+    return()
+endif()
+
 string(TIMESTAMP CURRENT_DATE "%Y-%m-%d")
 set(RELEASE_DATE "${CURRENT_DATE}")
 
 set(APP_MAJOR_VERSION ${CMAKE_PROJECT_VERSION_MAJOR}.${CMAKE_PROJECT_VERSION_MINOR}.${CMAKE_PROJECT_VERSION_PATCH})
-set(APP_ANDROID_VERSION_CODE 2092)
+set(APP_ANDROID_VERSION_CODE 2123)
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     set(MZ_PLATFORM_NAME "linux")
@@ -28,23 +44,34 @@ elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Emscripten")
 endif()
 
 set(QT_BUILD_TOOLS_WHEN_CROSS_COMPILING ON)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if(APPLE)
-    if(IOS)
-        set(CMAKE_OSX_ARCHITECTURES "arm64")
-    elseif(MACOS_NE)
-        set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
+if(APPLE AND NOT IOS)
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        set(AMN_PF_RULE_IDENTITY "user { root }")
     else()
-        set(CMAKE_OSX_ARCHITECTURES "x86_64")
+        set(AMN_PF_RULE_IDENTITY "group { amnvpn }")
     endif()
+
+    configure_file(
+        "${CMAKE_SOURCE_DIR}/deploy/data/pf-templates/amn.400.allowPIA.conf.in"
+        "${CMAKE_CURRENT_BINARY_DIR}/amn.400.allowPIA.conf"
+        @ONLY
+    )
+
+    file(COPY_FILE
+        "${CMAKE_CURRENT_BINARY_DIR}/amn.400.allowPIA.conf"
+        "${CMAKE_SOURCE_DIR}/deploy/data/macos/pf/amn.400.allowPIA.conf"
+        ONLY_IF_DIFFERENT
+    )
 endif()
+
 
 add_subdirectory(client)
 
 if(NOT IOS AND NOT ANDROID AND NOT MACOS_NE)
     add_subdirectory(service)
+endif()
 
-    include(${CMAKE_SOURCE_DIR}/deploy/installer/config.cmake)
+if ((LINUX AND NOT ANDROID) OR (APPLE AND NOT IOS AND NOT MACOS_NE) OR (WIN32))
+    include(${CMAKE_SOURCE_DIR}/cmake/CPack.cmake)
 endif()

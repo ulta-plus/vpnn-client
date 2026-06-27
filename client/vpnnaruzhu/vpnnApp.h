@@ -7,17 +7,20 @@
 #include "downloader.h"
 #include "countriesModel.h"
 #include "downloadController.h"
+#include "ui/controllers/serversUiController.h"
 
 class VpnNaruzhuApp: public QObject
 {
     Q_OBJECT
 
 public:
-    VpnNaruzhuApp(const std::shared_ptr<Settings> &s,
-        const QSharedPointer<ServersModel> &sm,
-        const QSharedPointer<VpnConnection> &vpnc,
+    VpnNaruzhuApp(SecureAppSettingsRepository *settings_repository,
+        SecureServersRepository *servers_repository,
+        QSharedPointer<VpnConnection> vpnc,
         QQmlApplicationEngine* engine,
-        QSharedPointer<LanguageModel> &lm);
+        LanguageUiController* lc,
+        ImportController *amnezia_importController,
+        ServersUiController* sc);
 
     QSharedPointer<VpnNaruzhuWebApi> getWebApi(void) const
         { return vpnn_web_api; };
@@ -35,11 +38,13 @@ private:
     VpnNaruzhuApp();
 
     // AmneziaApp properties
-    std::shared_ptr<Settings> amnezia_settings;
-    QSharedPointer<ServersModel> amnezia_serversModel;
+    SecureAppSettingsRepository *amnezia_settingsRepository;
+    SecureServersRepository *amnezia_serversRepository;
     QSharedPointer<VpnConnection> amnezia_vpnConnection;
     QQmlApplicationEngine* amnezia_engine;
-    QSharedPointer<LanguageModel> amnezia_languageModel;
+    LanguageUiController* amnezia_languageUiController;
+    ImportController *amnezia_importController;
+    ServersUiController* amnezia_serversUiController;
 
     // VPNNaruzhu properties
     QSharedPointer<VpnNaruzhuWebApi> vpnn_web_api;

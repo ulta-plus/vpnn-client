@@ -16,7 +16,7 @@ set_target_properties(VPNNaruzhuNetworkExtension PROPERTIES
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_NAME "${BUILD_IOS_APP_IDENTIFIER}.network-extension"
     XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${CMAKE_CURRENT_SOURCE_DIR}/VPNNaruzhuNetworkExtension.entitlements
     XCODE_ATTRIBUTE_MARKETING_VERSION "${APP_MAJOR_VERSION}"
-    XCODE_ATTRIBUTE_CURRENT_PROJECT_VERSION "${BUILD_ID}"
+    XCODE_ATTRIBUTE_CURRENT_PROJECT_VERSION "${CMAKE_PROJECT_VERSION_TWEAK}"
     XCODE_ATTRIBUTE_PRODUCT_NAME "VPNNaruzhuNetworkExtension"
 
     XCODE_ATTRIBUTE_APPLICATION_EXTENSION_API_ONLY "YES"
@@ -114,25 +114,14 @@ set_property(TARGET VPNNaruzhuNetworkExtension APPEND PROPERTY RESOURCE
     ${CMAKE_CURRENT_SOURCE_DIR}/PrivacyInfo.xcprivacy
 )
 
-## Build wireguard-go-version.h
-execute_process(
-    COMMAND go list -m golang.zx2c4.com/wireguard
-    WORKING_DIRECTORY ${CLIENT_ROOT_DIR}/3rd/wireguard-apple/Sources/WireGuardKitGo
-    OUTPUT_VARIABLE WG_VERSION_FULL
-)
-string(REGEX REPLACE ".*v\([0-9.]*\).*" "\\1" WG_VERSION_STRING 1.1.1)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/wireguard-go-version.h.in
-               ${CMAKE_CURRENT_BINARY_DIR}/wireguard-go-version.h)
-target_sources(VPNNaruzhuNetworkExtension PRIVATE
-    ${CMAKE_CURRENT_BINARY_DIR}/wireguard-go-version.h)
-
 target_include_directories(VPNNaruzhuNetworkExtension PRIVATE ${CLIENT_ROOT_DIR})
 target_include_directories(VPNNaruzhuNetworkExtension PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 
-target_link_libraries(VPNNaruzhuNetworkExtension PRIVATE ${CLIENT_ROOT_DIR}/3rd-prebuilt/3rd-prebuilt/wireguard/macos/universal2/libwg-go.a)
+find_package(openvpnadapter REQUIRED)
+target_link_libraries(VPNNaruzhuNetworkExtension PRIVATE amnezia::openvpnadapter)
 
-message(${CLIENT_ROOT_DIR})
-message(${CLIENT_ROOT_DIR}/3rd-prebuilt/3rd-prebuilt/xray/HevSocks5Tunnel.xcframework/macos-arm64_x86_64/libhev-socks5-tunnel.a)
-target_link_libraries(VPNNaruzhuNetworkExtension PRIVATE ${CLIENT_ROOT_DIR}/3rd-prebuilt/3rd-prebuilt/xray/HevSocks5Tunnel.xcframework/macos-arm64_x86_64/libhev-socks5-tunnel.a)
+find_package(awg-apple REQUIRED)
+target_link_libraries(VPNNaruzhuNetworkExtension PRIVATE amnezia::awg-apple)
 
-target_include_directories(VPNNaruzhuNetworkExtension PRIVATE ${CLIENT_ROOT_DIR}/3rd-prebuilt/3rd-prebuilt/xray/HevSocks5Tunnel.xcframework/macos-arm64_x86_64/Headers)
+find_package(hev-socks5-tunnel REQUIRED)
+target_link_libraries(VPNNaruzhuNetworkExtension PRIVATE heiher::hev-socks5-tunnel)

@@ -36,7 +36,7 @@ VPNNCountriesModel::refresh(void)
     currentIndex = 0;
     newCountriesMap.push_back(map);
 
-    QString cachedVPNCountry = settings->getVPNCountry();
+    QString cachedVPNCountry = settingsRepository->naruzhuGetVPNCountry();
     for (const auto &elem: countriesArray) {
         QJsonObject country = elem.toObject();
         entry.name = country["country_label"].toString().split(" ")[1];
@@ -58,9 +58,9 @@ VPNNCountriesModel::refresh(void)
 }
 
 VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
-        const QSharedPointer<VpnNaruzhuWebApi> &web_api,
-        const std::shared_ptr<Settings> &s)
-    : QAbstractListModel(parent), webApi(web_api), settings(s)
+    const QSharedPointer<VpnNaruzhuWebApi> &web_api,
+    SecureAppSettingsRepository *sr)
+        : QAbstractListModel(parent), webApi(web_api), settingsRepository(sr)
 {
     refresh();
 }
@@ -109,6 +109,6 @@ VPNNCountriesModel::setCurrentIndex(int i)
 {
     currentIndex = i;
     QString iso_name = countriesList[i].iso;
-    settings->setVPNCountry(iso_name);
+    settingsRepository->naruzhuSetVPNCountry(iso_name);
     emit currentIndexChanged(currentIndex);
 }

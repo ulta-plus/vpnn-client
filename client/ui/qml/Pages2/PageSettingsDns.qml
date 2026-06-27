@@ -20,7 +20,7 @@ PageType {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         onFocusChanged: {
             if (this.activeFocus) {
@@ -37,7 +37,7 @@ PageType {
         anchors.right: parent.right
         anchors.left: parent.left
 
-        property var isServerFromApi: ServersModel.isServerFromApi(ServersModel.defaultIndex)
+        property var isServerFromApi: ServersUiController.isDefaultServerFromApi
 
         enabled: !isServerFromApi
 
@@ -115,7 +115,7 @@ PageType {
 
                 headerText: qsTr("Current Key Primary DNS")
 
-                textField.text: ServersModel.getCurrentServerDns1()
+                textField.text: ServersModel.naruzhuGetCurrentServerDns1()
                 textField.validator: RegularExpressionValidator {
                     regularExpression: InstallController.ipAddressRegExp()
                 }
@@ -130,7 +130,7 @@ PageType {
 
                 headerText: qsTr("Current Key Secondary DNS")
 
-                textField.text: ServersModel.getCurrentServerDns2()
+                textField.text: ServersModel.naruzhuGetCurrentServerDns2()
                 textField.validator: RegularExpressionValidator {
                     regularExpression: InstallController.ipAddressRegExp()
                 }
@@ -182,16 +182,19 @@ PageType {
                 text: qsTr("Save")
 
                 clickedFunc: function() {
+                    if (primaryDns.textField.text === "") {
+                        primaryDns.errorText = qsTr("Primary DNS cannot be empty")
+                        return
+                    }
+                    primaryDns.errorText = ""
+                    secondaryDns.errorText = ""
+
                     if (primaryDns.textField.text !== SettingsController.primaryDns) {
                         SettingsController.primaryDns = primaryDns.textField.text
                     }
                     if (secondaryDns.textField.text !== SettingsController.secondaryDns) {
                         SettingsController.secondaryDns = secondaryDns.textField.text
                     }
-                    ServersModel.updateCurrentKeyDnsConfig(
-                        currentServerPrimaryDns.textField.text,
-                        currentServerSecondaryDns.textField.text
-                    )
                     PageController.showNotificationMessage(qsTr("Settings saved"))
                 }
             }

@@ -80,7 +80,7 @@ bool WireguardUtilsLinux::addInterface(const InterfaceConfig& config) {
 
     QDir appPath(QCoreApplication::applicationDirPath());
     QStringList wgArgs = {"-f", "amn0"};
-    m_tunnel.start(appPath.filePath("../../client/bin/wireguard-go"), wgArgs);
+    m_tunnel.start(appPath.filePath("amneziawg-go"), wgArgs);
     if (!m_tunnel.waitForStarted(WG_TUN_PROC_TIMEOUT)) {
         logger.error() << "Unable to start tunnel process due to timeout";
         m_tunnel.kill();
@@ -142,12 +142,6 @@ bool WireguardUtilsLinux::addInterface(const InterfaceConfig& config) {
 
     for (const QString& key : config.m_specialJunk.keys()) {
         out << key.toLower() << "=" << config.m_specialJunk.value(key) << "\n";
-    }
-    for (const QString& key : config.m_controlledJunk.keys()) {
-        out << key.toLower() << "=" << config.m_controlledJunk.value(key) << "\n";
-    }
-    if (!config.m_specialHandshakeTimeout.isEmpty()) {
-        out << "itime=" << config.m_specialHandshakeTimeout << "\n";
     }
 
     int err = uapiErrno(uapiCommand(message));

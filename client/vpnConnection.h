@@ -1,0 +1,126 @@
+#ifndef VPNCONNECTION_H
+#define VPNCONNECTION_H
+
+#include <QObject>
+#include <QMetaObject>
+#include <QString>
+#include <QScopedPointer>
+#include <QRemoteObjectNode>
+#include <QTimer>
+
+#include "core/protocols/vpnProtocol.h"
+#include "core/utils/errorCodes.h"
+#include "core/utils/routeModes.h"
+#include "core/utils/commonStructs.h"
+#include "core/repositories/secureServersRepository.h"
+#include "core/repositories/secureAppSettingsRepository.h"
+
+#ifdef AMNEZIA_DESKTOP
+#include "core/utils/ipcClient.h"
+#endif
+
+#ifdef Q_OS_ANDROID
+#include "core/protocols/androidVpnProtocol.h"
+#endif
+
+using namespace amnezia;
+
+class VpnConnection : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit VpnConnection(SecureServersRepository* serversRepository, SecureAppSettingsRepository* appSettingsRepository, QObject* parent = nullptr);
+    ~VpnConnection() override;
+
+    static QString bytesPerSecToText(quint64 bytes);
+
+    ErrorCode lastError() const;
+    Vpn::ConnectionState connectionState() const;
+
+    QSharedPointer<VpnProtocol> vpnProtocol() const;
+
+    const QString &remoteAddress() const;
+    void addSitesRoutes(const QString &gw, amnezia::RouteMode mode);
+
+    void clearExcludeRouteList()
+    {
+        excludedRoutes.clear();
+    }
+
+    void excludeRoute(const QString &route)
+    {
+        excludedRoutes.append(route);
+    }
+
+#ifdef Q_OS_ANDROID
+    void restoreConnection();
+#endif
+
+    void waitForVpnConnectionFinished(int msecs);
+
+public slots:
+    void setRepositories(SecureServersRepository* serversRepository, SecureAppSettingsRepository* appSettingsRepository);
+    void connectToVpn(const QString &serverId, DockerContainer container, const QJsonObject &vpnConfiguration);
+    void reconnectToVpn();
+    void disconnectFromVpn();
+
+    void onKillSwitchModeChanged(bool enabled);
+    void disconnectSlots();
+
+    void setConnectionState(Vpn::ConnectionState state);
+
+    void addRoute(const QString& ip);
+    void addNewDns(const QString& dnsAddr);
+    void finishReceivingSettings();
+
+signals:
+    void bytesChanged(quint64 receivedBytes, quint64 sentBytes);
+    void connectionStateChanged(Vpn::ConnectionState state);
+    void vpnProtocolError(amnezia::ErrorCode error);
+
+    void serviceIsNotReady();
+
+    void newRoute(const QString& ip);
+    void restartConnection();
+    void toggleConnection();
+
+    void connectionEnded(void);
+
+protected slots:
+    void onBytesChanged(quint64 receivedBytes, quint64 sentBytes);
+    void onConnectionStateChanged(Vpn::ConnectionState state);
+
+protected:
+    QSharedPointer<VpnProtocol> m_vpnProtocol;
+
+private:
+    bool needToRestartConnection = false;
+    SecureServersRepository* m_serversRepository;
+    SecureAppSettingsRepository* m_appSettingsRepository;
+
+    QJsonObject m_vpnConfiguration;
+    QJsonObject m_routeMode;
+    QString m_remoteAddress;
+
+    QStringList excludedRoutes;
+
+    // Only for iOS for now, check counters
+    QTimer m_checkTimer;
+
+#ifdef Q_OS_ANDROID
+   AndroidVpnProtocol* androidVpnProtocol = nullptr;
+
+   AndroidVpnProtocol* createDefaultAndroidVpnProtocol();
+   void createAndroidConnections();
+#endif
+
+   Vpn::ConnectionState m_connectionState;
+
+   void createProtocolConnections();
+
+   void appendSplitTunnelingConfig();
+   void appendKillSwitchConfig();
+};
+
+#endif // VPNCONNECTION_H

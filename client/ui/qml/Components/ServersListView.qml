@@ -5,7 +5,6 @@ import QtQuick.Layouts
 import SortFilterProxyModel 0.2
 
 import PageEnum 1.0
-import ProtocolEnum 1.0
 import ContainerProps 1.0
 import ContainersModelFilters 1.0
 import Style 1.0
@@ -18,7 +17,7 @@ import "../Config"
 ListViewType {
     id: root
 
-    property int selectedIndex: ServersModel.defaultIndex
+    property int selectedIndex: ServersUiController.getServerIndexById(ServersUiController.defaultServerId)
 
     anchors.top: serversMenuHeader.bottom
     anchors.right: parent.right
@@ -29,9 +28,9 @@ ListViewType {
     model: ServersModel
 
     Connections {
-        target: ServersModel
-        function onDefaultServerIndexChanged(serverIndex) {
-            root.selectedIndex = serverIndex
+        target: ServersUiController
+        function onDefaultServerIdChanged() {
+            root.selectedIndex = ServersUiController.getServerIndexById(ServersUiController.defaultServerId)
         }
     }
 
@@ -67,7 +66,12 @@ ListViewType {
                     Layout.fillWidth: true
 
                     text: name
-                    descriptionText: serverDescription
+                    descriptionText: isServerFromGatewayApi && (isSubscriptionExpired || isSubscriptionExpiringSoon)
+                        ? (isSubscriptionExpired ? qsTr("Subscription expired. Please renew") : qsTr("Subscription expiring soon"))
+                        : serverDescription
+                    descriptionColor: isServerFromGatewayApi && (isSubscriptionExpired || isSubscriptionExpiringSoon)
+                        ? (isSubscriptionExpired ? AmneziaStyle.color.vibrantRed : AmneziaStyle.color.goldenApricot)
+                        : AmneziaStyle.color.mutedGray
 
                     checked: index === root.selectedIndex
                     checkable: !ConnectionController.isConnected
@@ -82,7 +86,7 @@ ListViewType {
 
                         root.selectedIndex = index
 
-                        ServersModel.defaultIndex = index
+                        ServersUiController.setDefaultServerAtIndex(index)
                     }
 
                     Keys.onEnterPressed: serverRadioButton.clicked()
@@ -101,17 +105,17 @@ ListViewType {
 
                     z: 1
 
-                    visible: !ServersModel.isAccountDefault(index);
+                    visible: !ServersModel.isAccountDefault(ServersUiController.processedServerId);
 
                     onClicked: function() {
-                        ServersModel.processedIndex = index
+                        ServersUiController.setProcessedServerId(serverId)
 
-                        if (ServersModel.getProcessedServerData("isServerFromGatewayApi")) {
-                            if (ServersModel.getProcessedServerData("isCountrySelectionAvailable")) {
+                        if (ServersUiController.isServerFromApi(ServersUiController.processedServerId)) {
+                            if (ServersUiController.isServerCountrySelectionAvailable(ServersUiController.processedServerId)) {
                                 PageController.goToPage(PageEnum.PageSettingsApiAvailableCountries)
                             } else {
                                 PageController.showBusyIndicator(true)
-                                let result = ApiSettingsController.getAccountInfo(false)
+                                let result = SubscriptionUiController.getAccountInfo(ServersUiController.processedServerId, false)
                                 PageController.showBusyIndicator(false)
                                 if (!result) {
                                     return

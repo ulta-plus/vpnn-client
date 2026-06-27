@@ -292,47 +292,47 @@
     </message>
 </context>
 <context>
-    <name>ConnectionController</name>
+    <name>ConnectionUiController</name>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="80"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="80"/>
         <source>Connecting...</source>
         <translation>Подключение...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="85"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="85"/>
         <source>Connected</source>
         <translation>Подключено</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="109"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="109"/>
         <source>Preparing...</source>
         <translation>Подготовка...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="131"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="131"/>
         <source>Settings updated successfully, reconnnection...</source>
         <translation>Настройки успешно обновлены, переподключение...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="134"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="134"/>
         <source>Settings updated successfully</source>
         <translation>Настройки успешно обновлены</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="94"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="94"/>
         <source>Reconnecting...</source>
         <translation>Переподключение...</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.h" line="74"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="99"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="114"/>
-        <location filename="../ui/controllers/connectionController.cpp" line="120"/>
+        <location filename="../ui/controllers/connectionUiController.h" line="74"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="99"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="114"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="120"/>
         <source>Connect</source>
         <translation>Подключиться</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/connectionController.cpp" line="104"/>
+        <location filename="../ui/controllers/connectionUiController.cpp" line="104"/>
         <source>Disconnecting...</source>
         <translation>Отключение...</translation>
     </message>
@@ -421,7 +421,7 @@
     </message>
     <message>
         <location filename="../ui/qml/Components/HomeSplitTunnelingDrawer.qml" line="46"/>
-        <source>Enabled 
+        <source>Enabled
 Can&apos;t be disabled for current server</source>
         <translation type="unfinished"></translation>
     </message>

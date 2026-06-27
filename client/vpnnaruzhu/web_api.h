@@ -9,24 +9,25 @@
 #include <QQmlApplicationEngine>
 
 #include "version.h"
-#include "settings.h"
 #include "vpnconnection.h"
 #include "connectionMode.h"
 #include "downloadController.h"
-#include "ui/models/languageModel.h"
-#include "ui/models/servers_model.h"
-#include "ui/controllers/importController.h"
+#include "ui/controllers/languageUiController.h"
+#include "core/repositories/secureserversRepository.h"
+#include "core/controllers/selfhosted/importController.h"
+#include "core/repositories/secureAppSettingsRepository.h"
 
 class VpnNaruzhuWebApi: public QObject
 {
     Q_OBJECT
 
 public:
-    VpnNaruzhuWebApi(const std::shared_ptr<Settings> &s,
-        const QSharedPointer<ServersModel> &sm,
-        const QSharedPointer<VpnConnection> &vpnc,
+    VpnNaruzhuWebApi(SecureAppSettingsRepository *settings_repository,
+        SecureServersRepository *servers_repository,
+        QSharedPointer<VpnConnection> vpnc,
         QQmlApplicationEngine* engine,
-        QSharedPointer<LanguageModel> &lm,
+        LanguageUiController *lc,
+        ImportController *ic,
         QSharedPointer<VpnnDownloadController> &d);
 
     QJsonDocument getDefaultAccountStatus(void) const;
@@ -66,12 +67,12 @@ private:
     QJsonDocument external_app_config;
     void initSettings(void);
 
-    std::shared_ptr<Settings> m_settings;
-    QSharedPointer<ServersModel> m_serversModel;
-    QSharedPointer<VpnConnection> m_vpnConnection;
-    QQmlApplicationEngine* m_engine;
+    SecureAppSettingsRepository* m_settingsRepository;
+    SecureServersRepository* m_serversRepository;
     ImportController* m_importController;
-    QSharedPointer<LanguageModel> m_languageModel;
+    LanguageUiController* m_languageController;
+    QSharedPointer<VpnConnection>  m_vpnConnection;
+    QQmlApplicationEngine* m_engine;
 
     // VPNN properties
     QSharedPointer<VPNNConnectionMode> connectionMode;
@@ -79,7 +80,7 @@ private:
 
     QSharedPointer<QNetworkAccessManager> m_manager;
     const quint64 TIMEOUT = 10000; // milliseconds
-    const QString awg_version = "1.5";
+    const QString awg_version = "2.0";
     const QString user_agent = "naruzhu-desktop/" APP_VERSION;
 
     QFile default_app_config = QFile(":/vpnnaruzhu/default_app_config.json");
@@ -97,8 +98,8 @@ private:
 
     QString getPublicRequestId(void) const
     {
-        auto defAccount = m_serversModel->getDefaultAccount();
-        return defAccount.value(config_key::public_request_id).toString();
+        auto defAccount = m_serversRepository->naruzhuGetDefaultAccount();
+        return defAccount.value(configKey::public_request_id).toString();
     }
 
     void initSimpleRequest(QNetworkRequest &request, const QString &url) const;

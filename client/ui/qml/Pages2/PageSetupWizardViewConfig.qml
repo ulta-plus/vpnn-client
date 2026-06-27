@@ -22,7 +22,7 @@ PageType {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
+        anchors.topMargin: 20 + PageController.safeAreaTopMargin
 
         onActiveFocusChanged: {
             if(backButton.enabled && backButton.activeFocus) {
@@ -32,9 +32,18 @@ PageType {
     }
 
     Connections {
+        target: PageController
+
+        function onClosePage() {
+            ImportController.clearConfigFileName()
+        }
+    }
+
+    Connections {
         target: ImportController
 
         function onImportErrorOccurred(error, goToPageHome) {
+            PageController.showBusyIndicator(false)
             if (goToPageHome) {
                 PageController.goToStartPage()
             } else {
@@ -43,11 +52,7 @@ PageType {
         }
 
         function onImportFinished() {
-            if (!ConnectionController.isConnected) {
-                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
-                ServersModel.processedIndex = ServersModel.defaultIndex
-            }
-
+            PageController.showBusyIndicator(false)
             PageController.goToPageHome()
         }
     }
@@ -118,7 +123,7 @@ PageType {
                 id: cloakingCheckBox
                 objectName: "cloakingCheckBox"
 
-                visible: ImportController.isNativeWireGuardConfig()
+                visible: ImportController.isNativeWireGuardConfig
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 16
@@ -139,7 +144,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                textString: ImportController.getMaliciousWarningText()
+                textString: ImportController.maliciousWarningText
                 textFormat: Qt.RichText
                 visible: textString !== ""
 
@@ -228,6 +233,7 @@ PageType {
                     if (cloakingCheckBoxItem.checked) {
                         ImportController.processNativeWireGuardConfig()
                     }
+                    PageController.showBusyIndicator(true)
                     ImportController.importConfig()
                 }
             }

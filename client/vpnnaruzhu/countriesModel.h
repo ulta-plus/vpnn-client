@@ -14,9 +14,9 @@ public:
         IconRole,
     };
 
-    explicit VPNNCountriesModel(QObject *parent = nullptr,
-        const QSharedPointer<VpnNaruzhuWebApi> &web_api = nullptr,
-        const std::shared_ptr<Settings> &s = nullptr);
+    explicit VPNNCountriesModel(QObject *parent,
+        const QSharedPointer<VpnNaruzhuWebApi> &web_api,
+        SecureAppSettingsRepository *sr);
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_PROPERTY(int currentIndex READ getCurrentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
@@ -44,7 +44,7 @@ private:
     QVector<CountryEntry> countriesList;
     QVector<QVariantMap> countriesMap;
     QSharedPointer<VpnNaruzhuWebApi> webApi;
-    std::shared_ptr<Settings> settings;
+    SecureAppSettingsRepository *settingsRepository;
 
     QFile default_country_list = QFile(":/vpnnaruzhu/default_country_list.json");
 };

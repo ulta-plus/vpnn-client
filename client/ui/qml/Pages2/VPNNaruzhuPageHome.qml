@@ -20,7 +20,7 @@ import "../Components"
 PageType {
     id: root
 
-    property var defaultConfig: ServersModel.getDefaultAccount()
+    property var defaultConfig: ServersUiController.naruzhuGetDefaultAccount()
     property var defaultEmail: defaultConfig.email
 
     Connections {
@@ -45,16 +45,16 @@ PageType {
     }
 
     function getNumberOfActiveDaysText() {
-        var numberOfActiveDays = ServersModel.getNumberOfActiveDays()
-        if (!ServersModel.isDefaultAccountActive()) {
+        var numberOfActiveDays = ServersUiController.naruzhuGetNumberOfActiveDays()
+        if (!ServersUiController.naruzhuIsDefaultAccountActive()) {
             numberOfActiveDays = 0
         }
         return qsTr('Left ') + numberOfActiveDays + qsTr(' days')
     }
 
     function getSubscriptionStatusText() {
-        if (ServersModel.isDefaultAccountActive()) {
-            return qsTr('Active until ') + ServersModel.getPaidUntilDefaultAccountStr()
+        if (ServersUiController.naruzhuIsDefaultAccountActive()) {
+            return qsTr('Active until ') + ServersUiController.naruzhuGetPaidUntilDefaultAccountStr()
         } else {
             return qsTr('Subscription ended')
         }
@@ -328,7 +328,7 @@ PageType {
                                 var yesButtonText = qsTr("Continue")
                                 var noButtonText = qsTr("Cancel")
                                 var yesButtonFunction = function() {
-                                    ServersModel.removeDefaultAccount()
+                                    ServersUiController.naruzhuRemoveDefaultAccount()
                                     SettingsController.clearSettings()
                                     VPNNCountriesModel.setCurrentIndex(0);
                                     PageController.goToPageHome()

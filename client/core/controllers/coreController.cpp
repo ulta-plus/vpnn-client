@@ -242,6 +242,7 @@ void CoreController::initVPNNaruzhuExtension()
                                      , m_languageUiController
                                      , m_importCoreController
                                      , m_serversUiController
+                                     , m_notificationHandler
                                      )
                     );
     m_engine->rootContext()->setContextProperty("VPNNApp", m_vpnnApp.get());

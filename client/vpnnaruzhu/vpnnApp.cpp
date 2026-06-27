@@ -6,7 +6,8 @@ VpnNaruzhuApp::VpnNaruzhuApp(SecureAppSettingsRepository *settings_repository,
     QQmlApplicationEngine* e,
     LanguageUiController* lc,
     ImportController *ic,
-    ServersUiController* sc)
+    ServersUiController* sc,
+    NotificationHandler *tray)
         : amnezia_settingsRepository(settings_repository),
             amnezia_serversRepository(servers_repository),
             amnezia_vpnConnection(vpnc), amnezia_engine(e),
@@ -25,6 +26,7 @@ VpnNaruzhuApp::VpnNaruzhuApp(SecureAppSettingsRepository *settings_repository,
                                            , amnezia_languageUiController
                                            , amnezia_importController
                                            , vpnn_downloadController
+                                           , tray
                                            )
                       );
     amnezia_engine->rootContext()->setContextProperty("VPNNWebApi",

@@ -4462,14 +4462,14 @@ For more detailed information, you can
     </message>
 </context>
 <context>
-    <name>SettingsController</name>
+    <name>SettingsUiController</name>
     <message>
-        <location filename="../ui/controllers/settingsController.cpp" line="261"/>
+        <location filename="../ui/controllers/settingsUiController.cpp" line="261"/>
         <source>All settings have been reset to default values</source>
         <translation>Все настройки сброшены до значений по умолчанию</translation>
     </message>
     <message>
-        <location filename="../ui/controllers/settingsController.cpp" line="180"/>
+        <location filename="../ui/controllers/settingsUiController.cpp" line="180"/>
         <source>Backup file is corrupted</source>
         <translation>Файл резервной копии поврежден</translation>
     </message>

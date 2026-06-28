@@ -1,3 +1,6 @@
+set VPNNaruzhuPath=%~dp0
+echo %VPNNaruzhuPath%
+
 sc stop AmneziaWGTunnel$VPNNaruzhu
 sc delete AmneziaWGTunnel$VPNNaruzhu
 taskkill /IM "VPNNaruzhu-service.exe" /F

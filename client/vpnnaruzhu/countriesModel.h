@@ -25,7 +25,7 @@ public:
 public slots:
     int getCurrentIndex(void) const { return currentIndex; }
     void setCurrentIndex(int i);
-    void refresh(void);
+    void refresh(bool use_cache = false);
 
 signals:
     void currentIndexChanged(const int index);
@@ -46,7 +46,10 @@ private:
     QSharedPointer<VpnNaruzhuWebApi> webApi;
     SecureAppSettingsRepository *settingsRepository;
 
-    QFile default_country_list = QFile(":/vpnnaruzhu/default_country_list.json");
+    QString default_country_list_cache_path =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
+        "/default_country_list.json";
+    QFile default_country_list = QFile(default_country_list_cache_path);
 };
 
 #endif /* _VPNN_COUNTRIES_MODEL_H */

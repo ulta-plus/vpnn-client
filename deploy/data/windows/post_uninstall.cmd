@@ -1,5 +1,5 @@
-set AmneziaPath=%~dp0
-echo %AmneziaPath%
+set VPNNaruzhuPath=%~dp0
+echo %VPNNaruzhuPath%
 
 rem Define directories for logs
 set "ORG_DIR=%AppData%\VPNNaruzhu.ORG"

@@ -30,11 +30,11 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     initModels();
     initControllers();
     initSignalHandlers();
-    initVPNNaruzhuExtension();
 
     initAndroidController();
     initAppleController();
     initLogging();
+    initVPNNaruzhuExtension();
 
     m_translator = new QTranslator(this);
     if (m_appSettingsRepository) {

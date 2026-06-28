@@ -55,7 +55,7 @@ PageType {
 
             text: qsTr('  •  Hish Speed up to 300 Mb/s
   •  Up to 10 devices simultaneously
-  •  36 countries to choose
+  •  13 countries to choose
   •  Guaranteed results
   •  Responsive support
   •  Private and secure traffic

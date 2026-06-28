@@ -374,9 +374,9 @@
     </message>
 </context>
 <context>
-    <name>CoreController</name>
+    <name>CoreSignalHandlers</name>
     <message>
-        <location filename="../core/controllers/coreController.cpp" line="407"/>
+        <location filename="../core/controllers/coreSignalHandlers.cpp" line="407"/>
         <source>Your account blocked</source>
         <translation>Ваш аккаунт заблокирован</translation>
     </message>
@@ -4870,14 +4870,14 @@ If switching servers doesn&apos;t help, please contact support: help@vpn-naruzhu
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageWelcome.qml" line="56"/>
         <source>  •  Hish Speed up to 300 Mb/s
   •  Up to 10 devices simultaneously
-  •  36 countries to choose
+  •  13 countries to choose
   •  Guaranteed results
   •  Responsive support
   •  Private and secure traffic
   •  Unlimited</source>
         <translation>  •  Высокая скорость до 300 Мбит/с
   •  До 10 устройств одновременно
-  •  36 стран на выбор
+  •  13 стран на выбор
   •  Гарантия результата
   •  Отзывчивая поддержка
   •  Приватный и безопасный трафик

@@ -31,6 +31,7 @@ public:
         ImportController *ic,
         QSharedPointer<VpnnDownloadController> &d,
         NotificationHandler *tray);
+    ~VpnNaruzhuWebApi() { qDebug() << "destroy VpnNaruzhuWebApi"; }
 
     QJsonDocument getDefaultAccountStatus(void) const;
     QJsonDocument downloadJsonFile(const QString &url) const;

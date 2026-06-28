@@ -32,6 +32,7 @@ PageType {
         function onImportFinished() {
             waitingBox.visible = false
             PageController.goToPageHome()
+            //VPNNWebApi.updateDefaultAccountStatus()
         }
     }
 

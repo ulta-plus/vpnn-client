@@ -214,6 +214,7 @@ QString ImportUiController::readTextFile(const QString &fileName)
 void ImportUiController::processDefaultAccountStatus(QString email, QString account_status)
 {
     auto doc = QJsonDocument::fromJson(account_status.toUtf8());
+
     auto request = doc["data"]["request"];
     m_config[configKey::is_default] = true;
     m_config[configKey::email] = email;

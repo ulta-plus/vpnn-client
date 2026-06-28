@@ -1,9 +1,13 @@
 #include "countriesModel.h"
 
 void
-VPNNCountriesModel::refresh(void)
+VPNNCountriesModel::refresh(bool use_cache)
 {
-    QJsonDocument json_doc = webApi->getListOfCounties();
+    QJsonDocument json_doc = QJsonDocument();
+    if (!use_cache) {
+        json_doc = webApi->getListOfCounties();
+    }
+
     if (json_doc.isEmpty()) {
         qDebug() << "Cannot download new country list.";
         if (!countriesList.isEmpty()) {
@@ -16,7 +20,15 @@ VPNNCountriesModel::refresh(void)
             json_doc = QJsonDocument::fromJson(default_country_list.readAll());
             default_country_list.close();
         } else {
-            qDebug() << "Cannot open " << default_country_list.fileName();
+            qDebug() << "Cannot open for read" << default_country_list.fileName();
+        }
+    } else {
+        if (default_country_list.open(QIODevice::WriteOnly)) {
+            qDebug() << "Update default country list cache.";
+            default_country_list.write(json_doc.toJson());
+            default_country_list.close();
+        } else {
+            qDebug() << "Cannot open for update" << default_country_list.fileName();
         }
     }
 
@@ -62,7 +74,23 @@ VPNNCountriesModel::VPNNCountriesModel(QObject *parent,
     SecureAppSettingsRepository *sr)
         : QAbstractListModel(parent), webApi(web_api), settingsRepository(sr)
 {
-    refresh();
+    QString cache_path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QDir().mkpath(cache_path);
+    if (!QFile::exists(default_country_list_cache_path))
+    {
+        qDebug () << "Copy country list placeholder to cache";
+        QFile::copy(":/vpnnaruzhu/default_country_list.json", default_country_list_cache_path);
+        QFile::setPermissions(default_country_list_cache_path,
+            QFile::ReadOwner |
+            QFile::WriteOwner |
+            QFile::ReadUser |
+            QFile::WriteUser |
+            QFile::ReadGroup |
+            QFile::ReadOther
+        );
+    }
+
+    refresh(true);
 }
 
 int

@@ -579,7 +579,7 @@ QString ServersUiController::naruzhuGetPaidUntilDefaultAccountStr(void) const
         return "";
     }
 
-    QString paid_until = serverDescriptionById(m_processedServerId).paid_until;
+    QString paid_until = serverDescriptionById(i).paid_until;
     QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
 
     QLocale locale = m_settingsController->getAppLanguage();
@@ -593,7 +593,7 @@ qint64 ServersUiController::naruzhuGetNumberOfActiveDays(void) const
         return 0;
     }
 
-    QString paid_until = serverDescriptionById(m_processedServerId).paid_until;
+    QString paid_until = serverDescriptionById(i).paid_until;
     QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
     QDateTime today = QDateTime::currentDateTime();
     quint64 diff_days = today.daysTo(last_day);
@@ -608,13 +608,13 @@ bool ServersUiController::naruzhuIsDefaultAccountActive(void) const
         return false;
     }
 
-    QString status = serverDescriptionById(m_processedServerId).simplified_status;
+    QString status = serverDescriptionById(i).simplified_status;
     bool is_blocked = (status == "blocked");
     if (is_blocked) {
         return false;
     }
 
-    QString paid_until = serverDescriptionById(m_processedServerId).paid_until;
+    QString paid_until = serverDescriptionById(i).paid_until;
     QDateTime last_day = QDateTime::fromString(paid_until, Qt::ISODateWithMs).toLocalTime();
     QDateTime today = QDateTime::currentDateTime();
 

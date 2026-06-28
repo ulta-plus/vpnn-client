@@ -146,7 +146,6 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
     initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
-    qDebug() << "finished getDefaultAccountStatus";
     return getJsonFromReply(reply, "getDefaultAccountStatus");
 }
 

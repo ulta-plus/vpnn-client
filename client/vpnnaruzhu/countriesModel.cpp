@@ -29,7 +29,6 @@ VPNNCountriesModel::refresh(bool use_cache)
             default_country_list.close();
         } else {
             qDebug() << "Cannot open for update" << default_country_list.fileName();
-            qDebug().noquote() << QString::fromUtf8(default_country_list.errorString().toUtf8());
         }
     }
 

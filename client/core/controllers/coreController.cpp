@@ -34,9 +34,7 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     initAndroidController();
     initAppleController();
     initLogging();
-    qDebug() << "start initVPNNaruzhuExtension";
     initVPNNaruzhuExtension();
-    qDebug() << "finish initVPNNaruzhuExtension";
 
     m_translator = new QTranslator(this);
     if (m_appSettingsRepository) {

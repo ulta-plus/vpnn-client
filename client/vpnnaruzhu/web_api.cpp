@@ -17,12 +17,14 @@ VpnNaruzhuWebApi::VpnNaruzhuWebApi(
     QQmlApplicationEngine* engine,
     LanguageUiController *lc,
     ImportController *ic,
-    QSharedPointer<VpnnDownloadController> &d)
+    QSharedPointer<VpnnDownloadController> &d,
+    NotificationHandler *tray)
         : m_settingsRepository(settings_repository),
             m_serversRepository(servers_repository), m_vpnConnection(vpnc),
             m_engine(engine), m_languageController(lc), m_importController(ic),
             vpnn_downloadController(d)
 {
+    m_tray = qobject_cast<SystemTrayNotificationHandler*>(tray);
     m_manager.reset(new QNetworkAccessManager());
     //m_importController = (ImportController*)
     //    m_engine->rootContext()->objectForName("ImportController");
@@ -316,6 +318,9 @@ void VpnNaruzhuWebApi::initSettings(void)
             connectionMode->setRouteMode(mode);
         }
     }
+
+    QString webSite = external_app_config["websiteLink"].toString();
+    m_tray->updateWebsiteUrl(webSite);
 }
 
 void VpnNaruzhuWebApi::updateExternalSettings(void)

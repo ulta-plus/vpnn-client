@@ -446,6 +446,7 @@ void CoreSignalHandlers::initNotificationHandler()
             &ConnectionUiController::closeConnection);
     connect(m_coreController, &CoreController::translationsUpdated, m_coreController->m_notificationHandler, &NotificationHandler::onTranslationsUpdated);
 
+
     /* VPNNaruzhu has another URLs
     auto* trayHandler = qobject_cast<SystemTrayNotificationHandler*>(m_coreController->m_notificationHandler);
     connect(m_coreController, &CoreController::websiteUrlChanged, trayHandler, &SystemTrayNotificationHandler::updateWebsiteUrl);

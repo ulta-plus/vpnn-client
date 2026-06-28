@@ -20,7 +20,8 @@ public:
         QQmlApplicationEngine* engine,
         LanguageUiController* lc,
         ImportController *amnezia_importController,
-        ServersUiController* sc);
+        ServersUiController* sc,
+        NotificationHandler *tray);
 
     QSharedPointer<VpnNaruzhuWebApi> getWebApi(void) const
         { return vpnn_web_api; };

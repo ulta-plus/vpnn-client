@@ -70,12 +70,10 @@ void SystemTrayNotificationHandler::onTranslationsUpdated()
     m_trayActionQuit->setText(tr("Quit")+ " " + APPLICATION_NAME);
 }
 
-/* VPNNaruzhu has another URLs
 void SystemTrayNotificationHandler::updateWebsiteUrl(const QString &newWebsiteUrl) {
     qDebug() << "Updated website URL:" << newWebsiteUrl;
     websiteUrl = newWebsiteUrl;
 }
-*/
 
 void SystemTrayNotificationHandler::setTrayIcon(const QString &iconPath)
 {

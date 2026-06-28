@@ -13,6 +13,7 @@
 #include "connectionMode.h"
 #include "downloadController.h"
 #include "ui/controllers/languageUiController.h"
+#include "ui/utils/systemTrayNotificationHandler.h"
 #include "core/repositories/secureserversRepository.h"
 #include "core/controllers/selfhosted/importController.h"
 #include "core/repositories/secureAppSettingsRepository.h"
@@ -28,7 +29,8 @@ public:
         QQmlApplicationEngine* engine,
         LanguageUiController *lc,
         ImportController *ic,
-        QSharedPointer<VpnnDownloadController> &d);
+        QSharedPointer<VpnnDownloadController> &d,
+        NotificationHandler *tray);
 
     QJsonDocument getDefaultAccountStatus(void) const;
     QJsonDocument downloadJsonFile(const QString &url) const;
@@ -73,6 +75,7 @@ private:
     LanguageUiController* m_languageController;
     QSharedPointer<VpnConnection>  m_vpnConnection;
     QQmlApplicationEngine* m_engine;
+    SystemTrayNotificationHandler *m_tray;
 
     // VPNN properties
     QSharedPointer<VPNNConnectionMode> connectionMode;

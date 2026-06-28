@@ -132,7 +132,7 @@ QLocale LanguageUiController::languageEnumToLocale(const LanguageSettings::Avail
     case LanguageSettings::AvailableLanguageEnum::Urdu: return QLocale::Urdu;
     case LanguageSettings::AvailableLanguageEnum::Hindi: return QLocale::Hindi;
     */
-    default: return QLocale::English;
+    default: return QLocale::Russian;
     }
 }
 

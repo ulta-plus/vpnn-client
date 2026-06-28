@@ -242,6 +242,7 @@ void CoreController::initVPNNaruzhuExtension()
                                      , m_languageUiController
                                      , m_importCoreController
                                      , m_serversUiController
+                                     , m_notificationHandler
                                      )
                     );
     m_engine->rootContext()->setContextProperty("VPNNApp", m_vpnnApp.get());
@@ -340,7 +341,7 @@ void CoreController::updateTranslator(const QLocale &locale)
     if (m_translator->load(strFileName)) {
         QCoreApplication::installTranslator(m_translator);
     } else {
-        if (m_translator->load(QString(":/translations/vpnnaruzhu_ru_RU.qm"))) {
+        if (m_translator->load(QString(":/translations/vpnnaruzhu_en.qm"))) {
             QCoreApplication::installTranslator(m_translator);
         }
     }

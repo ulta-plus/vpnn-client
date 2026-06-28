@@ -1,14 +1,14 @@
 {
-    "apiBaseUrl": "https://mobile.vvppnn.click",
-    "dns1": "192.168.63.254",
+    "apiBaseUrl": "https://api.awnr.site",
+    "dns1": "172.16.0.1",
     "dns2": "8.8.8.8",
     "supportLink": "https://t.me/vpn_naruzhu_ops_bot",
     "tgChannelLink": "https://t.me/vpnnaruzhu",
-    "aboutLink": "https://nrz.monster/profile",
-    "websiteLink": "https://nrz.monster",
+    "aboutLink": "https://vepen.online/profile",
+    "websiteLink": "https://vepen.online/",
     "updateInfo": {
-        "availableVersion": "2.2.1.4",
-        "downloadUrl": "https://storage.uubb.website/VPNNaruzhu_x64_2.2.1.4.exe",
+        "availableVersion": "2.2.2.4",
+        "downloadUrl": "https://storage.uubb.website/naruzhu-desktop/VPNNaruzhu_x64_2.2.2.4.exe",
         "requiredVersion": "2.2.1.4"
     },
     "connections": [

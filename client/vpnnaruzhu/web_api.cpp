@@ -26,8 +26,6 @@ VpnNaruzhuWebApi::VpnNaruzhuWebApi(
 {
     m_tray = qobject_cast<SystemTrayNotificationHandler*>(tray);
     m_manager.reset(new QNetworkAccessManager());
-    //m_importController = (ImportController*)
-    //    m_engine->rootContext()->objectForName("ImportController");
 
     if (default_app_config.open(QIODevice::ReadOnly)) {
         external_app_config = QJsonDocument::fromJson(
@@ -148,6 +146,7 @@ QJsonDocument VpnNaruzhuWebApi::getDefaultAccountStatus(void) const
     initRequest(request, url, false);
 
     QNetworkReply* reply = replyGetRequest(request);
+    qDebug() << "finished getDefaultAccountStatus";
     return getJsonFromReply(reply, "getDefaultAccountStatus");
 }
 
@@ -362,6 +361,7 @@ QJsonDocument VpnNaruzhuWebApi::getListOfCounties(void) const
 {
     QString url = getApiBaseUrl()
             + "/client-api/v1/countries";
+    qDebug() << "getListOfCounties: " << url;
 
     QNetworkRequest request;
     initSimpleRequest(request, url);

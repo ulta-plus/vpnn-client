@@ -56,6 +56,8 @@ signals:
 public slots:
     Q_INVOKABLE bool isDownloadInProgress() { return in_progress; }
 
+    void reportError() { onErrorOccurred(); }
+
     void onProgressChanged(qreal p) {
         m_progress = p;
         emit progressChanged(p);

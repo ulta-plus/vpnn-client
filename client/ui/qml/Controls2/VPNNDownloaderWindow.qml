@@ -24,6 +24,7 @@ Window {
         }
 
         function onErrorOccurred() {
+            root.visible = true
             retryDownload.visible = true
         }
     }

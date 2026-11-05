@@ -113,6 +113,7 @@ private:
         const QString &data) const;
 
     QString downloadNewApp(void) const;
+    bool verifyDownloadedApp(const QString &path) const;
     void installNewApp(QString &path) const;
 
     QString getSmartRoutesListUrl(void) const;

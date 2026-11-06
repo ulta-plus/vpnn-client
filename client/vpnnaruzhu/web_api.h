@@ -12,6 +12,7 @@
 #include "vpnconnection.h"
 #include "connectionMode.h"
 #include "downloadController.h"
+#include "updateInfo.h"
 #include "ui/controllers/languageUiController.h"
 #include "ui/utils/systemTrayNotificationHandler.h"
 #include "core/repositories/secureserversRepository.h"
@@ -21,6 +22,7 @@
 class VpnNaruzhuWebApi: public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString updateError READ getUpdateError NOTIFY updateErrorChanged)
 
 public:
     VpnNaruzhuWebApi(SecureAppSettingsRepository *settings_repository,
@@ -40,13 +42,15 @@ public:
 
 signals:
     void defaultAccountStatusUpdated(void) const;
+    void updateErrorChanged();
 
 public slots:
     void updateExternalSettings(void);
     void updateSmartRouting(void) const;
     void updateDefaultAccountStatus(void) const;
     void updateDefaultAccountConfig(void) const;
-    void downloadAndInstallNewApp(void) const;
+    void downloadAndInstallNewApp(void);
+    QString getUpdateError() const { return m_updateError; }
 
     QString getUserAgent(void) const { return user_agent; }
     QString getAwgVersion(void) const { return awg_version; }
@@ -67,6 +71,9 @@ private:
     VpnNaruzhuWebApi();
 
     QJsonDocument external_app_config;
+    QString m_updateError;
+    bool m_updateInProgress = false;
+    void setUpdateError(const QString &message);
     void initSettings(void);
 
     SecureAppSettingsRepository* m_settingsRepository;
@@ -112,9 +119,9 @@ private:
     QNetworkReply* replyPostRequest(const QNetworkRequest &request,
         const QString &data) const;
 
-    QString downloadNewApp(void) const;
-    bool verifyDownloadedApp(const QString &path) const;
-    void installNewApp(QString &path) const;
+    QString downloadNewApp(const VpnnUpdate::Attempt &attempt);
+    bool verifyDownloadedApp(const QString &path, const VpnnUpdate::Attempt &attempt);
+    void installNewApp(const QString &path);
 
     QString getSmartRoutesListUrl(void) const;
     QJsonDocument getAppConfig(void) const;

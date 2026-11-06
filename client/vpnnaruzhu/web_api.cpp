@@ -11,6 +11,7 @@
 #include <QJsonDocument>
 #include <QNetworkRequest>
 #include <QProcess>
+#include <QScopedValueRollback>
 #include <QTemporaryFile>
 #include <QtEnvironmentVariables>
 
@@ -30,6 +31,10 @@ VpnNaruzhuWebApi::VpnNaruzhuWebApi(
 {
     m_tray = qobject_cast<SystemTrayNotificationHandler*>(tray);
     m_manager.reset(new QNetworkAccessManager());
+    connect(vpnn_downloadController.get(), &VpnnDownloadController::fileErrorOccurred,
+        this, [this]() {
+            setUpdateError(tr("Cannot save the installer file. Check free disk space and temporary-folder permissions."));
+        });
 
     if (default_app_config.open(QIODevice::ReadOnly)) {
         external_app_config = QJsonDocument::fromJson(
@@ -269,6 +274,10 @@ QJsonDocument VpnNaruzhuWebApi::getAppTestConfig(void) const
         }
     }
 
+    if (!VpnnUpdate::validConfig(config)) {
+        qWarning() << "Invalid test application config";
+        return {};
+    }
     return config;
 }
 
@@ -276,7 +285,7 @@ QJsonDocument VpnNaruzhuWebApi::getAppExternalConfig(void) const
 {
     for (const auto &url: external_app_config_urls) {
         QJsonDocument config = downloadJsonFile(url);
-        if (!config.isEmpty()) {
+        if (VpnnUpdate::validConfig(config)) {
             return config;
         } else {
             qDebug() << "Cannot download external config" << url;
@@ -328,7 +337,7 @@ void VpnNaruzhuWebApi::initSettings(void)
 void VpnNaruzhuWebApi::updateExternalSettings(void)
 {
     QJsonDocument new_app_config = getAppConfig();
-    if (!new_app_config.isEmpty()) {
+    if (VpnnUpdate::validConfig(new_app_config)) {
         external_app_config = new_app_config;
         initSettings();
     }
@@ -397,12 +406,13 @@ bool VpnNaruzhuWebApi::shouldForceUpdateApp(void) const
     return false;
 }
 
-QString VpnNaruzhuWebApi::downloadNewApp(void) const
+QString VpnNaruzhuWebApi::downloadNewApp(const VpnnUpdate::Attempt &attempt)
 {
     QTemporaryFile temp_file;
     temp_file.setAutoRemove(false);
     if (!temp_file.open()) {
         qWarning() << "Cannot create temporary file for application update";
+        setUpdateError(tr("Cannot save the installer file. Check free disk space and temporary-folder permissions."));
         vpnn_downloadController->reportError();
         return {};
     }
@@ -417,11 +427,10 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
         qWarning() << "Cannot prepare temporary file for application update"
                    << new_path << temp_file.errorString();
         temp_file.remove();
+        setUpdateError(tr("Cannot save the installer file. Check free disk space and temporary-folder permissions."));
         vpnn_downloadController->reportError();
         return {};
     }
-
-    QString link = external_app_config["updateInfo"]["downloadUrl"].toString();
 
     QEventLoop wait;
     bool download_succeeded = false;
@@ -439,7 +448,7 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
             wait.quit();
         });
 
-    vpnn_downloadController->download(link, new_path);
+    vpnn_downloadController->download(attempt.url, new_path);
     wait.exec();
 
     QObject::disconnect(finished_connection);
@@ -447,7 +456,7 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
 
     const QFileInfo downloaded_file(new_path);
     if (!download_succeeded || !downloaded_file.exists() || downloaded_file.size() <= 0
-        || !verifyDownloadedApp(new_path)) {
+        || !verifyDownloadedApp(new_path, attempt)) {
         QFile::remove(new_path);
         if (!download_failed) {
             vpnn_downloadController->reportError();
@@ -458,29 +467,31 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
     return new_path;
 }
 
-bool VpnNaruzhuWebApi::verifyDownloadedApp(const QString &path) const
+bool VpnNaruzhuWebApi::verifyDownloadedApp(const QString &path, const VpnnUpdate::Attempt &attempt)
 {
-    const QString expected_sha256 = external_app_config["updateInfo"]["sha256"]
-        .toString().trimmed();
+    const QString &expected_sha256 = attempt.sha256;
     if (expected_sha256.isEmpty()) {
         qWarning() << "No SHA-256 is configured for application update";
-        return !shouldForceUpdateApp();
+        return !attempt.hashRequired;
     }
 
-    if (expected_sha256.size() != 64) {
-        qWarning() << "Invalid SHA-256 length for application update";
+    if (!attempt.validHash()) {
+        qWarning() << "Invalid SHA-256 for application update";
+        setUpdateError(tr("Update configuration is invalid. Please contact support."));
         return false;
     }
 
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly)) {
         qWarning() << "Cannot open downloaded application for SHA-256 verification" << path;
+        setUpdateError(tr("Cannot read the downloaded installer. Check disk access and try again."));
         return false;
     }
 
     QCryptographicHash hash(QCryptographicHash::Sha256);
     if (!hash.addData(&file)) {
         qWarning() << "Cannot calculate SHA-256 for application update" << path;
+        setUpdateError(tr("Cannot read the downloaded installer. Check disk access and try again."));
         return false;
     }
 
@@ -489,15 +500,32 @@ bool VpnNaruzhuWebApi::verifyDownloadedApp(const QString &path) const
         qWarning() << "SHA-256 mismatch for application update"
                    << "expected:" << expected_sha256
                    << "actual:" << actual_sha256;
+        setUpdateError(tr("Installer checksum does not match. The file will not be started. Try again or contact support."));
         return false;
     }
 
     return true;
 }
 
-void VpnNaruzhuWebApi::downloadAndInstallNewApp(void) const
+void VpnNaruzhuWebApi::setUpdateError(const QString &message)
 {
-    QString path = downloadNewApp();
+    m_updateError = message;
+    emit updateErrorChanged();
+}
+
+void VpnNaruzhuWebApi::downloadAndInstallNewApp(void)
+{
+    if (m_updateInProgress)
+        return;
+    QScopedValueRollback<bool> guard(m_updateInProgress, true);
+    const auto attempt = VpnnUpdate::Attempt::fromConfig(external_app_config, APP_VERSION);
+    if (!VpnnUpdate::validUrl(attempt.url) || !attempt.validHash()) {
+        setUpdateError(tr("Update configuration is invalid. Please contact support."));
+        vpnn_downloadController->reportError();
+        return;
+    }
+    setUpdateError(tr("Download failed. Check your connection and try again."));
+    QString path = downloadNewApp(attempt);
     if (path.isEmpty()) {
         return;
     }
@@ -505,10 +533,13 @@ void VpnNaruzhuWebApi::downloadAndInstallNewApp(void) const
     installNewApp(path);
 }
 
-void VpnNaruzhuWebApi::installNewApp(QString &path) const
+void VpnNaruzhuWebApi::installNewApp(const QString &path)
 {
-    if (!QProcess::startDetached(path)) {
-        qWarning() << "Cannot start application update installer" << path;
+    QProcess installer;
+    installer.setProgram(path);
+    if (!installer.startDetached()) {
+        qWarning() << "Cannot start application update installer" << path << installer.errorString();
+        setUpdateError(tr("Could not start the installer. Allow the Windows permission prompt and try again."));
         QFile::remove(path);
         vpnn_downloadController->reportError();
     }

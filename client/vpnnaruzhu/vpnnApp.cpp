@@ -14,8 +14,7 @@ VpnNaruzhuApp::VpnNaruzhuApp(SecureAppSettingsRepository *settings_repository,
             amnezia_languageUiController(lc), amnezia_importController(ic),
             amnezia_serversUiController(sc)
 {
-    vpnn_downloader.reset(new VpnNaruzhuDownloader());
-    vpnn_downloadController.reset(new VpnnDownloadController(vpnn_downloader));
+    vpnn_downloadController.reset(new VpnnDownloadController());
     amnezia_engine->rootContext()->setContextProperty("VPNNDownloadController",
         vpnn_downloadController.get());
 

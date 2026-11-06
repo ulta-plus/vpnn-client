@@ -4581,10 +4581,35 @@ For more detailed information, you can
     </message>
     <message>
         <location filename="../ui/qml/Controls2/VPNNDownloaderWindow.qml" line="56"/>
-        <source>Download Error.
-Do you want to retry?</source>
-        <translation>Ошибка во время загрузки.
-Хотите попробовать обновить снова?</translation>
+        <source>Do you want to retry?</source>
+        <translation>Попробовать ещё раз?</translation>
+    </message>
+</context>
+<context>
+    <name>VpnNaruzhuWebApi</name>
+    <message>
+        <source>Cannot save the installer file. Check free disk space and temporary-folder permissions.</source>
+        <translation>Не удалось сохранить установщик. Проверьте свободное место и доступ к временной папке.</translation>
+    </message>
+    <message>
+        <source>Update configuration is invalid. Please contact support.</source>
+        <translation>Ошибка в настройках обновления. Обратитесь в поддержку.</translation>
+    </message>
+    <message>
+        <source>Cannot read the downloaded installer. Check disk access and try again.</source>
+        <translation>Не удалось прочитать установщик. Проверьте доступ к диску и повторите попытку.</translation>
+    </message>
+    <message>
+        <source>Installer checksum does not match. The file will not be started. Try again or contact support.</source>
+        <translation>Файл установщика не прошёл проверку и не будет запущен. Повторите попытку или обратитесь в поддержку.</translation>
+    </message>
+    <message>
+        <source>Download failed. Check your connection and try again.</source>
+        <translation>Не удалось скачать установщик. Проверьте подключение к интернету и повторите попытку.</translation>
+    </message>
+    <message>
+        <source>Could not start the installer. Allow the Windows permission prompt and try again.</source>
+        <translation>Не удалось запустить установщик. Повторите попытку и подтвердите запрос разрешения Windows.</translation>
     </message>
 </context>
 <context>

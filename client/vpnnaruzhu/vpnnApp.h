@@ -4,7 +4,6 @@
 #include <QObject>
 
 #include "web_api.h"
-#include "downloader.h"
 #include "countriesModel.h"
 #include "downloadController.h"
 #include "ui/controllers/serversUiController.h"
@@ -50,7 +49,6 @@ private:
     // VPNNaruzhu properties
     QSharedPointer<VpnNaruzhuWebApi> vpnn_web_api;
     QSharedPointer<VPNNCountriesModel> vpnn_countries_model;
-    QSharedPointer<VpnNaruzhuDownloader> vpnn_downloader;
     QSharedPointer<VpnnDownloadController> vpnn_downloadController;
 
     bool vpnn_account_blocked = false;

@@ -411,9 +411,12 @@ QString VpnNaruzhuWebApi::downloadNewApp(void) const
     temp_file.close();
 
     const QString new_path = temporary_path + ".exe";
-    if (!QFile::rename(temporary_path, new_path)) {
-        qWarning() << "Cannot prepare temporary file for application update" << new_path;
-        QFile::remove(temporary_path);
+    // QTemporaryFile::close() retains the native handle. Its rename() releases
+    // that handle before renaming, which is required on Windows.
+    if (!temp_file.rename(new_path)) {
+        qWarning() << "Cannot prepare temporary file for application update"
+                   << new_path << temp_file.errorString();
+        temp_file.remove();
         vpnn_downloadController->reportError();
         return {};
     }

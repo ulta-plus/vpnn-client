@@ -340,6 +340,7 @@ void VpnNaruzhuWebApi::updateExternalSettings(void)
     if (VpnnUpdate::validConfig(new_app_config)) {
         external_app_config = new_app_config;
         initSettings();
+        emit externalSettingsChanged();
     }
 }
 
@@ -394,8 +395,20 @@ bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
     return false;
 }
 
+bool VpnNaruzhuWebApi::isMigrationRequired(void) const
+{
+#ifdef Q_OS_WIN
+    return true;
+#else
+    return false;
+#endif
+}
+
 bool VpnNaruzhuWebApi::shouldForceUpdateApp(void) const
 {
+    if (isMigrationRequired()) {
+        return true;
+    }
     QString required_version = external_app_config["updateInfo"]["requiredVersion"].toString();
     QVersionNumber new_version = QVersionNumber::fromString(required_version);
     QVersionNumber cur_version = QVersionNumber::fromString(APP_VERSION);
@@ -518,7 +531,9 @@ void VpnNaruzhuWebApi::downloadAndInstallNewApp(void)
     if (m_updateInProgress)
         return;
     QScopedValueRollback<bool> guard(m_updateInProgress, true);
-    const auto attempt = VpnnUpdate::Attempt::fromConfig(external_app_config, APP_VERSION);
+    const auto attempt = isMigrationRequired()
+        ? VpnnUpdate::Attempt::fromMigrationConfig(external_app_config)
+        : VpnnUpdate::Attempt::fromConfig(external_app_config, APP_VERSION);
     if (!VpnnUpdate::validUrl(attempt.url) || !attempt.validHash()) {
         setUpdateError(tr("Update configuration is invalid. Please contact support."));
         vpnn_downloadController->reportError();

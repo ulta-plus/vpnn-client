@@ -22,6 +22,13 @@ inline bool validUrl(const QString &value)
         && (url.scheme() == QStringLiteral("https") || url.scheme() == QStringLiteral("http"));
 }
 
+inline QString migrationLandingUrl(const QJsonDocument &config)
+{
+    const QString url = config.object().value("migrationInfo").toObject()
+                            .value("landingUrl").toString();
+    return validUrl(url) ? url : QStringLiteral("https://usenaruzhu.space/landing/");
+}
+
 // Validate the config envelope before replacing the last known-good config.
 // Hash errors are handled by the update attempt: they must not hide a hard-update screen.
 inline bool validConfig(const QJsonDocument &document)
@@ -57,6 +64,15 @@ struct Attempt {
                 update.value("sha256").toString().trimmed(),
                 QVersionNumber::fromString(update.value("requiredVersion").toString())
                     > QVersionNumber::fromString(currentVersion)};
+    }
+
+    static Attempt fromMigrationConfig(const QJsonDocument &config)
+    {
+        const QJsonObject migration = config.object().value("migrationInfo").toObject();
+        // The final legacy build must never download itself via updateInfo.
+        // Migration is mandatory even when requiredVersion equals APP_VERSION.
+        return {migration.value("downloadUrl").toString(),
+                migration.value("sha256").toString().trimmed(), true};
     }
 
     bool validHash() const

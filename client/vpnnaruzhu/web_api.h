@@ -23,6 +23,7 @@ class VpnNaruzhuWebApi: public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString updateError READ getUpdateError NOTIFY updateErrorChanged)
+    Q_PROPERTY(QString migrationLandingUrl READ getMigrationLandingUrl NOTIFY externalSettingsChanged)
 
 public:
     VpnNaruzhuWebApi(SecureAppSettingsRepository *settings_repository,
@@ -43,6 +44,7 @@ public:
 signals:
     void defaultAccountStatusUpdated(void) const;
     void updateErrorChanged();
+    void externalSettingsChanged();
 
 public slots:
     void updateExternalSettings(void);
@@ -51,6 +53,7 @@ public slots:
     void updateDefaultAccountConfig(void) const;
     void downloadAndInstallNewApp(void);
     QString getUpdateError() const { return m_updateError; }
+    QString getMigrationLandingUrl() const { return VpnnUpdate::migrationLandingUrl(external_app_config); }
 
     QString getUserAgent(void) const { return user_agent; }
     QString getAwgVersion(void) const { return awg_version; }
@@ -63,6 +66,7 @@ public slots:
     QString getUUIDLastSymbols(void) const;
 
     bool isNewVersionAvailable(void) const;
+    bool isMigrationRequired(void) const;
     bool shouldForceUpdateApp(void) const;
     bool isChangeServerPossible(void) const;
     bool changeServer(void) const;

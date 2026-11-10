@@ -4716,6 +4716,11 @@ should be updated before using.</source>
 Приложение необходимо обновить.</translation>
     </message>
     <message>
+        <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="67"/>
+        <source>If you cannot install the update, go to the &lt;a href=&quot;%1&quot;&gt;official VPN Naruzhu website&lt;/a&gt;</source>
+        <translation>Если не получается установить обновление, перейдите на &lt;a href=&quot;%1&quot;&gt;официальный сайт VPN Наружу&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="114"/>
         <source>Telegram</source>
         <translation type="unfinished"></translation>

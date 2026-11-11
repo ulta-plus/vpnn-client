@@ -16,6 +16,8 @@ PageType {
 
     property string startUpdateText: qsTr('Start update')
     property string updatingText: qsTr('Updating...')
+    readonly property bool migrationRequired: VPNNWebApi.isMigrationRequired()
+    readonly property string officialWebsiteUrl: VPNNWebApi.migrationLandingUrl
 
     ColumnLayout {
         anchors.top: parent.top
@@ -42,6 +44,46 @@ PageType {
             font.family: VPNNaruzhuStyle.font
 
             text: qsTr('Sorry for the inconvinients. Application\nshould be updated before using.')
+        }
+
+        Text {
+            id: officialWebsiteNote
+
+            property bool isFocusable: visible
+
+            Layout.topMargin: 16
+            Layout.leftMargin: 24
+            Layout.rightMargin: 24
+            Layout.fillWidth: true
+
+            visible: root.migrationRequired
+            activeFocusOnTab: visible
+            color: VPNNaruzhuStyle.color.headerText
+            font.pixelSize: 14
+            font.weight: Font.Medium
+            font.family: VPNNaruzhuStyle.font
+            textFormat: Text.RichText
+            wrapMode: Text.WordWrap
+            text: qsTr('If you cannot install the update, go to the <a href="%1">official VPN Naruzhu website</a>').arg(root.officialWebsiteUrl)
+
+            onLinkActivated: function(link) {
+                Qt.openUrlExternally(link)
+            }
+
+            Keys.onEnterPressed: Qt.openUrlExternally(root.officialWebsiteUrl)
+            Keys.onReturnPressed: Qt.openUrlExternally(root.officialWebsiteUrl)
+            Keys.onTabPressed: FocusController.nextKeyTabItem()
+            Keys.onBacktabPressed: FocusController.previousKeyTabItem()
+            Keys.onUpPressed: FocusController.nextKeyUpItem()
+            Keys.onDownPressed: FocusController.nextKeyDownItem()
+            Keys.onLeftPressed: FocusController.nextKeyLeftItem()
+            Keys.onRightPressed: FocusController.nextKeyRightItem()
+
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.NoButton
+                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+            }
         }
 
         VPNNaruzhuButton {

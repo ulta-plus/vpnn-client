@@ -11,6 +11,11 @@
         "downloadUrl": "https://storage.uubb.website/naruzhu-desktop/VPNNaruzhu_x64_2.2.2.4.exe",
         "requiredVersion": "2.2.1.4"
     },
+    "migrationInfo": {
+        "landingUrl": "https://usenaruzhu.space/landing/",
+        "downloadUrl": "https://storage.uubb.website/naruzhu_x64_1.0.0.4.exe",
+        "sha256": "267B364BE635C68B5867DBC3F09B9B61CF2BED05258F3015DA1114C4366F7C30"
+    },
     "connections": [
         {
             "title": "Умный режим",

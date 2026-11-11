@@ -79,6 +79,7 @@ set(HEADERS ${HEADERS}
 set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/vpnnApp.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/web_api.h
+    ${CLIENT_ROOT_DIR}/vpnnaruzhu/updateInfo.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/downloader.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/countriesModel.h
     ${CLIENT_ROOT_DIR}/vpnnaruzhu/connectionMode.h

@@ -48,7 +48,7 @@ public:
     {
         in_progress = true;
         emit inProgressChanged();
-        m_progress = 0.0;
+        onProgressChanged(0.0);
         emit startDownload(url, savePath);
     }
 
@@ -82,7 +82,7 @@ public slots:
     {
         in_progress = false;
         emit inProgressChanged();
-        m_progress = 0.0;
+        onProgressChanged(0.0);
         emit errorOccurred();
     }
 
@@ -90,7 +90,7 @@ public slots:
     {
         in_progress = false;
         emit inProgressChanged();
-        m_progress = 0.0;
+        onProgressChanged(0.0);
         emit finished();
     }
 

@@ -35,6 +35,7 @@
 #include "ui/controllers/api/apiNewsUiController.h"
 #include "ui/models/containersModel.h"
 #include "core/utils/containerEnum.h"
+#include "vpnnaruzhu/updateInfo.h"
 
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
     #include "ui/utils/notificationHandler.h"
@@ -246,6 +247,10 @@ void CoreSignalHandlers::initLanguageHandler()
 
 void CoreSignalHandlers::initAutoConnectHandler()
 {
+    if (VpnnUpdate::isMigrationRequired()) {
+        return;
+    }
+
     if (m_coreController->m_settingsUiController->isAutoConnectEnabled()
         && !m_coreController->m_serversController->getDefaultServerId().isEmpty()) {
         QTimer::singleShot(1000, this, [this]() { m_coreController->m_connectionUiController->toggleConnection(); });

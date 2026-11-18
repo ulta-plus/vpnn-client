@@ -4717,8 +4717,8 @@ should be updated before using.</source>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="67"/>
-        <source>If you cannot install the update, go to the &lt;a href=&quot;%1&quot;&gt;official VPN Naruzhu website&lt;/a&gt;</source>
-        <translation>Если не получается установить обновление, перейдите на &lt;a href=&quot;%1&quot;&gt;официальный сайт VPN Наружу&lt;/a&gt;</translation>
+        <source>If the update does not download, completely close the application (including its tray icon) and download the new version from the &lt;a href=&quot;%1&quot;&gt;official VPN Naruzhu website&lt;/a&gt;</source>
+        <translation>Если обновление не загружается, полностью закройте приложение (включая значок в трее) и скачайте новую версию на &lt;a href=&quot;%1&quot;&gt;официальном сайте VPN Наружу&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/VPNNaruzhuPageForceUpdate.qml" line="114"/>

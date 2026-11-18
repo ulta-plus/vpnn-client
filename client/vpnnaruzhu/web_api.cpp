@@ -397,11 +397,7 @@ bool VpnNaruzhuWebApi::isNewVersionAvailable(void) const
 
 bool VpnNaruzhuWebApi::isMigrationRequired(void) const
 {
-#ifdef Q_OS_WIN
-    return true;
-#else
-    return false;
-#endif
+    return VpnnUpdate::isMigrationRequired();
 }
 
 bool VpnNaruzhuWebApi::shouldForceUpdateApp(void) const

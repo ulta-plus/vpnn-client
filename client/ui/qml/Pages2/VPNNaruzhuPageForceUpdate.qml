@@ -64,7 +64,7 @@ PageType {
             font.family: VPNNaruzhuStyle.font
             textFormat: Text.RichText
             wrapMode: Text.WordWrap
-            text: qsTr('If you cannot install the update, go to the <a href="%1">official VPN Naruzhu website</a>').arg(root.officialWebsiteUrl)
+            text: qsTr('If the update does not download, completely close the application (including its tray icon) and download the new version from the <a href="%1">official VPN Naruzhu website</a>').arg(root.officialWebsiteUrl)
 
             onLinkActivated: function(link) {
                 Qt.openUrlExternally(link)

@@ -9,6 +9,15 @@
 
 namespace VpnnUpdate {
 
+inline bool isMigrationRequired()
+{
+#ifdef Q_OS_WIN
+    return true;
+#else
+    return false;
+#endif
+}
+
 inline bool validVersion(const QJsonValue &value)
 {
     static const QRegularExpression pattern(QStringLiteral("^[0-9]+(?:\\.[0-9]+)*$"));

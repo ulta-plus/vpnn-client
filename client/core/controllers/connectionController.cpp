@@ -14,6 +14,7 @@
 #include "core/utils/protocolEnum.h"
 #include "core/models/containerConfig.h"
 #include "core/models/protocolConfig.h"
+#include "vpnnaruzhu/updateInfo.h"
 
 using namespace amnezia;
 using namespace ProtocolUtils;
@@ -98,6 +99,10 @@ ErrorCode ConnectionController::defaultContainerForServer(const QString &serverI
 
 ErrorCode ConnectionController::isConnectionSupported(const QString &serverId) const
 {
+    if (VpnnUpdate::isMigrationRequired()) {
+        return ErrorCode::ApiUpdateRequestError;
+    }
+
     if (serverId.isEmpty()) {
         return ErrorCode::InternalError;
     }
@@ -209,6 +214,10 @@ ErrorCode ConnectionController::prepareConnection(const QString &serverId,
 
 ErrorCode ConnectionController::openConnection(const QString &serverId)
 {
+    if (VpnnUpdate::isMigrationRequired()) {
+        return ErrorCode::ApiUpdateRequestError;
+    }
+
     QJsonObject vpnConfiguration;
     DockerContainer container;
 

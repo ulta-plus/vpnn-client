@@ -17,6 +17,26 @@ PageType {
 
     property bool isControlsDisabled: false
     property bool isTabBarDisabled: false
+    property bool migrationRequired: false
+
+    readonly property string forceUpdatePagePath: PageController.getPagePath(PageEnum.VPNNaruzhuPageForceUpdate)
+
+    function ensureMigrationPage() {
+        if (!migrationRequired) {
+            return false
+        }
+
+        if (tabBarStackView.currentItem
+                && tabBarStackView.currentItem.objectName === forceUpdatePagePath) {
+            return true
+        }
+
+        tabBarStackView.clear(StackView.Immediate)
+        tabBarStackView.push(forceUpdatePagePath,
+                             { "objectName" : forceUpdatePagePath },
+                             StackView.Immediate)
+        return true
+    }
 
     Connections {
         objectName: "pageControllerConnection"
@@ -24,6 +44,10 @@ PageType {
         target: PageController
 
         function onGoToPageHome() {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             if (PageController.isStartPageVisible()) {
                 //tabBar.visible = false
                 tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardStart)
@@ -35,16 +59,28 @@ PageType {
         }
 
         function onGoToPageSettings() {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             //tabBar.setCurrentIndex(2)
             tabBarStackView.goToTabBarPage(PageEnum.PageSettings)
         }
 
         function onGoToPageViewConfig() {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             var pagePath = PageController.getPagePath(PageEnum.PageSetupWizardViewConfig)
             tabBarStackView.push(pagePath, { "objectName" : pagePath }, StackView.PushTransition)
         }
 
         function onGoToShareConnectionPage(headerText, configContentHeaderText, configCaption, configExtension, configFileName) {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             var pagePath = PageController.getPagePath(PageEnum.PageShareConnection)
             tabBarStackView.push(pagePath,
                                  { "objectName" : pagePath,
@@ -66,6 +102,10 @@ PageType {
         }
 
         function onClosePage() {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             if (tabBarStackView.depth <= 1) {
                 PageController.hideWindow()
                 return
@@ -74,6 +114,10 @@ PageType {
         }
 
         function onGoToPage(page, slide) {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             var pagePath = PageController.getPagePath(page)
 
             if (slide) {
@@ -84,12 +128,20 @@ PageType {
         }
 
         function onGoToStartPage() {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             while (tabBarStackView.depth > 1) {
                 tabBarStackView.pop()
             }
         }
 
         function onEscapePressed() {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             if (root.isControlsDisabled || root.isTabBarDisabled) {
                 return
             }
@@ -277,12 +329,20 @@ PageType {
         enabled: !root.isControlsDisabled
 
         function goToTabBarPage(page) {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             var pagePath = PageController.getPagePath(page)
             tabBarStackView.clear(StackView.Immediate)
             tabBarStackView.replace(pagePath, { "objectName" : pagePath }, StackView.Immediate)
         }
 
         Component.onCompleted: {
+            if (root.ensureMigrationPage()) {
+                return
+            }
+
             var pagePath
             if (PageController.isStartPageVisible()) {
                 //tabBar.visible = false

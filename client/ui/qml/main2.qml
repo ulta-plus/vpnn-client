@@ -74,10 +74,15 @@ Window  {
     }
 
     property bool is_first_launch: true
+    readonly property bool migrationRequired: VPNNWebApi.isMigrationRequired()
+
     onActiveChanged: {
         if (active) {
             VPNNWebApi.updateExternalSettings()
-            if (is_first_launch && VPNNWebApi.shouldForceUpdateApp()) {
+
+            if (migrationRequired) {
+                is_first_launch = false
+            } else if (is_first_launch && VPNNWebApi.shouldForceUpdateApp()) {
                 is_first_launch = false
                 PageController.goToPage(PageEnum.VPNNaruzhuPageForceUpdate)
                 /*
@@ -95,7 +100,7 @@ Window  {
                 */
             }
 
-            if (is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloadController.isDownloadInProgress()) {
+            if (!migrationRequired && is_first_launch && VPNNWebApi.isNewVersionAvailable() && !VPNNDownloadController.isDownloadInProgress()) {
                 var headerText = qsTr('Do you want to update VPNNaruzhu?')
                 var deacription = qsTr('There is a new VPNNaruzhu version')
                 var yesButtonText = qsTr("Yes")
@@ -196,7 +201,9 @@ Window  {
         }
 
         function onShowChangelogDrawer() {
-            changelogDrawer.openTriggered()
+            if (!root.migrationRequired) {
+                changelogDrawer.openTriggered()
+            }
         }
     }
 
@@ -214,6 +221,7 @@ Window  {
         objectName: "pageStart"
         width: root.width
         height: root.height
+        migrationRequired: root.migrationRequired
     }
 
     Item {

@@ -6,11 +6,11 @@ import Style 1.0
 Window {
     id: root
     width: 300
-    height: 120
+    height: 200
     minimumWidth: 300
-    minimumHeight: 120
+    minimumHeight: 200
     maximumWidth: 300
-    maximumHeight: 120
+    maximumHeight: 200
 
     visible: false
     title: qsTr("Downloading")
@@ -20,10 +20,11 @@ Window {
         target: VPNNDownloadController
 
         function onFinished() {
-            visible = false
+            root.visible = false
         }
 
         function onErrorOccurred() {
+            root.visible = true
             retryDownload.visible = true
         }
     }
@@ -50,10 +51,10 @@ Window {
         visible: false
 
         radius: 0
-        implicitHeight: 120
+        implicitHeight: 200
         implicitWidth: 300
 
-        text: qsTr('Download Error.\nDo you want to retry?')
+        text: VPNNWebApi.updateError + "\n" + qsTr('Do you want to retry?')
 
         withYesClick: function() {
             retryDownload.visible = false
